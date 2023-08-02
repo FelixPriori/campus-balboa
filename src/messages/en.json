@@ -1,0 +1,11 @@
+{
+    "Event": {
+        "title": "Balboa Event",
+        "back": "Back",
+        "changeLang": "FR"
+    },
+    "Home": {
+        "toEventCta": "To Event",
+        "changeLang": "FR"
+    }
+}

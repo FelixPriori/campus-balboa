@@ -1,0 +1,89 @@
+.header {
+    --gradient-direction: to left top;
+    height: var(--section-height);
+    position: relative;
+
+    @supports (clip-path: (var(--clip-bottom-left))) or
+    (-webkit-clip-path: var(--clip-bottom-left)) {
+    height: var(--section-height);
+    -webkit-clip-path: var(--clip-bottom-left);
+    clip-path: var(--clip-bottom-left);
+    }
+}
+
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(var(--gradient-direction), rgba(42, 157, 143, 0.8), rgba(244, 162, 97, 0.8));
+    z-index: 2;
+}
+
+.title {
+    position: absolute;
+    z-index: 3;
+    color: #fff;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    font-size: 5rem;
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.navigation {
+    position: absolute;
+    top: var(--spacing-m);
+    left: var(--spacing-m);
+    right: var(--spacing-m);
+    display: flex;
+    justify-content: space-between;
+    z-index: 3;
+}
+
+.section {
+    height: var(--section-height);
+    padding: var(--section-padding);
+}
+
+.introduction {
+    --gradient-direction: to left bottom;
+
+    transform: translateY(-100px);
+    background: linear-gradient(var(--gradient-direction), rgba(42, 157, 143, 0.8), rgba(244, 162, 97, 0.8));
+    display: flex;
+    align-items: center;
+
+    @supports (clip-path: (var(--clip-top-right-bottom-right))) or
+    (-webkit-clip-path: var(--clip-top-right-bottom-right)) {
+    height: var(--section-height);
+    -webkit-clip-path: var(--clip-top-right-bottom-right);
+    clip-path: var(--clip-top-right-bottom-right);
+    }
+}
+
+.content {
+    z-index: 3;
+}
+
+.information {
+    --gradient-direction: to left top;
+    
+    transform: translateY(-200px);
+    background: linear-gradient(var(--gradient-direction), rgba(42, 157, 143, 0.8), rgba(244, 162, 97, 0.8));
+    display: flex;
+    align-items: center;
+
+    @supports (clip-path: (var(--clip-top-left))) or
+    (-webkit-clip-path: var(--clip-top-left)) {
+    height: var(--section-height);
+    -webkit-clip-path: var(--clip-top-left);
+    clip-path: var(--clip-top-left);
+    }
+}

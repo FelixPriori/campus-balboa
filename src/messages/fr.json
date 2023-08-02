@@ -1,0 +1,11 @@
+{
+    "Event": {
+        "title": "Événement de balboa",
+        "back": "Retour",
+        "changeLang": "EN"
+    },
+    "Home": {
+        "toEventCta": "Vers l'événement",
+        "changeLang": "En"
+    }
+}

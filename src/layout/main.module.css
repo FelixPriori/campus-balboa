@@ -1,0 +1,4 @@
+.main {
+    /* background-color: blue; */
+    min-height: calc(100vw - 50px);
+}
