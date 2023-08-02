@@ -2,7 +2,8 @@
     "Event": {
         "title": "Événement de balboa",
         "back": "Retour",
-        "changeLang": "EN"
+        "changeLang": "EN",
+        "registerCta": "S'enregistrer"
     },
     "Home": {
         "toEventCta": "Vers l'événement",

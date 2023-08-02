@@ -2,7 +2,8 @@
     "Event": {
         "title": "Balboa Event",
         "back": "Back",
-        "changeLang": "FR"
+        "changeLang": "FR",
+        "registerCta": "Register"
     },
     "Home": {
         "toEventCta": "To Event",

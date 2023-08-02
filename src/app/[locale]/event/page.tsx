@@ -19,7 +19,7 @@ export default function Event() {
     <div>
       <header className={styles.header}>
         <Image
-          src="/balboa.webp"
+          src="/balboa-placeholder-one.webp"
           alt="Balboa dancers on the beach"
           quality={100}
           objectFit='cover'
@@ -38,7 +38,7 @@ export default function Event() {
       </header>
       <section className={`${styles.introduction} ${styles.section}`}>
         <Image
-          src="/balboa.webp"
+          src="/balboa-placeholder-two.jpg"
           alt="Balboa dancers on the beach"
           quality={100}
           objectFit='cover'
@@ -46,20 +46,23 @@ export default function Event() {
         />
         <div className={styles.overlay}></div>
         <div className={styles.content}>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint harum tenetur sequi at sed labore molestiae aspernatur sit magni dolorum architecto, voluptatum, officia, porro ipsum similique neque itaque fuga et!
-          </p>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint harum tenetur sequi at sed labore molestiae aspernatur sit magni dolorum architecto, voluptatum, officia, porro ipsum similique neque itaque fuga et!
-          </p>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint harum tenetur sequi at sed labore molestiae aspernatur sit magni dolorum architecto, voluptatum, officia, porro ipsum similique neque itaque fuga et!
-          </p>
+          <div className={styles.card}>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint harum tenetur sequi at sed labore molestiae aspernatur sit magni dolorum architecto, voluptatum, officia, porro ipsum similique neque itaque fuga et!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint harum tenetur sequi at sed labore molestiae aspernatur sit magni dolorum architecto, voluptatum, officia, porro ipsum similique neque itaque fuga et!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint harum tenetur sequi at sed labore molestiae aspernatur sit magni dolorum architecto, voluptatum, officia, porro ipsum similique neque itaque fuga et!
+            </p>
+            <Button>{t('registerCta')}</Button>
+          </div>
         </div>
       </section>
       <section className={`${styles.information} ${styles.section}`}>
         <Image
-          src="/balboa.webp"
+          src="/balboa-placeholder-three.jpg"
           alt="Balboa dancers on the beach"
           quality={100}
           objectFit='cover'
@@ -67,15 +70,17 @@ export default function Event() {
         />
         <div className={styles.overlay}></div>
         <div className={styles.content}>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint harum tenetur sequi at sed labore molestiae aspernatur sit magni dolorum architecto, voluptatum, officia, porro ipsum similique neque itaque fuga et!
-          </p>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint harum tenetur sequi at sed labore molestiae aspernatur sit magni dolorum architecto, voluptatum, officia, porro ipsum similique neque itaque fuga et!
-          </p>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint harum tenetur sequi at sed labore molestiae aspernatur sit magni dolorum architecto, voluptatum, officia, porro ipsum similique neque itaque fuga et!
-          </p>
+          <div className={styles.card}>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint harum tenetur sequi at sed labore molestiae aspernatur sit magni dolorum architecto, voluptatum, officia, porro ipsum similique neque itaque fuga et!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint harum tenetur sequi at sed labore molestiae aspernatur sit magni dolorum architecto, voluptatum, officia, porro ipsum similique neque itaque fuga et!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint harum tenetur sequi at sed labore molestiae aspernatur sit magni dolorum architecto, voluptatum, officia, porro ipsum similique neque itaque fuga et!
+            </p>
+          </div>
         </div>
       </section>
     </div>
