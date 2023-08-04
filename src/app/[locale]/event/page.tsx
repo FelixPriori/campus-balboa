@@ -5,7 +5,7 @@ import styles from './page.module.css'
 import {useTranslations} from 'next-intl';
 import Button from '@/components/button/button';
 import userRouterWithLocale from '@/hooks/useRouterWithLocale'
-import { HomeIcon } from '@heroicons/react/20/solid';
+import Logo from '@/components/logo/logo';
 
 export const metadata: Metadata = {
   title: 'Balboa Event',
@@ -29,7 +29,7 @@ export default function Event() {
         <h1 className={styles.title}>{t('title')}</h1>
         <div className={styles.navigation}>
           <Button onClick={() => router.push('/')} look="flat">
-            <HomeIcon />
+            <Logo/>
           </Button>
           <Button onClick={() => router.switchLang()} variant="secondary" look="flat">
             {t('changeLang')}
