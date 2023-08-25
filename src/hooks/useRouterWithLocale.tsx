@@ -8,8 +8,11 @@ export default function useRouterWithLocale() {
 
   const switchLang = () => router.push(pathname, {locale: locale === 'fr' ? 'en' : 'fr'})
 
+  const setLang = (locale: 'en' | 'fr') => router.push(pathname, {locale})
+
   return {
     switchLang,
+    setLang,
     ...router
   }
 }

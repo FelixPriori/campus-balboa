@@ -1,28 +1,3 @@
-.header {
-    --gradient-direction: to left top;
-    height: var(--section-height);
-    position: relative;
-
-    @supports (clip-path: (var(--clip-bottom-left))) or
-    (-webkit-clip-path: var(--clip-bottom-left)) {
-    height: var(--section-height);
-    -webkit-clip-path: var(--clip-bottom-left);
-    clip-path: var(--clip-bottom-left);
-    }
-}
-
-.overlay {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: linear-gradient(var(--gradient-direction), rgba(42, 157, 143, 0.8), rgba(244, 162, 97, 0.8));
-    z-index: 2;
-}
-
 .title {
     position: absolute;
     z-index: 3;
@@ -44,71 +19,16 @@
     right: var(--spacing-m);
     display: flex;
     justify-content: space-between;
+    align-items: center;
     z-index: 3;
 }
 
-.section {
-    height: var(--section-height);
-    padding: var(--section-padding);
-}
-
-.introduction {
-    --gradient-direction: to left bottom;
-
-    transform: translateY(-100px);
-    background: linear-gradient(var(--gradient-direction), rgba(42, 157, 143, 0.8), rgba(244, 162, 97, 0.8));
-    display: flex;
-    align-items: center;
-
-    @supports (clip-path: (var(--clip-top-right-bottom-right))) or
-    (-webkit-clip-path: var(--clip-top-right-bottom-right)) {
-    height: var(--section-height);
-    -webkit-clip-path: var(--clip-top-right-bottom-right);
-    clip-path: var(--clip-top-right-bottom-right);
-    }
-}
-
-.content {
-    width: 100%;
-    z-index: 3;
-    display: flex;
-    justify-content: center;
-}
-
-.card {
-    border-radius: var(--border-radius);
-    padding: 20px;
-    width: fit-content;
-    background-color: rgba(255, 255, 255, 0.6);
-    box-shadow: 0 5px 10px rgba(38, 70, 83, 0.2);
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-}
-
-.content p {
+.eventPage p {
     max-width: 500px;
     margin-bottom: var(--spacing-m);
 }
 
-.content button {
+.eventPage button {
     text-transform: uppercase;
     max-width: 200px;
-}
-
-.information {
-    --gradient-direction: to left top;
-
-    transform: translateY(-200px);
-    background: linear-gradient(var(--gradient-direction), rgba(42, 157, 143, 0.8), rgba(244, 162, 97, 0.8));
-    display: flex;
-    align-items: center;
-
-    @supports (clip-path: (var(--clip-top-left))) or
-    (-webkit-clip-path: var(--clip-top-left)) {
-    height: var(--section-height);
-    -webkit-clip-path: var(--clip-top-left);
-    clip-path: var(--clip-top-left);
-    }
 }
