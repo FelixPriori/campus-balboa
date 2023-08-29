@@ -1,0 +1,11 @@
+.container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    .bar {
+        position: fixed;
+    }
+    .content {
+        grid-column: 2 / -1;
+    }
+}

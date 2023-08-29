@@ -1,0 +1,116 @@
+.container {
+    --col-width: 75px;
+    --bar-height: 750px;
+    position: relative;
+
+    .grid {
+        display: grid;
+        grid-template-columns: var(--col-width) var(--col-width);
+        grid-template-rows: repeat(7, 100px) 50px;
+        column-gap: 8px;
+        height: var(--bar-height);
+        
+        .bar {
+            position: relative;
+            background-image: linear-gradient(var(--color-primary), var(--color-warning), var(--color-secondary));
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+    
+            &::before {
+                content: "";
+                position: absolute;
+                right: -6px;
+                left: 0;
+                top: 0;
+                height: 1px;
+                background-color: var(--color-dark);
+                z-index: 2;
+            }
+        }
+    
+    
+        .label {
+            position: relative;
+    
+            p {
+                font-size: 14px;
+                position: absolute;
+                top: -9px;
+                margin-left: 4px;
+            }
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            height: 75px;
+            left: 0;
+            right: 0;
+            background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+            z-index: 4;
+        }
+    }
+
+    .ranges {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: var(--bar-height);
+        width: var(--col-width);
+        z-index: 2;
+
+        .range {
+            &.slowBal {
+                --min: 80px;
+                --max: 200px;
+            }
+            
+            &.awkwardRange {
+                --min: 200px;
+                --max: 300px;
+            }
+            
+            &.beginnerClass {
+                --min: 300px;
+                --max: 340px;
+            }
+            
+            &.bulk {
+                --min: 340px;
+                --max: 420px;
+            }
+            
+            &.comfortableArea {
+                --min: 360px;
+                --max: 420px;
+            }
+            
+            &.sweetSpot {
+                --min: 380px;
+                --max: 410px;
+            }
+            
+            &.competitionRange {
+                --min: 420px;
+                --max: 460px;
+            }
+            
+            &.fastTempo {
+                --min: 440px;
+                --max: 750px;
+            }
+            
+            position: absolute;
+            width: var(--col-width);
+            z-index: 3;
+            height: calc(var(--max) - var(--min));
+            top: var(--min);
+            
+            &:hover, &.selected {
+                border: 3px dotted var(--color-dark);
+            }
+        }
+    }
+}
