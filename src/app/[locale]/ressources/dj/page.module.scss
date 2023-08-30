@@ -2,10 +2,37 @@
     position: relative;
     display: grid;
     grid-template-columns: 200px 1fr;
-    .bar {
-        position: fixed;
+    grid-template-rows: auto 1fr 500px;
+    row-gap: 2rem;
+    max-width: 750px;
+    margin: 0 auto;
+    grid-gap: 1rem;
+
+    .title {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+        text-align: center;
+        align-self: center;
     }
+
+    .bar {
+        grid-row: 2 / -1;
+        .sticky {
+            position: sticky;
+            top: 3rem;        
+        }
+    }
+
     .content {
         grid-column: 2 / -1;
+
+        .details {
+            margin-bottom: 2rem;
+            padding: 1rem;
+
+            &.selected {
+                border: 3px dotted var(--color-dark);
+            }
+        }
     }
 }

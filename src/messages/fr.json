@@ -8,5 +8,45 @@
     "Home": {
         "toEventCta": "Vers l'événement",
         "changeLang": "En"
+    },
+    "Resources": {
+        "dj": {
+            "bpm": {
+                "title": "BPM",
+                "range": "{min} à {max} BPM",
+                "slowBal": {
+                    "title": "Balboa lent",
+                    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, velit accusantium doloribus in et quis veniam eligendi cumque ipsam nesciunt error dolorem, asperiores nihil iusto doloremque natus ipsum facere dignissimos!"
+                },
+                "awkwardRange": {
+                    "title": "Zone difficile",
+                    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, velit accusantium doloribus in et quis veniam eligendi cumque ipsam nesciunt error dolorem, asperiores nihil iusto doloremque natus ipsum facere dignissimos!"
+                },
+                "beginnerClass": {
+                    "title": "Cours pour débutants",
+                    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, velit accusantium doloribus in et quis veniam eligendi cumque ipsam nesciunt error dolorem, asperiores nihil iusto doloremque natus ipsum facere dignissimos!"
+                },
+                "bulk": {
+                    "title": "Majorité de la musique",
+                    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, velit accusantium doloribus in et quis veniam eligendi cumque ipsam nesciunt error dolorem, asperiores nihil iusto doloremque natus ipsum facere dignissimos!"
+                },
+                "comfortableArea": {
+                    "title": "Zone confortable",
+                    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, velit accusantium doloribus in et quis veniam eligendi cumque ipsam nesciunt error dolorem, asperiores nihil iusto doloremque natus ipsum facere dignissimos!"
+                },
+                "sweetSpot": {
+                    "title": "Idéal",
+                    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, velit accusantium doloribus in et quis veniam eligendi cumque ipsam nesciunt error dolorem, asperiores nihil iusto doloremque natus ipsum facere dignissimos!"
+                },
+                "competitionRange": {
+                    "title": "Compétition",
+                    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, velit accusantium doloribus in et quis veniam eligendi cumque ipsam nesciunt error dolorem, asperiores nihil iusto doloremque natus ipsum facere dignissimos!"
+                },
+                "fastTempo": {
+                    "title": "Rapide",
+                    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, velit accusantium doloribus in et quis veniam eligendi cumque ipsam nesciunt error dolorem, asperiores nihil iusto doloremque natus ipsum facere dignissimos!"
+                }
+            }
+        }
     }
 }
