@@ -1,72 +1,54 @@
-"use client"
-import { useEffect } from 'react';
-import { Metadata } from 'next'
-import { useTranslations } from 'next-intl';
-import { useRouter } from 'next/navigation';
 import BpmBar from '@/components/bpmBar/bpmBar';
-import { ranges } from '@/assets/data/bpmRange';
-import useLocationHash from '@/hooks/useLocationHash';
 import styles from './page.module.scss'
+import BpmContent from './BpmContent';
+import BpmHeader from './BpmHeader';
+import ScrollListenerWrapper from './ScrollListenerWrapper';
+import LanguageSwitcher from '@/components/languageSwitcher/languageSwitcher';
+import BpmDistribution from './BpmDistribution';
 
-export const metadata: Metadata = {
-  title: 'DJ Ressources',
-  description: 'Ressources related to DJing Balboa',
+type MetadataProps = {
+  params: {locale: string}
 }
 
-type BpmDetailsProps = {
-  name: string
-  min: number
-  max: number
-  selected?: boolean
+export function generateMetadata({ params }: MetadataProps) {
+  const locale = params.locale
+
+  if (locale === 'en') {
+    return {
+      title: 'DJ Ressources',
+      description: 'Ressources related to DJing Balboa',
+    }
+  }
+
+  return {
+    title: 'Ressources DJ',
+    description: 'Ressources pour les DJ de balboa',
+  }
 }
 
-function BpmDetails ({name, min, max, selected = false}: BpmDetailsProps) {
-  const t = useTranslations('Resources');
-  return (
-    <div id={name} className={`${styles.details} ${selected ? styles.selected : ''}`}>
-      <h3>{t(`dj.bpm.${name}.title`)}</h3>
-      <h4>{t(`dj.bpm.range`, {min, max: max !== 350 ? max : '∞'})}</h4>
-      <p>{t(`dj.bpm.${name}.description`)}</p>
-    </div>
-  )
-}
 
 export default function DJ() {
-  const [currentHash] = useLocationHash()
-  const t = useTranslations('Resources');
-  const router = useRouter()
-
-  useEffect(() => {
-    const onScroll = () => {
-      const section = document.querySelectorAll('div[id]');
-      section.forEach(div => {
-        const rect = div.getBoundingClientRect();
-        if (rect.top > 0 && rect.top < 150) {
-          router.push(`#${div.id}`, {scroll: false})
-        }
-      });
-    }
-    
-    document.addEventListener('scroll', onScroll)
-
-    return () => {
-      document.removeEventListener('scroll', onScroll)
-    }
-  }, [])
-
   return (
-    <div className={styles.container}>
-      <div className={styles.title}>
-        <h2>{t('dj.bpm.title')}</h2>
+    <ScrollListenerWrapper>
+      <div className={styles.language}>
+        <LanguageSwitcher />
       </div>
-      <div className={styles.bar}>
-        <div className={styles.sticky}>
-          <BpmBar />
+      <div className={styles.container}>
+        <div className={styles.header}>
+          <BpmHeader />
+        </div>
+        <div className={styles.bar}>
+          <div className={styles.sticky}>
+            <BpmBar />
+          </div>
+        </div>
+        <div className={styles.content}>
+          <BpmContent />
+        </div>
+        <div className={styles.distribution}>
+          <BpmDistribution />
         </div>
       </div>
-      <div className={styles.content}>
-        {ranges.map((r) => <BpmDetails key={r.name} {...r} selected={currentHash === `#${r.name}`}  />)}
-      </div>
-    </div>
+    </ScrollListenerWrapper>
   )
 }

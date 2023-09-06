@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 import styles from './page.module.css'
 import {useLocale, useTranslations} from 'next-intl';
 import Button from '@/components/button/button';
-import userRouterWithLocale from '@/hooks/useRouterWithLocale'
+import useRouterWithLocale from '@/hooks/useRouterWithLocale'
 import Logo from '@/components/logo/logo';
 import EventSection from '@/components/eventSection/eventSection';
 import Card from '@/components/card/card';
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 export default function Event() {
   const t = useTranslations('Event');
-  const router = userRouterWithLocale();
+  const router = useRouterWithLocale();
   const locale = useLocale()
   
   return (

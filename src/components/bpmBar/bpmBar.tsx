@@ -1,3 +1,4 @@
+"use client"
 import { Fragment } from 'react'
 import styles from './bpmBar.module.scss'
 import Link from 'next/link'

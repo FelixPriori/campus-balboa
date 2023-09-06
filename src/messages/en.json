@@ -12,39 +12,49 @@
     "Resources": {
         "dj": {
             "bpm": {
-                "title": "BPM",
+                "title": "Tempo",
                 "range": "{min} to {max} BPM",
+                "description": "It is important to note that theses guidelines are entirely subjective. A great DJ will be able to determine the best choice of tempo depending on the situation, and dancers present. Variety and sense of timing is what makes an exceptional set: a set that only stays within the “sweet spot” will be boring, playing slow songs too often might kill the energy of the room, and playing too many fast songs might tire out the dancers. It is impossible to please everybody, so it is imperative that the DJ reads the room and uses their judgement.",
                 "slowBal": {
                     "title": "Slow balboa",
-                    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, velit accusantium doloribus in et quis veniam eligendi cumque ipsam nesciunt error dolorem, asperiores nihil iusto doloremque natus ipsum facere dignissimos!"
+                    "description": "Slow balboa can be danced to very slow music, but dancers tend to be most comfortable around 80 BPM. Therefore, it is recommended to aim for the middle of this range rather than the extremes unless there is a lot of advanced dancers or you are playing more than one slow song in a row."
                 },
                 "awkwardRange": {
                     "title": "Awkward area",
-                    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, velit accusantium doloribus in et quis veniam eligendi cumque ipsam nesciunt error dolorem, asperiores nihil iusto doloremque natus ipsum facere dignissimos!"
+                    "description": "This range is considered difficult for balboa dancers since it is slightly too fast for slow balboa, and too slow for conventional balboa. It is therefore highly encouraged to avoid this range in most cases."
                 },
                 "beginnerClass": {
-                    "title": "Beginner classes",
-                    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, velit accusantium doloribus in et quis veniam eligendi cumque ipsam nesciunt error dolorem, asperiores nihil iusto doloremque natus ipsum facere dignissimos!"
+                    "title": "Classes",
+                    "description": "In a classroom context, it is sometimes desirable to play a bit slower to give the learners a chance to assimilate concepts."
                 },
                 "bulk": {
                     "title": "Bulk of music",
-                    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, velit accusantium doloribus in et quis veniam eligendi cumque ipsam nesciunt error dolorem, asperiores nihil iusto doloremque natus ipsum facere dignissimos!"
+                    "description": "Around 80% of the music played at a social dance should be in this range. After an intro class, it is recommended to start lower, and gradually work your way up. Generally, aiming for the middle of the range rather than the extremes, and not playing too many songs in a row of similar BPM will yield best results."
                 },
                 "comfortableArea": {
                     "title": "Comfortable area",
-                    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, velit accusantium doloribus in et quis veniam eligendi cumque ipsam nesciunt error dolorem, asperiores nihil iusto doloremque natus ipsum facere dignissimos!"
+                    "description": "This range is generally appropriate for most level of dancers. When there are dancers of all levels in the room, the majority will be able to dance comfortably in this range."
                 },
                 "sweetSpot": {
                     "title": "Sweet spot",
-                    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, velit accusantium doloribus in et quis veniam eligendi cumque ipsam nesciunt error dolorem, asperiores nihil iusto doloremque natus ipsum facere dignissimos!"
+                    "description": "This small range works well for all types of balboa (pure and swing). Most advanced and intermediate dancers will be comfortable social dancing to this range. It is ideal to bring people back to the dance floor after a song that did not work too well (either too slow, fast, or other)."
                 },
                 "competitionRange": {
                     "title": "Competition",
-                    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, velit accusantium doloribus in et quis veniam eligendi cumque ipsam nesciunt error dolorem, asperiores nihil iusto doloremque natus ipsum facere dignissimos!"
+                    "description": "Internationally, tempos for finals of “open” or advanced competitions will be within this range. Sometimes all-skates will be faster and warm-ups slower."
                 },
                 "fastTempo": {
                     "title": "Fast tempo",
-                    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, velit accusantium doloribus in et quis veniam eligendi cumque ipsam nesciunt error dolorem, asperiores nihil iusto doloremque natus ipsum facere dignissimos!"
+                    "description": "It is important to note that the more the tempo goes past 220 BPM, the less people will be comfortable dancing to the song. However, the challenge of dancing to extremely fast songs is one of the many pleasures of dancing balboa. It is not recommended to play too many extreme songs in a single social dance."
+                },
+                "distribution" : {
+                    "title": "Distribution",
+                    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus magnam repellendus in impedit? Aspernatur consequatur voluptatem quidem provident, quae enim hic sunt eveniet quod quos. Esse consectetur inventore tempora quidem?",
+                    "beginner": "Beginner",
+                    "intermediate": "intermediate",
+                    "advanced": "Advanced",
+                    "all": "All",
+                    "y": "Song #"
                 }
             }
         }

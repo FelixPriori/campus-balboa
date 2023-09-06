@@ -12,39 +12,49 @@
     "Resources": {
         "dj": {
             "bpm": {
-                "title": "BPM",
+                "title": "Tempo",
                 "range": "{min} à {max} BPM",
+                "description": "Il est important de noter que ces conseils sont subjectifs. Un.e bon.ne DJ sera en mesure de déterminer le meilleur choix de tempo selon la situation et les gens présents. La variété et le sens du timing font un set exceptionnel: un set avec des chansons exclusivements dans la “zone idéale” sera ennuyeux, mettre des chansons lentes trop souvent peut briser l’énergie de la salle et jouer trop rapidement peut fatiguer les danseur.euses. Il est impossible de plaire à tout le monde, il est important que le DJ s’adapte à la salle et utilise son jugement.",
                 "slowBal": {
                     "title": "Balboa lent",
-                    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, velit accusantium doloribus in et quis veniam eligendi cumque ipsam nesciunt error dolorem, asperiores nihil iusto doloremque natus ipsum facere dignissimos!"
+                    "description": "Le balboa lent peut être dansé sur de la musique très lente, mais la plupart des danseurs.euses sont à l’aise dans les alentours de 80 BPM. Il est donc souhaitable de viser le milieu de la zone plutôt que les extrêmes, à moins de jouer plusieurs chansons lentes de suite, ou qu’il y ait beaucoup de danseurs.euses expérimenté.e.s dans la salle."
                 },
                 "awkwardRange": {
                     "title": "Zone difficile",
-                    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, velit accusantium doloribus in et quis veniam eligendi cumque ipsam nesciunt error dolorem, asperiores nihil iusto doloremque natus ipsum facere dignissimos!"
+                    "description": "Cette zone est considérée plutôt difficile pour les danseurs de balboa, pusiqu’elle est trop rapide pour du balboa lent, et trop lente pour le balboa conventionnel. Il est donc fortement recommandé d’éviter cette zone dans la majorité des cas."
                 },
                 "beginnerClass": {
-                    "title": "Cours pour débutants",
-                    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, velit accusantium doloribus in et quis veniam eligendi cumque ipsam nesciunt error dolorem, asperiores nihil iusto doloremque natus ipsum facere dignissimos!"
+                    "title": "Cours",
+                    "description": "Dans un contexte d’apprentissage, il pourrait être souhaitable de jouer des morceaux un peu plus lents pour donner une chance aux apprenant.e.s de bien assimiler les notions."
                 },
                 "bulk": {
                     "title": "Majorité de la musique",
-                    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, velit accusantium doloribus in et quis veniam eligendi cumque ipsam nesciunt error dolorem, asperiores nihil iusto doloremque natus ipsum facere dignissimos!"
+                    "description": "Environ 80% de la musique jouée lors d’une danse sociale devrait se trouver dans cette zone. Après un cours d’introduction, il est recommandé de commencer plus bas, et de graduellement augmenter le tempo. Généralement, viser le milieu de la zone plutôt que les extrêmes, et ne pas rester trop longtemps dans les mêmes tempos."
                 },
                 "comfortableArea": {
                     "title": "Zone confortable",
-                    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, velit accusantium doloribus in et quis veniam eligendi cumque ipsam nesciunt error dolorem, asperiores nihil iusto doloremque natus ipsum facere dignissimos!"
+                    "description": "Cette zone est généralement appropriée pour la plupart des danseurs. Lorsqu’il y a des gens de tous les niveaux dans la salle, la majorité pourra danser confortablement dans cette zone."
                 },
                 "sweetSpot": {
-                    "title": "Idéal",
-                    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, velit accusantium doloribus in et quis veniam eligendi cumque ipsam nesciunt error dolorem, asperiores nihil iusto doloremque natus ipsum facere dignissimos!"
+                    "title": "Zone idéale",
+                    "description": "Cette zone assez restreinte est la mieux adaptée pour tous les types de balboa (pure, swing). Les danseurs.euses avancé.e.s comme les intermédiaires seront à l’aise ici en danse sociale. Idéal pour rapatrier les gens sur le plancher de danse après une chanson qui a moins bien fonctionnée (soit très rapide, très lent, ou autre)."
                 },
                 "competitionRange": {
-                    "title": "Compétition",
-                    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, velit accusantium doloribus in et quis veniam eligendi cumque ipsam nesciunt error dolorem, asperiores nihil iusto doloremque natus ipsum facere dignissimos!"
+                    "title": "Finales de competition",
+                    "description": "Internationalement, le tempo de musique de finales de compétitions “open” ou avancés sont situés dans cette zone. Parfois les “all-skates” seront plus rapide, et les “warm-up” plus lents."
                 },
                 "fastTempo": {
-                    "title": "Rapide",
-                    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, velit accusantium doloribus in et quis veniam eligendi cumque ipsam nesciunt error dolorem, asperiores nihil iusto doloremque natus ipsum facere dignissimos!"
+                    "title": "Zone rapide",
+                    "description": "Il est important de noter que plus le tempo dépasse 220 BPM, moins de danseur.euses seront à l’aise de danser. Par contre, relever le défi de danser sur de la musique très rapide est l’un des plaisirs de danser le balboa. Il est déconseillé de jouer trop de chansons extrèmes dans une même danse sociale."
+                },
+                "distribution" : {
+                    "title": "Distribution",
+                    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus magnam repellendus in impedit? Aspernatur consequatur voluptatem quidem provident, quae enim hic sunt eveniet quod quos. Esse consectetur inventore tempora quidem?",
+                    "beginner": "Débutant",
+                    "intermediate": "Intermédiaire",
+                    "advanced": "Avancé",
+                    "all": "Tous",
+                    "y": "Chanson #"
                 }
             }
         }
