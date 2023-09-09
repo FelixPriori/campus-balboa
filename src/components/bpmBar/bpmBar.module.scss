@@ -9,13 +9,9 @@
         grid-template-rows: repeat(7, 100px) 50px;
         column-gap: 8px;
         height: var(--bar-height);
-        
+
         .bar {
             position: relative;
-            background-image: linear-gradient(var(--color-primary), var(--color-warning), var(--color-secondary));
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
     
             &::before {
                 content: "";
@@ -25,7 +21,7 @@
                 top: 0;
                 height: 1px;
                 background-color: var(--color-dark);
-                z-index: 2;
+                z-index: 3;
             }
         }
     
@@ -60,6 +56,16 @@
         height: var(--bar-height);
         width: var(--col-width);
         z-index: 2;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: var(--col-width);
+            background: linear-gradient(var(--color-primary), var(--color-warning), var(--color-secondary));
+            z-index: -1;
+        }
 
         .range {
             &.slowBal {

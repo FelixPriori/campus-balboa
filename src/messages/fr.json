@@ -49,7 +49,7 @@
                 },
                 "distribution" : {
                     "title": "Distribution",
-                    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus magnam repellendus in impedit? Aspernatur consequatur voluptatem quidem provident, quae enim hic sunt eveniet quod quos. Esse consectetur inventore tempora quidem?",
+                    "description": "La distribution du BPM d’un set de DJ dépend de plusieurs facteurs. Notamment, le niveau moyen des danseur.euses présent.es, la qualité du plancher de danse, la taille du plancher de danse, le niveau d’énergie de la salle, le moment (début de la soirée, fin de la soirée, début du set, fin du set), et beaucoup plus. Il est généralement recommandé de monter et descendre graduellement la vitesse plutôt que de passer d’un extrême à l’autre. Une chanson rapide jouée directement après une chanson lente va sembler beaucoup plus rapide en contraste et vice versa. Par contre, un plancher de danse qui a peu d’énergie peut bénéficier d’une chanson plus rapide. Un plancher de danse trop fatigué pour les chansons rapides pourrait reprendre de la vigueur après une chanson lente. C’est pourquoi il est important de s’adapter aux gens dans la salle.",
                     "beginner": "Débutant",
                     "intermediate": "Intermédiaire",
                     "advanced": "Avancé",
