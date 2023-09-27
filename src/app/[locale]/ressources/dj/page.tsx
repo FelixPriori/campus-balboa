@@ -45,9 +45,9 @@ export default function DJ() {
         <div className={styles.content}>
           <BpmContent />
         </div>
-        <div className={styles.distribution}>
+        {/* <div className={styles.distribution}>
           <BpmDistribution />
-        </div>
+        </div> */}
       </div>
     </ScrollListenerWrapper>
   )
