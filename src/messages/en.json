@@ -7,7 +7,86 @@
     },
     "Home": {
         "toEventCta": "To Event",
-        "changeLang": "FR"
+        "changeLang": "FR",
+        "hero": {
+            "title": "Campus Balboa",
+            "description": "A <important>nonprofit</important> entirely <important>dedicated</important> to <important>fostering balboa growth</important> and <important>excellence</important> in and around <important>Montreal</important>."
+        },
+        "missionsSection": {
+            "title":"Our missions",
+            "missions": {
+                "development": {
+                    "title": "Develop and sustain",
+                    "content": "To be an independent entity aimed at the development and sustainability of the Balboa community in Montreal and its surrounding areas."
+                },
+                "practice": {
+                    "title": "Encourage the dance",
+                    "content": "Encourage the practice of Balboa dance in Montreal and its surrounding areas"
+                },
+                "excellence": {
+                    "title": "Foster excellence",
+                    "content": "Foster and promote the quality and excellence of activities related to Balboa in Montreal and its surroundings"
+                },
+                "support": {
+                    "title": "Support initiatives",
+                    "content": "Support and promote initiatives and activities related to Balboa in Montreal and its surrounding areas"
+                },
+                "organize": {
+                    "title": "Organize activities",
+                    "content": "Organize and support of Balboa-related activities aimed at visibility and increase of the Balboa scene in Montreal and its surroundings"
+                },
+                "knowledge": {
+                    "title": "Share knowledge",
+                    "content": "Bring together balboa dancers in Montreal and its surrounding areas with a common goal of sharing knowledge"
+                }
+            }
+        },
+        "aboutUsSection": {
+            "title":"About us",
+            "administrators": {
+                "felix": {
+                    "avatar": "/felix.jpg",
+                    "name": "Félix",
+                    "pronouns": "He/Him",
+                    "title": "President",
+                    "bio": "Félix has been an avid balboa dancer since 2014 and has taught at Cat’s Corner since 2016. The Montreal balboa scene is close to his heart, and he is behind several initiatives and events. A swing music lover, he can often be found behind the DJ booth at local dances."
+                },
+                "tania": {
+                    "avatar": "/tania.jpg",
+                    "name": "Tania",
+                    "pronouns": "She/Her",
+                    "title": "Vice-President",
+                    "bio": "Tania has been a fan of balboa since 2013 and has taught at Studio 88 Swing since 2016. Scientific in nature, she stands out for her analytical and technical approach. Despite these more discreet attributes, it remains very easy to find Tania on the dance floor by following the echo of her bursts of laughter."
+                },
+                "sara": {
+                    "avatar": "/sara.jpg",
+                    "name": "Sara",
+                    "pronouns": "She/Her",
+                    "title": "Treasurer",
+                    "bio": "Sara, a balboa enthusiast since 2003, is part of the Thé Dansant Montréal organization. An adventurer, she frequently participates in faraway balboa events during which she strives to discover as many new people she has never danced with as she can."
+                },
+                "sihem": {
+                    "avatar": "/sihem.jpg",
+                    "name": "Sihem",
+                    "pronouns": "She/Her",
+                    "title": "Secretary",
+                    "bio": "Sihem has been dancing balboa since 2015 and can be found on every dance floor in the city. She particularly appreciates balboa for its elegance and for the complexity of its connection. Her playful and unifying sides make her a strong steal jams participant."
+                },
+                "cara": {
+                    "avatar": "/cara.jpg",
+                    "name": "Cara",
+                    "pronouns": "She/Her",
+                    "title": "Administrator",
+                    "bio": "Cara, a balboa dancer since 2014, is active and engaged in the Montreal scene. She teaches at Cat's Corner and is one of the organizers of Apéros Balboa Montréal. Her gentle and warm approach makes her an excellent dancer in closed position and is passionate about slow balboa and pure balboa. She also holds the prestigious title of “the last person to leave the dance floor” (undefeated)."
+                }
+            }
+        },
+        "toBeAnnouncedSection": {
+            "title":"More details will be announced soon!"
+        },
+        "footerSection": {
+            "copy": "©2023 Campus Balboa"
+        }
     },
     "Resources": {
         "dj": {

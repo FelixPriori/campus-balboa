@@ -23,8 +23,9 @@
   --button-border-radius: calc(var(--spacing-ll) * 2);
 
   --color-dark: rgb(38, 70, 83);
-  --color-neutral: rgb(255, 255, 255);
+  --color-neutral: rgb(250, 249, 246);
   --color-primary: rgb(42, 157, 143);
+  --color-primary-9: #e6f8f6;
   --color-secondary: rgb(244, 162, 97);
   --color-warning: rgb(233, 196, 106);
   --color-error: rgb(231, 111, 81);
@@ -53,7 +54,7 @@ body {
 
 body {
   box-sizing: border-box;
-  padding: 3rem;
+  background-color: var(--color-neutral);
   color: var(--color-dark);
 }
 

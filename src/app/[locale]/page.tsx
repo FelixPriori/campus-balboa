@@ -1,21 +1,25 @@
-'use client';
-import styles from './page.module.css'
-import Button from '@/components/button/button'
-import { useTranslations } from 'next-intl';
-import useRouterWithLocale from '@/hooks/useRouterWithLocale'
+import styles from './page.module.scss'
+import LanguageSwitcher from '@/components/languageSwitcher/languageSwitcher';
+import LandingHero from './LandingHero';
+import LandingText from './LandingText';
+import MissionsSection from './MissionsSection';
+import AboutUsSection from './AboutUsSection';
+import ToBeAnnouncedSection from './ToBeAnnouncedSection';
+import Footer from './Footer';
 
 export default function Home() {
-  const router = useRouterWithLocale();
-  const t = useTranslations('Home');
-
   return (
     <div className={styles.home}>
-      <Button onClick={() => router.push('/event')}>
-        {t('toEventCta')}
-      </Button> 
-      <Button variant='secondary' onClick={() => router.switchLang()}>
-        {t('changeLang')}
-      </Button> 
+      <LandingHero>
+        <div className={styles.languageSwitcher}>
+          <LanguageSwitcher />
+        </div>
+        <LandingText />
+      </LandingHero>
+      <MissionsSection />
+      <AboutUsSection />
+      <ToBeAnnouncedSection />
+      <Footer />
     </div>
   )
 }

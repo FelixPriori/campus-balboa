@@ -1,0 +1,242 @@
+@import '../../layout/breakpoints.scss';
+
+.home {
+  .heroWrapper {
+    margin: 50px;
+    min-height: 75vh;
+    background-image: url("/shape-1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    .content {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .languageSwitcher {
+        position: absolute;
+        top: 50px;
+      }
+      
+      .heroTitle {
+        letter-spacing: 0.5rem;
+        font-size: 3rem;
+      }
+      .heroDescription {
+        font-size: 1.2rem;
+        max-width: 50%;
+
+        .important {
+          color: var(--color-primary);
+          font-weight: bold;
+        }
+      };
+
+      @media only screen and (max-width: $breakpoint-large) {
+        .heroDescription {
+          max-width: 75%;
+        }
+      }
+
+      @media only screen and (max-width: $breakpoint-small) {
+        align-items: center;
+        .heroTitle {
+          font-size: 2rem;
+          text-align: center;
+          margin-bottom: 0.75rem;
+        }
+        .heroDescription {
+          max-width: 80%;
+          text-align: center;
+        }
+      }
+    }
+
+    @media only screen and (max-width: $breakpoint-small) {
+      margin: 50px 50px 0 50px;
+    }
+  }
+
+  .missionsSection {
+    padding: 50px;
+    background-image: url("/shape-2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .content {
+      .missionsTitle {
+        letter-spacing: 0.35rem;
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .missionsContainer {
+        $dark: var(--color-dark);
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: var(--spacing-s);
+
+        .missionCard {
+          width: 250px;
+          height: 350px;
+          border-radius: var(--border-radius);
+          padding: 50px 25px;
+          background-color: rgba(255, 255, 255, 0.5);
+          box-shadow: 0 1.5rem 4rem rgba(38, 70, 83, 0.15);
+          transition: all 200 ease;
+
+          .cardTitle{
+            letter-spacing: 0.25rem;
+            text-align: center;
+            margin-bottom: 1rem;
+          }
+          .cardContent {
+            text-align: center;
+            line-height: 27px;
+          }
+
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.85);
+            transition: all 200 ease;
+          }
+        }
+      }
+    }
+
+    @media only screen and (max-width: $breakpoint-small) {
+      padding: 0 50px 50px 50px;
+    }
+  }
+
+  .aboutUsSection {
+    padding: 50px;
+    background-image: url("/shape-3.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .content {
+      .aboutUsTitle {
+        letter-spacing: 0.35rem;
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .administratorsContainer {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: var(--spacing-s);
+
+        .administratorCard {
+          width: 250px;
+          padding: 50px 25px;
+          border-radius: var(--border-radius);
+          background-color: rgba(255, 255, 255, 0.5);
+          box-shadow: 0 1.5rem 4rem rgba(38, 70, 83, 0.15);
+          transition: all 200 ease;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          
+          .avatarWrapper {
+            background-color: var(--color-primary);
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1rem;
+            .avatar {
+              border-radius: 50%;
+            }
+          }
+          .textWrapper {
+            text-align: center;
+            .name {
+              letter-spacing: 0.25rem;
+            }
+            .pronouns {
+              font-size: 0.75rem;
+              color: var(--color-primary);
+              font-weight: bold;
+            }
+            .title {
+              letter-spacing: 0.15rem;
+              margin-bottom: 0.15rem;
+            }
+            .bio {
+              line-height: 27px;
+
+              .italic {
+                font-style: italic;
+              }
+            }
+          }
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.85);
+            transition: all 200 ease;
+          }
+        }
+      }
+    }
+  }
+
+  .toBeAnnouncedSection {
+    padding: 50px;
+    height: 75vh;
+    background-image: url("/shape-4.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .content {
+      .title {
+        text-align: center;
+        font-size: 3rem;
+        letter-spacing: 0.5rem;
+      }
+
+      @media only screen and (max-width: $breakpoint-small) {
+        .title {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
+  .footerSection {
+    margin-top: 5rem;
+    height: 10vh;
+    background-color: var(--color-primary);
+
+    .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      .copy {
+        color: var(--color-neutral);
+      }
+    }
+  }
+}

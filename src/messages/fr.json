@@ -7,7 +7,86 @@
     },
     "Home": {
         "toEventCta": "Vers l'événement",
-        "changeLang": "En"
+        "changeLang": "En",
+        "hero": {
+            "title": "Campus Balboa",
+            "description": "Un organisme à but <important>non lucratif</important> entièrement dédié à favoriser la <important>croissance</important> et l’<important>excellence</important> du <important>balboa</important> à <important>Montréal</important> et ses environs."
+        },
+        "missionsSection": {
+            "title":"Nos missions",
+            "missions": {
+                "development": {
+                    "title": "Développement et pérennité",
+                    "content": "Être une entité indépendante visant le développement et la pérennité de la communauté de Balboa à Montréal et ses environs"
+                },
+                "practice": {
+                    "title": "Encourager la pratique",
+                    "content": "Encourager la pratique de la danse Balboa à Montréal et ses environs"
+                },
+                "excellence": {
+                    "title": "Favoriser l'excellence",
+                    "content": "Favoriser et promouvoir la qualité et l’excellence des activités liées au Balboa à Montréal et ses environs"
+                },
+                "support": {
+                    "title": "Supporter les initiatives",
+                    "content": "Soutenir et faire la promotion des initiatives et activités liées au Balboa à Montréal et ses environs"
+                },
+                "organize": {
+                    "title": "Organiser des activités",
+                    "content": "Organiser et soutenir des activités liées au Balboa visant la visibilité et l’accroissement de la scène de Balboa à Montréal et ses environs"
+                },
+                "knowledge": {
+                    "title": "Partage de connaissance",
+                    "content": "Regrouper les danseurs de balboa à Montréal et ses environs dans un but commun de partage de connaissances"
+                }
+            }
+        },
+        "aboutUsSection": {
+            "title":"À propos de nous",
+            "administrators": {
+                "felix": {
+                    "avatar": "/felix.jpg",
+                    "name": "Félix",
+                    "pronouns": "Il/Accords masculins",
+                    "title": "Président",
+                    "bio": "Félix est un avide danseur de balboa depuis 2014 et il enseigne au sein du Cat’s Corner depuis 2016. La scène de balboa montréalaise lui tenant à cœur, il est à l'origine de plusieurs initiatives et événements. Amateur de musique swing, on peut souvent le retrouver derrière le <italic>DJ booth</italic> dans les soirées."
+                },
+                "tania": {
+                    "avatar": "/tania.jpg",
+                    "name": "Tania",
+                    "pronouns": "Elle/Accords féminins",
+                    "title": "Vice-présidente",
+                    "bio": "Tania est férue de balboa depuis 2013 et elle enseigne au Studio 88 Swing depuis 2016. De nature scientifique, elle se démarque par son approche analytique et technique. Malgré ces dispositions plus discrètes, il demeure bien facile de trouver Tania sur le plancher de danse en suivant l'écho de ses éclats de rire."
+                },
+                "sara": {
+                    "avatar": "/sara.jpg",
+                    "name": "Sara",
+                    "pronouns": "Elle/Accords féminins",
+                    "title": "Trésorière",
+                    "bio": "Sara, passionnée de balboa depuis 2003, fait partie de l’organisation du Thé Dansant Montréal. Aventurière, elle participe fréquemment à des événements de balboa lointains durant lesquels elle s'efforce de découvrir le plus de nouvelles personnes avec qui elle n'a jamais dansé."
+                },
+                "sihem": {
+                    "avatar": "/sihem.jpg",
+                    "name": "Sihem",
+                    "pronouns": "Elle/Accords féminins",
+                    "title": "Secrétaire",
+                    "bio": "Sihem danse le balboa depuis 2015 et on la retrouve sur tous les planchers de danse de la métropole. Elle apprécie particulièrement le balboa pour son élégance et pour la complexité de la connexion. Ses côtés joueur et rassembleur font d'elle une participante de <italic>steal jams</italic> étoffée."
+                },
+                "cara": {
+                    "avatar": "/cara.jpg",
+                    "name": "Cara",
+                    "pronouns": "Elle/Accords féminins",
+                    "title": "Administratrice",
+                    "bio": "Cara, danseuse de balboa depuis 2014, est une personne active et engagée dans la scène montréalaise. Elle enseigne au Cat's Corner et est une des organisatrices des Apéros Balboa Montréal. Son approche douce et chaleureuse font d'elle une excellente danseuse en position fermée et elle est d'ailleurs passionnée par le balboa lent et le <italic>pure balboa</italic>. Elle détient aussi le prestigieux titre de « la dernière personne à quitter le plancher de danse » (sans défaite)."
+                }
+            }
+        },
+        "toBeAnnouncedSection": {
+            "title":"Plus de détails à venir!"
+        },
+        "footerSection": {
+            "copy": "© Campus Balboa, 2023"
+        }
     },
     "Resources": {
         "dj": {
