@@ -1,5 +1,4 @@
 import accessibility from "highcharts/modules/accessibility"
-import HighchartsReact from "highcharts-react-official"
 import Highcharts from "highcharts"
 import LineChart from './lineChart';
 import HistogramChart from './histogramChart';
@@ -17,7 +16,7 @@ export enum Level {
 
 type BpmDistributionGraphProps = {
     level: Level
-} | HighchartsReact.Props
+}
 
 export default function BpmDistributionGraph({level}: BpmDistributionGraphProps) {
     return (
