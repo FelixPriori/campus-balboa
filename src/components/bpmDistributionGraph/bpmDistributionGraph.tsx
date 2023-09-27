@@ -1,11 +1,7 @@
-import accessibility from "highcharts/modules/accessibility"
-import Highcharts from "highcharts"
 import LineChart from './lineChart';
 import HistogramChart from './histogramChart';
 import styles from './bpmDistributionGraph.module.scss'
 import Legend from './legend';
-
-accessibility(Highcharts);
 
 export enum Level {
     all = 'all',
