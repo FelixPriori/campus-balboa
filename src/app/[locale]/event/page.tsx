@@ -1,5 +1,5 @@
 'use client';
-import { Metadata } from 'next'
+// import { Metadata } from 'next'
 import styles from './page.module.css'
 import {useLocale, useTranslations} from 'next-intl';
 import Button from '@/components/button/button';
@@ -9,10 +9,10 @@ import EventSection from '@/components/eventSection/eventSection';
 import Card from '@/components/card/card';
 import PillRadio from '@/components/pillRadio/pillRadio';
 
-export const metadata: Metadata = {
-  title: 'Balboa Event',
-  description: 'Balboa Event hosted by the OBNL',
-}
+// export const metadata: Metadata = {
+//   title: 'Balboa Event',
+//   description: 'Balboa Event hosted by the OBNL',
+// }
 
 
 export default function Event() {
