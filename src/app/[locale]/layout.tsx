@@ -17,6 +17,15 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: 'Campus Balboa',
+  openGraph: {
+    images: [
+      {
+        url: '/opengraph-image.png',
+        alt: 'Campus Balboa logo'
+      }
+    ],
+    title: 'Campus Balboa',
+  },
 }
 
 export default async function LocaleLayout({children, params: {locale}}: {children: React.ReactElement, params: {locale: string}}) {
