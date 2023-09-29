@@ -5,6 +5,16 @@
         "changeLang": "EN",
         "registerCta": "S'enregistrer"
     },
+    "Events": {
+        "2024": {
+            "MtlBalJam": {
+                "title": "MTL BAL JAM 2024",
+                "TBA": "Plus de détails à venir!",
+                "saveTheDate": "Réservez la date :",
+                "date": "21-22-23 juin 2024"
+            }
+        }
+    },
     "Home": {
         "toEventCta": "Vers l'événement",
         "changeLang": "En",

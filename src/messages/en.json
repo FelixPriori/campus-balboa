@@ -5,6 +5,16 @@
         "changeLang": "FR",
         "registerCta": "Register"
     },
+    "Events": {
+        "2024": {
+            "MtlBalJam": {
+                "title": "MTL BAL JAM 2024",
+                "TBA": "More details to be announced soon!",
+                "saveTheDate": "Save the date:",
+                "date": "June 21-22-23 2024"
+            }
+        }
+    },
     "Home": {
         "toEventCta": "To Event",
         "changeLang": "FR",

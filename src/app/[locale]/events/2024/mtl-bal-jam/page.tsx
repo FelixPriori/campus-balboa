@@ -1,5 +1,4 @@
-'use client';
-// import { Metadata } from 'next'
+import { Metadata } from 'next'
 import styles from './page.module.css'
 import {useLocale, useTranslations} from 'next-intl';
 import Button from '@/components/button/button';
@@ -8,21 +7,36 @@ import Logo from '@/components/logo/logo';
 import EventSection from '@/components/eventSection/eventSection';
 import Card from '@/components/card/card';
 import PillRadio from '@/components/pillRadio/pillRadio';
+import TBA from './components/TBA';
 
-// export const metadata: Metadata = {
-//   title: 'Balboa Event',
-//   description: 'Balboa Event hosted by the OBNL',
-// }
+type Props = {
+  params: { locale: string }
+}
+
+export async function generateMetadata({params}: Props) {
+  if (params.locale === 'fr') {
+    return {
+      title: 'MTL BAL JAM 2024',
+      description: 'Évenement de balboa à Montréal le 21-22-23 juin 2024',
+    }
+  } else {
+    return {
+      title: 'MTL BAL JAM 2024',
+      description: 'Balboa event happening in Montreal on June 21-22-23 2024',
+    }
+  }
+}
 
 
 export default function Event() {
-  const t = useTranslations('Event');
-  const router = useRouterWithLocale();
-  const locale = useLocale()
+  // const t = useTranslations('Event');
+  // const router = useRouterWithLocale();
+  // const locale = useLocale()
   
   return (
     <div className={styles.eventPage}>
-      <EventSection
+      <TBA />
+      {/* <EventSection
         imgSrc="/balboa-placeholder-one.webp"
         imgAlt="Balboa dancers on the beach"
         clipDirection='bottom-left'
@@ -86,7 +100,7 @@ export default function Event() {
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint harum tenetur sequi at sed labore molestiae aspernatur sit magni dolorum architecto, voluptatum, officia, porro ipsum similique neque itaque fuga et!
           </p>
         </Card>
-      </EventSection>
+      </EventSection> */}
     </div>
   )
 }
