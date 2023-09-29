@@ -18,11 +18,29 @@ export async function generateMetadata({params}: Props) {
     return {
       title: 'MTL BAL JAM 2024',
       description: 'Évenement de balboa à Montréal le 21-22-23 juin 2024',
+      openGraph: {
+        images: [
+          {
+            url: '/opengraph-image.png',
+            alt: 'Campus Balboa logo'
+          }
+        ],
+        title: 'MTL BAL JAM 2024',
+      },
     }
   } else {
     return {
       title: 'MTL BAL JAM 2024',
       description: 'Balboa event happening in Montreal on June 21-22-23 2024',
+      openGraph: {
+        images: [
+          {
+            url: '/opengraph-image.png',
+            alt: 'Campus Balboa logo'
+          }
+        ],
+        title: 'MTL BAL JAM 2024',
+      },
     }
   }
 }
