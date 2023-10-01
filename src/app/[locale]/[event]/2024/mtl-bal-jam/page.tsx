@@ -21,7 +21,7 @@ export async function generateMetadata({params}: Props) {
       openGraph: {
         images: [
           {
-            url: '/opengraph-image.png',
+            url: '/opengraph-image.jpg',
             alt: 'Campus Balboa logo'
           }
         ],
@@ -35,7 +35,7 @@ export async function generateMetadata({params}: Props) {
       openGraph: {
         images: [
           {
-            url: '/opengraph-image.png',
+            url: '/opengraph-image.jpg',
             alt: 'Campus Balboa logo'
           }
         ],
