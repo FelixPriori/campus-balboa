@@ -4,7 +4,7 @@ import LandingHero from './LandingHero';
 import LandingText from './LandingText';
 import MissionsSection from './MissionsSection';
 import AboutUsSection from './AboutUsSection';
-import ToBeAnnouncedSection from './ToBeAnnouncedSection';
+import Events from './EventsSection';
 import Footer from './Footer';
 
 export default function Home() {
@@ -18,7 +18,7 @@ export default function Home() {
       </LandingHero>
       <MissionsSection />
       <AboutUsSection />
-      <ToBeAnnouncedSection />
+      <Events />
       <Footer />
     </div>
   )
