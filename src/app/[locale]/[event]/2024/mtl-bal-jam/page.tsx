@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import styles from './page.module.css'
+import styles from './page.module.scss'
 import {useLocale, useTranslations} from 'next-intl';
 import Button from '@/components/button/button';
 import useRouterWithLocale from '@/hooks/useRouterWithLocale'
@@ -8,6 +8,7 @@ import EventSection from '@/components/eventSection/eventSection';
 import Card from '@/components/card/card';
 import PillRadio from '@/components/pillRadio/pillRadio';
 import TBA from './components/TBA';
+import Favicon from '@/app/mtl-bal-jam-favicon.ico'
 
 type Props = {
   params: { locale: string }
@@ -18,28 +19,54 @@ export async function generateMetadata({params}: Props) {
     return {
       title: 'MTL BAL JAM 2024',
       description: 'Évenement de balboa à Montréal le 21-22-23 juin 2024',
+      icons: [
+        {rel: 'icon', url: Favicon.src}
+      ],
       openGraph: {
         images: [
           {
-            url: '/opengraph-image.jpg',
-            alt: 'Campus Balboa logo'
+            url: '/mtl-bal-jam-og-512.png',
+            alt: 'MTL BAL JAM 2024 logo',
+            width: 512,
+            height: 512,
+          },
+          {
+            url: '/mtl-bal-jam-og-192.png',
+            alt: 'MTL BAL JAM 2024 logo',
+            width: 192,
+            height: 192,
           }
         ],
         title: 'MTL BAL JAM 2024',
+        locale: 'fr',
+        description: 'Évenement de balboa à Montréal le 21-22-23 juin 2024'
       },
     }
   } else {
     return {
       title: 'MTL BAL JAM 2024',
       description: 'Balboa event happening in Montreal on June 21-22-23 2024',
+      icons: [
+        {rel: 'icon', url: Favicon.src}
+      ],
       openGraph: {
         images: [
           {
-            url: '/opengraph-image.jpg',
-            alt: 'Campus Balboa logo'
+            url: '/mtl-bal-jam-og-512.png',
+            alt: 'MTL BAL JAM 2024 logo',
+            width: 512,
+            height: 512,
+          },
+          {
+            url: '/mtl-bal-jam-og-192.png',
+            alt: 'MTL BAL JAM 2024 logo',
+            width: 192,
+            height: 192,
           }
         ],
         title: 'MTL BAL JAM 2024',
+        locale: 'en',
+        description: 'Balboa event happening in Montreal on June 21-22-23 2024',
       },
     }
   }

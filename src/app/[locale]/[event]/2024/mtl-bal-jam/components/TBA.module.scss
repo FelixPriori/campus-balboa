@@ -1,7 +1,12 @@
+@import '../mbj-variables.scss';
+
 .tba {
     height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: $mbj-color-salmon;
+    text-shadow: 2px 2px 1px $mbj-color-black;
+    gap: 0.5rem;
 }

@@ -1,0 +1,110 @@
+@import '../../../../layout/breakpoints.scss';
+
+.cardWrapper {
+    width: 100%;
+    max-width: 750px;
+    padding: 25px;
+    border-radius: var(--border-radius);
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 1.5rem 4rem rgba(38, 70, 83, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    .srOnly {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+    }
+
+    .details {
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .title {
+            font-size: 2rem;
+            letter-spacing: 0.25rem;
+        }
+        .paragraph {
+            font-size: 1.2rem;
+        }   
+    }
+
+    .arrow {
+        margin-left: auto;
+        border: 2px solid var(--color-dark);
+        border-radius: 50%;
+        min-height: 50px;
+        min-width: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0.75;
+
+        svg {
+            height: 32px;
+            width: 32px;
+        }
+    }
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.85);
+        .arrow {
+            opacity: 1;
+        }
+    }
+
+    @media only screen and (max-width: $breakpoint-medium) {
+        .details {
+            .title {
+                font-size: 1.5rem;
+                letter-spacing: 0.15rem;
+            }
+            .paragraph {
+                font-size: 1rem;
+            }   
+        }    
+    }
+
+    @media only screen and (max-width: $breakpoint-small) {
+        padding: 15px;
+        gap: 15px;
+
+        .image {
+            width: 50px;
+            height: 50px;
+        }
+        .details {
+            .title {
+                font-size: 1.15rem;
+                letter-spacing: 0.10rem;
+            }
+            .paragraph {
+                font-size: 0.8rem;
+            }   
+        } 
+        
+        .arrow {
+            min-height: 32px;
+            min-width: 32px;
+    
+            svg {
+                height: 16px;
+                width: 16px;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 460px) {
+        .arrow {
+            display: none;
+        }
+    }
+}

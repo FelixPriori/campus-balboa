@@ -95,7 +95,8 @@
             "title":"Events",
             "mtlBalJam": {
                 "title":"MTL BAL JAM 2024",
-                "cta": "Go to event page"
+                "details": "Save the date: June 21-22-23 2024",
+                "linkText": "Go to MTL BAL JAM 2024 event page"
             }
         },
         "footerSection": {
