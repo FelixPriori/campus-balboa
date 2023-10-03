@@ -9,6 +9,8 @@ import Card from '@/components/card/card';
 import PillRadio from '@/components/pillRadio/pillRadio';
 import TBA from './components/TBA';
 import Favicon from '@/app/mtl-bal-jam-favicon.ico'
+import BigOG from '@/app/mtl-bal-jam-og-512.png'
+import SmallOG from '@/app/mtl-bal-jam-og-192.png'
 
 type Props = {
   params: { locale: string }
@@ -25,13 +27,13 @@ export async function generateMetadata({params}: Props) {
       openGraph: {
         images: [
           {
-            url: '/mtl-bal-jam-og-512.png',
+            url: BigOG.src,
             alt: 'MTL BAL JAM 2024 logo',
             width: 512,
             height: 512,
           },
           {
-            url: '/mtl-bal-jam-og-192.png',
+            url: SmallOG.src,
             alt: 'MTL BAL JAM 2024 logo',
             width: 192,
             height: 192,
