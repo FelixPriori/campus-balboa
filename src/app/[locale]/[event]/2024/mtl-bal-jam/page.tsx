@@ -54,13 +54,13 @@ export async function generateMetadata({params}: Props) {
       openGraph: {
         images: [
           {
-            url: '/mtl-bal-jam-og-512.png',
+            url: BigOG.src,
             alt: 'MTL BAL JAM 2024 logo',
             width: 512,
             height: 512,
           },
           {
-            url: '/mtl-bal-jam-og-192.png',
+            url: SmallOG.src,
             alt: 'MTL BAL JAM 2024 logo',
             width: 192,
             height: 192,
