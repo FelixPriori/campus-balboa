@@ -1,0 +1,62 @@
+@import '@/layout/breakpoints.scss';
+
+.heroWrapper {
+    margin: 50px;
+    min-height: 75vh;
+    background-image: url("/shape-1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    .content {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .languageSwitcher {
+        position: absolute;
+        top: 50px;
+      }
+      
+      .heroTitle {
+        letter-spacing: 0.5rem;
+        font-size: 3rem;
+      }
+      .heroDescription {
+        font-size: 1.2rem;
+        max-width: 50%;
+
+        .important {
+          color: var(--color-primary);
+          font-weight: bold;
+        }
+      };
+
+      @media only screen and (max-width: $breakpoint-large) {
+        .heroDescription {
+          max-width: 75%;
+        }
+      }
+
+      @media only screen and (max-width: $breakpoint-small) {
+        align-items: center;
+        .heroTitle {
+          font-size: 2rem;
+          text-align: center;
+          margin-bottom: 0.75rem;
+        }
+        .heroDescription {
+          max-width: 80%;
+          text-align: center;
+        }
+      }
+    }
+
+    @media only screen and (max-width: $breakpoint-small) {
+      margin: 50px 50px 0 50px;
+    }
+  }

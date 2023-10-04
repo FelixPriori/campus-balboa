@@ -1,7 +1,7 @@
 "use client"
 import { useTranslations } from 'next-intl';
-import styles from './page.module.scss';
-import MissionsCard from './MissionCard';
+import styles from './styles.module.scss';
+import MissionsCard from '../../components/MissionCard';
 
 export default function MissionsSection() {
     const t = useTranslations('Home');

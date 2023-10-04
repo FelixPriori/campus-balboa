@@ -1,0 +1,17 @@
+@import '@/layout/breakpoints.scss';
+
+.footerSection {
+    margin-top: 5rem;
+    height: 10vh;
+    background-color: var(--color-primary);
+
+    .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      .copy {
+        color: var(--color-neutral);
+      }
+    }
+  }

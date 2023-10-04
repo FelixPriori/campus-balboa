@@ -1,7 +1,7 @@
 "use client"
 import { useTranslations } from 'next-intl';
-import styles from './page.module.scss';
-import AdministratorCard from './AdministratorCard';
+import styles from './styles.module.scss';
+import AdministratorCard from '../../components/AdministratorCard';
 
 export default function AboutUsSection() {
     const t = useTranslations('Home');

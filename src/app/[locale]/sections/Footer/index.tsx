@@ -1,6 +1,6 @@
 "use client"
 import { useTranslations } from 'next-intl';
-import styles from './page.module.scss';
+import styles from './styles.module.scss';
 
 export default function Footer() {
     const t = useTranslations('Home');

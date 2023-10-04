@@ -1,7 +1,7 @@
 "use client"
 import { useLocale, useTranslations } from 'next-intl';
-import styles from './page.module.scss';
-import EventCard from './components/EventCard/EventCard'
+import styles from './styles.module.scss';
+import EventCard from '../../components/EventCard'
 
 export default function Events() {
     const t = useTranslations('Home');

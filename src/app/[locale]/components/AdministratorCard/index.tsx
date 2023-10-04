@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import styles from './page.module.scss';
+import styles from './styles.module.scss';
 import { ReactNode } from 'react';
 
 interface AdministratorCard {
