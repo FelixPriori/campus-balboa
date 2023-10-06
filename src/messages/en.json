@@ -100,6 +100,50 @@
                 "linkText": "Go to MTL BAL JAM 2024 event page"
             }
         },
+        "featuredSection": {
+            "title": "Balboa in Montreal",
+            "featured": {
+                "aperos": {
+                    "title": "Apéros Balboa Montréal",
+                    "details": "The Apéros Balboa Montréal invite you to eat, drink and dance balboa every last Saturday of the month.",
+                    "type": "Monthly dance",
+                    "image": {
+                        "src": "/aperos-balboa.jpg",
+                        "alt": "Aperos Balboa Montréal banner"
+                    },
+                    "link": {
+                        "href": "https://www.facebook.com/AperosBalboaMontreal",
+                        "text": "Apéros Balboa Montreal Facebook page"
+                    }
+                },
+                "the": {
+                    "title": "Balboa Tea Party",
+                    "type": "Monthly dance",
+                    "details": "Come dance the balboa, eat and drink with friends on the 2nd Sunday of the month.",
+                    "image": {
+                        "src": "/the-dansant.jpg",
+                        "alt": "Balboa Tea Party banner"
+                    },
+                    "link": {
+                        "href": "https://www.facebook.com/groups/388149256494699",
+                        "text": "Balboa Tea Party Facebook page"
+                    }
+                },
+                "lapin": {
+                    "title": "Swing Lapin Lundi",
+                    "type": "Weekly dance",
+                    "details": "Every Monday, there will be a workshop class for the different styles of swing dance, followed by a night of fast jazz music.",
+                    "image": {
+                        "src": "/lapin-lundi.jpg",
+                        "alt": "Swing Lapin Lundi banner"
+                    },
+                    "link": {
+                        "href": "https://www.facebook.com/swinglapinlundi",
+                        "text": "Swing Lapin Lundi Facebook page"
+                    }
+                }
+            }
+        },
         "footerSection": {
             "copy": "©2023 Campus Balboa"
         }

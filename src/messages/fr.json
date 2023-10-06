@@ -100,6 +100,50 @@
                 "linkText": "Visiter la page de l'évenement MTL BAL JAM 2024"
             }
         },
+        "featuredSection": {
+            "title": "Balboa à Montréal",
+            "featured": {
+                "aperos": {
+                    "title": "Apéros Balboa Montréal",
+                    "type": "Danse mensuelle",
+                    "details": "Les Apéros Balboa Montréal vous invitent à manger, boire et danser le balboa, tous les derniers samedis du mois.",
+                    "image": {
+                        "src": "/aperos-balboa.jpg",
+                        "alt": "Banière des Aperos Balboa Montréal"
+                    },
+                    "link": {
+                        "href": "https://www.facebook.com/AperosBalboaMontreal",
+                        "text": "Page facebook des Apéros Balboa Montreal"
+                    }
+                },
+                "the": {
+                    "title": "Thé dansant balboa",
+                    "type": "Danse mensuelle",
+                    "details": "Viens danser le balboa, manger en prendre un verre entre amis/es le 2e dimanche du mois.",
+                    "image": {
+                        "src": "/the-dansant.jpg",
+                        "alt": "Banière du thé dansant balboa"
+                    },
+                    "link": {
+                        "href": "https://www.facebook.com/groups/388149256494699",
+                        "text": "Page facebook du thé dansant balboa"
+                    }
+                },
+                "lapin": {
+                    "title": "Swing Lapin Lundi",
+                    "type": "Danse hebdomadaire",
+                    "details": "Chaque lundi, il y aura un cours d'atelier pour les différents styles de danse swing, suivi d'une soirée de musique jazz rapide.",
+                    "image": {
+                        "src": "/lapin-lundi.jpg",
+                        "alt": "Banière du swing lapin lundi"
+                    },
+                    "link": {
+                        "href": "https://www.facebook.com/swinglapinlundi",
+                        "text": "Page facebook du swing lapin lundi"
+                    }
+                }
+            }
+        },
         "footerSection": {
             "copy": "© Campus Balboa, 2023"
         }

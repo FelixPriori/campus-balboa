@@ -2,7 +2,8 @@ import {
   Hero, 
   MissionsSection, 
   AboutUsSection, 
-  EventsSection, 
+  EventsSection,
+  FeaturedSection,
   Footer
 } from './sections';
 
@@ -13,6 +14,7 @@ export default function Home() {
       <MissionsSection />
       <AboutUsSection />
       <EventsSection />
+      <FeaturedSection />
       <Footer />
     </>
   )
