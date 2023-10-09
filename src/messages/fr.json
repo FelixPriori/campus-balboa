@@ -197,5 +197,11 @@
                 }
             }
         }
+    },
+    "Components": {
+        "paypal": {
+            "donate": "Faire un don",
+            "logoAlt": "Logo de PayPal"
+        }
     }
 }

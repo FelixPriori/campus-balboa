@@ -12,6 +12,15 @@
   --spacing-l: 1.5rem; /* 24px */
   --spacing-ll: 2rem; /* 32px */
 
+  /* PAYPAL */
+  --paypal-padding-y: 12px;
+  --paypal-padding-x: 24px;
+  --paypal-gap: 9px;
+  --paypal-color-gold: #FFD140;
+  --paypal-color-blue: #001C64;
+  --paypal-font-size: 16px;
+  --paypal-line-spacing: 24px;
+
   --clip-bottom-left: polygon(100% 0, 100% 100%, 0% 80%, 0 0);
   --clip-top-right-bottom-right: polygon(100% 20%, 100% 80%, 0 100%, 0 0);
   --clip-top-left: polygon(100% 0, 100% 100%, 0 100%, 0% 20%);
@@ -29,6 +38,7 @@
   --color-secondary: rgb(244, 162, 97);
   --color-warning: rgb(233, 196, 106);
   --color-error: rgb(231, 111, 81);
+
 }
 
 @media (prefers-color-scheme: dark) {

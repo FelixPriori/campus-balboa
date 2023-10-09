@@ -1,0 +1,25 @@
+@import '@/layout/breakpoints.scss';
+
+.donateButton {
+    background-color: var(--paypal-color-gold);
+    font-family: sans-serif;
+    color: var(--paypal-color-blue);
+    border-radius: 50px;
+    padding: var(--paypal-padding-y) var(--paypal-padding-x);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    font-weight: bold;
+    gap: var(--paypal-gap);
+    transition: all 200ms ease-in-out;
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 3px 5px rgba(38, 70, 83, 0.5);
+    }
+
+    @media only screen and (max-width: 580px) {
+        width: 100%;
+    }
+}
