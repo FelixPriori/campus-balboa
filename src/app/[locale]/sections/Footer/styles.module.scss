@@ -11,16 +11,26 @@
       justify-content: space-between;
       align-items: center;
       height: 100%;
+      
       .copy {
         color: var(--color-neutral);
+
+        a {
+          text-decoration: underline;
+          text-underline-offset: 2px;
+          text-decoration-thickness: 2px;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
       }
-      
     }
     
     @media only screen and (max-width: 580px) {
       padding: 20px;
       height: 100%;
-      
+
       .content {
         flex-direction: column;
         align-items: stretch;

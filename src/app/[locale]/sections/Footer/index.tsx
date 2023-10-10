@@ -9,7 +9,12 @@ export default function Footer() {
     return (
         <footer className={styles.footerSection}>
             <div className={styles.content}>
-                <p className={styles.copy}>{t('footerSection.copy')}</p>
+                <div>
+                    <p className={styles.copy}>
+                        <span>{t('footerSection.contact')}</span><a href="mailto:info@campusbalboa.org">info@campusbalboa.org</a>
+                    </p>
+                    <p className={styles.copy}>{t('footerSection.copy')}</p>
+                </div>
                 <div className={styles.donateWrapper}>
                     <DonateButton />
                 </div>

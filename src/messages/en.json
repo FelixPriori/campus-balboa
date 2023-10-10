@@ -145,7 +145,8 @@
             }
         },
         "footerSection": {
-            "copy": "©2023 Campus Balboa"
+            "copy": "©2023 Campus Balboa",
+            "contact": "Contact us: "
         }
     },
     "Resources": {
