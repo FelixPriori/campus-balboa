@@ -102,6 +102,7 @@
         },
         "featuredSection": {
             "title": "Balboa in Montreal",
+            "changeSlide": "Jump to slide {slideNum}",
             "featured": {
                 "aperos": {
                     "title": "Apéros Balboa Montréal",
@@ -140,6 +141,71 @@
                     "link": {
                         "href": "https://www.facebook.com/swinglapinlundi",
                         "text": "Swing Lapin Lundi Facebook page"
+                    }
+                },
+                "cats": {
+                    "title": "Cat’s Corner Community",
+                    "type": "Dance school",
+                    "details": "Cat’s Corner Community offers weekly subscription-based swing dance classes including Balboa for beginner, intermediate and advanced dancers. Additionally, monthly fast practices are included with a subscription, or open to everyone else for $5.",
+                    "image": {
+                        "src": "/cats-corner.png",
+                        "alt": "Cat's Corner's banner"
+                    },
+                    "link": {
+                        "href": "https://www.catscorner.ca/en/schedule/",
+                        "text": "Cat's Corner's website"
+                    }
+                },
+                "s88s": {
+                    "title": "Studio 88 Swing",
+                    "type": "Dance school",
+                    "details": "Studio 88 Swing offers swing dance classes including Balboa lasting 6 or 9 weeks at varying levels depending on the schedule, as well as the possibility to join the Swinging Air Force dance team with groups such as SAF:Shuffle Tactics or SAF:Ballistics",
+                    "image": {
+                        "src": "/studio-88-swing.png",
+                        "alt": "Studio 88 Swing banner"
+                    },
+                    "link": {
+                        "href": "http://www.studio88swing.com",
+                        "text": "Studio 88 Swing website"
+                    }
+                },
+                "scx": {
+                    "title": "Studio Swing Connexion",
+                    "type": "Dance school",
+                    "details": "Studio Swing Connexion offers the opportunity to join the Balboa Connexion troupe coached by Zack and Katya and sometimes offers Balboa dance classes depending on the schedule.",
+                    "image": {
+                        "src": "/swing-connexion.png",
+                        "alt": "Swing Connexion banner"
+                    },
+                    "link": {
+                        "href": "https://www.swingconnexion.com/92/Inscription-et-tarifs.danseswingmontreal",
+                        "text": "Swing Connexion website"
+                    }
+                },
+                "ccx": {
+                    "title": "CCX",
+                    "type": "Dance exchange",
+                    "details": "Every year, Cat’s Corner celebrates its birthday by putting together a social-dance focused weekend, with many opportunities to dance Balboa.",
+                    "image": {
+                        "src": "/ccx.jpg",
+                        "alt": "Banière de CCX"
+                    },
+                    "link": {
+                        "href": "https://www.catscorner.ca/en/ccx-2023/",
+                        "text": "Site web de CCX"
+                    }
+                }, 
+                "balMoment": {
+                    "title": "Bal Moment",
+                    "type": "Workshop weekend",
+                    "details": "This workshop weekend event is organized by Studio 88 Swing in collaboration with several partners and takes place in either Montreal or Quebec city; usually in the fall and/or in the spring.",
+                    "image": {
+                        "src": "/bal-moment.png",
+                        "alt": "Bal Moment banner"
+                    },
+                    "link": {
+                        "href": "https://swingmoment.com/bal-moment/",
+                        "text": "Bal Moment website"
                     }
                 }
             }

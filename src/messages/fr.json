@@ -102,6 +102,7 @@
         },
         "featuredSection": {
             "title": "Balboa à Montréal",
+            "changeSlide": "Voir la diapositive {slideNum}",
             "featured": {
                 "aperos": {
                     "title": "Apéros Balboa Montréal",
@@ -140,6 +141,71 @@
                     "link": {
                         "href": "https://www.facebook.com/swinglapinlundi",
                         "text": "Page facebook du swing lapin lundi"
+                    }
+                },
+                "cats": {
+                    "title": "Communauté Cat's Corner",
+                    "type": "École de danse",
+                    "details": "La Communauté Cat’s Corner offre des cours de danses swing incluant le Balboa par abonnement pour les danseurs.euses débutants.es, intermédiaires et avancés. De plus, des pratiques rapides mensuelles sont offertes pour les membres et ouvertes pour les non-membres à 5$.",
+                    "image": {
+                        "src": "/cats-corner.png",
+                        "alt": "Banière du Cat's Corner"
+                    },
+                    "link": {
+                        "href": "https://www.catscorner.ca/cours-de-danse/",
+                        "text": "Site web du Cat’s Corner"
+                    }
+                },
+                "s88s": {
+                    "title": "Studio 88 Swing",
+                    "type": "École de danse",
+                    "details": "Le Studio 88 Swing offre des cours de danse swing incluant le Balboa d’une durée de 6 ou 9 semaines à niveaux variés selon l’horaire, ainsi que la possibilité de se joindre à des troupes Swinging Air Force de Balboa comme les SAF:Shuffle Tactics ou les SAF:Ballistics.",
+                    "image": {
+                        "src": "/studio-88-swing.png",
+                        "alt": "Banière du Studio 88 Swing"
+                    },
+                    "link": {
+                        "href": "http://www.studio88swing.com/",
+                        "text": "Site web du Studio 88 Swing"
+                    }
+                },
+                "scx": {
+                    "title": "Studio Swing Connexion",
+                    "type": "École de danse",
+                    "details": "Le Studio Swing Connexion offre la possibilité de se joindre à la troupe Balboa Connexion coachée par Zack et Katya et propose parfois des cours de danse Balboa selon l’horaire.",
+                    "image": {
+                        "src": "/swing-connexion.png",
+                        "alt": "Banière du Studio Swing Connexion"
+                    },
+                    "link": {
+                        "href": "https://www.swingconnexion.com/92/Inscription-et-tarifs.danseswingmontreal",
+                        "text": "Site web du Studio Swing Connexion"
+                    }
+                },
+                "ccx": {
+                    "title": "CCX",
+                    "type": "Échange de danse",
+                    "details": "Chaque année, Cat's Corner célèbre son anniversaire en organisant un week-end axé sur la danse sociale, avec de nombreuses occasions de danser le Balboa.",
+                    "image": {
+                        "src": "/ccx.jpg",
+                        "alt": "Banière de CCX"
+                    },
+                    "link": {
+                        "href": "https://www.catscorner.ca/ccx-2023-2/",
+                        "text": "Site web de CCX"
+                    }
+                }, 
+                "balMoment": {
+                    "title": "Bal Moment",
+                    "type": "Ateliers de Balboa",
+                    "details": "Ce week-end d'ateliers de Balboa biannuel est organisé par le Studio 88 Swing en collaboration avec divers partenaires et a lieu parfois à Montréal et parfois à Québec; souvent soit au printemps ou à l'automne.",
+                    "image": {
+                        "src": "/bal-moment.png",
+                        "alt": "Banière du Bal Moment"
+                    },
+                    "link": {
+                        "href": "https://swingmoment.com/bal-moment/",
+                        "text": "Site web du Bal Moment"
                     }
                 }
             }
