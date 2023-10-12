@@ -4,3 +4,4 @@ export {default as AboutUsSection} from "./AboutUs";
 export {default as EventsSection} from './Events'
 export {default as FeaturedSection} from './Featured'
 export {default as Footer} from './Footer'
+export {default as Calendar} from './Calendar'

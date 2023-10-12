@@ -1,0 +1,13 @@
+.calendarSection {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .calendarWrapper {
+        padding: 15px;
+        border-radius: var(--border-radius);
+        background-color: white;
+        box-shadow: 0 1.5rem 4rem rgba(38, 70, 83, 0.15);;
+    }
+}

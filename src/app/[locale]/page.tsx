@@ -4,17 +4,19 @@ import {
   AboutUsSection, 
   EventsSection,
   FeaturedSection,
-  Footer
+  Footer,
+  Calendar
 } from './sections';
 
 export default function Home() {
   return (
     <>
       <Hero />
+      <FeaturedSection />
+      <Calendar />
+      <EventsSection />
       <MissionsSection />
       <AboutUsSection />
-      <EventsSection />
-      <FeaturedSection />
       <Footer />
     </>
   )
