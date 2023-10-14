@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 
 enum Breakpoints {
     Phone= 576,
@@ -17,14 +17,14 @@ export default function useResponsive() {
         isDesktop,
         isDesktopLarge,
     }, setSize] = useState({
-        isMobile: window.innerWidth <= Breakpoints.Phone,
-        isTablet: window.innerWidth > Breakpoints.Phone && window.innerWidth <= Breakpoints.Tablet,
-        isLaptop: window.innerWidth > Breakpoints.Tablet && window.innerWidth <= Breakpoints.Laptop,
-        isDesktop: window.innerWidth > Breakpoints.Laptop && window.innerWidth <= Breakpoints.Desktop,
-        isDesktopLarge: window.innerWidth >= Breakpoints.Desktop,
+        isMobile: false,
+        isTablet: false,
+        isLaptop: false,
+        isDesktop: false,
+        isDesktopLarge: false,
     })
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         const handleResize = () => {
             setSize(
                 {
@@ -37,8 +37,12 @@ export default function useResponsive() {
             )
         }
 
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
+        if (window) {
+            handleResize()
+
+            window.addEventListener("resize", handleResize);
+            return () => window.removeEventListener("resize", handleResize);
+        }
     }, [])
 
     return {
