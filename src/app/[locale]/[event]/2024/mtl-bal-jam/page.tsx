@@ -1,6 +1,5 @@
 import Favicon from '@/app/mtl-bal-jam-favicon.ico'
 import BigOG from '@/app/mtl-bal-jam-og-512.png'
-import SmallOG from '@/app/mtl-bal-jam-og-192.png'
 import { Band, Footer, Header, Instructors, Navigation, Venue } from './sections';
 import Main from '@/layout/main';
 
@@ -23,12 +22,6 @@ export async function generateMetadata({params}: Props) {
             alt: 'MTL BAL JAM 2024 logo',
             width: 512,
             height: 512,
-          },
-          {
-            url: SmallOG.src,
-            alt: 'MTL BAL JAM 2024 logo',
-            width: 192,
-            height: 192,
           }
         ],
         title: 'MTL BAL JAM 2024',
@@ -50,12 +43,6 @@ export async function generateMetadata({params}: Props) {
             alt: 'MTL BAL JAM 2024 logo',
             width: 512,
             height: 512,
-          },
-          {
-            url: SmallOG.src,
-            alt: 'MTL BAL JAM 2024 logo',
-            width: 192,
-            height: 192,
           }
         ],
         title: 'MTL BAL JAM 2024',
@@ -76,6 +63,7 @@ export default function Event() {
         <Instructors />
         <Venue />
         <Band />
+        <Footer />
       </Main>
     </>
   )
