@@ -1,0 +1,28 @@
+.headerSection {
+    position: relative;
+    height: 50vh;
+    background-color: var(--mbj-color-chartreuse);
+
+    .logoWrapper {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+    }
+
+    .text {
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        h1 {
+            font-size: 4rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+        }
+    }
+}

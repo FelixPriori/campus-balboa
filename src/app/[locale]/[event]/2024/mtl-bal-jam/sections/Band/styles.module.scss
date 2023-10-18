@@ -1,0 +1,119 @@
+.bandSection {
+    position: relative;
+    height: 50vh;
+    background-color: var(--mbj-color-chartreuse);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 30%;
+        height: 40%;
+        background-color: var(--mbj-color-black);
+        clip-path: polygon(0 0, 100% 0, 30% 55%, 0 30%);
+    }
+
+    .bandName {
+        position: relative;
+        grid-column: 1 / 9;
+
+        .text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            h2 {
+                font-size: 4rem;
+            }
+        }
+    }
+
+    .socialsWrapper {
+        position: relative;
+        grid-column: 9 / -1;
+        background-color: var(--mbj-color-white);
+
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: var(--mbj-color-black);
+            clip-path: polygon(0 40%, 0% 100%, 100% 100%);
+        }
+
+        .socials {
+            position: absolute;
+            bottom: 8px;
+            left: 1rem;
+            list-style: none;
+            z-index: 3;
+            display: flex;
+            gap: 1rem;
+
+            li {
+
+                .srOnly {
+                    position: absolute;
+                    width: 1px;
+                    height: 1px;
+                    padding: 0;
+                    margin: -1px;
+                    overflow: hidden;
+                    clip: rect(0, 0, 0, 0);
+                    white-space: nowrap;
+                    border-width: 0;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 992px) {
+        height: 100vh;
+        grid-template-rows: repeat(2, 1fr);
+
+        .bandName {
+            grid-row: 1 / 2;
+            grid-column: 4 / 10;
+
+            .text {
+                h2 {
+                    font-size: 3rem;
+                }
+            }
+        }
+
+        .socialsWrapper {
+            grid-row: 2 / -1;
+            grid-column: 1 / -1;
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        .bandName {
+            grid-column: 1 / -1;
+
+            .text {
+                h2 {
+                    font-size: 3rem;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 576px) {
+        .bandName {
+            .text {
+                h2 {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}

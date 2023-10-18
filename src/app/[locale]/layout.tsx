@@ -2,7 +2,8 @@ import type { Metadata } from 'next'
 import {NextIntlClientProvider} from 'next-intl';
 import { Poppins } from 'next/font/google'
 import {notFound} from 'next/navigation';
-import Main from '@/layout/main'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './globals.css'
 
 export function generateStaticParams() {
@@ -40,10 +41,9 @@ export default async function LocaleLayout({children, params: {locale}}: {childr
   return (
     <html lang={locale}>
       <body suppressHydrationWarning className={poppins.className}>
+        <ToastContainer />
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <Main>
-            {children}
-          </Main>
+          {children}
         </NextIntlClientProvider>
       </body>
     </html>

@@ -1,0 +1,77 @@
+.instructorsSection {
+    position: relative;
+    height: 50vh;
+    background-color: var(--mbj-color-black);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    .halfCircle {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: flex-start;
+        svg {
+            max-height: 200px;
+            max-width: 200px;
+        }
+    }
+
+    .text {
+        grid-column: 3 / 8;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h2 {
+            color: var(--mbj-color-white);
+            font-size: 5rem;
+        }
+
+    }
+
+    .linesCircle {
+        position: absolute;
+        right: 50px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    svg {
+        color: var(--mbj-color-white);
+    }
+
+    @media only screen and (max-width: 992px) {
+        .halfCircle {
+            bottom: -100px;
+            top: initial;
+            transform: none;
+        }
+
+        .text {
+            grid-column: 1 / -1;
+        }
+
+        .linesCircle {
+            top: 2px;
+
+            svg {
+                height: 200px;
+                width: 200px;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        .text {
+            h2 {
+                font-size: 3rem;
+            }
+        }
+
+        .linesCircle {
+            right: -100px;
+        }
+    }
+}

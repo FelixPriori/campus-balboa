@@ -1,3 +1,4 @@
+import Main from '@/layout/main'
 import {
   Hero, 
   MissionsSection, 
@@ -11,13 +12,15 @@ import {
 export default function Home() {
   return (
     <>
-      <Hero />
-      <FeaturedSection />
-      <Calendar />
-      <EventsSection />
-      <MissionsSection />
-      <AboutUsSection />
-      <Footer />
+      <Main>
+        <Hero />
+        <FeaturedSection />
+        <Calendar />
+        <EventsSection />
+        <MissionsSection />
+        <AboutUsSection />
+        <Footer />
+      </Main>
     </>
   )
 }

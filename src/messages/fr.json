@@ -8,10 +8,37 @@
     "Events": {
         "2024": {
             "MtlBalJam": {
-                "title": "MTL BAL JAM 2024",
+                "title": "MTL BAL JAM",
+                "logoAlt": "Logo du MTL BAL JAM",
                 "TBA": "Plus de détails à venir!",
-                "saveTheDate": "Réservez la date :",
-                "date": "21-22-23 juin 2024"
+                "saveTheDate": "Réservez la date!",
+                "archAlt": "Dessin d'une arche couleur saumon sur fond bleu",
+                "date": "21-22-23 juin 2024",
+                "subscribe": {
+                    "title": "Abonnez-vous pour de délicieux détails",
+                    "email": "Courriel",
+                    "emailExample": "votrecourriel@exemple.com",
+                    "firstName": "Prénom",
+                    "firstNamePlaceholder": "Votre prénom",
+                    "lastName": "Nom de famille",
+                    "lastNamePlaceholder": "Votre nom de famille",
+                    "permission": "Je consent à reçevoir de l'information promotionnel sur MTL BAL JAM",
+                    "subscribe": "Souscrire",
+                    "success": "Vous êtes inscrits à la liste d'envoi.",
+                    "error": "Une erreur s'est produite, veuillez réessayer."
+                },
+                "socials": {
+                    "facebook": {
+                        "alt": "Facebook",
+                        "href": "https://www.facebook.com/MontrealBalJam",
+                        "logo": "/facebook-white.png"
+                    },
+                    "email": {
+                        "alt": "Email",
+                        "href": "mailto:info@campusbalboa.org",
+                        "logo": "/email-white.png"
+                    }
+                }
             }
         }
     },

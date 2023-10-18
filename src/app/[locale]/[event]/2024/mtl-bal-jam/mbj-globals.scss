@@ -1,0 +1,85 @@
+h1, h2, h3, h4, h5 {
+    font-family: var(--font-caveat-brush);
+    color: var(--mbj-color-black);
+    font-weight: normal;
+}
+
+p, a, button, label {
+    font-family: var(--font-josephin-sans);
+    color: var(--mbj-color-black);
+}
+
+
+fieldset {
+    border: none;
+}
+
+.mbj-toast-success {
+    --toastify-color-success: #d97f76;
+    --toastify-icon-color-success: var(--toastify-color-success);
+    --toastify-color-progress-success: var(--toastify-color-success);
+}
+
+.mbj-event {
+    --mbj-color-salmon: #d97f76;
+    --mbj-color-teal: #008080;
+    --mbj-color-chartreuse: #cfcf5a;
+    --mbj-color-black: #000;
+    --mbj-color-white: #fff;
+
+    margin: 40px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 1.5rem 4rem rgba(38, 70, 83, 0.15);
+    overflow: hidden;
+
+    @media only screen and (max-width: 576px) {
+        border-radius: 0;
+        box-shadow: none;
+        margin: 0;
+    }
+    
+    .mbj-form {
+        padding: 12px;
+        width: 100%;
+
+        .mbj-fieldset {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 12px;
+        }
+
+        .mbj-inline-fieldset {
+            display: flex;
+            gap: 8px;
+            margin: 12px 0;
+        }
+    
+        .mbj-label {
+            margin-bottom: 8px;
+        }
+    
+        .mbj-field {
+            padding: 8px 12px;
+            border-radius: 4px;
+            border-style: solid;
+
+            &:focus-visible {
+                outline-color: var(--mbj-color-salmon);
+            }
+        }
+
+        .mbj-button {
+            padding: 8px 12px;
+            background-color: transparent;
+            border: 1px solid var(--mbj-color-black);
+            border-radius: 40px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: var(--mbj-color-salmon);
+                border-color: var(--mbj-color-salmon);
+                color: var(--mbj-color-white);
+            }
+        }
+    }
+}
