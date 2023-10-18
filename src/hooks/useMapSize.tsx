@@ -8,7 +8,7 @@ type MapSize = {
 
 export default function useMapSize() {
     const [mapSize, setMapSize] = useState<MapSize>()
-    const {isMobile, isTablet, isLaptop, isDesktop} = useResponsive()
+    const {isMobile, isTablet, isLaptop, isDesktop, isLargeDesktop} = useResponsive()
     
     useEffect(() => {
         if (isMobile) {
@@ -17,11 +17,10 @@ export default function useMapSize() {
             setMapSize({width: 500, height: 400})
         } else if (isLaptop) {
             setMapSize({width: 600, height: 500})
-        } else if (isDesktop) {
+        } else if (isDesktop || isLargeDesktop) {
             setMapSize({width: 800, height: 600})
         }
-
-    }, [isMobile, isTablet, isLaptop, isDesktop])
+    }, [isMobile, isTablet, isLaptop, isDesktop, isLargeDesktop])
 
     return mapSize
 }
