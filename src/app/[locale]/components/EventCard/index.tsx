@@ -2,8 +2,19 @@ import Image from 'next/image';
 import styles from './styles.module.scss'
 import Link from 'next/link';
 import ArrowRight from '@/assets/svgs/arrow-right';
+import LinesCircle from '@/assets/svgs/lines-circle';
+import { Caveat_Brush } from 'next/font/google';
+
+
+const caveatBrush = Caveat_Brush({ 
+    subsets: ['latin'], 
+    weight: ['400'],
+    style: ['normal'],
+    variable: '--font-caveat-brush',
+})
 
 interface EventCard {
+    dark: boolean;
     title: string;
     details: string;
     image: {
@@ -16,9 +27,9 @@ interface EventCard {
     }
 }
 
-export default function EventCard({image, title, link, details}: EventCard) {
+export default function EventCard({image, title, link, details, dark}: EventCard) {
     return (
-        <Link href={link.href} className={styles.cardWrapper}>
+        <Link href={link.href} className={`${styles.cardWrapper} ${dark ? styles.dark : ''} ${dark ? caveatBrush.className : ''}`}>
             <p className={styles.srOnly}>{link.text}</p>
             <Image
                 className={styles.image}
@@ -32,7 +43,7 @@ export default function EventCard({image, title, link, details}: EventCard) {
                 <p className={styles.paragraph}>{details}</p>
             </div>
             <div className={styles.arrow}>
-                <ArrowRight />
+                {!dark ? <ArrowRight /> : <LinesCircle />}
             </div>
         </Link>
     )

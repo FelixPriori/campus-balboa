@@ -11,11 +11,12 @@ export default function Events() {
         <section className={styles.eventsSection}>
             <div className={styles.content}>     
                 <h2 className={styles.eventsTitle}>{t('eventsSection.title')}</h2>
-                <EventCard 
+                <EventCard
+                    dark
                     title={t('eventsSection.mtlBalJam.title')} 
                     details={t('eventsSection.mtlBalJam.details')} 
                     image={{
-                        src: '/mbj-toast-logo-192.png',
+                        src: '/mtl-bal-jam-logo-white.png',
                         alt: t('eventsSection.mtlBalJam.logoAlt')
                     }} 
                     link={{

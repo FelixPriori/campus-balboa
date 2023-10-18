@@ -1,6 +1,30 @@
 @import '@/layout/breakpoints.scss';
 
 .cardWrapper {
+    &.dark {
+        --color-dark: #fff;
+        --color-neutral: #000;
+        background-color: rgba(0, 0, 0, 0.85);
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 1);
+        }
+
+        .title,
+        .paragraph, 
+        svg {
+            color: var(--color-dark);
+        }
+
+        .arrow {
+            border: none;
+            svg {
+                height: 50px;
+                width: 50px;
+            }
+        }
+    }
+
     width: 100%;
     max-width: 750px;
     padding: 25px;
