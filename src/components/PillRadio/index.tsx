@@ -1,6 +1,6 @@
-import styles from './pillRadio.module.css'
+import styles from './styles.module.scss'
 
-type OptionProps = {
+export type OptionProps = {
     name: string
     onClick: () => void
     active: boolean
@@ -9,7 +9,8 @@ type OptionProps = {
 }
 
 type PillRadioProps = {
-    options: OptionProps[]
+    options: OptionProps[],
+    customStyling?: string,
 }
 
 function Option ({name, onClick, active, first = false, last = false}: OptionProps) {
@@ -24,14 +25,14 @@ function Option ({name, onClick, active, first = false, last = false}: OptionPro
     )
 }
 
-export default function PillRadio ({options = []}: PillRadioProps) {
-    return <div className={styles.pillRadio}>
+export default function PillRadio ({options = [], customStyling}: PillRadioProps) {
+    return <div className={`${styles.pillRadio} ${customStyling ? styles[customStyling] : ''}`}>
         {options.map((option, index) => 
             <Option 
                 key={option.name} 
                 first={index === 0}
                 last={index === options.length - 1} 
-                {...option} 
+                {...option}
             />
         )}
     </div>

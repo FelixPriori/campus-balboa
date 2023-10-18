@@ -1,7 +1,7 @@
 "use client"
 import { useTranslations } from "next-intl"
 import { useState } from "react"
-import PillRadio from "@/components/pillRadio/pillRadio"
+import PillRadio from "@/components/PillRadio"
 import BpmDistributionGraph, { Level } from "@/components/bpmDistributionGraph/bpmDistributionGraph"
 import styles from './page.module.scss'
 

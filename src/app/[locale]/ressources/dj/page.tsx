@@ -3,8 +3,8 @@ import styles from './page.module.scss'
 import BpmContent from './BpmContent';
 import BpmHeader from './BpmHeader';
 import ScrollListenerWrapper from './ScrollListenerWrapper';
-import LanguageSwitcher from '@/components/languageSwitcher/languageSwitcher';
-import BpmDistribution from './BpmDistribution';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
+// import BpmDistribution from './BpmDistribution';
 
 type MetadataProps = {
   params: {locale: string}

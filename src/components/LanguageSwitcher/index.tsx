@@ -1,14 +1,21 @@
 "use client"
 import useRouterWithLocale from "@/hooks/useRouterWithLocale";
-import PillRadio from "../pillRadio/pillRadio"
+import PillRadio, { OptionProps } from "../PillRadio"
 import { useLocale } from "next-intl";
 
-export default function LanguageSwitcher() {
+interface LanguageSwitcherProps {
+  customStyling?: string
+  customOptions?: OptionProps[]
+}
+
+export default function LanguageSwitcher({customStyling, customOptions}: LanguageSwitcherProps) {
     const router = useRouterWithLocale();
     const locale = useLocale()
     return (
-        <PillRadio 
+        <PillRadio
+            customStyling={customStyling}
             options={
+              customOptions ? customOptions :
               [
                 {
                   onClick: () => router.setLang('en'),
