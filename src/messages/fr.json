@@ -15,14 +15,14 @@
                 "archAlt": "Dessin d'une arche couleur saumon sur fond bleu",
                 "date": "21-22-23 juin 2024",
                 "subscribe": {
-                    "title": "Abonnez-vous pour de délicieux détails",
+                    "title": "Abonnez-vous pour des détails croustillants",
                     "email": "Courriel",
                     "emailExample": "votrecourriel@exemple.com",
                     "firstName": "Prénom",
                     "firstNamePlaceholder": "Votre prénom",
                     "lastName": "Nom de famille",
                     "lastNamePlaceholder": "Votre nom de famille",
-                    "permission": "Je consent à reçevoir de l'information promotionnel sur MTL BAL JAM",
+                    "permission": "Je consens à recevoir de l'information promotionnelle sur MTL BAL JAM",
                     "subscribe": "Souscrire",
                     "success": "Vous êtes inscrits à la liste d'envoi.",
                     "error": "Une erreur s'est produite, veuillez réessayer."

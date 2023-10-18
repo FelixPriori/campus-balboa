@@ -70,7 +70,7 @@ export async function generateMetadata({params}: Props) {
 export default function Event() {
   return (
     <>
-      {/* <Navigation /> */}
+      <Navigation />
       <Main styles={{borderRadius: '0.625rem'}}>
         <Header />
         <Instructors />

@@ -4,6 +4,7 @@ import { useLocale, useTranslations } from "next-intl";
 import {toast} from 'react-toastify';
 import { useState } from 'react';
 import styles from './styles.module.scss'
+import CustomCheckbox from '@/components/CustomCheckbox';
 
 export default function MailchimpForm() {
     const [isSuccess, setIsSuccess] = useState(false);
@@ -37,8 +38,11 @@ export default function MailchimpForm() {
                 <input className="mbj-field" required id="subscriberEmail" name="email" type="email" placeholder={t('emailExample')} />
             </fieldset>
             <fieldset className='mbj-inline-fieldset'>
-                <input className="mbj-checkbox-field" id="permission" name="permission" type="checkbox" />
-                <label className='mbj-inline-label' htmlFor='permission'>{t('permission')}</label>
+                <CustomCheckbox 
+                    name="permission"
+                    id="permission"
+                    label={t('permission')}
+                />
             </fieldset>
             <button className="mbj-button" type="submit">{t('subscribe')}</button>
         </form>

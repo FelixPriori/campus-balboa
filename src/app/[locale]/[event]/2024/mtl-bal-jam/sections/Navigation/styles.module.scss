@@ -1,4 +1,9 @@
 .navigation {
+    position: absolute;
+    top: 60px;
+    right: 60px;
+    z-index: 5;
+
     ul {
         list-style: none;
 
@@ -7,5 +12,10 @@
                 color: var(--mbj-color-teal);
             }
         }
+    }
+
+    @media only screen and (max-width: 576px) {
+        top: 20px;
+        right: 20px;
     }
 }

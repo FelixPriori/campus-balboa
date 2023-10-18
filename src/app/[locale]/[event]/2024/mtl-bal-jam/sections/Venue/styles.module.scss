@@ -28,6 +28,7 @@
 
     .archWrapper {
         position: relative;
+        min-height: 350px;
         grid-column: 9 / -1;
         background-color: var(--mbj-color-teal);
 
@@ -49,7 +50,7 @@
     }
 
     @media only screen and (max-width: 992px) {
-        height: 100vh;
+        min-height: 100vh;
         grid-template-rows: repeat(2, 1fr);
 
         .subscribeWrapper {
