@@ -57,6 +57,10 @@ fieldset {
         .mbj-label {
             margin-bottom: 8px;
         }
+        
+        .mbj-inline-label {
+            text-align: left;
+        }
     
         .mbj-field {
             padding: 8px 12px;
@@ -79,6 +83,10 @@ fieldset {
                 background-color: var(--mbj-color-salmon);
                 border-color: var(--mbj-color-salmon);
                 color: var(--mbj-color-white);
+            }
+
+            @media only screen and (max-width: 576px) {
+                width: 100%;
             }
         }
     }

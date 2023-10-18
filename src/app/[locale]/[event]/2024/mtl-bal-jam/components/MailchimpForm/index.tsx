@@ -38,7 +38,7 @@ export default function MailchimpForm() {
             </fieldset>
             <fieldset className='mbj-inline-fieldset'>
                 <input className="mbj-checkbox-field" id="permission" name="permission" type="checkbox" />
-                <label htmlFor='permission'>{t('permission')}</label>
+                <label className='mbj-inline-label' htmlFor='permission'>{t('permission')}</label>
             </fieldset>
             <button className="mbj-button" type="submit">{t('subscribe')}</button>
         </form>
