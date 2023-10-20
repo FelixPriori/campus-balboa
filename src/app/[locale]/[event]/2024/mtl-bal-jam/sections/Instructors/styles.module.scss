@@ -22,13 +22,27 @@
         grid-column: 3 / 8;
         height: 100%;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 1rem;
+
         h2 {
             color: var(--mbj-color-white);
-            font-size: 5rem;
+            font-size: 4rem;
         }
 
+        .googleLink {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: var(--mbj-color-white);
+            border-radius: 2rem;
+            padding: 0.75rem 1.5rem;
+            font-weight: bold;
+            font-size: 0.875rem;
+            color: var(--google-color-blue);
+        }
     }
 
     .linesCircle {
@@ -41,6 +55,15 @@
     svg {
         color: var(--mbj-color-white);
     }
+
+    @media only screen and (max-width: 1200px) {
+        .text {
+            h2 {
+                font-size: 3rem;
+            }
+        }
+    }
+
 
     @media only screen and (max-width: 992px) {
         .halfCircle {
@@ -67,6 +90,18 @@
         .text {
             h2 {
                 font-size: 3rem;
+            }
+
+            .googleLink {
+                gap: 8px;
+                padding: 8px 16px;
+                font-weight: bold;
+                font-size: 14px;
+
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
             }
         }
 

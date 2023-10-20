@@ -21,6 +21,9 @@
   --paypal-font-size: 16px;
   --paypal-line-spacing: 24px;
 
+  /* GOOGLE */
+  --google-color-blue: #1a73e8;
+
   --clip-bottom-left: polygon(100% 0, 100% 100%, 0% 80%, 0 0);
   --clip-top-right-bottom-right: polygon(100% 20%, 100% 80%, 0 100%, 0 0);
   --clip-top-left: polygon(100% 0, 100% 100%, 0 100%, 0% 20%);

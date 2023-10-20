@@ -7,6 +7,7 @@
 
     .subscribeWrapper {
         grid-column: 3 / 7;
+        padding: 1.25rem;
 
         .subscribeContent {
             height: 100%;
@@ -21,7 +22,7 @@
             }
 
             @media only screen and (max-width: 576px) {
-                padding: 20px 0;
+                padding: 1.25rem 0;
             }
         }
     }
