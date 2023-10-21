@@ -10,6 +10,20 @@ type MetadataProps = {
   params: {locale: string}
 }
 
+const robots = {
+  index: false,
+  follow: true,
+  nocache: true,
+  googleBot: {
+    index: true,
+    follow: false,
+    noimageindex: true,
+    'max-video-preview': -1,
+    'max-image-preview': 'large',
+    'max-snippet': -1,
+  },
+}
+
 export function generateMetadata({ params }: MetadataProps) {
   const locale = params.locale
 
@@ -17,12 +31,14 @@ export function generateMetadata({ params }: MetadataProps) {
     return {
       title: 'DJ Ressources',
       description: 'Ressources related to DJing Balboa',
+      robots,
     }
   }
 
   return {
     title: 'Ressources DJ',
     description: 'Ressources pour les DJ de balboa',
+    robots,
   }
 }
 

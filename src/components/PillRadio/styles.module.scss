@@ -1,16 +1,18 @@
 .pillRadio {
-    padding: 4px;
+    padding: 0.25rem;
     border: 1px solid var(--color-dark);
-    border-radius: 12px;
+    border-radius: 0.75rem;
     width: fit-content;
     
     .option {
         background-color: transparent;
-        padding: 8px 16px;
+        padding: 0.5rem 1rem;
         border: none;
         cursor:pointer;
 
         &:not(.active){
+            color: var(--color-dark);
+
             &:hover {
                 background-color: var(--color-primary);
                 color: var(--color-neutral);
@@ -25,11 +27,11 @@
         }
         
         &.first {
-            border-radius: 8px 0 0 8px;
+            border-radius: 0.5rem 0 0 0.5rem;
         }
         
         &.last {
-            border-radius: 0 8px 8px 0;
+            border-radius: 0 0.5rem 0.5rem 0;
         }
     }
 

@@ -45,14 +45,12 @@
         }
     },
     "Home": {
-        "toEventCta": "To Event",
-        "changeLang": "FR",
         "hero": {
             "title": "Campus Balboa",
             "description": "A <important>nonprofit</important> entirely <important>dedicated</important> to <important>fostering balboa growth</important> and <important>excellence</important> in and around <important>Montreal</important>."
         },
         "missionsSection": {
-            "title":"Our missions",
+            "title":"Missions",
             "missions": {
                 "development": {
                     "title": "Develop and sustain",
@@ -238,6 +236,9 @@
                     }
                 }
             }
+        },
+        "calendarSection": {
+            "title": "Calendar"
         },
         "footerSection": {
             "copy": "©2023 Campus Balboa",

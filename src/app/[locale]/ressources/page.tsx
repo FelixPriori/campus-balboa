@@ -1,10 +1,5 @@
-import { Metadata } from 'next'
-
-export const metadata: Metadata = {
-  title: 'Ressources',
-  description: 'Ressources related to Balboa',
-}
+import { redirect } from 'next/navigation';
 
 export default function Ressources() {
-  <div></div>
+  redirect(`ressources/dj`);
 }

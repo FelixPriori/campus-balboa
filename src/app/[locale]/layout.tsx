@@ -1,4 +1,3 @@
-import type { Metadata } from 'next'
 import {NextIntlClientProvider} from 'next-intl';
 import { Poppins } from 'next/font/google'
 import {notFound} from 'next/navigation';
@@ -15,19 +14,6 @@ const poppins = Poppins({
   weight: ['100', '200', '300', '400', '500','600', '700', '800', '900'],
   style: ['normal', 'italic']
 })
-
-export const metadata: Metadata = {
-  title: 'Campus Balboa',
-  openGraph: {
-    images: [
-      {
-        url: '/opengraph-image.jpg',
-        alt: 'Campus Balboa logo'
-      }
-    ],
-    title: 'Campus Balboa',
-  },
-}
 
 export default async function LocaleLayout({children, params: {locale}}: {children: React.ReactElement, params: {locale: string}}) {
 

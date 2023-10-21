@@ -45,14 +45,12 @@
         }
     },
     "Home": {
-        "toEventCta": "Vers l'événement",
-        "changeLang": "En",
         "hero": {
             "title": "Campus Balboa",
             "description": "Un organisme à but <important>non lucratif</important> entièrement dédié à favoriser la <important>croissance</important> et l’<important>excellence</important> du <important>balboa</important> à <important>Montréal</important> et ses environs."
         },
         "missionsSection": {
-            "title":"Nos missions",
+            "title":"Missions",
             "missions": {
                 "development": {
                     "title": "Développement et pérennité",
@@ -238,6 +236,9 @@
                     }
                 }
             }
+        },
+        "calendarSection": {
+            "title": "Calendrier"
         },
         "footerSection": {
             "copy": "© Campus Balboa, 2023",
