@@ -32,7 +32,7 @@ export default function Calendar() {
                 <h2>{t('calendarSection.title')}</h2>
             </div>
             <div className={styles.calendarWrapper}>
-                {isLoading ? <InfinitySpin width="200" color="var(--color-primary)" /> : <iframe src={mapUrl} style={{border: 0}} width={mapSize?.width ?? 0} height={mapSize?.height ?? 0} frameBorder="0" scrolling="no"></iframe>}  
+                {isLoading ? <InfinitySpin width="200" color="var(--color-primary)" /> : <iframe title={t('calendarSection.iframeTitle')} src={mapUrl} style={{border: 0}} width={mapSize?.width ?? 0} height={mapSize?.height ?? 0} frameBorder="0" scrolling="no"></iframe>}  
             </div>
         </section>
     )

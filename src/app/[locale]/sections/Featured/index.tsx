@@ -83,10 +83,10 @@ export default function Featured() {
                         )}
                     </div>
 
-                    <button className={styles.emblaPrev} onClick={scrollPrev}>
+                    <button className={styles.emblaPrev} onClick={scrollPrev} aria-label={t('featuredSection.prevSlide')}>
                         <ArrowLeft />
                     </button>
-                    <button className={styles.emblaNext} onClick={scrollNext}>
+                    <button className={styles.emblaNext} onClick={scrollNext} aria-label={t('featuredSection.nextSlide')}>
                         <ArrowRight />
                     </button>
                 </div>

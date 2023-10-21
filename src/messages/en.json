@@ -130,6 +130,8 @@
         "featuredSection": {
             "title": "Balboa in Montreal",
             "changeSlide": "Jump to slide {slideNum}",
+            "nextSlide": "Next slide",
+            "prevSlide": "Previous slide",
             "featured": {
                 "aperos": {
                     "title": "Apéros Balboa Montréal",
@@ -238,7 +240,8 @@
             }
         },
         "calendarSection": {
-            "title": "Calendar"
+            "title": "Calendar",
+            "iframeTitle": "Balboa in Montreal Google Calendar"
         },
         "footerSection": {
             "copy": "©2023 Campus Balboa",
