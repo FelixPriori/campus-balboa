@@ -28,7 +28,7 @@ export default async function LocaleLayout({children, params: {locale}}: {childr
     <html lang={locale}>
       <body suppressHydrationWarning className={poppins.className}>
         <ToastContainer />
-        <NextIntlClientProvider locale={locale} messages={messages}>
+        <NextIntlClientProvider timeZone="America/Toronto" locale={locale} messages={messages}>
           {children}
         </NextIntlClientProvider>
       </body>
