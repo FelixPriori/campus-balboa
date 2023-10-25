@@ -8,10 +8,15 @@ type Props = {
 }
 
 export async function generateMetadata({params}: Props) {
+  const siteUrl = 'https://www.campusbalboa.org'
+
   if (params.locale === 'fr') {
     return {
       title: 'MTL BAL JAM 2024',
       description: 'Évenement de balboa à Montréal le 21-22-23 juin 2024',
+      alternates: {
+        canonical: `${siteUrl}/fr/evenements/2024/mtl-bal-jam`
+      },
       icons: [
         {rel: 'icon', url: Favicon.src}
       ],
@@ -33,6 +38,9 @@ export async function generateMetadata({params}: Props) {
     return {
       title: 'MTL BAL JAM 2024',
       description: 'Balboa event happening in Montreal on June 21-22-23 2024',
+      alternates: {
+        canonical: `${siteUrl}/en/events/2024/mtl-bal-jam`
+      },
       icons: [
         {rel: 'icon', url: Favicon.src}
       ],

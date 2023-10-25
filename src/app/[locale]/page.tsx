@@ -14,10 +14,15 @@ type Props = {
 }
 
 export async function generateMetadata({params}: Props) {
+  const siteUrl = 'https://www.campusbalboa.org'
+
   if (params.locale === 'fr') {
     return {
       title: 'Campus Balboa',
       description: 'Un organisme à but non lucratif entièrement dédié à favoriser la croissance et l’excellence du balboa à Montréal et ses environs.',
+      alternates: {
+        canonical: `${siteUrl}/fr`
+      },
       openGraph: {
         images: [
           {
@@ -34,7 +39,10 @@ export async function generateMetadata({params}: Props) {
     return {
       title: 'Campus Balboa',
       description: 'A nonprofit entirely dedicated to fostering balboa growth and excellence in and around Montreal.',
-        openGraph: {
+      alternates: {
+        canonical: `${siteUrl}/en`
+      },
+      openGraph: {
         images: [
           {
             url: '/opengraph-image.jpg',
