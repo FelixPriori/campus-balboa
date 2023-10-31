@@ -1,7 +1,33 @@
-export {default as Hero} from "./Hero";
-export {default as MissionsSection} from "./Missions";
-export {default as AboutUsSection} from "./AboutUs";
-export {default as EventsSection} from './Events';
-export {default as FeaturedSection} from './Featured';
-export {default as Footer} from './Footer';
-export {default as Calendar} from './Calendar';
+import Hero from "./Hero";
+import FeaturedSection from './Featured';
+import CalendarSection from './Calendar';
+import EventsSection from './Events';
+import MissionsSection from "./Missions";
+import AboutUsSection from "./AboutUs";
+import Footer from './Footer';
+
+export interface PageSectionProps {
+    title: string
+    anchor: string
+    id: string;
+}
+
+export default function sectionsRenderer(section: any) {
+    switch (section.sectionName) {
+        case "featured":
+            return <FeaturedSection key={section.sys.id} id={section.sys.id} title={section.title} anchor={section.anchor} />
+        case "calendar":
+            return <CalendarSection key={section.sys.id} id={section.sys.id} title={section.title} anchor={section.anchor} />
+        case "events":
+            return <EventsSection key={section.sys.id} id={section.sys.id} title={section.title} anchor={section.anchor} />
+        case "missions":
+            return <MissionsSection key={section.sys.id} id={section.sys.id} title={section.title} anchor={section.anchor} />
+        case "about":
+            return <AboutUsSection key={section.sys.id} id={section.sys.id} title={section.title} anchor={section.anchor} />
+    }
+}
+
+export {
+    Hero,
+    Footer,
+}

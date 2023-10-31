@@ -9,7 +9,7 @@ type EventSectionProps = {
     clipDirection: 'bottom-left' | 'top-right-bottom-right' | 'top-left'
 } 
 
-export default function EventSection ({children, imgSrc, clipDirection, imgAlt, style = {}} : EventSectionProps) {
+export default function EventSection({children, imgSrc, clipDirection, imgAlt, style = {}} : EventSectionProps) {
     return (
         <section 
             style={style} 

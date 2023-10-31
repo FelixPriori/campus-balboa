@@ -1,74 +1,66 @@
 import Main from '@/layout/main'
-import {
-  Hero, 
-  MissionsSection, 
-  AboutUsSection, 
-  EventsSection,
-  FeaturedSection,
+import sectionsRenderer, {
+  Hero,
   Footer,
-  Calendar
 } from './sections';
+import { getPageBySlug, getPageMetaDataByPageId } from '@/lib/api';
+import { ACCUEIL_FIELDS_QUERY } from '@/lib/queries';
+import { fallbackMetaData } from '@/assets/data/fallbackMetaData';
 
 type Props = {
   params: { locale: string }
 }
 
-export async function generateMetadata({params}: Props) {
+export async function generateMetadata({params: {locale}}: Props) {
+  const metaData = await getPageMetaDataByPageId(locale, locale);
+
   const siteUrl = 'https://www.campusbalboa.org'
 
-  if (params.locale === 'fr') {
+  if (metaData) {
     return {
-      title: 'Campus Balboa',
-      description: 'Un organisme à but non lucratif entièrement dédié à favoriser la croissance et l’excellence du balboa à Montréal et ses environs.',
+      title: metaData.title,
+      description: metaData.description,
       alternates: {
-        canonical: `${siteUrl}/fr`
+        canonical: `${siteUrl}/${locale}`
       },
       openGraph: {
         images: [
           {
-            url: '/opengraph-image.jpg',
-            alt: 'Dessin abstrait de bulles'
+            url: metaData.openGraphImage.image.url,
+            alt: metaData.openGraphImage.image.alt
           }
         ],
-        title: 'Campus Balboa',
-        locale: 'fr',
-        description: 'Un organisme à but non lucratif entièrement dédié à favoriser la croissance et l’excellence du balboa à Montréal et ses environs.',
+        title: metaData.title,
+        locale,
+        description: metaData.openGraphImage.description,
       },
-    }
-  } else {
-    return {
-      title: 'Campus Balboa',
-      description: 'A nonprofit entirely dedicated to fostering balboa growth and excellence in and around Montreal.',
-      alternates: {
-        canonical: `${siteUrl}/en`
-      },
-      openGraph: {
-        images: [
-          {
-            url: '/opengraph-image.jpg',
-            alt: 'Drawing of abstract bubbles'
-          }
-        ],
-        title: 'Campus Balboa',
-        locale: 'en',
-        description: 'A nonprofit entirely dedicated to fostering balboa growth and excellence in and around Montreal.',
-      },
+      icons: [
+        {rel: 'icon', url: metaData.favicon.url}
+      ],
     }
   }
+
+  return fallbackMetaData
 }
 
-export default function Home() {
+export function generateStaticParams() {
+  return [{locale: 'en'}, {locale: 'fr'}];
+}
+
+export default async function Home({params: {locale}}: {params: {locale: string}}) {
+  const pageData = await getPageBySlug(locale, locale, ACCUEIL_FIELDS_QUERY);
+
+  if (!pageData?.sectionsCollection) {
+    return <></>
+  }
+
   return (
     <>
-      <Hero />
+      <Hero {...pageData?.hero} />
       <Main>
-        <FeaturedSection />
-        <Calendar />
-        <EventsSection />
-        <MissionsSection />
-        <AboutUsSection />
+        {pageData?.sectionsCollection?.items.map((s: any) => sectionsRenderer(s))}
       </Main>
-      <Footer />
+      <Footer {...pageData?.footer} />
     </>
   )
 }

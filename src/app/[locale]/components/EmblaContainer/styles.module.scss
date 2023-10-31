@@ -1,0 +1,100 @@
+@import '@/layout/breakpoints.scss';
+
+.embla {
+    position: relative;
+
+    @media only screen and (max-width: $breakpoint-small) {
+        width: 100%;
+    }
+
+    .emblaViewport {
+        overflow: hidden;
+        border-radius:var(--border-radius) var(--border-radius) 0 0;
+        max-width: 500px;
+
+        @media only screen and (max-width: $breakpoint-medium) {
+            max-width: 350px;
+        }
+
+        @media only screen and (max-width: $breakpoint-small) {
+            max-width: 100%;
+        }
+
+        .emblaContainer {
+            display: flex;
+        }
+    }
+
+    .dotContainer {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        .dot {
+            border: none;
+            background-color: var(--color-dark);
+            border-radius: 50%;
+            min-height: 10px;
+            min-width: 10px;
+            max-height: 10px;
+            max-width: 10px;
+            cursor: pointer;
+            opacity: 0.5;
+
+            &.selected {
+                opacity: 1;
+            }
+
+            .srOnly {
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                padding: 0;
+                margin: -1px;
+                overflow: hidden;
+                clip: rect(0, 0, 0, 0);
+                white-space: nowrap;
+                border-width: 0;
+            }
+        }
+    }
+
+    .emblaPrev, .emblaNext {
+        background-color: #fff;
+        opacity: 0.5;
+        border: 2px solid var(--color-dark);
+        border-radius: 50%;
+        min-height: 32px;
+        min-width: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+        color: var(--color-dark);
+        transform: translateY(-50%);
+        cursor: pointer;
+
+        svg {
+            height: 18px;
+            width: 18px;
+        }
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    .emblaPrev {
+        position: absolute;
+        top: 50%;
+        left: -16px;
+    }
+
+    .emblaNext {
+        position: absolute;
+        top: 50%;
+        right: -16px;
+    }
+}

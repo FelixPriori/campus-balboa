@@ -1,23 +1,26 @@
-"use client"
-import { useTranslations } from 'next-intl';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import styles from './styles.module.scss';
+import { Markdown } from '@/lib/markdown';
 
-export default function Hero() {
-    const t = useTranslations('Home');
+type HeroProps = {
+    title: string;
+    description: {
+        json: any;
+        links: any;
+    }
+}
 
+export default function Hero({title, description}: HeroProps) {
     return (
         <header className={styles.heroWrapper}>
             <div className={styles.content}>
                 <div className={styles.languageSwitcher}>
                     <LanguageSwitcher />
                 </div>
-                <h1 className={styles.heroTitle}>{t('hero.title')}</h1>
-                <p className={styles.heroDescription}>
-                    {t.rich('hero.description', {
-                        important: (chunks) => <span className={styles.important}>{chunks}</span>
-                    })}
-                </p>
+                <h1 className={styles.heroTitle}>{title}</h1>
+                <div className={styles.heroDescription}>
+                    <Markdown content={description} />
+                </div>
             </div>
         </header>
     );
