@@ -1,9 +1,9 @@
-import Image from 'next/image';
 import styles from './styles.module.scss'
 import Link from 'next/link';
 import ArrowRight from '@/assets/svgs/arrow-right';
 import LinesCircle from '@/assets/svgs/lines-circle';
 import { Caveat_Brush } from 'next/font/google';
+import ContentfulImage from '@/lib/contentful-image';
 
 
 const caveatBrush = Caveat_Brush({ 
@@ -16,10 +16,10 @@ const caveatBrush = Caveat_Brush({
 interface EventCard {
     dark: boolean;
     title: string;
-    details: string;
+    tagline: string;
     image: {
-        src: string;
-        alt: string;
+        title: string;
+        url: string;
     }
     link: {
         href: string;
@@ -27,20 +27,20 @@ interface EventCard {
     }
 }
 
-export default function EventCard({image, title, link, details, dark}: EventCard) {
+export default function EventCard({image, title, link, tagline, dark}: EventCard) {
     return (
         <Link href={link.href} className={`${styles.cardWrapper} ${dark ? styles.dark : ''} ${dark ? caveatBrush.className : ''}`}>
             <p className={styles.srOnly}>{link.text}</p>
-            <Image
+            <ContentfulImage
                 className={styles.image}
-                src={image.src}
-                alt={image.alt}
+                src={image.url}
+                alt={image.title}
                 width={96}
                 height={96}
             />
             <div className={styles.details}>
                 <h3 className={styles.title}>{title}</h3>
-                <p className={styles.paragraph}>{details}</p>
+                <p className={styles.paragraph}>{tagline}</p>
             </div>
             <div className={styles.arrow}>
                 {!dark ? <ArrowRight /> : <LinesCircle />}

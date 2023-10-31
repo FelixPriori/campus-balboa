@@ -1,34 +1,59 @@
 "use client"
-import { useTranslations } from 'next-intl';
+import { useLocale } from 'next-intl';
 import styles from './styles.module.scss';
 import AdministratorCard from '../../components/AdministratorCard';
+import { PageSectionProps } from '..';
+import { useEffect, useState } from 'react';
+import { getCollectionBySectionId } from '@/lib/api';
+import { ADMINISTRATOR } from './query';
+import { InfinitySpin } from 'react-loader-spinner';
 
-export default function AboutUsSection() {
-    const t = useTranslations('Home');
-    const keys = [
-        'felix',
-        'tania',
-        'sara',
-        'sihem',
-        'cara',
-    ] as const
+type Administrator = {
+    sys: {
+        id: string
+    }
+    avatar: {
+        url: string
+        title: string
+    }
+    name: string
+    pronouns: string
+    title: string
+    bio: {
+        json: any;
+        links: any;
+    }
+}
+
+export default function AboutUsSection({id, title, anchor}: PageSectionProps) {
+    const locale = useLocale()
+    const [administrators, setAdministrators] = useState([])
+
+    useEffect(() => {
+        const getAdministratorsCollection = async () => {
+            const administratorsCollection = await getCollectionBySectionId(id, locale, ADMINISTRATOR);
+            setAdministrators(administratorsCollection)
+        }
+
+        getAdministratorsCollection()
+    }, [id, locale])
+
     return (
-        <section className={styles.aboutUsSection}>
+        <section id={anchor} className={styles.aboutUsSection}>
             <div className={styles.content}>
-                <h2 className={styles.aboutUsTitle}>{t('aboutUsSection.title')}</h2>
+                <h2 className={styles.aboutUsTitle}>{title}</h2>
                 <div className={styles.administratorsContainer}>
-                    {keys.map(key => 
+                    {administrators.length ? administrators.map((administrator: Administrator) => 
                         <AdministratorCard
-                            key={key}
-                            avatar={t(`aboutUsSection.administrators.${key}.avatar`)} 
-                            name={t(`aboutUsSection.administrators.${key}.name`)} 
-                            pronouns={t(`aboutUsSection.administrators.${key}.pronouns`)} 
-                            title={t(`aboutUsSection.administrators.${key}.title`)} 
-                            bio={t.rich(`aboutUsSection.administrators.${key}.bio`, {
-                                italic: (chunks) => <span className={styles.italic}>{chunks}</span>
-                            })}
+                            key={administrator.sys.id}
+                            avatar={administrator.avatar} 
+                            name={administrator.name} 
+                            pronouns={administrator.pronouns} 
+                            title={administrator.title} 
+                            bio={administrator.bio}
                         />
-                    )}
+                    )
+                    : <InfinitySpin width="200" color="var(--color-primary)" />}
                 </div>
             </div>
         </section>

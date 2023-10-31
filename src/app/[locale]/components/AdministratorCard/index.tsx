@@ -1,12 +1,18 @@
-import Image from 'next/image';
+import { Markdown } from '@/lib/markdown';
 import styles from './styles.module.scss';
-import { ReactNode } from 'react';
+import ContentfulImage from '@/lib/contentful-image';
 
 interface AdministratorCard {
-    avatar: string;
+    avatar: {
+        url: string
+        title: string
+    }
     name: string
     title: string
-    bio: ReactNode
+    bio: {
+        json: any;
+        links: any;
+    }
     pronouns: string
 }
 
@@ -14,13 +20,13 @@ export default function AdministratorCard({avatar, name, title, pronouns, bio}: 
     return (
         <div className={styles.administratorCard}>
             <div className={styles.avatarWrapper}>
-                {avatar && <Image className={styles.avatar} src={avatar} alt={name} width={100} height={100}/>}
+                {avatar && <ContentfulImage className={styles.avatar} src={avatar.url} alt={name} width={100} height={100}/>}
             </div>
             <div className={styles.textWrapper}>
                 <h3 className={styles.name}>{name}</h3>
                 <p className={styles.pronouns}>{pronouns}</p>
                 <h4 className={styles.title}>{title}</h4>
-                <p className={styles.bio}>{bio}</p>
+                <Markdown content={bio}/>
             </div>
         </div>
     );

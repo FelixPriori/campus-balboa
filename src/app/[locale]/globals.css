@@ -72,3 +72,12 @@ a {
     color-scheme: dark;
   }
 }
+
+.rich-italic {
+  font-style: italic;
+}
+
+.rich-bold {
+  font-weight: bold;
+  color: var(--color-primary);
+}
