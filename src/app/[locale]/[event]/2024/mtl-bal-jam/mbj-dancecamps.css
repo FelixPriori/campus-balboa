@@ -5,8 +5,48 @@ body {
     margin: 40px;
 }
 
+img {
+    margin-bottom: 20px;
+}
+
 p, a, button, div, h1, h2, h3, h4, h5, ul, li {
     margin: 0;
+}
+
+.testing form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.testing .testinginfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.testing form input[type=submit] {
+    margin-top: 20px;
+}
+
+.testing form input[type=password] {
+    margin-top: 4px;
+}
+
+.confirmation input[type=button][value=Back] {
+    background-color: #000;
+    color: #fff;
+    max-width: 250px;
+    width: 100%;
+    content: "Back | Retour";
+}
+
+.confirmation input[type=submit] {
+    max-width: 250px;
+    width: 100%;
+}
+
+form #sCostSummary div.sCostSummary:last-of-type .inputcell {
+    display: flex;
+    justify-content: stretch;
 }
 
 p, a, button, li, input, label, option, select {
@@ -27,7 +67,6 @@ li label {
 }
 
 #wrapperDiv {
-    background-color: #000;
     padding: 40px;
 }
 
@@ -85,7 +124,7 @@ input[type=button]:hover, input[type=submit]:hover {
     color: #fff;
 }
 
-input[type=text] {
+input[type=text], input[type=password] {
     padding: 8px 12px;
     border-radius: 4px;
     font-size: 1rem;
@@ -93,7 +132,7 @@ input[type=text] {
     border-color: #000;
 }
 
-input[type=text]:focus-visible {
+input[type=text]:focus-visible, input[type=password]:focus-visible {
     outline-color: #d97f76;
 }
 
@@ -136,7 +175,7 @@ input[type=text], .inputcell, select {
 }
 
 @media screen and (max-width: 600px) {
-    .sectionWrapper {
+    .sectionWrapper, .testing form {
         width: 100%;
         margin: 0;
     }
