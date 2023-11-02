@@ -132,18 +132,18 @@ input[type=text], input[type=password] {
     border-color: #000;
 }
 
-#row_i119624_Booklet {
+#row_i119624_Booklet, #row_i119625_Terms {
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
     align-items: center;
 }
 
-#row_i119624_Booklet .itemdescriptioncell {
+#row_i119624_Booklet .itemdescriptioncell, #row_i119625_Terms .inputcell {
     margin-bottom: 0;
 }
 
-#row_i119624_Booklet .inputcell {
+#row_i119624_Booklet .inputcell, #row_i119625_Terms .inputcell {
     width: 30px;
 }
 
