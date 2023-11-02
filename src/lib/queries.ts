@@ -32,9 +32,12 @@ export const PAGE_SECTION = `
     title
     anchor
     sectionName
+    content {
+        ${RICH_TEXT}
+    }
 `
 
-export const ACCUEIL_FIELDS_QUERY = `
+export const PAGE_FIELDS_QUERY = `
     ${ID}
     sectionsCollection(limit: 5) {
         items {

@@ -3,17 +3,16 @@ import sectionsRenderer, {
   Hero,
   Footer,
 } from './sections';
-import { getPageBySlug, getPageMetaDataByPageId } from '@/lib/api';
-import { ACCUEIL_FIELDS_QUERY } from '@/lib/queries';
-import { fallbackMetaData } from '@/assets/data/fallbackMetaData';
+import { getPageBySlug, getPageMetaDataByPageSlug } from '@/lib/api';
+import { PAGE_FIELDS_QUERY } from '@/lib/queries';
+import { buildPageMetaData } from '@/assets/data/buildPageMetaData';
 
 type Props = {
   params: { locale: string }
 }
 
 export async function generateMetadata({params: {locale}}: Props) {
-  const metaData = await getPageMetaDataByPageId(locale, locale);
-
+  const metaData = await getPageMetaDataByPageSlug(locale, locale);
   const siteUrl = 'https://www.campusbalboa.org'
 
   if (metaData) {
@@ -40,7 +39,7 @@ export async function generateMetadata({params: {locale}}: Props) {
     }
   }
 
-  return fallbackMetaData
+  return buildPageMetaData({locale})
 }
 
 export function generateStaticParams() {
@@ -48,7 +47,7 @@ export function generateStaticParams() {
 }
 
 export default async function Home({params: {locale}}: {params: {locale: string}}) {
-  const pageData = await getPageBySlug(locale, locale, ACCUEIL_FIELDS_QUERY);
+  const pageData = await getPageBySlug(locale, locale, PAGE_FIELDS_QUERY);
 
   if (!pageData?.sectionsCollection) {
     return <></>

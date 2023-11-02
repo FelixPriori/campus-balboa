@@ -10,6 +10,10 @@ export interface PageSectionProps {
     title: string
     anchor: string
     id: string;
+    content?: {
+        json: any
+        links: any
+    }
 }
 
 export default function sectionsRenderer(section: any) {

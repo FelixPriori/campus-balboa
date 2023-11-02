@@ -61,8 +61,8 @@ export async function getCollectionBySectionId(sectionId: string | null, locale:
   return extractCollection(entry.data.pageSection)
 }
 
-export async function getPageMetaDataByPageId(pageId: string | null, locale: string): Promise<any> {
-  const entry = await fetchGraphQL(getPageMetaDataQuery(pageId, locale))
+export async function getPageMetaDataByPageSlug(slug: string | null, locale: string): Promise<any> {
+  const entry = await fetchGraphQL(getPageMetaDataQuery(slug, locale))
 
   if (entry.errors) {
     entry.errors.forEach((e: any) => console.error(e))

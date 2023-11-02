@@ -132,6 +132,21 @@ input[type=text], input[type=password] {
     border-color: #000;
 }
 
+#row_i119624_Booklet {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#row_i119624_Booklet .itemdescriptioncell {
+    margin-bottom: 0;
+}
+
+#row_i119624_Booklet .inputcell {
+    width: 30px;
+}
+
 input[type=text]:focus-visible, input[type=password]:focus-visible {
     outline-color: #d97f76;
 }
