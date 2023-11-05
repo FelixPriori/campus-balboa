@@ -40,7 +40,12 @@
                         "logo": "/email-white.png"
                     }
                 },
-                "copyright": "© Campus Balboa, 2023"
+                "copyright": "© Campus Balboa, 2023",
+                "iconAlts": {
+                    "loaf": "Icone d'une miche de pain",
+                    "knife": "Icone d'un couteau à beurre",
+                    "toaster": "Icone d'un grille pain"
+                }
             }
         }
     },

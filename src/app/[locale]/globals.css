@@ -60,6 +60,7 @@ body {
   box-sizing: border-box;
   background-color: var(--color-neutral);
   color: var(--color-dark);
+  font-family: 'Poppins', sans-serif;
 }
 
 a {

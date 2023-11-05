@@ -1,5 +1,6 @@
 .footer {
-    height: 3rem;
+    position: relative;
+    height: 5rem;
     background-color: var(--mbj-color-teal);
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -26,6 +27,8 @@
         }
         .right{ 
             grid-column: 1 / -1;
+            justify-content: flex-end;
+            padding: 20px;
         }
     }
 }

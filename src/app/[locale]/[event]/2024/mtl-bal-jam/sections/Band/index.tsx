@@ -2,6 +2,7 @@
 import { useTranslations } from 'next-intl'
 import styles from './styles.module.scss'
 import Image from 'next/image'
+import IconBox from '../../components/IconBox'
 
 export default function Band() {
     const t = useTranslations('Events.2024.MtlBalJam')
@@ -18,6 +19,13 @@ export default function Band() {
                     <h2>{t('TBA')}</h2>
                 </div>
             </div>
+            <IconBox 
+                src='/mbj-toaster-black.png' 
+                alt={t('iconAlts.toaster')}
+                width={50} 
+                height={50}
+                position='topRight'
+            />
             <div className={styles.socialsWrapper}>
                 <ul className={styles.socials}>
                     {keys.map(key => 

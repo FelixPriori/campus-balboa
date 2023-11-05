@@ -40,7 +40,12 @@
                         "logo": "/email-white.png"
                     }
                 },
-                "copyright": "©2023 Campus Balboa"
+                "copyright": "©2023 Campus Balboa",
+                "iconAlts": {
+                    "loaf": "Loaf of bread icon",
+                    "knife": "Butterknife icon",
+                    "toaster": "Toaster icon"
+                }
             }
         }
     },
