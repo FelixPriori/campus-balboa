@@ -1,6 +1,6 @@
 .bandSection {
     position: relative;
-    height: 50vh;
+    min-height: 350px;
     background-color: var(--mbj-color-chartreuse);
     display: grid;
     grid-template-columns: repeat(12, 1fr);
