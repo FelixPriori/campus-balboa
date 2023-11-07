@@ -1,0 +1,12 @@
+.navLink {
+    a {
+        color: var(--mbj-color-black);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        text-decoration-thickness: 2px;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}

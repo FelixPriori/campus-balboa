@@ -14,7 +14,7 @@ const roboto = Roboto({
   
 
 export default function Instructors() {
-    const t = useTranslations('Events.2024.MtlBalJam')
+    const t = useTranslations('Events.2024.MtlBalJam.homePage')
     return (
         <section className={styles.instructorsSection}>
             <div className={styles.halfCircle}>

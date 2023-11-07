@@ -19,16 +19,52 @@
     .bandName {
         position: relative;
         grid-column: 1 / 9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        .bandImageWrapper {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--mbj-color-black);
+            padding: 20px;
+            border-radius: 50%;
+        }
 
         .text {
             display: flex;
+            flex-direction: column;
             justify-content: center;
-            align-items: center;
             height: 100%;
-            width: 100%;
+            width: 500px;
+
             h2 {
-                font-size: 4rem;
-                text-align: center;
+                font-size: 3rem;
+                margin-bottom: 8px;
+            }
+
+            h3 {
+                font-size: 2rem;
+                margin-bottom: 8px;
+            }
+
+            p {
+                margin-bottom: 8px;
+                line-height: 125%;
+            }
+
+            a {
+                margin-left: auto;
+                max-width: fit-content;
+                text-decoration: underline;
+                text-underline-offset: 3px;
+                text-decoration-thickness: 2px;
+
+                &:hover {
+                    text-decoration: none;
+                }
             }
         }
     }
@@ -75,15 +111,30 @@
         }
     }
 
+    @media only screen and (max-width: 1350px) {
+        .bandName {
+            .text {
+                width: 300px;
+            }
+        }
+    }
+
     @media only screen and (max-width: 992px) {
         height: 100vh;
         grid-template-rows: repeat(2, 1fr);
 
+        &:after {
+            height: 20%;
+        }
+
         .bandName {
+            padding: 50px;
             grid-row: 1 / 2;
-            grid-column: 4 / 10;
+            grid-column: 1 / -1;
 
             .text {
+                width: 100%;
+
                 h2 {
                     font-size: 3rem;
                 }
@@ -97,12 +148,17 @@
     }
 
     @media only screen and (max-width: 768px) {
+        height: 100%;
         .bandName {
-            grid-column: 1 / -1;
-
+            flex-direction: column;
             .text {
+                text-align: center;
+                width: 100%;
                 h2 {
                     font-size: 3rem;
+                }
+                p {
+                    text-align: left;
                 }
             }
         }
@@ -111,7 +167,6 @@
     @media only screen and (max-width: 576px) {
         .bandName {
             .text {
-                padding: 50px;
                 h2 {
                     font-size: 2rem;
                 }

@@ -3,8 +3,9 @@ import { useTranslations } from 'next-intl'
 import styles from './styles.module.scss'
 import Image from 'next/image'
 import IconBox from '../../components/IconBox'
+import Link from 'next/link'
 
-export default function Band() {
+export default function MusicSection() {
     const t = useTranslations('Events.2024.MtlBalJam')
 
     const keys = [
@@ -15,18 +16,25 @@ export default function Band() {
     return (
         <section className={styles.bandSection}>
             <div className={styles.bandName}>
+                <div className={styles.bandImageWrapper}>
+                    <Image src="/legacy-band.png" alt="Legacy Band logo" height={100} width={100} />
+                </div>
                 <div className={styles.text}>
-                    <h2>{t('TBA')}</h2>
+                    <h2>{t('homePage.musicSection.title')}</h2>
+                    <h3>{t('homePage.musicSection.bandName')}</h3>
+                    <p>{t('homePage.musicSection.description')}</p>
+                    <Link href={t('homePage.musicSection.learnMore.href')}>{t('homePage.musicSection.learnMore.text')}</Link>
                 </div>
             </div>
-            <IconBox 
-                src='/mbj-toaster-black.png' 
-                alt={t('iconAlts.toaster')}
-                width={50} 
-                height={50}
-                position='topRight'
-            />
+
             <div className={styles.socialsWrapper}>
+                <IconBox 
+                    src='/mbj-toaster-black.png' 
+                    alt={t('iconAlts.toaster')}
+                    width={50} 
+                    height={50}
+                    position='topRight'
+                />
                 <ul className={styles.socials}>
                     {keys.map(key => 
                         <li key={key}>

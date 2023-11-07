@@ -4,16 +4,6 @@
     right: 60px;
     z-index: 5;
 
-    ul {
-        list-style: none;
-
-        li {
-            a {
-                color: var(--mbj-color-teal);
-            }
-        }
-    }
-
     @media only screen and (max-width: 576px) {
         top: 20px;
         right: 20px;

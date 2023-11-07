@@ -1,8 +1,8 @@
 import Favicon from '@/app/mtl-bal-jam-favicon.ico'
 import BigOG from '@/app/mtl-bal-jam-og-512.png'
-import { Music, Footer, Header, Instructors, Venue } from './sections';
 import Main from '@/layout/main';
-import Navigation from './components/Navigation';
+import { Header, Band, DJs, Footer } from './sections';
+import Navigation from '../components/Navigation';
 
 type Props = {
   params: { locale: string }
@@ -13,10 +13,10 @@ export async function generateMetadata({params}: Props) {
 
   if (params.locale === 'fr') {
     return {
-      title: 'MTL BAL JAM 2024',
-      description: 'Évenement de balboa à Montréal le 21-22-23 juin 2024',
+      title: 'Musique | MTL BAL JAM 2024',
+      description: 'Musique pour MTL BAL JAM, l\'évenement de balboa à Montréal le 21-22-23 juin 2024',
       alternates: {
-        canonical: `${siteUrl}/fr/evenements/2024/mtl-bal-jam`
+        canonical: `${siteUrl}/fr/evenements/2024/mtl-bal-jam/music`
       },
       icons: [
         {rel: 'icon', url: Favicon.src}
@@ -30,17 +30,17 @@ export async function generateMetadata({params}: Props) {
             height: 512,
           }
         ],
-        title: 'MTL BAL JAM 2024',
+        title: 'Musique | MTL BAL JAM 2024',
         locale: 'fr',
-        description: 'Évenement de balboa à Montréal le 21-22-23 juin 2024'
+        description: 'Musique pour MTL BAL JAM, l\'évenement de balboa à Montréal le 21-22-23 juin 2024'
       },
     }
   } else {
     return {
-      title: 'MTL BAL JAM 2024',
-      description: 'Balboa event happening in Montreal on June 21-22-23 2024',
+      title: 'Music | MTL BAL JAM 2024',
+      description: 'Music for the MTL BAL JAM, a Balboa event happening in Montreal on June 21-22-23 2024',
       alternates: {
-        canonical: `${siteUrl}/en/events/2024/mtl-bal-jam`
+        canonical: `${siteUrl}/en/events/2024/mtl-bal-jam/music`
       },
       icons: [
         {rel: 'icon', url: Favicon.src}
@@ -54,26 +54,25 @@ export async function generateMetadata({params}: Props) {
             height: 512,
           }
         ],
-        title: 'MTL BAL JAM 2024',
+        title: 'Music | MTL BAL JAM 2024',
         locale: 'en',
-        description: 'Balboa event happening in Montreal on June 21-22-23 2024',
+        description: 'Music for the MTL BAL JAM, a Balboa event happening in Montreal on June 21-22-23 2024',
       },
     }
   }
 }
 
 
-export default function Event() {
+export default function MbjMusic() {
   return (
     <>
-      <Navigation />
+      <Navigation slug="/music" />
       <Main styles={{borderRadius: '0.625rem'}}>
         <Header />
-        <Instructors />
-        <Venue />
-        <Music />
-        <Footer />
+        <Band />
+        <DJs />
       </Main>
+      <Footer />
     </>
   )
 }

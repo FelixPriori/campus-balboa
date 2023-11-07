@@ -8,13 +8,6 @@
     "Events": {
         "2024": {
             "MtlBalJam": {
-                "title": "MTL BAL JAM",
-                "logoAlt": "Logo du MTL BAL JAM",
-                "TBA": "Plus de détails à venir!",
-                "saveTheDate": "Réservez la date!",
-                "googleCal": "Sauvegarder à Google Calendar",
-                "archAlt": "Dessin d'une arche couleur saumon sur fond bleu",
-                "date": "21-22-23 juin 2024",
                 "subscribe": {
                     "title": "Abonnez-vous pour des détails croustillants",
                     "email": "Courriel",
@@ -45,6 +38,71 @@
                     "loaf": "Icone d'une miche de pain",
                     "knife": "Icone d'un couteau à beurre",
                     "toaster": "Icone d'un grille pain"
+                },
+                "homePage": {
+                    "title": "MTL BAL JAM",
+                    "logoAlt": "Logo du MTL BAL JAM",
+                    "TBA": "Plus de détails à venir!",
+                    "saveTheDate": "Réservez la date!",
+                    "googleCal": "Sauvegarder à Google Calendar",
+                    "archAlt": "Dessin d'une arche couleur saumon sur fond bleu",
+                    "date": "21-22-23 juin 2024",
+                    "musicSection": {
+                        "title": "Musique",
+                        "bandName": "Michaël Srey Legacy Band",
+                        "description": "Live band basé à Montréal, il regroupe un collectif de musicien.nes de la scène jazz locale. Allant jusqu'à 9 instrumentistes sur scène, il a coeur de partager les plus inspirantes compositions et arrangements du répertoire big band.",
+                        "learnMore": {
+                            "text": "Plus de détails...",
+                            "href": "/fr/evenements/2024/mtl-bal-jam/music"
+                        }
+                    }
+                },
+                "musicPage": {
+                    "title": "MTL BAL JAM",
+                    "pageTitle": "Musique",
+                    "liveMusic": {
+                        "title": "Musique live",
+                        "bandName": "Michaël Srey Legacy Band",
+                        "biography": "Le Michaël Srey Legacy Band est un groupe regroupant un collectif de 5 ou 9 musicien.nes professionnel.les de la scène jazz  de Montréal. Le groupe  a déjà plusieurs concerts à son actif et sa réputation est grandissante.<br></br>Le band connait ses standards et intègre les compositions des grands noms du jazz : Louis Armstrong, Duke Ellington, Fletcher Henderson, Mary Lou Williams mais aussi Jimmy Smith, Quincy Jones ou encore Oscar Peterson. Curieux également des différentes influences et autres développements de cet art, le groupe intègre au sein de son répertoire d'autres musiques provenant des mêmes sources et faisant une part belle au rythme, à l'improvisation et à la danse comme la beguine ou le mambo.<br></br>Michaël Srey sélectionne, arrange et retranscrit avec soin chaque morceau principalement issu du répertoire big band. Ainsi, le groupe s'est constitué d'un répertoire unique, fait sur mesure et comprend des morceaux inédits ajoutés régulièrement aux pupitres.es.<br></br>La qualité de ses musicien.nes ainsi que la composition du groupe lui donnent une grande polyvalence et lui permettent de traverser l'histoire du swing et de ses différents styles : second line de la Nouvelle Orléans, early jazz, swing era, blues, be bop, hard bop ...<br></br>Attachée à la précision et aux couleurs des arrangements iconiques des big bands, la section cuivre fait rutiler chacune de ses notes et la section rythmique vrombir le plancher de l'auditoire.",
+                        "link": "https://www.michaelsrey.com/",
+                        "logoAlt": "Logo du Michaël Srey Legacy Band"
+                    },
+                    "djMusic": {
+                        "title": "DJs",
+                        "djs": {
+                            "felix": {
+                                "name": "Felix",
+                                "djName": "DJ Can't Stop The Felix",
+                                "pronouns": "Il/Pronoms masculins",
+                                "biography": "Félix s'intéresse à la musique depuis toujours. Dans sa quête sans fin pour comprendre la musique à un niveau plus profond, il a commencé à danser le swing en 2013. Geek autoproclamé de la musique, il a étudié le chant, la composition et l'arrangement du jazz. Il adore réfléchir et parler de DJ et il est toujours à la recherche des meilleurs morceaux swing.",
+                                "image": {
+                                    "src": "/felix.jpg",
+                                    "alt": "Photo of Felix"
+                                }
+                            },
+                            "gab": {
+                                "name": "Gabrielle",
+                                "djName": "DJ Kern Down For What?",
+                                "pronouns": "Elle/Pronoms féminins",
+                                "biography": "Gabrielle adore jouer de la musique qui fait sortir les danseurs sur la piste et les y maintient ! Sa passion est la musique qui vous émeut, qu'il s'agisse de blues, de jazz vintage ou de morceaux plus soul et funky. Attention, sa musique vous incitera souvent à danser bien après que vos pieds ne soient plus capables de continuer!",
+                                "image": {
+                                    "src": "/gabrielle.jpg",
+                                    "alt": "Photo of Gabrielle"
+                                }
+                            }
+                        }
+                    }
+                },
+                "navigation": {
+                    "title": "Menu",
+                    "home": {
+                        "text": "Accueil",
+                        "href": "/fr/evenements/2024/mtl-bal-jam"
+                    },
+                    "music": {
+                        "text": "Musique",
+                        "href": "/fr/evenements/2024/mtl-bal-jam/music"
+                    }
                 }
             }
         }
