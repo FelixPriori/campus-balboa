@@ -82,11 +82,11 @@
                             },
                             "gab": {
                                 "name": "Gabrielle",
-                                "djName": "DJ Kern Down For What?",
+                                "djName": "DJ Kern Down For What?!",
                                 "pronouns": "Elle/Accords féminins",
                                 "biography": "Gabrielle adore jouer de la musique qui fait sortir les danseurs sur la piste et les y maintient ! Sa passion est la musique qui vous émeut, qu'il s'agisse de blues, de jazz vintage ou de morceaux plus soul et funky. Attention, sa musique vous incitera souvent à danser bien après que vos pieds ne soient plus capables de continuer!",
                                 "image": {
-                                    "src": "/gabrielle.jpg",
+                                    "src": "/gabrielle.png",
                                     "alt": "Photo of Gabrielle"
                                 }
                             }
