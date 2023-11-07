@@ -23,9 +23,7 @@
                 },
                 "homePage": {
                     "title": "MTL BAL JAM",
-                    "logoAlt": "MTL BAL JAM Logo",
                     "TBA": "More details to be announced soon!",
-                    "archAlt": "Drawing of a salmon arch on blue background",
                     "saveTheDate": "Save the date!",
                     "googleCal": "Save to Google Calendar",
                     "date": "June 21-22-23, 2024",
@@ -51,6 +49,8 @@
                         "logo": "/email-white.png"
                     }
                 },
+                "archAlt": "Drawing of a salmon arch on blue background",
+                "logoAlt": "MTL BAL JAM Logo",
                 "copyright": "©2023 Campus Balboa",
                 "iconAlts": {
                     "loaf": "Loaf of bread icon",
