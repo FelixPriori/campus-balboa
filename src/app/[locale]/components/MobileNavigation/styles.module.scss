@@ -1,0 +1,165 @@
+.buttonContainer {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    height: 27px;
+    width: 35px;
+    cursor: pointer;
+    z-index: 150;
+    transition: opacity .25s ease;
+
+    &.active {
+        .top {
+            transform: translateY(11px) translateX(0) rotate(45deg);
+            box-shadow: none;
+            background: var(--color-neutral);
+        }
+
+        .middle {
+            opacity: 0;
+            box-shadow: none;
+            background: var(--color-neutral);
+        }
+
+        .bottom {
+            transform: translateY(-11px) translateX(0) rotate(-45deg);
+            box-shadow: none;
+            background: var(--color-neutral);
+        }
+    }
+
+    span {
+        background: var(--color-dark);
+        border: none;
+        height: 5px;
+        width: 35px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all .35s ease;
+        cursor: pointer;
+        box-shadow: 1px 1px 1px rgba(255, 255, 255, 1);
+
+        &:nth-of-type(2) {
+            top: 11px;
+        }
+
+        &:nth-of-type(3) {
+            top: 22px;
+        }
+
+    }
+
+    @media only screen and (min-width: 577px) {
+        display: none;
+    }
+}
+
+.overlay {
+    position: fixed;
+    background: var(--color-secondary);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .35s, visibility .35s, height .35s;
+    overflow: hidden;
+    z-index: 100;
+
+
+    &.open {
+        opacity: .9;
+        visibility: visible;
+        height: 100%;
+
+        li {
+            animation: fadeInRight .5s ease forwards;
+            animation-delay: .35s;
+
+            &:nth-of-type(2) {
+                animation-delay: .4s;
+            }
+
+            &:nth-of-type(3) {
+                animation-delay: .45s;
+            }
+
+            &:nth-of-type(4) {
+                animation-delay: .50s;
+            }
+        }
+
+        .overlayMenu {
+            position: relative;
+            height: 70%;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            ul {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 50px;
+                position: relative;
+                height: 100%;
+
+                .languageSwitcher {
+                    margin-top: auto;
+                }
+
+                li {
+                    position: relative;
+                    opacity: 0;
+
+                    .link {
+                        display: block;
+                        position: relative;
+                        color: var(--color-neutral);
+                        text-decoration: none;
+                        overflow: hidden;
+                        font-size: 50px;
+                        font-weight: 400;
+
+                        &:hover:after, &:focus:after, &:active:after {
+                            width: 100%;
+                        }
+
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            bottom: 0;
+                            left: 50%;
+                            width: 0%;
+                            transform: translateX(-50%);
+                            height: 3px;
+                            background: var(--color-neutral);
+                            transition: .35s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: 577px) {
+        display: none;
+    }
+}
+  
+@keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      left: 20%;
+    }
+    100% {
+      opacity: 1;
+      left: 0;
+    }
+}

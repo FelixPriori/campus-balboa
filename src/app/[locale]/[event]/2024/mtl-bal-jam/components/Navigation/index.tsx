@@ -8,7 +8,7 @@ import NavLinks from '../../components/NavLinks';
 export default function Navigation({slug = ''}: {slug?: string}) {
     const locale = useLocale()
     const router = useRouter()
-
+    
     return (
         <nav className={styles.navigation}>
             <LanguageSwitcher 
