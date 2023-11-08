@@ -7,7 +7,7 @@ import { useLocale, useTranslations } from 'next-intl';
 
 export default function LogoLink() {
     const [href, setHref] = useState<string | null>(null)
-    const t = useTranslations('Events.2024.MtlBalJam');
+    const t = useTranslations('Events.2024.MtlBalJam.iconAlts');
     const locale = useLocale()
 
 
@@ -24,7 +24,7 @@ export default function LogoLink() {
 
     return href && (
         <Link className={styles.logoWrapper} href={href}>
-            <Image src="/mtl-bal-jam-logo-black.png" alt={t('logoAlt')} width={100} height={100} />
+            <Image src="/mtl-bal-jam-logo-black.png" alt={t('mbjLogo')} width={100} height={100} />
         </Link>
     )
 }

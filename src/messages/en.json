@@ -49,13 +49,13 @@
                         "logo": "/email-white.png"
                     }
                 },
-                "archAlt": "Drawing of a salmon arch on blue background",
-                "logoAlt": "MTL BAL JAM Logo",
                 "copyright": "©2023 Campus Balboa",
                 "iconAlts": {
                     "loaf": "Loaf of bread icon",
                     "knife": "Butterknife icon",
-                    "toaster": "Toaster icon"
+                    "toaster": "Toaster icon",
+                    "mbjLogo": "MTL BAL JAM Logo",
+                    "arch": "Drawing of a salmon arch on blue background"
                 },
                 "musicPage": {
                     "title": "MTL BAL JAM",

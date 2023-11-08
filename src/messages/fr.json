@@ -37,15 +37,15 @@
                 "iconAlts": {
                     "loaf": "Icone d'une miche de pain",
                     "knife": "Icone d'un couteau à beurre",
-                    "toaster": "Icone d'un grille pain"
+                    "toaster": "Icone d'un grille pain",
+                    "mbjLogo": "Logo du MTL BAL JAM",
+                    "arch": "Dessin d'une arche couleur saumon sur fond bleu"
                 },
                 "homePage": {
                     "title": "MTL BAL JAM",
-                    "logoAlt": "Logo du MTL BAL JAM",
                     "TBA": "Plus de détails à venir!",
                     "saveTheDate": "Réservez la date!",
                     "googleCal": "Sauvegarder à Google Calendar",
-                    "archAlt": "Dessin d'une arche couleur saumon sur fond bleu",
                     "date": "21-22-23 juin 2024",
                     "musicSection": {
                         "title": "Musique",
