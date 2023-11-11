@@ -18,30 +18,64 @@
         }
     }
 
-    .text {
+
+    .content {
         grid-column: 3 / 8;
-        height: 100%;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
+        gap: 40px;
+        height: 100%;
 
-        h2 {
-            color: var(--mbj-color-white);
-            font-size: 4rem;
-        }
-
-        .googleLink {
+        .instructorImageWrapper {
+            position: relative;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
-            background-color: var(--mbj-color-white);
-            border-radius: 2rem;
-            padding: 0.75rem 1.5rem;
-            font-weight: bold;
-            font-size: 0.875rem;
-            color: var(--google-color-blue);
+
+            img {
+                border-radius: 50%;
+            }
+
+            .flourish {
+                display: none;
+            }
+        }
+
+        .text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            width: 500px;
+    
+            h2, h3, p, a {
+                color: var(--mbj-color-white);
+            }
+    
+            h2 {
+                font-size: 3rem;
+                margin-bottom: 8px;
+            }
+    
+            h3 {
+                font-size: 2rem;
+                margin-bottom: 8px;
+            }
+    
+            p {
+                margin-bottom: 1rem;
+                line-height: 125%;
+            }
+    
+            a {
+                margin-left: auto;
+                max-width: fit-content;
+                text-decoration: underline;
+                text-underline-offset: 3px;
+                text-decoration-thickness: 2px;
+    
+                &:hover {
+                    text-decoration: none;
+                }
+            }
         }
     }
 
@@ -58,23 +92,17 @@
     }
 
     @media only screen and (max-width: 1200px) {
-        .text {
-            h2 {
-                font-size: 3rem;
+        .content {
+            grid-column: 3 / 10;
+            .text {
+                h2 {
+                    font-size: 2rem;
+                }
+
+                h3 {
+                    font-size: 1.5rem;
+                }
             }
-        }
-    }
-
-
-    @media only screen and (max-width: 992px) {
-        .halfCircle {
-            bottom: -100px;
-            top: initial;
-            transform: none;
-        }
-
-        .text {
-            grid-column: 1 / -1;
         }
 
         .linesCircle {
@@ -87,27 +115,71 @@
         }
     }
 
-    @media only screen and (max-width: 768px) {
-        .text {
-            h2 {
-                font-size: 3rem;
-            }
 
-            .googleLink {
-                gap: 8px;
-                padding: 8px 16px;
-                font-weight: bold;
-                font-size: 14px;
+    @media only screen and (max-width: 992px) {
+        .halfCircle {
+            bottom: -100px;
+            top: initial;
+            transform: none;
+        }
 
-                img {
-                    width: 24px;
-                    height: 24px;
+        .content {
+            grid-column: 2 / -2;
+            .text {
+                h2 {
+                    font-size: 2rem;
                 }
             }
         }
+    }
 
+    @media only screen and (max-width: 768px) {
         .linesCircle {
             right: -100px;
+        }
+    }
+
+    @media only screen and (max-width: 576px) {
+        min-height: 700px;
+        padding: 50px;
+
+        .halfCircle {
+            display: none;
+        }
+        
+        .linesCircle {
+            clip-path: inset(0 0 51% 0);
+        }
+
+        .content {
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+
+            .instructorImageWrapper {
+                img {
+                    width: 200px;
+                    height: 200px;
+                }
+
+                .flourish {
+                    display: block;
+                    position: absolute;
+                    z-index: 0;
+                    bottom: 3px;
+                    right: 3px;
+    
+                    svg {
+                        width: 50px;
+                        height: 50px;
+                    }
+                }
+            }
+
+            .text {
+                height: fit-content;
+                width: 100%;
+            }
         }
     }
 }

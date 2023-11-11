@@ -55,6 +55,15 @@
                             "text": "Plus de détails...",
                             "href": "/fr/evenements/2024/mtl-bal-jam/music"
                         }
+                    },
+                    "instructorsSection": {
+                        "title": "Instructeurs",
+                        "instructorsNames": "Yulia & Sasha",
+                        "description": "Yulia et Sasha sont deux passionnées du Balboa basées au Royaume-Uni : danseurs, instructeurs et compétiteurs. Ils proposent des cours et des mini-ateliers à Londres et voyagent pour enseigner le Balboa à travers l'Europe.",
+                        "learnMore": {
+                            "text": "Plus de détails...",
+                            "href": "/fr/evenements/2024/mtl-bal-jam/instructors"
+                        }
                     }
                 },
                 "musicPage": {
@@ -93,6 +102,17 @@
                         }
                     }
                 },
+                "instructorsPage": {
+                    "title": "MTL BAL JAM",
+                    "pageTitle": "Instructeurs",
+                    "mainInstructors": {
+                        "title": "Instructeurs principaux",
+                        "instructorsNames":"Yulia & Sasha",
+                        "biography": "Yulia et Sasha sont deux danseuses Balboa basées au Royaume-Uni, facilement reconnaissables pour leur style vif mais smooth. Ils ont découvert la danse pour la première fois en 2010 et depuis, leur enthousiasme pour le Balboa ne cesse de croître.<br></br>Avant de commencer à enseigner, ils se sont concentrés sur leur propre développement en tant que danseurs, en s'entraînant et en compétition, en étudiant l'histoire de la danse et en explorant les dynamiques de partenariat à la fois dans le Pure Balboa et le Balswing. Le couple est souvent aperçu lors des finales de concours internationaux. Deux fois vainqueurs du California Balboa Classic, ils détiennent également fièrement le titre de 6 fois champions du Pure Balboa Classic !<br></br>Actuellement, ils organisent des cours et des mini-ateliers de Balboa à Londres, et voyagent pour enseigner lors de week-ends de danse à travers l'Europe. En classe, ils s’efforcent de partager les connaissances acquises tout au long de leur parcours de danse et encouragent leurs élèves à apprécier l’énergie joyeuse du Balboa, son humour subtil et la précieuse opportunité d’être dans l’instant présent avec la musique et les uns avec les autres. Dernièrement, alors que Sasha s'est découvert une nouvelle obsession pour les claquettes, les percussions et le rythme en général, ils se concentrent encore plus sur différents aspects de la musicalité et visent à refléter cela dans leur enseignement.",
+                        "cutoutAlt": "Photo de Yulia & Sasha",
+                        "link": "https://www.ys.balboalondon.co.uk/"
+                    }
+                },
                 "navigation": {
                     "title": "Menu",
                     "home": {
@@ -102,6 +122,10 @@
                     "music": {
                         "text": "Musique",
                         "href": "/fr/evenements/2024/mtl-bal-jam/music"
+                    },
+                    "instructors": {
+                        "text": "Instructeurs",
+                        "href": "/fr/evenements/2024/mtl-bal-jam/instructors"
                     }
                 }
             }

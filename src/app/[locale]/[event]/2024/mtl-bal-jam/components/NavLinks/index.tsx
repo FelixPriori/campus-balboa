@@ -5,7 +5,8 @@ import Image from "next/image";
 
 const keys = [
     'home',
-    'music'
+    'music',
+    'instructors'
 ] as const
 
 export default function NavLinks() {

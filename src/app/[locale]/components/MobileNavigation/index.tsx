@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import styles from './styles.module.scss'
 import Link from 'next/link'
-import { useLocale, useTranslations } from 'next-intl'
+import { useTranslations } from 'next-intl'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
 import useCustomSwitcher from '@/hooks/useCustomSwitcher'
 
