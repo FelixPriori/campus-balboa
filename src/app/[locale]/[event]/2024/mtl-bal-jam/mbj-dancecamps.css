@@ -1,46 +1,77 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
+:root {
+    /* COLOR */
+    --color-dark: #000;
+    --color-neutral: #fff;
+    --color-primary: #008080;
+    --color-secondary: #d97f76;
+    --color-error: #cc0000;
+    --color-theme: var(--color-primary);
+
+    /* SPACING */
+    --spacing-xsm: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-sm-2: 0.75rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.25rem;
+    --spacing-xl: 2.5rem;
+
+    /* BORDER */
+    --border-size: 2px;
+    --border-radius: var(--spacing-sm);
+    --border-radius-btn: var(--spacing-xl);
+    --border-input: var(--border-size) solid;
+
+    /* FONT-SIZE */
+    --font-size-sm: 0.75rem;
+    --font-size-md: 1rem;
+    --font-size-lg: 2rem;
+    --font-size-xl: 3rem;
+
+    /* WIDTH */
+    --width-section: 500px;
+    --width-half: calc(var(--width-section) / 2);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+  
 body {
     font-family: 'Josefin Sans', sans-serif;
-    margin: 40px;
+    margin: var(--spacing-xl);
 }
 
 img {
-    margin-bottom: 20px;
+    margin-bottom: var(--spacing-lg);
 }
 
 p, a, button, div, h1, h2, h3, h4, h5, ul, li {
     margin: 0;
 }
 
-.testing form {
-    max-width: 500px;
-    margin: 0 auto;
+a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: var(--border-size);
 }
 
-.testing .testinginfo {
-    display: flex;
-    flex-direction: column;
+a:hover {
+    text-decoration: none;
 }
 
-.testing form input[type=submit] {
-    margin-top: 20px;
-}
-
-.testing form input[type=password] {
-    margin-top: 4px;
-}
 
 .confirmation input[type=button][value=Back] {
-    background-color: #000;
-    color: #fff;
-    max-width: 250px;
+    background-color: var(--color-dark);
+    color: var(--color-neutral);
+    max-width: var(--width-half);
     width: 100%;
     content: "Back | Retour";
 }
 
 .confirmation input[type=submit] {
-    max-width: 250px;
+    max-width: var(--width-half);
     width: 100%;
 }
 
@@ -55,36 +86,36 @@ p, a, button, li, input, label, option, select {
 
 ul {
     list-style: none;
-    padding-left: 20px;
+    padding-left: var(--spacing-lg);
 }
 
 li:not(:last-child) {
-    margin-bottom: 4px;
+    margin-bottom: var(--spacing-xsm);
 }
 
 li label {
-    margin-left: 8px;
+    margin-left: var(--spacing-sm);
 }
 
 #wrapperDiv {
-    padding: 40px;
+    padding: var(--spacing-xl);
 }
 
 #BodyTitle {
     font-family: 'Caveat Brush', cursive;
-    font-size: 3rem;
+    font-size: var(--font-size-xl);
     text-align: center;
-    margin: 8px;
+    margin: var(--spacing-sm);
 }
 
 #Introduction {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: var(--spacing-lg);
 }
 
 .sectionWrapper, #viewbookingoptions, #returntobookingbottom {
-    max-width: 500px;
-    margin: 0 auto;
+    max-width: var(--width-section);
+    margin: var(--spacing-lg) auto;
 }
 
 #returntobooking br {
@@ -92,74 +123,28 @@ li label {
 }
 
 #viewbookingoptions, #returntobookingbottom {
-    margin: 40px auto;
+    margin: var(--spacing-xl) auto;
 }
 
 #returntobookingbottom, #returntobooking {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: var(--spacing-sm);
 }
 
 #bookagain, .returntobooking {
-    margin-bottom: 8px;
+    margin-bottom: var(--spacing-sm);
     text-align: center;
 }
 
-input[type=button], input[type=submit] {
-    background: transparent;
-    border: 2px solid #000;
-    padding: 8px 12px;
-    border-radius: 40px;
-    cursor: pointer;
+.fullpassdetails p {
+    margin-top: var(--spacing-sm);
+    text-align: center;
 }
 
-input[type=submit] {
-    width: 100%;
-}
-
-input[type=button]:hover, input[type=submit]:hover {
-    background: #d97f76;
-    border-color: #d97f76;
-    color: #fff;
-}
-
-input[type=text], input[type=password] {
-    padding: 8px 12px;
-    border-radius: 4px;
-    font-size: 1rem;
-    border-style: solid;
-    border-color: #000;
-}
-
-#row_i119624_Booklet, #row_i119625_Terms {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-#row_i119624_Booklet .itemdescriptioncell, #row_i119625_Terms .inputcell {
-    margin-bottom: 0;
-}
-
-#row_i119624_Booklet .inputcell, #row_i119625_Terms .inputcell {
-    width: 30px;
-}
-
-input[type=text]:focus-visible, input[type=password]:focus-visible {
-    outline-color: #d97f76;
-}
-
-select {
-    padding: 8px 12px;
-    border: 2px solid #000;
-    border-radius: 4px;
-}
-
-input[type=text], .inputcell, select {
-    width: 100%;
-    box-sizing: border-box;
+.fullpassdetails ul {
+    margin-left: var(--spacing-sm);
+    list-style: disc;
 }
 
 .sectionWrapper {
@@ -169,16 +154,16 @@ input[type=text], .inputcell, select {
 .sectionHeader {
     font-family: 'Caveat Brush', cursive;
     text-align: center;
-    font-size: 2rem;
-    margin-bottom: 16px;
+    font-size: var(--font-size-lg);
+    margin: var(--spacing-xl) 0 var(--spacing-lg) 0;
 }
 
 .fieldwrapper {
-    margin-bottom: 20px;
+    margin-bottom: var(--spacing-lg);
 }
 
 .itemdescriptioncell {
-    margin-bottom: 8px;
+    margin-bottom: var(--spacing-sm);
 }
 
 #bookingpage .itemdescriptioncell {
@@ -186,8 +171,235 @@ input[type=text], .inputcell, select {
 }
 
 #bookingpage .fieldWrapper {
-    margin-bottom: 20px;
+    margin-bottom: var(--spacing-lg);
 }
+
+.captioncell.informationInput p {
+    margin-bottom: var(--spacing-sm);
+    font-size: var(--font-size-md);
+    line-height: 135%;
+}
+
+.captioncell.informationInput p:last-child {
+    margin-bottom: var(--spacing-md);
+}
+
+/* INPUT STYLING */
+
+input[type=text], input[type=password] {
+    padding: var(--spacing-sm) var(--spacing-sm-2);
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-md);
+    border-style: solid;
+    border-color: var(--color-dark);
+}
+
+input[type=text]:focus-visible, input[type=password]:focus-visible {
+    outline-color: var(--color-secondary);
+}
+
+select {
+    padding: var(--spacing-sm) var(--spacing-sm-2);
+    border: var(--border-input)  var(--color-dark);
+    border-radius: var(--border-radius);
+}
+
+input[type=text], .inputcell, select {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* BUTTON STYLING */
+
+input[type=button], input[type=submit] {
+    background: transparent;
+    border: var(--border-input) var(--color-dark);
+    padding: var(--spacing-sm) var(--spacing-sm-2);
+    border-radius: var(--border-radius-btn);
+    cursor: pointer;
+}
+
+input[type=submit] {
+    width: 100%;
+}
+
+input[type=button]:hover, input[type=submit]:hover {
+    background: var(--color-secondary);
+    border-color: var(--color-secondary);
+    color: var(--color-neutral);
+}
+
+/* CUSTOM FIELDS STYLING */
+
+#row_i119624_Booklet, #row_i119817_Terms, #row_i119816_Tourisme {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#row_i119624_Booklet {
+    margin-bottom: var(--spacing-sm);
+}
+
+#row_i119817_Terms .itemdescriptioncell {
+    margin-left: var(--spacing-sm);
+}
+
+#row_i119817_Terms p {
+    margin-bottom: var(--spacing-sm);
+    font-weight: normal;
+    line-height: 135%;
+}
+
+#row_i119624_Booklet .itemdescriptioncell, #row_i119817_Terms .inputcell, #row_i119816_Tourisme .itemdescriptioncell {
+    margin-bottom: 0;
+}
+
+#row_i119624_Booklet .inputcell, #row_i119817_Terms .inputcell, #row_i119816_Tourisme .inputcell {
+    width: 30px;
+}
+
+.confirmation #row_i119817_Terms .inputcell {
+    width: 25%;
+}
+
+.confirmation #row_i119817_Terms {
+    gap: var(--spacing-sm);
+} 
+
+/* ERROR */
+
+.itemdescriptioncell .errorText span p::before {
+    content: "* ";
+}
+
+.errorText {
+    color:  var(--color-error);
+}
+
+.errorMessage {
+    max-width: var(--width-section);
+    margin: 0 auto;
+    text-align: center;
+    border: var(--border-input)  var(--color-error);
+    padding: var(--spacing-sm-2) 0;
+    margin-bottom: var(--spacing-sm-2);
+    border-radius: var(--border-radius);
+}
+
+.errorMessage .errorAlert::before {
+    content: "\a";
+    white-space: pre;
+}
+
+/* TEST REGISTRATION PAGE */
+
+.testing form {
+    max-width: var(--width-section);
+    margin: 0 auto;
+}
+
+.testing .testinginfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.testing form input[type=submit] {
+    margin-top: var(--spacing-lg);
+}
+
+.testing form input[type=password] {
+    margin-top: var(--spacing-xsm);
+}
+
+/* KEYFRAMES */
+
+
+@keyframes bounce {
+    25% {
+        transform: rotate(90deg) translate(.25rem);
+    }
+    75% {
+        transform: rotate(90deg) translate(-.25rem);
+    }
+}
+
+
+/* ACCORDION COMPONENT */
+
+.tab input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+.tab__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.35s;
+    padding: 0;
+}
+
+.tab input:checked ~ .tab__content {
+    max-height: fit-content;
+    padding-bottom: var(--spacing-lg);
+}
+
+.accordion {
+    color: var(--color-theme);
+    border: var(--border-input);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.tab__label,
+.tab__close {
+    display: flex;
+    color: var(--color-neutral);
+    background: var(--color-theme);
+    cursor: pointer;
+}
+
+.tab__label {
+    justify-content: space-between;
+    padding: var(--spacing-md);
+}
+
+.tab__label::after {
+    content: "\276F";
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    transform: rotate(90deg);
+    transition: all 0.35s;
+}
+
+.tab input:checked + .tab__label::after {
+    transform: rotate(270deg);
+}
+
+.tab__content p {
+    margin: 0;
+    padding: var(--spacing-md);
+}
+
+.tab__close {
+    justify-content: flex-end;
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: var(--font-size-sm);
+}
+
+.accordion--radio {
+    --color-theme: var(--color-primary);
+}
+
+.tab input:not(:checked) + .tab__label:hover::after {
+    animation: bounce .5s infinite;
+}
+
+
+/* RESPONSIVE */
 
 @media screen and (max-width: 600px) {
     .sectionWrapper, .testing form {
@@ -196,7 +408,7 @@ input[type=text], .inputcell, select {
     }
 
     #viewbookingoptions, #returntobookingbottom {
-        margin: 40px 0;
+        margin: var(--spacing-xl) 0;
     }
 
     .returntobooking {
@@ -205,15 +417,32 @@ input[type=text], .inputcell, select {
 }
 
 @media screen and (max-width: 450px) {
+    #bookingpage {
+        padding: 0;
+    }
+
     body {
-        padding: 15px;
+        padding: var(--spacing-md);
     }
 
     #BodyTitle {
-        font-size: 2rem;
+        font-size: var(--font-size-lg);
     }
 
     .sectionHeader {
-        font-size: 1.5rem;
+        font-size: var(--font-size-lg);
+    }
+
+    .fullpassdetails {
+        border-left: none;
+        border-right: none;
+        padding: var(--spacing-sm) 0;
+        border-radius: 0;
+    }
+
+    .errorMessage {
+        border-left: none;
+        border-right: none;
+        border-radius: 0;
     }
 }
