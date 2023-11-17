@@ -10,6 +10,7 @@ export default function MusicSection() {
 
     const keys = [
         'facebook',
+        'instagram',
         'email',
     ] as const
 
