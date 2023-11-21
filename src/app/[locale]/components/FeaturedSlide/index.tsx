@@ -22,7 +22,7 @@ export interface FeaturedSlideProps {
 export default function FeaturedSlide({image, title, link, details, type}: FeaturedSlideProps) {
     return (
         <a target='_blank' rel="noreferrer"  href={link.href} className={styles.featuredSlide}>
-            <p className={styles.srOnly}>{link.text}</p>
+            <p className="sr-only">{link.text}</p>
             <div className={styles.content}>
                 <div className={styles.bannerWrapper}>
                     <ContentfulImage className={styles.banner} src={image.src} alt={image.alt} width={120} height={120} />

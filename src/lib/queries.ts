@@ -27,6 +27,14 @@ export const RICH_TEXT = `
     }
 `
 
+export const SOCIAL_MEDIA = `
+    logo {
+        ${IMAGE}
+    }
+    href
+    accessibilityDescription
+`
+
 export const PAGE_SECTION = `
     ${ID}
     title
@@ -109,6 +117,12 @@ export const getBasePageQuery = (slug: string | null, locale: string, fieldsQuer
                     donateButton {
                         ${LINK}
                         iconAlt
+                    }
+                    socialMediasCollection(limit: 5) {
+                        items {
+                            ${ID}
+                            ${SOCIAL_MEDIA}
+                        }
                     }
                 }
                 ${fieldsQuery}

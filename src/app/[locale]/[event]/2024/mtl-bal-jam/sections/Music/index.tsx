@@ -40,7 +40,7 @@ export default function MusicSection() {
                     {keys.map(key => 
                         <li key={key}>
                             <a href={t(`socials.${key}.href`)} target='_blank' rel="noreferrer">
-                                <span className={styles.srOnly}>{t(`socials.${key}.alt`)}</span>
+                                <span className="sr-only">{t(`socials.${key}.alt`)}</span>
                                 <Image src={t(`socials.${key}.logo`)} alt={t(`socials.${key}.alt`)} width={50} height={50} />
                             </a>
                         </li>
