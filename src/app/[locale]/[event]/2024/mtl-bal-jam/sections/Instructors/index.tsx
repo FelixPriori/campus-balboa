@@ -16,10 +16,7 @@ export default function Instructors() {
             </div>
             <div className={styles.content}>
                 <div className={styles.instructorImageWrapper}>
-                    <Image src="/yulia-sasha-headshot.jpg" alt="Yulia & Sasha" height={150} width={150} />
-                    <div className={styles.flourish}>
-                        <LinesCircle />
-                    </div>
+                    <Image src="/yulia-sasha.png" alt="Yulia & Sasha" height={300} width={300} />
                 </div>
                 <div className={styles.text}>
                     <h2>{t('title')}</h2>

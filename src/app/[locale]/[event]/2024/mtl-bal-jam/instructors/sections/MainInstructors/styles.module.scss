@@ -2,7 +2,10 @@
     background-color: var(--mbj-color-black);
     padding: 40px 0;
 
-    h2, h3, p, a {
+    h2,
+    h3,
+    p,
+    a {
         color: var(--mbj-color-white);
     }
 
@@ -16,12 +19,12 @@
         font-size: 2rem;
         margin-bottom: 20px;
     }
-    
+
     .content {
         position: relative;
         display: grid;
         grid-template-columns: repeat(12, 1fr);
-        
+
         .cutout {
             position: absolute;
             top: 0;
@@ -36,7 +39,7 @@
                 object-fit: contain;
             }
         }
-        
+
         .youtubeWrapper {
             grid-column: 2 / 5;
             display: flex;
@@ -46,6 +49,7 @@
             height: 100%;
             min-width: 640px;
             min-height: 360px;
+            z-index: 1;
         }
 
         .text {
@@ -97,7 +101,8 @@
                 right: initial;
                 bottom: 0;
                 left: 50%;
-                transform: translateX(-70%);
+                transform: translateX(-50%);
+                width: 500px;
                 z-index: 0;
             }
         }
@@ -107,7 +112,7 @@
                 min-width: 427px;
                 min-height: 213px;
 
-                > div {
+                >div {
                     width: 427px !important;
                     height: 213px !important;
                 }
@@ -128,10 +133,20 @@
                 min-width: 320px;
                 min-height: 180px;
 
-                > div {
+                >div {
                     width: 320px !important;
                     height: 180px !important;
                 }
+            }
+
+            .cutout {
+                top: initial;
+                right: initial;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 325px;
+                z-index: 0;
             }
         }
     }

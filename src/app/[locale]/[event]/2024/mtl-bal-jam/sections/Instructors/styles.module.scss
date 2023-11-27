@@ -12,6 +12,7 @@
         transform: translateY(-50%);
         display: flex;
         justify-content: flex-start;
+
         svg {
             max-height: 200px;
             max-width: 200px;
@@ -31,11 +32,7 @@
             align-items: center;
 
             img {
-                border-radius: 50%;
-            }
-
-            .flourish {
-                display: none;
+                object-fit: contain;
             }
         }
 
@@ -45,33 +42,36 @@
             justify-content: center;
             height: 100%;
             width: 500px;
-    
-            h2, h3, p, a {
+
+            h2,
+            h3,
+            p,
+            a {
                 color: var(--mbj-color-white);
             }
-    
+
             h2 {
                 font-size: 3rem;
                 margin-bottom: 8px;
             }
-    
+
             h3 {
                 font-size: 2rem;
                 margin-bottom: 8px;
             }
-    
+
             p {
                 margin-bottom: 1rem;
                 line-height: 125%;
             }
-    
+
             a {
                 margin-left: auto;
                 max-width: fit-content;
                 text-decoration: underline;
                 text-underline-offset: 3px;
                 text-decoration-thickness: 2px;
-    
+
                 &:hover {
                     text-decoration: none;
                 }
@@ -91,9 +91,19 @@
         color: var(--mbj-color-white);
     }
 
+    @media only screen and (max-width: 1400px) {
+        .linesCircle {
+            svg {
+                max-width: 250px;
+                max-height: 250px;
+            }
+        }
+    }
+
     @media only screen and (max-width: 1200px) {
         .content {
             grid-column: 3 / 10;
+
             .text {
                 h2 {
                     font-size: 2rem;
@@ -125,6 +135,13 @@
 
         .content {
             grid-column: 2 / -2;
+
+            .instructorImageWrapper {
+                img {
+                    max-width: 200px;
+                }
+            }
+
             .text {
                 h2 {
                     font-size: 2rem;
@@ -146,7 +163,7 @@
         .halfCircle {
             display: none;
         }
-        
+
         .linesCircle {
             clip-path: inset(0 0 51% 0);
         }
@@ -158,21 +175,7 @@
 
             .instructorImageWrapper {
                 img {
-                    width: 200px;
-                    height: 200px;
-                }
-
-                .flourish {
-                    display: block;
-                    position: absolute;
-                    z-index: 0;
-                    bottom: 3px;
-                    right: 3px;
-    
-                    svg {
-                        width: 50px;
-                        height: 50px;
-                    }
+                    max-width: 250px;
                 }
             }
 
