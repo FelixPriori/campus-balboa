@@ -20,6 +20,7 @@
     /* BORDER */
     --border-size: 2px;
     --border-radius: var(--spacing-sm);
+    --border-radius-inner: var(--spacing-xsm);
     --border-radius-btn: var(--spacing-xl);
     --border-input: var(--border-size) solid;
 
@@ -34,10 +35,12 @@
     --width-half: calc(var(--width-section) / 2);
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
-  
+
 body {
     font-family: 'Josefin Sans', sans-serif;
     margin: var(--spacing-xl);
@@ -47,7 +50,17 @@ img {
     margin-bottom: var(--spacing-lg);
 }
 
-p, a, button, div, h1, h2, h3, h4, h5, ul, li {
+p,
+a,
+button,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+li {
     margin: 0;
 }
 
@@ -80,7 +93,14 @@ form #sCostSummary div.sCostSummary:last-of-type .inputcell {
     justify-content: stretch;
 }
 
-p, a, button, li, input, label, option, select {
+p,
+a,
+button,
+li,
+input,
+label,
+option,
+select {
     font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -113,7 +133,9 @@ li label {
     margin-bottom: var(--spacing-lg);
 }
 
-.sectionWrapper, #viewbookingoptions, #returntobookingbottom {
+.sectionWrapper,
+#viewbookingoptions,
+#returntobookingbottom {
     max-width: var(--width-section);
     margin: var(--spacing-lg) auto;
 }
@@ -122,17 +144,20 @@ li label {
     display: none;
 }
 
-#viewbookingoptions, #returntobookingbottom {
+#viewbookingoptions,
+#returntobookingbottom {
     margin: var(--spacing-xl) auto;
 }
 
-#returntobookingbottom, #returntobooking {
+#returntobookingbottom,
+#returntobooking {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-sm);
 }
 
-#bookagain, .returntobooking {
+#bookagain,
+.returntobooking {
     margin-bottom: var(--spacing-sm);
     text-align: center;
 }
@@ -176,7 +201,8 @@ li label {
 
 /* INPUT STYLING */
 
-input[type=text], input[type=password] {
+input[type=text],
+input[type=password] {
     padding: var(--spacing-sm) var(--spacing-sm-2);
     border-radius: var(--border-radius);
     font-size: var(--font-size-md);
@@ -184,24 +210,55 @@ input[type=text], input[type=password] {
     border-color: var(--color-dark);
 }
 
-input[type=text]:focus-visible, input[type=password]:focus-visible {
+input[type=text]:focus-visible,
+input[type=password]:focus-visible {
     outline-color: var(--color-secondary);
 }
 
 select {
     padding: var(--spacing-sm) var(--spacing-sm-2);
-    border: var(--border-input)  var(--color-dark);
+    border: var(--border-input) var(--color-dark);
     border-radius: var(--border-radius);
 }
 
-input[type=text], .inputcell, select {
+select[multiple="multiple"] {
+    height: 125px;
+    overflow: hidden;
+}
+
+select[multiple="multiple"] option {
+    padding: var(--spacing-xsm);
+}
+
+select[multiple="multiple"] option:checked {
+    background-color: var(--color-secondary);
+    color: var(--color-neutral);
+}
+
+select[multiple="multiple"] option:active {
+    background-color: var(--color-primary);
+    color: var(--color-neutral);
+}
+
+select[multiple="multiple"] option:first-child {
+    border-radius: var(--border-radius-inner) var(--border-radius-inner) 0 0;
+}
+
+select[multiple="multiple"] option:last-child {
+    border-radius: 0 0 var(--border-radius-inner) var(--border-radius-inner);
+}
+
+input[type=text],
+.inputcell,
+select {
     width: 100%;
     box-sizing: border-box;
 }
 
 /* BUTTON STYLING */
 
-input[type=button], input[type=submit] {
+input[type=button],
+input[type=submit] {
     background: transparent;
     border: var(--border-input) var(--color-dark);
     padding: var(--spacing-sm) var(--spacing-sm-2);
@@ -213,7 +270,8 @@ input[type=submit] {
     width: 100%;
 }
 
-input[type=button]:hover, input[type=submit]:hover {
+input[type=button]:hover,
+input[type=submit]:hover {
     background: var(--color-secondary);
     border-color: var(--color-secondary);
     color: var(--color-neutral);
@@ -221,42 +279,81 @@ input[type=button]:hover, input[type=submit]:hover {
 
 /* CUSTOM FIELDS STYLING */
 
-#row_i119624_Booklet, #row_i119817_Terms, #row_i119816_Tourisme, #row_i119873_Privacy {
+#row_i119624_Booklet,
+#row_i119817_Terms,
+#row_i119816_Tourisme,
+#row_i119873_Privacy,
+#row_i119916_Volunteering,
+#row_i119921_Allergies,
+#row_i119919_Timeframe {
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
     align-items: center;
 }
 
+#row_i119919_Timeframe[style='display: block;'] {
+    display: flex !important;
+}
+
 #row_i119624_Booklet {
     margin-bottom: var(--spacing-sm);
 }
 
-#row_i119817_Terms .itemdescriptioncell, #row_i119873_Privacy .itemdescriptioncell {
+#row_i119817_Terms .itemdescriptioncell,
+#row_i119873_Privacy .itemdescriptioncell {
     margin-left: var(--spacing-sm);
 }
 
-#row_i119817_Terms p, #row_i119873_Privacy p {
+#row_i119817_Terms p,
+#row_i119873_Privacy p {
     margin-bottom: var(--spacing-sm);
     font-weight: normal;
     line-height: 135%;
 }
 
-#row_i119624_Booklet .itemdescriptioncell, #row_i119817_Terms .inputcell, #row_i119816_Tourisme .itemdescriptioncell, #row_i119873_Privacy .inputcell{
+#row_i119624_Booklet .itemdescriptioncell,
+#row_i119817_Terms .inputcell,
+#row_i119816_Tourisme .itemdescriptioncell,
+#row_i119873_Privacy .inputcell,
+#row_i119916_Volunteering .itemdescriptioncell,
+#row_i119921_Allergies .itemdescriptioncell,
+#row_i119919_Timeframe .itemdescriptioncell {
     margin-bottom: 0;
 }
 
-#row_i119624_Booklet .inputcell, #row_i119817_Terms .inputcell, #row_i119816_Tourisme .inputcell, #row_i119873_Privacy .inputcell {
+#row_i119624_Booklet .itemdescriptioncell span p,
+#row_i119817_Terms .inputcell span p,
+#row_i119816_Tourisme .itemdescriptioncell span p,
+#row_i119873_Privacy .inputcell span p,
+#row_i119916_Volunteering .itemdescriptioncell span p,
+#row_i119921_Allergies .itemdescriptioncell span p,
+#row_i119919_Timeframe .itemdescriptioncell span p {
+    height: var(--spacing-lg);
+    display: flex;
+    align-items: center;
+}
+
+
+#row_i119624_Booklet .inputcell,
+#row_i119817_Terms .inputcell,
+#row_i119816_Tourisme .inputcell,
+#row_i119873_Privacy .inputcell,
+#row_i119916_Volunteering .inputcell,
+#row_i119921_Allergies .inputcell,
+#row_i119919_Timeframe .inputcell {
     width: 30px;
 }
 
-.confirmation #row_i119817_Terms .inputcell, .confirmation #row_i119873_Privacy .inputcell {
+.confirmation #row_i119817_Terms .inputcell,
+.confirmation #row_i119873_Privacy .inputcell {
     width: 25%;
 }
 
-.confirmation #row_i119817_Terms, .confirmation #row_i119873_Privacy  {
+.confirmation #row_i119817_Terms,
+.confirmation #row_i119873_Privacy {
     gap: var(--spacing-sm);
-} 
+}
 
 /* ERROR */
 
@@ -265,14 +362,14 @@ input[type=button]:hover, input[type=submit]:hover {
 }
 
 .errorText {
-    color:  var(--color-error);
+    color: var(--color-error);
 }
 
 .errorMessage {
     max-width: var(--width-section);
     margin: 0 auto;
     text-align: center;
-    border: var(--border-input)  var(--color-error);
+    border: var(--border-input) var(--color-error);
     padding: var(--spacing-sm-2) 0;
     margin-bottom: var(--spacing-sm-2);
     border-radius: var(--border-radius);
@@ -310,6 +407,7 @@ input[type=button]:hover, input[type=submit]:hover {
     25% {
         transform: rotate(90deg) translate(.25rem);
     }
+
     75% {
         transform: rotate(90deg) translate(-.25rem);
     }
@@ -350,7 +448,7 @@ input[type=button]:hover, input[type=submit]:hover {
     text-align: left;
 }
 
-.tab input:checked ~ .tab__content {
+.tab input:checked~.tab__content {
     max-height: fit-content;
     padding: var(--spacing-md);
 }
@@ -384,7 +482,7 @@ input[type=button]:hover, input[type=submit]:hover {
     transition: all 0.35s;
 }
 
-.tab input:checked + .tab__label::after {
+.tab input:checked+.tab__label::after {
     transform: rotate(270deg);
 }
 
@@ -398,7 +496,7 @@ input[type=button]:hover, input[type=submit]:hover {
     --color-theme: var(--color-primary);
 }
 
-.tab input:not(:checked) + .tab__label:hover::after {
+.tab input:not(:checked)+.tab__label:hover::after {
     animation: bounce .5s infinite;
 }
 
@@ -406,12 +504,15 @@ input[type=button]:hover, input[type=submit]:hover {
 /* RESPONSIVE */
 
 @media screen and (max-width: 600px) {
-    .sectionWrapper, .testing form {
+
+    .sectionWrapper,
+    .testing form {
         width: 100%;
         margin: 0;
     }
 
-    #viewbookingoptions, #returntobookingbottom {
+    #viewbookingoptions,
+    #returntobookingbottom {
         margin: var(--spacing-xl) 0;
     }
 
