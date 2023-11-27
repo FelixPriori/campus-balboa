@@ -47,7 +47,7 @@ export default function EmblaContainer({slidesNumber, children}: {slidesNumber: 
                         onClick={() => scrollTo(i)}
                         key={key}
                     >
-                        <span className={styles.srOnly}>{t(`changeSlide`, {slideNum: i + 1})}</span>
+                        <span className="sr-only">{t(`changeSlide`, {slideNum: i + 1})}</span>
                     </button>
                 )}
             </div>

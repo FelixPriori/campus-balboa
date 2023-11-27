@@ -13,6 +13,8 @@
     font-weight: bold;
     gap: var(--paypal-gap);
     transition: all 200ms ease-in-out;
+    max-height: 42px;
+    white-space: nowrap;
 
     &:hover {
         transform: translateY(-3px);

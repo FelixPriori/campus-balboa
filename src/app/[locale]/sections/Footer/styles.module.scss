@@ -26,6 +26,12 @@
         }
       }
     }
+
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
     
     @media only screen and (max-width: 580px) {
       height: 100%;
@@ -42,6 +48,11 @@
         .buttonWrapper {
           width: 100%;
         }
+      }
+
+      .links {
+        flex-wrap: wrap;
+        justify-content: center;
       }
     }
   }

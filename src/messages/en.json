@@ -52,6 +52,11 @@
                         "href": "https://www.facebook.com/MontrealBalJam",
                         "logo": "/facebook-white.png"
                     },
+                    "instagram": {
+                        "alt": "Instagram",
+                        "href": "https://www.instagram.com/mtlbaljam/",
+                        "logo": "/instagram-white.png"
+                    },
                     "email": {
                         "alt": "Email",
                         "href": "mailto:info@campusbalboa.org",
