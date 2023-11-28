@@ -30,7 +30,7 @@ interface EventCard {
 export default function EventCard({image, title, link, tagline, dark}: EventCard) {
     return (
         <Link href={link.href} className={`${styles.cardWrapper} ${dark ? styles.dark : ''} ${dark ? caveatBrush.className : ''}`}>
-            <p className={styles.srOnly}>{link.text}</p>
+            <p className="sr-only">{link.text}</p>
             <ContentfulImage
                 className={styles.image}
                 src={image.url}
