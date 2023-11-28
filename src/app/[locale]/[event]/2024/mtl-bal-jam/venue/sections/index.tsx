@@ -1,3 +1,3 @@
-export {default as Header} from './Header'
-export {default as MainVenue} from './MainVenue'
-export {default as Footer} from './Footer'
+export { default as Header } from './Header'
+export { default as Venue } from './Venue'
+export { default as Footer } from './Footer'

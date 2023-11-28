@@ -1,7 +1,7 @@
 import Favicon from '@/app/mtl-bal-jam-favicon.ico'
 import BigOG from '@/app/mtl-bal-jam-og-512.png'
 import Main from '@/layout/main';
-import { Header, MainVenue, Footer } from './sections';
+import { Header, Venue, Footer } from './sections';
 import Navigation from '../components/Navigation';
 import MobileNavigation from '@/app/[locale]/components/MobileNavigation';
 
@@ -9,7 +9,7 @@ type Props = {
   params: { locale: string }
 }
 
-export async function generateMetadata({params}: Props) {
+export async function generateMetadata({ params }: Props) {
   const siteUrl = 'https://www.campusbalboa.org'
 
   if (params.locale === 'fr') {
@@ -20,7 +20,7 @@ export async function generateMetadata({params}: Props) {
         canonical: `${siteUrl}/fr/evenements/2024/mtl-bal-jam/venue`
       },
       icons: [
-        {rel: 'icon', url: Favicon.src}
+        { rel: 'icon', url: Favicon.src }
       ],
       openGraph: {
         images: [
@@ -44,7 +44,7 @@ export async function generateMetadata({params}: Props) {
         canonical: `${siteUrl}/en/events/2024/mtl-bal-jam/music`
       },
       icons: [
-        {rel: 'icon', url: Favicon.src}
+        { rel: 'icon', url: Favicon.src }
       ],
       openGraph: {
         images: [
@@ -69,19 +69,19 @@ export default function MbjVenue() {
   return (
     <>
       <Navigation slug="/venue" />
-      <MobileNavigation 
-        pages={['home','music','venue']} 
-        base={base} 
+      <MobileNavigation
+        pages={['home', 'music', 'venue']}
+        base={base}
         switcherOptions={{
-          frUrl: '/evenements/2024/mtl-bal-jam', 
+          frUrl: '/evenements/2024/mtl-bal-jam',
           enUrl: '/events/2024/mtl-bal-jam',
           slug: '/venue',
           styling: 'mbjStyling'
         }}
       />
-      <Main styles={{borderRadius: '0.625rem'}}>
+      <Main styles={{ borderRadius: '0.625rem' }}>
         <Header />
-        <MainVenue />
+        <Venue />
       </Main>
       <Footer />
     </>

@@ -108,8 +108,8 @@
                 "venuePage": {
                     "title": "MTL BAL JAM",
                     "pageTitle": "Lieux",
-                    "mainVenue": {
-                        "title": "Lieu principal",
+                    "venue": {
+                        "title": "Danses et Ateliers",
                         "position": {
                             "lat": "45.53935",
                             "lng": "-73.614133"
@@ -117,7 +117,7 @@
                         "markerTitle": "Casa d'Italia",
                         "infoWindowText": "Casa D'Italia, 505 Rue Jean-Talon E, Montréal, QC H2R 1T6",
                         "venueName": "Casa d'Italia",
-                        "venueDescription": "La Casa d'Italia est le point de référence historique de la communauté italienne et est un témoignage vivant de la grande contribution culturelle, sociale et économique que notre communauté a apportée à Montréal et au Québec.",
+                        "venueDescription": "La Casa d'Italia est le point de référence historique de la communauté italienne et est un témoignage vivant de la grande contribution culturelle, sociale et économique que la communauté Italienne a apportée à Montréal et au Québec.",
                         "venueAddress": "505 Rue Jean-Talon E, Montréal, QC H2R 1T6",
                         "venueWebsite": "https://www.casaditalia.org/",
                         "cutoutAlt": "Photo de la Casa d'Italia"
@@ -193,7 +193,7 @@
                     "title": "Zone rapide",
                     "description": "Il est important de noter que plus le tempo dépasse 220 BPM, moins de danseur.euses seront à l’aise de danser. Par contre, relever le défi de danser sur de la musique très rapide est l’un des plaisirs de danser le balboa. Il est déconseillé de jouer trop de chansons extrèmes dans une même danse sociale."
                 },
-                "distribution" : {
+                "distribution": {
                     "title": "Distribution",
                     "description": "La distribution du BPM d’un set de DJ dépend de plusieurs facteurs. Notamment, le niveau moyen des danseur.euses présent.es, la qualité du plancher de danse, la taille du plancher de danse, le niveau d’énergie de la salle, le moment (début de la soirée, fin de la soirée, début du set, fin du set), et beaucoup plus. Il est généralement recommandé de monter et descendre graduellement la vitesse plutôt que de passer d’un extrême à l’autre. Une chanson rapide jouée directement après une chanson lente va sembler beaucoup plus rapide en contraste et vice versa. Par contre, un plancher de danse qui a peu d’énergie peut bénéficier d’une chanson plus rapide. Un plancher de danse trop fatigué pour les chansons rapides pourrait reprendre de la vigueur après une chanson lente. C’est pourquoi il est important de s’adapter aux gens dans la salle.",
                     "beginner": "Débutant",
