@@ -137,6 +137,18 @@
                         "cutoutAlt": "Photo du Cat's Corner"
                     }
                 },
+                "activitiesPage": {
+                    "title": "MTL BAL JAM",
+                    "pageTitle": "Activités",
+                    "tour": {
+                        "title": "Tour guidé de la Petite Italie",
+                        "price": "Prix : 20.00$ CAD",
+                        "length": "Durée : 1h30",
+                        "when": "Quand : Samedi",
+                        "imageAlt": "Photo de la petite italie",
+                        "description": "Découvrez notre belle ville en visitant la petite Italie, le quartier du MTL BAL JAM. Vous allez pouvoir en savoir plus sur notre salle, la Casa Italia lors de ce tour guidé de la petite Italie ! Ne vous inquiétez pas, il n'y aura pas de conflits avec l'horaire des cours."
+                    }
+                },
                 "navigation": {
                     "title": "Menu",
                     "home": {
@@ -150,6 +162,10 @@
                     "venue": {
                         "text": "Lieux",
                         "href": "/fr/evenements/2024/mtl-bal-jam/venue"
+                    },
+                    "activities": {
+                        "text": "Activités",
+                        "href": "/fr/evenements/2024/mtl-bal-jam/activities"
                     }
                 }
             }

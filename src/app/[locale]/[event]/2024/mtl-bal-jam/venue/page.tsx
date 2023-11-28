@@ -70,7 +70,7 @@ export default function MbjVenue() {
     <>
       <Navigation slug="/venue" />
       <MobileNavigation
-        pages={['home', 'music', 'venue']}
+        pages={['home', 'music', 'venue', 'activities']}
         base={base}
         switcherOptions={{
           frUrl: '/evenements/2024/mtl-bal-jam',
