@@ -50,6 +50,14 @@
             min-width: 640px;
             min-height: 360px;
             z-index: 1;
+
+            .loading {
+                .box {
+                    max-width: 640px;
+                    max-height: 360px;
+                    background-color: var(--mbj-color-black);
+                }
+            }
         }
 
         .text {
@@ -116,6 +124,13 @@
                     width: 427px !important;
                     height: 213px !important;
                 }
+
+                .loading {
+                    .box {
+                        max-width: 427px !important;
+                        max-height: 213px !important;
+                    }
+                }
             }
 
             .text {
@@ -148,6 +163,37 @@
                 width: 325px;
                 z-index: 0;
             }
+        }
+
+        @media only screen and (max-width: 400px) {
+
+
+            .youtubeWrapper {
+                min-width: 100%;
+                min-height: 180px;
+
+                >div {
+                    width: 100% !important;
+                    height: 250px !important;
+                }
+
+                .loading {
+                    .box {
+                        max-width: 100% !important;
+                        max-height: 250px !important;
+                    }
+                }
+            }
+
+            .text {
+                padding: 20px
+            }
+        }
+    }
+
+    @media only screen and (max-width: 400px) {
+        h2 {
+            font-size: 2rem;
         }
     }
 }

@@ -64,7 +64,7 @@
                     "instructorsSection": {
                         "title": "Instructeurs",
                         "instructorsNames": "Yulia & Sasha",
-                        "description": "Yulia et Sasha sont deux passionnées du Balboa basées au Royaume-Uni : danseurs, instructeurs et compétiteurs. Ils proposent des cours et des mini-ateliers à Londres et voyagent pour enseigner le Balboa à travers l'Europe.",
+                        "description": "Yulia et Sasha sont deux passionnés du Balboa basés au Royaume-Uni : danseurs, instructeurs et compétiteurs. Ils proposent des cours et des mini-ateliers à Londres et à travers l'Europe.",
                         "learnMore": {
                             "text": "Plus de détails...",
                             "href": "/fr/evenements/2024/mtl-bal-jam/instructors"
@@ -111,9 +111,9 @@
                     "title": "MTL BAL JAM",
                     "pageTitle": "Instructeurs",
                     "mainInstructors": {
-                        "title": "Instructeurs principaux",
-                        "instructorsNames":"Yulia & Sasha",
-                        "biography": "Yulia et Sasha sont deux danseuses Balboa basées au Royaume-Uni, facilement reconnaissables pour leur style vif mais smooth. Ils ont découvert la danse pour la première fois en 2010 et depuis, leur enthousiasme pour le Balboa ne cesse de croître.<br></br>Avant de commencer à enseigner, ils se sont concentrés sur leur propre développement en tant que danseurs, en s'entraînant et en compétition, en étudiant l'histoire de la danse et en explorant les dynamiques de partenariat à la fois dans le Pure Balboa et le Balswing. Le couple est souvent aperçu lors des finales de concours internationaux. Deux fois vainqueurs du California Balboa Classic, ils détiennent également fièrement le titre de 6 fois champions du Pure Balboa Classic !<br></br>Actuellement, ils organisent des cours et des mini-ateliers de Balboa à Londres, et voyagent pour enseigner lors de week-ends de danse à travers l'Europe. En classe, ils s’efforcent de partager les connaissances acquises tout au long de leur parcours de danse et encouragent leurs élèves à apprécier l’énergie joyeuse du Balboa, son humour subtil et la précieuse opportunité d’être dans l’instant présent avec la musique et les uns avec les autres. Dernièrement, alors que Sasha s'est découvert une nouvelle obsession pour les claquettes, les percussions et le rythme en général, ils se concentrent encore plus sur différents aspects de la musicalité et visent à refléter cela dans leur enseignement.",
+                        "title": "Instructeurs",
+                        "instructorsNames": "Yulia & Sasha",
+                        "biography": "Yulia et Sasha sont deux danseurs de Balboa basés au Royaume-Uni, facilement reconnaissables pour leur style plein d’entrain et fluide. Ils ont découvert cette danse pour la première fois en 2010 et depuis, leur enthousiasme pour le Balboa ne cesse de croître<br></br>Avant de débuter leur carrière en enseignement, ils se sont concentrés sur leur propre développement en tant que danseurs, en s'entraînant, en participant à des compétitions, en étudiant l'histoire de la danse et en explorant les dynamiques de partenariat, tant en Pure Balboa qu'en Bal-swing.  <br></br>Le couple est souvent parmi les finalistes des concours internationaux: deux fois vainqueurs du California Balboa Classic et fiers d'être six fois champions du Pure Balboa Classic !<br></br>Présentement, ils organisent des cours et des mini-ateliers de Balboa à Londres, et voyagent pour enseigner lors de week-ends de danse à travers l'Europe.<br></br>En classe, ils s’efforcent de partager les connaissances acquises tout au long de leur parcours de danse et encouragent leurs élèves à apprécier l’énergie joyeuse du Balboa, son humour subtil et l’occasion précieuse d’être dans l’instant présent avec la musique et son partenaire. <br></br>Dernièrement, Sasha s'est découvert une nouvelle passion pour la claquette, les percussions et le rythme en général, alors ils se concentrent encore plus sur différents aspects de la musicalité et visent à refléter cela dans leur enseignement.",
                         "cutoutAlt": "Photo de Yulia & Sasha",
                         "link": "https://www.ys.balboalondon.co.uk/"
                     }
@@ -174,7 +174,7 @@
                     "title": "Zone rapide",
                     "description": "Il est important de noter que plus le tempo dépasse 220 BPM, moins de danseur.euses seront à l’aise de danser. Par contre, relever le défi de danser sur de la musique très rapide est l’un des plaisirs de danser le balboa. Il est déconseillé de jouer trop de chansons extrèmes dans une même danse sociale."
                 },
-                "distribution" : {
+                "distribution": {
                     "title": "Distribution",
                     "description": "La distribution du BPM d’un set de DJ dépend de plusieurs facteurs. Notamment, le niveau moyen des danseur.euses présent.es, la qualité du plancher de danse, la taille du plancher de danse, le niveau d’énergie de la salle, le moment (début de la soirée, fin de la soirée, début du set, fin du set), et beaucoup plus. Il est généralement recommandé de monter et descendre graduellement la vitesse plutôt que de passer d’un extrême à l’autre. Une chanson rapide jouée directement après une chanson lente va sembler beaucoup plus rapide en contraste et vice versa. Par contre, un plancher de danse qui a peu d’énergie peut bénéficier d’une chanson plus rapide. Un plancher de danse trop fatigué pour les chansons rapides pourrait reprendre de la vigueur après une chanson lente. C’est pourquoi il est important de s’adapter aux gens dans la salle.",
                     "beginner": "Débutant",

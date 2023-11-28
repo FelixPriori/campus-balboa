@@ -5,6 +5,7 @@ import styles from './styles.module.scss'
 import { useEffect, useState } from 'react'
 import { ColorRing } from 'react-loader-spinner';
 import Image from 'next/image'
+import Skeleton from '@/app/[locale]/components/Skeleton'
 
 export default function MainInstructors() {
     const [hasWindow, setHasWindow] = useState(false);
@@ -32,16 +33,9 @@ export default function MainInstructors() {
                             }}
                         />
                     ) : (
-                        <ColorRing
-                            width="200"
-                            colors={[
-                                "var(--mbj-color-chartreuse)",
-                                'var(--mbj-color-teal)',
-                                'var(--mbj-color-white)',
-                                'var(--mbj-color-salmon)',
-                                "var(--mbj-color-chartreuse)",
-                            ]}
-                        />
+                        <Skeleton wrapperClass={styles.loading} boxClass={styles.box}>
+                            <Image priority src="/youtube-logo.png" alt="youtube logo" width={68} height={68} />
+                        </Skeleton>
                     )}
                 </div>
                 <div className={styles.cutout}>
