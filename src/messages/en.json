@@ -157,6 +157,18 @@
                         "cutoutAlt": "Photo of Cat's Corner"
                     }
                 },
+                "activitiesPage": {
+                    "title": "MTL BAL JAM",
+                    "pageTitle": "Activities",
+                    "tour": {
+                        "title": "Little Italy Guided Tour",
+                        "price": "Price: $20.00 CAD",
+                        "length": "Duration: 1h30",
+                        "when": "When: Saturday",
+                        "imageAlt": "Photo of Little Italy",
+                        "description": "Discover our beloved city by visiting Little Italy, the neighborhood where MTL BAL JAM will be held. You will get to learn more about our beautiful venue, the Casa Italia by signing up for the guided tour! Don't worry. It will not interfere with the classes."
+                    }
+                },
                 "navigation": {
                     "title": "Menu",
                     "home": {
@@ -174,6 +186,10 @@
                     "venue": {
                         "text": "Venues",
                         "href": "/en/events/2024/mtl-bal-jam/venue"
+                    },
+                    "activities": {
+                        "text": "Activities",
+                        "href": "/en/events/2024/mtl-bal-jam/activities"
                     }
                 }
             }

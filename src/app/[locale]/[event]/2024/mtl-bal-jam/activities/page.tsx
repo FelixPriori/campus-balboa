@@ -1,8 +1,8 @@
 import Favicon from '@/app/mtl-bal-jam-favicon.ico'
 import BigOG from '@/app/mtl-bal-jam-og-512.png'
-import { Music, Footer, Header, Instructors, Venue } from './sections';
 import Main from '@/layout/main';
-import Navigation from './components/Navigation';
+import { Header, Tour, Footer } from './sections';
+import Navigation from '../components/Navigation';
 import MobileNavigation from '@/app/[locale]/components/MobileNavigation';
 
 type Props = {
@@ -14,10 +14,10 @@ export async function generateMetadata({ params }: Props) {
 
   if (params.locale === 'fr') {
     return {
-      title: 'MTL BAL JAM 2024',
-      description: 'Évenement de balboa à Montréal le 21-22-23 juin 2024',
+      title: 'Activités | MTL BAL JAM 2024',
+      description: 'Activités lors du MTL BAL JAM, l\'évenement de balboa à Montréal le 21-22-23 juin 2024',
       alternates: {
-        canonical: `${siteUrl}/fr/evenements/2024/mtl-bal-jam`
+        canonical: `${siteUrl}/fr/evenements/2024/mtl-bal-jam/activities`
       },
       icons: [
         { rel: 'icon', url: Favicon.src }
@@ -31,17 +31,17 @@ export async function generateMetadata({ params }: Props) {
             height: 512,
           }
         ],
-        title: 'MTL BAL JAM 2024',
+        title: 'Activités | MTL BAL JAM 2024',
         locale: 'fr',
-        description: 'Évenement de balboa à Montréal le 21-22-23 juin 2024'
+        description: 'Activités lors du MTL BAL JAM, l\'évenement de balboa à Montréal le 21-22-23 juin 2024'
       },
     }
   } else {
     return {
-      title: 'MTL BAL JAM 2024',
-      description: 'Balboa event happening in Montreal on June 21-22-23 2024',
+      title: 'Activities | MTL BAL JAM 2024',
+      description: 'Activities during the MTL BAL JAM, a Balboa event happening in Montreal on June 21-22-23 2024',
       alternates: {
-        canonical: `${siteUrl}/en/events/2024/mtl-bal-jam`
+        canonical: `${siteUrl}/en/events/2024/mtl-bal-jam/activities`
       },
       icons: [
         { rel: 'icon', url: Favicon.src }
@@ -55,9 +55,9 @@ export async function generateMetadata({ params }: Props) {
             height: 512,
           }
         ],
-        title: 'MTL BAL JAM 2024',
+        title: 'Activities | MTL BAL JAM 2024',
         locale: 'en',
-        description: 'Balboa event happening in Montreal on June 21-22-23 2024',
+        description: 'Activities during the MTL BAL JAM, a Balboa event happening in Montreal on June 21-22-23 2024',
       },
     }
   }
@@ -65,26 +65,25 @@ export async function generateMetadata({ params }: Props) {
 
 const base = 'Events.2024.MtlBalJam.navigation'
 
-export default function Event() {
+export default function MbjActivities() {
   return (
     <>
-      <Navigation />
+      <Navigation slug="/activities" />
       <MobileNavigation
-        pages={['home', 'music', 'instructors', 'activities']}
+        pages={['home', 'music', 'venue', 'activities']}
         base={base}
         switcherOptions={{
           frUrl: '/evenements/2024/mtl-bal-jam',
           enUrl: '/events/2024/mtl-bal-jam',
+          slug: '/activities',
           styling: 'mbjStyling'
         }}
       />
       <Main styles={{ borderRadius: '0.625rem' }}>
         <Header />
-        <Instructors />
-        <Venue />
-        <Music />
-        <Footer />
+        <Tour />
       </Main>
+      <Footer />
     </>
   )
 }

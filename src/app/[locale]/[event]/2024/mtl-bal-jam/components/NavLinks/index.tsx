@@ -8,6 +8,7 @@ const keys = [
     'music',
     'instructors',
     'venue',
+    'activities'
 ] as const
 
 export default function NavLinks() {
