@@ -1,50 +1,51 @@
+// @ts-nocheck
 "use client"
-import { GoogleMap, Marker, useLoadScript } from '@react-google-maps/api';
-import { useLocale } from 'next-intl';
-import { memo, useCallback, useState } from 'react';
+import { useEffect, useState } from 'react';
+import { APIProvider, Map, AdvancedMarker, InfoWindow, useAdvancedMarkerRef } from '@vis.gl/react-google-maps'; 
 
-
-interface GoogleMapsProps {
-    center: {
-        lat: any;         
-        lng: any;
-    }
-    containerStyle: any;
+type GoogleMapsProps = {
+    lat: string;
+    lng: string;
+    markerTitle: string;
+    infoWindowText: string;
+    mapId: string;
 }
 
-function CustomGoogleMap({center, containerStyle}: GoogleMapsProps) {
-    const locale = useLocale();
-    const { isLoaded } = useLoadScript({
-        id: 'google-map-script',
-        googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY as string,
-        language: locale
-    })
-    
-    const [map, setMap] = useState(null)
-    
-    const onLoad = useCallback(function callback(map: any) {
-        // This is just an example of getting and using the map instance!!! don't just blindly copy!
-        const bounds = new window.google.maps.LatLngBounds(center);
-        map.fitBounds(bounds);
-    
-        setMap(map)
-    }, [center])
-    
-    const onUnmount = useCallback(function callback(map: any) {
-        setMap(null)
-    }, [])
-    
-    return isLoaded ? (
-        <GoogleMap
-            mapContainerStyle={containerStyle}
-            center={center}
-            zoom={15}
-            onLoad={onLoad}
-            onUnmount={onUnmount}
-        >
-            <Marker position={center} />
-        </GoogleMap>
-    ) : <></>
+function GoogleMaps({lat, lng, markerTitle, infoWindowText, mapId}: GoogleMapsProps) {
+    const [infowindowOpen, setInfowindowOpen] = useState(true);
+    const [markerRef, marker] = useAdvancedMarkerRef();
+
+    return (
+        <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}>
+            <Map 
+                center={{
+                    lat: Number.parseFloat(lat),
+                    lng: Number.parseFloat(lng),
+                }} 
+                zoom={16} 
+                mapId={mapId}
+            >
+                <AdvancedMarker
+                    ref={markerRef}
+                    onClick={() => setInfowindowOpen(!infowindowOpen)}
+                    position={{
+                        lat: Number.parseFloat(lat),
+                        lng: Number.parseFloat(lng),
+                    }}
+                    title={markerTitle}
+                />
+                {infowindowOpen && (
+                    <InfoWindow
+                        anchor={marker}
+                        maxWidth={200}
+                        onCloseClick={() => setInfowindowOpen(false)}
+                    >
+                        {infoWindowText}
+                    </InfoWindow>
+                )}
+            </Map>
+        </APIProvider>
+  );
 }
 
-export default memo(CustomGoogleMap)
+export default GoogleMaps;

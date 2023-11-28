@@ -6,7 +6,8 @@ import Image from "next/image";
 const keys = [
     'home',
     'music',
-    'instructors'
+    'instructors',
+    'venue',
 ] as const
 
 export default function NavLinks() {
@@ -15,7 +16,7 @@ export default function NavLinks() {
     return (
         <div className={styles.navLinksWrapper}>
             <div className={styles.toasterWrapper}>
-                <Image src='/mbj-toaster-black.png' alt='Toaster' width={50} height={50}/>
+                <Image src='/mbj-toaster-black.png' alt='Toaster' width={50} height={50} />
                 <h2 className={styles.title}>{t('title')}</h2>
             </div>
             <ul className={styles.navLinks}>

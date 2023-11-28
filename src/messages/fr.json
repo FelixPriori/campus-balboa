@@ -69,6 +69,13 @@
                             "text": "Plus de détails...",
                             "href": "/fr/evenements/2024/mtl-bal-jam/instructors"
                         }
+                    },
+                    "venueSection": {
+                        "title": "Lieux",
+                        "learnMore": {
+                            "text": "Découvrir nos lieux...",
+                            "href": "/fr/evenements/2024/mtl-bal-jam/venue"
+                        }
                     }
                 },
                 "musicPage": {
@@ -118,6 +125,38 @@
                         "link": "https://www.ys.balboalondon.co.uk/"
                     }
                 },
+                "venuePage": {
+                    "title": "MTL BAL JAM",
+                    "pageTitle": "Lieux",
+                    "venue": {
+                        "title": "Danses et Ateliers",
+                        "position": {
+                            "lat": "45.53935",
+                            "lng": "-73.614133"
+                        },
+                        "markerTitle": "Casa d'Italia",
+                        "infoWindowText": "Casa D'Italia, 505 Rue Jean-Talon E, Montréal, QC H2R 1T6",
+                        "venueName": "Casa d'Italia",
+                        "venueDescription": "La Casa d'Italia est le point de référence historique de la communauté italienne et est un témoignage vivant de la grande contribution culturelle, sociale et économique que la communauté Italienne a apportée à Montréal et au Québec.",
+                        "venueAddress": "505 Rue Jean-Talon E, Montréal, QC H2R 1T6",
+                        "venueWebsite": "https://www.casaditalia.org/",
+                        "cutoutAlt": "Photo de la Casa d'Italia"
+                    },
+                    "secondaryVenue": {
+                        "title": "Lieu secondaire",
+                        "position": {
+                            "lat": "45.5325358",
+                            "lng": "-73.5521198"
+                        },
+                        "markerTitle": "Communauté Cat's Corner",
+                        "infoWindowText": "Communauté Cat's Corner, 1956 Rue Frontenac, Montréal, QC H2K 2Z1",
+                        "venueName": "Cat's Corner Community",
+                        "venueDescription": "La mission de cette entreprise sans but lucratif est d'offrir un accès à la culture des danses et musiques jazz noires-américaines (et formes apparentées) à travers des cours et des événements afin de la faire rayonner, dans le respect et la célébration de ses origines et de ses valeurs.",
+                        "venueAddress": "1956 Rue Frontenac, Montréal, QC H2K 2Z1",
+                        "venueWebsite": "https://www.catscorner.ca/",
+                        "cutoutAlt": "Photo du Cat's Corner"
+                    }
+                },
                 "navigation": {
                     "title": "Menu",
                     "home": {
@@ -131,6 +170,10 @@
                     "instructors": {
                         "text": "Instructeurs",
                         "href": "/fr/evenements/2024/mtl-bal-jam/instructors"
+                    },
+                    "venue": {
+                        "text": "Lieux",
+                        "href": "/fr/evenements/2024/mtl-bal-jam/venue"
                     }
                 }
             }
