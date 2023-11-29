@@ -9,7 +9,7 @@ type Props = {
   params: { locale: string }
 }
 
-export async function generateMetadata({params}: Props) {
+export async function generateMetadata({ params }: Props) {
   const siteUrl = 'https://www.campusbalboa.org'
 
   if (params.locale === 'fr') {
@@ -20,7 +20,7 @@ export async function generateMetadata({params}: Props) {
         canonical: `${siteUrl}/fr/evenements/2024/mtl-bal-jam/instructors`
       },
       icons: [
-        {rel: 'icon', url: Favicon.src}
+        { rel: 'icon', url: Favicon.src }
       ],
       openGraph: {
         images: [
@@ -44,7 +44,7 @@ export async function generateMetadata({params}: Props) {
         canonical: `${siteUrl}/en/events/2024/mtl-bal-jam/instructors`
       },
       icons: [
-        {rel: 'icon', url: Favicon.src}
+        { rel: 'icon', url: Favicon.src }
       ],
       openGraph: {
         images: [
@@ -69,17 +69,17 @@ export default function MbjInstructors() {
   return (
     <>
       <Navigation slug="/instructors" />
-      <MobileNavigation 
-        pages={['home','music', 'instructors']} 
-        base={base} 
+      <MobileNavigation
+        pages={['home', 'music', 'venue', 'instructors', 'activities']}
+        base={base}
         switcherOptions={{
-          frUrl: '/evenements/2024/mtl-bal-jam', 
+          frUrl: '/evenements/2024/mtl-bal-jam',
           enUrl: '/events/2024/mtl-bal-jam',
           slug: '/instructors',
           styling: 'mbjStyling'
         }}
       />
-      <Main styles={{borderRadius: '0.625rem'}}>
+      <Main styles={{ borderRadius: '0.625rem' }}>
         <Header />
         <MainInstructors />
       </Main>
