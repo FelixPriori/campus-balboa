@@ -1,20 +1,22 @@
 "use client"
 import { useState } from 'react'
-import styles from './styles.module.scss'
-import Link from 'next/link'
 import { useTranslations } from 'next-intl'
+import Link from 'next/link'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
 import useCustomSwitcher from '@/hooks/useCustomSwitcher'
+import { checkIsCurrent } from '@/app/util/navigationUtils'
+import styles from './styles.module.scss'
 
 type NavigationItemProps = {
     href: string;
     text: string;
+    isCurrent: boolean;
 }
 
-function NavigationItem({href, text}: NavigationItemProps) {
+function NavigationItem({ href, text, isCurrent }: NavigationItemProps) {
     return (
         <li>
-            <Link className={styles.link} href={href}>{text}</Link>
+            <Link className={`${styles.link} ${isCurrent ? styles.current : ''}`} href={href}>{text}</Link>
         </li>
     )
 }
@@ -25,11 +27,10 @@ type MobileNavigationProps = {
     switcherOptions?: any
 }
 
-export default function MobileNavigation({pages, base, switcherOptions}: MobileNavigationProps) {
+export default function MobileNavigation({ pages, base, switcherOptions }: MobileNavigationProps) {
     const [isOpen, setIsOpen] = useState(false)
     const t = useTranslations()
-    const customOptions = useCustomSwitcher({...switcherOptions})
-
+    const customOptions = useCustomSwitcher({ ...switcherOptions })
     const toggle = () => setIsOpen(!isOpen)
 
     return (
@@ -42,8 +43,10 @@ export default function MobileNavigation({pages, base, switcherOptions}: MobileN
             <div className={`${styles.overlay} ${isOpen ? styles.open : ''}`}>
                 <nav className={styles.overlayMenu}>
                     <ul>
-                        {pages.map((page) => <NavigationItem key={page} text={t(`${base}.${page}.text`)} href={t(`${base}.${page}.href`)} />)}
-                        <li className={styles.languageSwitcher}><LanguageSwitcher customOptions={customOptions} customStyling={switcherOptions?.styling} /></li>
+                        {pages.map((page) => <NavigationItem key={page} isCurrent={checkIsCurrent(page, switcherOptions.slug)} text={t(`${base}.${page}.text`)} href={t(`${base}.${page}.href`)} />)}
+                        <li className={styles.languageSwitcher}>
+                            <LanguageSwitcher customOptions={customOptions} customStyling={switcherOptions?.styling} />
+                        </li>
                     </ul>
                 </nav>
             </div>

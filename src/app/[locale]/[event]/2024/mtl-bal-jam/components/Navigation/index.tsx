@@ -1,32 +1,75 @@
 "use client"
-import LanguageSwitcher from '@/components/LanguageSwitcher';
-import styles from './styles.module.scss';
+import { usePathname } from 'next/navigation'
 import { useLocale } from 'next-intl';
 import { useRouter } from 'next-intl/client';
 import NavLinks from '../../components/NavLinks';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
+import MobileNavigation from '@/app/[locale]/components/MobileNavigation';
+import styles from './styles.module.scss';
 
-export default function Navigation({slug = ''}: {slug?: string}) {
+
+const getSlugFromPathname = (pathname: string) => {
+    const pathnameArray = pathname.split('/')
+    const slug = pathnameArray[pathnameArray.length - 1]
+
+    switch (slug) {
+        case 'mtl-bal-jam':
+            return '/'
+        default:
+            return `/${slug}`
+    }
+}
+
+const base = 'Events.2024.MtlBalJam.navigation'
+
+const pages = ['home', 'music', 'venue', 'instructors', 'activities', 'competitions']
+
+const styling = 'mbjStyling'
+
+const frUrl = '/evenements/2024/mtl-bal-jam'
+
+const enUrl = '/events/2024/mtl-bal-jam'
+
+const switcherOptions = {
+    frUrl,
+    enUrl,
+    styling
+}
+
+export default function Navigation() {
+    const pathname = usePathname()
     const locale = useLocale()
     const router = useRouter()
-    
+    const slug = getSlugFromPathname(pathname);
+
     return (
-        <nav className={styles.navigation}>
-            <LanguageSwitcher 
-                customOptions={[
-                    {
-                        onClick: () => router.push(`/events/2024/mtl-bal-jam${slug}`, {locale: 'en'}),
-                        name: 'EN',
-                        active: locale === 'en'
-                    },
-                    {
-                        onClick: () => router.push(`/evenements/2024/mtl-bal-jam${slug}`, {locale: 'fr'}),
-                        name: 'FR',
-                        active: locale === 'fr'
-                    },
-                ]}
-                customStyling="mbjStyling"
+        <>
+            <nav className={styles.navigation}>
+                <LanguageSwitcher
+                    customOptions={[
+                        {
+                            onClick: () => router.push(`${enUrl}${slug}`, { locale: 'en' }),
+                            name: 'EN',
+                            active: locale === 'en'
+                        },
+                        {
+                            onClick: () => router.push(`${frUrl}${slug}`, { locale: 'fr' }),
+                            name: 'FR',
+                            active: locale === 'fr'
+                        },
+                    ]}
+                    customStyling={styling}
+                />
+                <NavLinks pages={pages} current={slug} />
+            </nav>
+            <MobileNavigation
+                pages={pages}
+                base={base}
+                switcherOptions={{
+                    ...switcherOptions,
+                    slug,
+                }}
             />
-            <NavLinks />
-        </nav>
+        </>
     )
 }

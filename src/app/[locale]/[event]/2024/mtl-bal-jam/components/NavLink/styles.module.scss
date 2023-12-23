@@ -9,4 +9,28 @@
             text-decoration: none;
         }
     }
+
+    &.current {
+        a {
+            position: relative;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: default;
+            pointer-events: none;
+
+            &:before {
+                content: "*";
+                position: absolute;
+                left: -7px;
+                top: 4px;
+            }
+
+            &:after {
+                content: "*";
+                position: absolute;
+                right: -7px;
+                top: 4px;
+            }
+        }
+    }
 }

@@ -144,6 +144,15 @@
                             background: var(--color-neutral);
                             transition: .35s;
                         }
+
+                        &.current {
+                            pointer-events: none;
+                            font-weight: bold;
+
+                            &:after {
+                                width: 100%;
+                            }
+                        }
                     }
                 }
             }

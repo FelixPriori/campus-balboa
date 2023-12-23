@@ -2,8 +2,6 @@ import Favicon from '@/app/mtl-bal-jam-favicon.ico'
 import BigOG from '@/app/mtl-bal-jam-og-512.png'
 import Main from '@/layout/main';
 import { Header, Venue, Footer } from './sections';
-import Navigation from '../components/Navigation';
-import MobileNavigation from '@/app/[locale]/components/MobileNavigation';
 
 type Props = {
   params: { locale: string }
@@ -68,17 +66,6 @@ const base = 'Events.2024.MtlBalJam.navigation'
 export default function MbjVenue() {
   return (
     <>
-      <Navigation slug="/venue" />
-      <MobileNavigation
-        pages={['home', 'music', 'venue', 'instructors', 'activities', 'competitions']}
-        base={base}
-        switcherOptions={{
-          frUrl: '/evenements/2024/mtl-bal-jam',
-          enUrl: '/events/2024/mtl-bal-jam',
-          slug: '/venue',
-          styling: 'mbjStyling'
-        }}
-      />
       <Main styles={{ borderRadius: '0.625rem' }}>
         <Header />
         <Venue />

@@ -1,18 +1,11 @@
 import { useTranslations } from "next-intl";
+import Image from "next/image";
+import { checkIsCurrent } from "@/app/util/navigationUtils";
 import NavLink from "../NavLink";
 import styles from './styles.module.scss'
-import Image from "next/image";
 
-const keys = [
-    'home',
-    'music',
-    'instructors',
-    'venue',
-    'activities',
-    'competitions'
-] as const
 
-export default function NavLinks() {
+export default function NavLinks({ pages, current }: { pages: string[], current: string }) {
     const t = useTranslations('Events.2024.MtlBalJam.navigation')
 
     return (
@@ -22,7 +15,7 @@ export default function NavLinks() {
                 <h2 className={styles.title}>{t('title')}</h2>
             </div>
             <ul className={styles.navLinks}>
-                {keys.map(key => <NavLink key={key} href={t(`${key}.href`)} text={t(`${key}.text`)} />)}
+                {pages.map(page => <NavLink key={page} isCurrent={checkIsCurrent(page, current)} href={t(`${page}.href`)} text={t(`${page}.text`)} />)}
             </ul>
         </div>
     )

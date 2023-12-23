@@ -1,11 +1,10 @@
 "use client"
+import { useEffect, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import ReactPlayer from 'react-player/youtube'
-import styles from './styles.module.scss'
-import { useEffect, useState } from 'react'
-import { ColorRing } from 'react-loader-spinner';
 import Image from 'next/image'
 import Skeleton from '@/app/[locale]/components/Skeleton'
+import styles from './styles.module.scss'
 
 export default function MainInstructors() {
     const [hasWindow, setHasWindow] = useState(false);
@@ -39,7 +38,7 @@ export default function MainInstructors() {
                     )}
                 </div>
                 <div className={styles.cutout}>
-                    <Image src="/yulia-sasha.png" alt={t('logoAlt')} width={150} height={150} />
+                    <Image src="/yulia-sasha.png" alt={t('cutoutAlt')} width={150} height={150} />
                 </div>
                 <div className={styles.text}>
                     <h3>{t('instructorsNames')}</h3>

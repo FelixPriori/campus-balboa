@@ -1,4 +1,5 @@
 import { Caveat_Brush, Josefin_Sans } from 'next/font/google';
+import Navigation from './components/Navigation';
 import './mbj-globals.scss';
 
 const caveatBrush = Caveat_Brush({
@@ -16,9 +17,14 @@ const josephinSans = Josefin_Sans({
 })
 
 export default function MtlBalJamLayout({
-  children
+  children,
 }: {
   children: React.ReactNode,
 }) {
-  return (<div className={`mbj-event ${caveatBrush.variable} ${josephinSans.variable}`}>{children}</div>)
+  return (
+    <div className={`mbj-event ${caveatBrush.variable} ${josephinSans.variable}`}>
+      <Navigation />
+      {children}
+    </div>
+  )
 }
