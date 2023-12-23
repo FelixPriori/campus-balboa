@@ -169,6 +169,67 @@
                         "description": "Discover our beloved city by visiting Little Italy, the neighborhood where MTL BAL JAM will be held. You will get to learn more about our beautiful venue, the Casa Italia by signing up for the guided tour! Don't worry. It will not interfere with the classes."
                     }
                 },
+                "competitionsPage": {
+                    "title": "MTL BAL JAM",
+                    "pageTitle": "Competitions",
+                    "mixAndMatchSection": {
+                        "competitionNote": "MTL BAL JAM wants to prioritize social dancing! As such, we will only have one competition this year, and we will make sure that it runs smoothly and that it does not interfere with the social dance more than it has to. That being said, we have many prizes and surprises planned for competitors, and we can say with absolute confidence that our competitions will be a treat for everyone whether you are watching or participating!",
+                        "title": "Open Mix & Match",
+                        "description": "In this social competition, you sign up on your own and you are paired with a partner at random. Every song, you change partners and you are judged individually. The fun occurs when you get a partner you’ve never danced with before! The finals will be dual spotlight so the finalists have a chance to shine, and there will be a small twist for the all skate at the end, MTL BAL JAM style!"
+                    },
+                    "musicSection": {
+                        "title": "Music",
+                        "description": "Every song is carefully picked by our team of DJs, and will follow the standards of international balboa competitions. If there are many heats in the prelims, we will make sure to have similar songs and tempos across heats so that everyone gets a fair chance."
+                    },
+                    "judgesSection": {
+                        "title": "Judges",
+                        "judges": {
+                            "yuliasasha": {
+                                "name": "Yulia & Sasha",
+                                "image": {
+                                    "src": "/yulia-sasha.png",
+                                    "alt": "Yulia and Sasha's picture"
+                                }
+                            }
+                        }
+                    },
+                    "sponsorsSection": {
+                        "title": "Sponsors",
+                        "sponsors": {
+                            "balMoment": {
+                                "name": "Bal Moment Québec",
+                                "link": "https://www.facebook.com/bal.moment/",
+                                "image": {
+                                    "src": "/bal-moment-small.png",
+                                    "alt": "Logo of Bal Moment"
+                                }
+                            },
+                            "toronto": {
+                                "name": "Toronto Bal Weekend",
+                                "link": "https://www.torontobalweekend.com/",
+                                "image": {
+                                    "src": "/toronto-bal-weekend.png",
+                                    "alt": "Logo of Toronto Balboa Weekend"
+                                }
+                            },
+                            "ebf": {
+                                "name": "European Balboa Festival",
+                                "link": "https://sites.google.com/view/europeanbalboafestival/european-balboa-festival",
+                                "image": {
+                                    "src": "/european-balboa-festival.png",
+                                    "alt": "Logo of the European Balboa Festival"
+                                }
+                            }
+                        },
+                        "notes": {
+                            "text": "You want to sponsor MTL BAL JAM? Reach out to us at ",
+                            "link": {
+                                "text": "mtlbaljam@campusbalboa.org",
+                                "link": "mailto:mtlbaljam@campusbalboa.org"
+                            }
+                        }
+                    }
+                },
                 "navigation": {
                     "title": "Menu",
                     "home": {
@@ -190,73 +251,77 @@
                     "activities": {
                         "text": "Activities",
                         "href": "/en/events/2024/mtl-bal-jam/activities"
+                    },
+                    "competitions": {
+                        "text": "Competitions",
+                        "href": "/en/events/2024/mtl-bal-jam/competitions"
                     }
                 }
             }
-        }
-    },
-    "Resources": {
-        "dj": {
-            "bpm": {
-                "title": "Tempo",
-                "range": "{min} to {max} BPM",
-                "description": "It is important to note that theses guidelines are entirely subjective. A great DJ will be able to determine the best choice of tempo depending on the situation, and dancers present. Variety and sense of timing is what makes an exceptional set: a set that only stays within the “sweet spot” will be boring, playing slow songs too often might kill the energy of the room, and playing too many fast songs might tire out the dancers. It is impossible to please everybody, so it is imperative that the DJ reads the room and uses their judgement.",
-                "slowBal": {
-                    "title": "Slow balboa",
-                    "description": "Slow balboa can be danced to very slow music, but dancers tend to be most comfortable around 80 BPM. Therefore, it is recommended to aim for the middle of this range rather than the extremes unless there is a lot of advanced dancers or you are playing more than one slow song in a row."
-                },
-                "awkwardRange": {
-                    "title": "Awkward area",
-                    "description": "This range is considered difficult for balboa dancers since it is slightly too fast for slow balboa, and too slow for conventional balboa. It is therefore highly encouraged to avoid this range in most cases."
-                },
-                "beginnerClass": {
-                    "title": "Classes",
-                    "description": "In a classroom context, it is sometimes desirable to play a bit slower to give the learners a chance to assimilate concepts."
-                },
-                "bulk": {
-                    "title": "Bulk of music",
-                    "description": "Around 80% of the music played at a social dance should be in this range. After an intro class, it is recommended to start lower, and gradually work your way up. Generally, aiming for the middle of the range rather than the extremes, and not playing too many songs in a row of similar BPM will yield best results."
-                },
-                "comfortableArea": {
-                    "title": "Comfortable area",
-                    "description": "This range is generally appropriate for most level of dancers. When there are dancers of all levels in the room, the majority will be able to dance comfortably in this range."
-                },
-                "sweetSpot": {
-                    "title": "Sweet spot",
-                    "description": "This small range works well for all types of balboa (pure and swing). Most advanced and intermediate dancers will be comfortable social dancing to this range. It is ideal to bring people back to the dance floor after a song that did not work too well (either too slow, fast, or other)."
-                },
-                "competitionRange": {
-                    "title": "Competition",
-                    "description": "Internationally, tempos for finals of “open” or advanced competitions will be within this range. Sometimes all-skates will be faster and warm-ups slower."
-                },
-                "fastTempo": {
-                    "title": "Fast tempo",
-                    "description": "It is important to note that the more the tempo goes past 220 BPM, the less people will be comfortable dancing to the song. However, the challenge of dancing to extremely fast songs is one of the many pleasures of dancing balboa. It is not recommended to play too many extreme songs in a single social dance."
-                },
-                "distribution": {
-                    "title": "Distribution",
-                    "description": "The BPM distribution of a DJ set depends on several factors. In particular, the average level of the dancers present, the quality of the dance floor, the size of the dance floor, the energy level of the room, the timing (start of the evening, end of the evening, start of the set, end of the set), and much more. It is generally recommended to gradually increase and decrease the speed rather than going from one extreme to the other. A fast song played directly after a slow song will sound much faster in contrast, and vice versa. On the other hand, a dance floor that has little energy can benefit from a faster song. Similarly, a dance floor that's too tired for fast songs might regain some vigor after a slow song. This is why it is important to adapt to the people in the room, and every DJ will do this differently.",
-                    "beginner": "Beginner",
-                    "intermediate": "intermediate",
-                    "advanced": "Advanced",
-                    "all": "All",
-                    "y": "Song #"
+        },
+        "Resources": {
+            "dj": {
+                "bpm": {
+                    "title": "Tempo",
+                    "range": "{min} to {max} BPM",
+                    "description": "It is important to note that theses guidelines are entirely subjective. A great DJ will be able to determine the best choice of tempo depending on the situation, and dancers present. Variety and sense of timing is what makes an exceptional set: a set that only stays within the “sweet spot” will be boring, playing slow songs too often might kill the energy of the room, and playing too many fast songs might tire out the dancers. It is impossible to please everybody, so it is imperative that the DJ reads the room and uses their judgement.",
+                    "slowBal": {
+                        "title": "Slow balboa",
+                        "description": "Slow balboa can be danced to very slow music, but dancers tend to be most comfortable around 80 BPM. Therefore, it is recommended to aim for the middle of this range rather than the extremes unless there is a lot of advanced dancers or you are playing more than one slow song in a row."
+                    },
+                    "awkwardRange": {
+                        "title": "Awkward area",
+                        "description": "This range is considered difficult for balboa dancers since it is slightly too fast for slow balboa, and too slow for conventional balboa. It is therefore highly encouraged to avoid this range in most cases."
+                    },
+                    "beginnerClass": {
+                        "title": "Classes",
+                        "description": "In a classroom context, it is sometimes desirable to play a bit slower to give the learners a chance to assimilate concepts."
+                    },
+                    "bulk": {
+                        "title": "Bulk of music",
+                        "description": "Around 80% of the music played at a social dance should be in this range. After an intro class, it is recommended to start lower, and gradually work your way up. Generally, aiming for the middle of the range rather than the extremes, and not playing too many songs in a row of similar BPM will yield best results."
+                    },
+                    "comfortableArea": {
+                        "title": "Comfortable area",
+                        "description": "This range is generally appropriate for most level of dancers. When there are dancers of all levels in the room, the majority will be able to dance comfortably in this range."
+                    },
+                    "sweetSpot": {
+                        "title": "Sweet spot",
+                        "description": "This small range works well for all types of balboa (pure and swing). Most advanced and intermediate dancers will be comfortable social dancing to this range. It is ideal to bring people back to the dance floor after a song that did not work too well (either too slow, fast, or other)."
+                    },
+                    "competitionRange": {
+                        "title": "Competition",
+                        "description": "Internationally, tempos for finals of “open” or advanced competitions will be within this range. Sometimes all-skates will be faster and warm-ups slower."
+                    },
+                    "fastTempo": {
+                        "title": "Fast tempo",
+                        "description": "It is important to note that the more the tempo goes past 220 BPM, the less people will be comfortable dancing to the song. However, the challenge of dancing to extremely fast songs is one of the many pleasures of dancing balboa. It is not recommended to play too many extreme songs in a single social dance."
+                    },
+                    "distribution": {
+                        "title": "Distribution",
+                        "description": "The BPM distribution of a DJ set depends on several factors. In particular, the average level of the dancers present, the quality of the dance floor, the size of the dance floor, the energy level of the room, the timing (start of the evening, end of the evening, start of the set, end of the set), and much more. It is generally recommended to gradually increase and decrease the speed rather than going from one extreme to the other. A fast song played directly after a slow song will sound much faster in contrast, and vice versa. On the other hand, a dance floor that has little energy can benefit from a faster song. Similarly, a dance floor that's too tired for fast songs might regain some vigor after a slow song. This is why it is important to adapt to the people in the room, and every DJ will do this differently.",
+                        "beginner": "Beginner",
+                        "intermediate": "intermediate",
+                        "advanced": "Advanced",
+                        "all": "All",
+                        "y": "Song #"
+                    }
                 }
             }
-        }
-    },
-    "Components": {
-        "paypal": {
-            "donate": "Donate",
-            "logoAlt": "PayPal logo"
         },
-        "embla": {
-            "changeSlide": "Jump to slide {slideNum}",
-            "nextSlide": "Next slide",
-            "prevSlide": "Previous slide"
-        },
-        "gcal": {
-            "iframeTitle": "Balboa in Montreal Google Calendar"
+        "Components": {
+            "paypal": {
+                "donate": "Donate",
+                "logoAlt": "PayPal logo"
+            },
+            "embla": {
+                "changeSlide": "Jump to slide {slideNum}",
+                "nextSlide": "Next slide",
+                "prevSlide": "Previous slide"
+            },
+            "gcal": {
+                "iframeTitle": "Balboa in Montreal Google Calendar"
+            }
         }
     }
 }

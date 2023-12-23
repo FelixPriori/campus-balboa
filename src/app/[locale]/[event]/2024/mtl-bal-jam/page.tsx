@@ -70,7 +70,7 @@ export default function Event() {
     <>
       <Navigation />
       <MobileNavigation
-        pages={['home', 'music', 'instructors', 'activities']}
+        pages={['home', 'music', 'venue', 'instructors', 'activities', 'competitions']}
         base={base}
         switcherOptions={{
           frUrl: '/evenements/2024/mtl-bal-jam',

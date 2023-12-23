@@ -1,0 +1,108 @@
+.sponsorsSection {
+    padding: 50px;
+    background-color: var(--mbj-color-teal);
+
+    .title {
+        color: var(--mbj-color-white);
+        font-size: 4rem;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .content {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+
+    .notes {
+        margin: 2rem 0;
+        text-align: center;
+
+        p,
+        a {
+            color: var(--mbj-color-white);
+        }
+
+        a {
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 2px;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.sponsor {
+    position: relative;
+    background-color: var(--mbj-color-salmon);
+    border-radius: 8px;
+    width: 300px;
+    padding: 20px;
+    box-shadow: 0 3px 5px rgba(38, 70, 83, 0.5);
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+
+    &:hover {
+        box-shadow: 0 5px 8px rgba(38, 70, 83, 0.5);
+        transform: translateY(-2px);
+    }
+
+    .linesCircle {
+        position: absolute;
+        top: -15px;
+        right: -15px;
+
+        svg {
+            color: var(--mbj-color-white);
+            height: 50px;
+            width: 50px;
+        }
+    }
+
+    .imgWrapper {
+        text-align: center;
+        margin-bottom: 1rem;
+
+        img {
+            object-fit: contain;
+            border-radius: 50%;
+            box-shadow: 0 3px 5px rgba(38, 70, 83, 0.5);
+        }
+    }
+
+    .details {
+        .name {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            color: var(--mbj-color-white);
+        }
+
+        .djName {
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: var(--mbj-color-white);
+        }
+
+        .pronouns {
+            text-align: center;
+            margin-bottom: 0.5rem;
+            color: var(--mbj-color-white);
+        }
+
+        .biography {
+            text-align: justify;
+            font-size: 18px;
+            line-height: 150%;
+            color: var(--mbj-color-white);
+        }
+    }
+
+}

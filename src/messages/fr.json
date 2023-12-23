@@ -169,6 +169,67 @@
                         "description": "Découvrez notre belle ville en visitant la petite Italie, le quartier du MTL BAL JAM. Vous allez pouvoir en savoir plus sur notre salle, la Casa Italia lors de ce tour guidé de la petite Italie ! Ne vous inquiétez pas, il n'y aura pas de conflits avec l'horaire des cours."
                     }
                 },
+                "competitionsPage": {
+                    "title": "MTL BAL JAM",
+                    "pageTitle": "Compétitions",
+                    "mixAndMatchSection": {
+                        "competitionNote": "Le MTL BAL JAM veut prioriser la danse sociale. Pour ce faire, nous ne proposons qu'une seule compétition cette année et nous allons nous efforcer pour qu’elle ne prenne pas plus de temps que nécessaire de la danse sociale. Cela dit, nous planifions plusieurs prix et surprises pour les compétiteurs.ices et nous restons certains que nos compétitions demeureront agréables pour tout le monde, tant pour les participants.es que pour le public !",
+                        "title": "Mix & Match Ouvert",
+                        "description": "Dans cette compétition sociale, vous vous inscrivez seuls et dansez avec un.e partenaire au hasard. Chaque chanson, il vous changez de partenaire et vous serez jugez séparément. Le but est de danser avec des danseurs.euses avec qui vous n’avez jamais dansé ! Les finales seront en duo spotlight pour donner à tous.tes les finalistes une chance de briller et vous aurez une petite surprise pour la chanson finale à sauce du MTL BAL JAM !"
+                    },
+                    "musicSection": {
+                        "title": "Musique",
+                        "description": "Notre équipe de DJs prendra le temps de choisir soigneusement toutes les chansons en suivant les standards de compétitions de balboa internationales. Si la compétition compote plus d’une vague en prélim, nous nous assurerons que les chansons se ressemblent afin que les participants.es aient une chance égale."
+                    },
+                    "judgesSection": {
+                        "title": "Juges",
+                        "judges": {
+                            "yuliasasha": {
+                                "name": "Yulia et Sasha",
+                                "image": {
+                                    "src": "/yulia-sasha.png",
+                                    "alt": "Photo de Yulia et Sasha"
+                                }
+                            }
+                        }
+                    },
+                    "sponsorsSection": {
+                        "title": "Partenaires",
+                        "sponsors": {
+                            "balMoment": {
+                                "name": "Bal Moment Québec",
+                                "link": "https://www.facebook.com/bal.moment/",
+                                "image": {
+                                    "src": "/bal-moment-small.png",
+                                    "alt": "Logo du Bal Moment"
+                                }
+                            },
+                            "toronto": {
+                                "name": "Toronto Bal Weekend",
+                                "link": "https://www.torontobalweekend.com/",
+                                "image": {
+                                    "src": "/toronto-bal-weekend.png",
+                                    "alt": "Logo du Toronto Bal Weekend"
+                                }
+                            },
+                            "ebf": {
+                                "name": "European Balboa Festival",
+                                "link": "https://sites.google.com/view/europeanbalboafestival/european-balboa-festival",
+                                "image": {
+                                    "src": "/european-balboa-festival.png",
+                                    "alt": "Logo de l'European Balboa Festival"
+                                }
+                            }
+                        },
+                        "notes": {
+                            "text": "Vous voulez sponsoriser le MTL BAL JAM? Contactez-nous au ",
+                            "link": {
+                                "text": "mtlbaljam@campusbalboa.org",
+                                "link": "mailto:mtlbaljam@campusbalboa.org"
+                            }
+                        }
+                    }
+                },
                 "navigation": {
                     "title": "Menu",
                     "home": {
@@ -190,6 +251,10 @@
                     "activities": {
                         "text": "Activités",
                         "href": "/fr/evenements/2024/mtl-bal-jam/activities"
+                    },
+                    "competitions": {
+                        "text": "Compétitions",
+                        "href": "/fr/evenements/2024/mtl-bal-jam/competitions"
                     }
                 }
             }
