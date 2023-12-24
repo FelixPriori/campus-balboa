@@ -78,6 +78,115 @@
                         }
                     }
                 },
+                "aboutPage": {
+                    "title": "MTL BAL JAM",
+                    "pageTitle": "À propos",
+                    "descriptionSection": {
+                        "title": "À propos de l'événement",
+                        "description": "Le MTL BAL JAM est un événement de balboa montréalais qui aura lieu pour la première fois en juin 2024. C’est un événement organisé par une équipe de danseurs.euses de balboa local sous Campus Balboa, un organisme à but non lucratif fondé en 2023.<br></br>Le but de l’événement est d’amener des danseurs.euses de balboa de partout dans le monde à Montréal afin de mettre en valeur notre scène locale.<br></br>Pour y arriver, le MTL BAL JAM invitera des instructeurs de balboa inspirants et engagera les meilleurs groupes de musique swing à Montréal.<br></br>Le weekend aura un bon équilibre entre de la danse sociale, des cours de balboa ainsi que des opportunités de découvrir la ville."
+                    },
+                    "staffSection": {
+                        "title": "Notre équipe",
+                        "staff": {
+                            "bree": {
+                                "name": "Bree",
+                                "pronouns": "Elle/Accords féminins",
+                                "image": {
+                                    "src": "/bree.jpg",
+                                    "alt": "Photo de Bree"
+                                }
+                            },
+                            "cara": {
+                                "name": "Cara",
+                                "pronouns": "Elle/Accords féminins",
+                                "image": {
+                                    "src": "/cara.jpg",
+                                    "alt": "Photo de Cara"
+                                }
+                            },
+                            "felix": {
+                                "name": "Felix",
+                                "pronouns": "Il/Accords masculins",
+                                "image": {
+                                    "src": "/felix.jpg",
+                                    "alt": "Photo of Felix"
+                                }
+                            },
+                            "gab": {
+                                "name": "Gabrielle",
+                                "pronouns": "Elle/Accords féminins",
+                                "image": {
+                                    "src": "/gabrielle.png",
+                                    "alt": "Photo de Gabrielle"
+                                }
+                            },
+                            "katya": {
+                                "name": "Katya",
+                                "pronouns": "Elle/Accords féminins",
+                                "image": {
+                                    "src": "/katya.jpg",
+                                    "alt": "Photo de Katya"
+                                }
+                            },
+                            "kim": {
+                                "name": "Kim",
+                                "pronouns": "Elle/Accords féminins",
+                                "image": {
+                                    "src": "/kim.jpg",
+                                    "alt": "Photo de Kim"
+                                }
+                            },
+                            "melanie": {
+                                "name": "Melanie",
+                                "pronouns": "Elle/Accords féminins",
+                                "image": {
+                                    "src": "/melanie.jpg",
+                                    "alt": "Photo de Mélanie"
+                                }
+                            },
+                            "sara": {
+                                "name": "Sara",
+                                "pronouns": "Elle/Accords féminins",
+                                "image": {
+                                    "src": "/sara.jpg",
+                                    "alt": "Photo de Sara"
+                                }
+                            },
+                            "sihem": {
+                                "name": "Sihem",
+                                "pronouns": "Elle/Accords féminins",
+                                "image": {
+                                    "src": "/sihem.jpg",
+                                    "alt": "Photo de Sihem"
+                                }
+                            },
+                            "sophie": {
+                                "name": "Sophie",
+                                "pronouns": "Elle/Accords féminins",
+                                "image": {
+                                    "src": "/sophie.jpg",
+                                    "alt": "Photo de Sophie"
+                                }
+                            },
+                            "tania": {
+                                "name": "Tania",
+                                "pronouns": "Elle/Accords féminins",
+                                "image": {
+                                    "src": "/tania.jpg",
+                                    "alt": "Photo de Tania"
+                                }
+                            },
+                            "zack": {
+                                "name": "Zack",
+                                "pronouns": "Il/Accords masculins",
+                                "image": {
+                                    "src": "/zack.jpg",
+                                    "alt": "Photo de Zack"
+                                }
+                            }
+                        }
+                    }
+                },
                 "musicPage": {
                     "title": "MTL BAL JAM",
                     "pageTitle": "Musique",
@@ -235,6 +344,10 @@
                     "home": {
                         "text": "Accueil",
                         "href": "/fr/evenements/2024/mtl-bal-jam"
+                    },
+                    "about": {
+                        "text": "À propos",
+                        "href": "/fr/evenements/2024/mtl-bal-jam/about"
                     },
                     "music": {
                         "text": "Musique",

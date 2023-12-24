@@ -4,29 +4,37 @@ import styles from './styles.module.scss'
 import FeatureCard from '../../../components/FeatureCard'
 
 const keys = [
+    'bree',
+    'cara',
     'felix',
-    'gab'
+    'gab',
+    'katya',
+    'kim',
+    'melanie',
+    'sara',
+    'sihem',
+    'sophie',
+    'tania',
+    'zack'
 ] as const
 
-export default function DJs() {
-    const t = useTranslations('Events.2024.MtlBalJam.musicPage.djMusic')
+export default function StaffSection() {
+    const t = useTranslations('Events.2024.MtlBalJam.aboutPage.staffSection')
 
     return (
-        <section className={styles.djSection}>
+        <section className={styles.staffSection}>
             <h2 className={styles.title}>{t('title')}</h2>
             <div className={styles.content}>
                 {keys.map((key) => (
                     <FeatureCard
                         key={key}
-                        name={t(`djs.${key}.name`)}
+                        name={t(`staff.${key}.name`)}
                         image={{
-                            src: t(`djs.${key}.image.src`),
-                            alt: t(`djs.${key}.image.alt`)
+                            src: t(`staff.${key}.image.src`),
+                            alt: t(`staff.${key}.image.alt`)
                         }}
                     >
-                        <p className={styles.djName}>{t(`djs.${key}.djName`)}</p>
-                        <p className={styles.pronouns}>{t(`djs.${key}.pronouns`)}</p>
-                        <p className={styles.biography}>{t(`djs.${key}.biography`)}</p>
+                        <p className={styles.pronouns}>{t(`staff.${key}.pronouns`)}</p>
                     </FeatureCard>
                 ))}
             </div>

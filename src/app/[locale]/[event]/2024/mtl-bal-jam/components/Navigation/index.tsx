@@ -22,7 +22,7 @@ const getSlugFromPathname = (pathname: string) => {
 
 const base = 'Events.2024.MtlBalJam.navigation'
 
-const pages = ['home', 'music', 'venue', 'instructors', 'activities', 'competitions']
+const pages = ['home', 'about', 'music', 'venue', 'instructors', 'activities', 'competitions']
 
 const styling = 'mbjStyling'
 
