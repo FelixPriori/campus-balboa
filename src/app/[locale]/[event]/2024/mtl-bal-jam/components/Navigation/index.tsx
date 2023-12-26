@@ -6,19 +6,7 @@ import NavLinks from '../../components/NavLinks';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import MobileNavigation from '@/app/[locale]/components/MobileNavigation';
 import styles from './styles.module.scss';
-
-
-const getSlugFromPathname = (pathname: string) => {
-    const pathnameArray = pathname.split('/')
-    const slug = pathnameArray[pathnameArray.length - 1]
-
-    switch (slug) {
-        case 'mtl-bal-jam':
-            return '/'
-        default:
-            return `/${slug}`
-    }
-}
+import { getSlugFromPathname } from '@/app/util/navigationUtils';
 
 const base = 'Events.2024.MtlBalJam.navigation'
 

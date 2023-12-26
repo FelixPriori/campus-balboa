@@ -21,12 +21,20 @@
                     "success": "You are signed up for the newsletter.",
                     "error": "Something went wrong. Try again later."
                 },
-                "homePage": {
-                    "title": "MTL BAL JAM",
-                    "TBA": "More details to be announced soon!",
-                    "saveTheDate": "Save the date!",
-                    "googleCal": "Save to Google Calendar",
+                "header": {
                     "date": "June 21-22-23, 2024",
+                    "title": "MTL BAL JAM",
+                    "googleCal": "Save to Google Calendar",
+                    "pageTitle": {
+                        "music": "Music",
+                        "about": "About",
+                        "venue": "Venue",
+                        "instructors": "Instructors",
+                        "activities": "Activities",
+                        "competitions": "Competitions"
+                    }
+                },
+                "homePage": {
                     "musicSection": {
                         "title": "Music",
                         "bandName": "Michaël Srey Legacy Band",
@@ -54,8 +62,6 @@
                     }
                 },
                 "aboutPage": {
-                    "title": "MTL BAL JAM",
-                    "pageTitle": "About",
                     "descriptionSection": {
                         "title": "About the event",
                         "description": "MTL BAL JAM is a Montreal based balboa event which will happen for the first time in June of 2024. It is organized by a local team of balboa dancers under the banner of Campus Balboa, a nonprofit formed in 2023.<br></br>The goal of the event is to bring balboa dancers from all around the world to Montreal and showcase our local scene at its best.<br></br>In order to achieve this, teachers MTL BAL JAM will hire sought after instructors, and get some of the top swing bands in the city.<br></br>The weekend aims to have a healthy balance between classes, social dancing, and exploration of the city."
@@ -97,7 +103,7 @@
                             },
                             "katya": {
                                 "name": "Katya",
-                                "pronouns": "She/Her",
+                                "pronouns": "She/They",
                                 "image": {
                                     "src": "/katya.jpg",
                                     "alt": "Photo of Katya"
@@ -188,8 +194,6 @@
                     "arch": "Drawing of a salmon arch on blue background"
                 },
                 "musicPage": {
-                    "title": "MTL BAL JAM",
-                    "pageTitle": "Music",
                     "liveMusic": {
                         "title": "Live music",
                         "bandName": "Michaël Srey Legacy Band",
@@ -224,8 +228,6 @@
                     }
                 },
                 "instructorsPage": {
-                    "title": "MTL BAL JAM",
-                    "pageTitle": "Instructors",
                     "mainInstructors": {
                         "title": "Instructors",
                         "instructorsNames": "Yulia & Sasha",
@@ -235,8 +237,6 @@
                     }
                 },
                 "venuePage": {
-                    "title": "MTL BAL JAM",
-                    "pageTitle": "Venues",
                     "venue": {
                         "title": "Dances & Workshops",
                         "position": {
@@ -267,8 +267,6 @@
                     }
                 },
                 "activitiesPage": {
-                    "title": "MTL BAL JAM",
-                    "pageTitle": "Activities",
                     "tour": {
                         "title": "Little Italy Guided Tour",
                         "price": "Price: $20.00 CAD",
@@ -279,8 +277,6 @@
                     }
                 },
                 "competitionsPage": {
-                    "title": "MTL BAL JAM",
-                    "pageTitle": "Competitions",
                     "mixAndMatchSection": {
                         "competitionNote": "MTL BAL JAM wants to prioritize social dancing! As such, we will only have one competition this year, and we will make sure that it runs smoothly and that it does not interfere with the social dance more than it has to. That being said, we have many prizes and surprises planned for competitors, and we can say with absolute confidence that our competitions will be a treat for everyone whether you are watching or participating!",
                         "title": "Open Mix & Match",

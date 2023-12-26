@@ -1,7 +1,7 @@
 import Favicon from '@/app/mtl-bal-jam-favicon.ico'
 import BigOG from '@/app/mtl-bal-jam-og-512.png'
 import Main from '@/layout/main';
-import { Header, Band, DJs, Footer } from './sections';
+import { Band, DJs } from './sections';
 
 type Props = {
   params: { locale: string }
@@ -61,17 +61,11 @@ export async function generateMetadata({ params }: Props) {
   }
 }
 
-const base = 'Events.2024.MtlBalJam.navigation'
-
 export default function MbjMusic() {
   return (
-    <>
-      <Main styles={{ borderRadius: '0.625rem' }}>
-        <Header />
-        <Band />
-        <DJs />
-      </Main>
-      <Footer />
-    </>
+    <Main styles={{ borderRadius: '0.625rem' }}>
+      <Band />
+      <DJs />
+    </Main>
   )
 }

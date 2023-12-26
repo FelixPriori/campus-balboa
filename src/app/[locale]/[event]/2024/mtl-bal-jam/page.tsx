@@ -1,6 +1,6 @@
 import Favicon from '@/app/mtl-bal-jam-favicon.ico'
 import BigOG from '@/app/mtl-bal-jam-og-512.png'
-import { Music, Footer, Header, Instructors, Venue } from './sections';
+import { Music, Instructors, Venue } from './sections';
 import Main from '@/layout/main';
 
 type Props = {
@@ -64,11 +64,9 @@ export async function generateMetadata({ params }: Props) {
 export default function Event() {
   return (
     <Main styles={{ borderRadius: '0.625rem' }}>
-      <Header />
       <Instructors />
       <Venue />
       <Music />
-      <Footer />
     </Main>
   )
 }

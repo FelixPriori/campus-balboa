@@ -1,7 +1,7 @@
 import Favicon from '@/app/mtl-bal-jam-favicon.ico'
 import BigOG from '@/app/mtl-bal-jam-og-512.png'
 import Main from '@/layout/main';
-import { Header, Description, Staff, Footer } from './sections';
+import { Description, Staff } from './sections';
 
 type Props = {
   params: { locale: string }
@@ -61,17 +61,11 @@ export async function generateMetadata({ params }: Props) {
   }
 }
 
-const base = 'Events.2024.MtlBalJam.navigation'
-
 export default function MbjAbout() {
   return (
-    <>
-      <Main styles={{ borderRadius: '0.625rem' }}>
-        <Header />
-        <Description />
-        <Staff />
-      </Main>
-      <Footer />
-    </>
+    <Main styles={{ borderRadius: '0.625rem' }}>
+      <Description />
+      <Staff />
+    </Main>
   )
 }

@@ -1,34 +1,13 @@
 .footer {
     position: relative;
     height: 5rem;
-    background-color: var(--mbj-color-teal);
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    background-color: var(--mbj-color-salmon);
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
 
-    .left {
-        grid-column: 1 / 9;
-        background-color: var(--mbj-color-salmon);
-    }
-
-    .right {
-        grid-column: 9 / -1;
-        background-color: var(--mbj-color-teal);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        p {
-            color: var(--mbj-color-white);
-        }
-    }
-
-    @media only screen and (max-width: 992px) {
-        .left {
-            display: none;
-        }
-        .right{ 
-            grid-column: 1 / -1;
-            justify-content: flex-end;
-            padding: 20px;
-        }
+    p {
+        color: var(--mbj-color-white);
     }
 }

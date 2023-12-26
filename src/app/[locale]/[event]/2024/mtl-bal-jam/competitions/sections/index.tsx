@@ -1,6 +1,4 @@
-export { default as Header } from './Header'
 export { default as MixAndMatch } from './MixAndMatch'
 export { default as Music } from './Music'
 export { default as Sponsors } from './Sponsors'
 export { default as Judges } from './Judges'
-export { default as Footer } from './Footer'

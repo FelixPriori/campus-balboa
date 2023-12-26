@@ -8,14 +8,11 @@ export default function Footer() {
 
     return (
         <footer className={styles.footer}>
-            <div className={styles.left}></div>
-            <div className={styles.right}>
-                <p>{t('copyright')}</p>
-            </div>
-            <IconBox 
-                src='/mbj-knife-white.png' 
+            <p>{t('copyright')}</p>
+            <IconBox
+                src='/mbj-knife-white.png'
                 alt={t('iconAlts.knife')}
-                width={50} 
+                width={50}
                 height={50}
                 position='centerLeft'
             />
