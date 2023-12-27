@@ -166,6 +166,9 @@
                                 }
                             }
                         }
+                    },
+                    "contactSection": {
+                        "title": "Contact us"
                     }
                 },
                 "socials": {
@@ -184,6 +187,17 @@
                         "href": "mailto:info@campusbalboa.org",
                         "logo": "/email-white.png"
                     }
+                },
+                "contact": {
+                    "fullName": "Full name",
+                    "fullNamePlaceholder": "Full name",
+                    "email": "Email",
+                    "emailExample": "your@email.com",
+                    "message": "Message",
+                    "messagePlaceholder": "Your message...",
+                    "send": "Send",
+                    "success": "Message sent successfully",
+                    "error": "Something went wrong."
                 },
                 "copyright": "©2023 Campus Balboa",
                 "iconAlts": {

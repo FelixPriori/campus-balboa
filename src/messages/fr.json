@@ -38,6 +38,17 @@
                         "logo": "/email-white.png"
                     }
                 },
+                "contact": {
+                    "fullName": "Nom complet",
+                    "fullNamePlaceholder": "Nom complet",
+                    "email": "Courriel",
+                    "emailExample": "votre@courriel.com",
+                    "message": "Méssage",
+                    "messagePlaceholder": "Your méssage...",
+                    "send": "Envoyer",
+                    "success": "Méssage envoyé avec succès",
+                    "error": "Une erreur s'est produite, veuillez réessayer plus tard."
+                },
                 "copyright": "© Campus Balboa, 2023",
                 "iconAlts": {
                     "loaf": "Icone d'une miche de pain",
@@ -191,6 +202,9 @@
                                 }
                             }
                         }
+                    },
+                    "contactSection": {
+                        "title": "Contactez-nous"
                     }
                 },
                 "musicPage": {

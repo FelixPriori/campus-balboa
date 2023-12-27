@@ -1,10 +1,17 @@
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
     font-family: var(--font-caveat-brush);
     color: var(--mbj-color-black);
     font-weight: normal;
 }
 
-p, a, button, label {
+p,
+a,
+button,
+label {
     font-family: var(--font-josephin-sans);
     color: var(--mbj-color-black);
 }
@@ -12,6 +19,11 @@ p, a, button, label {
 
 fieldset {
     border: none;
+}
+
+input,
+textarea {
+    border-width: 2px;
 }
 
 .mbj-toast-success {
@@ -44,7 +56,7 @@ fieldset {
         box-shadow: none;
         margin: 0;
     }
-    
+
     .mbj-form {
         padding: 12px;
         width: 100%;
@@ -60,15 +72,15 @@ fieldset {
             gap: 8px;
             margin: 12px 0;
         }
-    
+
         .mbj-label {
             margin-bottom: 8px;
         }
-        
+
         .mbj-inline-label {
             text-align: left;
         }
-    
+
         .mbj-field {
             padding: 8px 12px;
             border-radius: 4px;
@@ -80,21 +92,29 @@ fieldset {
             }
         }
 
-        .mbj-button {
-            padding: 8px 12px;
-            background-color: transparent;
-            border: 2px solid var(--mbj-color-black);
-            border-radius: 40px;
-            cursor: pointer;
+        .mbj-button-container {
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
 
-            &:hover {
-                background-color: var(--mbj-color-salmon);
-                border-color: var(--mbj-color-salmon);
+            .mbj-button {
+                margin-left: auto;
+                padding: 0.5rem 2rem;
+                background-color: var(--mbj-color-black);
+                border: 1px solid var(--mbj-color-black);
                 color: var(--mbj-color-white);
-            }
+                border-radius: 4px;
+                transition: all 200ms ease-in-out;
+                cursor: pointer;
 
-            @media only screen and (max-width: 576px) {
-                width: 100%;
+                &:hover {
+                    transform: translateY(-2px);
+                    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.35);
+                }
+
+                @media only screen and (max-width: 576px) {
+                    width: 100%;
+                }
             }
         }
     }

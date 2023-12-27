@@ -1,7 +1,7 @@
 "use client"
 import { addMember } from '@/app/api/mailchimp/_addMember';
 import { useLocale, useTranslations } from "next-intl";
-import {toast} from 'react-toastify';
+import { toast } from 'react-toastify';
 import { useState } from 'react';
 import styles from './styles.module.scss'
 import CustomCheckbox from '@/components/CustomCheckbox';
@@ -13,7 +13,7 @@ export default function MailchimpForm() {
 
     const handleSubmit = async (data: FormData) => {
         try {
-            await addMember({data, language: locale, tags: ['MTL BAL JAM']})
+            await addMember({ data, language: locale, tags: ['MTL BAL JAM'] })
             toast.success(t('success'), {
                 className: 'mbj-toast-success'
             })
@@ -38,13 +38,15 @@ export default function MailchimpForm() {
                 <input className="mbj-field" required id="subscriberEmail" name="email" type="email" placeholder={t('emailExample')} />
             </fieldset>
             <fieldset className='mbj-inline-fieldset'>
-                <CustomCheckbox 
+                <CustomCheckbox
                     name="permission"
                     id="permission"
                     label={t('permission')}
                 />
             </fieldset>
-            <button className="mbj-button" type="submit">{t('subscribe')}</button>
+            <div className='mbj-button-container'>
+                <button className="mbj-button" type="submit">{t('subscribe')}</button>
+            </div>
         </form>
     ) : (
         <p className={styles.success}>{t('success')}</p>

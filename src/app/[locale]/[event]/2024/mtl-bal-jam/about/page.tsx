@@ -1,7 +1,7 @@
 import Favicon from '@/app/mtl-bal-jam-favicon.ico'
 import BigOG from '@/app/mtl-bal-jam-og-512.png'
 import Main from '@/layout/main';
-import { Description, Staff } from './sections';
+import { Contact, Description, Staff } from './sections';
 
 type Props = {
   params: { locale: string }
@@ -66,6 +66,7 @@ export default function MbjAbout() {
     <Main styles={{ borderRadius: '0.625rem' }}>
       <Description />
       <Staff />
+      <Contact />
     </Main>
   )
 }

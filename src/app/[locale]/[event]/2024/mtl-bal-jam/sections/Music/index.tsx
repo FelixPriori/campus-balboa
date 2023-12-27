@@ -4,15 +4,10 @@ import styles from './styles.module.scss'
 import Image from 'next/image'
 import IconBox from '../../components/IconBox'
 import Link from 'next/link'
+import Socials from '../../components/Socials'
 
 export default function MusicSection() {
     const t = useTranslations('Events.2024.MtlBalJam')
-
-    const keys = [
-        'facebook',
-        'instagram',
-        'email',
-    ] as const
 
     return (
         <section className={styles.bandSection}>
@@ -29,23 +24,14 @@ export default function MusicSection() {
             </div>
 
             <div className={styles.socialsWrapper}>
-                <IconBox 
-                    src='/mbj-toaster-black.png' 
+                <IconBox
+                    src='/mbj-toaster-black.png'
                     alt={t('iconAlts.toaster')}
-                    width={50} 
+                    width={50}
                     height={50}
                     position='topRight'
                 />
-                <ul className={styles.socials}>
-                    {keys.map(key => 
-                        <li key={key}>
-                            <a href={t(`socials.${key}.href`)} target='_blank' rel="noreferrer">
-                                <span className="sr-only">{t(`socials.${key}.alt`)}</span>
-                                <Image src={t(`socials.${key}.logo`)} alt={t(`socials.${key}.alt`)} width={50} height={50} />
-                            </a>
-                        </li>
-                    )}
-                </ul>
+                <Socials />
             </div>
         </section>
     )
