@@ -47,6 +47,16 @@
                 display: block;
             }
 
+            .link {
+                text-decoration: underline;
+                text-underline-offset: 3px;
+                text-decoration-thickness: 2px;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+
             margin-bottom: 20px;
         }
 
