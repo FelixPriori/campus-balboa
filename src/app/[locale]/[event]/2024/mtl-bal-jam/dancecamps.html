@@ -9,6 +9,8 @@
 </head>
 
 <body id="bookingpage" class="form">
+
+
   <div id="wrapperdiv">
     <div id="BodyTitle">MTL BAL JAM 2024</div>
     <div id="Introduction">
@@ -378,47 +380,12 @@
           </div>
         </div>
 
-        <div id="row_i119619_LeadorFollow" class="fieldwrapper ">
-          <div class="itemdescriptioncell"><span title="">
-              <p>Lead or Follow | Guide ou interprète</p>
-            </span> </div>
-          <div class="inputcell">
-            <ul class="radioGroup" id="radioGroup_LeadorFollow">
-              <li><input type="radio" class="radioinput i119619_LeadorFollow" name="i119619_LeadorFollow"
-                  id="i119619_LeadorFollow_Follower" value="Follower" verify=".+"><label
-                  for="i119619_LeadorFollow_Follower" id="label_i119619_LeadorFollow_Follower">Follower |
-                  Interprète</label></li>
-              <li><input type="radio" class="radioinput i119619_LeadorFollow" name="i119619_LeadorFollow"
-                  id="i119619_LeadorFollow_Leader" value="Leader"><label for="i119619_LeadorFollow_Leader"
-                  id="label_i119619_LeadorFollow_Leader">Leader | Guide</label></li>
-            </ul><span class="pricesuffix"></span>
-          </div>
-        </div>
-
-        <div id="row_i119921_Allergies" class="fieldwrapper ">
-          <div class="itemdescriptioncell"><span
-              title="This information will be shown when the customer clicks on the title next to the input">
-              <p>I have allergies | J'ai des allergies</p>
-            </span> </div>
-          <div class="inputcell"><input class="checkboxinput" type="checkbox" name="i119921_Allergies"
-              id="i119921_Allergies" value="1"><span class="pricesuffix"></span></div>
-        </div>
-
-        <div id="row_i119922_AllergiesList" class="fieldwrapper editable">
-          <div class="itemdescriptioncell"><span
-              title="This information will be shown when the customer clicks on the title next to the input">
-              <p>&nbsp;List your allergies | Énumérez vos allergies</p>
-            </span> </div>
-          <div class="inputcell"><textarea name="i119922_AllergiesList" id="i119922_AllergiesList"></textarea><span
-              class="pricesuffix"></span></div>
-        </div>
-
       </div><!-- section -->
       <div id="s25151" class="sectionWrapper">
         <div class="sectionHeaderWrapper s25151">
           <div class="captioncell  sectionHeader " id="TicketTypeTypedebillet">Ticket Type | Type de billet</div>
         </div>
-        <div id="row_Levelrequirement" class="captionWrapper evenRow s25151">
+        <div id="row_Levelrequirement" class="captionWrapper oddRow s25151">
           <div class="captioncell  informationInput" id="info_Levelrequirement"><span
               title="This information will be shown when the customer clicks on the title next to the input">
               <div class="customdetails">
@@ -486,7 +453,7 @@
               class="pricesuffix"></span></div>
         </div>
 
-        <div id="row_Couponfeedback" class="captionWrapper evenRow s25151">
+        <div id="row_Couponfeedback" class="captionWrapper oddRow s25151" style="display: none;">
           <div class="captioncell  informationInput" id="info_Couponfeedback"><span
               title="This information will be shown when the customer clicks on the title next to the input">
               <div class="coupon-feedback">
@@ -497,14 +464,34 @@
             </span><span class="pricesuffix"></span></div>
         </div>
 
-        <div id="row_Fullpassdiscountinfo" class="captionWrapper oddRow s25151">
-          <div class="captioncell  informationInput" id="info_Fullpassdiscountinfo"><span
+        <div id="row_Fullpassdiscountfeedback" class="captionWrapper evenRow s25151" style="display: none;">
+          <div class="captioncell  informationInput" id="info_Fullpassdiscountfeedback"><span
               title="This information will be shown when the customer clicks on the title next to the input">
               <div class="coupon-feedback">
                 <p>The full pass price will be removed at checkout.</p>
                 <p>Le prix de la passe complète sera enlevé à la caisse</p>
               </div>
             </span><span class="pricesuffix"></span></div>
+        </div>
+
+        <div id="row_i119619_LeadorFollow" class="fieldwrapper ">
+          <div class="itemdescriptioncell"><span title="">
+              <p>Dance role | Role de danse</p>
+            </span> </div>
+          <div class="inputcell">
+            <ul class="radioGroup" id="radioGroup_LeadorFollow">
+              <li><input type="radio" class="radioinput i119619_LeadorFollow" name="i119619_LeadorFollow"
+                  id="i119619_LeadorFollow_Follower" value="Follower" verify=".+"><label
+                  for="i119619_LeadorFollow_Follower" id="label_i119619_LeadorFollow_Follower">Follower |
+                  Interprète</label></li>
+              <li><input type="radio" class="radioinput i119619_LeadorFollow" name="i119619_LeadorFollow"
+                  id="i119619_LeadorFollow_Leader" value="Leader"><label for="i119619_LeadorFollow_Leader"
+                  id="label_i119619_LeadorFollow_Leader">Leader | Guide</label></li>
+              <li><input type="radio" class="radioinput i119619_LeadorFollow" name="i119619_LeadorFollow"
+                  id="i119619_LeadorFollow_Ambi" value="Ambi"><label for="i119619_LeadorFollow_Ambi"
+                  id="label_i119619_LeadorFollow_Ambi">Both | Les deux</label></li>
+            </ul><span class="pricesuffix"></span>
+          </div>
         </div>
 
         <div id="row_p119620_TicketType" class="fieldwrapper ">
@@ -517,23 +504,15 @@
               <li><input type="radio" class="radioinput p119620_TicketType" name="p119620_TicketType"
                   id="p119620_TicketType_57369_FullPass" value="57369_Full Pass" verify=".+"><label
                   for="p119620_TicketType_57369_FullPass" id="label_p119620_TicketType_57369_FullPass">Full Pass | Passe
-                  complète ($175.00CAD)</label></li>
+                  complète ($185.00CAD)</label></li>
               <li><input type="radio" class="radioinput p119620_TicketType" name="p119620_TicketType"
                   id="p119620_TicketType_57533_FullPass" value="57533_Full Pass+"><label
                   for="p119620_TicketType_57533_FullPass" id="label_p119620_TicketType_57533_FullPass">Subsidized Full
-                  Pass | Passe complète subventionnée ($350.00CAD)</label></li>
-              <li><input type="radio" class="radioinput p119620_TicketType" name="p119620_TicketType"
-                  id="p119620_TicketType_57659_PureBalTrack" value="57659_Pure Bal Track"><label
-                  for="p119620_TicketType_57659_PureBalTrack" id="label_p119620_TicketType_57659_PureBalTrack">Pure Bal
-                  Track ($115.00CAD)</label></li>
-              <li><input type="radio" class="radioinput p119620_TicketType" name="p119620_TicketType"
-                  id="p119620_TicketType_57660_BalSwingTrack" value="57660_Bal Swing Track"><label
-                  for="p119620_TicketType_57660_BalSwingTrack" id="label_p119620_TicketType_57660_BalSwingTrack">Bal
-                  Swing Track ($115.00CAD)</label></li>
+                  Pass | Passe complète subventionnée ($370.00CAD)</label></li>
               <li><input type="radio" class="radioinput p119620_TicketType" name="p119620_TicketType"
                   id="p119620_TicketType_57665_PartyPass" value="57665_Party Pass"><label
                   for="p119620_TicketType_57665_PartyPass" id="label_p119620_TicketType_57665_PartyPass">Party Pass |
-                  Passe festive ($65.00CAD)</label></li>
+                  Passe festive ($95.00CAD)</label></li>
               <li><input type="radio" class="radioinput p119620_TicketType" name="p119620_TicketType"
                   id="p119620_TicketType_57370_PaypalTest" value="57370_Paypal Test"><label
                   for="p119620_TicketType_57370_PaypalTest" id="label_p119620_TicketType_57370_PaypalTest">Paypal Test
@@ -546,7 +525,7 @@
           </div>
         </div>
 
-        <div id="row_p120079_Masterclass" class="fieldwrapper ">
+        <div id="row_p120079_Masterclass" class="fieldwrapper " style="display: none;">
           <div class="itemdescriptioncell"><span
               title="This information will be shown when the customer clicks on the title next to the input">
               <p>&nbsp;Master class | Cours de maître</p>
@@ -555,7 +534,7 @@
               id="p120079_Masterclass" value="57664_1"><span class="pricesuffix"> ($35.00CAD)</span></div>
         </div>
 
-        <div id="row_Masterclassinfo" class="captionWrapper evenRow s25151">
+        <div id="row_Masterclassinfo" class="captionWrapper evenRow s25151" style="display: none;">
           <div class="captioncell  informationInput" id="info_Masterclassinfo"><span
               title="This information will be shown when the customer clicks on the title next to the input">
               <div class="customdetails">
@@ -671,7 +650,7 @@
           <div class="captioncell  informationInput" id="info_MMinfo"><span
               title="This information will be shown when the customer clicks on the title next to the input">
               <div class="customdetails">
-                <section class="accordion">
+                <div class="accordion">
                   <div class="tab"><input type="checkbox" name="accordion-5" id="cb5"> <label for="cb5"
                       class="tab__label">Mix &amp; Match Details | Détails du Mix &amp; Match</label>
                     <div class="tab__content">
@@ -683,7 +662,7 @@
                         nous vous designerons un.e partenaire au hasard.</p>
                     </div>
                   </div>
-                </section>
+                </div>
               </div>
             </span><span class="pricesuffix"></span></div>
         </div>
@@ -753,7 +732,7 @@
           <div class="captioncell  informationInput" id="info_bookletinfo"><span
               title="This information will be shown when the customer clicks on the title next to the input">
               <div class="customdetails">
-                <section class="accordion">
+                <div class="accordion">
                   <div class="tab"><input type="checkbox" name="accordion-2" id="cb2"> <label for="cb2"
                       class="tab__label">Booklet details | Détails du livret</label>
                     <div class="tab__content">
@@ -766,7 +745,7 @@
                         disponible.</p>
                     </div>
                   </div>
-                </section>
+                </div>
               </div>
             </span><span class="pricesuffix"></span></div>
         </div>
@@ -784,7 +763,7 @@
           <div class="captioncell  informationInput" id="info_tourismeinfo"><span
               title="This information will be shown when the customer clicks on the title next to the input">
               <div class="customdetails">
-                <section class="accordion">
+                <div class="accordion">
                   <div class="tab"><input type="checkbox" name="accordion-3" id="cb3"> <label for="cb3"
                       class="tab__label">Guided tour details | Détails du tour guidé</label>
                     <div class="tab__content">
@@ -800,7 +779,7 @@
                         l'horaire des cours.</p>
                     </div>
                   </div>
-                </section>
+                </div>
               </div>
             </span><span class="pricesuffix"></span></div>
         </div>
@@ -823,7 +802,7 @@
           <div class="captioncell  informationInput" id="info_donationsinfo"><span
               title="This information will be shown when the customer clicks on the title next to the input">
               <div class="customdetails">
-                <section class="accordion">
+                <div class="accordion">
                   <div class="tab"><input type="checkbox" name="accordion-4" id="cb4"> <label for="cb4"
                       class="tab__label">Donation details | Détails des dons</label>
                     <div class="tab__content">
@@ -841,7 +820,7 @@
                         organiser des événements similaires dans le futur!</p>
                     </div>
                   </div>
-                </section>
+                </div>
               </div>
             </span><span class="pricesuffix"></span></div>
         </div>
@@ -885,25 +864,37 @@
             </span><span class="pricesuffix"></span></div>
         </div>
 
-        <div id="row_i119917_Hours" class="fieldwrapper ">
+        <div id="row_i119917_Hours" class="fieldwrapper " style="display: block;">
           <div class="itemdescriptioncell"><span
               title="This information will be shown when the customer clicks on the title next to the input">
               <p>Hours | Heures&nbsp;</p>
             </span> </div>
-          <div class="inputcell"><select name="i119917_Hours" id="i119917_Hours"> </select><span
-              class="pricesuffix"></span></div>
+          <div class="inputcell"><select name="i119917_Hours" id="i119917_Hours">
+              <option id="i119917_Hours_" value=""></option>
+              <option id="i119917_Hours_4" value="4">4h</option>
+              <option id="i119917_Hours_6" value="6">6h</option>
+              <option id="i119917_Hours_8" value="8">8h</option>
+            </select><span class="pricesuffix"></span></div>
         </div>
 
-        <div id="row_i119918_Department" class="fieldwrapper editable">
+        <div id="row_i119918_Department" class="fieldwrapper editable" style="display: block;">
           <div class="itemdescriptioncell"><span
               title="This information will be shown when the customer clicks on the title next to the input">
               <p>Department (Select multiple) | Département (Sélection multiple)</p>
             </span> </div>
           <div class="inputcell"><select name="i119918_Department[]" id="i119918_Department" multiple="multiple">
+              <option id="i119918_Department_reception" value="reception">Reception | Réception</option>
+              <option id="i119918_Department_cleaning" value="cleaning">Cleaning | Ménage</option>
+              <option id="i119918_Department_food" value="food">Food | Nourriture</option>
+              <option id="i119918_Department_setupteardown" value="setup-teardown">Setup &amp; Tear down | Installation
+                et démontage</option>
+              <option id="i119918_Department_errands" value="errands">Errands &amp; driving | Courses et conduite
+              </option>
+              <option id="i119918_Department_saferspaces" value="safer-spaces">Safer Spaces | Espace insécable</option>
             </select><span class="pricesuffix"></span></div>
         </div>
 
-        <div id="row_DepartmentDetails" class="captionWrapper evenRow s25206">
+        <div id="row_DepartmentDetails" class="captionWrapper evenRow s25206" style="display: block;">
           <div class="captioncell  informationInput" id="info_DepartmentDetails"><span
               title="This information will be shown when the customer clicks on the title next to the input">
               <div class="customdetails">
@@ -912,6 +903,9 @@
                       class="tab__label">Department details | Description des départements</label>
                     <div class="tab__content">
                       <p class="tab__content-subtitle"><strong>English</strong></p>
+                      <p class="tab_paragraph">Note: please select as many departments as you are comfortable with!
+                        Volunteer spots are limited, and it is not guaranteed that you will be volunteering if the
+                        department is already full.</p>
                       <ul>
                         <li><strong>Reception</strong>: welcome the attendees, check the list for the name, give them
                           their bracelet depending on their pass type and all their addons if applicable.</li>
@@ -923,8 +917,14 @@
                           the venue at the end of the weekend.</li>
                         <li><strong>Errands &amp; driving</strong>: if you have a car, we may ask you to go pickup some
                           food, give a ride to staff or the instructors, or generally run errands during the event.</li>
+                        <li><strong>Safer Spaces</strong>: if you want to volunteer to help make the event safe and
+                          inclusive for all, you will need to attend an online training session before the event and
+                          wear a visible piece of clothing identifying yourself as a volunteer during the event.</li>
                       </ul>
                       <p class="tab__content-subtitle"><strong>Français</strong></p>
+                      <p class="tab_paragraph">N.B.: S’il vous plaît, sélectionnez le plus de départements possible! Le
+                        nombre de bénévoles est limité et il est possible que vous ne puissiez pas participer si le
+                        département est plein.</p>
                       <ul>
                         <li><strong>Réception</strong>: accueillir les participants, trouver leur nom sur la liste et
                           remettre leur bracelets selon leur type de passe ainsi que leur donner leur compléments si
@@ -939,6 +939,9 @@
                         <li><strong>Courses et conduite</strong>: si vous conduisez, aller chercher de la nourriture,
                           conduire le staff ou les instructeurs, ou faire généralement des courses durant le weekend.
                         </li>
+                        <li><strong>Espace insécable</strong>: pour s’assurer que le weekend soit inclusif et
+                          sécuritaire pour tous.tes, il sera nécessaire de suivre une formation en ligne au préalable et
+                          porter un identifiant visible lors de l'événement.</li>
                       </ul>
                     </div>
                   </div>
@@ -947,7 +950,7 @@
             </span><span class="pricesuffix"></span></div>
         </div>
 
-        <div id="row_i119919_Timeframe" class="fieldwrapper ">
+        <div id="row_i119919_Timeframe" class="fieldwrapper " style="display: flex;">
           <div class="itemdescriptioncell"><span
               title="This information will be shown when the customer clicks on the title next to the input">
               <p>I am available before event | Je suis disponible avant l'événement</p>
@@ -956,7 +959,7 @@
               id="i119919_Timeframe" value="1"><span class="pricesuffix"></span></div>
         </div>
 
-        <div id="row_i119920_Notes" class="fieldwrapper ">
+        <div id="row_i119920_Notes" class="fieldwrapper " style="display: block;">
           <div class="itemdescriptioncell"><span
               title="This information will be shown when the customer clicks on the title next to the input">
               <p>Additional Information | Informations supplémentaires</p>
@@ -990,7 +993,7 @@
           </div>
         </div>
 
-        <div id="row_BankTransferInfo" class="captionWrapper evenRow s25149">
+        <div id="row_BankTransferInfo" class="captionWrapper evenRow s25149" style="display: none;">
           <div class="captioncell  informationInput" id="info_BankTransferInfo"><span
               title="This information will be shown when the customer clicks on the title next to the input">
               <div class="customdetails">
@@ -1046,7 +1049,7 @@
             </span>
           </div>
           <div class="inputcell"><input type="checkbox" id="fake-i119817_Terms" readonly="readonly" class="fake-119817"
-              onclick="alert('Please click the link to read the TERMS &amp; CONDITIONS and then check the box to agree. S\'il vous plait cliquez le lien pour lire nos CONDITIONS GÉNÉRALES puis cochez la case pour accepter.'); return false"><input
+              onclick="alert('Please click the link to read the TERMS &amp; CONDITIONS and then check the box to agree.S\'il vous plait cliquez le lien pour lire nos CONDITIONS GÉNÉRALES puis cochez la case pour accepter.'); return false"><input
               class="checkboxinput linkrequired linkrequired-119817" style="display:none;" type="checkbox"
               name="i119817_Terms" id="i119817_Terms" value="1" verify="[^\s]+"><span class="pricesuffix"></span></div>
         </div>
@@ -1074,7 +1077,7 @@
           </div>
           <div class="inputcell"><input type="checkbox" id="fake-i119873_Privacy" readonly="readonly"
               class="fake-119873"
-              onclick="alert('Please click the link to read our PRIVACY POLICY then click on the checkbox to accept. Svp cliquez le lien pour lire notre POLITIQUE DE CONFIDENTIALITÉ et ensuite cochez la case pour accepter.'); return false"><input
+              onclick="alert('Please click the link to read our PRIVACY POLICY then click on the checkbox to accept.Svp cliquez le lien pour lire notre POLITIQUE DE CONFIDENTIALITÉ et ensuite cochez la case pour accepter.'); return false"><input
               class="checkboxinput linkrequired linkrequired-119873" style="display:none;" type="checkbox"
               name="i119873_Privacy" id="i119873_Privacy" value="1" verify=".+"><span class="pricesuffix"></span></div>
         </div>
@@ -1152,22 +1155,9 @@
           $("#i120098_Couponfeedback").checktrigger("mychange", ["both"]);
         }
       });
-      $("#i119921_Allergies").bind("mychange", function (event, triggers) {
-        if ($("#i119921_Allergies").is(":checked")) {
-          //Show 119922  (Type: information), . showfunc = show(), hidefunc=hide(), effect = None
-          $("#row_i119922_AllergiesList").show();
-        }
-        else { // no match
-          // no hidearr
-          //hide 119922  (Type: textarea)
-          $("#i119922_AllergiesList").val($("#i119922_AllergiesList").attr("orig")); //here
-          $("#row_i119922_AllergiesList").hide();
-          $("#i119922_AllergiesList").checktrigger("mychange", ["both"]);
-        }
-      });
       $("#i119916_Volunteering").bind("mychange", function (event, triggers) {
         if ($("#i119916_Volunteering").is(":checked")) {
-          //Show 119918  (Type: textarea), . showfunc = show(), hidefunc=hide(), effect = None
+          //Show 119918  (Type: information), . showfunc = show(), hidefunc=hide(), effect = None
           $("#row_i119918_Department").show();
           //Show o119918_97364  (Type: multipleselect), . showfunc = show(), hidefunc=hide(), effect = None
           $("#i119918_Department_reception").closest('select').attachOptions('#i119918_Department_reception');
@@ -1358,36 +1348,36 @@
         if ($("#i119915_Coupon").valNullToEmpty().match(/mbjstaffpass/) || $("#i119915_Coupon").valNullToEmpty().match(/mbjpasswinner/)) {
           //Show 120099  (Type: information), . showfunc = show(), hidefunc=hide(), effect = None
 
-          // i120099_Fullpassdiscountinfo
+          // i120099_Fullpassdiscountfeedback
 
-          $("#row_Fullpassdiscountinfo").show();
+          $("#row_Fullpassdiscountfeedback").show();
         }
         else { // no match
           // no hidearr
           //hide 120099  (Type: information)
 
-          // i120099_Fullpassdiscountinfo
+          // i120099_Fullpassdiscountfeedback
 
-          $("#row_Fullpassdiscountinfo").hide();
-          $("#i120099_Fullpassdiscountinfo").checktrigger("mychange", ["both"]);
+          $("#row_Fullpassdiscountfeedback").hide();
+          $("#i120099_Fullpassdiscountfeedback").checktrigger("mychange", ["both"]);
         }
       });
       $("#i119915_Coupon").bind("mychange", function (event, triggers) {
         if ($("#i119915_Coupon").valNullToEmpty().match(/mbjstaffpass/) || $("#i119915_Coupon").valNullToEmpty().match(/mbjpasswinner/)) {
           //Show 120099  (Type: information), . showfunc = show(), hidefunc=hide(), effect = None
 
-          // i120099_Fullpassdiscountinfo
+          // i120099_Fullpassdiscountfeedback
 
-          $("#row_Fullpassdiscountinfo").show();
+          $("#row_Fullpassdiscountfeedback").show();
         }
         else { // no match
           // no hidearr
           //hide 120099  (Type: information)
 
-          // i120099_Fullpassdiscountinfo
+          // i120099_Fullpassdiscountfeedback
 
-          $("#row_Fullpassdiscountinfo").hide();
-          $("#i120099_Fullpassdiscountinfo").checktrigger("mychange", ["both"]);
+          $("#row_Fullpassdiscountfeedback").hide();
+          $("#i120099_Fullpassdiscountfeedback").checktrigger("mychange", ["both"]);
         }
       });
       $("#i119915_Coupon").bind("mychange", function (event, triggers) {
@@ -1430,10 +1420,6 @@
       $("#i119915_Coupon").change(function () { $(this).checktrigger("mychange", ["both"]) });
       $("#i119915_Coupon").checktrigger("mychange", "");
 
-      $("#i119921_Allergies").keyup(function () { $(this).checktrigger("mychange", ["both"]) });
-      $("#i119921_Allergies").change(function () { $(this).checktrigger("mychange", ["both"]) });
-      $("#i119921_Allergies").checktrigger("mychange", "");
-
       $("#i119916_Volunteering").keyup(function () { $(this).checktrigger("mychange", ["both"]) });
       $("#i119916_Volunteering").change(function () { $(this).checktrigger("mychange", ["both"]) });
       $("#i119916_Volunteering").checktrigger("mychange", "");
@@ -1461,18 +1447,19 @@
   </script>
 
   <div id="clone_wrapper_i119918_Department" style="display:none;"><select id="clone_i119918_Department">
-      <option id="i119918_Department_reception" value="reception">Reception | Réception</option>
-      <option id="i119918_Department_cleaning" value="cleaning">Cleaning | Ménage</option>
-      <option id="i119918_Department_food" value="food">Food | Nourriture</option>
-      <option id="i119918_Department_setupteardown" value="setup-teardown">Setup &amp; Tear down | Installation et
+      <option id="clone_i119918_Department_reception" value="reception">Reception | Réception</option>
+      <option id="clone_i119918_Department_cleaning" value="cleaning">Cleaning | Ménage</option>
+      <option id="clone_i119918_Department_food" value="food">Food | Nourriture</option>
+      <option id="clone_i119918_Department_setupteardown" value="setup-teardown">Setup &amp; Tear down | Installation et
         démontage</option>
-      <option id="i119918_Department_errands" value="errands">Errands &amp; driving | Courses et conduite</option>
+      <option id="clone_i119918_Department_errands" value="errands">Errands &amp; driving | Courses et conduite</option>
+      <option id="clone_i119918_Department_saferspaces" value="safer-spaces">Safer Spaces | Espace insécable</option>
     </select></div>
   <div id="clone_wrapper_i119917_Hours" style="display:none;"><select id="clone_i119917_Hours">
-      <option id="i119917_Hours_" value=""></option>
-      <option id="i119917_Hours_4" value="4">4h</option>
-      <option id="i119917_Hours_6" value="6">6h</option>
-      <option id="i119917_Hours_8" value="8">8h</option>
+      <option id="clone_i119917_Hours_" value=""></option>
+      <option id="clone_i119917_Hours_4" value="4">4h</option>
+      <option id="clone_i119917_Hours_6" value="6">6h</option>
+      <option id="clone_i119917_Hours_8" value="8">8h</option>
     </select></div>
 </body>
 
