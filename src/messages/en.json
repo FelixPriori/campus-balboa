@@ -54,9 +54,9 @@
                         }
                     },
                     "venueSection": {
-                        "title": "Venues",
+                        "title": "Venue",
                         "learnMore": {
-                            "text": "Checkout our venues...",
+                            "text": "Check out our venue...",
                             "href": "/en/events/2024/mtl-bal-jam/venue"
                         }
                     }

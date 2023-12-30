@@ -64,7 +64,7 @@
                     "pageTitle": {
                         "music": "Musique",
                         "about": "À propos",
-                        "venue": "Lieux",
+                        "venue": "Lieu",
                         "instructors": "Instructeurs",
                         "activities": "Activités",
                         "competitions": "Compétitions"
@@ -90,9 +90,9 @@
                         }
                     },
                     "venueSection": {
-                        "title": "Lieux",
+                        "title": "Lieu",
                         "learnMore": {
-                            "text": "Découvrir nos lieux...",
+                            "text": "Découvrir notre salle...",
                             "href": "/fr/evenements/2024/mtl-bal-jam/venue"
                         }
                     }
