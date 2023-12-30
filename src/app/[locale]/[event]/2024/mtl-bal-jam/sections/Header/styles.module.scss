@@ -25,6 +25,22 @@
             font-size: 1.5rem;
             margin-bottom: 20px;
         }
+
+
+    }
+
+    .registration {
+        position: relative;
+        border-top: 2px dotted var(--mbj-color-black);
+        border-bottom: 2px dotted var(--mbj-color-black);
+        padding: 15px 25px;
+        margin-bottom: 20px;
+
+        p {
+            font-family: var(--font-caveat-brush);
+            font-size: 2rem;
+            margin: 0;
+        }
     }
 
     @media only screen and (max-width: 576px) {
@@ -36,6 +52,12 @@
             h2 {
                 font-size: 1.75rem;
                 margin-bottom: 30px;
+            }
+        }
+
+        .registration {
+            p {
+                font-size: 1.2rem;
             }
         }
     }

@@ -30,6 +30,11 @@ export default function Header() {
         <header className={styles.headerSection}>
             <LogoLink />
             <div className={styles.text}>
+                <div className={styles.registration}>
+                    <p>
+                        {t('registration.text')} {t('registration.date')}
+                    </p>
+                </div>
                 <h1>{t('title')}</h1>
                 {renderText()}
                 <SaveToGoogleCalendar />

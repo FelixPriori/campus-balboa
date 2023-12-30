@@ -59,6 +59,10 @@
                 },
                 "header": {
                     "date": "21-22-23 juin 2024",
+                    "registration": {
+                        "text": "INSCRIPTIONS : ",
+                        "date": "18 janvier 2024"
+                    },
                     "title": "MTL BAL JAM",
                     "googleCal": "Sauvegarder à Google Calendar",
                     "pageTitle": {
