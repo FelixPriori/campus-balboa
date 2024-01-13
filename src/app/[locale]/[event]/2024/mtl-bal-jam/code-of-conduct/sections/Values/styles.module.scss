@@ -1,0 +1,47 @@
+.valuesSection {
+    background-color: var(--mbj-color-black);
+    padding: 50px;
+
+    h2,
+    h3,
+    p,
+    a {
+        color: var(--mbj-color-white);
+    }
+
+    h2 {
+        font-size: 4rem;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    h3 {
+        font-size: 2rem;
+        margin-bottom: 25px;
+    }
+
+    .content {
+        position: relative;
+        max-width: 500px;
+        margin: 0 auto;
+
+
+        p {
+            line-height: 120%;
+
+            br {
+                content: "";
+                margin: 1em;
+                display: block;
+            }
+
+            margin-bottom: 20px;
+        }
+
+        @media only screen and (max-width: 992px) {
+            h3 {
+                text-align: center;
+            }
+        }
+    }
+}

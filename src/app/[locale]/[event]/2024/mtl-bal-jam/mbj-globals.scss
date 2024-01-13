@@ -32,6 +32,17 @@ textarea {
     --toastify-color-progress-success: var(--toastify-color-success);
 }
 
+.mbj-link {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 2px;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
 .mbj-event {
     --mbj-color-salmon: #d97f76;
     --mbj-color-teal: #008080;

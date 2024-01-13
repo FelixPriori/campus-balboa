@@ -35,7 +35,8 @@
                         "venue": "Venue",
                         "instructors": "Instructors",
                         "activities": "Activities",
-                        "competitions": "Competitions"
+                        "competitions": "Competitions",
+                        "code-of-conduct": "Code of Conduct"
                     }
                 },
                 "homePage": {
@@ -353,6 +354,30 @@
                         }
                     }
                 },
+                "codePage": {
+                    "valuesSection": {
+                        "title": "Values",
+                        "values": {
+                            "kindness": {
+                                "title": "Kindness and understanding",
+                                "content": "We want our event to feel like a place where people can express themselves, and achieve their full potential without fear. This begins with a sense of safety, security and trust.<br></br>We think that everyone, regardless of their gender, age, sexual orientation dis/ability, body size, ethnicity, religion (or lack thereof), nationality, dance skill level or dance role deserve this chance.<br></br>We thus want to emphasize the importance of having a community free from oppression, harassment, abuse, and violence.<br></br>Make sure to pay attention to your dance partner’s level of comfort and be sure to respect their boundaries should they voice any. Everyone’s boundaries and level of comfort can be different, so make sure you listen to them and adjust accordingly. <br></br>Do apologize if you think you have crossed a line, hurt, or accidentally touched an area of their body that is not usually touched during the course of a dance, such as their private or sexual areas.<br></br>Some people use gender neutral pronouns, and may have changed their name since last time you saw them. Please refer to them in the way that they ask to be referred to.<br></br>It is okay to say no to a dance, and it is your right to do so! If someone refuses a dance, please refrain from making them feel bad for doing so.<br></br>Anyone can choose the dance role that they prefer, whether during the social dances or during the workshops. Please respect their choice, and refrain from asking them to switch roles if, for instance, the classes are unbalanced.<br></br>We do not wish to police what people do between consenting adults, but please be mindful of people’s level of comfort when engaging in flirting, and do not make any unwanted sexual advances.<br></br>At MTL BAL JAM, we encourage anyone willing to participate in steal jams and other dance games on the dance floor. We do ask that you keep inclusivity in mind, and allow people of any identity and dance ability to join. However, consent remains important when engaging in such games. Therefore, please don’t interrupt a dance between dancers without their permission, and ask before starting a jam or getting others involved. As with any other dance, people are allowed to say no."
+                            },
+                            "safety": {
+                                "title": "Safety and wellness",
+                                "content": "We encourage all attendees to care for one another, and expect everyone to contribute in helping to minimize the risks of hurting themselves and others throughout the weekend.<br></br>The dance floor can get crowded during the main dances. Make sure that you practice good floorcraft and be mindful of how big your steps are, and where you send your partner. Make sure you apologize if you bump or step on someone during a dance.<br></br>We have a strict “no aerials” rule on the dance floor except during jam circles and competitions should space allow it. Only perform aerials with consenting partners with whom you have practiced them previously.<br></br>Do not bring alcohol or drugs to the event. Drinks might be available for purchase on the premises, in which case please drink responsibly. Note that offering alcohol to underage people is illegal (the legal drinking age in Québec is 18 years old).<br></br>Please make sure that you maintain good personal hygiene for dances and workshops. Brush your teeth, shower, bring a change of clothes, and reapply deodorant if needed. However, strongly scented products such as cologne, perfume, or body spray are discouraged as they can cause allergic reactions.<br></br>Although we do not currently require attendees to wear masks during the event, we do strongly encourage everyone to do so. For this reason, we recommend that you have a mask at your disposal in case you are asked to wear one (KN95 or N95 masks are strongly recommended, but surgical masks are a suitable option). Masks will be available for purchase at the door.<br></br>To avoid propagating any respiratory infection during the event, we would ask you to defer your ticket to the event’s next edition if you experience any flu-like, pneumonia- or COVID-19-related symptoms in the week or days leading to the event. See our terms and conditions for more details on our COVID-19 policy."
+                            },
+                            "grow": {
+                                "title": "Grow together",
+                                "content": "None of us are perfect, and it is expected that everyone makes mistakes. We encourage everyone to reflect on their behaviour and actions, and be open to learning, listening, and be receptive to other’s differences. Together, we can make the Balboa scene safer, more inclusive, and welcoming."
+                            }
+                        }
+                    },
+                    "protocolSection": {
+                        "title": "Response and Intervention Protocol",
+                        "protocolLink": "https://docs.google.com/document/d/1vWPAJR2ygBopqTsiQCoBi5HxQQ1zl0w3UikXqs58iKk/edit?usp=sharing",
+                        "content": "In order to maintain a safe and welcoming environment, we reserve the right to take prompt action in response to violations, which may include warning (with the expectations of immediate compliance), expulsion from the event at our own discretion and without a refund, and involvement from local law enforcement.<br></br>If you are the recipient or witness of a situation in violation with the Code of Conduct, or if you have any concerns we encourage you to reach out to our Safety, Consent, and Inclusion committee (SCI) in-person or via <email>inclusion@campusbalboa.org</email><br></br>Disclosing an uncomfortable situation can be challenging: you have the right to be heard, be believed, and have your privacy respected. You may review our <protocol>Intervention Protocol</protocol> to better understand how we gather information and intervene in different situations."
+                    }
+                },
                 "navigation": {
                     "title": "Menu",
                     "home": {
@@ -382,6 +407,10 @@
                     "competitions": {
                         "text": "Competitions",
                         "href": "/en/events/2024/mtl-bal-jam/competitions"
+                    },
+                    "code": {
+                        "text": "Code of Conduct",
+                        "href": "/en/events/2024/mtl-bal-jam/code-of-conduct"
                     }
                 }
             }

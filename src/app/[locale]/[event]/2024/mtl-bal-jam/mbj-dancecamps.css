@@ -302,7 +302,6 @@ input[type=submit]:hover {
     margin-bottom: 0 !important;
 }
 
-#row_i119624_Booklet,
 #row_i119817_Terms,
 #row_i119816_Tourisme,
 #row_i119873_Privacy,
@@ -319,10 +318,6 @@ input[type=submit]:hover {
     display: flex !important;
 }
 
-#row_i119624_Booklet {
-    margin-bottom: var(--spacing-sm);
-}
-
 #row_i119817_Terms .itemdescriptioncell,
 #row_i119873_Privacy .itemdescriptioncell {
     margin-left: var(--spacing-sm);
@@ -335,7 +330,6 @@ input[type=submit]:hover {
     line-height: 135%;
 }
 
-#row_i119624_Booklet .itemdescriptioncell,
 #row_i119817_Terms .inputcell,
 #row_i119816_Tourisme .itemdescriptioncell,
 #row_i119873_Privacy .inputcell,
@@ -345,7 +339,6 @@ input[type=submit]:hover {
     margin-bottom: 0;
 }
 
-#row_i119624_Booklet .itemdescriptioncell span p,
 #row_i119817_Terms .inputcell span p,
 #row_i119816_Tourisme .itemdescriptioncell span p,
 #row_i119873_Privacy .inputcell span p,
@@ -358,7 +351,6 @@ input[type=submit]:hover {
 }
 
 
-#row_i119624_Booklet .inputcell,
 #row_i119817_Terms .inputcell,
 #row_i119816_Tourisme .inputcell,
 #row_i119873_Privacy .inputcell,

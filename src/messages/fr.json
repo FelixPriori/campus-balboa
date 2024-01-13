@@ -71,7 +71,8 @@
                         "venue": "Lieu",
                         "instructors": "Instructeurs",
                         "activities": "Activités",
-                        "competitions": "Compétitions"
+                        "competitions": "Compétitions",
+                        "code-of-conduct": "Code de conduite"
                     }
                 },
                 "homePage": {
@@ -353,6 +354,30 @@
                         }
                     }
                 },
+                "codePage": {
+                    "valuesSection": {
+                        "title": "Valeurs",
+                        "values": {
+                            "kindness": {
+                                "title": "Bienveillance et compassion",
+                                "content": "Nous tenons à ce que MTL BAL JAM soit un endroit où chacun.e puisse s’exprimer, être soi-même et atteindre son plein potentiel sans peur. Cela commence avec un sentiment de sécurité, de sûreté et de confiance.<br></br>Nous affirmons que chacun.e, peu importe son genre, âge, orientation sexuelle,  in/validité, taille corporelle, ethnicité, religion (ou absence de), nationalité, habileté de danse ou rôle de danse mérite d’avoir cette chance.<br></br>C’est pourquoi nous tenons particulièrement à souligner l’importance d’avoir une communauté libre d'oppression, d’agression, d’abus et de violence.<br></br>Assurez-vous de porter attention au niveau de confort de votre partenaire et assurez-vous de respecter leurs limites lorsqu’elles vous sont communiquées. Chacun.e a des limites et un niveau de confort différent. Il faut donc écouter et s’ajuster au fur et à mesure.<br></br>Si vous pensez avoir dépassé la limite, fait mal, ou touché quelqu’un.e de façon inappropriée lors d’une danse (ex: parties privées, ou sexuelles), s’il-vous-plait excusez-vous.<br></br>Certaines personnes utilisent des pronoms neutres en genre et peuvent avoir changé leur nom depuis la dernière fois que vous les avez vues. Veuillez vous référer à chacun.e de la manière dont iels demandent à être appelé.es.<br></br>Il est tout à fait acceptable de refuser une danse, et c'est votre droit de le faire ! Si quelqu'un.e refuse une danse, veuillez vous abstenir de culpabiliser la personne et respectez son choix.<br></br>Chacun.e peut choisir le rôle de danse qu’iel préfère lors des danses sociales ou des ateliers. S’il-vous-plaît, respectez le choix de chacun.e et ne demandez pas à une personne de changer de rôle (même dans les cas où, par exemple, un cours serait débalancé).<br></br>Nous ne pouvons réglementer ce que les gens font entre adultes consentants. Cependant, assurez-vous de toujours respecter le consentement et le niveau de confort de l’autre personne si vous flirtez et ne faites jamais d’avances sexuelles indésirables.<br></br>Au MTL BAL JAM, nous encourageons toute personne qui en a envie à participer aux steal jams et autres jeux sur la piste de danse. Nous demandons cependant que vous gardiez à l'esprit l'inclusivité et que vous permettiez à des personnes de toute identité et habileté de danse de se joindre. Le consentement demeure important lors de la participation à de tels jeux. Par conséquent, veuillez ne pas interrompre une danse entre danseurs sans leur permission et demandez avant de commencer un jam ou d'impliquer d'autres personnes. Comme pour toute autre danse, les gens ont le droit de dire non."
+                            },
+                            "safety": {
+                                "title": "Sécurité et bien-être",
+                                "content": "Nous encourageons tous les participant.es à veiller l’un.e sur l’autre et nous nous attendons à ce que tous.tes aident à minimiser les risques de se faire mal et de faire mal aux autres durant le weekend.<br></br>Il est possible que le plancher de danse soit achalandé durant les danses principales. S’il-vous-plaît, assurez-vous d’être vigilant.e et conscient.e de la taille de vos pas et d’où vous envoyez votre partenaire. Veuillez vous excuser si vous accrochez ou marchez sur quelqu’un.e lors d’une danse.<br></br>Il est strictement interdit de faire des acrobaties sur le plancher de danse sociale. Cependant, il est permis d’en faire avec un.e partenaire consentant.e dans les jam circles ou lors d’une finale de compétition si, et seulement si, vous avez pratiqué ces acrobaties avec cette personne au préalable et que l’espace le permet.<br></br>Il est interdit d’apporter de l'alcool ou des drogues à l’événement. Il se peut que des boissons alcoolisées soient disponibles à l’achat sur place. Nous vous demanderons dans ce cas de boire de façon responsable. Notez qu’il est strictement illégal d’acheter ou d’offrir de l’alcool à une personne mineure (l’âge légal au Québec est de 18 ans).<br></br>Assurez-vous de maintenir une bonne hygiène corporelle tout au long de l’événement. Brossez-vous les dents, prenez des douches, portez du déodorant, et apportez un changement de vêtement en cas de besoin. Cependant, évitez les produits parfumés tels que l’eau de toilette, le parfum ou les vaporisateurs pour le corps comme ils peuvent causer des réactions allergiques chez certain.es.<br></br>Le port du masque durant l’événement n’est pas exigé à l’heure actuelle, mais il est recommandé. C’est pourquoi, nous demandons à tous.tes les participant.es d’avoir un masque à leur disposition afin de le porter si votre partenaire vous le demande (idéalement de type KN95 ou N95, mais les masques de procédure sont également appropriés). Il sera possible d'acheter des masques sur place à l'unité au besoin.<br></br>Afin d’éviter la propagation de toute infection respiratoire durant l’événement, nous vous prions de reporter votre inscription à la prochaine édition de l’événement si vous présentez des symptômes grippaux, de pneumonie ou de COVID-19 dans la semaine ou les jours précédant l’événement. Voir les conditions générales pour plus d’information sur notre politique COVID-19."
+                            },
+                            "grow": {
+                                "title": "Grandir ensemble",
+                                "content": "Personne n’est parfait.e et nous nous attendons à des erreurs de la part de tous.tes. Nous vous encourageons à réfléchir à vos actions ainsi qu’à vos comportements et de rester ouvert à l'apprentissage, à l’écoute et de garder une ouverture d’esprit par rapport aux différences des autres. Ensemble, nous pouvons rendre la scène de balboa plus accueillante, inclusive et sécuritaire."
+                            }
+                        }
+                    },
+                    "protocolSection": {
+                        "title": "Protocole de réponse et d'intervention",
+                        "protocolLink": "https://docs.google.com/document/d/1T2fMHFypIJjUdCI9KFj8CHOikKb9LUkMDSSagCduXgI/edit?usp=sharing",
+                        "content": "Dans le but de maintenir un environnement sécuritaire et accueillant, nous nous réservons le droit de prendre des mesures concrètes en réponse au bris du code de conduite. Ces mesures peuvent inclure un avertissement (avec le respect immédiat et inconditionnel des règles), expulsion de l’événement à notre discrétion sans remboursement, ou l’implication des autorités locales.<br></br>Si vous êtes témoin ou victime d’une situation qui va à l’encontre de notre code de conduite ou si vous avez des préoccupations, nous vous invitons à communiquer avec le comité Sécurité, Consentement et Inclusion (SCI). Vous pouvez le contacter via l’adresse <email>inclusion@campusbalboa.org</email> ou vous adressez directement à un.e de nos bénévoles en personne.<br></br>Parler d’une situation inconfortable est souvent difficile : vous avez le droit d’être entendu, cru et d’avoir votre vie privée respectée. Vous pouvez regarder notre <protocol>protocole d’intervention</protocol> pour mieux comprendre la façon dont nous récoltons l’information et comment nous intervenons en fonction des circonstances."
+                    }
+                },
                 "navigation": {
                     "title": "Menu",
                     "home": {
@@ -382,6 +407,10 @@
                     "competitions": {
                         "text": "Compétitions",
                         "href": "/fr/evenements/2024/mtl-bal-jam/competitions"
+                    },
+                    "code": {
+                        "text": "Code de conduite",
+                        "href": "/fr/evenements/2024/mtl-bal-jam/code-of-conduct"
                     }
                 }
             }
