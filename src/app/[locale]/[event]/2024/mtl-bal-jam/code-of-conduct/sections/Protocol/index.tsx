@@ -13,8 +13,8 @@ export default function Protocol() {
                     {
                         t.rich('content', {
                             br: () => <br />,
-                            protocol: (chunks) => <a className="mbj-link" href={t('protocolLink')}>{chunks}</a>,
-                            email: (chunks) => <a className="mbj-link" target='_blank' rel="noopener noreferrer" href="mailto:inclusion@campusbalboa.org">{chunks}</a>
+                            protocol: (chunks) => <a className="mbj-link" target='_blank' rel="noopener noreferrer" href={t('protocolLink')}>{chunks}</a>,
+                            email: (chunks) => <a className="mbj-link" href="mailto:inclusion@campusbalboa.org">{chunks}</a>
                         })
                     }
                 </p>
