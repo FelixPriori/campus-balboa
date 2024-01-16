@@ -72,7 +72,8 @@
                         "instructors": "Instructeurs",
                         "activities": "Activités",
                         "competitions": "Compétitions",
-                        "code-of-conduct": "Code de conduite"
+                        "code-of-conduct": "Code de conduite",
+                        "registration": "Inscriptions"
                     }
                 },
                 "homePage": {
@@ -378,6 +379,82 @@
                         "content": "Dans le but de maintenir un environnement sécuritaire et accueillant, nous nous réservons le droit de prendre des mesures concrètes en réponse au bris du code de conduite. Ces mesures peuvent inclure un avertissement (avec le respect immédiat et inconditionnel des règles), expulsion de l’événement à notre discrétion sans remboursement, ou l’implication des autorités locales.<br></br>Si vous êtes témoin ou victime d’une situation qui va à l’encontre de notre code de conduite ou si vous avez des préoccupations, nous vous invitons à communiquer avec le comité Sécurité, Consentement et Inclusion (SCI). Vous pouvez le contacter via l’adresse <email>inclusion@campusbalboa.org</email> ou vous adressez directement à un.e de nos bénévoles en personne.<br></br>Parler d’une situation inconfortable est souvent difficile : vous avez le droit d’être entendu, cru et d’avoir votre vie privée respectée. Vous pouvez regarder notre <protocol>protocole d’intervention</protocol> pour mieux comprendre la façon dont nous récoltons l’information et comment nous intervenons en fonction des circonstances."
                     }
                 },
+                "registrationPage": {
+                    "tickets": {
+                        "title": "Détails des laissez-passer",
+                        "fullPass": "Laissez-passer complet",
+                        "partyPass": "Laissez-passer festif",
+                        "level": {
+                            "title": "Niveau requis",
+                            "content": {
+                                "details": "Ceci est un atelier de balboa pour tous niveaux qui nécessite tout de même de connaître les bases de la danse. Les débutants sont les bienvenus aux danses sociales, mais il faut avoir pris quelques mois de cours réguliers avant de s’inscrire aux ateliers. Nous voulons ainsi éviter que vous vous sentiez dépassé durant les ateliers et permettre aux autres participants de se concentrer sur ce qui est enseigné. Si l’un ou plusieurs de ces mots clés vous sont inconnus, s’il vous plaît considérez vous inscrire à des cours de balboa dans votre scène locale !",
+                                "list": "Bal swing,Pure bal,Lollys,Paddle turns,Toss-out,Come around,Swivel,Up-hold,Down-hold,Out and in"
+                            }
+                        },
+                        "ticketsDetails": {
+                            "title": "À l'achat d'un laissez-passer",
+                            "full": "8 heures d'ateliers,Soirée de danse du vendredi avec le Michaël Srey Legacy Band nonet,Soirée de danse du samedi avec le Michaël Srey Legacy Band nonet,Soirée de danse du dimanche,Des collations croustillantes durant tout le weekend,Plus de surprises et activités sociales seront annoncées",
+                            "party": "Soirée de danse du vendredi avec le Michaël Srey Legacy Band nonet,Soirée de danse du samedi avec le Michaël Srey Legacy Band nonet,Soirée de danse du dimanche,Des collations croustillantes durant tout le weekend,Plus de surprises et activités sociales seront annoncées"
+                        },
+                        "priceCalendar": {
+                            "title": "Menu des prix",
+                            "note": "Note: il ne sera plus possible de s’inscrire en ligne à partir du 17 juin.",
+                            "dates": {
+                                "first": "Du 18 janvier au 29 février",
+                                "second": "Du 1er mars au 30 avril",
+                                "third": "Du 1er mai au 16 juin",
+                                "door": "À la porte"
+                            },
+                            "full": {
+                                "first": "185,00$",
+                                "second": "205,00$",
+                                "third": "225,00$",
+                                "door": "240,00$"
+                            },
+                            "party": {
+                                "first": "90,00$",
+                                "second": "100,00$",
+                                "third": "110,00$",
+                                "door": "120,00$"
+                            }
+                        },
+                        "subsidize": {
+                            "title": "Aider quelqu’un à participer",
+                            "description": "Il est possible d'aider une personne qui n'a pas les moyens de s'offrir un laissez-passer complet en faisant un don lors de votre inscription. S’il vous plaît, écrivez-nous à <email>mtlbaljam@campusbalboa.org</email> si une aide financière vous permettrait de participer à MTL BAL JAM."
+                        },
+                        "terms": {
+                            "title": "Conditions générales",
+                            "content": "<link>Cliquez ici</link> pour en savoir plus sur nos conditions générales.",
+                            "link": "https://docs.google.com/document/d/19iDfQHbv1B0EV1IpJY_P3e7qielFQecVVd5u_8uQB4k/edit?usp=sharing"
+                        }
+                    },
+                    "volunteering": {
+                        "title": "Bénévolat",
+                        "description": "Vous pouvez économiser sur votre inscription en faisant du bénévolat pour le MTL BAL JAM ! Engagez-vous pour un minimum de 4h durant le weekend et un remboursement de 15.00$ CAD par heures travaillées sera effectué après l'événement.",
+                        "departments": {
+                            "reception": {
+                                "title": "Réception",
+                                "description": "Accueillir les participants, trouver leur nom sur la liste et remettre leur bracelets selon leur type laissez-passer ainsi que leur donner leur compléments si applicable."
+                            },
+                            "maintenance": {
+                                "title": "Entretien ",
+                                "description": "Monter la salle avant l’événement, la démonter vers la fin du weekend et faire l’entretien durant l’événement."
+                            },
+                            "food": {
+                                "title": "Nourriture ",
+                                "description": "Préparer la table pour le buffet, faire de la préparation d’ingrédients et s’assurer de remettre de la nourriture sur la table au fur et à mesure qu’elle se vide."
+                            },
+                            "errands": {
+                                "title": "Courses et transport",
+                                "description": "Si vous conduisez, aller chercher de la nourriture, conduire le staff ou les instructeurs, ou faire généralement des courses durant le weekend."
+                            },
+                            "safety": {
+                                "title": "Sécurité et inclusion",
+                                "description": "Pour s’assurer que le weekend soit inclusif et sécuritaire pour tous.tes, il sera nécessaire de suivre une formation en ligne au préalable et porter un identifiant visible lors de l'événement."
+                            }
+                        }
+                    }
+                },
                 "navigation": {
                     "title": "Menu",
                     "home": {
@@ -411,6 +488,10 @@
                     "code": {
                         "text": "Code de conduite",
                         "href": "/fr/evenements/2024/mtl-bal-jam/code-of-conduct"
+                    },
+                    "registration": {
+                        "text": "Inscription",
+                        "href": "/fr/evenements/2024/mtl-bal-jam/registration"
                     }
                 }
             }

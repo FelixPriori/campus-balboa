@@ -36,7 +36,8 @@
                         "instructors": "Instructors",
                         "activities": "Activities",
                         "competitions": "Competitions",
-                        "code-of-conduct": "Code of Conduct"
+                        "code-of-conduct": "Code of Conduct",
+                        "registration": "Registration"
                     }
                 },
                 "homePage": {
@@ -378,6 +379,82 @@
                         "content": "In order to maintain a safe and welcoming environment, we reserve the right to take prompt action in response to violations, which may include warning (with the expectations of immediate compliance), expulsion from the event at our own discretion and without a refund, and involvement from local law enforcement.<br></br>If you are the recipient or witness of a situation in violation with the Code of Conduct, or if you have any concerns we encourage you to reach out to our Safety, Consent, and Inclusion committee (SCI) in-person or via <email>inclusion@campusbalboa.org</email><br></br>Disclosing an uncomfortable situation can be challenging: you have the right to be heard, be believed, and have your privacy respected. You may review our <protocol>Intervention Protocol</protocol> to better understand how we gather information and intervene in different situations."
                     }
                 },
+                "registrationPage": {
+                    "tickets": {
+                        "title": "Ticket details",
+                        "fullPass": "Full pass",
+                        "partyPass": "Party pass",
+                        "level": {
+                            "title": "Level requirement",
+                            "content": {
+                                "details": "This is an all levels workshop with a caveat: we assume that you know the basics of balboa to participate in the workshops. Newcomers are welcome to attend the dances, but you should have at least taken a couple of months of classes before registering. This is to ensure that you do not find yourself overwhelmed, and to ensure that other attendees can focus on what is being taught. If any of these words are unknown to you, please consider taking regular classes in your local dance scene instead!",
+                                "list": "Bal swing,Pure bal,Lollys,Paddle turns,Toss-out,Come around,Swivel,Up-hold,Down-hold,Out and in"
+                            }
+                        },
+                        "ticketsDetails": {
+                            "title": "Tickets include",
+                            "full": "8 hours of workshops,Friday evening social dance with the Michaël Srey Legacy Band quintet,Saturday evening social dance with the Michaël Srey Legacy Band nonet,Sunday evening dance,Toasty snacks throughout the weekend,More surprises and social activities to be announced",
+                            "party": "Friday evening social dance with the Michaël Srey Legacy Band quintet,Saturday evening social dance with the Michaël Srey Legacy Band nonet,Sunday evening dance,Toasty snacks throughout the weekend,More surprises and social activities to be announced"
+                        },
+                        "priceCalendar": {
+                            "title": "Price Menu",
+                            "note": "Note: online registration will be closed starting June 17th.",
+                            "dates": {
+                                "first": "From January 18th until February 29th",
+                                "second": "From March 1st until April 30th",
+                                "third": "From May 1st until June 16th",
+                                "door": "At the door"
+                            },
+                            "full": {
+                                "first": "$185.00",
+                                "second": "$205.00",
+                                "third": "$225.00",
+                                "door": "$240.00"
+                            },
+                            "party": {
+                                "first": "$90.00",
+                                "second": "$100.00",
+                                "third": "$110.00",
+                                "door": "$120.00"
+                            }
+                        },
+                        "subsidize": {
+                            "title": "Help someone attend MTL BAL JAM",
+                            "description": "You can choose to help someone who cannot afford a full pass by donating an amount while registering. Please reach out to <email>mtlbaljam@campusbalboa.org</email> if in need of financial assistance to attend MTL BAL JAM."
+                        },
+                        "terms": {
+                            "title": "Terms & Conditions",
+                            "content": "<link>Click here</link> to learn more about our terms & conditions.",
+                            "link": "https://docs.google.com/document/d/19iDfQHbv1B0EV1IpJY_P3e7qielFQecVVd5u_8uQB4k/edit?usp=sharing"
+                        }
+                    },
+                    "volunteering": {
+                        "title": "Volunteering",
+                        "description": "You can get a discount by volunteering for MTL BAL JAM! Commit to a minimum of 4 hours of volunteering during the weekend, and $15.00CAD per hour of work will be reimbursed after the event.",
+                        "departments": {
+                            "reception": {
+                                "title": "Reception",
+                                "description": "Welcome the attendees, check the list for the name, give them their bracelet depending on their pass type and all their add-ons if applicable"
+                            },
+                            "maintenance": {
+                                "title": "Maintenance",
+                                "description": "Set up the venue before the dances, tear down the venue at the end of the weekend, and clean up during"
+                            },
+                            "food": {
+                                "title": "Food",
+                                "description": "Set up the buffet table, prepare some of the ingredients, and make sure that the table is refilled if needed."
+                            },
+                            "errands": {
+                                "title": "Errands & Driving",
+                                "description": "If you have a car, we may ask you to go pickup some food, give a ride to staff or the instructors, or generally run errands during the event."
+                            },
+                            "safety": {
+                                "title": "Safety & Inclusion",
+                                "description": "If you want to volunteer to help make the event safe and inclusive for all, you will need to attend an online training session before the event and wear a visible piece of clothing identifying yourself as a volunteer during the event."
+                            }
+                        }
+                    }
+                },
                 "navigation": {
                     "title": "Menu",
                     "home": {
@@ -411,6 +488,10 @@
                     "code": {
                         "text": "Code of Conduct",
                         "href": "/en/events/2024/mtl-bal-jam/code-of-conduct"
+                    },
+                    "registration": {
+                        "text": "Registration",
+                        "href": "/en/events/2024/mtl-bal-jam/registration"
                     }
                 }
             }

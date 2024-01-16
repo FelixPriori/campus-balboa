@@ -302,6 +302,23 @@ input[type=submit]:hover {
     margin-bottom: 0 !important;
 }
 
+.custom-terms {
+    border-bottom: 1px dotted var(--color-dark);
+    border-top: 1px dotted var(--color-dark);
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.custom-terms__important {
+    text-align: center;
+}
+
+.link-container {
+    text-align: center;
+    padding: 0.5rem 1rem;
+    line-height: 150%;
+}
+
 #row_i119817_Terms,
 #row_i119816_Tourisme,
 #row_i119873_Privacy,
@@ -456,6 +473,12 @@ input[type=submit]:hover {
 
 .tab__content-subtitle {
     text-align: center;
+}
+
+.tab__content-no-bullet {
+    list-style: none;
+    margin: 0.5rem 0 0.5rem -1rem;
+    font-style: italic;
 }
 
 .accordion .tab .tab__content p.tab__content-paragraph {

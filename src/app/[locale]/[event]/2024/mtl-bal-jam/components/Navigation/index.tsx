@@ -10,7 +10,7 @@ import { getSlugFromPathname } from '@/app/util/navigationUtils';
 
 const base = 'Events.2024.MtlBalJam.navigation'
 
-const pages = ['home', 'about', 'music', 'venue', 'instructors', 'activities', 'competitions', 'code']
+const pages = ['home', 'about', 'music', 'venue', 'instructors', 'activities', 'competitions', 'code', 'registration']
 
 const styling = 'mbjStyling'
 

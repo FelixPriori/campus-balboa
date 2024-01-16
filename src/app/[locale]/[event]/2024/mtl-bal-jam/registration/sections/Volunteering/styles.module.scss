@@ -1,0 +1,55 @@
+.volunteeringSection {
+    padding: 40px;
+    background-color: var(--mbj-color-teal);
+
+    h2,
+    h3,
+    p,
+    a {
+        color: var(--mbj-color-white);
+    }
+
+    h3 {
+        font-size: 2rem;
+        margin: 10px 0;
+    }
+
+    p {
+        line-height: 125%;
+    }
+
+
+    .title {
+        color: var(--mbj-color-white);
+        font-size: 4rem;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .content {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    @media only screen and (max-width: 500px) {
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        h4 {
+            font-size: 1rem;
+        }
+
+        li,
+        p {
+            font-size: 0.6rem;
+            line-height: 150%;
+        }
+    }
+}
