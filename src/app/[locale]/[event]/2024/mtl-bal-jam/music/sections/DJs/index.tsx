@@ -5,7 +5,8 @@ import FeatureCard from '../../../components/FeatureCard'
 
 const keys = [
     'felix',
-    'gab'
+    'gab',
+    'david'
 ] as const
 
 export default function DJs() {

@@ -232,17 +232,27 @@
                                 "biography": "Félix s'intéresse à la musique depuis toujours. Dans sa quête sans fin pour comprendre la musique à un niveau plus profond, il a commencé à danser le swing en 2013. Geek autoproclamé de la musique, il a étudié le chant, la composition et l'arrangement du jazz. Il adore réfléchir et parler de DJ et il est toujours à la recherche des meilleurs morceaux swing.",
                                 "image": {
                                     "src": "/felix.jpg",
-                                    "alt": "Photo of Felix"
+                                    "alt": "Photo de Felix"
                                 }
                             },
                             "gab": {
                                 "name": "Gabrielle",
                                 "djName": "DJ Kern Down For What?!",
                                 "pronouns": "Elle/Accords féminins",
-                                "biography": "Gabrielle adore jouer de la musique qui fait sortir les danseurs sur la piste et les y maintient ! Sa passion est la musique qui vous émeut, qu'il s'agisse de blues, de jazz vintage ou de morceaux plus soul et funky. Attention, sa musique vous incitera souvent à danser bien après que vos pieds ne soient plus capables de continuer!",
+                                "biography": "Gabrielle adore jouer de la musique qui fait sortir les danseurs sur la piste et les y maintient ! Sa passion est la musique qui vous émeut, qu'il s'agisse de blues, de jazz vintage ou de morceaux plus soul et funky. Attention, sa musique vous incitera souvent à danser bien après que vos pieds ne soient plus capables de continuer !",
                                 "image": {
                                     "src": "/gabrielle.png",
-                                    "alt": "Photo of Gabrielle"
+                                    "alt": "Photo de Gabrielle"
+                                }
+                            },
+                            "david": {
+                                "name": "David",
+                                "djName": "DJ Loose Lid David",
+                                "pronouns": "Il/Accords masculins",
+                                "biography": "David a commencé sa carrière de DJ en 2017 au club de swing de son université. Il adore la musique swing rapide et a un penchant marqué pour les enregistrements live. En effet, c’est la musique qui l’a convaincu d’apprendre le Balboa. Notez qu’il est toujours prêt à avoir de grandes conversation sur la musique et il a toujours une nouvelle chanson préféré à partager !",
+                                "image": {
+                                    "src": "/david.jpg",
+                                    "alt": "Photo de David"
                                 }
                             }
                         }
