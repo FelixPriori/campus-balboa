@@ -11,9 +11,19 @@ export default function Venue() {
     return (
         <section className={styles.venueSection}>
             <div className={styles.subscribeWrapper}>
-                <div className={styles.subscribeContent}>
+                {/* <div className={styles.subscribeContent}>
                     <h2>{t('subscribe.title')}</h2>
                     <MailchimpForm />
+                </div> */}
+                <div className={styles.registration}>
+                    <h2>{t('homePage.registrationSection.title')}</h2>
+                    <div className={styles.registrationContent}>
+                        <p>{t.rich(`homePage.registrationSection.description`, {
+                            registration: (chunks) => <a className='mbj-link' target="_blank" rel="noreferrer noopener" href="https://mtl-bal-jam-2024.dancecamps.org/booking.php">{chunks}</a>,
+                            details: (chunks) => <Link className='mbj-link' href={t('homePage.registrationSection.detailsLink')}>{chunks}</Link>
+                        })}
+                        </p>
+                    </div>
                 </div>
             </div>
             <div className={styles.archWrapper}>
@@ -26,10 +36,10 @@ export default function Venue() {
                     <Link href={t('homePage.venueSection.learnMore.href')}>{t('homePage.venueSection.learnMore.text')}</Link>
                 </div>
 
-                <IconBox 
-                    src='/mbj-loaf-white.png' 
+                <IconBox
+                    src='/mbj-loaf-white.png'
                     alt={t('iconAlts.loaf')}
-                    width={50} 
+                    width={50}
                     height={50}
                     position='topLeft'
                 />

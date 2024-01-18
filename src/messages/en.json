@@ -66,6 +66,11 @@
                             "text": "Check out our venue...",
                             "href": "/en/events/2024/mtl-bal-jam/venue"
                         }
+                    },
+                    "registrationSection": {
+                        "title": "Registration",
+                        "detailsLink": "/en/events/2024/mtl-bal-jam/registration",
+                        "description": "You can now register by going to our <registration>registration page</registration>! Or if you want to see what the options are, <details>click here</details>."
                     }
                 },
                 "aboutPage": {

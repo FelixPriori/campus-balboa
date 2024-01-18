@@ -102,6 +102,11 @@
                             "text": "Découvrir notre salle...",
                             "href": "/fr/evenements/2024/mtl-bal-jam/venue"
                         }
+                    },
+                    "registrationSection": {
+                        "title": "Inscriptions",
+                        "detailsLink": "/fr/evenements/2024/mtl-bal-jam/registration",
+                        "description": "Vous pouvez maintenant vous inscrire en visitant notre <registration>page d’inscription</registration>! Si vous voulez simplement voir les différentes options, <details>cliquez-ici</details>."
                     }
                 },
                 "aboutPage": {
