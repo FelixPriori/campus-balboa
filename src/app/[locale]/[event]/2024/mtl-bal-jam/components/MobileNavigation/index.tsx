@@ -23,12 +23,12 @@ export default function MobileNavigation({ current, switcherOptions, pageTabs }:
 
     return (
         <>
-            <div className={`${styles.buttonContainer} ${isOpen ? styles.active : ''}`} onClick={toggle}>
+            <div className={`${styles.mbjButtonContainer} ${isOpen ? styles.active : ''}`} onClick={toggle}>
                 <span className={styles.top}></span>
                 <span className={styles.middle}></span>
                 <span className={styles.bottom}></span>
             </div>
-            <div className={`${styles.overlay} ${isOpen ? styles.open : ''}`}>
+            <div className={`${styles.mbjOverlay} ${isOpen ? styles.open : ''}`}>
                 <nav className={styles.overlayMenu}>
                     <h2 className={styles.title}>{t('title')}</h2>
 
