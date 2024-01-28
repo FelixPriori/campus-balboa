@@ -12,19 +12,19 @@
         .top {
             transform: translateY(11px) translateX(0) rotate(45deg);
             box-shadow: none;
-            background: var(--color-neutral);
+            background: var(--mbj-color-black);
         }
 
         .middle {
             opacity: 0;
             box-shadow: none;
-            background: var(--color-neutral);
+            background: var(--mbj-color-black);
         }
 
         .bottom {
             transform: translateY(-11px) translateX(0) rotate(-45deg);
             box-shadow: none;
-            background: var(--color-neutral);
+            background: var(--mbj-color-black);
         }
     }
 
@@ -57,7 +57,7 @@
 
 .overlay {
     position: fixed;
-    background: var(--color-secondary);
+    background: var(--mbj-color-white);
     top: 0;
     left: 0;
     width: 100%;
@@ -67,6 +67,12 @@
     transition: opacity .35s, visibility .35s, height .35s;
     overflow: hidden;
     z-index: 100;
+
+    h2 {
+        font-size: 4rem;
+        color: var(--mbj-color-black);
+        margin-bottom: auto;
+    }
 
 
     &.open {
@@ -113,20 +119,21 @@
 
         .overlayMenu {
             position: relative;
-            height: 70%;
-            top: 50%;
-            transform: translateY(-50%);
+            height: calc(100% - 20px);
             text-align: center;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            border: 2px dotted var(--mbj-color-black);
+            padding: 10px;
+            margin: 10px;
 
-            ul {
+            .navTabs {
                 list-style: none;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                gap: 25px;
+                gap: 10px;
                 position: relative;
                 height: 100%;
 
@@ -138,42 +145,7 @@
                     position: relative;
                     opacity: 0;
 
-                    .link {
-                        display: block;
-                        position: relative;
-                        color: var(--color-neutral);
-                        text-decoration: none;
-                        overflow: hidden;
-                        font-size: 20px;
-                        font-weight: 400;
 
-                        &:hover:after,
-                        &:focus:after,
-                        &:active:after {
-                            width: 100%;
-                        }
-
-                        &:after {
-                            content: '';
-                            position: absolute;
-                            bottom: 0;
-                            left: 50%;
-                            width: 0%;
-                            transform: translateX(-50%);
-                            height: 3px;
-                            background: var(--color-neutral);
-                            transition: .35s;
-                        }
-
-                        &.current {
-                            pointer-events: none;
-                            font-weight: bold;
-
-                            &:after {
-                                width: 100%;
-                            }
-                        }
-                    }
                 }
             }
         }

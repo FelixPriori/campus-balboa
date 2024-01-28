@@ -1,6 +1,5 @@
 "use client"
 import { useTranslations } from 'next-intl'
-import Image from 'next/image'
 import styles from './styles.module.scss'
 
 const keys = [
@@ -10,7 +9,7 @@ const keys = [
     "door"
 ] as const
 
-const getDetails = (items: string) => items?.split(',').map((detail) => <li key="detail">{detail}</li>)
+const getDetails = (items: string) => items?.split(',').map((detail) => <li key={detail}>{detail}</li>)
 
 export default function Tickets() {
     const t = useTranslations('Events.2024.MtlBalJam.registrationPage.tickets')

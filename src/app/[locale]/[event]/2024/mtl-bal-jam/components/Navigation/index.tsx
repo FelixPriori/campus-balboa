@@ -4,13 +4,30 @@ import { useLocale } from 'next-intl';
 import { useRouter } from 'next-intl/client';
 import NavLinks from '../../components/NavLinks';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
-import MobileNavigation from '@/app/[locale]/components/MobileNavigation';
 import styles from './styles.module.scss';
 import { getSlugFromPathname } from '@/app/util/navigationUtils';
+import MobileNavigation from '../MobileNavigation';
 
-const base = 'Events.2024.MtlBalJam.navigation'
-
-const pages = ['home', 'about', 'music', 'venue', 'instructors', 'activities', 'competitions', 'code', 'registration']
+const pageTabs = {
+    about: [
+        'about',
+        'code-of-conduct',
+        'volunteering'
+    ],
+    event: [
+        'instructors',
+        'music',
+        'venue',
+        'competitions',
+        'registration',
+        'extra'
+    ],
+    travel: [
+        'visiting',
+        'travel',
+        'accommodation'
+    ]
+}
 
 const styling = 'mbjStyling'
 
@@ -48,11 +65,11 @@ export default function Navigation() {
                     ]}
                     customStyling={styling}
                 />
-                <NavLinks pages={pages} current={slug} />
+                <NavLinks pageTabs={pageTabs} current={slug} />
             </nav>
             <MobileNavigation
-                pages={pages}
-                base={base}
+                pageTabs={pageTabs}
+                current={slug}
                 switcherOptions={{
                     ...switcherOptions,
                     slug,

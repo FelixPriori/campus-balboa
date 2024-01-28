@@ -1,7 +1,6 @@
 "use client"
 import { useTranslations } from 'next-intl'
 import styles from './styles.module.scss'
-import FeatureCard from '../../../components/FeatureCard'
 
 const keys = [
     'reception',
@@ -21,7 +20,7 @@ function Department({ title, description }: { title: string, description: string
 }
 
 export default function Volunteering() {
-    const t = useTranslations('Events.2024.MtlBalJam.registrationPage.volunteering')
+    const t = useTranslations('Events.2024.MtlBalJam.volunteeringPage.volunteeringSection')
 
     return (
         <section className={styles.volunteeringSection}>

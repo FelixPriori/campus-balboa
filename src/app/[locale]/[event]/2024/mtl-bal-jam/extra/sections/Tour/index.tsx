@@ -5,7 +5,7 @@ import styles from './styles.module.scss'
 
 
 export default function Tour() {
-    const t = useTranslations('Events.2024.MtlBalJam.activitiesPage.tour')
+    const t = useTranslations('Events.2024.MtlBalJam.extrasPage.tour')
     return (
         <section className={styles.bandSection}>
             <h2>{t('title')}</h2>

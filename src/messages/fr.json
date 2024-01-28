@@ -71,10 +71,14 @@
                         "about": "À propos",
                         "venue": "Lieu",
                         "instructors": "Instructeurs",
-                        "activities": "Activités",
+                        "extra": "Extra",
                         "competitions": "Compétitions",
                         "code-of-conduct": "Code de conduite",
-                        "registration": "Inscriptions"
+                        "registration": "Inscriptions",
+                        "visiting": "Visiter Montréal",
+                        "travel": "Voyagement",
+                        "accommodation": "Hébergement",
+                        "volunteering": "Bénévolat"
                     }
                 },
                 "homePage": {
@@ -302,7 +306,7 @@
                         "cutoutAlt": "Photo du Cat's Corner"
                     }
                 },
-                "activitiesPage": {
+                "extrasPage": {
                     "tour": {
                         "title": "Tour guidé de la Petite Italie",
                         "price": "Prix : 25,00$ CAD",
@@ -443,8 +447,10 @@
                             "content": "<link>Cliquez ici</link> pour en savoir plus sur nos conditions générales. Conditions incluses: code de conduite, consentement médiatique, décharge de responsabilité, respect du matériel, changements majeurs, politique COVID-19 et autres infections respiratoires, politique d'hébergement, politique de remboursement, paiements.",
                             "link": "https://docs.google.com/document/d/19iDfQHbv1B0EV1IpJY_P3e7qielFQecVVd5u_8uQB4k/edit?usp=sharing"
                         }
-                    },
-                    "volunteering": {
+                    }
+                },
+                "volunteeringPage": {
+                    "volunteeringSection": {
                         "title": "Bénévolat",
                         "description": "Vous pouvez économiser sur votre inscription en faisant du bénévolat pour le MTL BAL JAM ! Engagez-vous pour un minimum de 4h durant le weekend et un remboursement de 15.00$ CAD par heures travaillées sera effectué après l'événement.",
                         "departments": {
@@ -473,42 +479,72 @@
                 },
                 "navigation": {
                     "title": "Menu",
-                    "home": {
-                        "text": "Accueil",
-                        "href": "/fr/evenements/2024/mtl-bal-jam"
-                    },
                     "about": {
-                        "text": "À propos",
-                        "href": "/fr/evenements/2024/mtl-bal-jam/about"
+                        "title": "À propos",
+                        "subtabs": {
+                            "about": {
+                                "text": "Vision et équipe",
+                                "href": "/fr/evenements/2024/mtl-bal-jam/about"
+                            },
+                            "code-of-conduct": {
+                                "text": "Code de conduite",
+                                "href": "/fr/evenements/2024/mtl-bal-jam/code-of-conduct"
+                            },
+                            "volunteering": {
+                                "text": "Bénévolat",
+                                "href": "/fr/evenements/2024/mtl-bal-jam/volunteering"
+                            }
+                        }
                     },
-                    "music": {
-                        "text": "Musique",
-                        "href": "/fr/evenements/2024/mtl-bal-jam/music"
+                    "event": {
+                        "title": "Événement",
+                        "subtabs": {
+                            "instructors": {
+                                "text": "Instructeurs",
+                                "href": "/fr/evenements/2024/mtl-bal-jam/instructors"
+                            },
+                            "music": {
+                                "text": "Musique",
+                                "href": "/fr/evenements/2024/mtl-bal-jam/music"
+                            },
+                            "venue": {
+                                "text": "Lieux",
+                                "href": "/fr/evenements/2024/mtl-bal-jam/venue"
+                            },
+                            "competitions": {
+                                "text": "Compétitions",
+                                "href": "/fr/evenements/2024/mtl-bal-jam/competitions"
+                            },
+                            "registration": {
+                                "text": "Inscription",
+                                "href": "/fr/evenements/2024/mtl-bal-jam/registration"
+                            },
+                            "extra": {
+                                "text": "Extra",
+                                "href": "/fr/evenements/2024/mtl-bal-jam/extra"
+                            }
+                        }
                     },
-                    "instructors": {
-                        "text": "Instructeurs",
-                        "href": "/fr/evenements/2024/mtl-bal-jam/instructors"
-                    },
-                    "venue": {
-                        "text": "Lieux",
-                        "href": "/fr/evenements/2024/mtl-bal-jam/venue"
-                    },
-                    "activities": {
-                        "text": "Activités",
-                        "href": "/fr/evenements/2024/mtl-bal-jam/activities"
-                    },
-                    "competitions": {
-                        "text": "Compétitions",
-                        "href": "/fr/evenements/2024/mtl-bal-jam/competitions"
-                    },
-                    "code": {
-                        "text": "Code de conduite",
-                        "href": "/fr/evenements/2024/mtl-bal-jam/code-of-conduct"
-                    },
-                    "registration": {
-                        "text": "Inscription",
-                        "href": "/fr/evenements/2024/mtl-bal-jam/registration"
+                    "travel": {
+                        "title": "Voyage",
+                        "subtabs": {
+                            "visiting": {
+                                "text": "Visiter Montréal",
+                                "href": "/fr/evenements/2024/mtl-bal-jam/visiting"
+                            },
+                            "travel": {
+                                "text": "Se rendre",
+                                "href": "/fr/evenements/2024/mtl-bal-jam/travel"
+                            },
+                            "accommodation": {
+                                "text": "Se loger",
+                                "href": "/fr/evenements/2024/mtl-bal-jam/accommodation"
+                            }
+                        }
                     }
+                },
+                "comingSoon": {
+                    "title": "Détails à venir..."
                 }
             }
         }
