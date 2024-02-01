@@ -477,6 +477,250 @@
                         }
                     }
                 },
+                "visitingPage": {
+                    "title": "À manger et à boire",
+                    "travelBlogSection": {
+                        "mapUrl": "https://www.google.com/maps/d/edit?mid=15C3q00URmitiir_DEOKs0F0pDU7YOkY&usp=drive_link",
+                        "mapLabel": "Voir la carte complète",
+                        "mapAriaLabel": "Ouvrir la carte google dans un nouvel onglet.",
+                        "legend": {
+                            "veg": "V = options véganes et végétariennes",
+                            "gluten": "SG = options sans gluten"
+                        },
+                        "foodAndDrinks": {
+                            "intro": "Installez-vous sur un banc coloré ou prennez une marche entre les murales en mangeant une sucrerie ! Voici quelques-unes de nos recommandations :",
+                            "image": "/food.png",
+                            "imageAlt": "Photos de plats et de restaurants à Montréal",
+                            "breakfast": {
+                                "title": "DÉJEUNERS / CAFÉS / DESSERTS",
+                                "bernie": {
+                                    "name": "Bernie Beigne",
+                                    "type": "Français / Americain",
+                                    "price": "$",
+                                    "specifications": "none",
+                                    "neighborhood": "Mile End"
+                                },
+                                "pain": {
+                                    "name": "Boulangerie Le Pain dans les voiles",
+                                    "type": "Français",
+                                    "price": "$",
+                                    "specifications": "none",
+                                    "neighborhood": "La Petite Patrie"
+                                },
+                                "kem": {
+                                    "name": "Kem Coba",
+                                    "type": "Crème glacée vietnamienne",
+                                    "price": "$",
+                                    "specifications": "none",
+                                    "neighborhood": "Mile End"
+                                },
+                                "regine": {
+                                    "name": "Régine Café",
+                                    "type": "Français / Britanique",
+                                    "price": "$$$",
+                                    "specifications": "V, SG",
+                                    "neighborhood": "La Petite Patrie"
+                                },
+                                "stViateur": {
+                                    "name": "St-Viateur Bagel",
+                                    "type": "Juif",
+                                    "price": "$",
+                                    "specifications": "V",
+                                    "neighborhood": "Mile End"
+                                },
+                                "fairmount": {
+                                    "name": "Fairmount Bagel",
+                                    "type": "Juif",
+                                    "price": "$",
+                                    "specifications": "V",
+                                    "neighborhood": "Mile End"
+                                }
+                            },
+                            "lunchAndDinner": {
+                                "title": "LUNCH & DINNER",
+                                "darna": {
+                                    "name": "Darna Bistroquet",
+                                    "type": "Marocain",
+                                    "price": "$$",
+                                    "specifications": "none",
+                                    "neighborhood": "La Petite Patrie"
+                                },
+                                "drogheria": {
+                                    "name": "Drogheria Fine",
+                                    "type": "Italien",
+                                    "price": "$",
+                                    "specifications": "V",
+                                    "neighborhood": "Mile End"
+                                },
+                                "alep": {
+                                    "name": "Le Petit Alep Bistro",
+                                    "type": "Syrien / Arménien",
+                                    "price": "$$",
+                                    "specifications": "V, SG",
+                                    "neighborhood": "Petite italie"
+                                },
+                                "tonki": {
+                                    "name": "Le Belle Tonki",
+                                    "type": "Vietnamien / Cantonais",
+                                    "price": "$$",
+                                    "specifications": "none",
+                                    "neighborhood": "La Petite Patrie"
+                                },
+                                "hung": {
+                                    "name": "Marché Hung Phat",
+                                    "type": "Vietnamien",
+                                    "price": "$",
+                                    "specifications": "V",
+                                    "neighborhood": "La Petite Patrie"
+                                },
+                                "poutineville": {
+                                    "name": "Poutineville",
+                                    "type": "Québécois",
+                                    "price": "$",
+                                    "specifications": "none",
+                                    "neighborhood": "La Petite Patrie"
+                                },
+                                "schwartz": {
+                                    "name": "Schwartz’s Deli",
+                                    "type": "Delicatessen juif",
+                                    "price": "$",
+                                    "specifications": "none",
+                                    "neighborhood": "Le Plateau"
+                                },
+                                "ssam": {
+                                    "name": "SSAM",
+                                    "type": "Coréen",
+                                    "price": "$$",
+                                    "specifications": "none",
+                                    "neighborhood": "La Petite Patrie"
+                                },
+                                "umami": {
+                                    "name": "Umami Ramen & Izakaya",
+                                    "type": "Japonais",
+                                    "price": "$$",
+                                    "specifications": "V, SG",
+                                    "neighborhood": "Rosemont"
+                                }
+                            },
+                            "drinks": {
+                                "title": "BOISSONS",
+                                "birra": {
+                                    "name": "Birra Bar",
+                                    "type": "Micro brasserie",
+                                    "price": "$$",
+                                    "specifications": "V",
+                                    "neighborhood": "Le Plateau"
+                                },
+                                "harricana": {
+                                    "name": "Brasserie Harricana",
+                                    "type": "Micro brasserie",
+                                    "price": "$$",
+                                    "specifications": "V",
+                                    "neighborhood": "Le Plateau"
+                                },
+                                "ernest": {
+                                    "name": "Chez Ernest",
+                                    "type": "Resto bar",
+                                    "price": "$$",
+                                    "specifications": "V",
+                                    "neighborhood": "Petite Patrie"
+                                },
+                                "nestor": {
+                                    "name": "Nestor",
+                                    "type": "Bar",
+                                    "price": "$$",
+                                    "specifications": "V",
+                                    "neighborhood": "Petite italie"
+                                },
+                                "vices": {
+                                    "name": "Vice et Versa",
+                                    "type": "Bières artisanales",
+                                    "price": "$$",
+                                    "specifications": "V",
+                                    "neighborhood": "Petite Patrie"
+                                },
+                                "vin": {
+                                    "name": "Vinvinvin",
+                                    "type": "Wine bar",
+                                    "price": "$$",
+                                    "specifications": "V",
+                                    "neighborhood": "Petite Patrie"
+                                }
+                            }
+                        },
+                        "sightSeeing": {
+                            "intro": "Visitez la ville de Montréal depuis les marchés extérieurs jusqu'aux sites historiques ! N'oubliez-pas :",
+                            "image": "/sightseeing.png",
+                            "imageAlt": "Photos de paysages montréalais",
+                            "spots": {
+                                "title": "TOURISME",
+                                "botanical": {
+                                    "name": "Jardin botanique",
+                                    "type": "Jardin intérieur et extérieur",
+                                    "price": "23,25$",
+                                    "specifications": "none",
+                                    "neighborhood": "Hochelaga"
+                                },
+                                "chinatown": {
+                                    "name": "Quartier chinois",
+                                    "type": "Quartier historique",
+                                    "price": "none",
+                                    "specifications": "none",
+                                    "neighborhood": "Ville Marie"
+                                },
+                                "fineArts": {
+                                    "name": "Musée des beaux arts",
+                                    "type": "Musée",
+                                    "price": "12-24$",
+                                    "specifications": "none",
+                                    "neighborhood": "Centre-ville"
+                                },
+                                "marche": {
+                                    "name": "Marché Jean Talon",
+                                    "type": "Marché extérieur",
+                                    "price": "none",
+                                    "specifications": "none",
+                                    "neighborhood": "Petite italie"
+                                },
+                                "kondiaronk": {
+                                    "name": "Belvédère Kondiaronk",
+                                    "type": "Vue sur la ville",
+                                    "price": "none",
+                                    "specifications": "none",
+                                    "neighborhood": "Mont-Royal"
+                                },
+                                "laFontaine": {
+                                    "name": "Parc La Fontaine",
+                                    "type": "Beau parc pour faire une marche",
+                                    "price": "none",
+                                    "specifications": "none",
+                                    "neighborhood": "Le Plateau"
+                                },
+                                "spectactles": {
+                                    "name": "Quartier des Spectacles",
+                                    "type": "Balançoires d'été",
+                                    "price": "none",
+                                    "specifications": "none",
+                                    "neighborhood": "Centre-ville"
+                                },
+                                "oratory": {
+                                    "name": "Oratoire Saint-Joseph",
+                                    "type": "Oratoire catholique",
+                                    "price": "2-4$",
+                                    "specifications": "none",
+                                    "neighborhood": "Côte Des Neiges"
+                                },
+                                "stLaurent": {
+                                    "name": "Boulevard Saint-Laurent",
+                                    "type": "Murales",
+                                    "price": "none",
+                                    "specifications": "none",
+                                    "neighborhood": "Le Plateau"
+                                }
+                            }
+                        }
+                    }
+                },
                 "navigation": {
                     "title": "Menu",
                     "about": {
