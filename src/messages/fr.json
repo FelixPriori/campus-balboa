@@ -66,6 +66,7 @@
                     "title": "MTL BAL JAM",
                     "googleCal": "Sauvegarder à Google Calendar",
                     "registerNow": "INSCRIVEZ-VOUS !",
+                    "registerNowAria": "Ouvre la page d'inscription dans une nouvelle fenêtre",
                     "pageTitle": {
                         "music": "Musique",
                         "about": "À propos",
@@ -537,7 +538,7 @@
                                 }
                             },
                             "lunchAndDinner": {
-                                "title": "LUNCH & DINNER",
+                                "title": "DÎNER / SOUPER",
                                 "darna": {
                                     "name": "Darna Bistroquet",
                                     "type": "Marocain",

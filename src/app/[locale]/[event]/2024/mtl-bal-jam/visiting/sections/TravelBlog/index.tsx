@@ -2,6 +2,7 @@
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import styles from './styles.module.scss'
+import ExternalLink from '@/assets/svgs/external-link';
 
 
 interface SpotCollection {
@@ -99,17 +100,24 @@ function BlogSubSection({ section, subSection, subSectionItems }: { section: str
 
 function BlogSection({ section, sectionItems }: { section: string, sectionItems: string[] }) {
     const t = useTranslations(`Events.2024.MtlBalJam.visitingPage.travelBlogSection.${section}`)
-    const legend = useTranslations(`Events.2024.MtlBalJam.visitingPage.travelBlogSection.legend`)
+    const blog = useTranslations(`Events.2024.MtlBalJam.visitingPage.travelBlogSection`)
     return (
         <div className={styles.blogSection}>
             <div className={styles.image}>
                 <Image src={t('image')} alt={t('imageAlt')} width={250} height={250} />
             </div>
             <div className={styles.blogDetails}>
+                <div className={styles.buttonContainer}>
+                    <a className={styles.button} href={blog('mapUrl')} target="_blank" rel="noopener noreferrer" aria-label={blog('mapAriaLabel')}>
+                        {blog('mapLabel')}
+                        <ExternalLink />
+                    </a>
+                </div>
                 {section === 'foodAndDrinks' && (
+
                     <div className={styles.legend}>
-                        <p>{legend('veg')}</p>
-                        <p>{legend('gluten')}</p>
+                        <p>{blog('legend.veg')}</p>
+                        <p>{blog('legend.gluten')}</p>
                     </div>
                 )}
                 <p className={styles.sectionIntro}>{t('intro')}</p>
@@ -141,11 +149,6 @@ export default function TravelBlog() {
                             sectionItems={Object.keys(travelBlogCollection[key])}
                         />
                     ))}
-                </div>
-                <div className={styles.buttonContainer}>
-                    <a className={styles.button} href={t('mapUrl')} target="_blank" rel="noopener noreferrer" aria-label={t('mapAriaLabel')}>
-                        {t('mapLabel')}
-                    </a>
                 </div>
             </div>
         </section>
