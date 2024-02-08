@@ -1,19 +1,17 @@
 @import '@/layout/breakpoints.scss';
 
 .featuredSection {
+    position: relative;
     padding: 50px;
-    background-image: url("/shape-5.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--campus-color-canard);
 
     @media only screen and (max-width: $breakpoint-small) {
         padding: 50px 26px;
     }
-    
+
     .content {
         display: flex;
         flex-direction: column;
@@ -26,6 +24,8 @@
             text-align: center;
             margin-bottom: 3rem;
             text-align: center;
+            color: var(--campus-color-blanc);
+            z-index: 10;
         }
 
         @media only screen and (max-width: $breakpoint-small) {

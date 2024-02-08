@@ -1,28 +1,29 @@
 @import '@/layout/breakpoints.scss';
 
 .aboutUsSection {
-    padding: 50px;
-    background-image: url("/shape-3.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 85%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  padding: 50px;
+  background-image: url("/wave-top.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top -550px left 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    .content {
-      .aboutUsTitle {
-        letter-spacing: 0.35rem;
-        font-size: 2rem;
-        text-align: center;
-        margin-bottom: 3rem;
-      }
+  .content {
+    .aboutUsTitle {
+      color: var(--color-neutral);
+      letter-spacing: 0.35rem;
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
 
-      .administratorsContainer {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: var(--spacing-s);
-      }
+    .administratorsContainer {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: var(--spacing-s);
     }
   }
+}

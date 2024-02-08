@@ -3,14 +3,18 @@
     border: 1px solid var(--color-dark);
     border-radius: 0.75rem;
     width: fit-content;
-    
+
+    &.noOutline {
+        border: none;
+    }
+
     .option {
         background-color: transparent;
         padding: 0.5rem 1rem;
         border: none;
-        cursor:pointer;
+        cursor: pointer;
 
-        &:not(.active){
+        &:not(.active) {
             color: var(--color-dark);
 
             &:hover {
@@ -22,14 +26,14 @@
 
         &.active {
             background-color: var(--color-secondary);
-            color: var(--color-neutral);
+            color: var(--color-dark);
             pointer-events: none;
         }
-        
+
         &.first {
             border-radius: 0.5rem 0 0 0.5rem;
         }
-        
+
         &.last {
             border-radius: 0 0.5rem 0.5rem 0;
         }

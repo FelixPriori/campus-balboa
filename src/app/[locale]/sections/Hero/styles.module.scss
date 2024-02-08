@@ -1,62 +1,123 @@
 @import '@/layout/breakpoints.scss';
 
 .heroWrapper {
-    margin: 50px;
-    min-height: 75vh;
-    background-image: url("/shape-1.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right;
+  padding: 40px;
+  position: relative;
+  min-height: 950px;
+  display: flex;
+  justify-content: center;
+  background-color: var(--campus-color-blanc);
+  background-image: url("/wave-bottom.png"), url("/circle-dual.png");
+  background-position: bottom -500px left 0, left -50px top -100px;
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, contain;
+
+  .content {
+    min-height: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-  
-    .content {
-      min-height: 100%;
+    flex-direction: column;
+    z-index: 10;
+
+    .languageSwitcher {
+      position: absolute;
+      top: 50px;
+    }
+
+    .logoWrapper {
+      text-align: center;
+      color: var(--campus-color-canard);
+
+      svg {
+        max-width: 125px;
+
+        .outlineLogo {
+          visibility: hidden;
+          animation-delay: 0.5s;
+          stroke-dasharray: 2385;
+          animation-name: draw;
+          animation-duration: 2s;
+          animation-iteration-count: 1;
+          animation-direction: reverse;
+          animation-timing-function: ease-in;
+          animation-fill-mode: forwards;
+        }
+
+        .hiddenLogo {
+          opacity: 0;
+          animation-delay: 2.5s;
+          animation-name: appear;
+          animation-duration: 0.5s;
+          animation-fill-mode: forwards;
+        }
+      }
+    }
+
+    .heroTitle {
+      letter-spacing: 0.5rem;
+      font-size: 2rem;
+      color: var(--color-primary);
+      text-align: center;
+      margin: 20px;
+    }
+
+    .heroDescription {
       display: flex;
-      flex-direction: column;
       justify-content: center;
+      font-size: 1.2rem;
+      max-width: 50%;
+      margin: 10px auto;
 
-      .languageSwitcher {
-        position: absolute;
-        top: 50px;
+      .important {
+        color: var(--color-primary);
+        font-weight: bold;
       }
-      
-      .heroTitle {
-        letter-spacing: 0.5rem;
-        font-size: 3rem;
-      }
+    }
+
+    @media only screen and (max-width: $breakpoint-large) {
       .heroDescription {
-        font-size: 1.2rem;
-        max-width: 50%;
-
-        .important {
-          color: var(--color-primary);
-          font-weight: bold;
-        }
-      };
-
-      @media only screen and (max-width: $breakpoint-large) {
-        .heroDescription {
-          max-width: 75%;
-        }
-      }
-
-      @media only screen and (max-width: $breakpoint-small) {
-        align-items: center;
-        .heroTitle {
-          font-size: 2rem;
-          text-align: center;
-          margin-bottom: 0.75rem;
-        }
-        .heroDescription {
-          max-width: 80%;
-          text-align: center;
-        }
+        max-width: 75%;
       }
     }
 
     @media only screen and (max-width: $breakpoint-small) {
-      margin: 50px 50px 0 50px;
+      align-items: center;
+
+      .heroTitle {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 0.75rem;
+      }
+
+      .heroDescription {
+        max-width: 80%;
+        text-align: center;
+      }
     }
   }
+}
+
+@keyframes draw {
+  0% {
+    stroke-dashoffset: 0;
+    visibility: hidden;
+  }
+
+  1% {
+    visibility: visible;
+  }
+
+  100% {
+    stroke-dashoffset: 2385;
+    visibility: visible;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

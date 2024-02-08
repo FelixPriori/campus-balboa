@@ -4,9 +4,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 1000px;
+    background-image: url("/wave-top.png"), url("/circle-overlap.png");
+    background-size: cover, contain;
+    background-repeat: no-repeat;
+    background-position: top -550px left 0, right -500px top 0;
 
     .text {
         h2 {
+            color: var(--color-neutral);
             letter-spacing: 0.35rem;
             font-size: 2rem;
             text-align: center;

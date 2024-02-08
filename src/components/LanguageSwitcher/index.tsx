@@ -8,27 +8,27 @@ interface LanguageSwitcherProps {
   customOptions?: OptionProps[]
 }
 
-export default function LanguageSwitcher({customStyling, customOptions}: LanguageSwitcherProps) {
-    const router = useRouterWithLocale();
-    const locale = useLocale()
-    return (
-        <PillRadio
-            customStyling={customStyling}
-            options={
-              customOptions ? customOptions :
-              [
-                {
-                  onClick: () => router.setLang('en'),
-                  name: 'EN',
-                  active: locale === 'en'
-                },
-                {
-                  onClick: () => router.setLang('fr'),
-                  name: 'FR',
-                  active: locale === 'fr'
-                },
-              ]
-            }
-        />
-    )
+export default function LanguageSwitcher({ customStyling, customOptions }: LanguageSwitcherProps) {
+  const router = useRouterWithLocale();
+  const locale = useLocale()
+  return (
+    <PillRadio
+      customStyling={customStyling}
+      options={
+        customOptions ? customOptions :
+          [
+            {
+              onClick: () => router.setLang('en'),
+              name: 'EN',
+              active: locale === 'en'
+            },
+            {
+              onClick: () => router.setLang('fr'),
+              name: 'FR',
+              active: locale === 'fr'
+            },
+          ]
+      }
+    />
+  )
 }
