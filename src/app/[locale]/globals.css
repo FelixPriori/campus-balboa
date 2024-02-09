@@ -76,7 +76,6 @@ body {
 
 body {
   box-sizing: border-box;
-  background-color: var(--color-neutral);
   color: var(--color-dark);
   font-family: var(--font-rubik);
 }
@@ -116,6 +115,10 @@ h6 {
     height: 32px;
     width: 32px;
   }
+}
+
+.landing {
+  background-color: var(--color-neutral);
 }
 
 @media (prefers-color-scheme: dark) {

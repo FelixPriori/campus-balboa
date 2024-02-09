@@ -6,12 +6,14 @@ import sectionsRenderer, {
 import { getPageBySlug, getPageMetaDataByPageSlug } from '@/lib/api';
 import { PAGE_FIELDS_QUERY } from '@/lib/queries';
 import { buildPageMetaData } from '@/assets/data/buildPageMetaData';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
+import CampusLogo from '@/assets/svgs/campus-logo';
 
 type Props = {
   params: { locale: string }
 }
 
-export async function generateMetadata({params: {locale}}: Props) {
+export async function generateMetadata({ params: { locale } }: Props) {
   const metaData = await getPageMetaDataByPageSlug(locale, locale);
   const siteUrl = 'https://www.campusbalboa.org'
 
@@ -34,19 +36,19 @@ export async function generateMetadata({params: {locale}}: Props) {
         description: metaData.openGraphImage.description,
       },
       icons: [
-        {rel: 'icon', url: metaData.favicon.url}
+        { rel: 'icon', url: metaData.favicon.url }
       ],
     }
   }
 
-  return buildPageMetaData({locale})
+  return buildPageMetaData({ locale })
 }
 
 export function generateStaticParams() {
-  return [{locale: 'en'}, {locale: 'fr'}];
+  return [{ locale: 'en' }, { locale: 'fr' }];
 }
 
-export default async function Home({params: {locale}}: {params: {locale: string}}) {
+export default async function Home({ params: { locale } }: { params: { locale: string } }) {
   const pageData = await getPageBySlug(locale, locale, PAGE_FIELDS_QUERY);
 
   if (!pageData?.sectionsCollection) {
@@ -54,12 +56,16 @@ export default async function Home({params: {locale}}: {params: {locale: string}
   }
 
   return (
-    <>
+    <div className='landing'>
+      <nav className="app-nav">
+        <CampusLogo />
+        <LanguageSwitcher customStyling='noOutline' />
+      </nav>
       <Hero {...pageData?.hero} />
       <Main>
         {pageData?.sectionsCollection?.items.map((s: any) => sectionsRenderer(s))}
       </Main>
       <Footer {...pageData?.footer} />
-    </>
+    </div>
   )
 }
