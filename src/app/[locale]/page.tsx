@@ -32,6 +32,7 @@ export async function generateMetadata({ params: { locale } }: Props) {
           }
         ],
         title: metaData.title,
+        url: `${siteUrl}/${locale}`,
         locale,
         description: metaData.openGraphImage.description,
       },
