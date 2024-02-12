@@ -414,8 +414,8 @@
                         },
                         "ticketsDetails": {
                             "title": "Tickets include",
-                            "full": "8 hours of workshops,Friday evening social dance with the Michaël Srey Legacy Band quintet,Saturday evening social dance with the Michaël Srey Legacy Band nonet,Sunday evening dance,Toasty snacks throughout the weekend,More surprises and social activities to be announced",
-                            "party": "Friday evening social dance with the Michaël Srey Legacy Band quintet,Saturday evening social dance with the Michaël Srey Legacy Band nonet,Sunday evening dance,Toasty snacks throughout the weekend,More surprises and social activities to be announced"
+                            "full": "8 hours of workshops,Friday evening social dance with the Michaël Srey Legacy Band nonet,Saturday evening social dance with the Michaël Srey Legacy Band nonet,Sunday evening dance,Toasty snacks throughout the weekend,More surprises and social activities to be announced",
+                            "party": "Friday evening social dance with the Michaël Srey Legacy Band nonet,Saturday evening social dance with the Michaël Srey Legacy Band nonet,Sunday evening dance,Toasty snacks throughout the weekend,More surprises and social activities to be announced"
                         },
                         "priceCalendar": {
                             "title": "Price Menu",
@@ -842,20 +842,20 @@
                     }
                 }
             }
+        }
+    },
+    "Components": {
+        "paypal": {
+            "donate": "Donate",
+            "logoAlt": "PayPal logo"
         },
-        "Components": {
-            "paypal": {
-                "donate": "Donate",
-                "logoAlt": "PayPal logo"
-            },
-            "embla": {
-                "changeSlide": "Jump to slide {slideNum}",
-                "nextSlide": "Next slide",
-                "prevSlide": "Previous slide"
-            },
-            "gcal": {
-                "iframeTitle": "Balboa in Montreal Google Calendar"
-            }
+        "embla": {
+            "changeSlide": "Jump to slide {slideNum}",
+            "nextSlide": "Next slide",
+            "prevSlide": "Previous slide"
+        },
+        "gcal": {
+            "iframeTitle": "Balboa in Montreal Google Calendar"
         }
     }
 }
