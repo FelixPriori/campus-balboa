@@ -8,7 +8,7 @@ import { getCollectionBySectionId } from '@/lib/api';
 import { EVENT } from './query';
 import { InfinitySpin } from 'react-loader-spinner';
 
-export default function Events({id, title, anchor}: PageSectionProps) {
+export default function Events({ id, title, anchor }: PageSectionProps) {
     const locale = useLocale()
     const [events, setEvents] = useState([])
 
@@ -23,19 +23,21 @@ export default function Events({id, title, anchor}: PageSectionProps) {
 
     return (
         <section id={anchor} className={styles.eventsSection}>
-            <div className={styles.content}>     
+            <div className={styles.content}>
                 <h2 className={styles.eventsTitle}>{title}</h2>
-                {events.length 
-                ? events.map((e: any) => (
-                    <EventCard
-                        key={e.sys.id}
-                        dark={e.dark}
-                        title={e.title} 
-                        tagline={e.tagline} 
-                        image={e.image} 
-                        link={e.link}
-                    />))
-                : <InfinitySpin width="200" color="var(--color-primary)" />}
+                <div className={styles.eventsList}>
+                    {events.length
+                        ? events.map((e: any) => (
+                            <EventCard
+                                key={e.sys.id}
+                                dark={e.dark}
+                                title={e.title}
+                                tagline={e.tagline}
+                                image={e.image}
+                                link={e.link}
+                            />))
+                        : <InfinitySpin width="200" color="var(--color-primary)" />}
+                </div>
             </div>
         </section>
     );
