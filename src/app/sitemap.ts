@@ -27,6 +27,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: 'https://www.campusbalboa.org/fr/evenements/2024/extracurriculaire-olga',
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: 'https://www.campusbalboa.org/en/events/2024/extracurriculaire-olga',
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
       url: 'https://www.campusbalboa.org/fr/evenements/2024/mtl-bal-jam/music',
       lastModified: new Date(),
       changeFrequency: 'weekly',
