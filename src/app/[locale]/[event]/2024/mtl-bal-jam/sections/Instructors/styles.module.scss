@@ -1,9 +1,10 @@
 .instructorsSection {
     position: relative;
     height: 50vh;
-    background-color: var(--mbj-color-black);
+    min-height: 400px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    background-color: var(--mbj-color-black);
 
     .halfCircle {
         position: absolute;
