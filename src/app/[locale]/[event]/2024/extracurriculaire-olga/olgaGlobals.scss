@@ -1,0 +1,20 @@
+body {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: var(--font-lemon);
+        color: var(--campus-color-taupe);
+    }
+
+    p,
+    a,
+    button,
+    li {
+        font-family: var(--font-rubuk);
+        color: var(--campus-color-taupe);
+    }
+}
