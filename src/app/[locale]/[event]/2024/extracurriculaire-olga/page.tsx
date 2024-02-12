@@ -3,6 +3,7 @@ import { Footer, Hero } from './sections'
 import CampusLogo from '@/assets/svgs/campus-logo'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
 import './olgaGlobals.scss'
+import Navigation from './components/Navigation'
 
 type Props = {
     params: { locale: string }
@@ -59,10 +60,7 @@ export async function generateMetadata({ params }: Props) {
 export default function Olga() {
     return (
         <div className='landing'>
-            <nav className="app-nav">
-                <CampusLogo />
-                <LanguageSwitcher customStyling='noOutline' />
-            </nav>
+            <Navigation />
             <Hero />
             <Footer />
         </div>
