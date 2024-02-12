@@ -13,7 +13,7 @@ export default function Hero() {
             </div>
             <div className={styles.content}>
                 <p className={styles.date}>{t('date')}</p>
-                <h1>{t('title')}</h1>
+                <h1>{t.rich('title', { bold: (chunk) => <strong>{chunk}</strong> })}</h1>
                 <p className={styles.comingSoon}>{t('comingSoon')}</p>
                 <CtaButton />
             </div>

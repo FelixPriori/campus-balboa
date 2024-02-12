@@ -12,6 +12,11 @@
     h1 {
         margin-bottom: 1rem;
         font-size: 2rem;
+
+        strong {
+            font-style: italic;
+            color: var(--campus-color-bleu);
+        }
     }
 
     p {
