@@ -1,13 +1,13 @@
-import BpmBar from '@/components/bpmBar/bpmBar';
-import styles from './page.module.scss'
-import BpmContent from './BpmContent';
-import BpmHeader from './BpmHeader';
-import ScrollListenerWrapper from './ScrollListenerWrapper';
-import LanguageSwitcher from '@/components/LanguageSwitcher';
+// import BpmBar from '@/components/bpmBar/bpmBar';
+// import styles from './page.module.scss'
+// import BpmContent from './BpmContent';
+// import BpmHeader from './BpmHeader';
+// import ScrollListenerWrapper from './ScrollListenerWrapper';
+// import LanguageSwitcher from '@/components/LanguageSwitcher';
 // import BpmDistribution from './BpmDistribution';
 
 type MetadataProps = {
-  params: {locale: string}
+  params: { locale: string }
 }
 
 const robots = {
@@ -45,26 +45,29 @@ export function generateMetadata({ params }: MetadataProps) {
 
 export default function DJ() {
   return (
-    <ScrollListenerWrapper>
-      <div className={styles.language}>
-        <LanguageSwitcher />
-      </div>
-      <div className={styles.container}>
-        <div className={styles.header}>
-          <BpmHeader />
-        </div>
-        <div className={styles.bar}>
-          <div className={styles.sticky}>
-            <BpmBar />
-          </div>
-        </div>
-        <div className={styles.content}>
-          <BpmContent />
-        </div>
-        {/* <div className={styles.distribution}>
-          <BpmDistribution />
-        </div> */}
-      </div>
-    </ScrollListenerWrapper>
+    // <ScrollListenerWrapper>
+    //   <div className={styles.language}>
+    //     <LanguageSwitcher />
+    //   </div>
+    //   <div className={styles.container}>
+    //     <div className={styles.header}>
+    //       <BpmHeader />
+    //     </div>
+    //     <div className={styles.bar}>
+    //       <div className={styles.sticky}>
+    //         <BpmBar />
+    //       </div>
+    //     </div>
+    //     <div className={styles.content}>
+    //       <BpmContent />
+    //     </div>
+    //     {/* <div className={styles.distribution}>
+    //       <BpmDistribution />
+    //     </div> */}
+    //   </div>
+    // </ScrollListenerWrapper>
+    <div>
+      <p>En construction</p>
+    </div>
   )
 }
