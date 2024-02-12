@@ -11,7 +11,12 @@
                 "header": {
                     "date": "26-27-28 avril 2024",
                     "title": "Programme extracurriculaire avec Olga",
-                    "comingSoon": "Un weekend d'ateliers avec Olga à Montréal. Plus de détails à venir."
+                    "comingSoon": "Un weekend d'ateliers avec Olga à Montréal. Plus de détails à venir.",
+                    "cta": {
+                        "text": "Ajouter l'événement sur Facebook",
+                        "href": "https://www.facebook.com/events/732828938947299",
+                        "ariaLabel": "Ouvre dans une nouvelle fenêtre"
+                    }
                 },
                 "copyright": "© Campus Balboa, 2024"
             },

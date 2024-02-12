@@ -2,6 +2,7 @@
 import { useTranslations } from "next-intl"
 import Image from 'next/image'
 import styles from './styles.module.scss'
+import CtaButton from "../../components/CtaButton"
 
 export default function Hero() {
     const t = useTranslations('Events.2024.Olga.header')
@@ -14,6 +15,7 @@ export default function Hero() {
                 <p className={styles.date}>{t('date')}</p>
                 <h1>{t('title')}</h1>
                 <p className={styles.comingSoon}>{t('comingSoon')}</p>
+                <CtaButton />
             </div>
         </header>
     )

@@ -1,0 +1,22 @@
+.ctaButton {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    padding: 8px 24px;
+    margin: 12px 0;
+    background-color: var(--campus-color-canard);
+    color: var(--campus-color-blanc);
+    max-width: fit-content;
+    border-radius: 4px;
+    transition: all 200ms ease-in-out;
+
+    svg {
+        width: 18px;
+        height: 16px;
+    }
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 3px 5px rgba(38, 70, 83, 0.5);
+    }
+}
