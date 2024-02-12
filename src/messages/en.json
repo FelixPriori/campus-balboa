@@ -792,54 +792,54 @@
                     "title": "Coming soon..."
                 }
             }
-        },
-        "Resources": {
-            "dj": {
-                "bpm": {
-                    "title": "Tempo",
-                    "range": "{min} to {max} BPM",
-                    "description": "It is important to note that theses guidelines are entirely subjective. A great DJ will be able to determine the best choice of tempo depending on the situation, and dancers present. Variety and sense of timing is what makes an exceptional set: a set that only stays within the “sweet spot” will be boring, playing slow songs too often might kill the energy of the room, and playing too many fast songs might tire out the dancers. It is impossible to please everybody, so it is imperative that the DJ reads the room and uses their judgement.",
-                    "slowBal": {
-                        "title": "Slow balboa",
-                        "description": "Slow balboa can be danced to very slow music, but dancers tend to be most comfortable around 80 BPM. Therefore, it is recommended to aim for the middle of this range rather than the extremes unless there is a lot of advanced dancers or you are playing more than one slow song in a row."
-                    },
-                    "awkwardRange": {
-                        "title": "Awkward area",
-                        "description": "This range is considered difficult for balboa dancers since it is slightly too fast for slow balboa, and too slow for conventional balboa. It is therefore highly encouraged to avoid this range in most cases."
-                    },
-                    "beginnerClass": {
-                        "title": "Classes",
-                        "description": "In a classroom context, it is sometimes desirable to play a bit slower to give the learners a chance to assimilate concepts."
-                    },
-                    "bulk": {
-                        "title": "Bulk of music",
-                        "description": "Around 80% of the music played at a social dance should be in this range. After an intro class, it is recommended to start lower, and gradually work your way up. Generally, aiming for the middle of the range rather than the extremes, and not playing too many songs in a row of similar BPM will yield best results."
-                    },
-                    "comfortableArea": {
-                        "title": "Comfortable area",
-                        "description": "This range is generally appropriate for most level of dancers. When there are dancers of all levels in the room, the majority will be able to dance comfortably in this range."
-                    },
-                    "sweetSpot": {
-                        "title": "Sweet spot",
-                        "description": "This small range works well for all types of balboa (pure and swing). Most advanced and intermediate dancers will be comfortable social dancing to this range. It is ideal to bring people back to the dance floor after a song that did not work too well (either too slow, fast, or other)."
-                    },
-                    "competitionRange": {
-                        "title": "Competition",
-                        "description": "Internationally, tempos for finals of “open” or advanced competitions will be within this range. Sometimes all-skates will be faster and warm-ups slower."
-                    },
-                    "fastTempo": {
-                        "title": "Fast tempo",
-                        "description": "It is important to note that the more the tempo goes past 220 BPM, the less people will be comfortable dancing to the song. However, the challenge of dancing to extremely fast songs is one of the many pleasures of dancing balboa. It is not recommended to play too many extreme songs in a single social dance."
-                    },
-                    "distribution": {
-                        "title": "Distribution",
-                        "description": "The BPM distribution of a DJ set depends on several factors. In particular, the average level of the dancers present, the quality of the dance floor, the size of the dance floor, the energy level of the room, the timing (start of the evening, end of the evening, start of the set, end of the set), and much more. It is generally recommended to gradually increase and decrease the speed rather than going from one extreme to the other. A fast song played directly after a slow song will sound much faster in contrast, and vice versa. On the other hand, a dance floor that has little energy can benefit from a faster song. Similarly, a dance floor that's too tired for fast songs might regain some vigor after a slow song. This is why it is important to adapt to the people in the room, and every DJ will do this differently.",
-                        "beginner": "Beginner",
-                        "intermediate": "intermediate",
-                        "advanced": "Advanced",
-                        "all": "All",
-                        "y": "Song #"
-                    }
+        }
+    },
+    "Resources": {
+        "dj": {
+            "bpm": {
+                "title": "Tempo",
+                "range": "{min} to {max} BPM",
+                "description": "It is important to note that theses guidelines are entirely subjective. A great DJ will be able to determine the best choice of tempo depending on the situation, and dancers present. Variety and sense of timing is what makes an exceptional set: a set that only stays within the “sweet spot” will be boring, playing slow songs too often might kill the energy of the room, and playing too many fast songs might tire out the dancers. It is impossible to please everybody, so it is imperative that the DJ reads the room and uses their judgement.",
+                "slowBal": {
+                    "title": "Slow balboa",
+                    "description": "Slow balboa can be danced to very slow music, but dancers tend to be most comfortable around 80 BPM. Therefore, it is recommended to aim for the middle of this range rather than the extremes unless there is a lot of advanced dancers or you are playing more than one slow song in a row."
+                },
+                "awkwardRange": {
+                    "title": "Awkward area",
+                    "description": "This range is considered difficult for balboa dancers since it is slightly too fast for slow balboa, and too slow for conventional balboa. It is therefore highly encouraged to avoid this range in most cases."
+                },
+                "beginnerClass": {
+                    "title": "Classes",
+                    "description": "In a classroom context, it is sometimes desirable to play a bit slower to give the learners a chance to assimilate concepts."
+                },
+                "bulk": {
+                    "title": "Bulk of music",
+                    "description": "Around 80% of the music played at a social dance should be in this range. After an intro class, it is recommended to start lower, and gradually work your way up. Generally, aiming for the middle of the range rather than the extremes, and not playing too many songs in a row of similar BPM will yield best results."
+                },
+                "comfortableArea": {
+                    "title": "Comfortable area",
+                    "description": "This range is generally appropriate for most level of dancers. When there are dancers of all levels in the room, the majority will be able to dance comfortably in this range."
+                },
+                "sweetSpot": {
+                    "title": "Sweet spot",
+                    "description": "This small range works well for all types of balboa (pure and swing). Most advanced and intermediate dancers will be comfortable social dancing to this range. It is ideal to bring people back to the dance floor after a song that did not work too well (either too slow, fast, or other)."
+                },
+                "competitionRange": {
+                    "title": "Competition",
+                    "description": "Internationally, tempos for finals of “open” or advanced competitions will be within this range. Sometimes all-skates will be faster and warm-ups slower."
+                },
+                "fastTempo": {
+                    "title": "Fast tempo",
+                    "description": "It is important to note that the more the tempo goes past 220 BPM, the less people will be comfortable dancing to the song. However, the challenge of dancing to extremely fast songs is one of the many pleasures of dancing balboa. It is not recommended to play too many extreme songs in a single social dance."
+                },
+                "distribution": {
+                    "title": "Distribution",
+                    "description": "The BPM distribution of a DJ set depends on several factors. In particular, the average level of the dancers present, the quality of the dance floor, the size of the dance floor, the energy level of the room, the timing (start of the evening, end of the evening, start of the set, end of the set), and much more. It is generally recommended to gradually increase and decrease the speed rather than going from one extreme to the other. A fast song played directly after a slow song will sound much faster in contrast, and vice versa. On the other hand, a dance floor that has little energy can benefit from a faster song. Similarly, a dance floor that's too tired for fast songs might regain some vigor after a slow song. This is why it is important to adapt to the people in the room, and every DJ will do this differently.",
+                    "beginner": "Beginner",
+                    "intermediate": "intermediate",
+                    "advanced": "Advanced",
+                    "all": "All",
+                    "y": "Song #"
                 }
             }
         }
