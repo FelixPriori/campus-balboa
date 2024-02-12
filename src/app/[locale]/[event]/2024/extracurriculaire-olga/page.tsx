@@ -59,7 +59,7 @@ export async function generateMetadata({ params }: Props) {
 
 export default function Olga() {
     return (
-        <div className='landing'>
+        <div className='olga-page'>
             <Navigation />
             <Hero />
             <Footer />
