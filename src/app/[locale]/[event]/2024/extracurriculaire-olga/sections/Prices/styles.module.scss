@@ -1,0 +1,115 @@
+.prices {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 1000px;
+    background-image: url("/wave-top.png"), url("/circle-overlap.png");
+    background-size: cover, contain;
+    background-repeat: no-repeat;
+    background-position: top -550px left 0, right -500px top 0;
+
+    .content {
+        width: 100%;
+
+        h2 {
+            letter-spacing: 0.35rem;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .card {
+            padding: 2rem 4rem;
+            border-radius: var(--border-radius);
+            background-color: #fff;
+            box-shadow: 0 1.5rem 4rem rgba(38, 70, 83, 0.15);
+            width: 50%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 75px 1fr;
+
+            .cardSection {
+                padding: 1rem;
+
+                &.opens {
+                    grid-row: 1 / 2;
+                    grid-column: 1 / -1;
+
+
+                    .date {
+                        margin-bottom: 0.5rem;
+                        text-align: center;
+                    }
+
+                }
+            }
+
+            h3 {
+                font-size: 1.5rem;
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+
+            .list {
+                .item {
+                    margin-bottom: 0.5rem;
+
+                    &.priceContainer {
+                        display: grid;
+                        grid-template-columns: 200px 1fr;
+
+                        .price {
+                            margin-left: 1rem;
+                            font-weight: bold;
+                        }
+                    }
+
+                    &.includes {
+                        margin-left: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 992px) {
+        .content {
+            padding: 40px;
+
+            .card {
+                width: 100%;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        .content {
+            .card {
+                display: flex;
+                flex-direction: column;
+
+                .list {
+                    .item {
+                        &.priceContainer {
+                            display: flex;
+                            justify-content: space-between;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 576px) {
+        .content {
+            padding: 5px;
+
+            .card {
+                padding: 20px;
+            }
+        }
+    }
+}

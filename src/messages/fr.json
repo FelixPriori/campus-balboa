@@ -11,12 +11,44 @@
                 "header": {
                     "date": "26-27-28 avril 2024",
                     "title": "Programme <bold>extra</bold>curriculaire avec Olga",
-                    "comingSoon": "Un weekend d'ateliers avec Olga à Montréal. Plus de détails à venir.",
+                    "comingSoon": "Un weekend d'ateliers avec Olga à Montréal. Les inscriptions débutent le 4 mars à 13h.",
                     "cta": {
                         "text": "Ajouter l'événement sur Facebook",
                         "href": "https://www.facebook.com/events/732828938947299",
                         "ariaLabel": "Ouvre dans une nouvelle fenêtre"
                     }
+                },
+                "pricesSection": {
+                    "sectionTitle": "Inscriptions",
+                    "date": {
+                        "title": "Ouverture",
+                        "date": "4 mars à 13h"
+                    },
+                    "prices": {
+                        "title": "Tarifs",
+                        "tier1": {
+                            "date": "4 mars au 31 mars",
+                            "price": "130,00$"
+                        },
+                        "tier2": {
+                            "date": "1er avril au 21 avril",
+                            "price": "140,00$"
+                        },
+                        "door": {
+                            "date": "À la porte",
+                            "price": "150,00$"
+                        }
+                    },
+                    "includes": {
+                        "title": "Inclus",
+                        "workshops": "6 heures d’ateliers",
+                        "dance": "Danse rapide du vendredi au Cat's Corner"
+                    }
+                },
+                "scheduleSection": {
+                    "sectionTitle": "Horaire",
+                    "link": "Voir l'horaire",
+                    "ariaLabel": "Ouvre dans une nouvelle fenêtre"
                 },
                 "copyright": "© Campus Balboa, 2024"
             },

@@ -1,20 +1,23 @@
 "use client"
-import { useTranslations } from 'next-intl'
 import styles from './styles.module.scss'
 import ExternalLink from '@/assets/svgs/external-link'
 
-export default function CtaButton() {
-    const t = useTranslations('Events.2024.Olga.header.cta')
+type CtaBtton = {
+    href: string,
+    ariaLabel: string,
+    text: string,
+}
 
+export default function CtaButton({ href, ariaLabel, text }: CtaBtton) {
     return (
         <a
             className={styles.ctaButton}
-            href={t('href')}
+            href={href}
             target='_blank'
             rel='noopener noreferrer'
-            aria-label={t('ariaLabel')}
+            aria-label={ariaLabel}
         >
-            {t('text')}
+            {text}
             <ExternalLink />
         </a>
     )

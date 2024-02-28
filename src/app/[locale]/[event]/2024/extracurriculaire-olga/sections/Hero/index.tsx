@@ -15,7 +15,11 @@ export default function Hero() {
                 <p className={styles.date}>{t('date')}</p>
                 <h1>{t.rich('title', { bold: (chunk) => <strong>{chunk}</strong> })}</h1>
                 <p className={styles.comingSoon}>{t('comingSoon')}</p>
-                <CtaButton />
+                <CtaButton
+                    href={t('cta.href')}
+                    text={t('cta.text')}
+                    ariaLabel={t('cta.ariaLabel')}
+                />
             </div>
         </header>
     )

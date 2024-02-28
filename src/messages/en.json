@@ -11,12 +11,44 @@
                 "header": {
                     "date": "April 26-27-28, 2024",
                     "title": "<bold>Extra</bold>curricular program with Olga",
-                    "comingSoon": "A workshop weekend with Olga in Montréal. More details coming soon.",
+                    "comingSoon": "A workshop weekend with Olga in Montréal. Registration opens March 4th at 1pm.",
                     "cta": {
                         "text": "RSVP on Facebook",
                         "href": "https://www.facebook.com/events/732828938947299",
                         "ariaLabel": "Opens in a new window"
                     }
+                },
+                "pricesSection": {
+                    "sectionTitle": "Registration",
+                    "date": {
+                        "title": "Opening",
+                        "date": "March 1st at 1pm"
+                    },
+                    "prices": {
+                        "title": "Pricing",
+                        "tier1": {
+                            "date": "March 4th - March 31st",
+                            "price": "$130.00"
+                        },
+                        "tier2": {
+                            "date": "April 1st - April 21st",
+                            "price": "$140.00"
+                        },
+                        "door": {
+                            "date": "At the door",
+                            "price": "$150.00"
+                        }
+                    },
+                    "includes": {
+                        "title": "Includes",
+                        "workshops": "6 hours of workshops",
+                        "dance": "Friday fast dance at Cat's Corner"
+                    }
+                },
+                "scheduleSection": {
+                    "sectionTitle": "Schedule",
+                    "link": "See schedule",
+                    "ariaLabel": "Opens in a new window"
                 },
                 "copyright": "©2024 Campus Balboa"
             },

@@ -1,5 +1,5 @@
 import BigOG from '@/app/olga-og.jpg'
-import { Footer, Hero } from './sections'
+import { Footer, Hero, Prices, Schedule } from './sections'
 import CampusLogo from '@/assets/svgs/campus-logo'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
 import './olgaGlobals.scss'
@@ -62,6 +62,8 @@ export default function Olga() {
         <div className='olga-page'>
             <Navigation />
             <Hero />
+            <Prices />
+            <Schedule />
             <Footer />
         </div>
     )
