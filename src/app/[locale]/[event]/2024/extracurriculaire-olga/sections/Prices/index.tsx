@@ -1,6 +1,7 @@
 "use client"
 import { useTranslations } from "next-intl"
 import styles from './styles.module.scss'
+import CtaButton from "../../components/CtaButton"
 
 const pricing = ['tier1', 'tier2', 'door']
 
@@ -13,10 +14,6 @@ export default function Prices() {
             <div className={styles.content}>
                 <h2>{t('sectionTitle')}</h2>
                 <div className={styles.card}>
-                    <div className={`${styles.cardSection} ${styles.opens}`}>
-                        <h3>{t('date.title')}</h3>
-                        <p className={styles.date}>{t('date.date')}</p>
-                    </div>
                     <div className={styles.cardSection}>
                         <h3>{t('prices.title')}</h3>
                         <ul className={styles.list}>
@@ -41,6 +38,13 @@ export default function Prices() {
                                 </li>
                             ))}
                         </ul>
+                    </div>
+                    <div className={`${styles.cardSection} ${styles.opens}`}>
+                        <CtaButton
+                            href={t('cta.href')}
+                            text={t('cta.text')}
+                            ariaLabel={t('cta.ariaLabel')}
+                        />
                     </div>
                 </div>
             </div>

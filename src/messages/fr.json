@@ -13,16 +13,17 @@
                     "title": "Programme <bold>extra</bold>curriculaire avec Olga",
                     "comingSoon": "Un weekend d'ateliers avec Olga à Montréal. Les inscriptions débutent le 4 mars à 13h.",
                     "cta": {
-                        "text": "Ajouter l'événement sur Facebook",
-                        "href": "https://www.facebook.com/events/732828938947299",
+                        "text": "S'inscrire",
+                        "href": "https://extracurriculaire-olga.dancecamps.org/booking.php",
                         "ariaLabel": "Ouvre dans une nouvelle fenêtre"
                     }
                 },
                 "pricesSection": {
                     "sectionTitle": "Inscriptions",
-                    "date": {
-                        "title": "Ouverture",
-                        "date": "4 mars à 13h"
+                    "cta": {
+                        "text": "S'inscrire",
+                        "href": "https://extracurriculaire-olga.dancecamps.org/booking.php",
+                        "ariaLabel": "Ouvre dans une nouvelle fenêtre"
                     },
                     "prices": {
                         "title": "Tarifs",
@@ -121,7 +122,7 @@
                         "competitions": "Compétitions",
                         "code-of-conduct": "Code de conduite",
                         "registration": "Inscriptions",
-                        "visiting": "Visiter Montréal",
+                        "visiting": "Visiter Montréal / Tiohtià:ke",
                         "travel": "Voyagement",
                         "accommodation": "Hébergement",
                         "volunteering": "Bénévolat"
@@ -131,7 +132,7 @@
                     "musicSection": {
                         "title": "Musique",
                         "bandName": "Michaël Srey Legacy Band",
-                        "description": "Live band basé à Montréal, il regroupe un collectif de musicien.nes de la scène jazz locale. Allant jusqu'à 9 instrumentistes sur scène, il a coeur de partager les plus inspirantes compositions et arrangements du répertoire big band.",
+                        "description": "Live band basé à Montréal / Tiohtià:ke, il regroupe un collectif de musicien.nes de la scène jazz locale. Allant jusqu'à 9 instrumentistes sur scène, il a coeur de partager les plus inspirantes compositions et arrangements du répertoire big band.",
                         "learnMore": {
                             "text": "Plus de détails...",
                             "href": "/fr/evenements/2024/mtl-bal-jam/music"
@@ -162,7 +163,7 @@
                 "aboutPage": {
                     "descriptionSection": {
                         "title": "À propos de l'événement",
-                        "description": "Le MTL BAL JAM est un événement de balboa montréalais qui aura lieu pour la première fois en juin 2024. C’est un événement organisé par une équipe de danseurs.euses de balboa locaux sous <campus>Campus Balboa</campus>, un organisme à but non lucratif fondé en 2023.<br></br>Le but de l’événement est d’amener des danseurs.euses de balboa de partout dans le monde à Montréal afin de mettre en valeur notre scène locale.<br></br>Pour y arriver, le MTL BAL JAM invitera des instructeurs de balboa inspirants et engagera les meilleurs groupes de musique swing à Montréal.<br></br>Le weekend aura un bon équilibre entre de la danse sociale, des cours de balboa ainsi que des opportunités de découvrir la ville."
+                        "description": "Le MTL BAL JAM est un événement de balboa montréalais qui aura lieu pour la première fois en juin 2024. C’est un événement organisé par une équipe de danseurs.euses de balboa locaux sous <campus>Campus Balboa</campus>, un organisme à but non lucratif fondé en 2023.<br></br>Le but de l’événement est d’amener des danseurs.euses de balboa de partout dans le monde à Montréal / Tiohtià:ke afin de mettre en valeur notre scène locale.<br></br>Pour y arriver, le MTL BAL JAM invitera des instructeurs de balboa inspirants et engagera les meilleurs groupes de musique swing à Montréal / Tiohtià:ke.<br></br>Le weekend aura un bon équilibre entre de la danse sociale, des cours de balboa ainsi que des opportunités de découvrir la ville."
                     },
                     "staffSection": {
                         "title": "Notre équipe",
@@ -273,7 +274,7 @@
                     "liveMusic": {
                         "title": "Musique live",
                         "bandName": "Michaël Srey Legacy Band",
-                        "biography": "Le Michaël Srey Legacy Band est un groupe regroupant un collectif de 5 ou 9 musicien.nes professionnel.les de la scène jazz  de Montréal. Le groupe  a déjà plusieurs concerts à son actif et sa réputation est grandissante.<br></br>Le band connait ses standards et intègre les compositions des grands noms du jazz : Louis Armstrong, Duke Ellington, Fletcher Henderson, Mary Lou Williams mais aussi Jimmy Smith, Quincy Jones ou encore Oscar Peterson. Curieux également des différentes influences et autres développements de cet art, le groupe intègre au sein de son répertoire d'autres musiques provenant des mêmes sources et faisant une part belle au rythme, à l'improvisation et à la danse comme la beguine ou le mambo.<br></br>Michaël Srey sélectionne, arrange et retranscrit avec soin chaque morceau principalement issu du répertoire big band. Ainsi, le groupe s'est constitué d'un répertoire unique, fait sur mesure et comprend des morceaux inédits ajoutés régulièrement aux pupitres.es.<br></br>La qualité de ses musicien.nes ainsi que la composition du groupe lui donnent une grande polyvalence et lui permettent de traverser l'histoire du swing et de ses différents styles : second line de la Nouvelle Orléans, early jazz, swing era, blues, be bop, hard bop ...<br></br>Attachée à la précision et aux couleurs des arrangements iconiques des big bands, la section cuivre fait rutiler chacune de ses notes et la section rythmique vrombir le plancher de l'auditoire.",
+                        "biography": "Le Michaël Srey Legacy Band est un groupe regroupant un collectif de 5 ou 9 musicien.nes professionnel.les de la scène jazz  de Montréal / Tiohtià:ke. Le groupe  a déjà plusieurs concerts à son actif et sa réputation est grandissante.<br></br>Le band connait ses standards et intègre les compositions des grands noms du jazz : Louis Armstrong, Duke Ellington, Fletcher Henderson, Mary Lou Williams mais aussi Jimmy Smith, Quincy Jones ou encore Oscar Peterson. Curieux également des différentes influences et autres développements de cet art, le groupe intègre au sein de son répertoire d'autres musiques provenant des mêmes sources et faisant une part belle au rythme, à l'improvisation et à la danse comme la beguine ou le mambo.<br></br>Michaël Srey sélectionne, arrange et retranscrit avec soin chaque morceau principalement issu du répertoire big band. Ainsi, le groupe s'est constitué d'un répertoire unique, fait sur mesure et comprend des morceaux inédits ajoutés régulièrement aux pupitres.es.<br></br>La qualité de ses musicien.nes ainsi que la composition du groupe lui donnent une grande polyvalence et lui permettent de traverser l'histoire du swing et de ses différents styles : second line de la Nouvelle Orléans, early jazz, swing era, blues, be bop, hard bop ...<br></br>Attachée à la précision et aux couleurs des arrangements iconiques des big bands, la section cuivre fait rutiler chacune de ses notes et la section rythmique vrombir le plancher de l'auditoire.",
                         "link": "https://www.michaelsrey.com/",
                         "logoAlt": "Logo du Michaël Srey Legacy Band"
                     },
@@ -332,7 +333,7 @@
                         "markerTitle": "Casa d'Italia",
                         "infoWindowText": "Casa D'Italia, 505 Rue Jean-Talon E, Montréal, QC H2R 1T6",
                         "venueName": "Casa d'Italia",
-                        "venueDescription": "La Casa d'Italia est le point de référence historique de la communauté italienne et est un témoignage vivant de la grande contribution culturelle, sociale et économique que la communauté Italienne a apportée à Montréal et au Québec.",
+                        "venueDescription": "La Casa d'Italia est le point de référence historique de la communauté italienne et est un témoignage vivant de la grande contribution culturelle, sociale et économique que la communauté Italienne a apportée à Montréal / Tiohtià:ke et au Québec.",
                         "venueAddress": "505 Rue Jean-Talon E, Montréal, QC H2R 1T6",
                         "venueWebsite": "https://www.casaditalia.org/",
                         "cutoutAlt": "Photo de la Casa d'Italia"
@@ -536,7 +537,7 @@
                         "foodAndDrinks": {
                             "intro": "Installez-vous sur un banc coloré ou prennez une marche entre les murales en mangeant une sucrerie ! Voici quelques-unes de nos recommandations :",
                             "image": "/food.png",
-                            "imageAlt": "Photos de plats et de restaurants à Montréal",
+                            "imageAlt": "Photos de plats et de restaurants à Montréal / Tiohtià:ke",
                             "breakfast": {
                                 "title": "DÉJEUNERS / CAFÉS / DESSERTS",
                                 "bernie": {
@@ -695,7 +696,7 @@
                             }
                         },
                         "sightSeeing": {
-                            "intro": "Visitez la ville de Montréal depuis les marchés extérieurs jusqu'aux sites historiques ! N'oubliez-pas :",
+                            "intro": "Visitez la ville de Montréal / Tiohtià:ke depuis les marchés extérieurs jusqu'aux sites historiques ! N'oubliez-pas :",
                             "image": "/sightseeing.png",
                             "imageAlt": "Photos de paysages montréalais",
                             "spots": {
@@ -819,7 +820,7 @@
                         "title": "Voyage",
                         "subtabs": {
                             "visiting": {
-                                "text": "Visiter Montréal",
+                                "text": "Visiter Montréal / Tiohtià:ke",
                                 "href": "/fr/evenements/2024/mtl-bal-jam/visiting"
                             },
                             "travel": {
@@ -900,7 +901,7 @@
             "prevSlide": "Diapositive précédente"
         },
         "gcal": {
-            "iframeTitle": "Calendrier Google du Balboa à Montreal"
+            "iframeTitle": "Calendrier Google du Balboa à Montréal / Tiohtià:ke"
         }
     }
 }

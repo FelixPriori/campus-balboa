@@ -11,18 +11,19 @@
                 "header": {
                     "date": "April 26-27-28, 2024",
                     "title": "<bold>Extra</bold>curricular program with Olga",
-                    "comingSoon": "A workshop weekend with Olga in Montréal. Registration opens March 4th at 1pm.",
+                    "comingSoon": "A workshop weekend with Olga in Montréal / Tiohtià:ke. Registration opens March 4th at 1pm.",
                     "cta": {
-                        "text": "RSVP on Facebook",
-                        "href": "https://www.facebook.com/events/732828938947299",
+                        "text": "Register",
+                        "href": "https://extracurriculaire-olga.dancecamps.org/booking.php",
                         "ariaLabel": "Opens in a new window"
                     }
                 },
                 "pricesSection": {
                     "sectionTitle": "Registration",
-                    "date": {
-                        "title": "Opening",
-                        "date": "March 1st at 1pm"
+                    "cta": {
+                        "text": "Register",
+                        "href": "https://extracurriculaire-olga.dancecamps.org/booking.php",
+                        "ariaLabel": "Opens in a new window"
                     },
                     "prices": {
                         "title": "Pricing",
@@ -85,7 +86,7 @@
                         "competitions": "Competitions",
                         "code-of-conduct": "Code of Conduct",
                         "registration": "Registration",
-                        "visiting": "Visiting Montréal",
+                        "visiting": "Visiting Montréal / Tiohtià:ke",
                         "travel": "Travel",
                         "accommodation": "Accomodation",
                         "volunteering": "Volunteering"
@@ -95,7 +96,7 @@
                     "musicSection": {
                         "title": "Music",
                         "bandName": "Michaël Srey Legacy Band",
-                        "description": "A live band based in Montreal, it brings together a collective of musicians from the local jazz scene. With up to 9 instrumentalists on stage, he is keen to share the most inspiring compositions and arrangements of the big band repertoire.",
+                        "description": "A live band based in Montréal / Tiohtià:ke, it brings together a collective of musicians from the local jazz scene. With up to 9 instrumentalists on stage, he is keen to share the most inspiring compositions and arrangements of the big band repertoire.",
                         "learnMore": {
                             "text": "Learn more...",
                             "href": "/en/events/2024/mtl-bal-jam/music"
@@ -126,7 +127,7 @@
                 "aboutPage": {
                     "descriptionSection": {
                         "title": "About the event",
-                        "description": "MTL BAL JAM is a Montreal based balboa event which will happen for the first time in June of 2024. It is organized by a local team of balboa dancers under the banner of <campus>Campus Balboa</campus>, a nonprofit founded in 2023.<br></br>The goal of the event is to bring balboa dancers from all around the world to Montreal and showcase our local scene at its best.<br></br>In order to achieve this, teachers MTL BAL JAM will hire sought after instructors, and get some of the top swing bands in the city.<br></br>The weekend aims to have a healthy balance between classes, social dancing, and exploration of the city."
+                        "description": "MTL BAL JAM is a Montréal / Tiohtià:ke based balboa event which will happen for the first time in June of 2024. It is organized by a local team of balboa dancers under the banner of <campus>Campus Balboa</campus>, a nonprofit founded in 2023.<br></br>The goal of the event is to bring balboa dancers from all around the world to Montréal / Tiohtià:ke and showcase our local scene at its best.<br></br>In order to achieve this, teachers MTL BAL JAM will hire sought after instructors, and get some of the top swing bands in the city.<br></br>The weekend aims to have a healthy balance between classes, social dancing, and exploration of the city."
                     },
                     "staffSection": {
                         "title": "Meet the team",
@@ -273,7 +274,7 @@
                     "liveMusic": {
                         "title": "Live music",
                         "bandName": "Michaël Srey Legacy Band",
-                        "biography": "The Michaël Srey Legacy Band is a collective of up to 9 professional musicians from the Montreal jazz scene. The group already has several concerts under its belt and its reputation is growing.<br></br>The band knows its standards and includes the compositions of the great names in jazz: Louis Armstrong, Duke Ellington, Fletcher Henderson, Mary Lou Williams but also Jimmy Smith, Quincy Jones and Oscar Peterson. Equally curious about the different influences and developments of this art form, the band's repertoire includes other music from the same sources, with a strong emphasis on rhythm, improvisation and dance such as beguine or mambo.<br></br>Michaël Srey carefully selects, arranges and transcribes each piece mainly from the big band repertoire. Thus, the band has created a unique, tailor-made repertoire with new pieces regularly added to the music stands.<br></br>The quality of its musicians as well as the composition of the group give it great versatility and allow it to traverse the history of swing and its various styles: second line of New Orleans, early jazz, swing era, blues, be bop, hard bop…<br></br>Dedicated to the precision and colors of the iconic arrangements of big bands, the horn section makes each of its notes shine and the rhythm section roars across the dance floor.",
+                        "biography": "The Michaël Srey Legacy Band is a collective of up to 9 professional musicians from the Montréal / Tiohtià:ke jazz scene. The group already has several concerts under its belt and its reputation is growing.<br></br>The band knows its standards and includes the compositions of the great names in jazz: Louis Armstrong, Duke Ellington, Fletcher Henderson, Mary Lou Williams but also Jimmy Smith, Quincy Jones and Oscar Peterson. Equally curious about the different influences and developments of this art form, the band's repertoire includes other music from the same sources, with a strong emphasis on rhythm, improvisation and dance such as beguine or mambo.<br></br>Michaël Srey carefully selects, arranges and transcribes each piece mainly from the big band repertoire. Thus, the band has created a unique, tailor-made repertoire with new pieces regularly added to the music stands.<br></br>The quality of its musicians as well as the composition of the group give it great versatility and allow it to traverse the history of swing and its various styles: second line of New Orleans, early jazz, swing era, blues, be bop, hard bop…<br></br>Dedicated to the precision and colors of the iconic arrangements of big bands, the horn section makes each of its notes shine and the rhythm section roars across the dance floor.",
                         "link": "https://www.michaelsrey.com/",
                         "logoAlt": "Michaël Srey Legacy Band Logo"
                     },
@@ -332,7 +333,7 @@
                         "markerTitle": "Casa d'Italia",
                         "infoWindowText": "Casa D'Italia, 505 Rue Jean-Talon E, Montréal, QC H2R 1T6",
                         "venueName": "Casa d'Italia",
-                        "venueDescription": "La Casa d'Italia is the historical reference point for the Italian community and is a living testimony of the great cultural, social and economic contribution that our community has made to Montreal, and to Quebec.",
+                        "venueDescription": "La Casa d'Italia is the historical reference point for the Italian community and is a living testimony of the great cultural, social and economic contribution that our community has made to Montréal / Tiohtià:ke, and to Quebec.",
                         "venueAddress": "505 Rue Jean-Talon E, Montréal, QC H2R 1T6",
                         "venueWebsite": "https://www.casaditalia.org/",
                         "cutoutAlt": "Photo of the Casa d'Italia"
@@ -536,7 +537,7 @@
                         "foodAndDrinks": {
                             "intro": "Park yourself on a colorful bench or take a mural filled stroll with a tasty treat! Here are some of our recommendations:",
                             "image": "/food.png",
-                            "imageAlt": "Photos of meals and restaurants in Montreal",
+                            "imageAlt": "Photos of meals and restaurants in Montréal / Tiohtià:ke",
                             "breakfast": {
                                 "title": "BREAKFAST/ CAFES/ TREATS",
                                 "bernie": {
@@ -695,9 +696,9 @@
                             }
                         },
                         "sightSeeing": {
-                            "intro": "Take a tour around Montréal from our outdoor markets to some lovely historical sites! Be sure to check out:",
+                            "intro": "Take a tour around Montréal / Tiohtià:ke from our outdoor markets to some lovely historical sites! Be sure to check out:",
                             "image": "/sightseeing.png",
-                            "imageAlt": "Photos of Montreal landmarks",
+                            "imageAlt": "Photos of Montréal / Tiohtià:ke landmarks",
                             "spots": {
                                 "title": "SIGHTSEEING",
                                 "botanical": {
@@ -819,7 +820,7 @@
                         "title": "Travel",
                         "subtabs": {
                             "visiting": {
-                                "text": "Visiting Montréal",
+                                "text": "Visiting Montréal / Tiohtià:ke",
                                 "href": "/en/events/2024/mtl-bal-jam/visiting"
                             },
                             "travel": {
@@ -900,7 +901,7 @@
             "prevSlide": "Previous slide"
         },
         "gcal": {
-            "iframeTitle": "Balboa in Montreal Google Calendar"
+            "iframeTitle": "Balboa in Montréal / Tiohtià:ke Google Calendar"
         }
     }
 }
