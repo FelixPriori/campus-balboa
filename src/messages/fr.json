@@ -70,6 +70,13 @@
                         "subsectionTitle": "Cours <extra>EXTRA</extra> du vendredi",
                         "description": "Le vendredi du Programme ExtraCurriculaire avec Olga, le Cat’s Corner nous accueille pour un cours extra avec Olga avant la danse pour ceux.celles qui en veulent plus ou qui ne peuvent pas faire tout le weekend. Le cours de niveau intermédiaire est disponible en prévente avec rabais à l’achat d’un laissez-passer pour le weekend et sera disponible sans inscription le jour même."
                     },
+                    "level": {
+                        "subsectionTitle": "Niveau requis",
+                        "content": {
+                            "details": "Ceci est un atelier de balboa pour tous niveaux qui nécessite tout de même de connaître les bases de la danse. Les débutants sont les bienvenus aux danses sociales, mais il faut avoir pris quelques mois de cours réguliers avant de s’inscrire aux ateliers. Nous voulons ainsi éviter que vous vous sentiez dépassé durant les ateliers et permettre aux autres participants de se concentrer sur ce qui est enseigné. Si l’un ou plusieurs de ces mots clés vous sont inconnus, s’il vous plaît considérez vous inscrire à des cours de balboa dans votre scène locale !",
+                            "list": "Bal swing,Pure bal,Lollys,Paddle turns,Toss-out,Come around,Swivel,Up-hold,Down-hold,Out and in"
+                        }
+                    },
                     "cta": {
                         "text": "S'inscrire",
                         "href": "https://extracurriculaire-olga.dancecamps.org/booking.php",

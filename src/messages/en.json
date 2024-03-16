@@ -70,6 +70,13 @@
                         "subsectionTitle": "Friday <extra>EXTRA</extra> class",
                         "description": "On the Friday of the ExtraCurricular Program with Olga, Cat’s Corner will be hosting an extra class with Olga before the dance for those who want more and for those who can’t make the whole weekend. This intermediate-level class will be available in advance with a discounted price for those with a weekend pass and will be open to drop-ins on the day of."
                     },
+                    "level": {
+                        "subsectionTitle": "Level requirement",
+                        "content": {
+                            "details": "This is an all levels workshop with a caveat: we assume that you know the basics of balboa to participate in the workshops. Newcomers are welcome to attend the dances, but you should have at least taken a couple of months of classes before registering. This is to ensure that you do not find yourself overwhelmed, and to ensure that other attendees can focus on what is being taught. If any of these words are unknown to you, please consider taking regular classes in your local dance scene instead!",
+                            "list": "Bal swing,Pure bal,Lollys,Paddle turns,Toss-out,Come around,Swivel,Up-hold,Down-hold,Out and in"
+                        }
+                    },
                     "cta": {
                         "text": "Register",
                         "href": "https://extracurriculaire-olga.dancecamps.org/booking.php",

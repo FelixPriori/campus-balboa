@@ -4,6 +4,8 @@ import styles from './styles.module.scss';
 import CtaButton from '../../components/CtaButton';
 import Image from 'next/image';
 
+const getDetails = (items: string) => items?.split(',').map((detail) => <li key={detail}>{detail}</li>)
+
 export default function About() {
     const t = useTranslations('Events.2024.Olga.aboutSection')
 
@@ -48,6 +50,15 @@ export default function About() {
                     <div className={styles.cardSection}>
                         <h3>{t.rich('friday.subsectionTitle', { extra: (chunk) => <strong className={styles.extra}>{chunk}</strong> })}</h3>
                         <p>{t('friday.description')}</p>
+                    </div>
+                    <div className={styles.cardSection}>
+                        <h3>{t.rich('level.subsectionTitle', { extra: (chunk) => <strong className={styles.extra}>{chunk}</strong> })}</h3>
+                        <div className={styles.level}>
+                            <p>{t('level.content.details')}</p>
+                            <ul className={styles.levelList}>
+                                {getDetails(t('level.content.list'))}
+                            </ul>
+                        </div>
                     </div>
                     <div className={`${styles.cardSection} ${styles.cta}`}>
                         <CtaButton

@@ -67,6 +67,14 @@
                     margin-bottom: 0.5rem;
                 }
 
+                .level {
+                    .levelList {
+                        margin-top: 1rem;
+                        margin-left: 1rem;
+                        columns: 2;
+                    }
+                }
+
                 .link {
                     color: var(--campus-color-canard);
                     text-decoration: underline;
