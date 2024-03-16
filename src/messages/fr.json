@@ -46,6 +46,36 @@
                         "dance": "Danse rapide du vendredi au Cat's Corner"
                     }
                 },
+                "aboutSection": {
+                    "sectionTitle": "À propos",
+                    "instructors": {
+                        "subsectionTitle": "Enseignant.es",
+                        "olga": {
+                            "name": "Olga",
+                            "avatarAlt": "Avatr de Olga",
+                            "link": "https://isolobalboa.com/",
+                            "bio": "Olga est née d’une famille d’enseignants et était une boule d’énergie en grandissant : dès un jeune âge, elle a étudié la musique, la gymnastique, l’athlétisme et les arts martiaux. C’est en 2007 qu'elle découvre le Lindy Hop, un coup de foudre instantané. Le goût de la découverte l’amène à explorer plus de styles de danse comme le Blues et plus tard le Balboa. Depuis, elle voyage partout dans le monde pour saisir toujours plus d’opportunités de danser, d’apprendre et de compétitionner. C’est tout naturellement qu’elle partage aujourd’hui son amour pour la musique swing et la danse en enseignant à l’international le Balboa en solo et en partenariat.<br></br>Dans ses cours, Olga adore challenger ses étudiant.es en leur donnant des défis qui travaillent tant la technique que la musicalité dans le but de transmettre son amour pour le Balboa. En ce moment, elle développe son outil de pratique <link>iSoloBalboa</link> : une plateforme numérique d’enseignement du Balboa en solo qui s’adresse aux leaders et followers et qui vise à pratiquer la technique et développer sa créativité et sa voix personnelle."
+                        },
+                        "felix": {
+                            "name": "Felix",
+                            "avatarAlt": "Avatr de Félix",
+                            "bio": "C’est avec grand plaisir qu’on accueille Félix pour supporter Olga dans les cours en partenariat !<br></br>Félix danse le balboa depuis dix ans. C’est l’énergie rotationnelle de cette danse qui a piqué son intérêt en premier lieu, mais il est particulièrement tombé en amour avec celle-ci lorsqu’il a réalisé les possibilités infinies qu’elle peut apporter. Ses ingrédients magiques sont sa relation avec ses partenaires et la musique, lui permettant ainsi de créer des danses où tout est fluide."
+                        }
+                    },
+                    "whatToExpect": {
+                        "subsectionTitle": "À quoi s'attendre?",
+                        "description": "Le Campus Balboa vous présente un weekend d’ateliers avec Olga qui nous vient de la Suède pour la toute première fois.<br></br>Nous offrons 6 heures d’ateliers avec Olga qui seront divisées en 4 blocs de 1h30 comprenant 30 min de concepts de balboa en solo, suivi de 1h d’intégration en danse en couple.<br></br>Olga est réputée internationalement pour sa plateforme de pratique de balboa solo qui permet à des danseur.euses de partout dans le monde de travailler des concepts clés à la maison de façon indépendante.<br></br>En avril, nous aurons la chance immanquable de voir ces concepts être appliqués immédiatement en danse avec partenaire."
+                    },
+                    "friday": {
+                        "subsectionTitle": "Cours <extra>EXTRA</extra> du vendredi",
+                        "description": "Le vendredi du Programme ExtraCurriculaire avec Olga, le Cat’s Corner nous accueille pour un cours extra avec Olga avant la danse pour ceux.celles qui en veulent plus ou qui ne peuvent pas faire tout le weekend. Le cours de niveau intermédiaire est disponible en prévente avec rabais à l’achat d’un laissez-passer pour le weekend et sera disponible sans inscription le jour même."
+                    },
+                    "cta": {
+                        "text": "S'inscrire",
+                        "href": "https://extracurriculaire-olga.dancecamps.org/booking.php",
+                        "ariaLabel": "Ouvre dans une nouvelle fenêtre"
+                    }
+                },
                 "scheduleSection": {
                     "sectionTitle": "Horaire",
                     "link": "Voir l'horaire",

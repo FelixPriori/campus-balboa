@@ -1,9 +1,7 @@
 import BigOG from '@/app/olga-og.jpg'
-import { Footer, Hero, Prices, Schedule } from './sections'
-import CampusLogo from '@/assets/svgs/campus-logo'
-import LanguageSwitcher from '@/components/LanguageSwitcher'
-import './olgaGlobals.scss'
+import { About, Footer, Hero, Prices, Schedule } from './sections'
 import Navigation from './components/Navigation'
+import './olgaGlobals.scss'
 
 type Props = {
     params: { locale: string }
@@ -63,6 +61,7 @@ export default function Olga() {
             <Navigation />
             <Hero />
             <Prices />
+            <About />
             <Schedule />
             <Footer />
         </div>

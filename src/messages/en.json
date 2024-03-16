@@ -46,6 +46,36 @@
                         "dance": "Friday fast dance at Cat's Corner"
                     }
                 },
+                "aboutSection": {
+                    "sectionTitle": "About",
+                    "instructors": {
+                        "subsectionTitle": "Instructors",
+                        "olga": {
+                            "name": "Olga",
+                            "avatarAlt": "Olga's avatar",
+                            "link": "https://isolobalboa.com/",
+                            "bio": "Olga was born into a family of teachers and since her early years has been an energetic live wire – studying music, doing athletics, martial arts and gymnastics. In 2007 she was introduced to Lindy Hop and this is where the real passion story begins. She got dance hooked and started to explore more of the dance world by getting into Blues and later Balboa. She has been actively travelling the globe in pursuit of more opportunities to dance, learn and compete. Later she began to share her love for swing music and dance by teaching. Now Olga is an international Balboa instructor, teaching solo and couple Balboa all over the world.<br></br>In her classes, she pays a lot of attention to getting the students interested and involved by giving challenging and fun tasks, working both on technique and musicality and infecting them even more with the love of dancing. For the time being she is passionately developing a new direction of swing dance practices – <link>iSoloBalboa</link> – offline and online solo classes for Balboa leaders and followers which aim at polishing up technique and developing creativity and personal aesthetics."
+                        },
+                        "felix": {
+                            "name": "Felix",
+                            "avatarAlt": "Felix's avatar",
+                            "bio": "It is with great pleasure that we welcome Félix to assist Olga during partnered classes!<br></br>Félix has been dancing balboa for ten years which intrigued him in the first place because of its rotational energy. He fell in love with the dance when he realized how endless the possibilities were. Developing a close relationship with the music and his partner, and having dances where everything flows is what keeps him hooked."
+                        }
+                    },
+                    "whatToExpect": {
+                        "subsectionTitle": "What to expect?",
+                        "description": "Campus Balboa offers a workshop with Olga, who comes directly from Sweden for the very first time.<br></br>We will offer 6 h of workshops that will be split into 4 blocks of 1.5 h which will include 30 m of solo balboa concepts, followed by an integration into your social dancing with a partner.<br></br>Olga is known internationally for her online solo balboa classes, which allow balboa dancers around the world to practice key concepts of the dance from the comfort of their homes.<br></br>In April, we will have the rare opportunity to see how those concepts can be applied to partnered dancing."
+                    },
+                    "friday": {
+                        "subsectionTitle": "Friday <extra>EXTRA</extra> class",
+                        "description": "On the Friday of the ExtraCurricular Program with Olga, Cat’s Corner will be hosting an extra class with Olga before the dance for those who want more and for those who can’t make the whole weekend. This intermediate-level class will be available in advance with a discounted price for those with a weekend pass and will be open to drop-ins on the day of."
+                    },
+                    "cta": {
+                        "text": "Register",
+                        "href": "https://extracurriculaire-olga.dancecamps.org/booking.php",
+                        "ariaLabel": "Opens in a new window"
+                    }
+                },
                 "scheduleSection": {
                     "sectionTitle": "Schedule",
                     "link": "See schedule",

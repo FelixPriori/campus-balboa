@@ -3,15 +3,13 @@
 .scheduleSection {
     padding: 50px;
     min-height: 700px;
-    background-image: url("/wave-bottom.png"), url("/circle-overlap.png");
-    background-size: cover, contain;
-    background-repeat: no-repeat, no-repeat;
-    background-position: bottom -150px left 0, left 0 top 0;
+    background-color: var(--campus-color-canard);
     display: flex;
     justify-content: center;
     align-items: center;
 
     h2 {
+        color: var(--campus-color-blanc);
         letter-spacing: 0.35rem;
         font-size: 2rem;
         text-align: center;
