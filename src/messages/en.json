@@ -811,42 +811,40 @@
                             "title": "Traveling to Montréal/Tiohtià:ke",
                             "plane": {
                                 "title": "Plane",
-                                "place": "Pierre Elliott Trudeau International Airport",
+                                "place": "Pierre Elliott Trudeau International Airport (YUL)",
                                 "address": "975, boulevard Roméo-Vachon Nord. Dorval, QC H4Y 1H1 (Arrivals)",
                                 "details": "The 747 bus costs $11.00 per passenger and goes directly to Lionel-Groulx metro station.<br></br>A cab from the airport to downtown costs between $50.00 and $70.00."
                             },
                             "train": {
                                 "title": "Train",
                                 "place": "Gare Centrale de Montréal",
-                                "address": "895 de la Gauchetière Street West, Montréal, Québec, Canada, H3B 4G1",
-                                "details": ""
+                                "address": "895 de la Gauchetière Street West, Montréal, Québec, Canada, H3B 4G1"
                             },
                             "bus": {
                                 "title": "Bus",
                                 "place": "Gare d'autocars de Montréal",
-                                "address": "1717, Berri street, Montréal, Québec, Canada, H2L 4E9",
-                                "details": ""
+                                "address": "1717, Berri street, Montréal, Québec, Canada, H2L 4E9"
                             }
                         },
                         "toTheEvent": {
                             "title": "Traveling to the event",
                             "casa": {
-                                "title": "Casa d'Italia",
+                                "title": "Casa d'Italia (classes, Firday & Satuday dances)",
                                 "address": "505 Jean-Talon Street East, Montréal, QC H2R 1T6",
                                 "intersection": "Corner of Berri street.",
-                                "metro": "Jean-Talon"
+                                "metro": "Jean-Talon (blue and orange line)"
                             },
                             "cenne": {
-                                "title": "La Cenne",
+                                "title": "La Cenne (Sunday dance)",
                                 "address": "7755 Saint-Laurent boulevard, suite 300, Montreal, QC H2R 1X1",
                                 "intersection": "Between Gounod Street and Villeray Street.",
-                                "metro": "De Castelnau"
+                                "metro": "De Castelnau (blue line) or Jarry (orange line)"
                             },
                             "jarry": {
-                                "title": "Parc Jarry",
+                                "title": "Parc Jarry (Sunday evening gathering)",
                                 "address": "205 Gary-Carter Street, Montréal, QC H2R 2V7",
                                 "intersection": "Exact location to be determined.",
-                                "metro": "De Castelnau"
+                                "metro": "De Castelnau (blue line)"
                             },
                             "metroPrefix": "Metro: "
                         },
@@ -856,7 +854,7 @@
                             "publicTransit": {
                                 "title": "Public transit",
                                 "opus": {
-                                    "description": "If you want to use city busses or the métro subway system, we recommend getting the “Opus” card <link>3-day, All modes A</link>",
+                                    "description": "If you want to use city busses or the métro subway system, we recommend getting the “Opus” card <link>3-day, All modes A</link> which includes the trip for the 747 from the airport.",
                                     "link": "https://www.stm.info/en/info/fares/transit-fares/3-day-all-modes"
                                 },
                                 "app": {
@@ -868,6 +866,10 @@
                                 "title": "Bixi",
                                 "description": "<link>Bixi</link> is a bike rental service which costs $1.35 per trip or $22 for a monthly subscription. There are Bixi stations all around the city and bike lanes conveniently located to facilitate your travels by bike.",
                                 "link": "https://bixi.com/en/pricing/"
+                            },
+                            "car": {
+                                "title": "Car",
+                                "description": "Parking spaces are limited around the Casa d’Italia, so plan your trip accordingly if traveling by car!"
                             }
                         }
                     },

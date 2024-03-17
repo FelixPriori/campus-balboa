@@ -811,42 +811,40 @@
                         "title": "Se rendre à Montréal/Tiohtià:ke",
                         "plane": {
                             "title": "Avion",
-                            "place": "Aéroport Internationale Pierre-Élliot Trudeau",
+                            "place": "Aéroport Internationale Pierre-Élliot Trudeau (YUL)",
                             "address": "975 Boul. Roméo Vachon Nord (Arrivées), Dorval, QC H4Y 1H1",
                             "details": "L’autobus 747 coûte 11,00$ par passager et se rend directement de l’aéroport à la station de métro Lionel-Groulx.<br></br>En taxi, c’est entre 50,00$ et 70,00$ de l’aéroport pour se rendre au centre-ville."
                         },
                         "train": {
                             "title": "Train",
                             "place": "Gare Centrale de Montréal",
-                            "address": "895 de la Gauchetière Ouest, Montréal, Québec, Canada, H3B 4G1",
-                            "details": ""
+                            "address": "895 de la Gauchetière Ouest, Montréal, Québec, Canada, H3B 4G1"
                         },
                         "bus": {
-                            "title": "Autobus",
+                            "title": "Autocar",
                             "place": "Gare d'autocars de Montréal",
-                            "address": "1717, rue Berri, Montréal, Québec, Canada, H2L 4E9",
-                            "details": ""
+                            "address": "1717, rue Berri, Montréal, Québec, Canada, H2L 4E9"
                         }
                     },
                     "toTheEvent": {
                         "title": "Se rendre à l'événement",
                         "casa": {
-                            "title": "Casa d'Italia",
+                            "title": "Casa d'Italia (cours, danses du vendredi et samedi)",
                             "address": "505 Rue Jean-Talon E, Montréal, QC H2R 1T6",
                             "intersection": "Au coin de la rue Berri.",
-                            "metro": "Jean-Talon"
+                            "metro": "Jean-Talon (ligne bleue et orange)"
                         },
                         "cenne": {
-                            "title": "La Cenne",
+                            "title": "La Cenne (dansse du dimanche)",
                             "address": "7755 Boul. Saint-Laurent Suite 300, Montreal, QC H2R 1X1",
                             "intersection": "Entre Gounod et Villeray.",
-                            "metro": "De Castelnau"
+                            "metro": "De Castelnau (ligne bleue) ou Jarry (ligne orange)"
                         },
                         "jarry": {
-                            "title": "Parc Jarry",
+                            "title": "Parc Jarry (regroupement du dimanche soir)",
                             "address": "205 Rue Gary-Carter, Montréal, QC H2R 2V7",
                             "intersection": "Emplacement exact à déterminer.",
-                            "metro": "De Castelnau"
+                            "metro": "De Castelnau (ligne bleue)"
                         },
                         "metroPrefix": "Metro : "
                     },
@@ -856,7 +854,7 @@
                         "publicTransit": {
                             "title": "Transports en commun",
                             "opus": {
-                                "description": "Si vous devez prendre le métro ou l’autobus durant le weekend, nous recommandons d’acheter le titre : <link>3 jours, Tous modes A</link>",
+                                "description": "Si vous devez prendre le métro ou l’autobus durant le weekend, nous recommandons d’acheter le titre : <link>3 jours, Tous modes A</link> qui inclut l’autobus 747 de l’aéroport.",
                                 "link": "https://www.stm.info/fr/tarifs/titres-de-transport/3-jours-tous-modes"
                             },
                             "app": {
@@ -868,6 +866,10 @@
                             "title": "Bixi",
                             "description": "<link>Bixi</link> est un service de location de vélos à 1,35$ / trajets ou 22$ pour un abonnement mensuel. Il y a des bornes de Bixi partout dans la ville et des pistes cyclables sont aménagées pour faciliter les déplacements à vélo.",
                             "link": "https://bixi.com/tarifs/"
+                        },
+                        "car": {
+                            "title": "Auto",
+                            "description": "Les places de stationnement sont limitées proche de la Casa d’Italia, il est recommandé de prévoir un temps pour la recherche d’un parking."
                         }
                     }
                 },

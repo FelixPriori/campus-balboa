@@ -16,6 +16,17 @@ export default function ToMontreal() {
                             <h3 className={styles.modeTitle}>{t(`${key}.title`)}</h3>
                             <p className={styles.modePlace}>{t(`${key}.place`)}</p>
                             <p className={styles.modeAddress}>{t(`${key}.address`)}</p>
+                            {
+                                key === 'plane' && (
+                                    <p>
+                                        {
+                                            t.rich(`${key}.details`, {
+                                                br: () => <br />
+                                            })
+                                        }
+                                    </p>
+                                )
+                            }
                         </div>
                     ))
                 }
