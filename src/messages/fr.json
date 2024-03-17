@@ -871,6 +871,17 @@
                             "title": "Auto",
                             "description": "Les places de stationnement sont limitées proche de la Casa d’Italia, il est recommandé de prévoir un temps pour la recherche d’un parking."
                         }
+                    },
+                    "housing": {
+                        "title": "Hébergement",
+                        "hotel": {
+                            "description": "Because of local restrictions, there are no hotels in the MTL BAL JAM neighborhood. As such, you may consider other neighborhoods closer to downtown if you want to rent a room or a hostel. However, you can look on housing websites such as <link>couchsurfing</link>.",
+                            "link": "https://www.couchsurfing.com/"
+                        },
+                        "community": {
+                            "description": "Visit the event’s Facebook page to find the <link>pinned post</link> about housing to see what the offer is within the community.",
+                            "link": "https://www.facebook.com/events/843165910936891/?post_id=928359642417517&view=permalink&notif_id=1710706831431731&notif_t=feedback_reaction_generic&ref=notif"
+                        }
                     }
                 },
                 "navigation": {
