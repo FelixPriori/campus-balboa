@@ -29,7 +29,8 @@ export default function About() {
                                                 br: () => <br />,
                                                 link: (chunk) => <a className={styles.link} href={t('instructors.olga.link')} rel="noopener noreferrer" target="_blank">{chunk}</a>
                                             }
-                                        )}
+                                        )
+                                    }
                                 </p>
                             </div>
                         </div>
@@ -49,7 +50,14 @@ export default function About() {
                     </div>
                     <div className={styles.cardSection}>
                         <h3>{t.rich('friday.subsectionTitle', { extra: (chunk) => <strong className={styles.extra}>{chunk}</strong> })}</h3>
-                        <p>{t('friday.description')}</p>
+                        {
+                            t.rich('friday.description',
+                                {
+                                    br: () => <br />,
+                                    link: (chunk) => <a className={styles.link} href={t('friday.link')} rel="noopener noreferrer" target="_blank">{chunk}</a>
+                                }
+                            )
+                        }
                     </div>
                     <div className={styles.cardSection}>
                         <h3>{t.rich('level.subsectionTitle', { extra: (chunk) => <strong className={styles.extra}>{chunk}</strong> })}</h3>

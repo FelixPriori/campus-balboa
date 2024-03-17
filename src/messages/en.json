@@ -68,7 +68,8 @@
                     },
                     "friday": {
                         "subsectionTitle": "Friday <extra>EXTRA</extra> class",
-                        "description": "On the Friday of the ExtraCurricular Program with Olga, Cat’s Corner will be hosting an extra class with Olga before the dance for those who want more and for those who can’t make the whole weekend. This intermediate-level class will be available in advance with a discounted price for those with a weekend pass and will be open to drop-ins on the day of."
+                        "link": "https://www.catscorner.ca/",
+                        "description": "On the Friday of the ExtraCurricular Program with Olga, <link>Cat’s Corner</link> will be hosting an extra class with Olga before the dance for those who want more and for those who can’t make the whole weekend. This intermediate-level class will be available in advance with a discounted price for those with a weekend pass and will be open to drop-ins on the day of."
                     },
                     "level": {
                         "subsectionTitle": "Level requirement",
@@ -562,7 +563,7 @@
                     }
                 },
                 "visitingPage": {
-                    "title": "Wine & Dine",
+                    "title": "Food & Drinks",
                     "travelBlogSection": {
                         "mapUrl": "https://www.google.com/maps/d/edit?mid=15C3q00URmitiir_DEOKs0F0pDU7YOkY&usp=drive_link",
                         "mapLabel": "View full map",
