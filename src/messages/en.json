@@ -1,945 +1,1010 @@
-{
-    "Event": {
-        "title": "Balboa Event",
-        "back": "Back",
-        "changeLang": "FR",
-        "registerCta": "Register"
-    },
-    "Events": {
-        "2024": {
-            "Olga": {
-                "header": {
-                    "date": "April 26-27-28, 2024",
-                    "title": "<bold>Extra</bold>curricular program with Olga",
-                    "comingSoon": "A workshop weekend with Olga in Montréal / Tiohtià:ke. Registration is live!",
-                    "cta": {
-                        "text": "Register",
-                        "href": "https://extracurriculaire-olga.dancecamps.org/booking.php",
-                        "ariaLabel": "Opens in a new window"
-                    }
-                },
-                "pricesSection": {
-                    "sectionTitle": "Registration",
-                    "cta": {
-                        "text": "Register",
-                        "href": "https://extracurriculaire-olga.dancecamps.org/booking.php",
-                        "ariaLabel": "Opens in a new window"
+    {
+        "Event": {
+            "title": "Balboa Event",
+            "back": "Back",
+            "changeLang": "FR",
+            "registerCta": "Register"
+        },
+        "Events": {
+            "2024": {
+                "Olga": {
+                    "header": {
+                        "date": "April 26-27-28, 2024",
+                        "title": "<bold>Extra</bold>curricular program with Olga",
+                        "comingSoon": "A workshop weekend with Olga in Montréal / Tiohtià:ke. Registration is live!",
+                        "cta": {
+                            "text": "Register",
+                            "href": "https://extracurriculaire-olga.dancecamps.org/booking.php",
+                            "ariaLabel": "Opens in a new window"
+                        }
                     },
-                    "prices": {
-                        "title": "Pricing",
-                        "tier1": {
-                            "date": "March 4th - March 31st",
-                            "price": "$130.00"
+                    "pricesSection": {
+                        "sectionTitle": "Registration",
+                        "cta": {
+                            "text": "Register",
+                            "href": "https://extracurriculaire-olga.dancecamps.org/booking.php",
+                            "ariaLabel": "Opens in a new window"
                         },
-                        "tier2": {
-                            "date": "April 1st - April 21st",
-                            "price": "$140.00"
-                        },
-                        "door": {
-                            "date": "At the door",
-                            "price": "$150.00"
-                        }
-                    },
-                    "includes": {
-                        "title": "Includes",
-                        "workshops": "6 hours of workshops",
-                        "dance": "Friday fast dance at Cat's Corner"
-                    }
-                },
-                "aboutSection": {
-                    "sectionTitle": "About",
-                    "instructors": {
-                        "subsectionTitle": "Instructors",
-                        "olga": {
-                            "name": "Olga",
-                            "avatarAlt": "Olga's avatar",
-                            "link": "https://isolobalboa.com/",
-                            "bio": "Olga was born into a family of teachers and since her early years has been an energetic live wire – studying music, doing athletics, martial arts and gymnastics. In 2007 she was introduced to Lindy Hop and this is where the real passion story begins. She got dance hooked and started to explore more of the dance world by getting into Blues and later Balboa. She has been actively travelling the globe in pursuit of more opportunities to dance, learn and compete. Later she began to share her love for swing music and dance by teaching. Now Olga is an international Balboa instructor, teaching solo and couple Balboa all over the world.<br></br>In her classes, she pays a lot of attention to getting the students interested and involved by giving challenging and fun tasks, working both on technique and musicality and infecting them even more with the love of dancing. For the time being she is passionately developing a new direction of swing dance practices – <link>iSoloBalboa</link> – offline and online solo classes for Balboa leaders and followers which aim at polishing up technique and developing creativity and personal aesthetics."
-                        },
-                        "felix": {
-                            "name": "Felix",
-                            "avatarAlt": "Felix's avatar",
-                            "bio": "It is with great pleasure that we welcome Félix to assist Olga during partnered classes!<br></br>Félix has been dancing balboa for ten years which intrigued him in the first place because of its rotational energy. He fell in love with the dance when he realized how endless the possibilities were. Developing a close relationship with the music and his partner, and having dances where everything flows is what keeps him hooked."
-                        }
-                    },
-                    "whatToExpect": {
-                        "subsectionTitle": "What to expect?",
-                        "description": "Campus Balboa offers a workshop with Olga, who comes directly from Sweden for the very first time.<br></br>We will offer 6 h of workshops that will be split into 4 blocks of 1.5 h which will include 30 m of solo balboa concepts, followed by an integration into your social dancing with a partner.<br></br>Olga is known internationally for her online solo balboa classes, which allow balboa dancers around the world to practice key concepts of the dance from the comfort of their homes.<br></br>In April, we will have the rare opportunity to see how those concepts can be applied to partnered dancing."
-                    },
-                    "friday": {
-                        "subsectionTitle": "Friday <extra>EXTRA</extra> class",
-                        "link": "https://www.catscorner.ca/",
-                        "description": "On the Friday of the ExtraCurricular Program with Olga, <link>Cat’s Corner</link> will be hosting an extra class with Olga before the dance for those who want more and for those who can’t make the whole weekend. This intermediate-level class will be available in advance with a discounted price for those with a weekend pass and will be open to drop-ins on the day of."
-                    },
-                    "level": {
-                        "subsectionTitle": "Level requirement",
-                        "content": {
-                            "details": "This is an all levels workshop with a caveat: we assume that you know the basics of balboa to participate in the workshops. Newcomers are welcome to attend the dances, but you should have at least taken a couple of months of classes before registering. This is to ensure that you do not find yourself overwhelmed, and to ensure that other attendees can focus on what is being taught. If any of these words are unknown to you, please consider taking regular classes in your local dance scene instead!",
-                            "list": "Bal swing,Pure bal,Lollys,Paddle turns,Toss-out,Come around,Swivel,Up-hold,Down-hold,Out and in"
-                        }
-                    },
-                    "cta": {
-                        "text": "Register",
-                        "href": "https://extracurriculaire-olga.dancecamps.org/booking.php",
-                        "ariaLabel": "Opens in a new window"
-                    }
-                },
-                "scheduleSection": {
-                    "sectionTitle": "Schedule",
-                    "link": "See schedule",
-                    "ariaLabel": "Opens in a new window"
-                },
-                "copyright": "©2024 Campus Balboa"
-            },
-            "MtlBalJam": {
-                "subscribe": {
-                    "title": "Subscribe for toasty details",
-                    "email": "Email",
-                    "emailExample": "youremail@example.com",
-                    "firstName": "First name",
-                    "firstNamePlaceholder": "Your first name",
-                    "lastName": "Last name",
-                    "lastNamePlaceholder": "Your last name",
-                    "permission": "I consent to receive marketing information regarding MTL BAL JAM",
-                    "subscribe": "Subscribe",
-                    "success": "You are signed up for the newsletter.",
-                    "error": "Something went wrong. Try again later."
-                },
-                "header": {
-                    "date": "June 21-22-23, 2024",
-                    "registration": {
-                        "text": "REGISTRATIONS: ",
-                        "date": "January 18th, 2024"
-                    },
-                    "title": "MTL BAL JAM",
-                    "googleCal": "Save to Google Calendar",
-                    "registerNow": "REGISTER NOW!",
-                    "registerNowAria": "Opens registration page in a new window",
-                    "pageTitle": {
-                        "music": "Music",
-                        "about": "About",
-                        "venue": "Venue",
-                        "instructors": "Instructors",
-                        "extra": "Extra",
-                        "competitions": "Competitions",
-                        "code-of-conduct": "Code of Conduct",
-                        "registration": "Registration",
-                        "visiting": "Visiting Montréal / Tiohtià:ke",
-                        "travel": "Travel",
-                        "accommodation": "Accomodation",
-                        "volunteering": "Volunteering"
-                    }
-                },
-                "homePage": {
-                    "musicSection": {
-                        "title": "Music",
-                        "bandName": "Michaël Srey Legacy Band",
-                        "description": "A live band based in Montréal / Tiohtià:ke, it brings together a collective of musicians from the local jazz scene. With up to 9 instrumentalists on stage, he is keen to share the most inspiring compositions and arrangements of the big band repertoire.",
-                        "learnMore": {
-                            "text": "Learn more...",
-                            "href": "/en/events/2024/mtl-bal-jam/music"
-                        }
-                    },
-                    "instructorsSection": {
-                        "title": "Instructors",
-                        "instructorsNames": "Yulia & Sasha",
-                        "description": "Yulia and Sasha are two UK based Balboa enthusiasts: dancers, instructors and competitors.  They offer classes, short courses and mini-workshops in London, as well travel to teach Balboa across Europe.",
-                        "learnMore": {
-                            "text": "Learn more...",
-                            "href": "/en/events/2024/mtl-bal-jam/instructors"
-                        }
-                    },
-                    "venueSection": {
-                        "title": "Venue",
-                        "learnMore": {
-                            "text": "Check out our venue...",
-                            "href": "/en/events/2024/mtl-bal-jam/venue"
-                        }
-                    },
-                    "registrationSection": {
-                        "title": "Registration",
-                        "detailsLink": "/en/events/2024/mtl-bal-jam/registration",
-                        "description": "You can now register by going to our <registration>registration page</registration>! Or if you want to see what the options are, <details>click here</details>."
-                    }
-                },
-                "aboutPage": {
-                    "descriptionSection": {
-                        "title": "About the event",
-                        "description": "MTL BAL JAM is a Montréal / Tiohtià:ke based balboa event which will happen for the first time in June of 2024. It is organized by a local team of balboa dancers under the banner of <campus>Campus Balboa</campus>, a nonprofit founded in 2023.<br></br>The goal of the event is to bring balboa dancers from all around the world to Montréal / Tiohtià:ke and showcase our local scene at its best.<br></br>In order to achieve this, teachers MTL BAL JAM will hire sought after instructors, and get some of the top swing bands in the city.<br></br>The weekend aims to have a healthy balance between classes, social dancing, and exploration of the city."
-                    },
-                    "staffSection": {
-                        "title": "Meet the team",
-                        "staff": {
-                            "bree": {
-                                "name": "Bree",
-                                "pronouns": "She/Her",
-                                "image": {
-                                    "src": "/bree.jpg",
-                                    "alt": "Photo of Bree"
-                                }
+                        "prices": {
+                            "title": "Pricing",
+                            "tier1": {
+                                "date": "March 4th - March 31st",
+                                "price": "$130.00"
                             },
-                            "cara": {
-                                "name": "Cara",
-                                "pronouns": "She/Her",
-                                "image": {
-                                    "src": "/cara.jpg",
-                                    "alt": "Photo of Cara"
-                                }
+                            "tier2": {
+                                "date": "April 1st - April 21st",
+                                "price": "$140.00"
+                            },
+                            "door": {
+                                "date": "At the door",
+                                "price": "$150.00"
+                            }
+                        },
+                        "includes": {
+                            "title": "Includes",
+                            "workshops": "6 hours of workshops",
+                            "dance": "Friday fast dance at Cat's Corner"
+                        }
+                    },
+                    "aboutSection": {
+                        "sectionTitle": "About",
+                        "instructors": {
+                            "subsectionTitle": "Instructors",
+                            "olga": {
+                                "name": "Olga",
+                                "avatarAlt": "Olga's avatar",
+                                "link": "https://isolobalboa.com/",
+                                "bio": "Olga was born into a family of teachers and since her early years has been an energetic live wire – studying music, doing athletics, martial arts and gymnastics. In 2007 she was introduced to Lindy Hop and this is where the real passion story begins. She got dance hooked and started to explore more of the dance world by getting into Blues and later Balboa. She has been actively travelling the globe in pursuit of more opportunities to dance, learn and compete. Later she began to share her love for swing music and dance by teaching. Now Olga is an international Balboa instructor, teaching solo and couple Balboa all over the world.<br></br>In her classes, she pays a lot of attention to getting the students interested and involved by giving challenging and fun tasks, working both on technique and musicality and infecting them even more with the love of dancing. For the time being she is passionately developing a new direction of swing dance practices – <link>iSoloBalboa</link> – offline and online solo classes for Balboa leaders and followers which aim at polishing up technique and developing creativity and personal aesthetics."
                             },
                             "felix": {
                                 "name": "Felix",
-                                "pronouns": "He/Him",
-                                "image": {
-                                    "src": "/felix.jpg",
-                                    "alt": "Photo of Felix"
-                                }
-                            },
-                            "gab": {
-                                "name": "Gabrielle",
-                                "pronouns": "She/Her",
-                                "image": {
-                                    "src": "/gabrielle.png",
-                                    "alt": "Photo of Gabrielle"
-                                }
-                            },
-                            "katya": {
-                                "name": "Katya",
-                                "pronouns": "She/They",
-                                "image": {
-                                    "src": "/katya.jpg",
-                                    "alt": "Photo of Katya"
-                                }
-                            },
-                            "kim": {
-                                "name": "Kim",
-                                "pronouns": "She/Her",
-                                "image": {
-                                    "src": "/kim.jpg",
-                                    "alt": "Photo of Kim"
-                                }
-                            },
-                            "melanie": {
-                                "name": "Melanie",
-                                "pronouns": "She/Her",
-                                "image": {
-                                    "src": "/melanie.jpg",
-                                    "alt": "Photo of Mélanie"
-                                }
-                            },
-                            "sara": {
-                                "name": "Sara",
-                                "pronouns": "She/Her",
-                                "image": {
-                                    "src": "/sara.jpg",
-                                    "alt": "Photo of Sara"
-                                }
-                            },
-                            "sihem": {
-                                "name": "Sihem",
-                                "pronouns": "She/Her",
-                                "image": {
-                                    "src": "/sihem.jpg",
-                                    "alt": "Photo of Sihem"
-                                }
-                            },
-                            "sophie": {
-                                "name": "Sophie",
-                                "pronouns": "She/Her",
-                                "image": {
-                                    "src": "/sophie.jpg",
-                                    "alt": "Photo of Sophie"
-                                }
-                            },
-                            "tania": {
-                                "name": "Tania",
-                                "pronouns": "She/Her",
-                                "image": {
-                                    "src": "/tania.jpg",
-                                    "alt": "Photo of Tania"
-                                }
-                            },
-                            "zack": {
-                                "name": "Zack",
-                                "pronouns": "He/Him",
-                                "image": {
-                                    "src": "/zack.jpg",
-                                    "alt": "Photo of Zack"
-                                }
-                            }
-                        }
-                    },
-                    "contactSection": {
-                        "title": "Contact us"
-                    }
-                },
-                "socials": {
-                    "facebook": {
-                        "alt": "Facebook",
-                        "href": "https://www.facebook.com/MontrealBalJam",
-                        "logo": "/facebook-white.png"
-                    },
-                    "instagram": {
-                        "alt": "Instagram",
-                        "href": "https://www.instagram.com/mtlbaljam/",
-                        "logo": "/instagram-white.png"
-                    },
-                    "email": {
-                        "alt": "Email",
-                        "href": "mailto:info@campusbalboa.org",
-                        "logo": "/email-white.png"
-                    }
-                },
-                "contact": {
-                    "fullName": "Full name",
-                    "fullNamePlaceholder": "Full name",
-                    "email": "Email",
-                    "emailExample": "your@email.com",
-                    "message": "Message",
-                    "messagePlaceholder": "Your message...",
-                    "send": "Send",
-                    "success": "Message sent successfully",
-                    "error": "Something went wrong."
-                },
-                "copyright": "©2024 Campus Balboa",
-                "iconAlts": {
-                    "loaf": "Loaf of bread icon",
-                    "knife": "Butterknife icon",
-                    "toaster": "Toaster icon",
-                    "mbjLogo": "MTL BAL JAM Logo",
-                    "arch": "Drawing of a salmon arch on blue background"
-                },
-                "musicPage": {
-                    "liveMusic": {
-                        "title": "Live music",
-                        "bandName": "Michaël Srey Legacy Band",
-                        "biography": "The Michaël Srey Legacy Band is a collective of up to 9 professional musicians from the Montréal / Tiohtià:ke jazz scene. The group already has several concerts under its belt and its reputation is growing.<br></br>The band knows its standards and includes the compositions of the great names in jazz: Louis Armstrong, Duke Ellington, Fletcher Henderson, Mary Lou Williams but also Jimmy Smith, Quincy Jones and Oscar Peterson. Equally curious about the different influences and developments of this art form, the band's repertoire includes other music from the same sources, with a strong emphasis on rhythm, improvisation and dance such as beguine or mambo.<br></br>Michaël Srey carefully selects, arranges and transcribes each piece mainly from the big band repertoire. Thus, the band has created a unique, tailor-made repertoire with new pieces regularly added to the music stands.<br></br>The quality of its musicians as well as the composition of the group give it great versatility and allow it to traverse the history of swing and its various styles: second line of New Orleans, early jazz, swing era, blues, be bop, hard bop…<br></br>Dedicated to the precision and colors of the iconic arrangements of big bands, the horn section makes each of its notes shine and the rhythm section roars across the dance floor.",
-                        "link": "https://www.michaelsrey.com/",
-                        "logoAlt": "Michaël Srey Legacy Band Logo"
-                    },
-                    "djMusic": {
-                        "title": "DJs",
-                        "djs": {
-                            "felix": {
-                                "name": "Felix",
-                                "djName": "DJ Can't Stop The Felix",
-                                "pronouns": "He/Him",
-                                "biography": "Felix has been interested in music his whole life. In his never-ending quest to understand music on a deeper level, he started swing dancing in 2013. Self-proclaimed music geek, he studied Jazz vocals, composition and arranging. He loves to think about, talk about, and breathe DJing, and he is always on the lookout for the best swinging tunes.",
-                                "image": {
-                                    "src": "/felix.jpg",
-                                    "alt": "Photo of Felix"
-                                }
-                            },
-                            "gab": {
-                                "name": "Gabrielle",
-                                "djName": "DJ Kern Down For What?!",
-                                "pronouns": "She/Her",
-                                "biography": "Gabrielle loves playing music that gets dancers out on the floor and keeps them there! Her passion is music that moves you, be it blues, vintage jazz, or more soulful, funky tunes. Be careful, her music will often inspire you to dance long after your feet would have called it a night.",
-                                "image": {
-                                    "src": "/gabrielle.png",
-                                    "alt": "Photo of Gabrielle"
-                                }
-                            },
-                            "david": {
-                                "name": "David",
-                                "djName": "DJ Loose Lid David",
-                                "pronouns": "He/Him",
-                                "biography": "David started DJing at his university swing dance club in 2017. He loves fast swing music, especially recordings of live performances for dancers. In fact, it was the great music that first drew him to Balboa! He's always ready to geek out about a tune, and has too many favourite tracks to share!",
-                                "image": {
-                                    "src": "/david.jpg",
-                                    "alt": "Photo of David"
-                                }
-                            }
-                        }
-                    }
-                },
-                "instructorsPage": {
-                    "mainInstructors": {
-                        "title": "Instructors",
-                        "instructorsNames": "Yulia & Sasha",
-                        "biography": "Yulia and Sasha are two UK based Balboa dancers easily recognisable for their zippy yet smooth style. They first discovered the dance in 2010, and ever since their enthusiasm for Balboa has been growing stronger.<br></br>Before starting to teach, they focused on their own development as dancers, training and competing, studying the history of the dance, and exploring partnership dynamics both in Pure Balboa and Balswing. <br></br>The couple is often spotted in international contest finals. Two times California Balboa Classic winners, they also proudly hold the title of 6-time Pure Balboa Classic champions!<br></br>Currently they run Balboa courses and mini-workshops in London, as well as travel to teach at dance weekends across Europe. <br></br>In class, they strive to share the knowledge they’ve gained throughout their dance journey and encourage their students to appreciate the joyful energy of Balboa, its subtle humour and the precious opportunity to be in the moment with the music and one another. <br></br>Lately, as Sasha has found a new obsession with tap dancing, percussion, and rhythm overall, they are becoming even more focused on different aspects of musicality, and aim to reflect that in their teaching.",
-                        "cutoutAlt": "Photo de Yulia & Sasha",
-                        "link": "https://www.ys.balboalondon.co.uk/"
-                    }
-                },
-                "venuePage": {
-                    "venue": {
-                        "title": "Dances & Workshops",
-                        "position": {
-                            "lat": "45.53935",
-                            "lng": "-73.614133"
-                        },
-                        "markerTitle": "Casa d'Italia",
-                        "infoWindowText": "Casa D'Italia, 505 Rue Jean-Talon E, Montréal, QC H2R 1T6",
-                        "venueName": "Casa d'Italia",
-                        "venueDescription": "La Casa d'Italia is the historical reference point for the Italian community and is a living testimony of the great cultural, social and economic contribution that our community has made to Montréal / Tiohtià:ke, and to Quebec.",
-                        "venueAddress": "505 Rue Jean-Talon E, Montréal, QC H2R 1T6",
-                        "venueWebsite": "https://www.casaditalia.org/",
-                        "cutoutAlt": "Photo of the Casa d'Italia"
-                    },
-                    "secondaryVenue": {
-                        "title": "Secondary Venue",
-                        "position": {
-                            "lat": "45.5325358",
-                            "lng": "-73.5521198"
-                        },
-                        "markerTitle": "Cat's Corner Community",
-                        "venueName": "Cat's Corner Community",
-                        "infoWindowText": "Cat's Corner Community, 1956 Rue Frontenac, Montréal, QC H2K 2Z1",
-                        "venueDescription": "The mission of this non-profit company is to provide access to dance culture and black-American jazz music (and related forms) through courses and events in order to make it shine, while respecting and celebrating its origins andvalues.",
-                        "venueAddress": "1956 Rue Frontenac, Montréal, QC H2K 2Z1",
-                        "venueWebsite": "https://www.catscorner.ca/",
-                        "cutoutAlt": "Photo of Cat's Corner"
-                    }
-                },
-                "extrasPage": {
-                    "tour": {
-                        "title": "Little Italy Guided Tour",
-                        "price": "Price: $25.00 CAD",
-                        "length": "Duration: 1h30",
-                        "when": "When: Saturday",
-                        "imageAlt": "Photo of Little Italy",
-                        "description": "Discover our beloved city by visiting Little Italy, the neighborhood where MTL BAL JAM will be held. You will get to learn more about our beautiful venue, the Casa Italia by signing up for the guided tour! Don't worry. It will not interfere with the classes."
-                    }
-                },
-                "competitionsPage": {
-                    "mixAndMatchSection": {
-                        "competitionNote": "MTL BAL JAM wants to prioritize social dancing! As such, we will only have one competition this year, and we will make sure that it runs smoothly and that it does not interfere with the social dance more than it has to. That being said, we have many prizes and surprises planned for competitors, and we can say with absolute confidence that our competitions will be a treat for everyone whether you are watching or participating!",
-                        "title": "Open Mix & Match",
-                        "description": "In this social competition, you sign up on your own and you are paired with a partner at random. Every song, you change partners and you are judged individually. The fun occurs when you get a partner you’ve never danced with before! The finals will be dual spotlight so the finalists have a chance to shine, and there will be a small twist for the all skate at the end, MTL BAL JAM style!"
-                    },
-                    "musicSection": {
-                        "title": "Music",
-                        "description": "Every song is carefully picked by our team of DJs, and will follow the standards of international balboa competitions. If there are many heats in the prelims, we will make sure to have similar songs and tempos across heats so that everyone gets a fair chance."
-                    },
-                    "judgesSection": {
-                        "title": "Judges",
-                        "judges": {
-                            "yuliasasha": {
-                                "name": "Yulia & Sasha",
-                                "image": {
-                                    "src": "/yulia-sasha.png",
-                                    "alt": "Yulia and Sasha's picture"
-                                }
-                            }
-                        }
-                    },
-                    "sponsorsSection": {
-                        "title": "Sponsors",
-                        "sponsors": {
-                            "balMoment": {
-                                "name": "Bal Moment Québec",
-                                "link": "https://www.facebook.com/bal.moment/",
-                                "image": {
-                                    "src": "/bal-moment-small.png",
-                                    "alt": "Logo of Bal Moment"
-                                }
-                            },
-                            "toronto": {
-                                "name": "Toronto Bal Weekend",
-                                "link": "https://www.torontobalweekend.com/",
-                                "image": {
-                                    "src": "/toronto-bal-weekend.png",
-                                    "alt": "Logo of Toronto Balboa Weekend"
-                                }
-                            },
-                            "ebf": {
-                                "name": "European Balboa Festival",
-                                "link": "https://sites.google.com/view/europeanbalboafestival/european-balboa-festival",
-                                "image": {
-                                    "src": "/european-balboa-festival.png",
-                                    "alt": "Logo of the European Balboa Festival"
-                                }
+                                "avatarAlt": "Felix's avatar",
+                                "bio": "It is with great pleasure that we welcome Félix to assist Olga during partnered classes!<br></br>Félix has been dancing balboa for ten years which intrigued him in the first place because of its rotational energy. He fell in love with the dance when he realized how endless the possibilities were. Developing a close relationship with the music and his partner, and having dances where everything flows is what keeps him hooked."
                             }
                         },
-                        "notes": {
-                            "text": "You want to sponsor MTL BAL JAM? Reach out to us at ",
-                            "link": {
-                                "text": "mtlbaljam@campusbalboa.org",
-                                "link": "mailto:mtlbaljam@campusbalboa.org"
-                            }
-                        }
-                    }
-                },
-                "codePage": {
-                    "valuesSection": {
-                        "title": "Values",
-                        "values": {
-                            "kindness": {
-                                "title": "Kindness and understanding",
-                                "content": "We want our event to feel like a place where people can express themselves, and achieve their full potential without fear. This begins with a sense of safety, security and trust.<br></br>We think that everyone, regardless of their gender, age, sexual orientation dis/ability, body size, ethnicity, religion (or lack thereof), nationality, dance skill level or dance role deserve this chance.<br></br>We thus want to emphasize the importance of having a community free from oppression, harassment, abuse, and violence.<br></br>Make sure to pay attention to your dance partner’s level of comfort and be sure to respect their boundaries should they voice any. Everyone’s boundaries and level of comfort can be different, so make sure you listen to them and adjust accordingly. <br></br>Do apologize if you think you have crossed a line, hurt, or accidentally touched an area of their body that is not usually touched during the course of a dance, such as their private or sexual areas.<br></br>Some people use gender neutral pronouns, and may have changed their name since last time you saw them. Please refer to them in the way that they ask to be referred to.<br></br>It is okay to say no to a dance, and it is your right to do so! If someone refuses a dance, please refrain from making them feel bad for doing so.<br></br>Anyone can choose the dance role that they prefer, whether during the social dances or during the workshops. Please respect their choice, and refrain from asking them to switch roles if, for instance, the classes are unbalanced.<br></br>We do not wish to police what people do between consenting adults, but please be mindful of people’s level of comfort when engaging in flirting, and do not make any unwanted sexual advances.<br></br>At MTL BAL JAM, we encourage anyone willing to participate in steal jams and other dance games on the dance floor. We do ask that you keep inclusivity in mind, and allow people of any identity and dance ability to join. However, consent remains important when engaging in such games. Therefore, please don’t interrupt a dance between dancers without their permission, and ask before starting a jam or getting others involved. As with any other dance, people are allowed to say no."
-                            },
-                            "safety": {
-                                "title": "Safety and wellness",
-                                "content": "We encourage all attendees to care for one another, and expect everyone to contribute in helping to minimize the risks of hurting themselves and others throughout the weekend.<br></br>The dance floor can get crowded during the main dances. Make sure that you practice good floorcraft and be mindful of how big your steps are, and where you send your partner. Make sure you apologize if you bump or step on someone during a dance.<br></br>We have a strict “no aerials” rule on the dance floor except during jam circles and competitions should space allow it. Only perform aerials with consenting partners with whom you have practiced them previously.<br></br>Do not bring alcohol or drugs to the event. Drinks might be available for purchase on the premises, in which case please drink responsibly. Note that offering alcohol to underage people is illegal (the legal drinking age in Québec is 18 years old).<br></br>Please make sure that you maintain good personal hygiene for dances and workshops. Brush your teeth, shower, bring a change of clothes, and reapply deodorant if needed. However, strongly scented products such as cologne, perfume, or body spray are discouraged as they can cause allergic reactions.<br></br>Although we do not currently require attendees to wear masks during the event, we do strongly encourage everyone to do so. For this reason, we recommend that you have a mask at your disposal in case you are asked to wear one (KN95 or N95 masks are strongly recommended, but surgical masks are a suitable option). Masks will be available for purchase at the door.<br></br>To avoid propagating any respiratory infection during the event, we would ask you to defer your ticket to the event’s next edition if you experience any flu-like, pneumonia- or COVID-19-related symptoms in the week or days leading to the event. See our terms and conditions for more details on our COVID-19 policy."
-                            },
-                            "grow": {
-                                "title": "Grow together",
-                                "content": "None of us are perfect, and it is expected that everyone makes mistakes. We encourage everyone to reflect on their behaviour and actions, and be open to learning, listening, and be receptive to other’s differences. Together, we can make the Balboa scene safer, more inclusive, and welcoming."
-                            }
-                        }
-                    },
-                    "protocolSection": {
-                        "title": "Response and Intervention Protocol",
-                        "protocolLink": "https://docs.google.com/document/d/1vWPAJR2ygBopqTsiQCoBi5HxQQ1zl0w3UikXqs58iKk/edit?usp=sharing",
-                        "content": "In order to maintain a safe and welcoming environment, we reserve the right to take prompt action in response to violations, which may include warning (with the expectations of immediate compliance), expulsion from the event at our own discretion and without a refund, and involvement from local law enforcement.<br></br>If you are the recipient or witness of a situation in violation with the Code of Conduct, or if you have any concerns we encourage you to reach out to our Safety, Consent, and Inclusion committee (SCI) in-person or via <email>inclusion@campusbalboa.org</email><br></br>Disclosing an uncomfortable situation can be challenging: you have the right to be heard, be believed, and have your privacy respected. You may review our <protocol>Intervention Protocol</protocol> to better understand how we gather information and intervene in different situations."
-                    }
-                },
-                "registrationPage": {
-                    "tickets": {
-                        "title": "Ticket details",
-                        "fullPass": "Full pass",
-                        "partyPass": "Party pass",
+                        "whatToExpect": {
+                            "subsectionTitle": "What to expect?",
+                            "description": "Campus Balboa offers a workshop with Olga, who comes directly from Sweden for the very first time.<br></br>We will offer 6 h of workshops that will be split into 4 blocks of 1.5 h which will include 30 m of solo balboa concepts, followed by an integration into your social dancing with a partner.<br></br>Olga is known internationally for her online solo balboa classes, which allow balboa dancers around the world to practice key concepts of the dance from the comfort of their homes.<br></br>In April, we will have the rare opportunity to see how those concepts can be applied to partnered dancing."
+                        },
+                        "friday": {
+                            "subsectionTitle": "Friday <extra>EXTRA</extra> class",
+                            "link": "https://www.catscorner.ca/",
+                            "description": "On the Friday of the ExtraCurricular Program with Olga, <link>Cat’s Corner</link> will be hosting an extra class with Olga before the dance for those who want more and for those who can’t make the whole weekend. This intermediate-level class will be available in advance with a discounted price for those with a weekend pass and will be open to drop-ins on the day of."
+                        },
                         "level": {
-                            "title": "Level requirement",
+                            "subsectionTitle": "Level requirement",
                             "content": {
                                 "details": "This is an all levels workshop with a caveat: we assume that you know the basics of balboa to participate in the workshops. Newcomers are welcome to attend the dances, but you should have at least taken a couple of months of classes before registering. This is to ensure that you do not find yourself overwhelmed, and to ensure that other attendees can focus on what is being taught. If any of these words are unknown to you, please consider taking regular classes in your local dance scene instead!",
                                 "list": "Bal swing,Pure bal,Lollys,Paddle turns,Toss-out,Come around,Swivel,Up-hold,Down-hold,Out and in"
                             }
                         },
-                        "ticketsDetails": {
-                            "title": "Tickets include",
-                            "full": "8 hours of workshops,Friday evening social dance with the Michaël Srey Legacy Band nonet,Saturday evening social dance with the Michaël Srey Legacy Band nonet,Sunday evening dance,Toasty snacks throughout the weekend,More surprises and social activities to be announced",
-                            "party": "Friday evening social dance with the Michaël Srey Legacy Band nonet,Saturday evening social dance with the Michaël Srey Legacy Band nonet,Sunday evening dance,Toasty snacks throughout the weekend,More surprises and social activities to be announced"
-                        },
-                        "priceCalendar": {
-                            "title": "Price Menu",
-                            "note": "Note: online registration will be closed starting June 17th.",
-                            "dates": {
-                                "first": "From January 18th until February 29th",
-                                "second": "From March 1st until April 30th",
-                                "third": "From May 1st until June 16th",
-                                "door": "At the door"
-                            },
-                            "full": {
-                                "first": "$185.00",
-                                "second": "$205.00",
-                                "third": "$225.00",
-                                "door": "$240.00"
-                            },
-                            "party": {
-                                "first": "$90.00",
-                                "second": "$100.00",
-                                "third": "$110.00",
-                                "door": "$120.00"
-                            }
-                        },
-                        "subsidize": {
-                            "title": "Help someone attend MTL BAL JAM",
-                            "description": "You can choose to help someone who cannot afford a full pass by donating an amount while registering. Please reach out to <email>mtlbaljam@campusbalboa.org</email> if in need of financial assistance to attend MTL BAL JAM."
-                        },
-                        "terms": {
-                            "title": "Terms & Conditions",
-                            "content": "<link>Click here</link> to learn more about our terms & conditions. These terms include: code of conduct, media consent, liability, respect of property, major changes, COVID-19 and other respiratory infections policy, hosting policy, reimbursement policy, payments.",
-                            "link": "https://docs.google.com/document/d/19iDfQHbv1B0EV1IpJY_P3e7qielFQecVVd5u_8uQB4k/edit?usp=sharing"
-                        }
-                    }
-                },
-                "volunteeringPage": {
-                    "volunteeringSection": {
-                        "title": "Volunteering",
-                        "description": "You can get a discount by volunteering for MTL BAL JAM! Commit to a minimum of 4 hours of volunteering during the weekend, and $15.00CAD per hour of work will be reimbursed after the event.",
-                        "departments": {
-                            "reception": {
-                                "title": "Reception",
-                                "description": "Welcome the attendees, check the list for the name, give them their bracelet depending on their pass type and all their add-ons if applicable"
-                            },
-                            "maintenance": {
-                                "title": "Maintenance",
-                                "description": "Set up the venue before the dances, tear down the venue at the end of the weekend, and clean up during"
-                            },
-                            "food": {
-                                "title": "Food",
-                                "description": "Set up the buffet table, prepare some of the ingredients, and make sure that the table is refilled if needed."
-                            },
-                            "errands": {
-                                "title": "Errands & Driving",
-                                "description": "If you have a car, we may ask you to go pickup some food, give a ride to staff or the instructors, or generally run errands during the event."
-                            },
-                            "safety": {
-                                "title": "Safety & Inclusion",
-                                "description": "If you want to volunteer to help make the event safe and inclusive for all, you will need to attend an online training session before the event and wear a visible piece of clothing identifying yourself as a volunteer during the event."
-                            }
-                        }
-                    }
-                },
-                "visitingPage": {
-                    "title": "Food & Drinks",
-                    "travelBlogSection": {
-                        "mapUrl": "https://www.google.com/maps/d/edit?mid=15C3q00URmitiir_DEOKs0F0pDU7YOkY&usp=drive_link",
-                        "mapLabel": "View full map",
-                        "mapAriaLabel": "Open full google map of the event in a new tab.",
-                        "legend": {
-                            "veg": "V = vegan & vegetarian friendly",
-                            "gluten": "GF = gluten free friendly"
-                        },
-                        "foodAndDrinks": {
-                            "intro": "Park yourself on a colorful bench or take a mural filled stroll with a tasty treat! Here are some of our recommendations:",
-                            "image": "/food.png",
-                            "imageAlt": "Photos of meals and restaurants in Montréal / Tiohtià:ke",
-                            "breakfast": {
-                                "title": "BREAKFAST/ CAFES/ TREATS",
-                                "bernie": {
-                                    "name": "Bernie Beigne",
-                                    "type": "French / American",
-                                    "price": "$",
-                                    "specifications": "none",
-                                    "neighborhood": "Mile End"
-                                },
-                                "pain": {
-                                    "name": "Boulangerie Le Pain dans les voiles",
-                                    "type": "French",
-                                    "price": "$",
-                                    "specifications": "none",
-                                    "neighborhood": "La Petite Patrie"
-                                },
-                                "kem": {
-                                    "name": "Kem Coba",
-                                    "type": "Vietnamese ice cream",
-                                    "price": "$",
-                                    "specifications": "none",
-                                    "neighborhood": "Mile End"
-                                },
-                                "regine": {
-                                    "name": "Régine Café",
-                                    "type": "French / British",
-                                    "price": "$$$",
-                                    "specifications": "V, GF",
-                                    "neighborhood": "La Petite Patrie"
-                                },
-                                "stViateur": {
-                                    "name": "St-Viateur Bagel",
-                                    "type": "Jewish",
-                                    "price": "$",
-                                    "specifications": "V",
-                                    "neighborhood": "Mile End"
-                                },
-                                "fairmount": {
-                                    "name": "Fairmount Bagel",
-                                    "type": "Jewish",
-                                    "price": "$",
-                                    "specifications": "V",
-                                    "neighborhood": "Mile End"
-                                }
-                            },
-                            "lunchAndDinner": {
-                                "title": "LUNCH & DINNER",
-                                "darna": {
-                                    "name": "Darna Bistroquet",
-                                    "type": "Moroccan",
-                                    "price": "$$",
-                                    "specifications": "none",
-                                    "neighborhood": "La Petite Patrie"
-                                },
-                                "drogheria": {
-                                    "name": "Drogheria Fine",
-                                    "type": "Italian",
-                                    "price": "$",
-                                    "specifications": "V",
-                                    "neighborhood": "Mile End"
-                                },
-                                "alep": {
-                                    "name": "Le Petit Alep Bistro",
-                                    "type": "Syrian / Armenian",
-                                    "price": "$$",
-                                    "specifications": "V, GF",
-                                    "neighborhood": "Little Italy"
-                                },
-                                "tonki": {
-                                    "name": "Le Belle Tonki",
-                                    "type": "Vietnamese / Cambodian",
-                                    "price": "$$",
-                                    "specifications": "none",
-                                    "neighborhood": "La Petite Patrie"
-                                },
-                                "hung": {
-                                    "name": "Marché Hung Phat",
-                                    "type": "Vietnamese",
-                                    "price": "$",
-                                    "specifications": "V",
-                                    "neighborhood": "La Petite Patrie"
-                                },
-                                "poutineville": {
-                                    "name": "Poutineville",
-                                    "type": "Québécois",
-                                    "price": "$",
-                                    "specifications": "none",
-                                    "neighborhood": "La Petite Patrie"
-                                },
-                                "schwartz": {
-                                    "name": "Schwartz’s Deli",
-                                    "type": "Jewish",
-                                    "price": "$",
-                                    "specifications": "none",
-                                    "neighborhood": "Le Plateau"
-                                },
-                                "ssam": {
-                                    "name": "SSAM",
-                                    "type": "Korean",
-                                    "price": "$$",
-                                    "specifications": "none",
-                                    "neighborhood": "La Petite Patrie"
-                                },
-                                "umami": {
-                                    "name": "Umami Ramen & Izakaya",
-                                    "type": "Japanese",
-                                    "price": "$$",
-                                    "specifications": "V, GF",
-                                    "neighborhood": "Rosemont"
-                                }
-                            },
-                            "drinks": {
-                                "title": "DRINKS",
-                                "birra": {
-                                    "name": "Birra Bar",
-                                    "type": "Microbrewery",
-                                    "price": "$$",
-                                    "specifications": "V",
-                                    "neighborhood": "Le Plateau"
-                                },
-                                "harricana": {
-                                    "name": "Brasserie Harricana",
-                                    "type": "Microbrewery",
-                                    "price": "$$",
-                                    "specifications": "V",
-                                    "neighborhood": "Le Plateau"
-                                },
-                                "ernest": {
-                                    "name": "Chez Ernest",
-                                    "type": "Resto bar",
-                                    "price": "$$",
-                                    "specifications": "V",
-                                    "neighborhood": "Petite Patrie"
-                                },
-                                "nestor": {
-                                    "name": "Nestor",
-                                    "type": "Bar",
-                                    "price": "$$",
-                                    "specifications": "V",
-                                    "neighborhood": "Little Italy"
-                                },
-                                "vices": {
-                                    "name": "Vice et Versa",
-                                    "type": "Artisanal Beer",
-                                    "price": "$$",
-                                    "specifications": "V",
-                                    "neighborhood": "Little Italy"
-                                },
-                                "vin": {
-                                    "name": "Vinvinvin",
-                                    "type": "Wine bar",
-                                    "price": "$$",
-                                    "specifications": "V",
-                                    "neighborhood": "Petite Patrie"
-                                }
-                            }
-                        },
-                        "sightSeeing": {
-                            "intro": "Take a tour around Montréal / Tiohtià:ke from our outdoor markets to some lovely historical sites! Be sure to check out:",
-                            "image": "/sightseeing.png",
-                            "imageAlt": "Photos of Montréal / Tiohtià:ke landmarks",
-                            "spots": {
-                                "title": "SIGHTSEEING",
-                                "botanical": {
-                                    "name": "Botanical Gardens",
-                                    "type": "Indoor/outdoor gardens",
-                                    "price": "$23.25",
-                                    "specifications": "none",
-                                    "neighborhood": "Hochelaga"
-                                },
-                                "chinatown": {
-                                    "name": "Chinatown",
-                                    "type": "Neighborhood with historic site",
-                                    "price": "none",
-                                    "specifications": "none",
-                                    "neighborhood": "Ville Marie"
-                                },
-                                "fineArts": {
-                                    "name": "Museum of Fine Arts",
-                                    "type": "Museum",
-                                    "price": "$12-24",
-                                    "specifications": "none",
-                                    "neighborhood": "Downtown"
-                                },
-                                "marche": {
-                                    "name": "Marché Jean Talon",
-                                    "type": "Outdoor market",
-                                    "price": "none",
-                                    "specifications": "none",
-                                    "neighborhood": "Little Italy"
-                                },
-                                "kondiaronk": {
-                                    "name": "Kondiaronk Belvedere",
-                                    "type": "Lookout spot",
-                                    "price": "none",
-                                    "specifications": "none",
-                                    "neighborhood": "Mount-Royal"
-                                },
-                                "laFontaine": {
-                                    "name": "Parc La Fontaine",
-                                    "type": "Lovely park to walk around",
-                                    "price": "none",
-                                    "specifications": "none",
-                                    "neighborhood": "Le Plateau"
-                                },
-                                "spectactles": {
-                                    "name": "Quartier des Spectacles",
-                                    "type": "Free summer swings",
-                                    "price": "none",
-                                    "specifications": "none",
-                                    "neighborhood": "Downtown"
-                                },
-                                "oratory": {
-                                    "name": "St. Joseph’s Oratory",
-                                    "type": "Catholic shrine",
-                                    "price": "$2-4",
-                                    "specifications": "none",
-                                    "neighborhood": "Côte Des Neiges"
-                                },
-                                "stLaurent": {
-                                    "name": "St. Laurent Boulevard",
-                                    "type": "Mural tour",
-                                    "price": "none",
-                                    "specifications": "none",
-                                    "neighborhood": "Le Plateau"
-                                }
-                            }
-                        }
-                    }
-                },
-                "navigation": {
-                    "title": "Menu",
-                    "about": {
-                        "title": "About",
-                        "subtabs": {
-                            "about": {
-                                "text": "Team and vision",
-                                "href": "/en/events/2024/mtl-bal-jam/about"
-                            },
-                            "code-of-conduct": {
-                                "text": "Code of conduct",
-                                "href": "/en/events/2024/mtl-bal-jam/code-of-conduct"
-                            },
-                            "volunteering": {
-                                "text": "Volunteering",
-                                "href": "/en/events/2024/mtl-bal-jam/volunteering"
-                            }
+                        "cta": {
+                            "text": "Register",
+                            "href": "https://extracurriculaire-olga.dancecamps.org/booking.php",
+                            "ariaLabel": "Opens in a new window"
                         }
                     },
-                    "event": {
-                        "title": "Event",
-                        "subtabs": {
-                            "instructors": {
-                                "text": "Instructors",
-                                "href": "/en/events/2024/mtl-bal-jam/instructors"
-                            },
-                            "music": {
-                                "text": "Music",
+                    "scheduleSection": {
+                        "sectionTitle": "Schedule",
+                        "link": "See schedule",
+                        "ariaLabel": "Opens in a new window"
+                    },
+                    "copyright": "©2024 Campus Balboa"
+                },
+                "MtlBalJam": {
+                    "subscribe": {
+                        "title": "Subscribe for toasty details",
+                        "email": "Email",
+                        "emailExample": "youremail@example.com",
+                        "firstName": "First name",
+                        "firstNamePlaceholder": "Your first name",
+                        "lastName": "Last name",
+                        "lastNamePlaceholder": "Your last name",
+                        "permission": "I consent to receive marketing information regarding MTL BAL JAM",
+                        "subscribe": "Subscribe",
+                        "success": "You are signed up for the newsletter.",
+                        "error": "Something went wrong. Try again later."
+                    },
+                    "header": {
+                        "date": "June 21-22-23, 2024",
+                        "registration": {
+                            "text": "REGISTRATIONS: ",
+                            "date": "January 18th, 2024"
+                        },
+                        "title": "MTL BAL JAM",
+                        "googleCal": "Save to Google Calendar",
+                        "registerNow": "REGISTER NOW!",
+                        "registerNowAria": "Opens registration page in a new window",
+                        "pageTitle": {
+                            "music": "Music",
+                            "about": "About",
+                            "venue": "Venue",
+                            "instructors": "Instructors",
+                            "extra": "Extra",
+                            "competitions": "Competitions",
+                            "code-of-conduct": "Code of Conduct",
+                            "registration": "Registration",
+                            "visiting": "Visiting Montréal / Tiohtià:ke",
+                            "travel": "Travel",
+                            "accommodation": "Accomodation",
+                            "volunteering": "Volunteering"
+                        }
+                    },
+                    "homePage": {
+                        "musicSection": {
+                            "title": "Music",
+                            "bandName": "Michaël Srey Legacy Band",
+                            "description": "A live band based in Montréal / Tiohtià:ke, it brings together a collective of musicians from the local jazz scene. With up to 9 instrumentalists on stage, he is keen to share the most inspiring compositions and arrangements of the big band repertoire.",
+                            "learnMore": {
+                                "text": "Learn more...",
                                 "href": "/en/events/2024/mtl-bal-jam/music"
-                            },
-                            "venue": {
-                                "text": "Venue",
+                            }
+                        },
+                        "instructorsSection": {
+                            "title": "Instructors",
+                            "instructorsNames": "Yulia & Sasha",
+                            "description": "Yulia and Sasha are two UK based Balboa enthusiasts: dancers, instructors and competitors.  They offer classes, short courses and mini-workshops in London, as well travel to teach Balboa across Europe.",
+                            "learnMore": {
+                                "text": "Learn more...",
+                                "href": "/en/events/2024/mtl-bal-jam/instructors"
+                            }
+                        },
+                        "venueSection": {
+                            "title": "Venue",
+                            "learnMore": {
+                                "text": "Check out our venue...",
                                 "href": "/en/events/2024/mtl-bal-jam/venue"
-                            },
-                            "competitions": {
-                                "text": "Compétitions",
-                                "href": "/en/events/2024/mtl-bal-jam/competitions"
-                            },
-                            "registration": {
-                                "text": "Registration",
-                                "href": "/en/events/2024/mtl-bal-jam/registration"
-                            },
-                            "extra": {
-                                "text": "Extra",
-                                "href": "/en/events/2024/mtl-bal-jam/extra"
+                            }
+                        },
+                        "registrationSection": {
+                            "title": "Registration",
+                            "detailsLink": "/en/events/2024/mtl-bal-jam/registration",
+                            "description": "You can now register by going to our <registration>registration page</registration>! Or if you want to see what the options are, <details>click here</details>."
+                        }
+                    },
+                    "aboutPage": {
+                        "descriptionSection": {
+                            "title": "About the event",
+                            "description": "MTL BAL JAM is a Montréal / Tiohtià:ke based balboa event which will happen for the first time in June of 2024. It is organized by a local team of balboa dancers under the banner of <campus>Campus Balboa</campus>, a nonprofit founded in 2023.<br></br>The goal of the event is to bring balboa dancers from all around the world to Montréal / Tiohtià:ke and showcase our local scene at its best.<br></br>In order to achieve this, teachers MTL BAL JAM will hire sought after instructors, and get some of the top swing bands in the city.<br></br>The weekend aims to have a healthy balance between classes, social dancing, and exploration of the city."
+                        },
+                        "staffSection": {
+                            "title": "Meet the team",
+                            "staff": {
+                                "bree": {
+                                    "name": "Bree",
+                                    "pronouns": "She/Her",
+                                    "image": {
+                                        "src": "/bree.jpg",
+                                        "alt": "Photo of Bree"
+                                    }
+                                },
+                                "cara": {
+                                    "name": "Cara",
+                                    "pronouns": "She/Her",
+                                    "image": {
+                                        "src": "/cara.jpg",
+                                        "alt": "Photo of Cara"
+                                    }
+                                },
+                                "felix": {
+                                    "name": "Felix",
+                                    "pronouns": "He/Him",
+                                    "image": {
+                                        "src": "/felix.jpg",
+                                        "alt": "Photo of Felix"
+                                    }
+                                },
+                                "gab": {
+                                    "name": "Gabrielle",
+                                    "pronouns": "She/Her",
+                                    "image": {
+                                        "src": "/gabrielle.png",
+                                        "alt": "Photo of Gabrielle"
+                                    }
+                                },
+                                "katya": {
+                                    "name": "Katya",
+                                    "pronouns": "She/They",
+                                    "image": {
+                                        "src": "/katya.jpg",
+                                        "alt": "Photo of Katya"
+                                    }
+                                },
+                                "kim": {
+                                    "name": "Kim",
+                                    "pronouns": "She/Her",
+                                    "image": {
+                                        "src": "/kim.jpg",
+                                        "alt": "Photo of Kim"
+                                    }
+                                },
+                                "melanie": {
+                                    "name": "Melanie",
+                                    "pronouns": "She/Her",
+                                    "image": {
+                                        "src": "/melanie.jpg",
+                                        "alt": "Photo of Mélanie"
+                                    }
+                                },
+                                "sara": {
+                                    "name": "Sara",
+                                    "pronouns": "She/Her",
+                                    "image": {
+                                        "src": "/sara.jpg",
+                                        "alt": "Photo of Sara"
+                                    }
+                                },
+                                "sihem": {
+                                    "name": "Sihem",
+                                    "pronouns": "She/Her",
+                                    "image": {
+                                        "src": "/sihem.jpg",
+                                        "alt": "Photo of Sihem"
+                                    }
+                                },
+                                "sophie": {
+                                    "name": "Sophie",
+                                    "pronouns": "She/Her",
+                                    "image": {
+                                        "src": "/sophie.jpg",
+                                        "alt": "Photo of Sophie"
+                                    }
+                                },
+                                "tania": {
+                                    "name": "Tania",
+                                    "pronouns": "She/Her",
+                                    "image": {
+                                        "src": "/tania.jpg",
+                                        "alt": "Photo of Tania"
+                                    }
+                                },
+                                "zack": {
+                                    "name": "Zack",
+                                    "pronouns": "He/Him",
+                                    "image": {
+                                        "src": "/zack.jpg",
+                                        "alt": "Photo of Zack"
+                                    }
+                                }
+                            }
+                        },
+                        "contactSection": {
+                            "title": "Contact us"
+                        }
+                    },
+                    "socials": {
+                        "facebook": {
+                            "alt": "Facebook",
+                            "href": "https://www.facebook.com/MontrealBalJam",
+                            "logo": "/facebook-white.png"
+                        },
+                        "instagram": {
+                            "alt": "Instagram",
+                            "href": "https://www.instagram.com/mtlbaljam/",
+                            "logo": "/instagram-white.png"
+                        },
+                        "email": {
+                            "alt": "Email",
+                            "href": "mailto:info@campusbalboa.org",
+                            "logo": "/email-white.png"
+                        }
+                    },
+                    "contact": {
+                        "fullName": "Full name",
+                        "fullNamePlaceholder": "Full name",
+                        "email": "Email",
+                        "emailExample": "your@email.com",
+                        "message": "Message",
+                        "messagePlaceholder": "Your message...",
+                        "send": "Send",
+                        "success": "Message sent successfully",
+                        "error": "Something went wrong."
+                    },
+                    "copyright": "©2024 Campus Balboa",
+                    "iconAlts": {
+                        "loaf": "Loaf of bread icon",
+                        "knife": "Butterknife icon",
+                        "toaster": "Toaster icon",
+                        "mbjLogo": "MTL BAL JAM Logo",
+                        "arch": "Drawing of a salmon arch on blue background"
+                    },
+                    "musicPage": {
+                        "liveMusic": {
+                            "title": "Live music",
+                            "bandName": "Michaël Srey Legacy Band",
+                            "biography": "The Michaël Srey Legacy Band is a collective of up to 9 professional musicians from the Montréal / Tiohtià:ke jazz scene. The group already has several concerts under its belt and its reputation is growing.<br></br>The band knows its standards and includes the compositions of the great names in jazz: Louis Armstrong, Duke Ellington, Fletcher Henderson, Mary Lou Williams but also Jimmy Smith, Quincy Jones and Oscar Peterson. Equally curious about the different influences and developments of this art form, the band's repertoire includes other music from the same sources, with a strong emphasis on rhythm, improvisation and dance such as beguine or mambo.<br></br>Michaël Srey carefully selects, arranges and transcribes each piece mainly from the big band repertoire. Thus, the band has created a unique, tailor-made repertoire with new pieces regularly added to the music stands.<br></br>The quality of its musicians as well as the composition of the group give it great versatility and allow it to traverse the history of swing and its various styles: second line of New Orleans, early jazz, swing era, blues, be bop, hard bop…<br></br>Dedicated to the precision and colors of the iconic arrangements of big bands, the horn section makes each of its notes shine and the rhythm section roars across the dance floor.",
+                            "link": "https://www.michaelsrey.com/",
+                            "logoAlt": "Michaël Srey Legacy Band Logo"
+                        },
+                        "djMusic": {
+                            "title": "DJs",
+                            "djs": {
+                                "felix": {
+                                    "name": "Felix",
+                                    "djName": "DJ Can't Stop The Felix",
+                                    "pronouns": "He/Him",
+                                    "biography": "Felix has been interested in music his whole life. In his never-ending quest to understand music on a deeper level, he started swing dancing in 2013. Self-proclaimed music geek, he studied Jazz vocals, composition and arranging. He loves to think about, talk about, and breathe DJing, and he is always on the lookout for the best swinging tunes.",
+                                    "image": {
+                                        "src": "/felix.jpg",
+                                        "alt": "Photo of Felix"
+                                    }
+                                },
+                                "gab": {
+                                    "name": "Gabrielle",
+                                    "djName": "DJ Kern Down For What?!",
+                                    "pronouns": "She/Her",
+                                    "biography": "Gabrielle loves playing music that gets dancers out on the floor and keeps them there! Her passion is music that moves you, be it blues, vintage jazz, or more soulful, funky tunes. Be careful, her music will often inspire you to dance long after your feet would have called it a night.",
+                                    "image": {
+                                        "src": "/gabrielle.png",
+                                        "alt": "Photo of Gabrielle"
+                                    }
+                                },
+                                "david": {
+                                    "name": "David",
+                                    "djName": "DJ Loose Lid David",
+                                    "pronouns": "He/Him",
+                                    "biography": "David started DJing at his university swing dance club in 2017. He loves fast swing music, especially recordings of live performances for dancers. In fact, it was the great music that first drew him to Balboa! He's always ready to geek out about a tune, and has too many favourite tracks to share!",
+                                    "image": {
+                                        "src": "/david.jpg",
+                                        "alt": "Photo of David"
+                                    }
+                                }
                             }
                         }
                     },
-                    "travel": {
-                        "title": "Travel",
-                        "subtabs": {
-                            "visiting": {
-                                "text": "Visiting Montréal / Tiohtià:ke",
-                                "href": "/en/events/2024/mtl-bal-jam/visiting"
+                    "instructorsPage": {
+                        "mainInstructors": {
+                            "title": "Instructors",
+                            "instructorsNames": "Yulia & Sasha",
+                            "biography": "Yulia and Sasha are two UK based Balboa dancers easily recognisable for their zippy yet smooth style. They first discovered the dance in 2010, and ever since their enthusiasm for Balboa has been growing stronger.<br></br>Before starting to teach, they focused on their own development as dancers, training and competing, studying the history of the dance, and exploring partnership dynamics both in Pure Balboa and Balswing. <br></br>The couple is often spotted in international contest finals. Two times California Balboa Classic winners, they also proudly hold the title of 6-time Pure Balboa Classic champions!<br></br>Currently they run Balboa courses and mini-workshops in London, as well as travel to teach at dance weekends across Europe. <br></br>In class, they strive to share the knowledge they’ve gained throughout their dance journey and encourage their students to appreciate the joyful energy of Balboa, its subtle humour and the precious opportunity to be in the moment with the music and one another. <br></br>Lately, as Sasha has found a new obsession with tap dancing, percussion, and rhythm overall, they are becoming even more focused on different aspects of musicality, and aim to reflect that in their teaching.",
+                            "cutoutAlt": "Photo de Yulia & Sasha",
+                            "link": "https://www.ys.balboalondon.co.uk/"
+                        }
+                    },
+                    "venuePage": {
+                        "venue": {
+                            "title": "Dances & Workshops",
+                            "position": {
+                                "lat": "45.53935",
+                                "lng": "-73.614133"
                             },
-                            "travel": {
-                                "text": "Getting There",
-                                "href": "/en/events/2024/mtl-bal-jam/travel"
+                            "markerTitle": "Casa d'Italia",
+                            "infoWindowText": "Casa D'Italia, 505 Rue Jean-Talon E, Montréal, QC H2R 1T6",
+                            "venueName": "Casa d'Italia",
+                            "venueDescription": "La Casa d'Italia is the historical reference point for the Italian community and is a living testimony of the great cultural, social and economic contribution that our community has made to Montréal / Tiohtià:ke, and to Quebec.",
+                            "venueAddress": "505 Rue Jean-Talon E, Montréal, QC H2R 1T6",
+                            "venueWebsite": "https://www.casaditalia.org/",
+                            "cutoutAlt": "Photo of the Casa d'Italia"
+                        },
+                        "secondaryVenue": {
+                            "title": "Secondary Venue",
+                            "position": {
+                                "lat": "45.5325358",
+                                "lng": "-73.5521198"
                             },
-                            "accommodation": {
-                                "text": "Accomodation",
-                                "href": "/en/events/2024/mtl-bal-jam/accommodation"
+                            "markerTitle": "Cat's Corner Community",
+                            "venueName": "Cat's Corner Community",
+                            "infoWindowText": "Cat's Corner Community, 1956 Rue Frontenac, Montréal, QC H2K 2Z1",
+                            "venueDescription": "The mission of this non-profit company is to provide access to dance culture and black-American jazz music (and related forms) through courses and events in order to make it shine, while respecting and celebrating its origins andvalues.",
+                            "venueAddress": "1956 Rue Frontenac, Montréal, QC H2K 2Z1",
+                            "venueWebsite": "https://www.catscorner.ca/",
+                            "cutoutAlt": "Photo of Cat's Corner"
+                        }
+                    },
+                    "extrasPage": {
+                        "tour": {
+                            "title": "Little Italy Guided Tour",
+                            "price": "Price: $25.00 CAD",
+                            "length": "Duration: 1h30",
+                            "when": "When: Saturday",
+                            "imageAlt": "Photo of Little Italy",
+                            "description": "Discover our beloved city by visiting Little Italy, the neighborhood where MTL BAL JAM will be held. You will get to learn more about our beautiful venue, the Casa Italia by signing up for the guided tour! Don't worry. It will not interfere with the classes."
+                        }
+                    },
+                    "competitionsPage": {
+                        "mixAndMatchSection": {
+                            "competitionNote": "MTL BAL JAM wants to prioritize social dancing! As such, we will only have one competition this year, and we will make sure that it runs smoothly and that it does not interfere with the social dance more than it has to. That being said, we have many prizes and surprises planned for competitors, and we can say with absolute confidence that our competitions will be a treat for everyone whether you are watching or participating!",
+                            "title": "Open Mix & Match",
+                            "description": "In this social competition, you sign up on your own and you are paired with a partner at random. Every song, you change partners and you are judged individually. The fun occurs when you get a partner you’ve never danced with before! The finals will be dual spotlight so the finalists have a chance to shine, and there will be a small twist for the all skate at the end, MTL BAL JAM style!"
+                        },
+                        "musicSection": {
+                            "title": "Music",
+                            "description": "Every song is carefully picked by our team of DJs, and will follow the standards of international balboa competitions. If there are many heats in the prelims, we will make sure to have similar songs and tempos across heats so that everyone gets a fair chance."
+                        },
+                        "judgesSection": {
+                            "title": "Judges",
+                            "judges": {
+                                "yuliasasha": {
+                                    "name": "Yulia & Sasha",
+                                    "image": {
+                                        "src": "/yulia-sasha.png",
+                                        "alt": "Yulia and Sasha's picture"
+                                    }
+                                }
+                            }
+                        },
+                        "sponsorsSection": {
+                            "title": "Sponsors",
+                            "sponsors": {
+                                "balMoment": {
+                                    "name": "Bal Moment Québec",
+                                    "link": "https://www.facebook.com/bal.moment/",
+                                    "image": {
+                                        "src": "/bal-moment-small.png",
+                                        "alt": "Logo of Bal Moment"
+                                    }
+                                },
+                                "toronto": {
+                                    "name": "Toronto Bal Weekend",
+                                    "link": "https://www.torontobalweekend.com/",
+                                    "image": {
+                                        "src": "/toronto-bal-weekend.png",
+                                        "alt": "Logo of Toronto Balboa Weekend"
+                                    }
+                                },
+                                "ebf": {
+                                    "name": "European Balboa Festival",
+                                    "link": "https://sites.google.com/view/europeanbalboafestival/european-balboa-festival",
+                                    "image": {
+                                        "src": "/european-balboa-festival.png",
+                                        "alt": "Logo of the European Balboa Festival"
+                                    }
+                                }
+                            },
+                            "notes": {
+                                "text": "You want to sponsor MTL BAL JAM? Reach out to us at ",
+                                "link": {
+                                    "text": "mtlbaljam@campusbalboa.org",
+                                    "link": "mailto:mtlbaljam@campusbalboa.org"
+                                }
                             }
                         }
+                    },
+                    "codePage": {
+                        "valuesSection": {
+                            "title": "Values",
+                            "values": {
+                                "kindness": {
+                                    "title": "Kindness and understanding",
+                                    "content": "We want our event to feel like a place where people can express themselves, and achieve their full potential without fear. This begins with a sense of safety, security and trust.<br></br>We think that everyone, regardless of their gender, age, sexual orientation dis/ability, body size, ethnicity, religion (or lack thereof), nationality, dance skill level or dance role deserve this chance.<br></br>We thus want to emphasize the importance of having a community free from oppression, harassment, abuse, and violence.<br></br>Make sure to pay attention to your dance partner’s level of comfort and be sure to respect their boundaries should they voice any. Everyone’s boundaries and level of comfort can be different, so make sure you listen to them and adjust accordingly. <br></br>Do apologize if you think you have crossed a line, hurt, or accidentally touched an area of their body that is not usually touched during the course of a dance, such as their private or sexual areas.<br></br>Some people use gender neutral pronouns, and may have changed their name since last time you saw them. Please refer to them in the way that they ask to be referred to.<br></br>It is okay to say no to a dance, and it is your right to do so! If someone refuses a dance, please refrain from making them feel bad for doing so.<br></br>Anyone can choose the dance role that they prefer, whether during the social dances or during the workshops. Please respect their choice, and refrain from asking them to switch roles if, for instance, the classes are unbalanced.<br></br>We do not wish to police what people do between consenting adults, but please be mindful of people’s level of comfort when engaging in flirting, and do not make any unwanted sexual advances.<br></br>At MTL BAL JAM, we encourage anyone willing to participate in steal jams and other dance games on the dance floor. We do ask that you keep inclusivity in mind, and allow people of any identity and dance ability to join. However, consent remains important when engaging in such games. Therefore, please don’t interrupt a dance between dancers without their permission, and ask before starting a jam or getting others involved. As with any other dance, people are allowed to say no."
+                                },
+                                "safety": {
+                                    "title": "Safety and wellness",
+                                    "content": "We encourage all attendees to care for one another, and expect everyone to contribute in helping to minimize the risks of hurting themselves and others throughout the weekend.<br></br>The dance floor can get crowded during the main dances. Make sure that you practice good floorcraft and be mindful of how big your steps are, and where you send your partner. Make sure you apologize if you bump or step on someone during a dance.<br></br>We have a strict “no aerials” rule on the dance floor except during jam circles and competitions should space allow it. Only perform aerials with consenting partners with whom you have practiced them previously.<br></br>Do not bring alcohol or drugs to the event. Drinks might be available for purchase on the premises, in which case please drink responsibly. Note that offering alcohol to underage people is illegal (the legal drinking age in Québec is 18 years old).<br></br>Please make sure that you maintain good personal hygiene for dances and workshops. Brush your teeth, shower, bring a change of clothes, and reapply deodorant if needed. However, strongly scented products such as cologne, perfume, or body spray are discouraged as they can cause allergic reactions.<br></br>Although we do not currently require attendees to wear masks during the event, we do strongly encourage everyone to do so. For this reason, we recommend that you have a mask at your disposal in case you are asked to wear one (KN95 or N95 masks are strongly recommended, but surgical masks are a suitable option). Masks will be available for purchase at the door.<br></br>To avoid propagating any respiratory infection during the event, we would ask you to defer your ticket to the event’s next edition if you experience any flu-like, pneumonia- or COVID-19-related symptoms in the week or days leading to the event. See our terms and conditions for more details on our COVID-19 policy."
+                                },
+                                "grow": {
+                                    "title": "Grow together",
+                                    "content": "None of us are perfect, and it is expected that everyone makes mistakes. We encourage everyone to reflect on their behaviour and actions, and be open to learning, listening, and be receptive to other’s differences. Together, we can make the Balboa scene safer, more inclusive, and welcoming."
+                                }
+                            }
+                        },
+                        "protocolSection": {
+                            "title": "Response and Intervention Protocol",
+                            "protocolLink": "https://docs.google.com/document/d/1vWPAJR2ygBopqTsiQCoBi5HxQQ1zl0w3UikXqs58iKk/edit?usp=sharing",
+                            "content": "In order to maintain a safe and welcoming environment, we reserve the right to take prompt action in response to violations, which may include warning (with the expectations of immediate compliance), expulsion from the event at our own discretion and without a refund, and involvement from local law enforcement.<br></br>If you are the recipient or witness of a situation in violation with the Code of Conduct, or if you have any concerns we encourage you to reach out to our Safety, Consent, and Inclusion committee (SCI) in-person or via <email>inclusion@campusbalboa.org</email><br></br>Disclosing an uncomfortable situation can be challenging: you have the right to be heard, be believed, and have your privacy respected. You may review our <protocol>Intervention Protocol</protocol> to better understand how we gather information and intervene in different situations."
+                        }
+                    },
+                    "registrationPage": {
+                        "tickets": {
+                            "title": "Ticket details",
+                            "fullPass": "Full pass",
+                            "partyPass": "Party pass",
+                            "level": {
+                                "title": "Level requirement",
+                                "content": {
+                                    "details": "This is an all levels workshop with a caveat: we assume that you know the basics of balboa to participate in the workshops. Newcomers are welcome to attend the dances, but you should have at least taken a couple of months of classes before registering. This is to ensure that you do not find yourself overwhelmed, and to ensure that other attendees can focus on what is being taught. If any of these words are unknown to you, please consider taking regular classes in your local dance scene instead!",
+                                    "list": "Bal swing,Pure bal,Lollys,Paddle turns,Toss-out,Come around,Swivel,Up-hold,Down-hold,Out and in"
+                                }
+                            },
+                            "ticketsDetails": {
+                                "title": "Tickets include",
+                                "full": "8 hours of workshops,Friday evening social dance with the Michaël Srey Legacy Band nonet,Saturday evening social dance with the Michaël Srey Legacy Band nonet,Sunday evening dance,Toasty snacks throughout the weekend,More surprises and social activities to be announced",
+                                "party": "Friday evening social dance with the Michaël Srey Legacy Band nonet,Saturday evening social dance with the Michaël Srey Legacy Band nonet,Sunday evening dance,Toasty snacks throughout the weekend,More surprises and social activities to be announced"
+                            },
+                            "priceCalendar": {
+                                "title": "Price Menu",
+                                "note": "Note: online registration will be closed starting June 17th.",
+                                "dates": {
+                                    "first": "From January 18th until February 29th",
+                                    "second": "From March 1st until April 30th",
+                                    "third": "From May 1st until June 16th",
+                                    "door": "At the door"
+                                },
+                                "full": {
+                                    "first": "$185.00",
+                                    "second": "$205.00",
+                                    "third": "$225.00",
+                                    "door": "$240.00"
+                                },
+                                "party": {
+                                    "first": "$90.00",
+                                    "second": "$100.00",
+                                    "third": "$110.00",
+                                    "door": "$120.00"
+                                }
+                            },
+                            "subsidize": {
+                                "title": "Help someone attend MTL BAL JAM",
+                                "description": "You can choose to help someone who cannot afford a full pass by donating an amount while registering. Please reach out to <email>mtlbaljam@campusbalboa.org</email> if in need of financial assistance to attend MTL BAL JAM."
+                            },
+                            "terms": {
+                                "title": "Terms & Conditions",
+                                "content": "<link>Click here</link> to learn more about our terms & conditions. These terms include: code of conduct, media consent, liability, respect of property, major changes, COVID-19 and other respiratory infections policy, hosting policy, reimbursement policy, payments.",
+                                "link": "https://docs.google.com/document/d/19iDfQHbv1B0EV1IpJY_P3e7qielFQecVVd5u_8uQB4k/edit?usp=sharing"
+                            }
+                        }
+                    },
+                    "volunteeringPage": {
+                        "volunteeringSection": {
+                            "title": "Volunteering",
+                            "description": "You can get a discount by volunteering for MTL BAL JAM! Commit to a minimum of 4 hours of volunteering during the weekend, and $15.00CAD per hour of work will be reimbursed after the event.",
+                            "departments": {
+                                "reception": {
+                                    "title": "Reception",
+                                    "description": "Welcome the attendees, check the list for the name, give them their bracelet depending on their pass type and all their add-ons if applicable"
+                                },
+                                "maintenance": {
+                                    "title": "Maintenance",
+                                    "description": "Set up the venue before the dances, tear down the venue at the end of the weekend, and clean up during"
+                                },
+                                "food": {
+                                    "title": "Food",
+                                    "description": "Set up the buffet table, prepare some of the ingredients, and make sure that the table is refilled if needed."
+                                },
+                                "errands": {
+                                    "title": "Errands & Driving",
+                                    "description": "If you have a car, we may ask you to go pickup some food, give a ride to staff or the instructors, or generally run errands during the event."
+                                },
+                                "safety": {
+                                    "title": "Safety & Inclusion",
+                                    "description": "If you want to volunteer to help make the event safe and inclusive for all, you will need to attend an online training session before the event and wear a visible piece of clothing identifying yourself as a volunteer during the event."
+                                }
+                            }
+                        }
+                    },
+                    "visitingPage": {
+                        "title": "Food & Drinks",
+                        "travelBlogSection": {
+                            "mapUrl": "https://www.google.com/maps/d/edit?mid=15C3q00URmitiir_DEOKs0F0pDU7YOkY&usp=drive_link",
+                            "mapLabel": "View full map",
+                            "mapAriaLabel": "Open full google map of the event in a new tab.",
+                            "legend": {
+                                "veg": "V = vegan & vegetarian friendly",
+                                "gluten": "GF = gluten free friendly"
+                            },
+                            "foodAndDrinks": {
+                                "intro": "Park yourself on a colorful bench or take a mural filled stroll with a tasty treat! Here are some of our recommendations:",
+                                "image": "/food.png",
+                                "imageAlt": "Photos of meals and restaurants in Montréal / Tiohtià:ke",
+                                "breakfast": {
+                                    "title": "BREAKFAST/ CAFES/ TREATS",
+                                    "bernie": {
+                                        "name": "Bernie Beigne",
+                                        "type": "French / American",
+                                        "price": "$",
+                                        "specifications": "none",
+                                        "neighborhood": "Mile End"
+                                    },
+                                    "pain": {
+                                        "name": "Boulangerie Le Pain dans les voiles",
+                                        "type": "French",
+                                        "price": "$",
+                                        "specifications": "none",
+                                        "neighborhood": "La Petite Patrie"
+                                    },
+                                    "kem": {
+                                        "name": "Kem Coba",
+                                        "type": "Vietnamese ice cream",
+                                        "price": "$",
+                                        "specifications": "none",
+                                        "neighborhood": "Mile End"
+                                    },
+                                    "regine": {
+                                        "name": "Régine Café",
+                                        "type": "French / British",
+                                        "price": "$$$",
+                                        "specifications": "V, GF",
+                                        "neighborhood": "La Petite Patrie"
+                                    },
+                                    "stViateur": {
+                                        "name": "St-Viateur Bagel",
+                                        "type": "Jewish",
+                                        "price": "$",
+                                        "specifications": "V",
+                                        "neighborhood": "Mile End"
+                                    },
+                                    "fairmount": {
+                                        "name": "Fairmount Bagel",
+                                        "type": "Jewish",
+                                        "price": "$",
+                                        "specifications": "V",
+                                        "neighborhood": "Mile End"
+                                    }
+                                },
+                                "lunchAndDinner": {
+                                    "title": "LUNCH & DINNER",
+                                    "darna": {
+                                        "name": "Darna Bistroquet",
+                                        "type": "Moroccan",
+                                        "price": "$$",
+                                        "specifications": "none",
+                                        "neighborhood": "La Petite Patrie"
+                                    },
+                                    "drogheria": {
+                                        "name": "Drogheria Fine",
+                                        "type": "Italian",
+                                        "price": "$",
+                                        "specifications": "V",
+                                        "neighborhood": "Mile End"
+                                    },
+                                    "alep": {
+                                        "name": "Le Petit Alep Bistro",
+                                        "type": "Syrian / Armenian",
+                                        "price": "$$",
+                                        "specifications": "V, GF",
+                                        "neighborhood": "Little Italy"
+                                    },
+                                    "tonki": {
+                                        "name": "Le Belle Tonki",
+                                        "type": "Vietnamese / Cambodian",
+                                        "price": "$$",
+                                        "specifications": "none",
+                                        "neighborhood": "La Petite Patrie"
+                                    },
+                                    "hung": {
+                                        "name": "Marché Hung Phat",
+                                        "type": "Vietnamese",
+                                        "price": "$",
+                                        "specifications": "V",
+                                        "neighborhood": "La Petite Patrie"
+                                    },
+                                    "poutineville": {
+                                        "name": "Poutineville",
+                                        "type": "Québécois",
+                                        "price": "$",
+                                        "specifications": "none",
+                                        "neighborhood": "La Petite Patrie"
+                                    },
+                                    "schwartz": {
+                                        "name": "Schwartz’s Deli",
+                                        "type": "Jewish",
+                                        "price": "$",
+                                        "specifications": "none",
+                                        "neighborhood": "Le Plateau"
+                                    },
+                                    "ssam": {
+                                        "name": "SSAM",
+                                        "type": "Korean",
+                                        "price": "$$",
+                                        "specifications": "none",
+                                        "neighborhood": "La Petite Patrie"
+                                    },
+                                    "umami": {
+                                        "name": "Umami Ramen & Izakaya",
+                                        "type": "Japanese",
+                                        "price": "$$",
+                                        "specifications": "V, GF",
+                                        "neighborhood": "Rosemont"
+                                    }
+                                },
+                                "drinks": {
+                                    "title": "DRINKS",
+                                    "birra": {
+                                        "name": "Birra Bar",
+                                        "type": "Microbrewery",
+                                        "price": "$$",
+                                        "specifications": "V",
+                                        "neighborhood": "Le Plateau"
+                                    },
+                                    "harricana": {
+                                        "name": "Brasserie Harricana",
+                                        "type": "Microbrewery",
+                                        "price": "$$",
+                                        "specifications": "V",
+                                        "neighborhood": "Le Plateau"
+                                    },
+                                    "ernest": {
+                                        "name": "Chez Ernest",
+                                        "type": "Resto bar",
+                                        "price": "$$",
+                                        "specifications": "V",
+                                        "neighborhood": "Petite Patrie"
+                                    },
+                                    "nestor": {
+                                        "name": "Nestor",
+                                        "type": "Bar",
+                                        "price": "$$",
+                                        "specifications": "V",
+                                        "neighborhood": "Little Italy"
+                                    },
+                                    "vices": {
+                                        "name": "Vice et Versa",
+                                        "type": "Artisanal Beer",
+                                        "price": "$$",
+                                        "specifications": "V",
+                                        "neighborhood": "Little Italy"
+                                    },
+                                    "vin": {
+                                        "name": "Vinvinvin",
+                                        "type": "Wine bar",
+                                        "price": "$$",
+                                        "specifications": "V",
+                                        "neighborhood": "Petite Patrie"
+                                    }
+                                }
+                            },
+                            "sightSeeing": {
+                                "intro": "Take a tour around Montréal / Tiohtià:ke from our outdoor markets to some lovely historical sites! Be sure to check out:",
+                                "image": "/sightseeing.png",
+                                "imageAlt": "Photos of Montréal / Tiohtià:ke landmarks",
+                                "spots": {
+                                    "title": "SIGHTSEEING",
+                                    "botanical": {
+                                        "name": "Botanical Gardens",
+                                        "type": "Indoor/outdoor gardens",
+                                        "price": "$23.25",
+                                        "specifications": "none",
+                                        "neighborhood": "Hochelaga"
+                                    },
+                                    "chinatown": {
+                                        "name": "Chinatown",
+                                        "type": "Neighborhood with historic site",
+                                        "price": "none",
+                                        "specifications": "none",
+                                        "neighborhood": "Ville Marie"
+                                    },
+                                    "fineArts": {
+                                        "name": "Museum of Fine Arts",
+                                        "type": "Museum",
+                                        "price": "$12-24",
+                                        "specifications": "none",
+                                        "neighborhood": "Downtown"
+                                    },
+                                    "marche": {
+                                        "name": "Marché Jean Talon",
+                                        "type": "Outdoor market",
+                                        "price": "none",
+                                        "specifications": "none",
+                                        "neighborhood": "Little Italy"
+                                    },
+                                    "kondiaronk": {
+                                        "name": "Kondiaronk Belvedere",
+                                        "type": "Lookout spot",
+                                        "price": "none",
+                                        "specifications": "none",
+                                        "neighborhood": "Mount-Royal"
+                                    },
+                                    "laFontaine": {
+                                        "name": "Parc La Fontaine",
+                                        "type": "Lovely park to walk around",
+                                        "price": "none",
+                                        "specifications": "none",
+                                        "neighborhood": "Le Plateau"
+                                    },
+                                    "spectactles": {
+                                        "name": "Quartier des Spectacles",
+                                        "type": "Free summer swings",
+                                        "price": "none",
+                                        "specifications": "none",
+                                        "neighborhood": "Downtown"
+                                    },
+                                    "oratory": {
+                                        "name": "St. Joseph’s Oratory",
+                                        "type": "Catholic shrine",
+                                        "price": "$2-4",
+                                        "specifications": "none",
+                                        "neighborhood": "Côte Des Neiges"
+                                    },
+                                    "stLaurent": {
+                                        "name": "St. Laurent Boulevard",
+                                        "type": "Mural tour",
+                                        "price": "none",
+                                        "specifications": "none",
+                                        "neighborhood": "Le Plateau"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "travelPage": {
+                        "toMontreal": {
+                            "title": "Traveling to Montréal/Tiohtià:ke",
+                            "plane": {
+                                "title": "Plane",
+                                "place": "Pierre Elliott Trudeau International Airport",
+                                "address": "975, boulevard Roméo-Vachon Nord. Dorval, QC H4Y 1H1 (Arrivals)",
+                                "details": "The 747 bus costs $11.00 per passenger and goes directly to Lionel-Groulx metro station.<br></br>A cab from the airport to downtown costs between $50.00 and $70.00."
+                            },
+                            "train": {
+                                "title": "Train",
+                                "place": "Gare Centrale de Montréal",
+                                "address": "895 de la Gauchetière Street West, Montréal, Québec, Canada, H3B 4G1",
+                                "details": ""
+                            },
+                            "bus": {
+                                "title": "Bus",
+                                "place": "Gare d'autocars de Montréal",
+                                "address": "1717, Berri street, Montréal, Québec, Canada, H2L 4E9",
+                                "details": ""
+                            }
+                        },
+                        "toTheEvent": {
+                            "title": "Traveling to the event",
+                            "casa": {
+                                "title": "Casa d'Italia",
+                                "address": "505 Jean-Talon Street East, Montréal, QC H2R 1T6",
+                                "intersection": "Corner of Berri street.",
+                                "metro": "Jean-Talon"
+                            },
+                            "cenne": {
+                                "title": "La Cenne",
+                                "address": "7755 Saint-Laurent boulevard, suite 300, Montreal, QC H2R 1X1",
+                                "intersection": "Between Gounod Street and Villeray Street.",
+                                "metro": "De Castelnau"
+                            },
+                            "jarry": {
+                                "title": "Parc Jarry",
+                                "address": "205 Gary-Carter Street, Montréal, QC H2R 2V7",
+                                "intersection": "Exact location to be determined.",
+                                "metro": "De Castelnau"
+                            },
+                            "metroPrefix": "Metro: "
+                        },
+                        "transportation": {
+                            "title": "Transportation",
+                            "description": "Montréal is an extremely accessible city by foot, and a great public transport if you need to go farther.",
+                            "publicTransit": {
+                                "title": "Public transit",
+                                "opus": {
+                                    "description": "If you want to use city busses or the métro subway system, we recommend getting the “Opus” card <link>3-day, All modes A</link>",
+                                    "link": "https://www.stm.info/en/info/fares/transit-fares/3-day-all-modes"
+                                },
+                                "app": {
+                                    "description": "Also, you can download the <link>TransitApp</link> on your mobile device to view the transit schedules and plan your trips accordingly.",
+                                    "link": "https://transitapp.com/region/montreal?lang=en"
+                                }
+                            },
+                            "bixi": {
+                                "title": "Bixi",
+                                "description": "<link>Bixi</link> is a bike rental service which costs $1.35 per trip or $22 for a monthly subscription. There are Bixi stations all around the city and bike lanes conveniently located to facilitate your travels by bike.",
+                                "link": "https://bixi.com/en/pricing/"
+                            }
+                        }
+                    },
+                    "navigation": {
+                        "title": "Menu",
+                        "about": {
+                            "title": "About",
+                            "subtabs": {
+                                "about": {
+                                    "text": "Team and vision",
+                                    "href": "/en/events/2024/mtl-bal-jam/about"
+                                },
+                                "code-of-conduct": {
+                                    "text": "Code of conduct",
+                                    "href": "/en/events/2024/mtl-bal-jam/code-of-conduct"
+                                },
+                                "volunteering": {
+                                    "text": "Volunteering",
+                                    "href": "/en/events/2024/mtl-bal-jam/volunteering"
+                                }
+                            }
+                        },
+                        "event": {
+                            "title": "Event",
+                            "subtabs": {
+                                "instructors": {
+                                    "text": "Instructors",
+                                    "href": "/en/events/2024/mtl-bal-jam/instructors"
+                                },
+                                "music": {
+                                    "text": "Music",
+                                    "href": "/en/events/2024/mtl-bal-jam/music"
+                                },
+                                "venue": {
+                                    "text": "Venue",
+                                    "href": "/en/events/2024/mtl-bal-jam/venue"
+                                },
+                                "competitions": {
+                                    "text": "Compétitions",
+                                    "href": "/en/events/2024/mtl-bal-jam/competitions"
+                                },
+                                "registration": {
+                                    "text": "Registration",
+                                    "href": "/en/events/2024/mtl-bal-jam/registration"
+                                },
+                                "extra": {
+                                    "text": "Extra",
+                                    "href": "/en/events/2024/mtl-bal-jam/extra"
+                                }
+                            }
+                        },
+                        "travel": {
+                            "title": "Travel",
+                            "subtabs": {
+                                "visiting": {
+                                    "text": "Visiting Montréal / Tiohtià:ke",
+                                    "href": "/en/events/2024/mtl-bal-jam/visiting"
+                                },
+                                "travel": {
+                                    "text": "Getting There",
+                                    "href": "/en/events/2024/mtl-bal-jam/travel"
+                                },
+                                "accommodation": {
+                                    "text": "Accomodation",
+                                    "href": "/en/events/2024/mtl-bal-jam/accommodation"
+                                }
+                            }
+                        }
+                    },
+                    "comingSoon": {
+                        "title": "Coming soon..."
                     }
-                },
-                "comingSoon": {
-                    "title": "Coming soon..."
                 }
             }
-        }
-    },
-    "Resources": {
-        "dj": {
-            "bpm": {
-                "title": "Tempo",
-                "range": "{min} to {max} BPM",
-                "description": "It is important to note that theses guidelines are entirely subjective. A great DJ will be able to determine the best choice of tempo depending on the situation, and dancers present. Variety and sense of timing is what makes an exceptional set: a set that only stays within the “sweet spot” will be boring, playing slow songs too often might kill the energy of the room, and playing too many fast songs might tire out the dancers. It is impossible to please everybody, so it is imperative that the DJ reads the room and uses their judgement.",
-                "slowBal": {
-                    "title": "Slow balboa",
-                    "description": "Slow balboa can be danced to very slow music, but dancers tend to be most comfortable around 80 BPM. Therefore, it is recommended to aim for the middle of this range rather than the extremes unless there is a lot of advanced dancers or you are playing more than one slow song in a row."
-                },
-                "awkwardRange": {
-                    "title": "Awkward area",
-                    "description": "This range is considered difficult for balboa dancers since it is slightly too fast for slow balboa, and too slow for conventional balboa. It is therefore highly encouraged to avoid this range in most cases."
-                },
-                "beginnerClass": {
-                    "title": "Classes",
-                    "description": "In a classroom context, it is sometimes desirable to play a bit slower to give the learners a chance to assimilate concepts."
-                },
-                "bulk": {
-                    "title": "Bulk of music",
-                    "description": "Around 80% of the music played at a social dance should be in this range. After an intro class, it is recommended to start lower, and gradually work your way up. Generally, aiming for the middle of the range rather than the extremes, and not playing too many songs in a row of similar BPM will yield best results."
-                },
-                "comfortableArea": {
-                    "title": "Comfortable area",
-                    "description": "This range is generally appropriate for most level of dancers. When there are dancers of all levels in the room, the majority will be able to dance comfortably in this range."
-                },
-                "sweetSpot": {
-                    "title": "Sweet spot",
-                    "description": "This small range works well for all types of balboa (pure and swing). Most advanced and intermediate dancers will be comfortable social dancing to this range. It is ideal to bring people back to the dance floor after a song that did not work too well (either too slow, fast, or other)."
-                },
-                "competitionRange": {
-                    "title": "Competition",
-                    "description": "Internationally, tempos for finals of “open” or advanced competitions will be within this range. Sometimes all-skates will be faster and warm-ups slower."
-                },
-                "fastTempo": {
-                    "title": "Fast tempo",
-                    "description": "It is important to note that the more the tempo goes past 220 BPM, the less people will be comfortable dancing to the song. However, the challenge of dancing to extremely fast songs is one of the many pleasures of dancing balboa. It is not recommended to play too many extreme songs in a single social dance."
-                },
-                "distribution": {
-                    "title": "Distribution",
-                    "description": "The BPM distribution of a DJ set depends on several factors. In particular, the average level of the dancers present, the quality of the dance floor, the size of the dance floor, the energy level of the room, the timing (start of the evening, end of the evening, start of the set, end of the set), and much more. It is generally recommended to gradually increase and decrease the speed rather than going from one extreme to the other. A fast song played directly after a slow song will sound much faster in contrast, and vice versa. On the other hand, a dance floor that has little energy can benefit from a faster song. Similarly, a dance floor that's too tired for fast songs might regain some vigor after a slow song. This is why it is important to adapt to the people in the room, and every DJ will do this differently.",
-                    "beginner": "Beginner",
-                    "intermediate": "intermediate",
-                    "advanced": "Advanced",
-                    "all": "All",
-                    "y": "Song #"
+        },
+        "Resources": {
+            "dj": {
+                "bpm": {
+                    "title": "Tempo",
+                    "range": "{min} to {max} BPM",
+                    "description": "It is important to note that theses guidelines are entirely subjective. A great DJ will be able to determine the best choice of tempo depending on the situation, and dancers present. Variety and sense of timing is what makes an exceptional set: a set that only stays within the “sweet spot” will be boring, playing slow songs too often might kill the energy of the room, and playing too many fast songs might tire out the dancers. It is impossible to please everybody, so it is imperative that the DJ reads the room and uses their judgement.",
+                    "slowBal": {
+                        "title": "Slow balboa",
+                        "description": "Slow balboa can be danced to very slow music, but dancers tend to be most comfortable around 80 BPM. Therefore, it is recommended to aim for the middle of this range rather than the extremes unless there is a lot of advanced dancers or you are playing more than one slow song in a row."
+                    },
+                    "awkwardRange": {
+                        "title": "Awkward area",
+                        "description": "This range is considered difficult for balboa dancers since it is slightly too fast for slow balboa, and too slow for conventional balboa. It is therefore highly encouraged to avoid this range in most cases."
+                    },
+                    "beginnerClass": {
+                        "title": "Classes",
+                        "description": "In a classroom context, it is sometimes desirable to play a bit slower to give the learners a chance to assimilate concepts."
+                    },
+                    "bulk": {
+                        "title": "Bulk of music",
+                        "description": "Around 80% of the music played at a social dance should be in this range. After an intro class, it is recommended to start lower, and gradually work your way up. Generally, aiming for the middle of the range rather than the extremes, and not playing too many songs in a row of similar BPM will yield best results."
+                    },
+                    "comfortableArea": {
+                        "title": "Comfortable area",
+                        "description": "This range is generally appropriate for most level of dancers. When there are dancers of all levels in the room, the majority will be able to dance comfortably in this range."
+                    },
+                    "sweetSpot": {
+                        "title": "Sweet spot",
+                        "description": "This small range works well for all types of balboa (pure and swing). Most advanced and intermediate dancers will be comfortable social dancing to this range. It is ideal to bring people back to the dance floor after a song that did not work too well (either too slow, fast, or other)."
+                    },
+                    "competitionRange": {
+                        "title": "Competition",
+                        "description": "Internationally, tempos for finals of “open” or advanced competitions will be within this range. Sometimes all-skates will be faster and warm-ups slower."
+                    },
+                    "fastTempo": {
+                        "title": "Fast tempo",
+                        "description": "It is important to note that the more the tempo goes past 220 BPM, the less people will be comfortable dancing to the song. However, the challenge of dancing to extremely fast songs is one of the many pleasures of dancing balboa. It is not recommended to play too many extreme songs in a single social dance."
+                    },
+                    "distribution": {
+                        "title": "Distribution",
+                        "description": "The BPM distribution of a DJ set depends on several factors. In particular, the average level of the dancers present, the quality of the dance floor, the size of the dance floor, the energy level of the room, the timing (start of the evening, end of the evening, start of the set, end of the set), and much more. It is generally recommended to gradually increase and decrease the speed rather than going from one extreme to the other. A fast song played directly after a slow song will sound much faster in contrast, and vice versa. On the other hand, a dance floor that has little energy can benefit from a faster song. Similarly, a dance floor that's too tired for fast songs might regain some vigor after a slow song. This is why it is important to adapt to the people in the room, and every DJ will do this differently.",
+                        "beginner": "Beginner",
+                        "intermediate": "intermediate",
+                        "advanced": "Advanced",
+                        "all": "All",
+                        "y": "Song #"
+                    }
                 }
             }
-        }
-    },
-    "Components": {
-        "paypal": {
-            "donate": "Donate",
-            "logoAlt": "PayPal logo"
         },
-        "embla": {
-            "changeSlide": "Jump to slide {slideNum}",
-            "nextSlide": "Next slide",
-            "prevSlide": "Previous slide"
-        },
-        "gcal": {
-            "iframeTitle": "Balboa in Montréal / Tiohtià:ke Google Calendar"
+        "Components": {
+            "paypal": {
+                "donate": "Donate",
+                "logoAlt": "PayPal logo"
+            },
+            "embla": {
+                "changeSlide": "Jump to slide {slideNum}",
+                "nextSlide": "Next slide",
+                "prevSlide": "Previous slide"
+            },
+            "gcal": {
+                "iframeTitle": "Balboa in Montréal / Tiohtià:ke Google Calendar"
+            }
         }
     }
-}

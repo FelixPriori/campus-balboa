@@ -806,6 +806,71 @@
                         }
                     }
                 },
+                "travelPage": {
+                    "toMontreal": {
+                        "title": "Se rendre à Montréal/Tiohtià:ke",
+                        "plane": {
+                            "title": "Avion",
+                            "place": "Aéroport Internationale Pierre-Élliot Trudeau",
+                            "address": "975 Boul. Roméo Vachon Nord (Arrivées), Dorval, QC H4Y 1H1",
+                            "details": "L’autobus 747 coûte 11,00$ par passager et se rend directement de l’aéroport à la station de métro Lionel-Groulx.<br></br>En taxi, c’est entre 50,00$ et 70,00$ de l’aéroport pour se rendre au centre-ville."
+                        },
+                        "train": {
+                            "title": "Train",
+                            "place": "Gare Centrale de Montréal",
+                            "address": "895 de la Gauchetière Ouest, Montréal, Québec, Canada, H3B 4G1",
+                            "details": ""
+                        },
+                        "bus": {
+                            "title": "Autobus",
+                            "place": "Gare d'autocars de Montréal",
+                            "address": "1717, rue Berri, Montréal, Québec, Canada, H2L 4E9",
+                            "details": ""
+                        }
+                    },
+                    "toTheEvent": {
+                        "title": "Se rendre à l'événement",
+                        "casa": {
+                            "title": "Casa d'Italia",
+                            "address": "505 Rue Jean-Talon E, Montréal, QC H2R 1T6",
+                            "intersection": "Au coin de la rue Berri.",
+                            "metro": "Jean-Talon"
+                        },
+                        "cenne": {
+                            "title": "La Cenne",
+                            "address": "7755 Boul. Saint-Laurent Suite 300, Montreal, QC H2R 1X1",
+                            "intersection": "Entre Gounod et Villeray.",
+                            "metro": "De Castelnau"
+                        },
+                        "jarry": {
+                            "title": "Parc Jarry",
+                            "address": "205 Rue Gary-Carter, Montréal, QC H2R 2V7",
+                            "intersection": "Emplacement exact à déterminer.",
+                            "metro": "De Castelnau"
+                        },
+                        "metroPrefix": "Metro : "
+                    },
+                    "transportation": {
+                        "title": "Se déplacer",
+                        "description": "Montréal est une ville très accessible en transports en commun et à pied.",
+                        "publicTransit": {
+                            "title": "Transports en commun",
+                            "opus": {
+                                "description": "Si vous devez prendre le métro ou l’autobus durant le weekend, nous recommandons d’acheter le titre : <link>3 jours, Tous modes A</link>",
+                                "link": "https://www.stm.info/fr/tarifs/titres-de-transport/3-jours-tous-modes"
+                            },
+                            "app": {
+                                "description": "De plus, vous pouvez télécharger l’application mobile <link>TransitApp</link> pour consulter les horaires de métro ou d’autobus et planifier vos déplacements.",
+                                "link": "https://transitapp.com/region/montreal?lang=fr"
+                            }
+                        },
+                        "bixi": {
+                            "title": "Bixi",
+                            "description": "<link>Bixi</link> est un service de location de vélos à 1,35$ / trajets ou 22$ pour un abonnement mensuel. Il y a des bornes de Bixi partout dans la ville et des pistes cyclables sont aménagées pour faciliter les déplacements à vélo.",
+                            "link": "https://bixi.com/tarifs/"
+                        }
+                    }
+                },
                 "navigation": {
                     "title": "Menu",
                     "about": {

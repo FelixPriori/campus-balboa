@@ -1,7 +1,7 @@
 import Favicon from '@/app/mtl-bal-jam-favicon.ico'
 import BigOG from '@/app/mtl-bal-jam-og-512.png'
 import Main from '@/layout/main';
-import { ComingSoon } from '../sections';
+import { ToMontreal, ToTheEvent, Transportation } from './sections';
 
 type Props = {
   params: { locale: string }
@@ -65,7 +65,9 @@ export default function MbjTravel() {
   return (
     <>
       <Main styles={{ borderRadius: '0.625rem' }}>
-        <ComingSoon />
+        <ToMontreal />
+        <ToTheEvent />
+        <Transportation />
       </Main>
     </>
   )
