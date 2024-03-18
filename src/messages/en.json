@@ -875,11 +875,11 @@
                         "housing": {
                             "title": "Housing",
                             "hotel": {
-                                "description": "Pour cause de restrictions municipales, aucun hôtel ne se retrouve dans le quartier où se déroule le MTL BAL JAM. En ce sens, considérez les quartiers plus près du centre-ville si vous souhaitez louer une chambre d’hôtel ou dans une auberge. Il est toutefois possible de trouver sur les sites de services d’hébergement comme <link>couchsurfing</link>.",
+                                "description": "Because of local restrictions, there are no hotels in the MTL BAL JAM neighborhood. As such, you may consider other neighborhoods closer to downtown if you want to rent a room or a hostel. However, you can look on housing websites such as <link>couchsurfing</link>.",
                                 "link": "https://www.couchsurfing.com/"
                             },
                             "community": {
-                                "description": "Visitez la page Facebook de l’événement afin de retrouver la <link>publication épinglée</link> visant à faciliter la recherche et l’offre d’hébergement dans la communauté.",
+                                "description": "Visit the event’s Facebook page to find the <link>pinned post</link> about housing to see what the offer is within the community.",
                                 "link": "https://www.facebook.com/events/843165910936891/?post_id=928359642417517&view=permalink&notif_id=1710706831431731&notif_t=feedback_reaction_generic&ref=notif"
                             }
                         }
