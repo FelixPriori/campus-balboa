@@ -813,38 +813,77 @@
                                 "title": "Plane",
                                 "place": "Pierre Elliott Trudeau International Airport (YUL)",
                                 "address": "975, boulevard Roméo-Vachon Nord. Dorval, QC H4Y 1H1 (Arrivals)",
-                                "details": "The 747 bus costs $11.00 per passenger and goes directly to Lionel-Groulx metro station.<br></br>A cab from the airport to downtown costs between $50.00 and $70.00."
+                                "details": "The 747 bus costs $11.00 per passenger and goes directly to Lionel-Groulx metro station.<br></br>A cab from the airport to downtown costs between $50.00 and $70.00.",
+                                "location": {
+                                    "lat": "45.4656888",
+                                    "lng": "-73.7480617",
+                                    "markerTitle": "Pierre Elliott Trudeau International Airport",
+                                    "infoWindowText": "975, boulevard Roméo-Vachon Nord. Dorval, QC H4Y 1H1 (Arrivals)"
+                                }
                             },
                             "train": {
                                 "title": "Train",
                                 "place": "Gare Centrale de Montréal",
-                                "address": "895 de la Gauchetière Street West, Montréal, Québec, Canada, H3B 4G1"
+                                "address": "895 de la Gauchetière Street West, Montréal, Québec, Canada, H3B 4G1",
+                                "location": {
+                                    "lat": "45.4999952",
+                                    "lng": "-73.566562",
+                                    "markerTitle": "Gare Centrale de Montréal",
+                                    "infoWindowText": "895 de la Gauchetière Street West, Montréal, Québec, Canada, H3B 4G1"
+                                }
                             },
                             "bus": {
                                 "title": "Bus",
                                 "place": "Gare d'autocars de Montréal",
-                                "address": "1717, Berri street, Montréal, Québec, Canada, H2L 4E9"
+                                "address": "1717, Berri street, Montréal, Québec, Canada, H2L 4E9",
+                                "location": {
+                                    "lat": "45.5168573",
+                                    "lng": "-73.5659633",
+                                    "markerTitle": "Gare d'autocars de Montréal",
+                                    "infoWindowText": "1717, Berri street, Montréal, Québec, Canada, H2L 4E9"
+                                }
                             }
                         },
                         "toTheEvent": {
                             "title": "Traveling to the event",
                             "casa": {
-                                "title": "Casa d'Italia (classes, Firday & Satuday dances)",
+                                "title": "Casa d'Italia",
+                                "events": "Classes, Firday & Satuday dances",
                                 "address": "505 Jean-Talon Street East, Montréal, QC H2R 1T6",
                                 "intersection": "Corner of Berri street.",
-                                "metro": "Jean-Talon (blue and orange line)"
+                                "metro": "Jean-Talon (blue and orange line)",
+                                "location": {
+                                    "lat": "45.53935",
+                                    "lng": "-73.614133",
+                                    "markerTitle": "Casa d'Italia",
+                                    "infoWindowText": "505 Jean-Talon Street East, Montréal, QC H2R 1T6"
+                                }
                             },
                             "cenne": {
-                                "title": "La Cenne (Sunday dance)",
+                                "title": "La Cenne",
+                                "events": "Sunday dance",
                                 "address": "7755 Saint-Laurent boulevard, suite 300, Montreal, QC H2R 1X1",
                                 "intersection": "Between Gounod Street and Villeray Street.",
-                                "metro": "De Castelnau (blue line) or Jarry (orange line)"
+                                "metro": "De Castelnau (blue line) or Jarry (orange line)",
+                                "location": {
+                                    "lat": "45.5376876",
+                                    "lng": "-73.6265331",
+                                    "markerTitle": "La Cenne",
+                                    "infoWindowText": "7755 Saint-Laurent boulevard, suite 300, Montreal, QC H2R 1X1"
+                                }
                             },
                             "jarry": {
-                                "title": "Parc Jarry (Sunday evening gathering)",
+                                "title": "Parc Jarry",
+                                "events": "Sunday evening gathering",
                                 "address": "205 Gary-Carter Street, Montréal, QC H2R 2V7",
                                 "intersection": "Exact location to be determined.",
-                                "metro": "De Castelnau (blue line) or Jarry (orange line)"
+                                "metro": "De Castelnau (blue line) or Jarry (orange line)",
+                                "location": {
+                                    "lat": "45.5360021",
+                                    "lng": "-73.6285952",
+                                    "markerTitle": "Parc Jarry",
+                                    "infoWindowText": "205 Gary-Carter Street, Montréal, QC H2R 2V7"
+                                }
                             },
                             "metroPrefix": "Metro: "
                         },

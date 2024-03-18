@@ -1,7 +1,7 @@
 // @ts-nocheck
 "use client"
-import { useEffect, useState } from 'react';
-import { APIProvider, Map, AdvancedMarker, InfoWindow, useAdvancedMarkerRef } from '@vis.gl/react-google-maps'; 
+import { useState } from 'react';
+import { APIProvider, Map, AdvancedMarker, InfoWindow, useAdvancedMarkerRef } from '@vis.gl/react-google-maps';
 
 type GoogleMapsProps = {
     lat: string;
@@ -9,20 +9,25 @@ type GoogleMapsProps = {
     markerTitle: string;
     infoWindowText: string;
     mapId: string;
+    zoom?: number;
 }
 
-function GoogleMaps({lat, lng, markerTitle, infoWindowText, mapId}: GoogleMapsProps) {
+function GoogleMaps({ lat, lng, markerTitle, infoWindowText, mapId, zoom = 16 }: GoogleMapsProps) {
     const [infowindowOpen, setInfowindowOpen] = useState(true);
     const [markerRef, marker] = useAdvancedMarkerRef();
 
     return (
         <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}>
-            <Map 
+            <Map
+                mapTypeControlOptions={{
+                    mapTypeIds: [],
+                }}
+                streetViewControl={false}
                 center={{
                     lat: Number.parseFloat(lat),
                     lng: Number.parseFloat(lng),
-                }} 
-                zoom={16} 
+                }}
+                zoom={zoom}
                 mapId={mapId}
             >
                 <AdvancedMarker
@@ -45,7 +50,7 @@ function GoogleMaps({lat, lng, markerTitle, infoWindowText, mapId}: GoogleMapsPr
                 )}
             </Map>
         </APIProvider>
-  );
+    );
 }
 
 export default GoogleMaps;
