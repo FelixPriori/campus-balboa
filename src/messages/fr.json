@@ -811,36 +811,36 @@
                         "title": "Se rendre à Montréal/Tiohtià:ke",
                         "plane": {
                             "title": "Avion",
-                            "place": "Aéroport Internationale Pierre-Élliot Trudeau (YUL)",
-                            "address": "975 Boul. Roméo Vachon Nord (Arrivées), Dorval, QC H4Y 1H1",
-                            "details": "L’autobus 747 coûte 11,00$ par passager et se rend directement de l’aéroport à la station de métro Lionel-Groulx.<br></br>En taxi, c’est entre 50,00$ et 70,00$ de l’aéroport pour se rendre au centre-ville.",
+                            "place": "Aéroport International Montréal-Trudeau (YUL)",
+                            "address": "975 Boul. Roméo Vachon Nord (Arrivées), Dorval, Québec, H4Y 1H1",
+                            "details": "L’autobus 747 coûte 11,00$ par passager et se rend directement de l’aéroport à la station de métro Lionel-Groulx.<br></br>En taxi, prévoir entre 40,00$ et 70,00$ pour le trajet de l’aéroport au centre-ville.",
                             "location": {
                                 "lat": "45.4656888",
                                 "lng": "-73.7455617",
-                                "markerTitle": "Aéroport Internationale Pierre-Élliot Trudeau (YUL)",
-                                "infoWindowText": "975 Boul. Roméo Vachon Nord (Arrivées), Dorval, QC H4Y 1H1"
+                                "markerTitle": "Aéroport International Montréal-Trudeau (YUL)",
+                                "infoWindowText": "975 Boul. Roméo Vachon Nord (Arrivées), Dorval, Québec, H4Y 1H1"
                             }
                         },
                         "train": {
                             "title": "Train",
                             "place": "Gare Centrale de Montréal",
-                            "address": "895 de la Gauchetière Ouest, Montréal, Québec, Canada, H3B 4G1",
+                            "address": "895 de la Gauchetière Ouest, Montréal, Québec, H3B 4G1",
                             "location": {
                                 "lat": "45.4999952",
                                 "lng": "-73.566562",
                                 "markerTitle": "Gare Centrale de Montréal",
-                                "infoWindowText": "895 de la Gauchetière Ouest, Montréal, Québec, Canada, H3B 4G1"
+                                "infoWindowText": "895 de la Gauchetière Ouest, Montréal, Québec, H3B 4G1"
                             }
                         },
                         "bus": {
                             "title": "Autocar",
                             "place": "Gare d'autocars de Montréal",
-                            "address": "1717, rue Berri, Montréal, Québec, Canada, H2L 4E9",
+                            "address": "1717 rue Berri, Montréal, Québec, H2L 4E9",
                             "location": {
                                 "lat": "45.5167573",
                                 "lng": "-73.5636933",
                                 "markerTitle": "Gare d'autocars de Montréal",
-                                "infoWindowText": "1717, rue Berri, Montréal, Québec, Canada, H2L 4E9"
+                                "infoWindowText": "1717 rue Berri, Montréal, Québec, H2L 4E9"
                             }
                         }
                     },
@@ -849,43 +849,43 @@
                         "casa": {
                             "title": "Casa d'Italia",
                             "events": "Cours, danses du vendredi et samedi",
-                            "address": "505 Rue Jean-Talon E, Montréal, QC H2R 1T6",
+                            "address": "505 Rue Jean-Talon E, Montréal, Québec, H2R 1T6",
                             "intersection": "Au coin de la rue Berri.",
                             "metro": "Jean-Talon (ligne bleue et orange)",
                             "location": {
                                 "lat": "45.53935",
                                 "lng": "-73.614133",
                                 "markerTitle": "Casa d'Italia",
-                                "infoWindowText": "505 Rue Jean-Talon E, Montréal, QC H2R 1T6"
+                                "infoWindowText": "505 Rue Jean-Talon E, Montréal, Québec, H2R 1T6"
                             }
                         },
                         "cenne": {
                             "title": "La Cenne",
                             "events": "Danse du dimanche",
-                            "address": "7755 Boul. Saint-Laurent Suite 300, Montreal, QC H2R 1X1",
+                            "address": "7755 Boul. Saint-Laurent Suite 300, Montreal, Québec, H2R 1X1",
                             "intersection": "Entre Gounod et Villeray.",
                             "metro": "De Castelnau (ligne bleue) ou Jarry (ligne orange)",
                             "location": {
                                 "lat": "45.5376876",
                                 "lng": "-73.6265331",
                                 "markerTitle": "La Cenne",
-                                "infoWindowText": "7755 Boul. Saint-Laurent Suite 300, Montreal, QC H2R 1X1"
+                                "infoWindowText": "7755 Boul. Saint-Laurent Suite 300, Montreal, Québec, H2R 1X1"
                             }
                         },
                         "jarry": {
                             "title": "Parc Jarry",
                             "events": "Regroupement du dimanche soir",
-                            "address": "205 Rue Gary-Carter, Montréal, QC H2R 2V7",
+                            "address": "205 Rue Gary-Carter, Montréal, Québec, H2R 2V7",
                             "intersection": "Emplacement exact à déterminer.",
                             "metro": "De Castelnau (ligne bleue) ou Jarry (ligne orange)",
                             "location": {
                                 "lat": "45.5360021",
                                 "lng": "-73.6285952",
                                 "markerTitle": "Parc Jarry",
-                                "infoWindowText": "205 Rue Gary-Carter, Montréal, QC H2R 2V7"
+                                "infoWindowText": "205 Rue Gary-Carter, Montréal, Québec, H2R 2V7"
                             }
                         },
-                        "metroPrefix": "Metro : "
+                        "metroPrefix": "Métro : "
                     },
                     "transportation": {
                         "title": "Moyens de transport",
@@ -893,7 +893,7 @@
                         "publicTransit": {
                             "title": "Transports en commun",
                             "opus": {
-                                "description": "Si vous devez prendre le métro ou l’autobus durant le weekend, nous recommandons d’acheter le titre : <link>3 jours, Tous modes A</link> qui inclut l’autobus 747 de l’aéroport.",
+                                "description": "Si vous devez prendre le métro ou l’autobus durant le weekend, nous recommandons d’acheter le titre <link>3 jours, Tous modes A</link> qui inclut l’autobus 747 de l’aéroport.",
                                 "link": "https://www.stm.info/fr/tarifs/titres-de-transport/3-jours-tous-modes"
                             },
                             "app": {
@@ -903,12 +903,12 @@
                         },
                         "bixi": {
                             "title": "Bixi",
-                            "description": "<link>Bixi</link> est un service de location de vélos à 1,35$ / trajets ou 22$ pour un abonnement mensuel. Il y a des bornes de Bixi partout dans la ville et des pistes cyclables sont aménagées pour faciliter les déplacements à vélo.",
+                            "description": "<link>Bixi</link> est un service de location de vélos à 1,35$ / trajet ou 22$ pour un abonnement mensuel. Il y a des bornes de Bixi partout dans la ville et des pistes cyclables sont aménagées pour faciliter les déplacements à vélo.",
                             "link": "https://bixi.com/tarifs/"
                         },
                         "car": {
                             "title": "Auto",
-                            "description": "Les places de stationnement sont limitées proche de la Casa d’Italia, il est recommandé de prévoir un temps pour la recherche d’un parking. Vous pouvez payer les parcomètres à l'aide de l'application mobile <link>P$ Service mobile</link>.",
+                            "description": "Les places de stationnement sont limitées près de la Casa d’Italia, il est recommandé de prévoir un temps pour la recherche d’un stationnement. Vous pouvez payer les parcomètres à l'aide de l'application mobile <link>P$ Service mobile</link>.",
                             "link": "https://www.agencemobilitedurable.ca/fr/infos-pratiques/pservicemobile"
                         }
                     },
