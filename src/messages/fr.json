@@ -849,7 +849,7 @@
                         "metroPrefix": "Metro : "
                     },
                     "transportation": {
-                        "title": "Se déplacer",
+                        "title": "Moyens de transport",
                         "description": "Montréal est une ville très accessible en transports en commun et à pied.",
                         "publicTransit": {
                             "title": "Transports en commun",
@@ -869,7 +869,8 @@
                         },
                         "car": {
                             "title": "Auto",
-                            "description": "Les places de stationnement sont limitées proche de la Casa d’Italia, il est recommandé de prévoir un temps pour la recherche d’un parking."
+                            "description": "Les places de stationnement sont limitées proche de la Casa d’Italia, il est recommandé de prévoir un temps pour la recherche d’un parking. Vous pouvez payer les parcomètres à l'aide de l'application mobile <link>P$ Service mobile</link>.",
+                            "link": "https://www.agencemobilitedurable.ca/fr/infos-pratiques/pservicemobile"
                         }
                     },
                     "housing": {
@@ -940,12 +941,8 @@
                                 "href": "/fr/evenements/2024/mtl-bal-jam/visiting"
                             },
                             "travel": {
-                                "text": "Se rendre",
+                                "text": "Info voyage",
                                 "href": "/fr/evenements/2024/mtl-bal-jam/travel"
-                            },
-                            "accommodation": {
-                                "text": "Se loger",
-                                "href": "/fr/evenements/2024/mtl-bal-jam/accommodation"
                             }
                         }
                     }

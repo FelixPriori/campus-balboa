@@ -169,18 +169,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.7,
-    },
-    {
-      url: 'https://www.campusbalboa.org/fr/evenements/2024/mtl-bal-jam/accommodation',
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    },
-    {
-      url: 'https://www.campusbalboa.org/en/events/2024/mtl-bal-jam/accommodation',
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    },
+    }
   ]
 }

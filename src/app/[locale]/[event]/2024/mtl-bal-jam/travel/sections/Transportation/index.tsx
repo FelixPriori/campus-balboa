@@ -40,6 +40,16 @@ export default function ToMontreal() {
                         }
                     </p>
                 </div>
+                <div className={styles.mode}>
+                    <h3 className={styles.modeTitle}>{t('car.title')}</h3>
+                    <p>
+                        {
+                            t.rich('car.description', {
+                                link: (chunk) => <a href={t('car.link')} rel="noreferrer noopener" target="_blank">{chunk}</a>
+                            })
+                        }
+                    </p>
+                </div>
             </div>
         </section>
     )

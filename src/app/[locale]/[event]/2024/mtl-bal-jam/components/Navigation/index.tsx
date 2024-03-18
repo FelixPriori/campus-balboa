@@ -25,7 +25,6 @@ const pageTabs = {
     travel: [
         'visiting',
         'travel',
-        'accommodation'
     ]
 }
 

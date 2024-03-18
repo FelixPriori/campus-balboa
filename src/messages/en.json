@@ -54,7 +54,7 @@
                                 "name": "Olga",
                                 "avatarAlt": "Olga's avatar",
                                 "link": "https://isolobalboa.com/",
-                                "bio": "Olga was born into a family of teachers and since her early years has been an energetic live wire – studying music, doing athletics, martial arts and gymnastics. In 2007 she was introduced to Lindy Hop and this is where the real passion story begins. She got dance hooked and started to explore more of the dance world by getting into Blues and later Balboa. She has been actively travelling the globe in pursuit of more opportunities to dance, learn and compete. Later she began to share her love for swing music and dance by teaching. Now Olga is an international Balboa instructor, teaching solo and couple Balboa all over the world.<br></br>In her classes, she pays a lot of attention to getting the students interested and involved by giving challenging and fun tasks, working both on technique and musicality and infecting them even more with the love of dancing. For the time being she is passionately developing a new direction of swing dance practices – <link>iSoloBalboa</link> – offline and online solo classes for Balboa leaders and followers which aim at polishing up technique and developing creativity and personal aesthetics."
+                                "bio": "Olga was born into a family of teachers and since her early years has been an energetic live wire – studying music, doing athletics, martial arts and gymnastics. In 2007 she was introduced to Lindy Hop and this is where the real passion story begins. She got dance hooked and started to explore more of the dance world by getting into Blues and later Balboa. She has been actively traveling the globe in pursuit of more opportunities to dance, learn and compete. Later she began to share her love for swing music and dance by teaching. Now Olga is an international Balboa instructor, teaching solo and couple Balboa all over the world.<br></br>In her classes, she pays a lot of attention to getting the students interested and involved by giving challenging and fun tasks, working both on technique and musicality and infecting them even more with the love of dancing. For the time being she is passionately developing a new direction of swing dance practices – <link>iSoloBalboa</link> – offline and online solo classes for Balboa leaders and followers which aim at polishing up technique and developing creativity and personal aesthetics."
                             },
                             "felix": {
                                 "name": "Felix",
@@ -869,7 +869,8 @@
                             },
                             "car": {
                                 "title": "Car",
-                                "description": "Parking spaces are limited around the Casa d’Italia, so plan your trip accordingly if traveling by car!"
+                                "description": "Parking spaces are limited around the Casa d’Italia, so plan your trip accordingly if traveling by car! You can also pay your parking meter through the <link>P$ mobile service</link> mobile app.",
+                                "link": "https://www.agencemobilitedurable.ca/en/practical-info/pmobileservice"
                             }
                         },
                         "housing": {
@@ -940,12 +941,8 @@
                                     "href": "/en/events/2024/mtl-bal-jam/visiting"
                                 },
                                 "travel": {
-                                    "text": "Getting There",
+                                    "text": "Traveling information",
                                     "href": "/en/events/2024/mtl-bal-jam/travel"
-                                },
-                                "accommodation": {
-                                    "text": "Accomodation",
-                                    "href": "/en/events/2024/mtl-bal-jam/accommodation"
                                 }
                             }
                         }
