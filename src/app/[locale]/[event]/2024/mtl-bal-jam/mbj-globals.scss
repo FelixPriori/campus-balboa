@@ -61,6 +61,7 @@ textarea {
     border-radius: var(--border-radius);
     box-shadow: 0 1.5rem 4rem rgba(38, 70, 83, 0.15);
     overflow: hidden;
+    position: relative;
 
     @media only screen and (max-width: 576px) {
         border-radius: 0;

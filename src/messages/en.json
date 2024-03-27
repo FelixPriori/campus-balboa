@@ -105,6 +105,10 @@
                         "success": "You are signed up for the newsletter.",
                         "error": "Something went wrong. Try again later."
                     },
+                    "contactModal": {
+                        "title": "Contact us",
+                        "close": "Close"
+                    },
                     "header": {
                         "date": "June 21-22-23, 2024",
                         "registration": {

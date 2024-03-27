@@ -105,6 +105,10 @@
                     "success": "Vous êtes inscrits à la liste d'envoi.",
                     "error": "Une erreur s'est produite, veuillez réessayer."
                 },
+                "contactModal": {
+                    "title": "Contactez-nous",
+                    "close": "Fermer"
+                },
                 "socials": {
                     "facebook": {
                         "alt": "Facebook",

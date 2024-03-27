@@ -2,6 +2,7 @@ import { Caveat_Brush, Josefin_Sans } from 'next/font/google';
 import Navigation from './components/Navigation';
 import './mbj-globals.scss';
 import { Footer, Header } from './sections';
+import FloatingHelpButton from './components/FloatingHelpButton';
 
 const caveatBrush = Caveat_Brush({
   subsets: ['latin'],
@@ -28,6 +29,7 @@ export default function MtlBalJamLayout({
       <Header />
       {children}
       <Footer />
+      <FloatingHelpButton />
     </div>
   )
 }

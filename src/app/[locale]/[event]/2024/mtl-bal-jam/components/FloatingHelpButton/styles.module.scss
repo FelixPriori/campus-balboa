@@ -1,0 +1,24 @@
+.floatingHelpButton {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 75px;
+    height: 75px;
+    background-color: var(--mbj-color-black);
+    color: var(--mbj-color-chartreuse);
+    padding: 8px;
+    border-radius: 50%;
+    border: 1px solid var(--mbj-color-chartreuse);
+    opacity: 0.75;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        opacity: 1;
+    }
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 3px 5px rgba(38, 70, 83, 0.5);
+    }
+}
