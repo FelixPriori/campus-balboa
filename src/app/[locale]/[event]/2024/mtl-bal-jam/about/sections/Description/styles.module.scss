@@ -1,4 +1,5 @@
 .descriptionSection {
+    position: relative;
     background-color: var(--mbj-color-black);
     padding: 40px 0;
 
@@ -20,25 +21,25 @@
         margin-bottom: 20px;
     }
 
+    .logoContainer {
+        position: absolute;
+        left: 20%;
+        top: 50%;
+        transform: translateY(-50%);
+        justify-self: center;
+        align-self: center;
+
+        img {
+            width: 300px;
+            height: 300px;
+            opacity: 0.15;
+        }
+    }
+
     .content {
         position: relative;
         max-width: 50%;
         margin: 0 auto;
-
-        .logoContainer {
-            position: absolute;
-            left: 0;
-            top: 30%;
-            transform: translate(-50%, -50%);
-            justify-self: center;
-            align-self: center;
-
-            img {
-                width: 300px;
-                height: 300px;
-                opacity: 0.15;
-            }
-        }
 
         p {
             br {
@@ -60,18 +61,29 @@
             margin-bottom: 20px;
         }
 
-        @media only screen and (max-width: 768px) {
+
+    }
+
+    @media only screen and (max-width: 768px) {
+        .logoContainer {
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .content {
             padding: 20px 50px;
             max-width: 100%;
-
-            .logoContainer {
-                left: 50%;
-                top: 50%;
-            }
 
             h3 {
                 text-align: center;
             }
+        }
+    }
+
+
+    @media only screen and (max-width: 576px) {
+        h2 {
+            font-size: 2.5rem;
         }
     }
 }

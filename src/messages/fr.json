@@ -5,6 +5,10 @@
         "changeLang": "EN",
         "registerCta": "S'enregistrer"
     },
+    "LandAknowledgement": {
+        "title": "Reconnaissance du territoire",
+        "text": "{name} tient à reconnaître que le territoire sur lequel nous tenons nos activités, Tiohtià:ke/Montréal, se se situe sur les terres autochtones non cédées des Kanien’kehá:ka/Mohawks et sert de lieu de rencontre et d’échange entre les Premières Nations depuis des temps immémoriaux."
+    },
     "Events": {
         "2024": {
             "Olga": {

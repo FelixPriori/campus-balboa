@@ -5,6 +5,10 @@
             "changeLang": "FR",
             "registerCta": "Register"
         },
+        "LandAknowledgement": {
+            "title": "Land Acknowledgement",
+            "text": "{name} recognizes that the land on which we are hosted: Tiohtià:ke/Montréal, stands on the unceded territory of the Kanien’kehá:ka/Mohawk nation. This land has been a place of gathering for many First Nations since time immemorial."
+        },
         "Events": {
             "2024": {
                 "Olga": {
