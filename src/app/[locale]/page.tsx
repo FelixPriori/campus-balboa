@@ -2,6 +2,7 @@ import Main from '@/layout/main'
 import sectionsRenderer, {
   Hero,
   Footer,
+  LandAknowledgementSection,
 } from './sections';
 import { getPageBySlug, getPageMetaDataByPageSlug } from '@/lib/api';
 import { PAGE_FIELDS_QUERY } from '@/lib/queries';
@@ -65,6 +66,7 @@ export default async function Home({ params: { locale } }: { params: { locale: s
       <Hero {...pageData?.hero} />
       <Main>
         {pageData?.sectionsCollection?.items.map((s: any) => sectionsRenderer(s))}
+        <LandAknowledgementSection />
       </Main>
       <Footer {...pageData?.footer} />
     </div>

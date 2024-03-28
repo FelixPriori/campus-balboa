@@ -5,6 +5,7 @@ import EventsSection from './Events';
 import MissionsSection from "./Missions";
 import AboutUsSection from "./AboutUs";
 import Footer from './Footer';
+import LandAknowledgementSection from "./LandAcknowledgement";
 
 export interface PageSectionProps {
     title: string
@@ -34,4 +35,5 @@ export default function sectionsRenderer(section: any) {
 export {
     Hero,
     Footer,
+    LandAknowledgementSection
 }
