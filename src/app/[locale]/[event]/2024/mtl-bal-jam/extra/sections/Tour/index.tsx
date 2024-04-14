@@ -11,7 +11,7 @@ export default function Tour() {
             <h2>{t('title')}</h2>
             <div className={styles.content}>
                 <div className={styles.imageWrapper}>
-                    <Image src="/little-italy.jpg" width={250} height={250} alt={t('imageAlt')} />
+                    <Image src="/mbj-guided-tour.png" width={250} height={250} alt={t('imageAlt')} />
                 </div>
                 <div className={styles.text}>
                     <p>{t('price')}</p>
