@@ -16,8 +16,8 @@ export default function Header() {
         if (pageName) {
             return (
                 <>
-                    <h2>{t(`pageTitle.${pageName}`)}</h2>
-                    <h3>{t('date')}</h3>
+                    <h1>{t(`pageTitle.${pageName}`)}</h1>
+                    <p className={styles.date}>{t('date')}</p>
                 </>
             )
         }
@@ -30,7 +30,7 @@ export default function Header() {
         <header className={styles.headerSection}>
             <LogoLink />
             <div className={styles.text}>
-                <h1>{t('title')}</h1>
+                <p className={styles.eventTitle}>{t('title')}</p>
                 {renderText()}
                 <RegisterNow />
             </div>

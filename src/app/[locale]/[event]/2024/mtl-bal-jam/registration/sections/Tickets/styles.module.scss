@@ -22,19 +22,16 @@
     }
 
     h2 {
-        font-size: 4rem;
         text-align: center;
         margin-bottom: 20px;
     }
 
     h3 {
-        font-size: 2rem;
         margin: 20px 0;
     }
 
     h4 {
         text-align: center;
-        font-size: 1.5rem;
         margin: 10px 0;
     }
 
@@ -93,40 +90,47 @@
 
     @media only screen and (max-width: 500px) {
         h2 {
-            font-size: 1.5rem;
             margin-bottom: 10px;
         }
 
         h3 {
-            font-size: 1.2rem;
             margin-bottom: 10px;
-        }
-
-        h4 {
-            font-size: 1rem;
         }
 
         li,
         p {
-            font-size: 0.6rem;
             line-height: 150%;
         }
 
-        .calendar {
+        .content {
+            .calendar {
 
-            .note {
-                font-size: 0.75rem;
-            }
+                .note {
+                    font-size: 0.75rem;
+                }
 
-            ul {
-                margin: 0;
-            }
+                ul {
+                    margin: 0;
+                }
 
-            .priceItem {
-                span {
-                    min-width: fit-content;
+                .priceItem {
+                    display: block;
+
+                    span {
+                        min-width: fit-content;
+                    }
+
+                    .dots {
+                        display: none;
+                    }
+
+                    .price {
+                        display: block;
+                        text-indent: 1.5rem;
+                    }
                 }
             }
         }
+
     }
 }

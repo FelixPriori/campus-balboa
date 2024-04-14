@@ -403,6 +403,14 @@
                             "when": "When: Saturday",
                             "imageAlt": "Photo of Little Italy",
                             "description": "Discover our beloved city by visiting Little Italy, the neighborhood where MTL BAL JAM will be held. You will get to learn more about our beautiful venue, the Casa Italia by signing up for the guided tour! Don't worry. It will not interfere with the classes."
+                        },
+                        "shirt": {
+                            "title": "\"Let's Jam\" T-shirt",
+                            "price": "Price: $35.00 CAD",
+                            "imageAlt": "Photo of the Let's Jam t-shirt",
+                            "description": "We are committed to being Eco-Responsible, ethical and respectful of the environment. For this reason, we have selected Mercerie Roger for our t-shirts which are:<br></br><list></list><br></br>Thanks to <link>Youlia</link>, an excellent local designer who made this beautiful design",
+                            "list": "Made in Quebec,Printed in Montreal,100% organic cotton & GOTS certified (Global Organic Textile Standard),Plastic and synthetic-free",
+                            "link": "https://www.instagram.com/youlia.moments/"
                         }
                     },
                     "competitionsPage": {

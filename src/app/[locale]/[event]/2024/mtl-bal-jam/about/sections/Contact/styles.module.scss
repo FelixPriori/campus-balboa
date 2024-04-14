@@ -7,7 +7,6 @@
     .title {
         position: relative;
         color: var(--mbj-color-black);
-        font-size: 4rem;
         text-align: left;
         margin-bottom: 25px;
         z-index: 1;
@@ -50,10 +49,6 @@
 
     @media only screen and (max-width: 420px) {
         padding-top: 125px;
-
-        .title {
-            font-size: 3rem;
-        }
 
         .separator {
             clip-path: polygon(0 0, 100% 30%, 100% 0);

@@ -10,12 +10,9 @@
     }
 
     h2 {
-        font-size: 3rem;
         text-align: center;
         margin-bottom: 20px;
     }
-
-
 
     .content {
         position: relative;
@@ -26,7 +23,6 @@
             grid-column: 4 / -4;
 
             .modeTitle {
-                font-size: 2rem;
                 margin-bottom: 20px;
             }
         }
@@ -62,12 +58,6 @@
             .mode {
                 grid-column: 1/-1;
             }
-        }
-    }
-
-    @media only screen and (max-width: 576px) {
-        h2 {
-            font-size: 2rem;
         }
     }
 }

@@ -1,4 +1,4 @@
-.bandSection {
+.shirtSection {
     background-color: var(--mbj-color-black);
     padding: 40px 0;
 
@@ -14,27 +14,15 @@
         margin-bottom: clamp(1rem, 2vw, 1.5rem);
     }
 
+    ul {
+        margin-left: 1rem;
+    }
+
     .content {
         position: relative;
         display: grid;
         grid-template-columns: repeat(12, 1fr);
 
-        .cutout {
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            transform: scaleX(-1);
-            z-index: 0;
-
-            img {
-                display: block;
-                width: 100%;
-                height: 100%;
-                filter: brightness(0.5);
-                object-fit: contain;
-            }
-        }
 
         .imageWrapper {
             grid-column: 2 / 5;
@@ -46,6 +34,7 @@
             border-radius: var(--border-radius);
 
             img {
+                display: block;
                 width: 100%;
                 height: 100%;
                 object-fit: contain;

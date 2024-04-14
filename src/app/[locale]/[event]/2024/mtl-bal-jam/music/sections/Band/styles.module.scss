@@ -2,26 +2,27 @@
     background-color: var(--mbj-color-black);
     padding: 40px 0;
 
-    h2, h3, p, a {
+    h2,
+    h3,
+    p,
+    a {
         color: var(--mbj-color-white);
     }
 
     h2 {
-        font-size: 4rem;
         text-align: center;
         margin-bottom: 20px;
     }
 
     h3 {
-        font-size: 2rem;
         margin-bottom: 20px;
     }
-    
+
     .content {
         position: relative;
         display: grid;
         grid-template-columns: repeat(12, 1fr);
-        
+
         .cutout {
             position: absolute;
             top: 0;
@@ -37,7 +38,7 @@
                 object-fit: contain;
             }
         }
-        
+
         .logoWrapper {
             grid-column: 2 / 5;
             display: flex;
