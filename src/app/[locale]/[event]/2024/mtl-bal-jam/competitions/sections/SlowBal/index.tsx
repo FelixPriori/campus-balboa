@@ -4,15 +4,12 @@ import styles from './styles.module.scss'
 
 
 export default function MixAndMatch() {
-    const t = useTranslations('Events.2024.MtlBalJam.competitionsPage.mixAndMatchSection')
+    const t = useTranslations('Events.2024.MtlBalJam.competitionsPage.slowBalSection')
     return (
         <section className={styles.mixAndMatchSection}>
-            <div className={styles.competitionNote}>
-                <p>{t('competitionNote')}</p>
-            </div>
             <h2>{t('title')}</h2>
             <div className={styles.content}>
-                <p>{t('description')}</p>
+                <p>{t.rich('description', { br: () => <br /> })}</p>
             </div>
         </section>
     )

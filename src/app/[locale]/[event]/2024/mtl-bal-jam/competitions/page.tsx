@@ -1,7 +1,7 @@
 import Favicon from '@/app/mtl-bal-jam-favicon.ico'
 import BigOG from '@/app/mtl-bal-jam-og-512.png'
 import Main from '@/layout/main';
-import { Judges, Sponsors, MixAndMatch, Music } from './sections';
+import { Judges, Sponsors, MixAndMatch, Music, SlowBal } from './sections';
 
 type Props = {
   params: { locale: string }
@@ -65,6 +65,7 @@ export default function MbjCompetitions() {
   return (
     <Main styles={{ borderRadius: '0.625rem' }}>
       <MixAndMatch />
+      <SlowBal />
       <Music />
       <Judges />
       <Sponsors />

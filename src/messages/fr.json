@@ -415,9 +415,13 @@
                 },
                 "competitionsPage": {
                     "mixAndMatchSection": {
-                        "competitionNote": "Le MTL BAL JAM veut prioriser la danse sociale. Pour ce faire, nous ne proposons qu'une seule compétition cette année et nous allons nous efforcer pour qu’elle ne prenne pas plus de temps que nécessaire de la danse sociale. Cela dit, nous planifions plusieurs prix et surprises pour les compétiteurs.ices et nous restons certains que nos compétitions demeureront agréables pour tout le monde, tant pour les participants.es que pour le public !",
+                        "competitionNote": "Le MTL BAL JAM veut prioriser la danse sociale. Pour ce faire, nous allons nous efforcer pour que nos compétitions ne prenne pas plus de temps que nécessaire de la danse sociale. Cela dit, nous planifions plusieurs prix et surprises pour les compétiteurs.ices et nous restons certains que nos compétitions demeureront agréables pour tout le monde, tant pour les participants.es que pour le public !",
                         "title": "Mix & Match Ouvert",
                         "description": "Dans cette compétition sociale, vous vous inscrivez seuls et dansez avec un.e partenaire au hasard. Chaque chanson, il vous changez de partenaire et vous serez jugez séparément. Le but est de danser avec des danseurs.euses avec qui vous n’avez jamais dansé ! Les finales seront en duo spotlight pour donner à tous.tes les finalistes une chance de briller et vous aurez une petite surprise pour la chanson finale à sauce du MTL BAL JAM !"
+                    },
+                    "slowBalSection": {
+                        "title": "Slow Balboa",
+                        "description": "La scène de balboa de Montréal/Tiohtià:ke est adepte du slow bal alors il fallait une compétition de bal lent pour nous représenter ! Elle aura lieu lors de la soirée du dimanche soir en format “tap-in”.<br></br>Durant la fin de semaine, trouve un.e partenaire et embarque ! C’est gratuit et avec un prix croustillant à gagner !<br></br>Joins-toi au MTL slow BAL JAM !"
                     },
                     "musicSection": {
                         "title": "Musique",

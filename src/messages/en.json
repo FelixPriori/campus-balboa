@@ -415,9 +415,13 @@
                     },
                     "competitionsPage": {
                         "mixAndMatchSection": {
-                            "competitionNote": "MTL BAL JAM wants to prioritize social dancing! As such, we will only have one competition this year, and we will make sure that it runs smoothly and that it does not interfere with the social dance more than it has to. That being said, we have many prizes and surprises planned for competitors, and we can say with absolute confidence that our competitions will be a treat for everyone whether you are watching or participating!",
+                            "competitionNote": "MTL BAL JAM wants to prioritize social dancing! As such, we will make sure that competitions run smoothly and that they do not interfere with the social dance more than they have to. That being said, we have many prizes and surprises planned for competitors, and we can say with absolute confidence that our competitions will be a treat for everyone whether you are watching or participating!",
                             "title": "Open Mix & Match",
                             "description": "In this social competition, you sign up on your own and you are paired with a partner at random. Every song, you change partners and you are judged individually. The fun occurs when you get a partner you’ve never danced with before! The finals will be dual spotlight so the finalists have a chance to shine, and there will be a small twist for the all skate at the end, MTL BAL JAM style!"
+                        },
+                        "slowBalSection": {
+                            "title": "Slow Balboa",
+                            "description": "The Montréal/Tiohtià:ke Balboa scene loves slow bal, which is why we had to include this competition in the event to represent us! The Sunday evening dance will feature a “tap-in” slow bal competition. <br></br>Anyone can join! It’s free and there will be a delicious prize to win!<br></br>Join our MTL slow BAL JAM!"
                         },
                         "musicSection": {
                             "title": "Music",
