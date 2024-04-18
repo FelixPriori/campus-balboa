@@ -4,7 +4,54 @@ import styles from './styles.module.scss';
 import CtaButton from '../../components/CtaButton';
 import Image from 'next/image';
 
+type ClassBlock = {
+    title: string;
+    day: string;
+    where: string;
+    description: string;
+    type: string;
+    start: string;
+}
+
+type LocationBlock = {
+    title: string;
+    address: string;
+    what: string;
+}
+
 const getDetails = (items: string) => items?.split(',').map((detail) => <li key={detail}>{detail}</li>)
+
+const LocationBlock = ({ title, address, what }: LocationBlock) => {
+    return (
+        <li className={styles.locationBlock}>
+            <h4>{title}</h4>
+            <p className={styles.what}>{what}</p>
+            <p>{address}</p>
+        </li>
+    )
+}
+
+const ClassBlock = ({ title, day, where, description, type, start }: ClassBlock) => {
+    const typeClass = type === 'Extra' ? 'extra' : type.includes('Swing') ? 'swing' : 'pure'
+
+    return (
+        <li className={styles.classBlock}>
+            <div className={styles.start}>
+                <p>{day} : {start}</p>
+            </div>
+            <h4 className={styles.title}>{title}</h4>
+            <p className={styles.where}>{where}</p>
+            <div className={`${styles.typeWrapper} ${styles[typeClass]}`}>
+                <p className={styles.type}>{type}</p>
+            </div>
+            <p className={styles.description}>{description}</p>
+        </li>
+    )
+}
+
+const classes = ['1', '2', '3', '4', '5'];
+
+const locations = ['cats', 'cenne', 'ernest'];
 
 export default function About() {
     const t = useTranslations('Events.2024.Olga.aboutSection')
@@ -67,6 +114,35 @@ export default function About() {
                                 {getDetails(t('level.content.list'))}
                             </ul>
                         </div>
+                    </div>
+                    <div className={styles.cardSection}>
+                        <h3>{t('classSchedule.title')}</h3>
+                        <ul className={styles.classSchedule}>
+                            {classes.map((c) => (
+                                <ClassBlock
+                                    key={c}
+                                    title={t(`classSchedule.${c}.title`)}
+                                    day={t(`classSchedule.${c}.day`)}
+                                    where={t(`classSchedule.${c}.where`)}
+                                    description={t(`classSchedule.${c}.description`)}
+                                    type={t(`classSchedule.${c}.type`)}
+                                    start={t(`classSchedule.${c}.start`)}
+                                />
+                            ))}
+                        </ul>
+                    </div>
+                    <div className={styles.cardSection}>
+                        <h3>{t('locations.title')}</h3>
+                        <ul className={styles.locations}>
+                            {locations.map((l) => (
+                                <LocationBlock
+                                    key={l}
+                                    title={t(`locations.${l}.title`)}
+                                    what={t(`locations.${l}.what`)}
+                                    address={t(`locations.${l}.address`)}
+                                />
+                            ))}
+                        </ul>
                     </div>
                     <div className={`${styles.cardSection} ${styles.cta}`}>
                         <CtaButton

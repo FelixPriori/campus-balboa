@@ -90,6 +90,103 @@
                     color: var(--campus-color-canard);
                 }
 
+                .classSchedule {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                    gap: 1rem;
+                    list-style: none;
+
+                    .classBlock {
+                        position: relative;
+                        padding: 48px 8px 16px 8px;
+                        border: 2px solid var(--campus-color-canard);
+                        border-radius: 8px;
+                        background-color: var(--campus-color-blanc);
+
+                        .start {
+                            position: absolute;
+                            top: 8px;
+                            left: -8px;
+                            background-color: var(--campus-color-canard);
+                            color: var(--campus-color-blanc);
+                            border-radius: 0 8px 8px 0;
+                            padding: 4px 12px;
+
+                            p {
+                                color: inherit;
+                            }
+                        }
+
+                        .title {
+                            text-align: center;
+                            margin-bottom: 0.25rem;
+                        }
+
+                        .where {
+                            font-style: italic;
+                            text-align: center;
+                            font-weight: 300;
+                            margin-bottom: 0.5rem;
+                        }
+
+                        .typeWrapper {
+                            padding: 4px 8px;
+                            border-radius: 8px;
+                            max-width: fit-content;
+                            margin-bottom: 0.5rem;
+
+                            &.pure {
+                                background-color: var(--campus-color-taupe);
+                                color: var(--campus-color-blanc);
+                            }
+
+                            &.extra {
+                                background-color: var(--campus-color-jaune);
+                                color: var(--campus-color-taupe);
+                            }
+
+                            &.swing {
+                                background-color: var(--campus-color-bleu);
+                                color: var(--campus-color-blanc);
+
+                            }
+
+                            .type {
+                                text-transform: uppercase;
+                                color: inherit;
+                            }
+                        }
+
+                        .description {
+                            max-width: 50ch;
+                        }
+                    }
+                }
+
+                .locations {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                    gap: 1rem;
+                    list-style: none;
+
+                    .locationBlock {
+                        position: relative;
+                        padding: 16px 8px;
+                        border: 2px solid var(--campus-color-canard);
+                        border-radius: 8px;
+                        background-color: var(--campus-color-blanc);
+
+                        h4 {
+                            margin-bottom: 0.25rem;
+                        }
+
+                        .what {
+                            margin-bottom: 0.25rem;
+                            font-weight: 300;
+                        }
+                    }
+                }
+
                 &.cta {
                     display: flex;
                     justify-content: center;

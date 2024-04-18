@@ -7,6 +7,8 @@ const pricing = ['tier1', 'tier2', 'door']
 
 const includes = ['workshops', 'dance']
 
+const atTheDoor = ['full', 'day', 'class', 'extra'];
+
 export default function Prices() {
     const t = useTranslations('Events.2024.Olga.pricesSection')
     return (
@@ -16,36 +18,61 @@ export default function Prices() {
                 <div className={styles.card}>
                     <div className={styles.cardSection}>
                         <h3>{t('prices.title')}</h3>
+                        <p className={styles.subtitle}>{t('prices.subtitle')}</p>
                         <ul className={styles.list}>
                             {pricing.map(p => (
-                                <li key={p} className={`${styles.item} ${styles.priceContainer}`}>
-                                    <span>
-                                        {t(`prices.${p}.date`)}
-                                    </span>
-                                    <span className={styles.price}>
-                                        {t(`prices.${p}.price`)}
-                                    </span>
+                                <li key={p} className={styles.priceContainer}>
+                                    <p className={`${styles.item}  ${styles[p]}`}>
+                                        <span>
+                                            {t(`prices.${p}.date`)}
+                                        </span>
+                                        <span className={styles.price}>
+                                            {t(`prices.${p}.price`)}
+                                        </span>
+                                    </p>
                                 </li>
                             ))}
                         </ul>
                     </div>
                     <div className={styles.cardSection}>
                         <h3>{t('includes.title')}</h3>
+                        <p className={styles.subtitle}>{t('includes.subtitle')}</p>
                         <ul className={styles.list}>
                             {includes.map(i => (
-                                <li key={i} className={`${styles.item} ${styles.includes}`}>
-                                    {t(`includes.${i}`)}
+                                <li key={i} className={`${styles.priceContainer} ${styles.includes}`}>
+                                    <p className={styles.item}>
+                                        {t(`includes.${i}`)}
+                                    </p>
                                 </li>
                             ))}
                         </ul>
                     </div>
-                    <div className={`${styles.cardSection} ${styles.opens}`}>
-                        <CtaButton
-                            href={t('cta.href')}
-                            text={t('cta.text')}
-                            ariaLabel={t('cta.ariaLabel')}
-                        />
+                    <div className={styles.cardSection}>
+                        <h3>{t('atTheDoor.title')}</h3>
+                        <p className={styles.subtitle}>{t('atTheDoor.subtitle')}</p>
+                        <ul className={styles.list}>
+                            {atTheDoor.map(p => (
+                                <li key={p} className={styles.priceContainer}>
+                                    <p className={`${styles.item}  ${styles[p]}`}>
+                                        <span>
+                                            {t(`atTheDoor.${p}.title`)}
+                                        </span>
+                                        <span className={styles.price}>
+                                            {t(`atTheDoor.${p}.price`)}
+                                        </span>
+                                    </p>
+                                </li>
+                            ))}
+                        </ul>
                     </div>
+
+                </div>
+                <div className={styles.cta}>
+                    <CtaButton
+                        href={t('cta.href')}
+                        text={t('cta.text')}
+                        ariaLabel={t('cta.ariaLabel')}
+                    />
                 </div>
             </div>
         </section>

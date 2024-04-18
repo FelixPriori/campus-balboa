@@ -15,7 +15,7 @@
                 "header": {
                     "date": "26-27-28 avril 2024",
                     "title": "Programme <bold>extra</bold>curriculaire avec Olga",
-                    "comingSoon": "Un weekend d'ateliers avec Olga à Montréal. Inscrivez-vous dès maintenant !",
+                    "comingSoon": "Un weekend d'ateliers avec Olga à Montréal/Tiohtià:ke. Inscrivez-vous dès maintenant !",
                     "cta": {
                         "text": "S'inscrire",
                         "href": "https://extracurriculaire-olga.dancecamps.org/booking.php",
@@ -31,6 +31,7 @@
                     },
                     "prices": {
                         "title": "Tarifs",
+                        "subtitle": "Prix pour tout l'atelier",
                         "tier1": {
                             "date": "4 mars au 31 mars",
                             "price": "130,00$"
@@ -44,8 +45,29 @@
                             "price": "150,00$"
                         }
                     },
+                    "atTheDoor": {
+                        "title": "Prix à la porte",
+                        "subtitle": "Argent comptant et virements bancaires seulement.",
+                        "full": {
+                            "title": "Tout l'atelier (6h)",
+                            "price": "150,00$"
+                        },
+                        "day": {
+                            "title": "Par jour (3h)",
+                            "price": "85,00$"
+                        },
+                        "class": {
+                            "title": "Par cours (1,5h)",
+                            "price": "45,00$"
+                        },
+                        "extra": {
+                            "title": "Extra (vendredi, 1h, danse en sus)",
+                            "price": "25,00$"
+                        }
+                    },
                     "includes": {
                         "title": "Inclus",
+                        "subtitle": "Avec l'achat de tout l'atelier",
                         "workshops": "6 heures d’ateliers",
                         "dance": "Danse rapide du vendredi au Cat's Corner"
                     }
@@ -80,6 +102,67 @@
                         "content": {
                             "details": "Ceci est un atelier de balboa pour tous niveaux qui nécessite tout de même de connaître les bases de la danse. Les débutants sont les bienvenus aux danses sociales, mais il faut avoir pris quelques mois de cours réguliers avant de s’inscrire aux ateliers. Nous voulons ainsi éviter que vous vous sentiez dépassé durant les ateliers et permettre aux autres participants de se concentrer sur ce qui est enseigné. Si l’un ou plusieurs de ces mots clés vous sont inconnus, s’il vous plaît considérez vous inscrire à des cours de balboa dans votre scène locale !",
                             "list": "Bal swing,Pure bal,Lollys,Paddle turns,Toss-out,Come around,Swivel,Up-hold,Down-hold,Out and in"
+                        }
+                    },
+                    "classSchedule": {
+                        "title": "Horaire des cours",
+                        "1": {
+                            "day": "Vendredi",
+                            "type": "Extra",
+                            "where": "Cat's Corner",
+                            "start": "19h30",
+                            "title": "« Tourner ses hanches »",
+                            "description": "Ce cours portera sur les swivels, sur le changement de son rythme habituel et comment développer nos talents de rotations de hanche."
+                        },
+                        "2": {
+                            "day": "Samedi",
+                            "type": "Pur Balboa",
+                            "where": "La Cenne",
+                            "start": "10h30",
+                            "title": " « Les danseurs originaux : le remix »",
+                            "description": "Nous explorerons les pas classiques de pur balboa et comment les modifier. Ensuite, nous implémenterons le tout en couple afin de créer un dialogue entre partenaires."
+                        },
+                        "3": {
+                            "day": "Samedi",
+                            "type": "Bal Swing",
+                            "where": "La Cenne",
+                            "start": "13h00",
+                            "title": " « Out-n-ins et syncopes »",
+                            "description": "Nous apprendrons comment syncoper chaque temps pour ensuite l’appliquer à notre pas de base de bal swing : le out-n-in. Nous explorerons ainsi la limite entre les variations guidées et individuelles."
+                        },
+                        "4": {
+                            "day": "Dimanche",
+                            "type": "Pur Balboa",
+                            "where": "La Cenne",
+                            "start": "10h30",
+                            "title": " « Shuffle un peu, shuffle beaucoup, shuffle à la folie ! »",
+                            "description": "Ce cours vise à décortiquer toutes sortes de shuffles, sur tous les comptes, pieds et directions pour bien s’outiller en musicalité."
+                        },
+                        "5": {
+                            "day": "Dimanche",
+                            "type": "Bal Swing",
+                            "where": "La Cenne",
+                            "start": "13h00",
+                            "title": " « Le pouvoir du lock »",
+                            "description": "Le dernier cours du weekend portera sur le croisement des pieds et les différents types de lock-steps qu’on à notre disposition lors de nos mouvements de bal swing. Ensuite, nous explorerons comment utiliser cette énergie de torsion pour créer des moments musicaux."
+                        }
+                    },
+                    "locations": {
+                        "title": "Lieux",
+                        "cats": {
+                            "title": "Cat's Corner",
+                            "address": "1956 Rue Frontenac, Montréal, QC H2K 2Z1",
+                            "what": "Cours extra, danse sociale du vendredi"
+                        },
+                        "cenne": {
+                            "title": "La Cenne",
+                            "address": "7755, boul. Saint-Laurent, suite 300, Montréal, QC H2R 1X1",
+                            "what": "Ateliers"
+                        },
+                        "ernest": {
+                            "title": "Chez Ernest",
+                            "address": "6596 Rue St-Hubert, Montréal, QC H2S 2M3",
+                            "what": "Danse sociale du samedi"
                         }
                     },
                     "cta": {
