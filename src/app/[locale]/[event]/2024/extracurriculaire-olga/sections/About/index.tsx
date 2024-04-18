@@ -19,6 +19,15 @@ type LocationBlock = {
     what: string;
 }
 
+type PartnerBlock = {
+    title: string;
+    img: {
+        url: string;
+        alt: string;
+    }
+    link: string;
+}
+
 const getDetails = (items: string) => items?.split(',').map((detail) => <li key={detail}>{detail}</li>)
 
 const LocationBlock = ({ title, address, what }: LocationBlock) => {
@@ -49,9 +58,24 @@ const ClassBlock = ({ title, day, where, description, type, start }: ClassBlock)
     )
 }
 
+const PartnersBlock = ({ title, img, link }: PartnerBlock) => {
+    return (
+        <li className={styles.partnersBlock}>
+            <a href={link} target='_blank' rel="noreferrer noopener">
+                <div className={styles.titleContainer}>
+                    <h4>{title}</h4>
+                </div>
+                <Image src={img.url} alt={img.alt} width={100} height={100} />
+            </a>
+        </li>
+    )
+}
+
 const classes = ['1', '2', '3', '4', '5'];
 
 const locations = ['cats', 'cenne', 'ernest'];
+
+const partners = ['cats', 'aperos']
 
 export default function About() {
     const t = useTranslations('Events.2024.Olga.aboutSection')
@@ -142,6 +166,22 @@ export default function About() {
                                     title={t(`locations.${l}.title`)}
                                     what={t(`locations.${l}.what`)}
                                     address={t(`locations.${l}.address`)}
+                                />
+                            ))}
+                        </ul>
+                    </div>
+                    <div className={styles.cardSection}>
+                        <h3>{t('partners.title')}</h3>
+                        <ul className={styles.partners}>
+                            {partners.map((p) => (
+                                <PartnersBlock
+                                    key={p}
+                                    title={t(`partners.${p}.title`)}
+                                    img={{
+                                        url: t(`partners.${p}.img.url`),
+                                        alt: t(`partners.${p}.img.alt`)
+                                    }}
+                                    link={t(`partners.${p}.link`)}
                                 />
                             ))}
                         </ul>

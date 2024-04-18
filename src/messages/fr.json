@@ -165,6 +165,25 @@
                             "what": "Danse sociale du samedi"
                         }
                     },
+                    "partners": {
+                        "title": "Partenaires",
+                        "cats": {
+                            "title": "Cat's Corner",
+                            "link": "https://www.catscorner.ca/",
+                            "img": {
+                                "url": "/cats-corner.png",
+                                "alt": "Cat's Corner Logo"
+                            }
+                        },
+                        "aperos": {
+                            "title": "Les Apéros Balboa de Montréal",
+                            "link": "https://www.facebook.com/AperosBalboaMontreal",
+                            "img": {
+                                "url": "/aperos-balboa-logo.png",
+                                "alt": "Apéros Balboa Logo"
+                            }
+                        }
+                    },
                     "cta": {
                         "text": "S'inscrire",
                         "href": "https://extracurriculaire-olga.dancecamps.org/booking.php",
