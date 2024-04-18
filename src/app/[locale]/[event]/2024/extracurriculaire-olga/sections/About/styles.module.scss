@@ -1,5 +1,5 @@
 .aboutSection {
-    padding: 50px;
+    padding: 40px;
     min-height: 700px;
     background-image: url("/wave-bottom.png"), url("/circle-overlap.png");
     background-size: cover, contain;
@@ -9,20 +9,9 @@
     justify-content: center;
     align-items: center;
 
-    h2 {
-        text-shadow: 1px 1px 2px var(--campus-color-blanc);
-        letter-spacing: 0.35rem;
-        font-size: 2rem;
-        text-align: center;
-        margin-bottom: 3rem;
-    }
-
     .content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        min-width: 320px;
         margin: 0 auto;
+        width: 100%;
 
         .card {
             padding: 2rem 4rem;
@@ -34,27 +23,36 @@
 
             .cardSection {
                 margin-bottom: 1.5rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
 
                 .instructor {
-                    &:nth-child(3) {
-                        flex-direction: row-reverse;
-                    }
-
-                    display: flex;
-                    gap: 2rem;
                     margin-bottom: 2rem;
 
+
                     .avatar {
+                        float: left;
+
                         img {
+                            display: block;
+                            margin-right: 1rem;
                             height: 200px;
                             width: 200px;
                         }
                     }
-                }
 
-                h3 {
-                    text-align: center;
-                    margin: 1rem 0;
+                    &:nth-child(3) {
+                        .avatar {
+                            float: right;
+
+                            img {
+                                margin-left: 1rem;
+                                margin-right: revert;
+                            }
+                        }
+                    }
+
                 }
 
                 h4 {
@@ -91,6 +89,7 @@
                 }
 
                 .classSchedule {
+                    width: 100%;
                     display: grid;
                     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
                     gap: 1rem;
@@ -164,6 +163,7 @@
                 }
 
                 .locations {
+                    width: 100%;
                     display: grid;
                     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
                     gap: 1rem;
@@ -195,34 +195,19 @@
         }
     }
 
-    @media only screen and (max-width: 1400px) {
-        .content {
-            .card {
-                width: 80%;
-            }
-        }
-    }
-
-    @media only screen and (max-width: 1200px) {
-        .content {
-            .card {
-                width: 100%;
-            }
-        }
-    }
 
     @media only screen and (max-width: 992px) {
         .content {
+            width: 100%;
+
             .card {
+                width: 100%;
+
                 .cardSection {
                     .instructor {
                         flex-direction: column !important;
                         align-items: center;
                         gap: 1rem;
-
-                        h4 {
-                            text-align: center;
-                        }
                     }
                 }
             }
@@ -230,19 +215,40 @@
     }
 
     @media only screen and (max-width: 576px) {
-        .content {
-            padding: 5px;
+        padding: 20px;
 
-            h2 {
-                font-size: 1.5rem;
-            }
+        .content {
 
             .card {
                 padding: 20px;
+                margin: 0;
 
-                h3 {
-                    font-size: 1.25rem;
-                    margin-bottom: 1rem;
+                .cardSection {
+                    .instructor {
+                        margin-bottom: 2rem;
+                        display: flex;
+                        flex-direction: column;
+
+                        .avatar {
+                            float: none;
+
+                            img {
+                                display: block;
+                                margin-right: 0;
+                            }
+                        }
+
+                        &:nth-child(3) {
+                            .avatar {
+                                float: none;
+
+                                img {
+                                    margin-left: 0;
+                                    margin-right: revert;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }

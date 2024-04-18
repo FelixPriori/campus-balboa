@@ -23,7 +23,7 @@ export default function Prices() {
                             {pricing.map(p => (
                                 <li key={p} className={styles.priceContainer}>
                                     <p className={`${styles.item}  ${styles[p]}`}>
-                                        <span>
+                                        <span className={styles.itemTitle}>
                                             {t(`prices.${p}.date`)}
                                         </span>
                                         <span className={styles.price}>
@@ -54,7 +54,7 @@ export default function Prices() {
                             {atTheDoor.map(p => (
                                 <li key={p} className={styles.priceContainer}>
                                     <p className={`${styles.item}  ${styles[p]}`}>
-                                        <span>
+                                        <span className={styles.itemTitle}>
                                             {t(`atTheDoor.${p}.title`)}
                                         </span>
                                         <span className={styles.price}>

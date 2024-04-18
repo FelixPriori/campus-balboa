@@ -97,14 +97,16 @@ export default function About() {
                     </div>
                     <div className={styles.cardSection}>
                         <h3>{t.rich('friday.subsectionTitle', { extra: (chunk) => <strong className={styles.extra}>{chunk}</strong> })}</h3>
-                        {
-                            t.rich('friday.description',
-                                {
-                                    br: () => <br />,
-                                    link: (chunk) => <a className={styles.link} href={t('friday.link')} rel="noopener noreferrer" target="_blank">{chunk}</a>
-                                }
-                            )
-                        }
+                        <p>
+                            {
+                                t.rich('friday.description',
+                                    {
+                                        br: () => <br />,
+                                        link: (chunk) => <a className={styles.link} href={t('friday.link')} rel="noopener noreferrer" target="_blank">{chunk}</a>
+                                    }
+                                )
+                            }
+                        </p>
                     </div>
                     <div className={styles.cardSection}>
                         <h3>{t.rich('level.subsectionTitle', { extra: (chunk) => <strong className={styles.extra}>{chunk}</strong> })}</h3>
