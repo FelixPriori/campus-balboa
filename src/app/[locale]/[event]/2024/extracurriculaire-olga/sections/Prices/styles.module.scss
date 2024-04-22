@@ -42,7 +42,8 @@
                             grid-template-columns: 1fr min-content;
                             margin-bottom: 0.5rem;
 
-                            &.tier1 {
+                            &.tier1,
+                            &.tier2 {
                                 text-decoration: line-through !important;
                             }
 
