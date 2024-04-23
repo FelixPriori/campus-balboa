@@ -211,42 +211,6 @@
                     "success": "Vous êtes inscrits à la liste d'envoi.",
                     "error": "Une erreur s'est produite, veuillez réessayer."
                 },
-                "socials": {
-                    "facebook": {
-                        "alt": "Facebook",
-                        "href": "https://www.facebook.com/MontrealBalJam",
-                        "logo": "/facebook-white.png"
-                    },
-                    "instagram": {
-                        "alt": "Instagram",
-                        "href": "https://www.instagram.com/mtlbaljam/",
-                        "logo": "/instagram-white.png"
-                    },
-                    "email": {
-                        "alt": "Email",
-                        "href": "mailto:info@campusbalboa.org",
-                        "logo": "/email-white.png"
-                    }
-                },
-                "contact": {
-                    "fullName": "Nom complet",
-                    "fullNamePlaceholder": "Nom complet",
-                    "email": "Courriel",
-                    "emailExample": "votre@courriel.com",
-                    "message": "Méssage",
-                    "messagePlaceholder": "Your méssage...",
-                    "send": "Envoyer",
-                    "success": "Méssage envoyé avec succès",
-                    "error": "Une erreur s'est produite, veuillez réessayer plus tard."
-                },
-                "copyright": "© Campus Balboa, 2024",
-                "iconAlts": {
-                    "loaf": "Icone d'une miche de pain",
-                    "knife": "Icone d'un couteau à beurre",
-                    "toaster": "Icone d'un grille pain",
-                    "mbjLogo": "Logo du MTL BAL JAM",
-                    "arch": "Dessin d'une arche couleur saumon sur fond bleu"
-                },
                 "header": {
                     "date": "21-22-23 juin 2024",
                     "registration": {
@@ -258,9 +222,10 @@
                     "registerNow": "INSCRIVEZ-VOUS !",
                     "registerNowAria": "Ouvre la page d'inscription dans une nouvelle fenêtre",
                     "pageTitle": {
+                        "home": "Accueil",
                         "music": "Musique",
                         "about": "À propos",
-                        "venue": "Lieu",
+                        "venue": "Lieux",
                         "instructors": "Instructeurs",
                         "extra": "Extra",
                         "competitions": "Compétitions",
@@ -292,7 +257,7 @@
                         }
                     },
                     "venueSection": {
-                        "title": "Lieu",
+                        "title": "Lieux",
                         "learnMore": {
                             "text": "Découvrir notre salle...",
                             "href": "/fr/evenements/2024/mtl-bal-jam/venue"
@@ -468,8 +433,8 @@
                     }
                 },
                 "venuePage": {
-                    "venue": {
-                        "title": "Danses et Ateliers",
+                    "casa": {
+                        "title": "Danses et ateliers",
                         "position": {
                             "lat": "45.53935",
                             "lng": "-73.614133"
@@ -482,19 +447,18 @@
                         "venueWebsite": "https://www.casaditalia.org/",
                         "cutoutAlt": "Photo de la Casa d'Italia"
                     },
-                    "secondaryVenue": {
-                        "title": "Lieu secondaire",
+                    "cenne": {
+                        "title": "Danse du dimanche",
                         "position": {
-                            "lat": "45.5325358",
-                            "lng": "-73.5521198"
+                            "lat": "45.5376876",
+                            "lng": "-73.6265331"
                         },
-                        "markerTitle": "Communauté Cat's Corner",
-                        "infoWindowText": "Communauté Cat's Corner, 1956 Rue Frontenac, Montréal, QC H2K 2Z1",
-                        "venueName": "Cat's Corner Community",
-                        "venueDescription": "La mission de cette entreprise sans but lucratif est d'offrir un accès à la culture des danses et musiques jazz noires-américaines (et formes apparentées) à travers des cours et des événements afin de la faire rayonner, dans le respect et la célébration de ses origines et de ses valeurs.",
-                        "venueAddress": "1956 Rue Frontenac, Montréal, QC H2K 2Z1",
-                        "venueWebsite": "https://www.catscorner.ca/",
-                        "cutoutAlt": "Photo du Cat's Corner"
+                        "markerTitle": "La Cenne",
+                        "infoWindowText": "7755 Boul. Saint-Laurent Suite 300, Montreal, Québec, H2R 1X1",
+                        "venueName": "La Cenne",
+                        "venueDescription": "La Cenne est un centre de création pluridisciplinaire. L’OBNL est à la fois, un lieu rassembleur voué à la recherche, l’exploration et la professionnalisation du domaine artistique émergent.es et un pôle de services personnalisés aux besoins des acteur.trice.s du milieu culturel. La Cenne sensibilise la communauté locale aux arts, dans une volonté de démocratisation culturelle.",
+                        "venueAddress": "7755 Boul. Saint-Laurent Suite 300, Montreal, Québec, H2R 1X1",
+                        "venueWebsite": "https://www.lacenne.com/"
                     }
                 },
                 "extrasPage": {
@@ -1103,6 +1067,42 @@
                             }
                         }
                     }
+                },
+                "socials": {
+                    "facebook": {
+                        "alt": "Facebook",
+                        "href": "https://www.facebook.com/MontrealBalJam",
+                        "logo": "/facebook-white.png"
+                    },
+                    "instagram": {
+                        "alt": "Instagram",
+                        "href": "https://www.instagram.com/mtlbaljam/",
+                        "logo": "/instagram-white.png"
+                    },
+                    "email": {
+                        "alt": "Email",
+                        "href": "mailto:info@campusbalboa.org",
+                        "logo": "/email-white.png"
+                    }
+                },
+                "contact": {
+                    "fullName": "Nom complet",
+                    "fullNamePlaceholder": "Nom complet",
+                    "email": "Courriel",
+                    "emailExample": "votre@courriel.com",
+                    "message": "Méssage",
+                    "messagePlaceholder": "Your méssage...",
+                    "send": "Envoyer",
+                    "success": "Méssage envoyé avec succès",
+                    "error": "Une erreur s'est produite, veuillez réessayer plus tard."
+                },
+                "copyright": "© Campus Balboa, 2024",
+                "iconAlts": {
+                    "loaf": "Icone d'une miche de pain",
+                    "knife": "Icone d'un couteau à beurre",
+                    "toaster": "Icone d'un grille pain",
+                    "mbjLogo": "Logo du MTL BAL JAM",
+                    "arch": "Dessin d'une arche couleur saumon sur fond bleu"
                 },
                 "comingSoon": {
                     "title": "Détails à venir..."

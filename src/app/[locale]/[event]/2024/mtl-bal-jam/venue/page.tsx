@@ -1,7 +1,7 @@
 import Favicon from '@/app/mtl-bal-jam-favicon.ico'
 import BigOG from '@/app/mtl-bal-jam-og-512.png'
 import Main from '@/layout/main';
-import { Venue } from './sections';
+import { Casa, Cenne } from './sections';
 
 type Props = {
   params: { locale: string }
@@ -65,7 +65,8 @@ export default function MbjVenue() {
   return (
     <>
       <Main styles={{ borderRadius: '0.625rem' }}>
-        <Venue />
+        <Casa />
+        <Cenne />
       </Main>
     </>
   )

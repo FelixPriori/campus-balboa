@@ -4,8 +4,8 @@ import styles from './styles.module.scss';
 import GoogleMaps from '@/components/CustomGoogleMap';
 import Image from 'next/image';
 
-export default function Venue() {
-    const t = useTranslations('Events.2024.MtlBalJam.venuePage.venue')
+export default function Casa() {
+    const t = useTranslations('Events.2024.MtlBalJam.venuePage.casa')
     return (
         <section className={styles.mapSection}>
             <h2>{t('title')}</h2>

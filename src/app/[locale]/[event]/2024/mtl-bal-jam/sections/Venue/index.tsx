@@ -2,7 +2,6 @@
 import { useTranslations } from 'next-intl'
 import styles from './styles.module.scss'
 import Image from 'next/image'
-import MailchimpForm from '../../components/MailchimpForm'
 import IconBox from '../../components/IconBox'
 import Link from 'next/link'
 
@@ -11,10 +10,6 @@ export default function Venue() {
     return (
         <section className={styles.venueSection}>
             <div className={styles.subscribeWrapper}>
-                {/* <div className={styles.subscribeContent}>
-                    <h2>{t('subscribe.title')}</h2>
-                    <MailchimpForm />
-                </div> */}
                 <div className={styles.registration}>
                     <h2>{t('homePage.registrationSection.title')}</h2>
                     <div className={styles.registrationContent}>

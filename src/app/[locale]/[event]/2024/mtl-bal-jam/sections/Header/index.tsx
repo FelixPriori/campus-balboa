@@ -22,7 +22,10 @@ export default function Header() {
             )
         }
         return (
-            <h2>{t('date')}</h2>
+            <>
+                <h1>{t(`pageTitle.home`)}</h1>
+                <p className={styles.date}>{t('date')}</p>
+            </>
         )
     }, [pageName, t])
 
