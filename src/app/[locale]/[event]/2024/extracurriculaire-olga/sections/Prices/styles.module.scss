@@ -10,6 +10,13 @@
     background-repeat: no-repeat;
     background-position: top -300px left 0, right -500px top 0;
 
+    .cta {
+        p {
+            font-weight: 700;
+            margin-top: 1rem;
+        }
+    }
+
     .content {
         width: 100%;
         display: flex;
@@ -43,7 +50,8 @@
                             margin-bottom: 0.5rem;
 
                             &.tier1,
-                            &.tier2 {
+                            &.tier2,
+                            &.door {
                                 text-decoration: line-through !important;
                             }
 

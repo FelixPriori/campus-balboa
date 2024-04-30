@@ -15,7 +15,7 @@
                 "header": {
                     "date": "26-27-28 avril 2024",
                     "title": "Programme <bold>Extra</bold>Curriculaire avec Olga",
-                    "comingSoon": "Un weekend d'ateliers avec Olga à Montréal/Tiohtià:ke. Inscrivez-vous dès maintenant !",
+                    "comingSoon": "Un weekend d'ateliers avec Olga à Montréal/Tiohtià:ke.",
                     "cta": {
                         "text": "S'inscrire",
                         "href": "https://extracurriculaire-olga.dancecamps.org/booking.php",
@@ -195,6 +195,7 @@
                     "link": "Voir l'horaire",
                     "ariaLabel": "Ouvre dans une nouvelle fenêtre"
                 },
+                "closed": "L'atelier est terminé, merci à tous.tes !",
                 "copyright": "© Campus Balboa, 2024"
             },
             "MtlBalJam": {

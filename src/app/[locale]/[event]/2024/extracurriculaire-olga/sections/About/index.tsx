@@ -79,6 +79,7 @@ const partners = ['cats', 'aperos']
 
 export default function About() {
     const t = useTranslations('Events.2024.Olga.aboutSection')
+    const tclosed = useTranslations('Events.2024.Olga')
 
     return (
         <section className={styles.aboutSection}>
@@ -186,12 +187,10 @@ export default function About() {
                             ))}
                         </ul>
                     </div>
-                    <div className={`${styles.cardSection} ${styles.cta}`}>
-                        <CtaButton
-                            href={t('cta.href')}
-                            text={t('cta.text')}
-                            ariaLabel={t('cta.ariaLabel')}
-                        />
+                    <div className={`${styles.cardSection} ${styles.closed}`}>
+                        <p>
+                            {tclosed('closed')}
+                        </p>
                     </div>
                 </div>
             </div>

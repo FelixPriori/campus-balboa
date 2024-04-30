@@ -239,9 +239,13 @@
                     }
                 }
 
-                &.cta {
+                &.closed {
                     display: flex;
                     justify-content: center;
+
+                    p {
+                        font-weight: 700;
+                    }
                 }
             }
         }

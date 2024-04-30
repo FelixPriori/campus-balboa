@@ -11,6 +11,7 @@ const atTheDoor = ['full', 'day', 'class', 'extra'];
 
 export default function Prices() {
     const t = useTranslations('Events.2024.Olga.pricesSection')
+    const tclosed = useTranslations('Events.2024.Olga')
     return (
         <section className={styles.prices}>
             <div className={styles.content}>
@@ -68,11 +69,9 @@ export default function Prices() {
 
                 </div>
                 <div className={styles.cta}>
-                    <CtaButton
-                        href={t('cta.href')}
-                        text={t('cta.text')}
-                        ariaLabel={t('cta.ariaLabel')}
-                    />
+                    <p>
+                        {tclosed('closed')}
+                    </p>
                 </div>
             </div>
         </section>
