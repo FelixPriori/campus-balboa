@@ -1,24 +1,24 @@
 .missionCard {
-    width: 250px;
-    height: 350px;
-    border-radius: var(--border-radius);
-    padding: 50px 25px;
-    background-color: rgba(255, 255, 255, 0.5);
-    box-shadow: 0 1.5rem 4rem rgba(38, 70, 83, 0.15);
-    transition: all 200 ease;
+  border-radius: var(--border-radius);
+  padding: 50px 25px;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 1.5rem 4rem rgba(38, 70, 83, 0.15);
+  transition: all 200 ease;
 
-    .cardTitle{
-      letter-spacing: 0.25rem;
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-    .cardContent {
-      text-align: center;
-      line-height: 27px;
-    }
-
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.85);
-      transition: all 200 ease;
-    }
+  .cardTitle {
+    letter-spacing: 0.25rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
   }
+
+  .cardContent {
+    text-align: center;
+    line-height: 27px;
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.85);
+    transition: all 200 ease;
+  }
+}

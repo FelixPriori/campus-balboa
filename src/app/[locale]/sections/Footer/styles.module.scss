@@ -1,58 +1,62 @@
 @import '@/layout/breakpoints.scss';
 
 .footerSection {
-    padding: 20px;
-    margin-top: 5rem;
-    height: 15vh;
-    background-color: var(--color-primary);
+  padding: 50px;
+  margin-top: 5rem;
+  background-color: var(--color-primary);
 
-    .content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 100%;
-      
-      .copy {
-        color: var(--color-neutral);
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    row-gap: 2rem;
 
-        a {
-          text-decoration: underline;
-          text-underline-offset: 2px;
-          text-decoration-thickness: 2px;
+    .copy {
+      color: var(--color-neutral);
 
-          &:hover {
-            text-decoration: none;
-          }
+      a {
+        text-decoration: underline;
+        text-underline-offset: 2px;
+        text-decoration-thickness: 2px;
+
+        &:hover {
+          text-decoration: none;
         }
       }
+    }
+
+    .contact {
+      grid-row: 2 / -1;
     }
 
     .links {
+      grid-row: 2 / -1;
       display: flex;
       align-items: center;
+      justify-content: flex-end;
       gap: 1rem;
     }
-    
-    @media only screen and (max-width: 580px) {
-      height: 100%;
+  }
 
-      .content {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 1rem;
 
-        .copy {
-          text-align: center;
-        }
+  @media (max-width: calc(580 / 16 * 1rem)) {
+    padding: 50px 20px;
 
-        .buttonWrapper {
-          width: 100%;
-        }
+    .content {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr 1fr;
+      row-gap: 1rem;
+      align-items: center;
+
+      .contact {
+        grid-row: 2 / 3;
       }
 
       .links {
+        grid-row: 3 / -1;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: flex-start;
       }
     }
   }
+}

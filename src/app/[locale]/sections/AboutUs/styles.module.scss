@@ -1,8 +1,6 @@
 @import '@/layout/breakpoints.scss';
 
 .aboutUsSection {
-  padding: 50px;
-  min-height: 700px;
   background-image: url("/wave-top.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -15,16 +13,13 @@
     .aboutUsTitle {
       color: var(--color-neutral);
       letter-spacing: 0.35rem;
-      font-size: 2rem;
-      text-align: center;
-      margin-bottom: 3rem;
     }
 
     .administratorsContainer {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
       gap: var(--spacing-s);
+      justify-content: center;
     }
   }
 }

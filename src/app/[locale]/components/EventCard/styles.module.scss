@@ -27,23 +27,25 @@
     }
 
     width: 100%;
-    max-width: 750px;
     padding: 25px;
     border-radius: var(--border-radius);
     background-color: rgba(255, 255, 255, 0.5);
     box-shadow: 0 1.5rem 4rem rgba(38, 70, 83, 0.15);
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 2rem;
+
+    .helpText {
+        display: none;
+    }
 
     .details {
-        min-height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
 
         .title {
-            font-size: 1.5rem;
+            text-align: left;
             letter-spacing: 0.25rem;
         }
 
@@ -80,7 +82,6 @@
     @media only screen and (max-width: $breakpoint-medium) {
         .details {
             .title {
-                font-size: 1.5rem;
                 letter-spacing: 0.15rem;
             }
 
@@ -90,40 +91,36 @@
         }
     }
 
-    @media only screen and (max-width: $breakpoint-small) {
-        padding: 15px;
-        gap: 15px;
+    @media only screen and (max-width: calc(580 / 16 * 1rem)) {
+        gap: 1rem;
+        display: grid;
 
         .image {
-            width: 50px;
-            height: 50px;
+            justify-self: center;
         }
 
         .details {
             .title {
-                font-size: 1.15rem;
                 letter-spacing: 0.10rem;
             }
-
-            .paragraph {
-                font-size: 0.8rem;
-            }
         }
 
-        .arrow {
-            min-height: 32px;
-            min-width: 32px;
-
-            svg {
-                height: 16px;
-                width: 16px;
-            }
-        }
-    }
-
-    @media only screen and (max-width: 460px) {
         .arrow {
             display: none;
+        }
+
+        .helpText {
+            display: block;
+            justify-self: end;
+            color: var(--color-dark);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 2px;
+            margin-top: 1rem;
+
+            &:hover {
+                text-decoration: none;
+            }
         }
     }
 }

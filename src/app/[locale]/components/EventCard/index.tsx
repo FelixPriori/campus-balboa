@@ -6,8 +6,8 @@ import { Caveat_Brush } from 'next/font/google';
 import ContentfulImage from '@/lib/contentful-image';
 
 
-const caveatBrush = Caveat_Brush({ 
-    subsets: ['latin'], 
+const caveatBrush = Caveat_Brush({
+    subsets: ['latin'],
     weight: ['400'],
     style: ['normal'],
     variable: '--font-caveat-brush',
@@ -17,6 +17,7 @@ interface EventCard {
     dark: boolean;
     title: string;
     tagline: string;
+    helpText?: string;
     image: {
         title: string;
         url: string;
@@ -27,7 +28,7 @@ interface EventCard {
     }
 }
 
-export default function EventCard({image, title, link, tagline, dark}: EventCard) {
+export default function EventCard({ image, title, link, tagline, dark, helpText }: EventCard) {
     return (
         <Link href={link.href} className={`${styles.cardWrapper} ${dark ? styles.dark : ''} ${dark ? caveatBrush.className : ''}`}>
             <p className="sr-only">{link.text}</p>
@@ -45,6 +46,7 @@ export default function EventCard({image, title, link, tagline, dark}: EventCard
             <div className={styles.arrow}>
                 {!dark ? <ArrowRight /> : <LinesCircle />}
             </div>
+            <p className={styles.helpText}>{helpText}</p>
         </Link>
     )
 }

@@ -43,6 +43,7 @@ export const PAGE_SECTION = `
     content {
         ${RICH_TEXT}
     }
+    helpText
 `
 
 export const PAGE_FIELDS_QUERY = `

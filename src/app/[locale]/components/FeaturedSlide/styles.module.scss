@@ -15,7 +15,7 @@
         transition: opacity 600ms ease;
 
         .bannerWrapper {
-            border-radius:var(--border-radius) var(--border-radius) 0 0;
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
             width: 100%;
             height: 300px;
             display: flex;
@@ -25,10 +25,10 @@
             @media only screen and (max-width: $breakpoint-medium) {
                 height: 250px;
             }
-    
+
             .banner {
                 object-fit: cover;
-                border-radius:var(--border-radius) var(--border-radius) 0 0;
+                border-radius: var(--border-radius) var(--border-radius) 0 0;
                 width: 100%;
                 height: 100%;
             }
@@ -46,18 +46,16 @@
                 letter-spacing: 0.25rem;
                 text-align: center;
             }
-    
+
             .subtitle {
                 text-align: center;
             }
-        
-            @media only screen and (max-width: $breakpoint-medium) {
-                height: 250px;
 
+            @media only screen and (max-width: $breakpoint-medium) {
                 .title {
                     font-size: 1rem;
                 }
-        
+
                 .subtitle {
                     font-size: 0.85rem;
                 }
