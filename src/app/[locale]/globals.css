@@ -87,7 +87,7 @@ section {
   min-height: 100%;
 }
 
-section {
+section:not(.mbj-event section) {
   padding: 50px;
 }
 
