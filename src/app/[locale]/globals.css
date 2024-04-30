@@ -178,7 +178,7 @@ h3 {
 }
 
 @media (max-width: calc(580 / 16 * 1rem)) {
-  section {
+  section:not(.mbj-event section) {
     padding: 50px 20px;
   }
 }
