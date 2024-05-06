@@ -469,15 +469,28 @@
                         "length": "Duration: 1h30",
                         "when": "When: Saturday",
                         "imageAlt": "Photo of Little Italy",
-                        "description": "Discover our beloved city by visiting Little Italy, the neighborhood where MTL BAL JAM will be held. You will get to learn more about our beautiful venue, the Casa Italia by signing up for the guided tour! Don't worry. It will not interfere with the classes."
+                        "description": "Discover our beloved city by visiting Little Italy, the neighborhood where MTL BAL JAM will be held. You will get to learn more about our beautiful venue, the Casa Italia by signing up for the guided tour! Don't worry. It will not interfere with the classes.",
+                        "how": "How to sign up for the guided tour:",
+                        "instructions": {
+                            "register": "Directly while <register>registering</register>",
+                            "edit": "If already registered: you can edit your registration form and add the option",
+                            "contact": "Contact us via email at <email>mtlbaljam@campusbalboa.org</email>"
+                        }
                     },
                     "shirt": {
                         "title": "\"Let's Jam\" T-shirt",
                         "price": "Price: $35.00 CAD",
                         "imageAlt": "Photo of the Let's Jam t-shirt",
+                        "when": "Note: the last day to order your t-shirt is May 25th.",
                         "description": "We are committed to being Eco-Responsible, ethical and respectful of the environment. For this reason, we have selected Mercerie Roger for our t-shirts which are:<br></br><list></list><br></br>Thanks to <link>Youlia</link>, an excellent local designer who made this beautiful design",
                         "list": "Made in Quebec,Printed in Montreal,100% organic cotton & GOTS certified (Global Organic Textile Standard),Plastic and synthetic-free",
-                        "link": "https://www.instagram.com/youlia.moments/"
+                        "link": "https://www.instagram.com/youlia.moments/",
+                        "how": "How to get your own \"Let's Jam\" shirt:",
+                        "instructions": {
+                            "register": "Directly while <register>registering</register>",
+                            "edit": "If already registered: you can edit your registration form and add one",
+                            "contact": "Contact us via email at <email>mtlbaljam@campusbalboa.org</email>"
+                        }
                     }
                 },
                 "competitionsPage": {

@@ -47,6 +47,11 @@
             z-index: 1;
 
             p {
+
+                &.when {
+                    font-weight: 700;
+                }
+
                 br {
                     content: "";
                     margin: 1em;
@@ -63,6 +68,24 @@
 
                 &:hover {
                     text-decoration: none;
+                }
+            }
+
+            .instructions {
+                border: 2px dotted var(--mbj-color-white);
+                border-radius: var(--border-radius);
+                padding: 1rem;
+
+                h3 {
+                    font-size: clamp(1.25rem, 2vw, 1.5rem);
+                    text-align: left;
+                    margin-bottom: 0.25rem;
+                }
+
+                ul {
+                    li {
+                        color: var(--mbj-color-white);
+                    }
                 }
             }
         }
