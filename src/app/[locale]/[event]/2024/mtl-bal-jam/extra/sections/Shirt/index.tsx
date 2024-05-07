@@ -31,7 +31,7 @@ export default function Shirt() {
             <h2>{t('title')}</h2>
             <div className={styles.content}>
                 <div className={styles.imageWrapper}>
-                    <Image src="/mbj-2024-shirt-model.jpg" width={250} height={250} alt={t('imageAlt')} />
+                    <Image src="/mbj-2024-shirt-model-last-call.png" width={250} height={250} alt={t('imageAlt')} />
                 </div>
                 <div className={styles.text}>
                     <p>{t('price')}</p>
