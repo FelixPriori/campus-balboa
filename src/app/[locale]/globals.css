@@ -150,6 +150,30 @@ h3 {
   background-color: var(--color-neutral);
 }
 
+.not-found {
+  height: 100%;
+}
+
+.not-found main {
+  padding: 80px 40px;
+  background-color: var(--color-neutral);
+}
+
+.not-found h1 {
+  text-align: center;
+}
+
+.not-found .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.not-found footer {
+  margin-top: 0;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

@@ -1,3 +1,4 @@
+import { unstable_setRequestLocale } from 'next-intl/server';
 // import BpmBar from '@/components/bpmBar/bpmBar';
 // import styles from './page.module.scss'
 // import BpmContent from './BpmContent';
@@ -26,7 +27,7 @@ const robots = {
 
 export function generateMetadata({ params }: MetadataProps) {
   const locale = params.locale
-
+  unstable_setRequestLocale(locale);
   if (locale === 'en') {
     return {
       title: 'DJ Ressources',

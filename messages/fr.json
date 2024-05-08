@@ -1,4 +1,36 @@
 {
+    "NotFoundPage": {
+        "title": "Erreur 404 : Page non trouvée.",
+        "return": "Retour à la page précédente",
+        "footer": {
+            "contact": "Contactez-nous : ",
+            "contactLink": {
+                "href": "mailto:info@campusbalboa.org",
+                "text": "info@campusbalboa.org"
+            },
+            "copyright": "© Campus Balboa, 2024",
+            "socialMedia": {
+                "facebook": {
+                    "id": "fb",
+                    "href": "https://www.facebook.com/campusbalboa",
+                    "accessibilityDescription": "Ouvre une nouvelle fenêtre vers la page Facebook de Campus Balboa",
+                    "logo": {
+                        "url": "/facebook-white.png",
+                        "title": "Logo de Facebook"
+                    }
+                },
+                "instagram": {
+                    "id": "in",
+                    "accessibilityDescription": "Ouvre une nouvelle fenêtre vers la page Instagram de Campus Balboa",
+                    "href": "https://www.instagram.com/campusbalboa/",
+                    "logo": {
+                        "url": "/instagram-white.png",
+                        "title": "Logo d'Instagram"
+                    }
+                }
+            }
+        }
+    },
     "Event": {
         "title": "Événement de balboa",
         "back": "Retour",

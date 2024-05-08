@@ -2,7 +2,7 @@
 import CampusLogo from "@/assets/svgs/campus-logo";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useLocale } from "next-intl";
-import { useRouter } from 'next-intl/client';
+import { useRouter } from '../../../../../../../navigation'
 import Link from "next/link";
 
 const frUrl = '/evenements/2024/extracurriculaire-olga'
