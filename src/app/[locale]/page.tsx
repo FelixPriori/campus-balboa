@@ -1,3 +1,4 @@
+import { unstable_setRequestLocale } from 'next-intl/server';
 import Main from '@/layout/main'
 import sectionsRenderer, {
   Hero,
@@ -14,6 +15,7 @@ type Props = {
 }
 
 export async function generateMetadata({ params: { locale } }: Props) {
+  unstable_setRequestLocale(locale);
   const metaData = await getPageMetaDataByPageSlug(locale, locale);
   const siteUrl = 'https://www.campusbalboa.org'
 
@@ -50,6 +52,7 @@ export function generateStaticParams() {
 }
 
 export default async function Home({ params: { locale } }: { params: { locale: string } }) {
+  unstable_setRequestLocale(locale);
   const pageData = await getPageBySlug(locale, locale, PAGE_FIELDS_QUERY);
 
   if (!pageData?.sectionsCollection) {

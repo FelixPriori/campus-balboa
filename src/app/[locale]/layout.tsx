@@ -2,11 +2,14 @@ import { NextIntlClientProvider } from 'next-intl';
 import { Rubik, Lemon } from 'next/font/google'
 import { notFound } from 'next/navigation';
 import { ToastContainer } from 'react-toastify';
+import { unstable_setRequestLocale } from 'next-intl/server';
 import 'react-toastify/dist/ReactToastify.css';
 import './globals.css'
 
+const locales = ['en', 'fr'];
+
 export function generateStaticParams() {
-  return [{ locale: 'en' }, { locale: 'fr' }];
+  return locales.map((locale) => ({ locale }));
 }
 
 const rubik = Rubik({
@@ -26,6 +29,7 @@ const lemon = Lemon({
 })
 
 export default async function LocaleLayout({ children, params: { locale } }: { children: React.ReactElement, params: { locale: string } }) {
+  unstable_setRequestLocale(locale);
 
   let messages;
   try {

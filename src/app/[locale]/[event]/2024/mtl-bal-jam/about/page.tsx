@@ -1,15 +1,15 @@
+import { unstable_setRequestLocale } from 'next-intl/server';
 import Favicon from '@/app/mtl-bal-jam-favicon.ico'
 import BigOG from '@/app/mtl-bal-jam-og-512.png'
 import Main from '@/layout/main';
 import { Contact, Description, Staff } from './sections';
-
 type Props = {
   params: { locale: string }
 }
 
 export async function generateMetadata({ params }: Props) {
+  unstable_setRequestLocale(params.locale);
   const siteUrl = 'https://www.campusbalboa.org'
-
   if (params.locale === 'fr') {
     return {
       title: 'À propos | MTL BAL JAM 2024',

@@ -1,3 +1,4 @@
+import { unstable_setRequestLocale } from 'next-intl/server';
 import Favicon from '@/app/mtl-bal-jam-favicon.ico'
 import BigOG from '@/app/mtl-bal-jam-og-512.png'
 import { Music, Instructors, Venue } from './sections';
@@ -8,6 +9,7 @@ type Props = {
 }
 
 export async function generateMetadata({ params }: Props) {
+  unstable_setRequestLocale(params.locale);
   const siteUrl = 'https://www.campusbalboa.org'
 
   if (params.locale === 'fr') {

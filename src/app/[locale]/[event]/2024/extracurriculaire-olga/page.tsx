@@ -1,13 +1,16 @@
+import { unstable_setRequestLocale } from 'next-intl/server';
 import BigOG from '@/app/olga-og.jpg'
 import { About, Footer, Hero, Prices, Schedule } from './sections'
 import Navigation from './components/Navigation'
 import './olgaGlobals.scss'
+
 
 type Props = {
     params: { locale: string }
 }
 
 export async function generateMetadata({ params }: Props) {
+    unstable_setRequestLocale(params.locale);
     const siteUrl = 'https://www.campusbalboa.org'
 
     if (params.locale === 'fr') {
