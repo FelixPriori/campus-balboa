@@ -1,9 +1,32 @@
+import { unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 import { Footer } from './sections';
 import Main from '@/layout/main'
 import CampusLogo from '@/assets/svgs/campus-logo';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import BackButton from './components/BackButton';
+import { Link } from '../../navigation';
+
+type Props = {
+    params: { locale: string }
+}
+
+export async function generateMetadata({ params: { locale } }: Props) {
+    unstable_setRequestLocale(locale);
+
+    if (locale === 'fr') {
+        return {
+            title: '404 | Page non trouvée',
+            description: 'Désolé, cette page n\'existe pas',
+        }
+    } else {
+        return {
+            title: '404 | Page not found',
+            description: 'Sorry, this page does not exist',
+        }
+    }
+}
 
 export default function NotFoundPage() {
     const t = useTranslations('NotFoundPage');
@@ -11,13 +34,22 @@ export default function NotFoundPage() {
     return (
         <div className='not-found'>
             <nav className="app-nav">
-                <CampusLogo />
+                <Link href="/">
+                    <CampusLogo />
+                </Link>
                 <LanguageSwitcher customStyling='noOutline' />
             </nav>
             <Main>
                 <div className="content">
+                    <Image
+                        className='not-found-image'
+                        src="/404.png" alt="404" width={100} height={100}
+                    />
                     <h1>{t('title')}</h1>
                     <BackButton>{t('return')}</BackButton>
+                    <Link href="/">
+                        {t('home')}
+                    </Link>
                 </div>
             </Main>
             <Footer

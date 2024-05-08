@@ -1,9 +1,16 @@
 .backButton {
+    font-size: 1rem;
     padding: 12px 24px;
     border: 1px solid var(--color-dark);
     border-radius: 4px;
-    cursor: pointer;
     background-color: var(--color-dark);
     color: var(--color-neutral);
     max-width: fit-content;
+    transition: all 200ms ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 3px 5px rgba(38, 70, 83, 0.5);
+    }
 }

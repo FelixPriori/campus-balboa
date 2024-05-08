@@ -1,7 +1,8 @@
 {
     "NotFoundPage": {
-        "title": "Error 404: Page not found.",
+        "title": "Page not found.",
         "return": "Go back to the previous page",
+        "home": "To the home page",
         "footer": {
             "contact": "Contact-us: ",
             "contactLink": {
