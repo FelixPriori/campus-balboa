@@ -20,9 +20,7 @@
                     }
                 },
                 "instagram": {
-                    "sys": {
-                        "id": "in"
-                    },
+                    "id": "in",
                     "accessibilityDescription": "Opens a new window to Campus Balboa's instagram page",
                     "href": "https://www.instagram.com/campusbalboa/",
                     "logo": {
