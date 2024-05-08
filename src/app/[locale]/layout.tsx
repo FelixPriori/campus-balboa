@@ -29,7 +29,7 @@ export default async function LocaleLayout({ children, params: { locale } }: { c
 
   let messages;
   try {
-    messages = (await import(`../../messages/${locale}.json`)).default;
+    messages = (await import(`../../../messages/${locale}.json`)).default;
   } catch (error) {
     notFound();
   }
@@ -38,7 +38,12 @@ export default async function LocaleLayout({ children, params: { locale } }: { c
     <html lang={locale}>
       <body suppressHydrationWarning className={`${lemon.variable} ${rubik.variable}`}>
         <ToastContainer />
-        <NextIntlClientProvider timeZone="America/Toronto" locale={locale} messages={messages}>
+        <NextIntlClientProvider
+          timeZone="America/Toronto"
+          locale={locale}
+          messages={messages}
+          now={new Date()}
+        >
           {children}
         </NextIntlClientProvider>
       </body>

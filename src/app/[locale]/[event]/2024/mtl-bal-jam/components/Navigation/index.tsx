@@ -1,7 +1,7 @@
 "use client"
 import { usePathname } from 'next/navigation'
 import { useLocale } from 'next-intl';
-import { useRouter } from 'next-intl/client';
+import { useRouter } from '../../../../../../../navigation';
 import NavLinks from '../../components/NavLinks';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import styles from './styles.module.scss';
