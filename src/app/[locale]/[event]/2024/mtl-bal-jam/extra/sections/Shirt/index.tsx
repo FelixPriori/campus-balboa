@@ -36,15 +36,17 @@ export default function Shirt() {
                 <div className={styles.text}>
                     <p>{t('price')}</p>
                     <p className={styles.when}>{t('when')}</p>
-                    <p>{t.rich('description', {
-                        br: () => <br />,
-                        list: () => (
-                            <ul>
-                                {getDetails(t('list'))}
-                            </ul>
-                        ),
-                        link: (chunks) => <a href={t('link')} rel="noopener noreferrer" target='_blank'>{chunks}</a>
-                    })}</p>
+                    <div className={styles.description}>
+                        <p>{t('description')}</p>
+                        <ul>
+                            {getDetails(t('list'))}
+                        </ul>
+                        <p>
+                            {t.rich('credit', {
+                                link: (chunks) => <a href={t('link')} rel="noopener noreferrer" target='_blank'>{chunks}</a>
+                            })}
+                        </p>
+                    </div>
                     <div className={styles.instructions}>
                         <h3>{t('how')}</h3>
                         <ul>

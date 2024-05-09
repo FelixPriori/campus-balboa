@@ -515,8 +515,9 @@
                         "price": "Price: $35.00 CAD",
                         "imageAlt": "Photo of the Let's Jam t-shirt",
                         "when": "Note: the last day to order your t-shirt is May 25th.",
-                        "description": "We are committed to being Eco-Responsible, ethical and respectful of the environment. For this reason, we have selected Mercerie Roger for our t-shirts which are:<br></br><list></list><br></br>Thanks to <link>Youlia</link>, an excellent local designer who made this beautiful design",
+                        "description": "We are committed to being Eco-Responsible, ethical and respectful of the environment. For this reason, we have selected Mercerie Roger for our t-shirts which are:",
                         "list": "Made in Quebec,Printed in Montreal,100% organic cotton & GOTS certified (Global Organic Textile Standard),Plastic and synthetic-free",
+                        "credit": "Thanks to <link>Youlia</link>, an excellent local designer who made this beautiful design.",
                         "link": "https://www.instagram.com/youlia.moments/",
                         "how": "How to get your own \"Let's Jam\" shirt:",
                         "instructions": {
