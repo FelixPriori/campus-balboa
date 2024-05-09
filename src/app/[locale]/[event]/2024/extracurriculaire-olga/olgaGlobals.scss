@@ -3,8 +3,9 @@ html {
     height: 100%;
 }
 
-body {
+.olga-page {
     background-color: var(--color-neutral);
+    height: 100%;
 
     h1,
     h2,
@@ -21,13 +22,9 @@ body {
     button,
     li {
         font-family: var(--font-rubuk);
-        color: var(--campus-color-taupe);
     }
 
-    .olga-page {
-        background-color: var(--color-neutral);
-        height: 100%;
-    }
+
 
     h1 {
         font-size: clamp(1.75rem, 3vw, 2.5rem);
