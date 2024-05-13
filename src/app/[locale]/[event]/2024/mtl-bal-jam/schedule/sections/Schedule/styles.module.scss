@@ -1,0 +1,39 @@
+.scheduleSection {
+    background-color: var(--mbj-color-black);
+    padding: 40px;
+
+    h2,
+    h3,
+    h4,
+    p,
+    li,
+    a {
+        color: var(--mbj-color-white);
+    }
+
+    a,
+    p {
+        line-height: 135%;
+    }
+
+    ul {
+        list-style-type: disc;
+        margin-left: 1rem;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .scheduleWrapper {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min(500px, 100%), 1fr));
+        gap: 1rem;
+    }
+
+    @media only screen and (max-width: 500px) {
+        padding: 1.5rem 0.5rem;
+    }
+}

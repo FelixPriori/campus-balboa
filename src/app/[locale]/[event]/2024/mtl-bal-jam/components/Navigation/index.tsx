@@ -20,6 +20,7 @@ const pageTabs = {
         'venue',
         'competitions',
         'registration',
+        'schedule',
         'extra'
     ],
     travel: [

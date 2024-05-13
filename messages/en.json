@@ -265,6 +265,7 @@
                         "competitions": "Competitions",
                         "code-of-conduct": "Code of Conduct",
                         "registration": "Registration",
+                        "schedule": "Schedule",
                         "visiting": "Visiting Montréal / Tiohtià:ke",
                         "travel": "Travel",
                         "accommodation": "Accomodation",
@@ -661,6 +662,173 @@
                             "title": "Terms & Conditions",
                             "content": "<link>Click here</link> to learn more about our terms & conditions. These terms include: code of conduct, media consent, liability, respect of property, major changes, COVID-19 and other respiratory infections policy, hosting policy, reimbursement policy, payments.",
                             "link": "https://docs.google.com/document/d/19iDfQHbv1B0EV1IpJY_P3e7qielFQecVVd5u_8uQB4k/edit?usp=sharing"
+                        }
+                    }
+                },
+                "schedulePage": {
+                    "schedule": {
+                        "title": "Weekend schedule",
+                        "friday": {
+                            "title": "Friday",
+                            "eventsList": "doors,dj,band,end",
+                            "events": {
+                                "doors": {
+                                    "title": "Doors open & social hour",
+                                    "time": "7:30 pm",
+                                    "location": "Casa d'Italia",
+                                    "type": "venue"
+                                },
+                                "dj": {
+                                    "title": "DJ Music",
+                                    "time": "8:30 pm",
+                                    "location": "Casa d'Italia",
+                                    "type": "music"
+                                },
+                                "band": {
+                                    "title": "Michael Srey Legacy Band",
+                                    "time": "9:00 pm",
+                                    "location": "Casa d'Italia",
+                                    "type": "music"
+                                },
+                                "end": {
+                                    "title": "End of the dance",
+                                    "time": "1:30 am",
+                                    "location": "Casa d'Italia",
+                                    "type": "venue"
+                                }
+                            }
+                        },
+                        "saturday": {
+                            "title": "Saturday",
+                            "eventsList": "venueOpen,class1,break,class2,prelims,tour,doors,dj,band,finals,end",
+                            "events": {
+                                "venueOpen": {
+                                    "title": "Doors open & check-in",
+                                    "time": "9:30 am",
+                                    "location": "Casa d'Italia",
+                                    "type": "venue"
+                                },
+                                "class1": {
+                                    "title": "Class 1",
+                                    "time": "10:00 am",
+                                    "location": "Casa d'Italia",
+                                    "type": "class"
+                                },
+                                "break": {
+                                    "title": "Lunch break",
+                                    "time": "12:00 pm",
+                                    "location": "Casa d'Italia",
+                                    "type": "break"
+                                },
+                                "class2": {
+                                    "title": "Class 2",
+                                    "time": "1:00 pm",
+                                    "location": "Casa d'Italia",
+                                    "type": "class"
+                                },
+                                "prelims": {
+                                    "title": "M&M Prelims",
+                                    "time": "3:00 pm",
+                                    "location": "Casa d'Italia",
+                                    "type": "comp"
+                                },
+                                "tour": {
+                                    "title": "Little Italy Guided Tour",
+                                    "time": "4:00 pm",
+                                    "location": "Casa d'Italia",
+                                    "type": "extra"
+                                },
+                                "doors": {
+                                    "title": "Doors open & social hour",
+                                    "time": "8:00 pm",
+                                    "location": "Casa d'Italia",
+                                    "type": "venue"
+                                },
+                                "dj": {
+                                    "title": "DJ Music",
+                                    "time": "8:30 pm",
+                                    "location": "Casa d'Italia",
+                                    "type": "music"
+                                },
+                                "band": {
+                                    "title": "Michael Srey Legacy Band",
+                                    "time": "9:00 pm",
+                                    "location": "Casa d'Italia",
+                                    "type": "music"
+                                },
+                                "finals": {
+                                    "title": "M&M Finals",
+                                    "time": "10:00 pm",
+                                    "location": "Casa d'Italia",
+                                    "type": "comp"
+                                },
+                                "end": {
+                                    "title": "End of the dance",
+                                    "time": "1:30 am",
+                                    "location": "Casa d'Italia",
+                                    "type": "venue"
+                                }
+                            }
+                        },
+                        "sunday": {
+                            "title": "Dimanche",
+                            "eventsList": "venueOpen,class3,break,class4,close,bbq,dj,slow,end",
+                            "events": {
+                                "venueOpen": {
+                                    "title": "Doors open & check-in",
+                                    "time": "9:30 am",
+                                    "location": "Casa d'Italia",
+                                    "type": "venue"
+                                },
+                                "class3": {
+                                    "title": "Class 3",
+                                    "time": "10:00 am",
+                                    "location": "Casa d'Italia",
+                                    "type": "class"
+                                },
+                                "break": {
+                                    "title": "Lunch break",
+                                    "time": "12:00 pm",
+                                    "location": "Casa d'Italia",
+                                    "type": "break"
+                                },
+                                "class4": {
+                                    "title": "Class 4",
+                                    "time": "1:00 pm",
+                                    "location": "Casa d'Italia",
+                                    "type": "class"
+                                },
+                                "close": {
+                                    "title": "Venue closes",
+                                    "time": "4:00 pm",
+                                    "location": "Casa d'Italia",
+                                    "type": "venue"
+                                },
+                                "bbq": {
+                                    "title": "BBQ / picnic",
+                                    "time": "5:00 pm",
+                                    "location": "Parc Jarry",
+                                    "type": "break"
+                                },
+                                "dj": {
+                                    "title": "DJ Music",
+                                    "time": "8:30 pm",
+                                    "location": "La Cenne",
+                                    "type": "music"
+                                },
+                                "slow": {
+                                    "title": "Slow Bal Competition",
+                                    "time": "10:00 pm",
+                                    "location": "La Cenne",
+                                    "type": "comp"
+                                },
+                                "end": {
+                                    "title": "End of the dance",
+                                    "time": "12:00 am",
+                                    "location": "La Cenne",
+                                    "type": "venue"
+                                }
+                            }
                         }
                     }
                 },
@@ -1095,6 +1263,10 @@
                             "registration": {
                                 "text": "Registration",
                                 "href": "/en/events/2024/mtl-bal-jam/registration"
+                            },
+                            "schedule": {
+                                "text": "Schedule",
+                                "href": "/en/events/2024/mtl-bal-jam/schedule"
                             },
                             "extra": {
                                 "text": "Extra",

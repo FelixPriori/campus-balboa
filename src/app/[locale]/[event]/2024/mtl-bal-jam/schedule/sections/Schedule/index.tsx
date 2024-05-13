@@ -1,0 +1,22 @@
+"use client"
+import { useTranslations } from 'next-intl'
+import styles from './styles.module.scss'
+import Day from '../../components/Day';
+
+type EventDays = 'friday' | 'saturday' | 'sunday'
+
+const days: EventDays[] = ['friday', 'saturday', 'sunday'];
+
+export default function Schedule() {
+    const t = useTranslations('Events.2024.MtlBalJam.schedulePage.schedule')
+
+    return (
+        <section className={styles.scheduleSection}>
+            <h2>{t('title')}</h2>
+            <div className={styles.scheduleWrapper}>
+                {days.map(d => <Day key={d} day={d} />)}
+            </div>
+        </section>
+    )
+}
+

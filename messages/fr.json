@@ -265,6 +265,7 @@
                         "competitions": "Compétitions",
                         "code-of-conduct": "Code de conduite",
                         "registration": "Inscriptions",
+                        "schedule": "Horaire",
                         "visiting": "Visiter Montréal / Tiohtià:ke",
                         "travel": "Voyagement",
                         "accommodation": "Hébergement",
@@ -661,6 +662,173 @@
                             "title": "Conditions générales",
                             "content": "<link>Cliquez ici</link> pour en savoir plus sur nos conditions générales. Conditions incluses: code de conduite, consentement médiatique, décharge de responsabilité, respect du matériel, changements majeurs, politique COVID-19 et autres infections respiratoires, politique d'hébergement, politique de remboursement, paiements.",
                             "link": "https://docs.google.com/document/d/19iDfQHbv1B0EV1IpJY_P3e7qielFQecVVd5u_8uQB4k/edit?usp=sharing"
+                        }
+                    }
+                },
+                "schedulePage": {
+                    "schedule": {
+                        "title": "Horaire de l'événement",
+                        "friday": {
+                            "title": "Vendredi",
+                            "eventsList": "doors,dj,band,end",
+                            "events": {
+                                "doors": {
+                                    "title": "Ouverture des portes, heure sociale",
+                                    "time": "19h30",
+                                    "location": "Casa d'Italia",
+                                    "type": "venue"
+                                },
+                                "dj": {
+                                    "title": "Musique DJ",
+                                    "time": "20h30",
+                                    "location": "Casa d'Italia",
+                                    "type": "music"
+                                },
+                                "band": {
+                                    "title": "Michael Srey Legacy Band",
+                                    "time": "21h00",
+                                    "location": "Casa d'Italia",
+                                    "type": "music"
+                                },
+                                "end": {
+                                    "title": "Fin de la danse",
+                                    "time": "1h30",
+                                    "location": "Casa d'Italia",
+                                    "type": "venue"
+                                }
+                            }
+                        },
+                        "saturday": {
+                            "title": "Samedi",
+                            "eventsList": "venueOpen,class1,break,class2,prelims,tour,doors,dj,band,finals,end",
+                            "events": {
+                                "venueOpen": {
+                                    "title": "Ouverture des portes, enregistrement",
+                                    "time": "9h30",
+                                    "location": "Casa d'Italia",
+                                    "type": "venue"
+                                },
+                                "class1": {
+                                    "title": "Cours 1",
+                                    "time": "10h00",
+                                    "location": "Casa d'Italia",
+                                    "type": "class"
+                                },
+                                "break": {
+                                    "title": "Pause diner",
+                                    "time": "12h00",
+                                    "location": "Casa d'Italia",
+                                    "type": "break"
+                                },
+                                "class2": {
+                                    "title": "Cours 2",
+                                    "time": "13h00",
+                                    "location": "Casa d'Italia",
+                                    "type": "class"
+                                },
+                                "prelims": {
+                                    "title": "Prélims du M&M",
+                                    "time": "15h00",
+                                    "location": "Casa d'Italia",
+                                    "type": "comp"
+                                },
+                                "tour": {
+                                    "title": "Tour guidé de la Petite Italie",
+                                    "time": "16h00",
+                                    "location": "Casa d'Italia",
+                                    "type": "extra"
+                                },
+                                "doors": {
+                                    "title": "Ouverture des portes, heure sociale",
+                                    "time": "20h00",
+                                    "location": "Casa d'Italia",
+                                    "type": "venue"
+                                },
+                                "dj": {
+                                    "title": "Musique DJ",
+                                    "time": "20h30",
+                                    "location": "Casa d'Italia",
+                                    "type": "music"
+                                },
+                                "band": {
+                                    "title": "Michael Srey Legacy Band",
+                                    "time": "21h00",
+                                    "location": "Casa d'Italia",
+                                    "type": "music"
+                                },
+                                "finals": {
+                                    "title": "Finales du M&M",
+                                    "time": "22h00",
+                                    "location": "Casa d'Italia",
+                                    "type": "comp"
+                                },
+                                "end": {
+                                    "title": "Fin de la danse",
+                                    "time": "1h30",
+                                    "location": "Casa d'Italia",
+                                    "type": "venue"
+                                }
+                            }
+                        },
+                        "sunday": {
+                            "title": "Dimanche",
+                            "eventsList": "venueOpen,class3,break,class4,close,bbq,dj,slow,end",
+                            "events": {
+                                "venueOpen": {
+                                    "title": "Ouverture des portes, enregistrement",
+                                    "time": "9h30",
+                                    "location": "Casa d'Italia",
+                                    "type": "venue"
+                                },
+                                "class3": {
+                                    "title": "Cours 3",
+                                    "time": "10h00",
+                                    "location": "Casa d'Italia",
+                                    "type": "class"
+                                },
+                                "break": {
+                                    "title": "Pause diner",
+                                    "time": "12h00",
+                                    "location": "Casa d'Italia",
+                                    "type": "break"
+                                },
+                                "class4": {
+                                    "title": "Cours 4",
+                                    "time": "13h00",
+                                    "location": "Casa d'Italia",
+                                    "type": "class"
+                                },
+                                "close": {
+                                    "title": "Fermeture de la Casa",
+                                    "time": "16h00",
+                                    "location": "Casa d'Italia",
+                                    "type": "venue"
+                                },
+                                "bbq": {
+                                    "title": "BBQ / picnic",
+                                    "time": "17h00",
+                                    "location": "Parc Jarry",
+                                    "type": "break"
+                                },
+                                "dj": {
+                                    "title": "Musique DJ",
+                                    "time": "20h00",
+                                    "location": "La Cenne",
+                                    "type": "music"
+                                },
+                                "slow": {
+                                    "title": "Compétition de slow bal",
+                                    "time": "22h00",
+                                    "location": "La Cenne",
+                                    "type": "comp"
+                                },
+                                "end": {
+                                    "title": "Fin de la danse",
+                                    "time": "12h00",
+                                    "location": "La Cenne",
+                                    "type": "venue"
+                                }
+                            }
                         }
                     }
                 },
@@ -1095,6 +1263,10 @@
                             "registration": {
                                 "text": "Inscription",
                                 "href": "/fr/evenements/2024/mtl-bal-jam/registration"
+                            },
+                            "schedule": {
+                                "text": "Schedule",
+                                "href": "/en/events/2024/mtl-bal-jam/schedule"
                             },
                             "extra": {
                                 "text": "Extra",
