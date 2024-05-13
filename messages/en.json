@@ -668,6 +668,10 @@
                 "schedulePage": {
                     "schedule": {
                         "title": "Weekend schedule",
+                        "link": {
+                            "text": "More info about the venues...",
+                            "href": "/en/events/2024/mtl-bal-jam/venue"
+                        },
                         "friday": {
                             "title": "Friday",
                             "eventsList": "doors,dj,band,end",

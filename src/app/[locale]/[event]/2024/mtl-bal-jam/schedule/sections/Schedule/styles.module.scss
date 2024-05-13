@@ -11,19 +11,27 @@
         color: var(--mbj-color-white);
     }
 
-    a,
-    p {
-        line-height: 135%;
-    }
-
-    ul {
-        list-style-type: disc;
-        margin-left: 1rem;
-    }
-
     h2 {
         text-align: center;
         margin-bottom: 1.5rem;
+    }
+
+    .linkWrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1rem;
+
+        .link {
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 2px;
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
     }
 
     .scheduleWrapper {

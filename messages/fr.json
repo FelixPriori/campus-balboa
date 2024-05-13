@@ -668,6 +668,10 @@
                 "schedulePage": {
                     "schedule": {
                         "title": "Horaire de l'événement",
+                        "link": {
+                            "text": "Plus d'info sur les lieux...",
+                            "href": "/fr/evenements/2024/mtl-bal-jam/venue"
+                        },
                         "friday": {
                             "title": "Vendredi",
                             "eventsList": "doors,dj,band,end",
