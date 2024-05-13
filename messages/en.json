@@ -771,7 +771,7 @@
                             }
                         },
                         "sunday": {
-                            "title": "Dimanche",
+                            "title": "Sunday",
                             "eventsList": "venueOpen,class3,break,class4,close,bbq,dj,slow,end",
                             "events": {
                                 "venueOpen": {
