@@ -11,11 +11,10 @@ export default function Venue() {
         <section className={styles.venueSection}>
             <div className={styles.subscribeWrapper}>
                 <div className={styles.registration}>
-                    <h2>{t('homePage.registrationSection.title')}</h2>
+                    <h2>{t('homePage.scheduleSection.title')}</h2>
                     <div className={styles.registrationContent}>
-                        <p>{t.rich(`homePage.registrationSection.description`, {
-                            registration: (chunks) => <a className='mbj-link' target="_blank" rel="noreferrer noopener" href="https://mtl-bal-jam-2024.dancecamps.org/booking.php">{chunks}</a>,
-                            details: (chunks) => <Link className='mbj-link' href={t('homePage.registrationSection.detailsLink')}>{chunks}</Link>
+                        <p>{t.rich(`homePage.scheduleSection.description`, {
+                            details: (chunks) => <Link className='mbj-link' href={t('homePage.scheduleSection.detailsLink')}>{chunks}</Link>
                         })}
                         </p>
                     </div>

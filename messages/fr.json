@@ -294,7 +294,7 @@
                     "venueSection": {
                         "title": "Lieux",
                         "learnMore": {
-                            "text": "Découvrir notre salle...",
+                            "text": "Découvrir nos lieux...",
                             "href": "/fr/evenements/2024/mtl-bal-jam/venue"
                         }
                     },
@@ -302,6 +302,11 @@
                         "title": "Inscriptions",
                         "detailsLink": "/fr/evenements/2024/mtl-bal-jam/registration",
                         "description": "Vous pouvez maintenant vous inscrire en visitant notre <registration>page d’inscription</registration>! Si vous voulez simplement voir les différentes options, <details>cliquez-ici</details>."
+                    },
+                    "scheduleSection": {
+                        "title": "Horaire",
+                        "detailsLink": "/fr/evenements/2024/mtl-bal-jam/schedule",
+                        "description": "Vous pouvez maintenant consulter l'horaire de l'événement en visitant la <details>page de l'horaire</details>."
                     }
                 },
                 "aboutPage": {
