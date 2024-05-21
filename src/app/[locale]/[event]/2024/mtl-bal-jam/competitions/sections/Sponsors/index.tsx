@@ -6,7 +6,8 @@ import FeatureCard from '../../../components/FeatureCard'
 const keys = [
     'toronto',
     'balMoment',
-    'ebf'
+    'ebf',
+    'sds'
 ] as const
 
 export default function Sponsors() {

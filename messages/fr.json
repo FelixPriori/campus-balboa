@@ -585,6 +585,14 @@
                                     "src": "/european-balboa-festival.png",
                                     "alt": "Logo de l'European Balboa Festival"
                                 }
+                            },
+                            "sds": {
+                                "name": "Slow Dance Soirée",
+                                "link": "https://slowdancesoiree.com/",
+                                "image": {
+                                    "src": "/slow-dance-soiree.png",
+                                    "alt": "Bannière de Slow Dance Soirée"
+                                }
                             }
                         },
                         "notes": {
