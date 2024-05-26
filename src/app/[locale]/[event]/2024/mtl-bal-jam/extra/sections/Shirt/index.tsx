@@ -31,10 +31,11 @@ export default function Shirt() {
             <h2>{t('title')}</h2>
             <div className={styles.content}>
                 <div className={styles.imageWrapper}>
-                    <Image src="/mbj-2024-shirt-model-last-call.png" width={250} height={250} alt={t('imageAlt')} />
+                    <Image src={t('imageSrc')} width={250} height={250} alt={t('imageAlt')} />
                 </div>
                 <div className={styles.text}>
-                    <p>{t('price')}</p>
+                    <p className={styles.soldOutPrice}>{t('price')}</p>
+                    <p className={styles.soldOut}>{t('soldOut')}</p>
                     <p className={styles.when}>{t('when')}</p>
                     <div className={styles.description}>
                         <p>{t('description')}</p>
@@ -51,10 +52,13 @@ export default function Shirt() {
                         <h3>{t('how')}</h3>
                         <ul>
                             {keys.map(key => (
-                                <li key={key}>
+                                <li key={key} className={styles.soldOutPrice}>
                                     {renderInstruction(key)}
                                 </li>
                             ))}
+                            <li className={styles.soldOut}>
+                                {t('instructions.soldOut')}
+                            </li>
                         </ul>
                     </div>
                 </div>

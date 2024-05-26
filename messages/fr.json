@@ -519,6 +519,8 @@
                     "shirt": {
                         "title": "T-shirt «Let’s Jam»",
                         "price": "Prix: 35,00$ CAD",
+                        "soldOut": "Rupture de stock",
+                        "imageSrc": "/mbj-shirt-sold-out-fr.png",
                         "imageAlt": "Photo du t-shirt Let's Jam",
                         "when": "Attention ! La dernière journée pour commander votre t-shirt est le 25 mai.",
                         "description": "Nous avons à cœur d'être éco-responsables, éthiques et respectueux de l'environnement. Pour cela nous avons choisi la Mercerie Roger, une compagnie pour nos t-shirts qui sont : ",
@@ -529,7 +531,8 @@
                         "instructions": {
                             "register": "Directement lors de <register>l'inscription</register>",
                             "edit": "Si déja inscrit.e : en modifiant le formulaire d’inscription",
-                            "contact": "En nous contactant à <email>mtlbaljam@campusbalboa.org</email>"
+                            "contact": "En nous contactant à <email>mtlbaljam@campusbalboa.org</email>",
+                            "soldOut": "Rupture de stock"
                         }
                     }
                 },
@@ -1282,7 +1285,7 @@
                                 "href": "/fr/evenements/2024/mtl-bal-jam/registration"
                             },
                             "schedule": {
-                                "text": "Schedule",
+                                "text": "Horaire",
                                 "href": "/en/events/2024/mtl-bal-jam/schedule"
                             },
                             "extra": {

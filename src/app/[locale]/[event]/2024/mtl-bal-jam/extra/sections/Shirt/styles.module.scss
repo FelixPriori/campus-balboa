@@ -54,6 +54,14 @@
                 margin-bottom: 1rem;
             }
 
+            .soldOutPrice {
+                text-decoration: line-through;
+            }
+
+            .soldOut {
+                color: var(--mbj-color-chartreuse);
+            }
+
 
             a {
                 text-decoration: underline;
@@ -71,6 +79,8 @@
                 li {
 
                     color: var(--mbj-color-white);
+
+
                 }
 
                 ul {
@@ -92,6 +102,12 @@
                 ul {
                     li {
                         color: var(--mbj-color-white);
+
+                        &.soldOut {
+                            color: var(--mbj-color-chartreuse);
+                            list-style: none;
+                            margin-top: 0.5rem;
+                        }
                     }
                 }
             }
