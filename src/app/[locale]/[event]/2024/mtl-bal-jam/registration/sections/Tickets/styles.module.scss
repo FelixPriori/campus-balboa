@@ -35,6 +35,10 @@
         margin: 10px 0;
     }
 
+    .dashed {
+        text-decoration: line-through;
+    }
+
     .content {
         max-width: 500px;
         margin: 0 auto;
@@ -63,6 +67,8 @@
             .priceItem {
                 display: flex;
                 justify-content: space-between;
+
+
 
                 span {
                     min-width: fit-content;

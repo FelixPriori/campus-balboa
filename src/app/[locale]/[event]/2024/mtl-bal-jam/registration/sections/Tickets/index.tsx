@@ -23,9 +23,9 @@ export default function Tickets() {
                     <ul>
                         {keys.map((key) => (
                             <li key={key} className={styles.priceItem}>
-                                <span>{t(`priceCalendar.dates.${key}`)}</span>
+                                <span className={key === "first" || key === "second" ? styles.dashed : ''}>{t(`priceCalendar.dates.${key}`)}</span>
                                 <span className={styles.dots}></span>
-                                <span className={styles.price}><strong>{t(`priceCalendar.full.${key}`)}</strong></span>
+                                <span className={`${styles.price} ${key === "first" || key === "second" ? styles.dashed : ''}`}><strong>{t(`priceCalendar.full.${key}`)}</strong></span>
                             </li>
                         ))}
                     </ul>
@@ -33,9 +33,9 @@ export default function Tickets() {
                     <ul>
                         {keys.map((key) => (
                             <li key={key} className={styles.priceItem}>
-                                <span>{t(`priceCalendar.dates.${key}`)}</span>
+                                <span className={key === "first" || key === "second" ? styles.dashed : ''}>{t(`priceCalendar.dates.${key}`)}</span>
                                 <span className={styles.dots}></span>
-                                <span className={styles.price}><strong>{t(`priceCalendar.party.${key}`)}</strong></span>
+                                <span className={`${styles.price} ${key === "first" || key === "second" ? styles.dashed : ''}`}><strong>{t(`priceCalendar.party.${key}`)}</strong></span>
                             </li>
                         ))}
                     </ul>
