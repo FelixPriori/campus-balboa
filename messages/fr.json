@@ -317,6 +317,14 @@
                     "staffSection": {
                         "title": "Notre équipe",
                         "staff": {
+                            "aronne": {
+                                "name": "Aronne",
+                                "pronouns": "Il/Accords masculins",
+                                "image": {
+                                    "src": "/aronne.png",
+                                    "alt": "Photo de Aronne"
+                                }
+                            },
                             "bree": {
                                 "name": "Bree",
                                 "pronouns": "Elle/Accords féminins",

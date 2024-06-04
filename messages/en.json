@@ -317,6 +317,14 @@
                     "staffSection": {
                         "title": "Meet the team",
                         "staff": {
+                            "aronne": {
+                                "name": "Aronne",
+                                "pronouns": "He/Him",
+                                "image": {
+                                    "src": "/aronne.png",
+                                    "alt": "Photo of Aronne"
+                                }
+                            },
                             "bree": {
                                 "name": "Bree",
                                 "pronouns": "She/Her",

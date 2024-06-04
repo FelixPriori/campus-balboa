@@ -4,6 +4,7 @@ import styles from './styles.module.scss'
 import FeatureCard from '../../../components/FeatureCard'
 
 const keys = [
+    'aronne',
     'bree',
     'cara',
     'felix',
