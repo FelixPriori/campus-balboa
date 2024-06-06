@@ -2,7 +2,7 @@ import { unstable_setRequestLocale } from 'next-intl/server';
 import Favicon from '@/app/mtl-bal-jam-favicon.ico'
 import BigOG from '@/app/mtl-bal-jam-og-512.png'
 import Main from '@/layout/main';
-import { Shirt, Tour } from './sections';
+import { Bar, Shirt, Tour } from './sections';
 
 type Props = {
   params: { locale: string }
@@ -68,6 +68,7 @@ export default function MbjExtra() {
     <Main styles={{ borderRadius: '0.625rem' }}>
       <Tour />
       <Shirt />
+      <Bar />
     </Main>
   )
 }

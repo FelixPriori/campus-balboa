@@ -542,6 +542,13 @@
                             "contact": "En nous contactant à <email>mtlbaljam@campusbalboa.org</email>",
                             "soldOut": "Rupture de stock"
                         }
+                    },
+                    "bar": {
+                        "title": "Heure sociale",
+                        "imageSrc": "/bar-social.png",
+                        "imageAlt": "Verres d'alcool avec l'heure du social",
+                        "when": "Vendredi à 19h30",
+                        "description": "Nous sommes heureux.ses d’annoncer qu’il y aura un bar durant les soirées du vendredi et du samedi au MTL BAL JAM !<br></br>Il y aura une sélection limitée de breuvages alcoolisés et non-alcoolisés à ta disposition.<br></br>De plus, nous ouvrirons les portes le vendredi à 19h30 pour une heure de socialisation où vous pourrez tranquillement vous enregistrer et ensuite prendre un verre discuter avec les autres participant.es de l’événement.<br></br>Veuillez s’il vous plaît consommer de façon responsable et prendre note que l'âge légal pour acheter et consommer de l’alcool est de 18 ans et plus au Québec."
                     }
                 },
                 "competitionsPage": {

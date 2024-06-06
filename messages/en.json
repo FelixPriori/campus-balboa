@@ -542,6 +542,13 @@
                             "contact": "Contact us via email at <email>mtlbaljam@campusbalboa.org</email>",
                             "soldOut": "Sold out"
                         }
+                    },
+                    "bar": {
+                        "title": "Social hour",
+                        "imageSrc": "/bar-social.png",
+                        "imageAlt": "Alcoholic drinks",
+                        "when": "Friday at 7:30 pm",
+                        "description": "We are excited to announce that there will be a bar during the dances on Friday and Saturday evenings for MTL BAL JAM!<br></br>There will be a small selection of drinks with or without alcohol available for purchase.<br></br>Additionally, there will be a social hour on Friday starting at 7:30 pm, during which you will be able to register and have a drink with the other participants of the event.<br></br>Please drink responsibly, and note that the legal drinking age is 18+ in Québec."
                     }
                 },
                 "competitionsPage": {
