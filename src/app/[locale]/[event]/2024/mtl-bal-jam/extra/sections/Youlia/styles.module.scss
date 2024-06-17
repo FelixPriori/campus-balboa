@@ -1,4 +1,4 @@
-.shirtSection {
+.youliaSection {
 	background-color: var(--mbj-color-black);
 	padding: 40px 0;
 
@@ -23,14 +23,14 @@
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
 
-		.imageWrapper {
+		.imagesWrapper {
 			grid-column: 2 / 5;
 			display: flex;
+			flex-direction: column;
 			align-items: center;
 			justify-content: center;
 			width: 100%;
 			height: 100%;
-			border-radius: var(--border-radius);
 
 			img {
 				display: block;
@@ -38,6 +38,7 @@
 				height: 100%;
 				object-fit: contain;
 				border-radius: var(--border-radius);
+				margin-bottom: 1rem;
 			}
 		}
 
@@ -46,63 +47,21 @@
 			z-index: 1;
 
 			p {
-				&.when {
-					font-weight: 700;
-				}
-
 				margin-bottom: 1rem;
-			}
+				line-height: 1.5;
+				letter-spacing: 0.25ch;
+				word-spacing: 0.75ch;
 
-			.soldOutPrice {
-				text-decoration: line-through;
-			}
-
-			.soldOut {
-				color: var(--mbj-color-chartreuse);
-			}
-
-			a {
-				text-decoration: underline;
-				text-underline-offset: 2px;
-				text-decoration-thickness: 2px;
-
-				&:hover {
-					text-decoration: none;
+				br {
+					content: '';
+					margin: 1em;
+					display: block;
 				}
 			}
 
 			.description {
-				p,
-				li {
+				p {
 					color: var(--mbj-color-white);
-				}
-
-				ul {
-					margin-bottom: 1rem;
-				}
-			}
-
-			.instructions {
-				border: 2px dotted var(--mbj-color-white);
-				border-radius: var(--border-radius);
-				padding: 1rem;
-
-				h3 {
-					font-size: clamp(1.25rem, 2vw, 1.5rem);
-					text-align: left;
-					margin-bottom: 0.25rem;
-				}
-
-				ul {
-					li {
-						color: var(--mbj-color-white);
-
-						&.soldOut {
-							color: var(--mbj-color-chartreuse);
-							list-style: none;
-							margin-top: 0.5rem;
-						}
-					}
 				}
 			}
 		}
@@ -111,7 +70,7 @@
 			grid-template-columns: 1fr;
 			align-items: center;
 
-			.imageWrapper {
+			.imagesWrapper {
 				padding: 0 40px;
 				grid-column: 1 / -1;
 				grid-row: 1 / 2;
@@ -124,6 +83,12 @@
 			.text {
 				grid-column: 1 / -1;
 				padding: 20px 50px;
+
+				p {
+					margin-bottom: 1rem;
+					letter-spacing: revert;
+					word-spacing: revert;
+				}
 
 				h3 {
 					text-align: center;

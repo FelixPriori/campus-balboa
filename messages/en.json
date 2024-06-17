@@ -549,6 +549,17 @@
 						"imageAlt": "Alcoholic drinks",
 						"when": "Friday at 7:30 pm",
 						"description": "We are excited to announce that there will be a bar during the dances on Friday and Saturday evenings for MTL BAL JAM!<br></br>There will be a small selection of drinks with or without alcohol available for purchase.<br></br>Additionally, there will be a social hour on Friday starting at 7:30 pm, during which you will be able to register and have a drink with the other participants of the event.<br></br>Please drink responsibly, and note that the legal drinking age is 18+ in Québec."
+					},
+					"youlia": {
+						"title": "Youlia",
+						"description": "Meet the artist who created the special illustration for this year’s t-shirt. Youlia is a multifaceted visual explorer through graphic design, textile and print art as well as animation. As an active member of the swing dance community, she got involved in various projects for the Montreal scene designing logos and visual identity.<br></br>She launched this year a special edition of earrings « Balboa », « Jazz » et « Lindy Hop » with a design reminiscent of the Bauhaus movement. They’re ultralight and laser cut from colorful acrylic in collaboration with Annie Trudeau. They’re available in two sizes and a wide variety of finishes. Since they’re made to order you can make sure to get yours next weekend <order>order them now</order> (select pick up in the shipping option and add a comment that you’re coming to MTL Bal Jam) and retrieve them from Youlia during the event. New colors will be added soon, so stay tuned and follow her on <insta>Instagram</insta> to be up to date.<br></br>Youlia also offers original wooden earrings design, shoe bags made from upcycled fabric and prints. <contact>Contact her</contact> for any special request.",
+						"orderLink": "https://www.etsy.com/ca/listing/1715401501/acrylic-hoop-earrings-laser-cut-earrings",
+						"instaLink": "https://www.instagram.com/youlia.moments/",
+						"contactLink": "https://docs.google.com/forms/d/16rP3zeutwCXnfmboQqK5cbCoiaEoJd83wWgsfwsqo50/viewform?edit_requested=true",
+						"earringImageSrc": "/youlia-earrings.jpg",
+						"earringImageAlt": "Models wearing Youlia's earrings",
+						"sketchImageSrc": "/youlia-sketch.jpg",
+						"sketchImageAlt": "Sketch before and after for the « Let's Jam » shirt"
 					}
 				},
 				"competitionsPage": {

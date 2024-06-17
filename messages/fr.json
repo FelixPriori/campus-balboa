@@ -549,6 +549,17 @@
 						"imageAlt": "Verres d'alcool avec l'heure du social",
 						"when": "Vendredi à 19h30",
 						"description": "Nous sommes heureux.ses d’annoncer qu’il y aura un bar durant les soirées du vendredi et du samedi au MTL BAL JAM !<br></br>Il y aura une sélection limitée de breuvages alcoolisés et non-alcoolisés à ta disposition.<br></br>De plus, nous ouvrirons les portes le vendredi à 19h30 pour une heure de socialisation où vous pourrez tranquillement vous enregistrer et ensuite prendre un verre discuter avec les autres participant.es de l’événement.<br></br>Veuillez s’il vous plaît consommer de façon responsable et prendre note que l'âge légal pour acheter et consommer de l’alcool est de 18 ans et plus au Québec."
+					},
+					"youlia": {
+						"title": "Youlia",
+						"description": "Rencontrez l’artiste à l’origine de l’illustration originale pour le t-shirt de cette année. Youlia est une exploratrice visuelle multifacette qui explore les arts graphiques, textiles imprimés ainsi que l’animation. Danseuse depuis de nombreuses année elle s’est impliqué dans la scène des danses swing Montréalaise avec une contribution par la création de nombreux logos et chartes graphiques.<br></br>Elle lance cette année une gamme de boucles d’oreilles « Balboa », « Jazz » et « Lindy Hop » avec un design en clin d’œil au mouvement du Bauhaus. Ultra légères elles sont découpées en acrylique coloré en partenariat avec Annie Trudeau. Elles sont disponibles dans deux grandeurs et une multitude de couleurs et finitions. Comme elles sont réalisées à la commande assurez-vous de les avoir la fin de semaine prochaine en <order>commandant</order> dès maintenant (sélectionner l’option de ramassage et précisez que vous serez au MTL Bal Jam) et les récupérer auprès de Youlia lors de l’évènement. De nouvelles couleurs sont ajoutées régulièrement alors on vous recommande aussi de la suivre sur <insta>Instagram</insta> pour être au courant de nouveautés.<br></br>Youlia offre également d’autres créations comme des boucles d’oreilles en bois peint, des sacs à souliers en tissu sur-cyclé et également des affiches imprimées. <contact>Contactez-la</contact> pour toute demande spéciale.",
+						"orderLink": "https://www.etsy.com/ca/listing/1715401501/acrylic-hoop-earrings-laser-cut-earrings",
+						"instaLink": "https://www.instagram.com/youlia.moments/",
+						"contactLink": "https://docs.google.com/forms/d/16rP3zeutwCXnfmboQqK5cbCoiaEoJd83wWgsfwsqo50/viewform?edit_requested=true",
+						"earringImageSrc": "/youlia-earrings.jpg",
+						"earringImageAlt": "Modèles avec les boucles d'oreilles de Youlia",
+						"sketchImageSrc": "/youlia-sketch.jpg",
+						"sketchImageAlt": "Sketch avant et après du design « Let's Jam »"
 					}
 				},
 				"competitionsPage": {
