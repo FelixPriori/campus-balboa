@@ -1,5 +1,5 @@
 import { unstable_setRequestLocale } from 'next-intl/server'
-import BigOG from '@/app/olga-og.jpg'
+import BigOG from '@/app/launch-party-banner.png'
 import { About, Footer, Hero, Prices, Schedule } from './sections'
 import Navigation from './components/Navigation'
 import './launchGlobals.scss'
