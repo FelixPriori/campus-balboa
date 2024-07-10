@@ -250,8 +250,8 @@
 						"ariaLabel": "Ouvre dans une nouvelle fenêtre"
 					},
 					"prices": {
-						"title": "Prix",
-						"subtitle": "Pour la journée complète",
+						"title": "Tarifs en ligne",
+						"subtitle": "Pour la journée complète ou seulement la danse. Les inscriptions en ligne terminent le 12 août.",
 						"tier1": {
 							"date": "10 premiers billets",
 							"price": "80,00$"
@@ -260,10 +260,6 @@
 							"date": "Prix régulier",
 							"price": "90,00$"
 						},
-						"door": {
-							"date": "À la porte",
-							"price": "100,00$"
-						},
 						"dance": {
 							"date": "Danse seulement",
 							"price": "10,00$"
@@ -271,7 +267,7 @@
 					},
 					"atTheDoor": {
 						"title": "Prix à la porte",
-						"subtitle": "Argent comptant et virements bancaires seulement.",
+						"subtitle": "Argent comptant et paiement par carte disponible à la porte.",
 						"full": {
 							"title": "Journée complète",
 							"price": "100,00$"

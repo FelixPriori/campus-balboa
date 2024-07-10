@@ -3,7 +3,7 @@ import { useTranslations } from 'next-intl'
 import styles from './styles.module.scss'
 import CtaButton from '../../components/CtaButton'
 
-const pricing = ['tier1', 'tier2', 'door', 'dance']
+const pricing = ['tier1', 'tier2', 'dance']
 
 const includes = ['workshops', 'dance']
 

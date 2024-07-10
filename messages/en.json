@@ -250,8 +250,8 @@
 						"ariaLabel": "Opens in a new window"
 					},
 					"prices": {
-						"title": "Pricing",
-						"subtitle": "For the full day",
+						"title": "Online Pricing",
+						"subtitle": "For the full day or dance only. Last day to register online is August 11th.",
 						"tier1": {
 							"date": "First 10",
 							"price": "$80.00"
@@ -260,10 +260,6 @@
 							"date": "Regular price",
 							"price": "$90.00"
 						},
-						"door": {
-							"date": "At the door",
-							"price": "$100.00"
-						},
 						"dance": {
 							"date": "Dance only",
 							"price": "$10.00"
@@ -271,7 +267,7 @@
 					},
 					"atTheDoor": {
 						"title": "Prices at the door",
-						"subtitle": "Cash and bank transfers only",
+						"subtitle": "Cash and card payments available at the door.",
 						"full": {
 							"title": "Full day",
 							"price": "$100.00"
