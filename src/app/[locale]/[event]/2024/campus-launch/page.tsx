@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props) {
 				images: [
 					{
 						url: BigOG.src,
-						alt: 'Bannière du programme extracurriculaire avec Olga',
+						alt: 'Bannière du lancemenet de Campus Balboa',
 						width: 1920,
 						height: 1005,
 					},
