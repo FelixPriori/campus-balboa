@@ -1,0 +1,342 @@
+.aboutSection {
+	background-color: var(--campus-color-blanc);
+	padding: 40px;
+	min-height: 700px;
+	background-image: url('/wave-bottom.png'), url('/circle-overlap.png');
+	background-size: cover, contain;
+	background-repeat: no-repeat, no-repeat;
+	background-position: bottom -150px left 0, left 0 top 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.content {
+		margin: 0 auto;
+		width: 100%;
+
+		.card {
+			padding: 2rem 4rem;
+			border-radius: var(--border-radius);
+			background-color: rgba(255, 255, 255, 0.85);
+			box-shadow: 0 1.5rem 4rem rgba(38, 70, 83, 0.15);
+			width: 75%;
+			margin: 0 auto;
+
+			.cardSection {
+				margin-bottom: 1.5rem;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+
+				.instructor {
+					margin-bottom: 2rem;
+
+					.avatar {
+						float: left;
+
+						figure {
+							figcaption {
+								font-size: 0.75rem;
+								text-align: center;
+							}
+						}
+
+						img {
+							display: block;
+							margin-right: 1rem;
+							height: 200px;
+							width: 200px;
+							border-radius: 50%;
+						}
+					}
+
+					&:nth-child(3) {
+						.avatar {
+							float: right;
+
+							img {
+								margin-left: 1rem;
+								margin-right: revert;
+							}
+						}
+					}
+				}
+
+				h4 {
+					margin-bottom: 0.75rem;
+				}
+
+				br {
+					content: '';
+					display: block;
+					margin-bottom: 0.5rem;
+				}
+
+				.level {
+					.levelList {
+						margin-top: 1rem;
+						margin-left: 1rem;
+						columns: 2;
+					}
+				}
+
+				.link {
+					color: var(--campus-color-canard);
+					text-decoration: underline;
+					text-underline-offset: 3px;
+					text-decoration-thickness: 2px;
+
+					&:hover {
+						text-decoration: none;
+					}
+				}
+
+				.extra {
+					color: var(--campus-color-canard);
+				}
+
+				.classSchedule {
+					width: 100%;
+					display: grid;
+					grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+					gap: 1rem;
+					list-style: none;
+
+					.classBlock {
+						position: relative;
+						padding: 48px 8px 16px 8px;
+						border: 2px solid var(--campus-color-canard);
+						border-radius: 8px;
+						background-color: var(--campus-color-blanc);
+
+						&.fri {
+							border: 2px solid var(--campus-color-taupe);
+						}
+
+						&.sat {
+							border: 2px solid var(--campus-color-bleu);
+						}
+
+						&.sun {
+							border: 2px solid var(--campus-color-jaune);
+						}
+
+						.start {
+							position: absolute;
+							top: 8px;
+							left: -8px;
+							background-color: var(--campus-color-canard);
+							color: var(--campus-color-blanc);
+							border-radius: 0 8px 8px 0;
+							padding: 4px 12px;
+
+							&.fri {
+								background-color: var(--campus-color-taupe);
+								color: var(--campus-color-blanc);
+							}
+
+							&.sat {
+								background-color: var(--campus-color-bleu);
+								color: var(--campus-color-blanc);
+							}
+
+							&.sun {
+								background-color: var(--campus-color-jaune);
+								color: var(--campus-color-taupe);
+							}
+
+							p {
+								color: inherit;
+							}
+						}
+
+						.title {
+							text-align: center;
+							margin-bottom: 0.25rem;
+						}
+
+						.where {
+							font-style: italic;
+							text-align: center;
+							font-weight: 300;
+							margin-bottom: 0.5rem;
+						}
+
+						.typeWrapper {
+							padding: 4px 8px;
+							border-radius: 8px;
+							max-width: fit-content;
+							margin-bottom: 0.5rem;
+
+							&.fri {
+								background-color: var(--campus-color-taupe);
+								color: var(--campus-color-blanc);
+							}
+
+							&.sat {
+								background-color: var(--campus-color-bleu);
+								color: var(--campus-color-blanc);
+							}
+
+							&.sun {
+								background-color: var(--campus-color-jaune);
+								color: var(--campus-color-taupe);
+							}
+
+							.type {
+								text-transform: uppercase;
+								color: inherit;
+							}
+						}
+
+						.description {
+							max-width: 50ch;
+						}
+					}
+				}
+
+				.locations {
+					width: 100%;
+					display: grid;
+					grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+					gap: 1rem;
+					list-style: none;
+
+					.locationBlock {
+						position: relative;
+						padding: 16px 8px;
+						border: 2px solid var(--campus-color-canard);
+						border-radius: 8px;
+						background-color: var(--campus-color-blanc);
+
+						h4 {
+							margin-bottom: 0.25rem;
+						}
+
+						.what {
+							margin-bottom: 0.25rem;
+							font-weight: 300;
+						}
+					}
+				}
+
+				.partners {
+					width: 100%;
+					display: grid;
+					grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+					gap: 1rem;
+					list-style: none;
+
+					.partnersBlock {
+						border: 2px solid var(--campus-color-canard);
+						min-height: 200px;
+						height: 200px;
+						border-radius: 8px;
+						background-color: var(--campus-color-blanc);
+						transition: all 200ms ease-in-out;
+						overflow: hidden;
+
+						&:hover {
+							transform: translateY(-3px);
+							box-shadow: 0 3px 5px rgba(38, 70, 83, 0.5);
+						}
+
+						a {
+							width: 100%;
+							height: 100%;
+						}
+
+						.titleContainer {
+							background-color: var(--campus-color-canard);
+							padding: 4px 8px;
+							height: 50px;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+
+							h4 {
+								margin-bottom: 0.25rem;
+								text-align: center;
+								color: var(--campus-color-blanc);
+							}
+						}
+
+						img {
+							display: block;
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+							object-position: center -20px;
+						}
+					}
+				}
+
+				&.closed {
+					display: flex;
+					justify-content: center;
+
+					p {
+						font-weight: 700;
+					}
+				}
+			}
+		}
+	}
+
+	@media only screen and (max-width: 992px) {
+		.content {
+			width: 100%;
+
+			.card {
+				width: 100%;
+
+				.cardSection {
+					.instructor {
+						flex-direction: column !important;
+						align-items: center;
+						gap: 1rem;
+					}
+				}
+			}
+		}
+	}
+
+	@media only screen and (max-width: 576px) {
+		padding: 20px;
+
+		.content {
+			.card {
+				padding: 20px;
+				margin: 0;
+
+				.cardSection {
+					.instructor {
+						margin-bottom: 2rem;
+						display: flex;
+						flex-direction: column;
+
+						.avatar {
+							float: none;
+
+							img {
+								display: block;
+								margin-right: 0;
+							}
+						}
+
+						&:nth-child(3) {
+							.avatar {
+								float: none;
+
+								img {
+									margin-left: 0;
+									margin-right: revert;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

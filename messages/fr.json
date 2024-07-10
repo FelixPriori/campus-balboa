@@ -231,6 +231,231 @@
 				"closed": "L'atelier est terminé, merci à tous.tes !",
 				"copyright": "© Campus Balboa, 2024"
 			},
+			"Launch": {
+				"header": {
+					"date": "17 août 2024",
+					"title": "<bold>Lancement</bold> de Campus Balboa",
+					"comingSoon": "Une journée d'ateliers avec des instructeurs annoncés sous peu à Montréal/Tiohtià:ke.",
+					"cta": {
+						"text": "Inscription",
+						"href": "https://campus-launch.dancecamps.org/booking.php",
+						"ariaLabel": "Ouvre dans une nouvelle fenêtre"
+					}
+				},
+				"pricesSection": {
+					"sectionTitle": "Registration",
+					"cta": {
+						"text": "Inscription",
+						"href": "https://campus-launch.dancecamps.org/booking.php",
+						"ariaLabel": "Ouvre dans une nouvelle fenêtre"
+					},
+					"prices": {
+						"title": "Prix",
+						"subtitle": "Pour la journée complète",
+						"tier1": {
+							"date": "10 premiers billets",
+							"price": "80,00$"
+						},
+						"tier2": {
+							"date": "Prix régulier",
+							"price": "90,00$"
+						},
+						"door": {
+							"date": "À la porte",
+							"price": "100,00$"
+						},
+						"dance": {
+							"date": "Danse seulement",
+							"price": "10,00$"
+						}
+					},
+					"atTheDoor": {
+						"title": "Prix à la porte",
+						"subtitle": "Argent comptant et virements bancaires seulement.",
+						"full": {
+							"title": "Journée complète",
+							"price": "100,00$"
+						},
+						"class": {
+							"title": "Par cours (1,5h)",
+							"price": "55,00$"
+						},
+						"dance": {
+							"title": "Danse seulement",
+							"price": "15,00$"
+						}
+					},
+					"includes": {
+						"subtitle": "Avec la journée complète",
+						"title": "Inclus",
+						"workshops": "3 heures d'ateliers",
+						"dance": "La danse en soirée avec bar et DJs internationaux."
+					}
+				},
+				"aboutSection": {
+					"sectionTitle": "À propos",
+					"instructors": {
+						"subsectionTitle": "Enseignant.es",
+						"annabel": {
+							"name": "Annabel Quisao",
+							"avatarAlt": "Photo d'Annabel",
+							"link": "https://www.kennedy-center.org/artists/q/qo-qz/annabel-quisao/",
+							"bio": "Annabel est reconnue pour son sourire indélébile et ses éclats de rire sur le plancher de danse. Une étudiante en musique depuis toujours, elle a eu la piqûre du Lindy Hop en 2003 lors de ses études au Colgate University. Accro à la communication et la spontanéité de la danse sociale, elle continue son exploration des danses swing en même temps que sa Maîtrise en Histoire de la musique et en Théorie à Penn State. C’est là où elle découvre en parallèle la danse Blues, le Collegiate Shag, et le Balboa pour lequel elle développe une passion particulière. Depuis une décennie, elle voyage partout dans le monde pour enseigner et compétitionner et a d’ailleurs remporté les prix les plus prestigieux d’événements reconnus à l'international comme le International Lindy Hop Championship, All Balboa Weekend, California Balboa Classic et Camp Hollywood. Dans les cours, Annabel vise à établir un environnement de cours inspirant, ludique et qui respecte l’histoire et l’héritage des danses swing tout en encourageant ses étudiant.e.s à explorer leur potentiel et leur individualité. En ce moment, elle habite à Washington, DC et est l’une des fondateur.ice.s de New Columbia Swing, l’organisation principale de danse swing à D.C., où elle occupe le poste de directrice de l’éducation."
+						},
+						"dan": {
+							"name": "Dan Repsch",
+							"avatarAlt": "Photo de Dan",
+							"link": "https://danrepsch.weebly.com/",
+							"bio": "Dan est immergé dans la musique et le mouvement. En tant qu’enseignant, son approche enthousiaste met l’emphase sur l’innovation, la connexion et l’attention à son partenaire. En tant qu’instructeur et DJ vétérant, il a travaillé au quatres coins du monde tant bien que pour des événements internationaux que pour des danses locales. Il a occupé le rôle de DJ en chef à des événements tels  que BluesSHOUT! et au Balboa/Blues Experiment. Dan est toujours au rendez-vous lorsqu’on a besoin de lui pour améliorer la danse et pour aider les gens à sortir de leur coquille."
+						}
+					},
+					"DJs": {
+						"subsectionTitle": "DJs",
+						"michael": {
+							"name": "Michael Quisao",
+							"avatarAlt": "Photo de Michael",
+							"link": "https://www.kennedy-center.org/artists/q/qo-qz/michael-quisao/",
+							"bio": "Michael est tombé amoureux de la musique swing lorsqu’il était à l’école secondaire. La station de radio jazz préférée de sa mère faisait jouer des enregistrements de hot jazz et de l’ère du swing tard la fin de semaine. Il a ensuite commencé à danser en 2006 et depuis, son amour du swing et de la danse sociale l’ont amené à DJer et à danser partout dans le monde. Michael estime qu’il n’y a rien de mieux que d’être DJ pour inspirer les gens sur le plancher de danse à l’aide de chansons qui nous font bouger. Michael est le DJ en chef et directeur de la musique au New Columbia Swing à Washington DC et DJ en chef à Lindy Focus en 2024."
+						},
+						"dan": {
+							"name": "Dan Repsch",
+							"avatarAlt": "Photo de Dan",
+							"link": "https://danrepsch.weebly.com/",
+							"bio": "Dan est immergé dans la musique et le mouvement. En tant qu’enseignant, son approche enthousiaste met l’emphase sur l’innovation, la connexion et l’attention à son partenaire. En tant qu’instructeur et DJ vétérant, il a travaillé au quatres coins du monde tant bien que pour des événements internationaux que pour des danses locales. Il a occupé le rôle de DJ en chef à des événements tels  que BluesSHOUT! et au Balboa/Blues Experiment. Dan est toujours au rendez-vous lorsqu’on a besoin de lui pour améliorer la danse et pour aider les gens à sortir de leur coquille."
+						}
+					},
+					"whatToExpect": {
+						"subsectionTitle": "À quoi s'attendre?",
+						"description": "À l'aide d'ateliers, Campus Balboa vise à inviter des experts du Balboa à la scène locale de Tiohtià:ke/Montréal. Par conséquent, vous pouvez vous attendre à 3h d'ateliers avec des instructeurs internationnaux. De plus, puisque c'est un événement de lancement, il y aura aussi du temps pour socialiser ainsi que de danser sur de la musique de DJ à ne pas manquer"
+					},
+					"level": {
+						"subsectionTitle": "Niveau requis",
+						"content": {
+							"details": "Ceci est un atelier de balboa pour tous niveaux qui nécessite tout de même de connaître les bases de la danse. Les débutants sont les bienvenus aux danses sociales, mais il faut avoir pris quelques mois de cours réguliers avant de s’inscrire aux ateliers. Nous voulons ainsi éviter que vous vous sentiez dépassé durant les ateliers et permettre aux autres participants de se concentrer sur ce qui est enseigné. Si l’un ou plusieurs de ces mots clés vous sont inconnus, s’il vous plaît considérez vous inscrire à des cours de balboa dans votre scène locale !",
+							"list": "Bal swing,Pure bal,Lollys,Paddle turns,Toss-out,Come around,Swivel,Up-hold,Down-hold,Out and in"
+						}
+					},
+					"classSchedule": {
+						"title": "Horaire de l'événement",
+						"0": {
+							"day": "Vendredi",
+							"color": "fri",
+							"type": "Danse",
+							"where": "Cat's Corner, 1er étage",
+							"start": "20h30",
+							"title": "Band live au Downtown Stomp",
+							"description": "PAS INCLUT DANS LE PRIX: Pour le prix de 25,00$, venez danser au Cat's Corner, il y aura un band live et Michael va être DJ entre les sets."
+						},
+						"1": {
+							"type": "Cours",
+							"color": "sat",
+							"day": "Samedi",
+							"where": "Cat's Corner, 2e étage",
+							"start": "14h00",
+							"title": "1er cours",
+							"description": "Contenu sera annoncé sous peu !"
+						},
+						"2": {
+							"type": "Pause",
+							"color": "sat",
+							"day": "Samedi",
+							"where": "Cat's Corner, 2e étage",
+							"start": "15h30",
+							"title": "Break",
+							"description": "15 minutes break"
+						},
+						"3": {
+							"type": "Cours",
+							"color": "sat",
+							"day": "Samedi",
+							"where": "Cat's Corner, 2e étage",
+							"start": "15h45",
+							"title": "2e Cours",
+							"description": "Contenu sera annoncé sous peu !"
+						},
+						"4": {
+							"type": "Souper",
+							"color": "sat",
+							"day": "Samedi",
+							"where": "N'importe où",
+							"start": "17h15",
+							"title": "L'heure du souper",
+							"description": "Profitez de ce moment pour vous reposer !"
+						},
+						"5": {
+							"type": "Social",
+							"color": "sat",
+							"day": "Samedi",
+							"where": "Cat's Corner, 2e étage",
+							"start": "20h00",
+							"title": "Heure sociale",
+							"description": "Avant la danse, venez prendre un verre et jaser avec les autres participant.e.s"
+						},
+						"6": {
+							"type": "Danse",
+							"color": "sat",
+							"day": "Samedi",
+							"where": "Cat's Corner, 2e étage",
+							"start": "21h00",
+							"title": "Lancement",
+							"description": "Venez danser au son de DJs internationaux et prendre un verre au bar ! Le bar sera ouvert jusqu'à 23h30"
+						},
+						"7": {
+							"type": "Danse",
+							"color": "sun",
+							"day": "Dimanche",
+							"where": "Kawalees",
+							"start": "15h00",
+							"title": "Danse de l'après midi",
+							"description": "Venez danser le balboa, socialiser et boire un verre."
+						}
+					},
+					"locations": {
+						"title": "Lieux",
+						"cats": {
+							"title": "Cat's Corner",
+							"address": "1956 Frontenac Street, Montréal, Quebec H2K 2Z1",
+							"what": "Ateliers, danse"
+						},
+						"kawalees": {
+							"title": "Kawalees",
+							"address": "5175A Park Ave, Montreal, Quebec H2V 4G3",
+							"what": "Danse"
+						}
+					},
+					"partners": {
+						"title": "Partenaires",
+						"cats": {
+							"title": "Cat's Corner",
+							"link": "https://www.catscorner.ca/en/",
+							"img": {
+								"url": "/cats-corner.png",
+								"alt": "Cat's Corner Logo"
+							}
+						},
+						"the": {
+							"title": "Thé Dansant Balboa",
+							"link": "https://www.facebook.com/groups/388149256494699",
+							"img": {
+								"url": "/tea-party.jpg",
+								"alt": "Bannière Thé Dansant Balboa"
+							}
+						}
+					},
+					"cta": {
+						"text": "Inscription",
+						"href": "https://campus-launch.dancecamps.org/booking.php",
+						"ariaLabel": "Ouvre dans une nouvelle fenêtre"
+					}
+				},
+				"scheduleSection": {
+					"sectionTitle": "Horaire",
+					"link": "Voir l'horaire",
+					"ariaLabel": "Ouvre dans une nouvelle fenêtre"
+				},
+				"closed": "L'atelier est terminé, merci à tous.tes !",
+				"copyright": "©2024 Campus Balboa"
+			},
 			"MtlBalJam": {
 				"subscribe": {
 					"title": "Abonnez-vous pour des détails croustillants",
