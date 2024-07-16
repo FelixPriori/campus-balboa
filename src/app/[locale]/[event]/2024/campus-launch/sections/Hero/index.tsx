@@ -6,7 +6,7 @@ import CtaButton from '../../components/CtaButton'
 
 export default function Hero() {
 	const t = useTranslations('Events.2024.Launch.header')
-	// const tclosed = useTranslations('Events.2024.Launch')
+
 	return (
 		<header className={styles.hero}>
 			<div className={styles.card}>
@@ -24,7 +24,11 @@ export default function Hero() {
 						{t.rich('title', { bold: chunk => <strong>{chunk}</strong> })}
 					</h1>
 					<p className={styles.comingSoon}>{t('comingSoon')}</p>
-					{/* <p>{tclosed('closed')}</p> */}
+					<CtaButton
+						href={t('cta.href')}
+						ariaLabel={t('cta.ariaLabel')}
+						text={t('cta.text')}
+					/>
 				</div>
 			</div>
 		</header>

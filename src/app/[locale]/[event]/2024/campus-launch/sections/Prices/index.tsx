@@ -68,11 +68,13 @@ export default function Prices() {
 						</ul>
 					</div>
 				</div>
-				{/* <div className={styles.cta}>
-                    <p>
-                        {tclosed('closed')}
-                    </p>
-                </div> */}
+				<div className={styles.cta}>
+					<CtaButton
+						href={t('cta.href')}
+						ariaLabel={t('cta.ariaLabel')}
+						text={t('cta.text')}
+					/>
+				</div>
 			</div>
 		</section>
 	)

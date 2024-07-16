@@ -340,7 +340,7 @@
 							"where": "Cat's Corner, 1st floor",
 							"start": "8:30 pm",
 							"title": "Live Band at the Downtown Stomp",
-							"description": "NOT INCLUDED IN WORKSHOP: For the price of $25.00, come to Cat's Corner on Friday there will be a live band and Michael will DJ the breaks."
+							"description": "NOT INCLUDED: For the price of $25.00, come to Cat's Corner on Friday to dance to Emily Estrella's band. Michael Quisao will DJ the breaks."
 						},
 						"1": {
 							"day": "Saturday",
@@ -397,13 +397,22 @@
 							"description": "Dance to the sound of DJ music by DJ Michael Quisao and DJ Dan. The bar will be open until 11:30."
 						},
 						"7": {
+							"type": "DJ Summit",
+							"color": "sun",
+							"day": "Sunday",
+							"where": "Kawalees",
+							"start": "1:00 pm",
+							"title": "Balboa DJ Summit with Michael Quisao",
+							"description": "FREE: before the Tea Dance, come grab a bite and be part of a Balboa DJ discussion with Michael Quisao."
+						},
+						"8": {
 							"type": "Dance",
 							"color": "sun",
 							"day": "Sunday",
 							"where": "Kawalees",
 							"start": "3:00 pm",
-							"title": "Afternoon dance",
-							"description": "Come dance balboa very month, hang out with friends and have a drink."
+							"title": "Balboa Tea Dance",
+							"description": "Come dance balboa in the afternoon, hang out with friends and have a drink."
 						}
 					},
 					"locations": {
@@ -416,7 +425,7 @@
 						"kawalees": {
 							"title": "Kawalees",
 							"address": "5175A Park Ave, Montreal, Quebec H2V 4G3",
-							"what": "Dance"
+							"what": "DJ Summit, Dance"
 						}
 					},
 					"partners": {

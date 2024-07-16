@@ -237,15 +237,15 @@
 					"title": "<bold>Lancement</bold> de Campus Balboa",
 					"comingSoon": "Une journée d'ateliers avec des instructeurs annoncés sous peu à Montréal/Tiohtià:ke.",
 					"cta": {
-						"text": "Inscription",
+						"text": "Page d'inscription",
 						"href": "https://campus-launch.dancecamps.org/booking.php",
 						"ariaLabel": "Ouvre dans une nouvelle fenêtre"
 					}
 				},
 				"pricesSection": {
-					"sectionTitle": "Registration",
+					"sectionTitle": "Inscriptions",
 					"cta": {
-						"text": "Inscription",
+						"text": "Page d'inscription",
 						"href": "https://campus-launch.dancecamps.org/booking.php",
 						"ariaLabel": "Ouvre dans une nouvelle fenêtre"
 					},
@@ -340,7 +340,7 @@
 							"where": "Cat's Corner, 1er étage",
 							"start": "20h30",
 							"title": "Band live au Downtown Stomp",
-							"description": "PAS INCLUT DANS LE PRIX: Pour le prix de 25,00$, venez danser au Cat's Corner, il y aura un band live et Michael va être DJ entre les sets."
+							"description": "PAS INCLUS DANS LE PRIX: Prévoyez 25,00$ pour danser au Cat's Corner avec le band d'Emily Estrella. Michael Quisao sera votre DJ entre les sets."
 						},
 						"1": {
 							"type": "Cours",
@@ -397,13 +397,22 @@
 							"description": "Venez danser au son de DJs internationaux et prendre un verre au bar ! Le bar sera ouvert jusqu'à 23h30"
 						},
 						"7": {
+							"type": "Sommet de DJ",
+							"color": "sun",
+							"day": "Dimanche",
+							"where": "Kawalees",
+							"start": "13h00",
+							"title": "Sommet de DJ de balboa avec Michael Quisao",
+							"description": "GRATUIT : avant le Thé Dansant, venez grignoter en discutant de DJer pour le Balboa avec Michael Quisao."
+						},
+						"8": {
 							"type": "Danse",
 							"color": "sun",
 							"day": "Dimanche",
 							"where": "Kawalees",
 							"start": "15h00",
-							"title": "Danse de l'après midi",
-							"description": "Venez danser le balboa, socialiser et boire un verre."
+							"title": "Thé Dansant Balboa",
+							"description": "Venez danser le balboa, socialiser et boire un verre. Danse gratuite avec don suggérée et consommation de nourriture ou de boisson encouragée."
 						}
 					},
 					"locations": {
@@ -416,7 +425,7 @@
 						"kawalees": {
 							"title": "Kawalees",
 							"address": "5175A Park Ave, Montreal, Quebec H2V 4G3",
-							"what": "Danse"
+							"what": "Sommet de DJ, Danse"
 						}
 					},
 					"partners": {
@@ -439,7 +448,7 @@
 						}
 					},
 					"cta": {
-						"text": "Inscription",
+						"text": "Page d'inscription",
 						"href": "https://campus-launch.dancecamps.org/booking.php",
 						"ariaLabel": "Ouvre dans une nouvelle fenêtre"
 					}

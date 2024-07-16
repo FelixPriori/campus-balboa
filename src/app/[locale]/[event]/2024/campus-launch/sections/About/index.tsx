@@ -81,7 +81,7 @@ const PartnersBlock = ({ title, img, link }: PartnerBlock) => {
 	)
 }
 
-const classes = ['0', '1', '2', '3', '4', '5', '6', '7']
+const classes = ['0', '1', '2', '3', '4', '5', '6', '7', '8']
 
 const locations = ['cats', 'kawalees']
 
@@ -233,9 +233,13 @@ export default function About() {
 							))}
 						</ul>
 					</div>
-					{/* <div className={`${styles.cardSection} ${styles.closed}`}>
-						<p>{tclosed('closed')}</p>
-					</div> */}
+					<div className={`${styles.cardSection} ${styles.closed}`}>
+						<CtaButton
+							href={t('cta.href')}
+							ariaLabel={t('cta.ariaLabel')}
+							text={t('cta.text')}
+						/>
+					</div>
 				</div>
 			</div>
 		</section>
