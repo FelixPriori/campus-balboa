@@ -332,7 +332,7 @@
 						}
 					},
 					"classSchedule": {
-						"title": "Class schedule",
+						"title": "Weekend schedule",
 						"0": {
 							"day": "Friday",
 							"color": "fri",
