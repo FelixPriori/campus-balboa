@@ -50,11 +50,12 @@
 							grid-template-columns: 1fr min-content;
 							margin-bottom: 0.5rem;
 
-							// &.tier1,
+							&.tier1
 							// &.tier2,
-							// &.door {
-							//     text-decoration: line-through !important;
-							// }
+							// &.door
+							{
+								text-decoration: line-through !important;
+							}
 
 							.itemTitle {
 								text-wrap: wrap;
