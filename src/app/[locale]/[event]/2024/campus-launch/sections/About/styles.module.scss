@@ -10,6 +10,9 @@
 	justify-content: center;
 	align-items: center;
 
+	--column-gap: 2rem;
+	--section-spacing: 2rem;
+
 	.content {
 		margin: 0 auto;
 		width: 100%;
@@ -23,41 +26,59 @@
 			margin: 0 auto;
 
 			.cardSection {
-				margin-bottom: 1.5rem;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
+				margin-bottom: var(--section-spacing);
+				p {
+					text-align: justify;
+					max-width: revert;
+				}
 
-				.instructor {
-					margin-bottom: 2rem;
+				.instructors {
+					display: grid;
+					grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+					column-gap: var(--column-gap);
 
-					.avatar {
-						float: left;
-
-						figure {
-							figcaption {
-								font-size: 0.75rem;
-								text-align: center;
-							}
-						}
-
-						img {
-							display: block;
-							margin-right: 1rem;
-							height: 200px;
-							width: 200px;
-							border-radius: 50%;
-						}
-					}
-
-					&:nth-child(3) {
+					.instructor {
 						.avatar {
-							float: right;
+							float: left;
+
+							figure {
+								figcaption {
+									font-size: 0.75rem;
+									text-align: center;
+								}
+							}
 
 							img {
-								margin-left: 1rem;
-								margin-right: revert;
+								display: block;
+								margin-right: 1rem;
+								height: 200px;
+								width: 200px;
+								border-radius: 50%;
 							}
+						}
+
+						&:nth-child(3) {
+							.avatar {
+								float: right;
+
+								img {
+									margin-left: 1rem;
+									margin-right: revert;
+								}
+							}
+						}
+					}
+				}
+
+				&.grid {
+					display: grid;
+					grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+					column-gap: var(--column-gap);
+					.gridItem {
+						.gridItemContent {
+							display: flex;
+							justify-content: center;
+							text-align: justify;
 						}
 					}
 				}
@@ -89,10 +110,6 @@
 					&:hover {
 						text-decoration: none;
 					}
-				}
-
-				.extra {
-					color: var(--campus-color-canard);
 				}
 
 				.classSchedule {
@@ -190,7 +207,7 @@
 						}
 
 						.description {
-							max-width: 50ch;
+							text-align: left;
 						}
 					}
 				}
@@ -229,8 +246,8 @@
 
 					.partnersBlock {
 						border: 2px solid var(--campus-color-canard);
-						min-height: 200px;
-						height: 200px;
+						min-height: 400px;
+						height: 400px;
 						border-radius: 8px;
 						background-color: var(--campus-color-blanc);
 						transition: all 200ms ease-in-out;
@@ -266,7 +283,6 @@
 							width: 100%;
 							height: 100%;
 							object-fit: cover;
-							object-position: center center;
 						}
 					}
 				}
@@ -291,10 +307,20 @@
 				width: 100%;
 
 				.cardSection {
-					.instructor {
-						flex-direction: column !important;
-						align-items: center;
-						gap: 1rem;
+					.instructors {
+						.instructor {
+							flex-direction: column !important;
+							align-items: center;
+							gap: 1rem;
+						}
+					}
+
+					&.grid {
+						.gridItem {
+							&:not(:last-of-type) {
+								margin-bottom: var(--section-spacing);
+							}
+						}
 					}
 				}
 			}
@@ -302,7 +328,7 @@
 	}
 
 	@media only screen and (max-width: 576px) {
-		padding: 20px;
+		padding: 20px !important;
 
 		.content {
 			.card {
@@ -310,30 +336,37 @@
 				margin: 0;
 
 				.cardSection {
-					.instructor {
-						margin-bottom: 2rem;
-						display: flex;
-						flex-direction: column;
+					.instructors {
+						grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+						.instructor {
+							margin-bottom: var(--section-spacing);
+							display: flex;
+							flex-direction: column;
 
-						.avatar {
-							float: none;
-
-							img {
-								display: block;
-								margin-right: 0;
-							}
-						}
-
-						&:nth-child(3) {
 							.avatar {
 								float: none;
 
 								img {
-									margin-left: 0;
-									margin-right: revert;
+									display: block;
+									margin-right: 0;
+								}
+							}
+
+							&:nth-child(3) {
+								.avatar {
+									float: none;
+
+									img {
+										margin-left: 0;
+										margin-right: revert;
+									}
 								}
 							}
 						}
+					}
+
+					&.grid {
+						grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
 					}
 				}
 			}

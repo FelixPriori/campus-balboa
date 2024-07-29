@@ -349,7 +349,7 @@
 							"where": "Cat's Corner, 2e étage",
 							"start": "14h00",
 							"title": "1er cours",
-							"description": "Contenu sera annoncé sous peu !"
+							"description": "Partie 1 : jouer avec le mouvement et le momentum."
 						},
 						"2": {
 							"type": "Pause",
@@ -367,7 +367,7 @@
 							"where": "Cat's Corner, 2e étage",
 							"start": "15h45",
 							"title": "2e Cours",
-							"description": "Contenu sera annoncé sous peu !"
+							"description": "Partie 2 : jouer avec le rythme et la musicalité."
 						},
 						"4": {
 							"type": "Souper",

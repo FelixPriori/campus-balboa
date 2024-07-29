@@ -349,7 +349,7 @@
 							"where": "Cat's Corner, 2nd floor",
 							"start": "2:00 pm",
 							"title": "Class 1",
-							"description": "Contents to be announced!"
+							"description": "Part 1: Playing with Shape and Momentum"
 						},
 						"2": {
 							"type": "Pause",
@@ -367,7 +367,7 @@
 							"where": "Cat's Corner, 2nd floor",
 							"start": "3:45 pm",
 							"title": "Class 2",
-							"description": "Contents to be announced!"
+							"description": "Part 2: Playing with Rhythm and Musicality"
 						},
 						"4": {
 							"type": "Dinner",

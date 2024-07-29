@@ -98,93 +98,99 @@ export default function About() {
 				<div className={styles.card}>
 					<div className={styles.cardSection}>
 						<h3>{t('instructors.subsectionTitle')}</h3>
-						<div className={styles.instructor}>
-							<div className={styles.avatar}>
-								<figure>
-									<Image
-										src="/annabel-avatar.png"
-										width={100}
-										height={100}
-										alt={t('instructors.annabel.avatarAlt')}
-									/>
+						<div className={styles.instructors}>
+							<div className={styles.instructor}>
+								<div className={styles.avatar}>
+									<figure>
+										<Image
+											src="/annabel-avatar.png"
+											width={100}
+											height={100}
+											alt={t('instructors.annabel.avatarAlt')}
+										/>
 
-									<figcaption>Credit: Noah Nethero</figcaption>
-								</figure>
+										<figcaption>Credit: Noah Nethero</figcaption>
+									</figure>
+								</div>
+								<div className={styles.details}>
+									<h4>{t('instructors.annabel.name')}</h4>
+									<p>{t('instructors.annabel.bio')}</p>
+								</div>
 							</div>
-							<div className={styles.details}>
-								<h4>{t('instructors.annabel.name')}</h4>
-								<p>{t('instructors.annabel.bio')}</p>
-							</div>
-						</div>
-						<div className={styles.instructor}>
-							<div className={styles.avatar}>
-								<figure>
-									<Image
-										src="/dan-avatar.png"
-										width={100}
-										height={100}
-										alt={t('DJs.dan.avatarAlt')}
-									/>
-									<figcaption>Credit: Braden Nesin</figcaption>
-								</figure>
-							</div>
-							<div className={styles.details}>
-								<h4>{t('instructors.dan.name')}</h4>
-								<p>{t('instructors.dan.bio')}</p>
+							<div className={styles.instructor}>
+								<div className={styles.avatar}>
+									<figure>
+										<Image
+											src="/dan-avatar.png"
+											width={100}
+											height={100}
+											alt={t('DJs.dan.avatarAlt')}
+										/>
+										<figcaption>Credit: Braden Nesin</figcaption>
+									</figure>
+								</div>
+								<div className={styles.details}>
+									<h4>{t('instructors.dan.name')}</h4>
+									<p>{t('instructors.dan.bio')}</p>
+								</div>
 							</div>
 						</div>
 					</div>
 					<div className={styles.cardSection}>
 						<h3>{t('DJs.subsectionTitle')}</h3>
-						<div className={styles.instructor}>
-							<div className={styles.avatar}>
-								<Image
-									src="/michael-avatar.png"
-									width={100}
-									height={100}
-									alt={t('DJs.michael.avatarAlt')}
-								/>
-							</div>
-							<div className={styles.details}>
-								<h4>{t('DJs.michael.name')}</h4>
-								<p>{t('DJs.michael.bio')}</p>
-							</div>
-						</div>
-						<div className={styles.instructor}>
-							<div className={styles.avatar}>
-								<figure>
+						<div className={styles.instructors}>
+							<div className={styles.instructor}>
+								<div className={styles.avatar}>
 									<Image
-										src="/dan-avatar.png"
+										src="/michael-avatar.png"
 										width={100}
 										height={100}
-										alt={t('DJs.dan.avatarAlt')}
+										alt={t('DJs.michael.avatarAlt')}
 									/>
-									<figcaption>Credit: Braden Nesin</figcaption>
-								</figure>
+								</div>
+								<div className={styles.details}>
+									<h4>{t('DJs.michael.name')}</h4>
+									<p>{t('DJs.michael.bio')}</p>
+								</div>
 							</div>
-							<div className={styles.details}>
-								<h4>{t('DJs.dan.name')}</h4>
-								<p>{t('DJs.dan.bio')}</p>
+							<div className={styles.instructor}>
+								<div className={styles.avatar}>
+									<figure>
+										<Image
+											src="/dan-avatar.png"
+											width={100}
+											height={100}
+											alt={t('DJs.dan.avatarAlt')}
+										/>
+										<figcaption>Credit: Braden Nesin</figcaption>
+									</figure>
+								</div>
+								<div className={styles.details}>
+									<h4>{t('DJs.dan.name')}</h4>
+									<p>{t('DJs.dan.bio')}</p>
+								</div>
 							</div>
 						</div>
 					</div>
-					<div className={styles.cardSection}>
-						<h3>{t('whatToExpect.subsectionTitle')}</h3>
-						<p>{t.rich('whatToExpect.description', { br: () => <br /> })}</p>
-					</div>
-					<div className={styles.cardSection}>
-						<h3>
-							{t.rich('level.subsectionTitle', {
-								extra: chunk => (
-									<strong className={styles.extra}>{chunk}</strong>
-								),
-							})}
-						</h3>
-						<div className={styles.level}>
-							<p>{t('level.content.details')}</p>
-							<ul className={styles.levelList}>
-								{getDetails(t('level.content.list'))}
-							</ul>
+					<div className={`${styles.cardSection} ${styles.grid}`}>
+						<div className={styles.gridItem}>
+							<h3>{t('whatToExpect.subsectionTitle')}</h3>
+							<div className={styles.gridItemContent}>
+								<p>
+									{t.rich('whatToExpect.description', { br: () => <br /> })}
+								</p>
+							</div>
+						</div>
+						<div className={styles.gridItem}>
+							<h3>{t('level.subsectionTitle')}</h3>
+							<div className={styles.gridItemContent}>
+								<div className={styles.level}>
+									<p>{t('level.content.details')}</p>
+									<ul className={styles.levelList}>
+										{getDetails(t('level.content.list'))}
+									</ul>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div className={styles.cardSection}>
