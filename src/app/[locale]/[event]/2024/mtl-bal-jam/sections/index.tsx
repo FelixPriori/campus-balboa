@@ -1,6 +1,0 @@
-export { default as Header } from './Header'
-export { default as Instructors } from './Instructors'
-export { default as Venue } from './Venue'
-export { default as Music } from './Music'
-export { default as Footer } from './Footer'
-export { default as ComingSoon } from './ComingSoon'
