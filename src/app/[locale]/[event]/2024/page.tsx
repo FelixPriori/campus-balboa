@@ -1,5 +1,5 @@
-import {redirect} from 'next/navigation';
+import { redirect } from 'next/navigation'
 
 export default function EventsPage() {
-    redirect(`2024/mtl-bal-jam`);
+	redirect(`2024/campus-launch`)
 }
