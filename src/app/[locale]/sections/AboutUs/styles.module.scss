@@ -1,25 +1,25 @@
 @import '@/layout/breakpoints.scss';
 
 .aboutUsSection {
-  background-image: url("/wave-top.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top -400px left 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	background-image: url('/wave-top.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top -400px left 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
-  .content {
-    .aboutUsTitle {
-      color: var(--color-neutral);
-      letter-spacing: 0.35rem;
-    }
+	.content {
+		.aboutUsTitle {
+			color: var(--color-neutral);
+			letter-spacing: 0.35rem;
+		}
 
-    .administratorsContainer {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
-      gap: var(--spacing-s);
-      justify-content: center;
-    }
-  }
+		.administratorsContainer {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+			gap: var(--spacing-s);
+			justify-content: center;
+		}
+	}
 }

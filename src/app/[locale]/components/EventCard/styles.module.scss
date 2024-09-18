@@ -1,126 +1,126 @@
 @import '@/layout/breakpoints.scss';
 
 .cardWrapper {
-    &.dark {
-        --color-dark: #fff;
-        --color-neutral: #000;
-        background-color: rgba(0, 0, 0, 0.85);
+	&.dark {
+		--color-dark: #fff;
+		--color-neutral: #000;
+		background-color: rgba(0, 0, 0, 0.85);
 
-        &:hover {
-            background-color: rgba(0, 0, 0, 1);
-        }
+		&:hover {
+			background-color: rgba(0, 0, 0, 1);
+		}
 
-        .title,
-        .paragraph,
-        svg {
-            color: var(--color-dark);
-        }
+		.title,
+		.paragraph,
+		svg {
+			color: var(--color-dark);
+		}
 
-        .arrow {
-            border: none;
+		.arrow {
+			border: none;
 
-            svg {
-                height: 50px;
-                width: 50px;
-            }
-        }
-    }
+			svg {
+				height: 50px;
+				width: 50px;
+			}
+		}
+	}
 
-    width: 100%;
-    padding: 25px;
-    border-radius: var(--border-radius);
-    background-color: rgba(255, 255, 255, 0.5);
-    box-shadow: 0 1.5rem 4rem rgba(38, 70, 83, 0.15);
-    display: flex;
-    align-items: center;
-    gap: 2rem;
+	width: 100%;
+	padding: 25px;
+	border-radius: var(--border-radius);
+	background-color: rgba(255, 255, 255, 0.5);
+	box-shadow: 0 1.5rem 4rem rgba(38, 70, 83, 0.15);
+	display: flex;
+	align-items: center;
+	gap: 2rem;
 
-    .helpText {
-        display: none;
-    }
+	.helpText {
+		display: none;
+	}
 
-    .details {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+	.details {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 
-        .title {
-            text-align: left;
-            letter-spacing: 0.25rem;
-        }
+		.title {
+			text-align: left;
+			letter-spacing: 0.25rem;
+		}
 
-        .paragraph {
-            font-size: 1.2rem;
-        }
-    }
+		.paragraph {
+			font-size: 1.2rem;
+		}
+	}
 
-    .arrow {
-        margin-left: auto;
-        border: 2px solid var(--color-dark);
-        border-radius: 50%;
-        min-height: 50px;
-        min-width: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        opacity: 0.75;
+	.arrow {
+		margin-left: auto;
+		border: 2px solid var(--color-dark);
+		border-radius: 50%;
+		min-height: 50px;
+		min-width: 50px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		opacity: 0.75;
 
-        svg {
-            height: 32px;
-            width: 32px;
-        }
-    }
+		svg {
+			height: 32px;
+			width: 32px;
+		}
+	}
 
-    &:hover {
-        background-color: rgba(255, 255, 255, 0.85);
+	&:hover {
+		background-color: rgba(255, 255, 255, 0.85);
 
-        .arrow {
-            opacity: 1;
-        }
-    }
+		.arrow {
+			opacity: 1;
+		}
+	}
 
-    @media only screen and (max-width: $breakpoint-medium) {
-        .details {
-            .title {
-                letter-spacing: 0.15rem;
-            }
+	@media only screen and (max-width: $breakpoint-medium) {
+		.details {
+			.title {
+				letter-spacing: 0.15rem;
+			}
 
-            .paragraph {
-                font-size: 1rem;
-            }
-        }
-    }
+			.paragraph {
+				font-size: 1rem;
+			}
+		}
+	}
 
-    @media only screen and (max-width: calc(580 / 16 * 1rem)) {
-        gap: 1rem;
-        display: grid;
+	@media only screen and (max-width: calc(580 / 16 * 1rem)) {
+		gap: 1rem;
+		display: grid;
 
-        .image {
-            justify-self: center;
-        }
+		.image {
+			justify-self: center;
+		}
 
-        .details {
-            .title {
-                letter-spacing: 0.10rem;
-            }
-        }
+		.details {
+			.title {
+				letter-spacing: 0.1rem;
+			}
+		}
 
-        .arrow {
-            display: none;
-        }
+		.arrow {
+			display: none;
+		}
 
-        .helpText {
-            display: block;
-            justify-self: end;
-            color: var(--color-dark);
-            text-decoration: underline;
-            text-underline-offset: 3px;
-            text-decoration-thickness: 2px;
-            margin-top: 1rem;
+		.helpText {
+			display: block;
+			justify-self: end;
+			color: var(--color-dark);
+			text-decoration: underline;
+			text-underline-offset: 3px;
+			text-decoration-thickness: 2px;
+			margin-top: 1rem;
 
-            &:hover {
-                text-decoration: none;
-            }
-        }
-    }
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
 }
