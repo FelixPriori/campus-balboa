@@ -1,4 +1,4 @@
-import { unstable_setRequestLocale } from 'next-intl/server'
+import { setRequestLocale } from 'next-intl/server'
 import BigOG from '@/app/launch-party-banner.png'
 import { About, Footer, Hero, Prices, Schedule } from './sections'
 import Navigation from './components/Navigation'
@@ -9,7 +9,7 @@ type Props = {
 }
 
 export async function generateMetadata({ params }: Props) {
-	unstable_setRequestLocale(params.locale)
+	setRequestLocale(params.locale)
 	const siteUrl = 'https://www.campusbalboa.org'
 
 	if (params.locale === 'fr') {

@@ -1,11 +1,17 @@
-"use client"
-import { ReactNode } from 'react';
-import { useRouter } from '../../../../navigation';
-import styles from './styles.module.scss';
+'use client'
+import { ReactNode } from 'react'
+import styles from './styles.module.scss'
+import { useRouter } from '@/i18n/routing'
 
 export default function BackButton({ children }: { children: ReactNode }) {
-    const router = useRouter();
-    return (
-        <button className={styles.backButton} type="button" onClick={() => router.back()}>{children}</button>
-    )
+	const router = useRouter()
+	return (
+		<button
+			className={styles.backButton}
+			type="button"
+			onClick={() => router.back()}
+		>
+			{children}
+		</button>
+	)
 }

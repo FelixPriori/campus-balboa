@@ -1,5 +1,7 @@
-import { redirect } from 'next/navigation'
+import { redirect } from '@/i18n/routing'
+import { getLocale } from 'next-intl/server'
 
-export default function EventsPage() {
-	redirect(`2024/campus-launch`)
+export default async function EventsPage() {
+	const locale = await getLocale()
+	redirect({ href: '/', locale })
 }

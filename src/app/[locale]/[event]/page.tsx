@@ -1,12 +1,7 @@
-'use client'
-import { redirect } from 'next/navigation'
-import { useLocale } from 'next-intl'
+import { redirect } from '@/i18n/routing'
+import { getLocale } from 'next-intl/server'
 
-export default function EventsPage() {
-	const locale = useLocale()
-	if (locale === 'fr') {
-		redirect(`evenements/2024/campus-launch`)
-	} else {
-		redirect(`events/2024/campus-launch`)
-	}
+export default async function EventsPage() {
+	const locale = await getLocale()
+	redirect({ href: '/', locale })
 }
