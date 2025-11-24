@@ -1,7 +1,10 @@
-import { redirect } from '@/i18n/routing'
-import { getLocale } from 'next-intl/server'
+import { Locales } from '@/i18n'
+import { redirect } from 'next/navigation'
 
-export default async function EventsPage() {
-	const locale = await getLocale()
-	redirect({ href: '/', locale })
+type Props = {
+	params: Promise<{ locale: Locales }>
+}
+export default async function EventsPage({ params }: Props) {
+	const locale = (await params).locale as Locales
+	redirect(`/${locale}`)
 }

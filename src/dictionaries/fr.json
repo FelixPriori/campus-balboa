@@ -1,0 +1,491 @@
+{
+	"NotFoundPage": {
+		"title": "Page non trouvée.",
+		"return": "Retour à la page précédente",
+		"home": "Vers la page d'accueil",
+		"footer": {
+			"contact": "Contactez-nous : ",
+			"contactLink": {
+				"href": "mailto:info@campusbalboa.org",
+				"text": "info@campusbalboa.org"
+			},
+			"copyright": "© Campus Balboa, 2024",
+			"socialMedia": {
+				"facebook": {
+					"id": "fb",
+					"href": "https://www.facebook.com/campusbalboa",
+					"accessibilityDescription": "Ouvre une nouvelle fenêtre vers la page Facebook de Campus Balboa",
+					"logo": {
+						"url": "/facebook-white.png",
+						"title": "Logo de Facebook"
+					}
+				},
+				"instagram": {
+					"id": "in",
+					"accessibilityDescription": "Ouvre une nouvelle fenêtre vers la page Instagram de Campus Balboa",
+					"href": "https://www.instagram.com/campusbalboa/",
+					"logo": {
+						"url": "/instagram-white.png",
+						"title": "Logo d'Instagram"
+					}
+				}
+			}
+		}
+	},
+	"Event": {
+		"title": "Événement de balboa",
+		"back": "Retour",
+		"changeLang": "EN",
+		"registerCta": "S'enregistrer"
+	},
+	"LandAcknowledgement": {
+		"title": "Reconnaissance du territoire",
+		"text": "{name} tient à reconnaître que le territoire sur lequel nous tenons nos activités, Tiohtià:ke/Montréal, se se situe sur les terres autochtones non cédées des Kanien’kehá:ka/Mohawks et sert de lieu de rencontre et d’échange entre les Premières Nations depuis des temps immémoriaux."
+	},
+	"Events": {
+		"2024": {
+			"Olga": {
+				"header": {
+					"date": "26-27-28 avril 2024",
+					"title": "Programme ExtraCurriculaire avec Olga",
+					"comingSoon": "Un weekend d'ateliers avec Olga à Montréal/Tiohtià:ke.",
+					"cta": {
+						"text": "S'inscrire",
+						"href": "https://extracurriculaire-olga.dancecamps.org/booking.php",
+						"ariaLabel": "Ouvre dans une nouvelle fenêtre"
+					}
+				},
+				"pricesSection": {
+					"sectionTitle": "Inscriptions",
+					"cta": {
+						"text": "S'inscrire",
+						"href": "https://extracurriculaire-olga.dancecamps.org/booking.php",
+						"ariaLabel": "Ouvre dans une nouvelle fenêtre"
+					},
+					"prices": {
+						"title": "Tarifs",
+						"subtitle": "Prix pour tout l'atelier",
+						"tier1": {
+							"date": "4 mars au 31 mars",
+							"price": "130,00$"
+						},
+						"tier2": {
+							"date": "1er avril au 21 avril",
+							"price": "140,00$"
+						},
+						"door": {
+							"date": "À la porte",
+							"price": "150,00$"
+						}
+					},
+					"atTheDoor": {
+						"title": "Prix à la porte",
+						"subtitle": "Argent comptant et virements bancaires seulement.",
+						"full": {
+							"title": "Tout l'atelier (6h)",
+							"price": "150,00$"
+						},
+						"day": {
+							"title": "Par jour (3h)",
+							"price": "85,00$"
+						},
+						"class": {
+							"title": "Par cours (1,5h)",
+							"price": "45,00$"
+						},
+						"extra": {
+							"title": "Extra (vendredi, 1h, danse en sus)",
+							"price": "25,00$"
+						}
+					},
+					"includes": {
+						"title": "Inclus",
+						"subtitle": "Avec l'achat de tout l'atelier",
+						"workshops": "6 heures d’ateliers",
+						"dance": "Danse rapide du vendredi au Cat's Corner"
+					}
+				},
+				"aboutSection": {
+					"sectionTitle": "À propos",
+					"instructors": {
+						"subsectionTitle": "Enseignant.es",
+						"olga": {
+							"name": "Olga",
+							"avatarAlt": "Avatr de Olga",
+							"link": "https://isolobalboa.com/",
+							"bio": [
+								"Olga nous vient directement de suède, elle est née d’une famille d’enseignants et depuis toute petite, Olga est une boule d’énergie. Dès son enfance, elle a étudié la musique, la gymnastique, l’athlétisme et les arts martiaux. C’est en 2007 qu'elle découvre le Lindy Hop, activité pour laquelle elle a eu un coup de foudre instantané. Le goût de la découverte l’amène à explorer plusieurs styles de danse différents comme le Blues et plus tard le Balboa. Depuis, elle voyage partout à travers le monde pour saisir toujours plus d’opportunités de danser, d’apprendre et de compétitionner. C’est tout naturellement qu’elle partage aujourd’hui son amour pour la musique swing et la danse en enseignant internationalement le Balboa en solo et en partenariat.",
+								"Dans ses cours, Olga adore challenger ses étudiant.es en leur donnant des défis qui travaillent tant la technique que la musicalité dans le but de transmettre son amour pour le Balboa. Elle développe également son outil de pratique {{iSoloBalboa}} : une plateforme numérique d’enseignement du Balboa en solo qui s’adresse aux leaders et followers et qui vise à améliorer la technique et développer sa créativité et sa propre voix."
+							]
+						},
+						"felix": {
+							"name": "Felix",
+							"avatarAlt": "Avatr de Félix",
+							"bio": [
+								"C’est avec grand plaisir qu’on accueille Félix pour supporter Olga dans les cours en partenariat !",
+								"Félix danse le balboa depuis dix ans. C’est l’énergie rotationnelle de cette danse qui a piqué son intérêt en premier lieu, mais il est particulièrement tombé en amour avec celle-ci lorsqu’il a réalisé les possibilités infinies qu’elle peut apporter. Ses ingrédients magiques sont sa relation avec ses partenaires et la musique, lui permettant ainsi de créer des danses où tout est fluide."
+							]
+						}
+					},
+					"whatToExpect": {
+						"subsectionTitle": "À quoi s'attendre?",
+						"description": [
+							"Le Campus Balboa vous présente un weekend d’ateliers avec Olga au Canada pour la toute première fois.",
+							"Nous offrons 6 heures d’ateliers avec Olga qui seront divisées en 4 blocs de 1h30 comprenant 30 min de concepts de balboa en solo, suivi de 1h d’intégration en danse en couple.",
+							"Olga est réputée internationalement pour sa plateforme de pratique de balboa solo qui permet à des danseur.euses de partout dans le monde de travailler des concepts clés à la maison de façon indépendante.",
+							"En avril, nous aurons la chance immanquable de voir ces concepts être appliqués immédiatement en danse avec partenaire."
+						]
+					},
+					"friday": {
+						"subsectionTitle": "Cours EXTRA du vendredi",
+						"link": "https://www.catscorner.ca/",
+						"description": "Le vendredi du Programme ExtraCurriculaire avec Olga, nous sommes fiers de collaborer avec le {{catscorner}} qui nous accueille pour un cours extra avec Olga avant le Downtown Stomp. Ceux.celles qui en veulent plus ou qui ne peuvent pas faire tout le weekend auront l’opportunité de prendre un cours de niveau intermédiaire avec Olga à 19h30 le 26 avril. Le cours extra est disponible en prévente avec rabais à l’achat d’un laissez-passer pour le weekend et au prix régulier sans inscription le jour même."
+					},
+					"level": {
+						"subsectionTitle": "Niveau requis",
+						"content": {
+							"details": "Ceci est un atelier de balboa pour tous niveaux qui nécessite tout de même de connaître les bases de la danse. Les débutants sont les bienvenus aux danses sociales, mais il faut avoir pris quelques mois de cours réguliers avant de s’inscrire aux ateliers. Nous voulons ainsi éviter que vous vous sentiez dépassé durant les ateliers et permettre aux autres participants de se concentrer sur ce qui est enseigné. Si l’un ou plusieurs de ces mots clés vous sont inconnus, s’il vous plaît considérez vous inscrire à des cours de balboa dans votre scène locale !",
+							"list": "Bal swing,Pure bal,Lollys,Paddle turns,Toss-out,Come around,Swivel,Up-hold,Down-hold,Out and in"
+						}
+					},
+					"classSchedule": {
+						"title": "Horaire des cours",
+						"1": {
+							"day": "Vendredi",
+							"type": "Extra",
+							"where": "Cat's Corner",
+							"start": "19h30",
+							"title": "« Tourner ses hanches »",
+							"description": "Ce cours portera sur les swivels, sur le changement de son rythme habituel et comment développer nos talents de rotations de hanche."
+						},
+						"2": {
+							"day": "Samedi",
+							"type": "Pur Balboa",
+							"where": "La Cenne",
+							"start": "10h30",
+							"title": " « Les danseurs originaux : le remix »",
+							"description": "Nous explorerons les pas classiques de pur balboa et comment les modifier. Ensuite, nous implémenterons le tout en couple afin de créer un dialogue entre partenaires."
+						},
+						"3": {
+							"day": "Samedi",
+							"type": "Bal Swing",
+							"where": "La Cenne",
+							"start": "13h00",
+							"title": " « Out-n-ins et syncopes »",
+							"description": "Nous apprendrons comment syncoper chaque temps pour ensuite l’appliquer à notre pas de base de bal swing : le out-n-in. Nous explorerons ainsi la limite entre les variations guidées et individuelles."
+						},
+						"4": {
+							"day": "Dimanche",
+							"type": "Pur Balboa",
+							"where": "La Cenne",
+							"start": "10h30",
+							"title": " « Shuffle un peu, shuffle beaucoup, shuffle à la folie ! »",
+							"description": "Ce cours vise à décortiquer toutes sortes de shuffles, sur tous les comptes, pieds et directions pour bien s’outiller en musicalité."
+						},
+						"5": {
+							"day": "Dimanche",
+							"type": "Bal Swing",
+							"where": "La Cenne",
+							"start": "13h00",
+							"title": " « Le pouvoir du lock »",
+							"description": "Le dernier cours du weekend portera sur le croisement des pieds et les différents types de lock-steps qu’on à notre disposition lors de nos mouvements de bal swing. Ensuite, nous explorerons comment utiliser cette énergie de torsion pour créer des moments musicaux."
+						}
+					},
+					"locations": {
+						"title": "Lieux",
+						"cats": {
+							"title": "Cat's Corner",
+							"address": "1956 Rue Frontenac, Montréal, QC H2K 2Z1",
+							"what": "Cours extra, danse sociale du vendredi"
+						},
+						"cenne": {
+							"title": "La Cenne",
+							"address": "7755, boul. Saint-Laurent, suite 300, Montréal, QC H2R 1X1",
+							"what": "Ateliers"
+						},
+						"ernest": {
+							"title": "Chez Ernest",
+							"address": "6596 Rue St-Hubert, Montréal, QC H2S 2M3",
+							"what": "Danse sociale du samedi"
+						}
+					},
+					"partners": {
+						"title": "Partenaires",
+						"cats": {
+							"title": "Cat's Corner",
+							"link": "https://www.catscorner.ca/",
+							"img": {
+								"url": "/cats-corner.png",
+								"alt": "Cat's Corner Logo"
+							}
+						},
+						"aperos": {
+							"title": "Les Apéros Balboa de Montréal",
+							"link": "https://www.facebook.com/AperosBalboaMontreal",
+							"img": {
+								"url": "/aperos-balboa.jpg",
+								"alt": "Apéros Balboa Logo"
+							}
+						}
+					},
+					"cta": {
+						"text": "S'inscrire",
+						"href": "https://extracurriculaire-olga.dancecamps.org/booking.php",
+						"ariaLabel": "Ouvre dans une nouvelle fenêtre"
+					}
+				},
+				"scheduleSection": {
+					"sectionTitle": "Horaire",
+					"link": "Voir l'horaire",
+					"ariaLabel": "Ouvre dans une nouvelle fenêtre"
+				},
+				"closed": "L'atelier est terminé, merci à tous.tes !",
+				"copyright": "© Campus Balboa, 2024"
+			},
+			"Launch": {
+				"header": {
+					"date": "17 août 2024",
+					"title": "Lancement de Campus Balboa",
+					"comingSoon": "Une journée d'ateliers avec des instructeurs annoncés sous peu à Montréal/Tiohtià:ke.",
+					"cta": {
+						"text": "Page d'inscription",
+						"href": "https://campus-launch.dancecamps.org/booking.php",
+						"ariaLabel": "Ouvre dans une nouvelle fenêtre"
+					}
+				},
+				"pricesSection": {
+					"sectionTitle": "Inscriptions",
+					"cta": {
+						"text": "Page d'inscription",
+						"href": "https://campus-launch.dancecamps.org/booking.php",
+						"ariaLabel": "Ouvre dans une nouvelle fenêtre"
+					},
+					"prices": {
+						"title": "Tarifs en ligne",
+						"subtitle": "Pour la journée complète ou seulement la danse. Les inscriptions en ligne terminent le 12 août.",
+						"tier1": {
+							"date": "10 premiers billets",
+							"price": "80,00$"
+						},
+						"tier2": {
+							"date": "Prix régulier",
+							"price": "90,00$"
+						},
+						"dance": {
+							"date": "Danse seulement",
+							"price": "10,00$"
+						}
+					},
+					"atTheDoor": {
+						"title": "Tarifs à la porte",
+						"subtitle": "Argent comptant et paiement par carte disponible à la porte.",
+						"full": {
+							"title": "Journée complète",
+							"price": "100,00$"
+						},
+						"class": {
+							"title": "Par cours (1,5h)",
+							"price": "55,00$"
+						},
+						"dance": {
+							"title": "Danse seulement",
+							"price": "15,00$"
+						}
+					},
+					"includes": {
+						"subtitle": "Avec la journée complète",
+						"title": "Inclus",
+						"workshops": "3 heures d'ateliers",
+						"dance": "La danse en soirée avec bar et DJs internationaux."
+					}
+				},
+				"aboutSection": {
+					"sectionTitle": "À propos",
+					"instructors": {
+						"subsectionTitle": "Enseignant.es",
+						"annabel": {
+							"name": "Annabel Quisao",
+							"avatarAlt": "Photo d'Annabel",
+							"link": "https://www.kennedy-center.org/artists/q/qo-qz/annabel-quisao/",
+							"bio": "Annabel est reconnue pour son sourire indélébile et ses éclats de rire sur le plancher de danse. Une étudiante en musique depuis toujours, elle a eu la piqûre du Lindy Hop en 2003 lors de ses études au Colgate University. Accro à la communication et la spontanéité de la danse sociale, elle continue son exploration des danses swing en même temps que sa Maîtrise en Histoire de la musique et en Théorie à Penn State. C’est là où elle découvre en parallèle la danse Blues, le Collegiate Shag, et le Balboa pour lequel elle développe une passion particulière. Depuis une décennie, elle voyage partout dans le monde pour enseigner et compétitionner et a d’ailleurs remporté les prix les plus prestigieux d’événements reconnus à l'international comme le International Lindy Hop Championship, All Balboa Weekend, California Balboa Classic et Camp Hollywood. Dans les cours, Annabel vise à établir un environnement de cours inspirant, ludique et qui respecte l’histoire et l’héritage des danses swing tout en encourageant ses étudiant.e.s à explorer leur potentiel et leur individualité. En ce moment, elle habite à Washington, DC et est l’une des fondateur.ice.s de New Columbia Swing, l’organisation principale de danse swing à D.C., où elle occupe le poste de directrice de l’éducation."
+						},
+						"dan": {
+							"name": "Dan Repsch",
+							"avatarAlt": "Photo de Dan",
+							"link": "https://danrepsch.weebly.com/",
+							"bio": "Dan est immergé dans la musique et le mouvement. En tant qu’enseignant, son approche enthousiaste met l’emphase sur l’innovation, la connexion et l’attention à son partenaire. En tant qu’instructeur et DJ vétérant, il a travaillé au quatres coins du monde tant bien que pour des événements internationaux que pour des danses locales. Il a occupé le rôle de DJ en chef à des événements tels  que BluesSHOUT! et au Balboa/Blues Experiment. Dan est toujours au rendez-vous lorsqu’on a besoin de lui pour améliorer la danse et pour aider les gens à sortir de leur coquille."
+						}
+					},
+					"DJs": {
+						"subsectionTitle": "DJs",
+						"michael": {
+							"name": "Michael Quisao",
+							"avatarAlt": "Photo de Michael",
+							"link": "https://www.kennedy-center.org/artists/q/qo-qz/michael-quisao/",
+							"bio": "Michael est tombé amoureux de la musique swing lorsqu’il était à l’école secondaire. La station de radio jazz préférée de sa mère faisait jouer des enregistrements de hot jazz et de l’ère du swing tard la fin de semaine. Il a ensuite commencé à danser en 2006 et depuis, son amour du swing et de la danse sociale l’ont amené à DJer et à danser partout dans le monde. Michael estime qu’il n’y a rien de mieux que d’être DJ pour inspirer les gens sur le plancher de danse à l’aide de chansons qui nous font bouger. Michael est le DJ en chef et directeur de la musique au New Columbia Swing à Washington DC et DJ en chef à Lindy Focus en 2024."
+						},
+						"dan": {
+							"name": "Dan Repsch",
+							"avatarAlt": "Photo de Dan",
+							"link": "https://danrepsch.weebly.com/",
+							"bio": "Dan est immergé dans la musique et le mouvement. En tant qu’enseignant, son approche enthousiaste met l’emphase sur l’innovation, la connexion et l’attention à son partenaire. En tant qu’instructeur et DJ vétérant, il a travaillé au quatres coins du monde tant bien que pour des événements internationaux que pour des danses locales. Il a occupé le rôle de DJ en chef à des événements tels  que BluesSHOUT! et au Balboa/Blues Experiment. Dan est toujours au rendez-vous lorsqu’on a besoin de lui pour améliorer la danse et pour aider les gens à sortir de leur coquille."
+						}
+					},
+					"whatToExpect": {
+						"subsectionTitle": "À quoi s'attendre?",
+						"description": "À l'aide d'ateliers, Campus Balboa vise à inviter des experts du Balboa à la scène locale de Tiohtià:ke/Montréal. Par conséquent, vous pouvez vous attendre à 3h d'ateliers avec des instructeurs internationnaux. De plus, puisque c'est un événement de lancement, il y aura aussi du temps pour socialiser ainsi que de danser sur de la musique de DJ à ne pas manquer"
+					},
+					"level": {
+						"subsectionTitle": "Niveau requis",
+						"content": {
+							"details": "Ceci est un atelier de balboa pour tous niveaux qui nécessite tout de même de connaître les bases de la danse. Les débutants sont les bienvenus aux danses sociales, mais il faut avoir pris quelques mois de cours réguliers avant de s’inscrire aux ateliers. Nous voulons ainsi éviter que vous vous sentiez dépassé durant les ateliers et permettre aux autres participants de se concentrer sur ce qui est enseigné. Si l’un ou plusieurs de ces mots clés vous sont inconnus, s’il vous plaît considérez vous inscrire à des cours de balboa dans votre scène locale !",
+							"list": "Bal swing,Pure bal,Lollys,Paddle turns,Toss-out,Come around,Swivel,Up-hold,Down-hold,Out and in"
+						}
+					},
+					"classSchedule": {
+						"title": "Horaire de l'événement",
+						"0": {
+							"day": "Vendredi",
+							"color": "fri",
+							"type": "Danse",
+							"where": "Cat's Corner, 1er étage",
+							"start": "20h30",
+							"title": "Band live au Downtown Stomp",
+							"description": "PAS INCLUS DANS LE PRIX: Prévoyez 25,00$ pour danser au Cat's Corner avec le band d'Emily Estrella. Michael Quisao sera votre DJ entre les sets."
+						},
+						"1": {
+							"type": "Cours",
+							"color": "sat",
+							"day": "Samedi",
+							"where": "Cat's Corner, 2e étage",
+							"start": "14h00",
+							"title": "1er cours",
+							"description": "Partie 1 : jouer avec le mouvement et le momentum."
+						},
+						"2": {
+							"type": "Pause",
+							"color": "sat",
+							"day": "Samedi",
+							"where": "Cat's Corner, 2e étage",
+							"start": "15h30",
+							"title": "Break",
+							"description": "15 minutes break"
+						},
+						"3": {
+							"type": "Cours",
+							"color": "sat",
+							"day": "Samedi",
+							"where": "Cat's Corner, 2e étage",
+							"start": "15h45",
+							"title": "2e Cours",
+							"description": "Partie 2 : jouer avec le rythme et la musicalité."
+						},
+						"4": {
+							"type": "Souper",
+							"color": "sat",
+							"day": "Samedi",
+							"where": "N'importe où",
+							"start": "17h15",
+							"title": "L'heure du souper",
+							"description": "Profitez de ce moment pour vous reposer !"
+						},
+						"5": {
+							"type": "Social",
+							"color": "sat",
+							"day": "Samedi",
+							"where": "Cat's Corner, 2e étage",
+							"start": "20h00",
+							"title": "Heure sociale",
+							"description": "Avant la danse, venez prendre un verre et jaser avec les autres participant.e.s"
+						},
+						"6": {
+							"type": "Danse",
+							"color": "sat",
+							"day": "Samedi",
+							"where": "Cat's Corner, 2e étage",
+							"start": "21h00",
+							"title": "Lancement",
+							"description": "Venez danser au son de DJs internationaux et prendre un verre au bar ! Le bar sera ouvert jusqu'à 23h30"
+						},
+						"7": {
+							"type": "Sommet de DJ",
+							"color": "sun",
+							"day": "Dimanche",
+							"where": "Kawalees",
+							"start": "13h00",
+							"title": "Sommet de DJ de balboa avec Michael Quisao",
+							"description": "GRATUIT : avant le Thé Dansant, venez grignoter en discutant de DJer pour le Balboa avec Michael Quisao."
+						},
+						"8": {
+							"type": "Danse",
+							"color": "sun",
+							"day": "Dimanche",
+							"where": "Kawalees",
+							"start": "15h00",
+							"title": "Thé Dansant Balboa",
+							"description": "Venez danser le balboa, socialiser et boire un verre. Danse gratuite avec don suggérée et consommation de nourriture ou de boisson encouragée."
+						}
+					},
+					"locations": {
+						"title": "Lieux",
+						"cats": {
+							"title": "Cat's Corner",
+							"address": "1956 Frontenac Street, Montréal, Quebec H2K 2Z1",
+							"what": "Ateliers, danse"
+						},
+						"kawalees": {
+							"title": "Kawalees",
+							"address": "5175A Park Ave, Montreal, Quebec H2V 4G3",
+							"what": "Sommet de DJ, Danse"
+						}
+					},
+					"partners": {
+						"title": "Partenaires",
+						"cats": {
+							"title": "Cat's Corner",
+							"link": "https://www.catscorner.ca/en/",
+							"img": {
+								"url": "/cats-corner.png",
+								"alt": "Cat's Corner Logo"
+							}
+						},
+						"the": {
+							"title": "Thé Dansant Balboa",
+							"link": "https://www.facebook.com/groups/388149256494699",
+							"img": {
+								"url": "/tea-party.jpg",
+								"alt": "Bannière Thé Dansant Balboa"
+							}
+						}
+					},
+					"cta": {
+						"text": "Page d'inscription",
+						"href": "https://campus-launch.dancecamps.org/booking.php",
+						"ariaLabel": "Ouvre dans une nouvelle fenêtre"
+					}
+				},
+				"scheduleSection": {
+					"sectionTitle": "Horaire",
+					"link": "Voir l'horaire",
+					"ariaLabel": "Ouvre dans une nouvelle fenêtre"
+				},
+				"closed": "L'atelier est terminé, merci à tous.tes !",
+				"copyright": "©2024 Campus Balboa"
+			}
+		}
+	},
+	"Components": {
+		"paypal": {
+			"donate": "Faire un don",
+			"logoAlt": "Logo de PayPal"
+		},
+		"embla": {
+			"changeSlide": "Voir la diapositive {{slideNum}}",
+			"nextSlide": "Diapositive suivante",
+			"prevSlide": "Diapositive précédente"
+		},
+		"gcal": {
+			"iframeTitle": "Calendrier Google du Balboa à Montréal / Tiohtià:ke"
+		}
+	}
+}

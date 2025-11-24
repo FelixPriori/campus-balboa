@@ -1,16 +1,9 @@
-import { NextIntlClientProvider } from 'next-intl'
 import { Rubik, Lemon } from 'next/font/google'
-import { notFound } from 'next/navigation'
 import { ToastContainer } from 'react-toastify'
-import { setRequestLocale } from 'next-intl/server'
+import { Locales } from '@/i18n'
 import 'react-toastify/dist/ReactToastify.css'
 import './globals.css'
-
-const locales = ['en', 'fr']
-
-export function generateStaticParams() {
-	return locales.map(locale => ({ locale }))
-}
+import { ReactNode } from 'react'
 
 const rubik = Rubik({
 	subsets: ['latin'],
@@ -30,35 +23,18 @@ const lemon = Lemon({
 
 export default async function LocaleLayout({
 	children,
-	params: { locale },
-}: {
-	children: React.ReactElement
-	params: { locale: string }
-}) {
-	setRequestLocale(locale)
-
-	let messages
-	try {
-		messages = (await import(`../../../messages/${locale}.json`)).default
-	} catch (error) {
-		notFound()
-	}
+	params,
+}: LayoutProps<'/[locale]'>) {
+	const lang = (await params).locale as Locales
 
 	return (
-		<html lang={locale}>
+		<html lang={lang}>
 			<body
 				suppressHydrationWarning
 				className={`${lemon.variable} ${rubik.variable}`}
 			>
 				<ToastContainer />
-				<NextIntlClientProvider
-					timeZone="America/Toronto"
-					locale={locale}
-					messages={messages}
-					now={new Date()}
-				>
-					{children}
-				</NextIntlClientProvider>
+				{children}
 			</body>
 		</html>
 	)

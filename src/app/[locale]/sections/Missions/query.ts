@@ -1,4 +1,4 @@
-import { ID, RICH_TEXT } from "@/lib/queries";
+import { ID, RICH_TEXT } from '@/app/_lib/queries'
 
 export const MISSION = `
     ...on Mission {

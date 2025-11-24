@@ -1,38 +1,53 @@
-"use client"
+'use client'
 import styles from './styles.module.scss'
-import { useLocale } from 'next-intl'
 import { useEffect, useState } from 'react'
-import { getCollectionBySectionId } from '@/lib/api'
+import { getCollectionBySectionId } from '@/app/_lib/api'
 import { PageSectionProps } from '..'
 import { FEATURED_SLIDE } from './query'
 import { InfinitySpin } from 'react-loader-spinner'
 import EmblaContainer from '../../components/EmblaContainer'
 import FeaturedSlides from '../../components/FeaturedSlides'
+import { DictionaryType } from '@/app/dictionaries'
 
-export default function Featured({id, title, anchor}: PageSectionProps) {
-    const locale = useLocale()
-    const [featuredContent, setFeaturedContent] = useState([])
+interface FeaturedProps extends PageSectionProps {
+	embla: DictionaryType['Components']['embla']
+}
 
-    useEffect(() => {
-        const getFeaturedCollection = async () => {
-            const featuredCollection = await getCollectionBySectionId(id, locale, FEATURED_SLIDE);
-            setFeaturedContent(featuredCollection)
-        }
+export default function Featured({
+	id,
+	title,
+	anchor,
+	locale,
+	embla,
+}: FeaturedProps) {
+	const [featuredContent, setFeaturedContent] = useState([])
 
-        getFeaturedCollection()
-    }, [id, locale])
+	useEffect(() => {
+		const getFeaturedCollection = async () => {
+			const featuredCollection = await getCollectionBySectionId(
+				id,
+				locale,
+				FEATURED_SLIDE,
+			)
+			setFeaturedContent(featuredCollection)
+		}
 
-    return (
-        <section id={anchor} className={styles.featuredSection}>
-            <div className={styles.content}>
-                <h2 className={styles.featuredTitle}>{title}</h2>
+		getFeaturedCollection()
+	}, [id, locale])
 
-                {featuredContent.length 
-                ?   <EmblaContainer slidesNumber={featuredContent.length}>
-                        <FeaturedSlides featuredContent={featuredContent} />
-                    </EmblaContainer> 
-                :   <InfinitySpin width="200" color="var(--color-primary)" />}
-            </div>
-        </section>
-    )
+	return (
+		<section id={anchor} className={styles.featuredSection}>
+			<div className={styles.content}>
+				<h2 className={styles.featuredTitle}>{title}</h2>
+
+				{featuredContent.length ? (
+					<EmblaContainer embla={embla} slidesNumber={featuredContent.length}>
+						<FeaturedSlides featuredContent={featuredContent} />
+					</EmblaContainer>
+				) : (
+					<InfinitySpin width="200" color="var(--color-primary)" />
+				)}
+			</div>
+		</section>
+	)
 }

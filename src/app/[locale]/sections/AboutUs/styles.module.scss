@@ -1,4 +1,4 @@
-@import '@/layout/breakpoints.scss';
+@use '@/app/_layout/breakpoints.scss' as breakpoint;
 
 .aboutUsSection {
 	background-image: url('/wave-top.png');

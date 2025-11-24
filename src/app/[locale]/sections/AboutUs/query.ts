@@ -1,4 +1,4 @@
-import { ID, IMAGE, RICH_TEXT } from "@/lib/queries";
+import { ID, IMAGE, RICH_TEXT } from '@/app/_lib/queries'
 
 export const ADMINISTRATOR = `
     ...on Administrator {

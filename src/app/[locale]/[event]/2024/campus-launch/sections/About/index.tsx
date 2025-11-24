@@ -1,8 +1,7 @@
-// 'use client'
-import { useTranslations } from 'next-intl'
 import styles from './styles.module.scss'
 import CtaButton from '../../components/CtaButton'
 import Image from 'next/image'
+import { DictionaryType } from '@/app/dictionaries'
 
 type ClassBlock = {
 	title: string
@@ -81,23 +80,24 @@ const PartnersBlock = ({ title, img, link }: PartnerBlock) => {
 	)
 }
 
-const classes = ['0', '1', '2', '3', '4', '5', '6', '7', '8']
+const classes = ['0', '1', '2', '3', '4', '5', '6', '7', '8'] as const
 
-const locations = ['cats', 'kawalees']
+const locations = ['cats', 'kawalees'] as const
 
-const partners = ['cats', 'the']
+const partners = ['cats', 'the'] as const
 
-export default function About() {
-	const t = useTranslations('Events.2024.Launch.aboutSection')
-	// const tclosed = useTranslations('Events.2024.Olga')
-
+export default function About({
+	aboutSection,
+}: {
+	aboutSection: DictionaryType['Events']['2024']['Launch']['aboutSection']
+}) {
 	return (
 		<section className={styles.aboutSection}>
 			<div className={styles.content}>
-				<h2>{t('sectionTitle')}</h2>
+				<h2>{aboutSection.sectionTitle}</h2>
 				<div className={styles.card}>
 					<div className={styles.cardSection}>
-						<h3>{t('instructors.subsectionTitle')}</h3>
+						<h3>{aboutSection.instructors.subsectionTitle}</h3>
 						<div className={styles.instructors}>
 							<div className={styles.instructor}>
 								<div className={styles.avatar}>
@@ -106,15 +106,15 @@ export default function About() {
 											src="/annabel-avatar.png"
 											width={100}
 											height={100}
-											alt={t('instructors.annabel.avatarAlt')}
+											alt={aboutSection.instructors.annabel.avatarAlt}
 										/>
 
 										<figcaption>Credit: Noah Nethero</figcaption>
 									</figure>
 								</div>
 								<div className={styles.details}>
-									<h4>{t('instructors.annabel.name')}</h4>
-									<p>{t('instructors.annabel.bio')}</p>
+									<h4>{aboutSection.instructors.annabel.name}</h4>
+									<p>{aboutSection.instructors.annabel.bio}</p>
 								</div>
 							</div>
 							<div className={styles.instructor}>
@@ -124,20 +124,20 @@ export default function About() {
 											src="/dan-avatar.png"
 											width={100}
 											height={100}
-											alt={t('DJs.dan.avatarAlt')}
+											alt={aboutSection.DJs.dan.avatarAlt}
 										/>
 										<figcaption>Credit: Braden Nesin</figcaption>
 									</figure>
 								</div>
 								<div className={styles.details}>
-									<h4>{t('instructors.dan.name')}</h4>
-									<p>{t('instructors.dan.bio')}</p>
+									<h4>{aboutSection.instructors.dan.name}</h4>
+									<p>{aboutSection.instructors.dan.bio}</p>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div className={styles.cardSection}>
-						<h3>{t('DJs.subsectionTitle')}</h3>
+						<h3>{aboutSection.DJs.subsectionTitle}</h3>
 						<div className={styles.instructors}>
 							<div className={styles.instructor}>
 								<div className={styles.avatar}>
@@ -145,12 +145,12 @@ export default function About() {
 										src="/michael-avatar.png"
 										width={100}
 										height={100}
-										alt={t('DJs.michael.avatarAlt')}
+										alt={aboutSection.DJs.michael.avatarAlt}
 									/>
 								</div>
 								<div className={styles.details}>
-									<h4>{t('DJs.michael.name')}</h4>
-									<p>{t('DJs.michael.bio')}</p>
+									<h4>{aboutSection.DJs.michael.name}</h4>
+									<p>{aboutSection.DJs.michael.bio}</p>
 								</div>
 							</div>
 							<div className={styles.instructor}>
@@ -160,90 +160,88 @@ export default function About() {
 											src="/dan-avatar.png"
 											width={100}
 											height={100}
-											alt={t('DJs.dan.avatarAlt')}
+											alt={aboutSection.DJs.dan.avatarAlt}
 										/>
 										<figcaption>Credit: Braden Nesin</figcaption>
 									</figure>
 								</div>
 								<div className={styles.details}>
-									<h4>{t('DJs.dan.name')}</h4>
-									<p>{t('DJs.dan.bio')}</p>
+									<h4>{aboutSection.DJs.dan.name}</h4>
+									<p>{aboutSection.DJs.dan.bio}</p>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div className={`${styles.cardSection} ${styles.grid}`}>
 						<div className={styles.gridItem}>
-							<h3>{t('whatToExpect.subsectionTitle')}</h3>
+							<h3>{aboutSection.whatToExpect.subsectionTitle}</h3>
 							<div className={styles.gridItemContent}>
-								<p>
-									{t.rich('whatToExpect.description', { br: () => <br /> })}
-								</p>
+								<p>{aboutSection.whatToExpect.description}</p>
 							</div>
 						</div>
 						<div className={styles.gridItem}>
-							<h3>{t('level.subsectionTitle')}</h3>
+							<h3>{aboutSection.level.subsectionTitle}</h3>
 							<div className={styles.gridItemContent}>
 								<div className={styles.level}>
-									<p>{t('level.content.details')}</p>
+									<p>{aboutSection.level.content.details}</p>
 									<ul className={styles.levelList}>
-										{getDetails(t('level.content.list'))}
+										{getDetails(aboutSection.level.content.list)}
 									</ul>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div className={styles.cardSection}>
-						<h3>{t('classSchedule.title')}</h3>
+						<h3>{aboutSection.classSchedule.title}</h3>
 						<ul className={styles.classSchedule}>
 							{classes.map(c => (
 								<ClassBlock
 									key={c}
-									title={t(`classSchedule.${c}.title`)}
-									day={t(`classSchedule.${c}.day`)}
-									where={t(`classSchedule.${c}.where`)}
-									description={t(`classSchedule.${c}.description`)}
-									type={t(`classSchedule.${c}.type`)}
-									start={t(`classSchedule.${c}.start`)}
-									color={t(`classSchedule.${c}.color`)}
+									title={aboutSection.classSchedule[c].title}
+									day={aboutSection.classSchedule[c].day}
+									where={aboutSection.classSchedule[c].where}
+									description={aboutSection.classSchedule[c].description}
+									type={aboutSection.classSchedule[c].type}
+									start={aboutSection.classSchedule[c].start}
+									color={aboutSection.classSchedule[c].color}
 								/>
 							))}
 						</ul>
 					</div>
 					<div className={styles.cardSection}>
-						<h3>{t('locations.title')}</h3>
+						<h3>{aboutSection.locations.title}</h3>
 						<ul className={styles.locations}>
 							{locations.map(l => (
 								<LocationBlock
 									key={l}
-									title={t(`locations.${l}.title`)}
-									what={t(`locations.${l}.what`)}
-									address={t(`locations.${l}.address`)}
+									title={aboutSection.locations[l].title}
+									what={aboutSection.locations[l].what}
+									address={aboutSection.locations[l].address}
 								/>
 							))}
 						</ul>
 					</div>
 					<div className={styles.cardSection}>
-						<h3>{t('partners.title')}</h3>
+						<h3>{aboutSection.partners.title}</h3>
 						<ul className={styles.partners}>
 							{partners.map(p => (
 								<PartnersBlock
 									key={p}
-									title={t(`partners.${p}.title`)}
+									title={aboutSection.partners[p].title}
 									img={{
-										url: t(`partners.${p}.img.url`),
-										alt: t(`partners.${p}.img.alt`),
+										url: aboutSection.partners[p].img.url,
+										alt: aboutSection.partners[p].img.alt,
 									}}
-									link={t(`partners.${p}.link`)}
+									link={aboutSection.partners[p].link}
 								/>
 							))}
 						</ul>
 					</div>
 					<div className={`${styles.cardSection} ${styles.closed}`}>
 						<CtaButton
-							href={t('cta.href')}
-							ariaLabel={t('cta.ariaLabel')}
-							text={t('cta.text')}
+							href={aboutSection.cta.href}
+							ariaLabel={aboutSection.cta.ariaLabel}
+							text={aboutSection.cta.text}
 						/>
 					</div>
 				</div>

@@ -1,4 +1,4 @@
-import { ID, IMAGE, LINK } from "@/lib/queries";
+import { ID, IMAGE, LINK } from '@/app/_lib/queries'
 
 export const EVENT = `
     ...on Event {

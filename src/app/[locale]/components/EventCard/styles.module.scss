@@ -1,4 +1,4 @@
-@import '@/layout/breakpoints.scss';
+@use '@/app/_layout/breakpoints.scss' as breakpoint;
 
 .cardWrapper {
 	&.dark {
@@ -79,7 +79,7 @@
 		}
 	}
 
-	@media only screen and (max-width: $breakpoint-medium) {
+	@media only screen and (max-width: breakpoint.$breakpoint-medium) {
 		.details {
 			.title {
 				letter-spacing: 0.15rem;

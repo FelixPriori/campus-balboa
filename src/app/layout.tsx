@@ -1,9 +1,9 @@
-'use client';
+import { ReactNode } from 'react'
 
-export default function RootLayout({
-  children
-}: {
-  children: React.ReactNode,
-}) {
-  return children
+export const metadata = {
+	metadataBase: new URL('https://campusbalboa.org'),
+}
+
+export default function RootLayout({ children }: { children: ReactNode }) {
+	return children
 }

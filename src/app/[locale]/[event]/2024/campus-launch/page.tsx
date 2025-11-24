@@ -1,18 +1,19 @@
-import { setRequestLocale } from 'next-intl/server'
 import BigOG from '@/app/launch-party-banner.png'
 import { About, Footer, Hero, Prices, Schedule } from './sections'
 import Navigation from './components/Navigation'
+import { Locales } from '@/i18n'
 import './launchGlobals.scss'
+import { getDictionary } from '@/app/dictionaries'
 
 type Props = {
-	params: { locale: string }
+	params: Promise<{ locale: Locales }>
 }
 
 export async function generateMetadata({ params }: Props) {
-	setRequestLocale(params.locale)
+	const locale = (await params).locale as Locales
 	const siteUrl = 'https://www.campusbalboa.org'
 
-	if (params.locale === 'fr') {
+	if (locale === 'fr') {
 		return {
 			title: 'Lancement de Campus Balboa',
 			description: 'Lancement de Campus Balboa le 17 août 2024',
@@ -58,15 +59,18 @@ export async function generateMetadata({ params }: Props) {
 	}
 }
 
-export default function Launch() {
+export default async function Launch({ params }: Props) {
+	const locale = (await params).locale as Locales
+	const { Events } = await getDictionary(locale)
+
 	return (
 		<div className="launch-page">
-			<Navigation />
-			<Hero />
-			<Prices />
-			<About />
-			<Schedule />
-			<Footer />
+			<Navigation locale={locale} />
+			<Hero headerSection={Events[2024].Launch.header} />
+			<Prices pricesSection={Events[2024].Launch.pricesSection} />
+			<About aboutSection={Events[2024].Launch.aboutSection} />
+			<Schedule scheduleSection={Events[2024].Launch.scheduleSection} />
+			<Footer footerSection={Events[2024].Launch} />
 		</div>
 	)
 }

@@ -1,32 +1,32 @@
-@import '@/layout/breakpoints.scss';
+@use '@/app/_layout/breakpoints.scss' as breakpoint;
 
 .featuredSection {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--campus-color-canard);
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--campus-color-canard);
 
-    @media only screen and (max-width: $breakpoint-small) {
-        padding: 50px 26px;
-    }
+	@media only screen and (max-width: breakpoint.$breakpoint-small) {
+		padding: 50px 26px;
+	}
 
-    .content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
+	.content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
 
-        .featuredTitle {
-            letter-spacing: 0.35rem;
-            color: var(--campus-color-blanc);
-            z-index: 10;
-        }
+		.featuredTitle {
+			letter-spacing: 0.35rem;
+			color: var(--campus-color-blanc);
+			z-index: 10;
+		}
 
-        @media only screen and (max-width: $breakpoint-small) {
-            .title {
-                font-size: 2rem;
-            }
-        }
-    }
+		@media only screen and (max-width: breakpoint.$breakpoint-small) {
+			.title {
+				font-size: 2rem;
+			}
+		}
+	}
 }

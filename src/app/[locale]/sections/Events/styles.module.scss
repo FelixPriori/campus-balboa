@@ -1,4 +1,4 @@
-@import '@/layout/breakpoints.scss';
+@use '@/app/_layout/breakpoints.scss' as breakpoint;
 
 .eventsSection {
 	min-height: 700px;

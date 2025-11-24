@@ -1,200 +1,251 @@
-"use client"
-import { useTranslations } from 'next-intl';
-import styles from './styles.module.scss';
-import CtaButton from '../../components/CtaButton';
-import Image from 'next/image';
+import styles from './styles.module.scss'
+import Image from 'next/image'
+import { DictionaryType } from '@/app/dictionaries'
 
 type ClassBlock = {
-    title: string;
-    day: string;
-    where: string;
-    description: string;
-    type: string;
-    start: string;
+	title: string
+	day: string
+	where: string
+	description: string
+	type: string
+	start: string
 }
 
 type LocationBlock = {
-    title: string;
-    address: string;
-    what: string;
+	title: string
+	address: string
+	what: string
 }
 
 type PartnerBlock = {
-    title: string;
-    img: {
-        url: string;
-        alt: string;
-    }
-    link: string;
+	title: string
+	img: {
+		url: string
+		alt: string
+	}
+	link: string
 }
 
-const getDetails = (items: string) => items?.split(',').map((detail) => <li key={detail}>{detail}</li>)
+const getDetails = (items: string) =>
+	items?.split(',').map(detail => <li key={detail}>{detail}</li>)
+
+const iSoloBalboaLink = `
+	<a
+		class="inserted-link"
+		href="https://isolobalboa.com/"
+		rel="noopener noreferrer"
+		target="_blank"
+	>
+		iSoloBalboa
+	</a>
+`
+
+const fridayLink = `
+	<a
+		class="inserted-link"
+		href="https://www.catscorner.ca/"
+		rel="noopener noreferrer"
+		target="_blank"
+	>
+		Cat's Corner
+	</a>
+`
 
 const LocationBlock = ({ title, address, what }: LocationBlock) => {
-    return (
-        <li className={styles.locationBlock}>
-            <h4>{title}</h4>
-            <p className={styles.what}>{what}</p>
-            <p>{address}</p>
-        </li>
-    )
+	return (
+		<li className={styles.locationBlock}>
+			<h4>{title}</h4>
+			<p className={styles.what}>{what}</p>
+			<p>{address}</p>
+		</li>
+	)
 }
 
-const ClassBlock = ({ title, day, where, description, type, start }: ClassBlock) => {
-    const typeClass = type === 'Extra' ? 'extra' : type.includes('Swing') ? 'swing' : 'pure'
+const ClassBlock = ({
+	title,
+	day,
+	where,
+	description,
+	type,
+	start,
+}: ClassBlock) => {
+	const typeClass =
+		type === 'Extra' ? 'extra' : type.includes('Swing') ? 'swing' : 'pure'
 
-    return (
-        <li className={styles.classBlock}>
-            <div className={styles.start}>
-                <p>{day} : {start}</p>
-            </div>
-            <h4 className={styles.title}>{title}</h4>
-            <p className={styles.where}>{where}</p>
-            <div className={`${styles.typeWrapper} ${styles[typeClass]}`}>
-                <p className={styles.type}>{type}</p>
-            </div>
-            <p className={styles.description}>{description}</p>
-        </li>
-    )
+	return (
+		<li className={styles.classBlock}>
+			<div className={styles.start}>
+				<p>
+					{day} : {start}
+				</p>
+			</div>
+			<h4 className={styles.title}>{title}</h4>
+			<p className={styles.where}>{where}</p>
+			<div className={`${styles.typeWrapper} ${styles[typeClass]}`}>
+				<p className={styles.type}>{type}</p>
+			</div>
+			<p className={styles.description}>{description}</p>
+		</li>
+	)
 }
 
 const PartnersBlock = ({ title, img, link }: PartnerBlock) => {
-    return (
-        <li className={styles.partnersBlock}>
-            <a href={link} target='_blank' rel="noreferrer noopener">
-                <div className={styles.titleContainer}>
-                    <h4>{title}</h4>
-                </div>
-                <Image src={img.url} alt={img.alt} width={100} height={100} />
-            </a>
-        </li>
-    )
+	return (
+		<li className={styles.partnersBlock}>
+			<a href={link} target="_blank" rel="noreferrer noopener">
+				<div className={styles.titleContainer}>
+					<h4>{title}</h4>
+				</div>
+				<Image src={img.url} alt={img.alt} width={100} height={100} />
+			</a>
+		</li>
+	)
 }
 
-const classes = ['1', '2', '3', '4', '5'];
+const classes = ['1', '2', '3', '4', '5'] as const
 
-const locations = ['cats', 'cenne', 'ernest'];
+const locations = ['cats', 'cenne', 'ernest'] as const
 
-const partners = ['cats', 'aperos']
+const partners = ['cats', 'aperos'] as const
 
-export default function About() {
-    const t = useTranslations('Events.2024.Olga.aboutSection')
-    const tclosed = useTranslations('Events.2024.Olga')
-
-    return (
-        <section className={styles.aboutSection}>
-            <div className={styles.content}>
-                <h2>{t('sectionTitle')}</h2>
-                <div className={styles.card}>
-                    <div className={styles.cardSection}>
-                        <h3>{t('instructors.subsectionTitle')}</h3>
-                        <div className={styles.instructor}>
-                            <div className={styles.avatar}>
-                                <Image src="/olga-pe-avatar.png" width={100} height={100} alt={t('instructors.olga.avatarAlt')} />
-                            </div >
-                            <div className={styles.details}>
-                                <h4>{t('instructors.olga.name')}</h4>
-                                <p>
-                                    {
-                                        t.rich('instructors.olga.bio',
-                                            {
-                                                br: () => <br />,
-                                                link: (chunk) => <a className={styles.link} href={t('instructors.olga.link')} rel="noopener noreferrer" target="_blank">{chunk}</a>
-                                            }
-                                        )
-                                    }
-                                </p>
-                            </div>
-                        </div>
-                        <div className={styles.instructor}>
-                            <div className={styles.avatar}>
-                                <Image src="/felix-pe-avatar.png" width={100} height={100} alt={t('instructors.felix.avatarAlt')} />
-                            </div>
-                            <div className={styles.details}>
-                                <h4>{t('instructors.felix.name')}</h4>
-                                <p>{t.rich('instructors.felix.bio', { br: () => <br /> })}</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className={styles.cardSection}>
-                        <h3>{t('whatToExpect.subsectionTitle')}</h3>
-                        <p>{t.rich('whatToExpect.description', { br: () => <br /> })}</p>
-                    </div>
-                    <div className={styles.cardSection}>
-                        <h3>{t.rich('friday.subsectionTitle', { extra: (chunk) => <strong className={styles.extra}>{chunk}</strong> })}</h3>
-                        <p>
-                            {
-                                t.rich('friday.description',
-                                    {
-                                        br: () => <br />,
-                                        link: (chunk) => <a className={styles.link} href={t('friday.link')} rel="noopener noreferrer" target="_blank">{chunk}</a>
-                                    }
-                                )
-                            }
-                        </p>
-                    </div>
-                    <div className={styles.cardSection}>
-                        <h3>{t.rich('level.subsectionTitle', { extra: (chunk) => <strong className={styles.extra}>{chunk}</strong> })}</h3>
-                        <div className={styles.level}>
-                            <p>{t('level.content.details')}</p>
-                            <ul className={styles.levelList}>
-                                {getDetails(t('level.content.list'))}
-                            </ul>
-                        </div>
-                    </div>
-                    <div className={styles.cardSection}>
-                        <h3>{t('classSchedule.title')}</h3>
-                        <ul className={styles.classSchedule}>
-                            {classes.map((c) => (
-                                <ClassBlock
-                                    key={c}
-                                    title={t(`classSchedule.${c}.title`)}
-                                    day={t(`classSchedule.${c}.day`)}
-                                    where={t(`classSchedule.${c}.where`)}
-                                    description={t(`classSchedule.${c}.description`)}
-                                    type={t(`classSchedule.${c}.type`)}
-                                    start={t(`classSchedule.${c}.start`)}
-                                />
-                            ))}
-                        </ul>
-                    </div>
-                    <div className={styles.cardSection}>
-                        <h3>{t('locations.title')}</h3>
-                        <ul className={styles.locations}>
-                            {locations.map((l) => (
-                                <LocationBlock
-                                    key={l}
-                                    title={t(`locations.${l}.title`)}
-                                    what={t(`locations.${l}.what`)}
-                                    address={t(`locations.${l}.address`)}
-                                />
-                            ))}
-                        </ul>
-                    </div>
-                    <div className={styles.cardSection}>
-                        <h3>{t('partners.title')}</h3>
-                        <ul className={styles.partners}>
-                            {partners.map((p) => (
-                                <PartnersBlock
-                                    key={p}
-                                    title={t(`partners.${p}.title`)}
-                                    img={{
-                                        url: t(`partners.${p}.img.url`),
-                                        alt: t(`partners.${p}.img.alt`)
-                                    }}
-                                    link={t(`partners.${p}.link`)}
-                                />
-                            ))}
-                        </ul>
-                    </div>
-                    <div className={`${styles.cardSection} ${styles.closed}`}>
-                        <p>
-                            {tclosed('closed')}
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
+export default function About({
+	aboutSection,
+	closed,
+}: {
+	aboutSection: DictionaryType['Events']['2024']['Olga']['aboutSection']
+	closed: DictionaryType['Events']['2024']['Olga']['closed']
+}) {
+	return (
+		<section className={styles.aboutSection}>
+			<div className={styles.content}>
+				<h2>{aboutSection.sectionTitle}</h2>
+				<div className={styles.card}>
+					<div className={styles.cardSection}>
+						<h3>{aboutSection.instructors.subsectionTitle}</h3>
+						<div className={styles.instructor}>
+							<div className={styles.avatar}>
+								<Image
+									src="/olga-pe-avatar.png"
+									width={100}
+									height={100}
+									alt={aboutSection.instructors.olga.avatarAlt}
+								/>
+							</div>
+							<div className={styles.details}>
+								<h4>{aboutSection.instructors.olga.name}</h4>
+								{aboutSection.instructors.olga.bio.map(line => (
+									<p
+										key={line}
+										dangerouslySetInnerHTML={{
+											__html: line.replace('{{iSoloBalboa}}', iSoloBalboaLink),
+										}}
+									/>
+								))}
+							</div>
+						</div>
+						<div className={styles.instructor}>
+							<div className={styles.avatar}>
+								<Image
+									src="/felix-pe-avatar.png"
+									width={100}
+									height={100}
+									alt={aboutSection.instructors.felix.avatarAlt}
+								/>
+							</div>
+							<div className={styles.details}>
+								<h4>{aboutSection.instructors.felix.name}</h4>
+								{aboutSection.instructors.felix.bio.map(line => (
+									<p
+										key={line}
+										dangerouslySetInnerHTML={{
+											__html: line,
+										}}
+									/>
+								))}
+							</div>
+						</div>
+					</div>
+					<div className={styles.cardSection}>
+						<h3>{aboutSection.whatToExpect.subsectionTitle}</h3>
+						{aboutSection.whatToExpect.description.map(line => (
+							<p
+								key={line}
+								dangerouslySetInnerHTML={{
+									__html: line,
+								}}
+							/>
+						))}
+					</div>
+					<div className={styles.cardSection}>
+						<h3>{aboutSection.friday.subsectionTitle}</h3>
+						<p
+							dangerouslySetInnerHTML={{
+								__html: aboutSection.friday.description.replace(
+									'{{catscorner}}',
+									fridayLink,
+								),
+							}}
+						></p>
+					</div>
+					<div className={styles.cardSection}>
+						<h3>{aboutSection.level.subsectionTitle}</h3>
+						<div className={styles.level}>
+							<p>{aboutSection.level.content.details}</p>
+							<ul className={styles.levelList}>
+								{getDetails(aboutSection.level.content.list)}
+							</ul>
+						</div>
+					</div>
+					<div className={styles.cardSection}>
+						<h3>{aboutSection.classSchedule.title}</h3>
+						<ul className={styles.classSchedule}>
+							{classes.map(c => (
+								<ClassBlock
+									key={c}
+									title={aboutSection.classSchedule[c].title}
+									day={aboutSection.classSchedule[c].day}
+									where={aboutSection.classSchedule[c].where}
+									description={aboutSection.classSchedule[c].description}
+									type={aboutSection.classSchedule[c].type}
+									start={aboutSection.classSchedule[c].start}
+								/>
+							))}
+						</ul>
+					</div>
+					<div className={styles.cardSection}>
+						<h3>{aboutSection.locations.title}</h3>
+						<ul className={styles.locations}>
+							{locations.map(l => (
+								<LocationBlock
+									key={l}
+									title={aboutSection.locations[l].title}
+									what={aboutSection.locations[l].what}
+									address={aboutSection.locations[l].address}
+								/>
+							))}
+						</ul>
+					</div>
+					<div className={styles.cardSection}>
+						<h3>{aboutSection.partners.title}</h3>
+						<ul className={styles.partners}>
+							{partners.map(p => (
+								<PartnersBlock
+									key={p}
+									title={aboutSection.partners[p].title}
+									img={{
+										url: aboutSection.partners[p].img.url,
+										alt: aboutSection.partners[p].img.alt,
+									}}
+									link={aboutSection.partners[p].link}
+								/>
+							))}
+						</ul>
+					</div>
+					<div className={`${styles.cardSection} ${styles.closed}`}>
+						<p>{closed}</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	)
 }
-

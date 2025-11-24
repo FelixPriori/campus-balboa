@@ -1,34 +1,35 @@
-'use client'
-import { useTranslations } from 'next-intl'
 import styles from './styles.module.scss'
 import CtaButton from '../../components/CtaButton'
+import { DictionaryType } from '@/app/dictionaries'
 
-const pricing = ['tier1', 'tier2', 'dance']
+const pricing = ['tier1', 'tier2', 'dance'] as const
 
-const includes = ['workshops', 'dance']
+const includes = ['workshops', 'dance'] as const
 
-const atTheDoor = ['full', 'class', 'dance']
+const atTheDoor = ['full', 'class', 'dance'] as const
 
-export default function Prices() {
-	const t = useTranslations('Events.2024.Launch.pricesSection')
-
+export default function Prices({
+	pricesSection,
+}: {
+	pricesSection: DictionaryType['Events']['2024']['Launch']['pricesSection']
+}) {
 	return (
 		<section className={styles.prices}>
 			<div className={styles.content}>
-				<h2>{t('sectionTitle')}</h2>
+				<h2>{pricesSection.sectionTitle}</h2>
 				<div className={styles.card}>
 					<div className={styles.cardSection}>
-						<h3>{t('prices.title')}</h3>
-						<p className={styles.subtitle}>{t('prices.subtitle')}</p>
+						<h3>{pricesSection.prices.title}</h3>
+						<p className={styles.subtitle}>{pricesSection.prices.subtitle}</p>
 						<ul className={styles.list}>
 							{pricing.map(p => (
 								<li key={p} className={styles.priceContainer}>
 									<p className={`${styles.item}  ${styles[p]}`}>
 										<span className={styles.itemTitle}>
-											{t(`prices.${p}.date`)}
+											{pricesSection.prices[p].date}
 										</span>
 										<span className={styles.price}>
-											{t(`prices.${p}.price`)}
+											{pricesSection.prices[p].price}
 										</span>
 									</p>
 								</li>
@@ -36,31 +37,33 @@ export default function Prices() {
 						</ul>
 					</div>
 					<div className={styles.cardSection}>
-						<h3>{t('includes.title')}</h3>
-						<p className={styles.subtitle}>{t('includes.subtitle')}</p>
+						<h3>{pricesSection.includes.title}</h3>
+						<p className={styles.subtitle}>{pricesSection.includes.subtitle}</p>
 						<ul className={styles.list}>
 							{includes.map(i => (
 								<li
 									key={i}
 									className={`${styles.priceContainer} ${styles.includes}`}
 								>
-									<p className={styles.item}>{t(`includes.${i}`)}</p>
+									<p className={styles.item}>{pricesSection.includes[i]}</p>
 								</li>
 							))}
 						</ul>
 					</div>
 					<div className={styles.cardSection}>
-						<h3>{t('atTheDoor.title')}</h3>
-						<p className={styles.subtitle}>{t('atTheDoor.subtitle')}</p>
+						<h3>{pricesSection.atTheDoor.title}</h3>
+						<p className={styles.subtitle}>
+							{pricesSection.atTheDoor.subtitle}
+						</p>
 						<ul className={styles.list}>
 							{atTheDoor.map(p => (
 								<li key={p} className={styles.priceContainer}>
 									<p className={`${styles.item}  ${styles[p]}`}>
 										<span className={styles.itemTitle}>
-											{t(`atTheDoor.${p}.title`)}
+											{pricesSection.atTheDoor[p].title}
 										</span>
 										<span className={styles.price}>
-											{t(`atTheDoor.${p}.price`)}
+											{pricesSection.atTheDoor[p].price}
 										</span>
 									</p>
 								</li>
@@ -70,9 +73,9 @@ export default function Prices() {
 				</div>
 				<div className={styles.cta}>
 					<CtaButton
-						href={t('cta.href')}
-						ariaLabel={t('cta.ariaLabel')}
-						text={t('cta.text')}
+						href={pricesSection.cta.href}
+						ariaLabel={pricesSection.cta.ariaLabel}
+						text={pricesSection.cta.text}
 					/>
 				</div>
 			</div>
