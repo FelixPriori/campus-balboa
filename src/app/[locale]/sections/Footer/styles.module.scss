@@ -1,63 +1,62 @@
-@import '@/layout/breakpoints.scss';
+@use '@/app/_layout/breakpoints.scss';
 
 .footerSection {
-  padding: 50px;
-  margin-top: 5rem;
-  background-color: var(--color-primary);
+	padding: 50px;
+	margin-top: 5rem;
+	background-color: var(--color-primary);
 
-  .content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr;
-    row-gap: 2rem;
+	.content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto 1fr;
+		row-gap: 2rem;
 
-    .copy {
-      color: var(--color-neutral);
+		.copy {
+			color: var(--color-neutral);
 
-      a {
-        text-decoration: underline;
-        text-underline-offset: 2px;
-        text-decoration-thickness: 2px;
-        color: var(--color-neutral);
+			a {
+				text-decoration: underline;
+				text-underline-offset: 2px;
+				text-decoration-thickness: 2px;
+				color: var(--color-neutral);
 
-        &:hover {
-          text-decoration: none;
-        }
-      }
-    }
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
 
-    .contact {
-      grid-row: 2 / -1;
-    }
+		.contact {
+			grid-row: 2 / -1;
+		}
 
-    .links {
-      grid-row: 2 / -1;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      gap: 1rem;
-    }
-  }
+		.links {
+			grid-row: 2 / -1;
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			gap: 1rem;
+		}
+	}
 
+	@media (max-width: calc(580 / 16 * 1rem)) {
+		padding: 50px 20px;
 
-  @media (max-width: calc(580 / 16 * 1rem)) {
-    padding: 50px 20px;
+		.content {
+			grid-template-columns: 1fr;
+			grid-template-rows: auto 1fr 1fr;
+			row-gap: 1rem;
+			align-items: center;
 
-    .content {
-      grid-template-columns: 1fr;
-      grid-template-rows: auto 1fr 1fr;
-      row-gap: 1rem;
-      align-items: center;
+			.contact {
+				grid-row: 2 / 3;
+			}
 
-      .contact {
-        grid-row: 2 / 3;
-      }
-
-      .links {
-        grid-row: 3 / -1;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-      }
-    }
-  }
+			.links {
+				grid-row: 3 / -1;
+				flex-wrap: wrap;
+				justify-content: flex-start;
+			}
+		}
+	}
 }

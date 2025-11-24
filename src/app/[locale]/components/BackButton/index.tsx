@@ -1,7 +1,7 @@
 'use client'
 import { ReactNode } from 'react'
 import styles from './styles.module.scss'
-import { useRouter } from '@/i18n/routing'
+import { useRouter } from 'next/navigation'
 
 export default function BackButton({ children }: { children: ReactNode }) {
 	const router = useRouter()

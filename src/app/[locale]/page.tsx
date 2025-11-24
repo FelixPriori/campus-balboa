@@ -1,18 +1,19 @@
-import { setRequestLocale } from 'next-intl/server'
-import Main from '@/layout/main'
+import Main from '@/app/_layout/main'
 import sectionsRenderer, { Hero, Footer } from './sections'
-import { getPageBySlug, getPageMetaDataByPageSlug } from '@/lib/api'
-import { PAGE_FIELDS_QUERY } from '@/lib/queries'
-import { buildPageMetaData } from '@/assets/data/buildPageMetaData'
-import LanguageSwitcher from '@/components/LanguageSwitcher'
-import CampusLogo from '@/assets/svgs/campus-logo'
+import { getPageBySlug, getPageMetaDataByPageSlug } from '@/app/_lib/api'
+import { PAGE_FIELDS_QUERY } from '@/app/_lib/queries'
+import { buildPageMetaData } from '@/app/_assets/data/buildPageMetaData'
+import LanguageSwitcher from '@/app/_components/LanguageSwitcher'
+import CampusLogo from '@/app/_assets/svgs/campus-logo'
+import { Locales } from '@/i18n'
+import { getDictionary } from '../dictionaries'
 
 type Props = {
-	params: { locale: string }
+	params: Promise<{ locale: string }>
 }
 
-export async function generateMetadata({ params: { locale } }: Props) {
-	setRequestLocale(locale)
+export async function generateMetadata({ params }: Props) {
+	const locale = (await params).locale as Locales
 	const metaData = await getPageMetaDataByPageSlug(locale, locale)
 	const siteUrl = 'https://www.campusbalboa.org'
 
@@ -42,17 +43,10 @@ export async function generateMetadata({ params: { locale } }: Props) {
 	return buildPageMetaData({ locale })
 }
 
-export function generateStaticParams() {
-	return [{ locale: 'en' }, { locale: 'fr' }]
-}
-
-export default async function Home({
-	params: { locale },
-}: {
-	params: { locale: string }
-}) {
-	setRequestLocale(locale)
+export default async function Home({ params }: Props) {
+	const locale = (await params).locale as Locales
 	const pageData = await getPageBySlug(locale, locale, PAGE_FIELDS_QUERY)
+	const dictionary = await getDictionary(locale)
 
 	if (!pageData?.sectionsCollection) {
 		return <></>
@@ -62,15 +56,19 @@ export default async function Home({
 		<div className="landing">
 			<nav className="app-nav">
 				<CampusLogo />
-				<LanguageSwitcher customStyling="noOutline" />
+				<LanguageSwitcher locale={locale} />
 			</nav>
 			<Hero {...pageData?.hero} />
 			<Main>
 				{pageData?.sectionsCollection?.items.map((s: any) =>
-					sectionsRenderer(s),
+					sectionsRenderer(s, locale, dictionary),
 				)}
 			</Main>
-			<Footer {...pageData?.footer} />
+			<Footer
+				{...pageData?.footer}
+				landAcknowledgement={dictionary.LandAcknowledgement}
+				paypalButton={dictionary.Components.paypal}
+			/>
 		</div>
 	)
 }

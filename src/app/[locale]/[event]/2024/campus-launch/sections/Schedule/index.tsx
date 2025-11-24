@@ -1,15 +1,16 @@
-'use client'
-import { useTranslations } from 'next-intl'
 import styles from './styles.module.scss'
 import CtaButton from '../../components/CtaButton'
+import { DictionaryType } from '@/app/dictionaries'
 
-export default function Events() {
-	const t = useTranslations('Events.2024.Olga.scheduleSection')
-
+export default function Events({
+	scheduleSection,
+}: {
+	scheduleSection: DictionaryType['Events']['2024']['Launch']['scheduleSection']
+}) {
 	return (
 		<section className={styles.scheduleSection}>
 			<div className={styles.content}>
-				<h2>{t('sectionTitle')}</h2>
+				<h2>{scheduleSection.sectionTitle}</h2>
 				<div className={styles.iframeWrapper}>
 					<iframe
 						className={styles.iframe}
@@ -20,9 +21,9 @@ export default function Events() {
 					></iframe>
 				</div>
 				<CtaButton
-					text={t('link')}
+					text={scheduleSection.link}
 					href="https://www.canva.com/design/DAGKdV6eKnI/taIMvb9eTFqwKfmy-Pb-tg/view?utm_content=DAGKdV6eKnI&utm_campaign=designshare&utm_medium=embeds&utm_source=link"
-					ariaLabel={t('ariaLabel')}
+					ariaLabel={scheduleSection.ariaLabel}
 				/>
 			</div>
 		</section>

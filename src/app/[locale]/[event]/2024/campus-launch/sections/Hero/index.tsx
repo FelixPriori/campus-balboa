@@ -1,12 +1,13 @@
-'use client'
-import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import styles from './styles.module.scss'
 import CtaButton from '../../components/CtaButton'
+import { DictionaryType } from '@/app/dictionaries'
 
-export default function Hero() {
-	const t = useTranslations('Events.2024.Launch.header')
-
+export default function Hero({
+	headerSection,
+}: {
+	headerSection: DictionaryType['Events']['2024']['Launch']['header']
+}) {
 	return (
 		<header className={styles.hero}>
 			<div className={styles.card}>
@@ -19,15 +20,13 @@ export default function Hero() {
 					/>
 				</div>
 				<div className={styles.content}>
-					<p className={styles.date}>{t('date')}</p>
-					<h1>
-						{t.rich('title', { bold: chunk => <strong>{chunk}</strong> })}
-					</h1>
-					<p className={styles.comingSoon}>{t('comingSoon')}</p>
+					<p className={styles.date}>{headerSection.date}</p>
+					<h1>{headerSection.title}</h1>
+					<p className={styles.comingSoon}>{headerSection.comingSoon}</p>
 					<CtaButton
-						href={t('cta.href')}
-						ariaLabel={t('cta.ariaLabel')}
-						text={t('cta.text')}
+						href={headerSection.cta.href}
+						ariaLabel={headerSection.cta.ariaLabel}
+						text={headerSection.cta.text}
 					/>
 				</div>
 			</div>

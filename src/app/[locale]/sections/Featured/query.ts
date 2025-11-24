@@ -1,4 +1,4 @@
-import { ID, IMAGE, LINK, RICH_TEXT } from "@/lib/queries";
+import { ID, IMAGE, LINK, RICH_TEXT } from '@/app/_lib/queries'
 
 export const FEATURED_SLIDE = `
     ...on FeaturedSlide {
