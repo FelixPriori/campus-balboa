@@ -1,3 +1,4 @@
+'use client'
 import useEmblaCarousel from 'embla-carousel-react'
 import { ReactNode, useCallback, useEffect, useState } from 'react'
 import styles from './styles.module.scss'

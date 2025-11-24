@@ -1,4 +1,3 @@
-'use client'
 import CampusLogo from '@/app/_assets/svgs/campus-logo'
 import LanguageSwitcher from '@/app/_components/LanguageSwitcher'
 import { Locale } from '@/i18n'
