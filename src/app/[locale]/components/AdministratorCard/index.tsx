@@ -31,8 +31,8 @@ export default function AdministratorCard({
 						className={styles.avatar}
 						src={avatar.url}
 						alt={name}
-						width={100}
-						height={100}
+						width={1080}
+						height={1080}
 					/>
 				)}
 			</div>

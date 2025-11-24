@@ -40,8 +40,8 @@ export default function FeaturedSlide({
 						className={styles.banner}
 						src={image.src}
 						alt={image.alt}
-						width={120}
-						height={120}
+						width={1080}
+						height={1080}
 					/>
 				</div>
 				<div className={styles.copy}>
