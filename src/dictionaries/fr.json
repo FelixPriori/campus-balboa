@@ -38,7 +38,7 @@
 		"changeLang": "EN",
 		"registerCta": "S'enregistrer"
 	},
-	"LandAknowledgement": {
+	"LandAcknowledgement": {
 		"title": "Reconnaissance du territoire",
 		"text": "{name} tient à reconnaître que le territoire sur lequel nous tenons nos activités, Tiohtià:ke/Montréal, se se situe sur les terres autochtones non cédées des Kanien’kehá:ka/Mohawks et sert de lieu de rencontre et d’échange entre les Premières Nations depuis des temps immémoriaux."
 	},
@@ -47,7 +47,7 @@
 			"Olga": {
 				"header": {
 					"date": "26-27-28 avril 2024",
-					"title": "Programme <bold>Extra</bold>Curriculaire avec Olga",
+					"title": "Programme ExtraCurriculaire avec Olga",
 					"comingSoon": "Un weekend d'ateliers avec Olga à Montréal/Tiohtià:ke.",
 					"cta": {
 						"text": "S'inscrire",
@@ -113,22 +113,33 @@
 							"name": "Olga",
 							"avatarAlt": "Avatr de Olga",
 							"link": "https://isolobalboa.com/",
-							"bio": "Olga nous vient directement de suède, elle est née d’une famille d’enseignants et depuis toute petite, Olga est une boule d’énergie. Dès son enfance, elle a étudié la musique, la gymnastique, l’athlétisme et les arts martiaux. C’est en 2007 qu'elle découvre le Lindy Hop, activité pour laquelle elle a eu un coup de foudre instantané. Le goût de la découverte l’amène à explorer plusieurs styles de danse différents comme le Blues et plus tard le Balboa. Depuis, elle voyage partout à travers le monde pour saisir toujours plus d’opportunités de danser, d’apprendre et de compétitionner. C’est tout naturellement qu’elle partage aujourd’hui son amour pour la musique swing et la danse en enseignant internationalement le Balboa en solo et en partenariat.<br></br>Dans ses cours, Olga adore challenger ses étudiant.es en leur donnant des défis qui travaillent tant la technique que la musicalité dans le but de transmettre son amour pour le Balboa. Elle développe également son outil de pratique <link>iSoloBalboa</link> : une plateforme numérique d’enseignement du Balboa en solo qui s’adresse aux leaders et followers et qui vise à améliorer la technique et développer sa créativité et sa propre voix."
+							"bio": [
+								"Olga nous vient directement de suède, elle est née d’une famille d’enseignants et depuis toute petite, Olga est une boule d’énergie. Dès son enfance, elle a étudié la musique, la gymnastique, l’athlétisme et les arts martiaux. C’est en 2007 qu'elle découvre le Lindy Hop, activité pour laquelle elle a eu un coup de foudre instantané. Le goût de la découverte l’amène à explorer plusieurs styles de danse différents comme le Blues et plus tard le Balboa. Depuis, elle voyage partout à travers le monde pour saisir toujours plus d’opportunités de danser, d’apprendre et de compétitionner. C’est tout naturellement qu’elle partage aujourd’hui son amour pour la musique swing et la danse en enseignant internationalement le Balboa en solo et en partenariat.",
+								"Dans ses cours, Olga adore challenger ses étudiant.es en leur donnant des défis qui travaillent tant la technique que la musicalité dans le but de transmettre son amour pour le Balboa. Elle développe également son outil de pratique {{iSoloBalboa}} : une plateforme numérique d’enseignement du Balboa en solo qui s’adresse aux leaders et followers et qui vise à améliorer la technique et développer sa créativité et sa propre voix."
+							]
 						},
 						"felix": {
 							"name": "Felix",
 							"avatarAlt": "Avatr de Félix",
-							"bio": "C’est avec grand plaisir qu’on accueille Félix pour supporter Olga dans les cours en partenariat !<br></br>Félix danse le balboa depuis dix ans. C’est l’énergie rotationnelle de cette danse qui a piqué son intérêt en premier lieu, mais il est particulièrement tombé en amour avec celle-ci lorsqu’il a réalisé les possibilités infinies qu’elle peut apporter. Ses ingrédients magiques sont sa relation avec ses partenaires et la musique, lui permettant ainsi de créer des danses où tout est fluide."
+							"bio": [
+								"C’est avec grand plaisir qu’on accueille Félix pour supporter Olga dans les cours en partenariat !",
+								"Félix danse le balboa depuis dix ans. C’est l’énergie rotationnelle de cette danse qui a piqué son intérêt en premier lieu, mais il est particulièrement tombé en amour avec celle-ci lorsqu’il a réalisé les possibilités infinies qu’elle peut apporter. Ses ingrédients magiques sont sa relation avec ses partenaires et la musique, lui permettant ainsi de créer des danses où tout est fluide."
+							]
 						}
 					},
 					"whatToExpect": {
 						"subsectionTitle": "À quoi s'attendre?",
-						"description": "Le Campus Balboa vous présente un weekend d’ateliers avec Olga au Canada pour la toute première fois.<br></br>Nous offrons 6 heures d’ateliers avec Olga qui seront divisées en 4 blocs de 1h30 comprenant 30 min de concepts de balboa en solo, suivi de 1h d’intégration en danse en couple.<br></br>Olga est réputée internationalement pour sa plateforme de pratique de balboa solo qui permet à des danseur.euses de partout dans le monde de travailler des concepts clés à la maison de façon indépendante.<br></br>En avril, nous aurons la chance immanquable de voir ces concepts être appliqués immédiatement en danse avec partenaire."
+						"description": [
+							"Le Campus Balboa vous présente un weekend d’ateliers avec Olga au Canada pour la toute première fois.",
+							"Nous offrons 6 heures d’ateliers avec Olga qui seront divisées en 4 blocs de 1h30 comprenant 30 min de concepts de balboa en solo, suivi de 1h d’intégration en danse en couple.",
+							"Olga est réputée internationalement pour sa plateforme de pratique de balboa solo qui permet à des danseur.euses de partout dans le monde de travailler des concepts clés à la maison de façon indépendante.",
+							"En avril, nous aurons la chance immanquable de voir ces concepts être appliqués immédiatement en danse avec partenaire."
+						]
 					},
 					"friday": {
-						"subsectionTitle": "Cours <extra>EXTRA</extra> du vendredi",
+						"subsectionTitle": "Cours EXTRA du vendredi",
 						"link": "https://www.catscorner.ca/",
-						"description": "Le vendredi du Programme ExtraCurriculaire avec Olga, nous sommes fiers de collaborer avec le <link>Cat’s Corner</link> qui nous accueille pour un cours extra avec Olga avant le Downtown Stomp. Ceux.celles qui en veulent plus ou qui ne peuvent pas faire tout le weekend auront l’opportunité de prendre un cours de niveau intermédiaire avec Olga à 19h30 le 26 avril. Le cours extra est disponible en prévente avec rabais à l’achat d’un laissez-passer pour le weekend et au prix régulier sans inscription le jour même."
+						"description": "Le vendredi du Programme ExtraCurriculaire avec Olga, nous sommes fiers de collaborer avec le {{catscorner}} qui nous accueille pour un cours extra avec Olga avant le Downtown Stomp. Ceux.celles qui en veulent plus ou qui ne peuvent pas faire tout le weekend auront l’opportunité de prendre un cours de niveau intermédiaire avec Olga à 19h30 le 26 avril. Le cours extra est disponible en prévente avec rabais à l’achat d’un laissez-passer pour le weekend et au prix régulier sans inscription le jour même."
 					},
 					"level": {
 						"subsectionTitle": "Niveau requis",
@@ -234,7 +245,7 @@
 			"Launch": {
 				"header": {
 					"date": "17 août 2024",
-					"title": "<bold>Lancement</bold> de Campus Balboa",
+					"title": "Lancement de Campus Balboa",
 					"comingSoon": "Une journée d'ateliers avec des instructeurs annoncés sous peu à Montréal/Tiohtià:ke.",
 					"cta": {
 						"text": "Page d'inscription",
@@ -463,63 +474,13 @@
 			}
 		}
 	},
-	"Resources": {
-		"dj": {
-			"bpm": {
-				"title": "Tempo",
-				"range": "{min} à {max} BPM",
-				"description": "Il est important de noter que ces conseils sont subjectifs. Un.e bon.ne DJ sera en mesure de déterminer le meilleur choix de tempo selon la situation et les gens présents. La variété et le sens du timing font un set exceptionnel: un set avec des chansons exclusivements dans la “zone idéale” sera ennuyeux, mettre des chansons lentes trop souvent peut briser l’énergie de la salle et jouer trop rapidement peut fatiguer les danseur.euses. Il est impossible de plaire à tout le monde, il est important que le DJ s’adapte à la salle et utilise son jugement.",
-				"slowBal": {
-					"title": "Balboa lent",
-					"description": "Le balboa lent peut être dansé sur de la musique très lente, mais la plupart des danseurs.euses sont à l’aise dans les alentours de 80 BPM. Il est donc souhaitable de viser le milieu de la zone plutôt que les extrêmes, à moins de jouer plusieurs chansons lentes de suite, ou qu’il y ait beaucoup de danseurs.euses expérimenté.e.s dans la salle."
-				},
-				"awkwardRange": {
-					"title": "Zone difficile",
-					"description": "Cette zone est considérée plutôt difficile pour les danseurs de balboa, pusiqu’elle est trop rapide pour du balboa lent, et trop lente pour le balboa conventionnel. Il est donc fortement recommandé d’éviter cette zone dans la majorité des cas."
-				},
-				"beginnerClass": {
-					"title": "Cours",
-					"description": "Dans un contexte d’apprentissage, il pourrait être souhaitable de jouer des morceaux un peu plus lents pour donner une chance aux apprenant.e.s de bien assimiler les notions."
-				},
-				"bulk": {
-					"title": "Majorité de la musique",
-					"description": "Environ 80% de la musique jouée lors d’une danse sociale devrait se trouver dans cette zone. Après un cours d’introduction, il est recommandé de commencer plus bas, et de graduellement augmenter le tempo. Généralement, viser le milieu de la zone plutôt que les extrêmes, et ne pas rester trop longtemps dans les mêmes tempos."
-				},
-				"comfortableArea": {
-					"title": "Zone confortable",
-					"description": "Cette zone est généralement appropriée pour la plupart des danseurs. Lorsqu’il y a des gens de tous les niveaux dans la salle, la majorité pourra danser confortablement dans cette zone."
-				},
-				"sweetSpot": {
-					"title": "Zone idéale",
-					"description": "Cette zone assez restreinte est la mieux adaptée pour tous les types de balboa (pure, swing). Les danseurs.euses avancé.e.s comme les intermédiaires seront à l’aise ici en danse sociale. Idéal pour rapatrier les gens sur le plancher de danse après une chanson qui a moins bien fonctionnée (soit très rapide, très lent, ou autre)."
-				},
-				"competitionRange": {
-					"title": "Finales de competition",
-					"description": "Internationalement, le tempo de musique de finales de compétitions “open” ou avancés sont situés dans cette zone. Parfois les “all-skates” seront plus rapide, et les “warm-up” plus lents."
-				},
-				"fastTempo": {
-					"title": "Zone rapide",
-					"description": "Il est important de noter que plus le tempo dépasse 220 BPM, moins de danseur.euses seront à l’aise de danser. Par contre, relever le défi de danser sur de la musique très rapide est l’un des plaisirs de danser le balboa. Il est déconseillé de jouer trop de chansons extrèmes dans une même danse sociale."
-				},
-				"distribution": {
-					"title": "Distribution",
-					"description": "La distribution du BPM d’un set de DJ dépend de plusieurs facteurs. Notamment, le niveau moyen des danseur.euses présent.es, la qualité du plancher de danse, la taille du plancher de danse, le niveau d’énergie de la salle, le moment (début de la soirée, fin de la soirée, début du set, fin du set), et beaucoup plus. Il est généralement recommandé de monter et descendre graduellement la vitesse plutôt que de passer d’un extrême à l’autre. Une chanson rapide jouée directement après une chanson lente va sembler beaucoup plus rapide en contraste et vice versa. Par contre, un plancher de danse qui a peu d’énergie peut bénéficier d’une chanson plus rapide. Un plancher de danse trop fatigué pour les chansons rapides pourrait reprendre de la vigueur après une chanson lente. C’est pourquoi il est important de s’adapter aux gens dans la salle.",
-					"beginner": "Débutant",
-					"intermediate": "Intermédiaire",
-					"advanced": "Avancé",
-					"all": "Tous",
-					"y": "Chanson #"
-				}
-			}
-		}
-	},
 	"Components": {
 		"paypal": {
 			"donate": "Faire un don",
 			"logoAlt": "Logo de PayPal"
 		},
 		"embla": {
-			"changeSlide": "Voir la diapositive {slideNum}",
+			"changeSlide": "Voir la diapositive {{slideNum}}",
 			"nextSlide": "Diapositive suivante",
 			"prevSlide": "Diapositive précédente"
 		},
