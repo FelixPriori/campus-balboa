@@ -1,11 +1,10 @@
-'use client'
 import styles from './styles.module.scss'
-import AdministratorCard from '../../components/AdministratorCard'
+import AdministratorCard from '../../../_components/AdministratorCard'
 import { PageSectionProps } from '..'
-import { useEffect, useState } from 'react'
 import { getCollectionBySectionId } from '@/app/_lib/api'
 import { ADMINISTRATOR } from './query'
-import { InfinitySpin } from 'react-loader-spinner'
+import { Suspense } from 'react'
+import Fallback from './Fallback'
 
 type Administrator = {
 	sys: {
@@ -24,46 +23,36 @@ type Administrator = {
 	}
 }
 
-export default function AboutUsSection({
+export default async function AboutUsSection({
 	id,
 	title,
 	anchor,
 	locale,
 }: PageSectionProps) {
-	const [administrators, setAdministrators] = useState([])
-
-	useEffect(() => {
-		const getAdministratorsCollection = async () => {
-			const administratorsCollection = await getCollectionBySectionId(
-				id,
-				locale,
-				ADMINISTRATOR,
-			)
-			setAdministrators(administratorsCollection)
-		}
-
-		getAdministratorsCollection()
-	}, [id, locale])
+	const administrators = await getCollectionBySectionId(
+		id,
+		locale,
+		ADMINISTRATOR,
+	)
 
 	return (
 		<section id={anchor} className={styles.aboutUsSection}>
 			<div className={styles.content}>
 				<h2 className={styles.aboutUsTitle}>{title}</h2>
 				<div className={styles.administratorsContainer}>
-					{administrators.length ? (
-						administrators.map((administrator: Administrator) => (
-							<AdministratorCard
-								key={administrator.sys.id}
-								avatar={administrator.avatar}
-								name={administrator.name}
-								pronouns={administrator.pronouns}
-								title={administrator.title}
-								bio={administrator.bio}
-							/>
-						))
-					) : (
-						<InfinitySpin width="200" color="var(--color-primary)" />
-					)}
+					<Suspense fallback={<Fallback />}>
+						{administrators.length &&
+							administrators.map((administrator: Administrator) => (
+								<AdministratorCard
+									key={administrator.sys.id}
+									avatar={administrator.avatar}
+									name={administrator.name}
+									pronouns={administrator.pronouns}
+									title={administrator.title}
+									bio={administrator.bio}
+								/>
+							))}
+					</Suspense>
 				</div>
 			</div>
 		</section>

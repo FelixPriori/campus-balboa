@@ -1,52 +1,39 @@
-'use client'
-import styles from './styles.module.scss'
-import { useEffect, useState } from 'react'
 import { getCollectionBySectionId } from '@/app/_lib/api'
 import { PageSectionProps } from '..'
 import { FEATURED_SLIDE } from './query'
-import { InfinitySpin } from 'react-loader-spinner'
-import EmblaContainer from '../../components/EmblaContainer'
-import FeaturedSlides from '../../components/FeaturedSlides'
+import EmblaContainer from '../../../_components/EmblaContainer'
+import FeaturedSlides from '../../../_components/FeaturedSlides'
 import { DictionaryType } from '@/app/dictionaries'
+import { Suspense } from 'react'
+import styles from './styles.module.scss'
+import Fallback from './Fallback'
 
 interface FeaturedProps extends PageSectionProps {
 	embla: DictionaryType['Components']['embla']
 }
 
-export default function Featured({
+export default async function Featured({
 	id,
 	title,
 	anchor,
 	locale,
 	embla,
 }: FeaturedProps) {
-	const [featuredContent, setFeaturedContent] = useState([])
-
-	useEffect(() => {
-		const getFeaturedCollection = async () => {
-			const featuredCollection = await getCollectionBySectionId(
-				id,
-				locale,
-				FEATURED_SLIDE,
-			)
-			setFeaturedContent(featuredCollection)
-		}
-
-		getFeaturedCollection()
-	}, [id, locale])
+	const featuredContent = await getCollectionBySectionId(
+		id,
+		locale,
+		FEATURED_SLIDE,
+	)
 
 	return (
 		<section id={anchor} className={styles.featuredSection}>
 			<div className={styles.content}>
 				<h2 className={styles.featuredTitle}>{title}</h2>
-
-				{featuredContent.length ? (
+				<Suspense fallback={<Fallback />}>
 					<EmblaContainer embla={embla} slidesNumber={featuredContent.length}>
 						<FeaturedSlides featuredContent={featuredContent} />
 					</EmblaContainer>
-				) : (
-					<InfinitySpin width="200" color="var(--color-primary)" />
-				)}
+				</Suspense>
 			</div>
 		</section>
 	)

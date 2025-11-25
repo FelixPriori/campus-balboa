@@ -1,5 +1,14 @@
 @use '@/app/_layout/breakpoints.scss' as breakpoint;
 
+.aboutFallback {
+	width: 100%;
+	min-width: 280px;
+	height: 100%;
+	border-radius: var(--border-radius);
+	overflow: hidden;
+	opacity: 0.8;
+}
+
 .aboutUsSection {
 	background-image: url('/wave-top.png');
 	background-size: cover;

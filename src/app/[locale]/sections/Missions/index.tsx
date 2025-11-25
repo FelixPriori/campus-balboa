@@ -1,11 +1,10 @@
-'use client'
 import styles from './styles.module.scss'
-import MissionsCard from '../../components/MissionCard'
+import MissionsCard from '../../../_components/MissionCard'
 import { PageSectionProps } from '..'
-import { useEffect, useState } from 'react'
 import { MISSION } from './query'
-import { InfinitySpin } from 'react-loader-spinner'
 import { getCollectionBySectionId } from '@/app/_lib/api'
+import { Suspense } from 'react'
+import Fallback from './Fallback'
 
 type Mission = {
 	sys: {
@@ -18,43 +17,29 @@ type Mission = {
 	}
 }
 
-export default function MissionsSection({
+export default async function MissionsSection({
 	id,
 	title,
 	anchor,
 	locale,
 }: PageSectionProps) {
-	const [missions, setMissions] = useState([])
-
-	useEffect(() => {
-		const getMissionsCollection = async () => {
-			const missionsCollection = await getCollectionBySectionId(
-				id,
-				locale,
-				MISSION,
-			)
-			setMissions(missionsCollection)
-		}
-
-		getMissionsCollection()
-	}, [id, locale])
+	const missions = await getCollectionBySectionId(id, locale, MISSION)
 
 	return (
 		<section id={anchor} className={styles.missionsSection}>
 			<div className={styles.content}>
 				<h2 className={styles.missionsTitle}>{title}</h2>
 				<div className={styles.missionsContainer}>
-					{missions.length ? (
-						missions.map((mission: Mission) => (
-							<MissionsCard
-								key={mission.sys.id}
-								title={mission.title}
-								content={mission.content}
-							/>
-						))
-					) : (
-						<InfinitySpin width="200" color="var(--color-primary)" />
-					)}
+					<Suspense fallback={<Fallback />}>
+						{missions.length &&
+							missions.map((mission: Mission) => (
+								<MissionsCard
+									key={mission.sys.id}
+									title={mission.title}
+									content={mission.content}
+								/>
+							))}
+					</Suspense>
 				</div>
 			</div>
 		</section>
