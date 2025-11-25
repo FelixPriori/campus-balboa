@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Footer } from './sections'
+import { Footer } from '@/app/_sections'
 import Main from '@/app/_layout/main'
 import CampusLogo from '@/app/_assets/svgs/campus-logo'
 import LanguageSwitcher from '@/app/_components/LanguageSwitcher'

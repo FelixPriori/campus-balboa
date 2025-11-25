@@ -1,5 +1,5 @@
 import styles from './styles.module.scss'
-import MissionsCard from '../../../_components/MissionCard'
+import MissionsCard from '../../_components/MissionCard'
 import { PageSectionProps } from '..'
 import { MISSION } from './query'
 import { getCollectionBySectionId } from '@/app/_lib/api'

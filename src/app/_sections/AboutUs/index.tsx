@@ -1,5 +1,5 @@
 import styles from './styles.module.scss'
-import AdministratorCard from '../../../_components/AdministratorCard'
+import AdministratorCard from '../../_components/AdministratorCard'
 import { PageSectionProps } from '..'
 import { getCollectionBySectionId } from '@/app/_lib/api'
 import { ADMINISTRATOR } from './query'

@@ -1,4 +1,4 @@
-import Skeleton from '../../../_components/Skeleton'
+import Skeleton from '../../_components/Skeleton'
 import styles from './styles.module.scss'
 
 export default function Fallback() {

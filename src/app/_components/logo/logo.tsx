@@ -1,5 +1,5 @@
 import ObnlSvg from '@/app/_assets/svgs/obnl'
-import styling from './logo.module.css'
+import styling from './styles.module.scss'
 
 export default function Logo() {
 	return (

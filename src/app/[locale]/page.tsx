@@ -1,5 +1,4 @@
 import Main from '@/app/_layout/main'
-import sectionsRenderer, { Hero, Footer } from './sections'
 import { getPageBySlug, getPageMetaDataByPageSlug } from '@/app/_lib/api'
 import { PAGE_FIELDS_QUERY } from '@/app/_lib/queries'
 import { buildPageMetaData } from '@/app/_assets/data/buildPageMetaData'
@@ -7,6 +6,7 @@ import LanguageSwitcher from '@/app/_components/LanguageSwitcher'
 import CampusLogo from '@/app/_assets/svgs/campus-logo'
 import { Locales } from '@/i18n'
 import { getDictionary } from '../dictionaries'
+import sectionsRenderer, { Hero, Footer } from '../_sections'
 
 type Props = {
 	params: Promise<{ locale: string }>

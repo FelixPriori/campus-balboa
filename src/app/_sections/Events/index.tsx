@@ -1,4 +1,4 @@
-import EventCard from '../../../_components/EventCard'
+import EventCard from '../../_components/EventCard'
 import { PageSectionProps } from '..'
 import { getCollectionBySectionId } from '@/app/_lib/api'
 import { EVENT } from './query'
