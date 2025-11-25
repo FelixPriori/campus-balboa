@@ -1,6 +1,6 @@
 import DonateButton from '@/app/_components/paypal/DonateButton'
-import LandAcknowledgement from '../../components/LandAcknowledgement'
-import SocialMedia, { ISocialMedia } from '../../components/SocialMedia'
+import LandAcknowledgement from '../../_components/LandAcknowledgement'
+import SocialMedia, { ISocialMedia } from '../../_components/SocialMedia'
 import styles from './styles.module.scss'
 import { DictionaryType } from '@/app/dictionaries'
 

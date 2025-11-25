@@ -1,5 +1,22 @@
 @use '@/app/_layout/breakpoints.scss' as breakpoint;
 
+.featuredFallback {
+	height: 500px;
+	width: 100%;
+	max-width: 500px;
+	border-radius: var(--border-radius);
+	overflow: hidden;
+	opacity: 0.8;
+
+	@media only screen and (max-width: breakpoint.$breakpoint-medium) {
+		max-width: 350px;
+	}
+
+	@media only screen and (max-width: breakpoint.$breakpoint-small) {
+		max-width: 100%;
+	}
+}
+
 .featuredSection {
 	position: relative;
 	display: flex;

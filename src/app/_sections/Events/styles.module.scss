@@ -1,5 +1,14 @@
 @use '@/app/_layout/breakpoints.scss' as breakpoint;
 
+.eventsFallback {
+	width: 100%;
+	min-width: 500px;
+	height: 200px;
+	border-radius: var(--border-radius);
+	overflow: hidden;
+	opacity: 0.8;
+}
+
 .eventsSection {
 	min-height: 700px;
 	background-image: url('/wave-bottom.png'), url('/circle-overlap.png');

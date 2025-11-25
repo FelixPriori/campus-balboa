@@ -6,6 +6,7 @@ export const EVENT = `
         title
         dark
         tagline
+        startDate
         image {
             ${IMAGE}
         }

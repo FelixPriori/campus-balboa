@@ -6,7 +6,7 @@ import MissionsSection from './Missions'
 import AboutUsSection from './AboutUs'
 import Footer from './Footer'
 import { Locale } from '@/i18n'
-import { DictionaryType, getDictionary } from '@/app/dictionaries'
+import { DictionaryType } from '@/app/dictionaries'
 
 export interface PageSectionProps {
 	title: string

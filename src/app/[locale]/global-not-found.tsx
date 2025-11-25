@@ -1,10 +1,10 @@
 import Image from 'next/image'
-import { Footer } from './sections'
+import { Footer } from '@/app/_sections'
 import Main from '@/app/_layout/main'
 import CampusLogo from '@/app/_assets/svgs/campus-logo'
 import LanguageSwitcher from '@/app/_components/LanguageSwitcher'
-import BackButton from './components/BackButton'
-import { Locales, locales } from '@/i18n'
+import BackButton from '../_components/BackButton'
+import { Locales } from '@/i18n'
 import { getDictionary } from '../dictionaries'
 import Link from 'next/link'
 
