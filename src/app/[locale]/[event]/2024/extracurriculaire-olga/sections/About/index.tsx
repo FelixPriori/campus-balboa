@@ -96,7 +96,7 @@ const PartnersBlock = ({ title, img, link }: PartnerBlock) => {
 				<div className={styles.titleContainer}>
 					<h4>{title}</h4>
 				</div>
-				<Image src={img.url} alt={img.alt} width={100} height={100} />
+				<Image src={img.url} alt={img.alt} width={1080} height={1080} />
 			</a>
 		</li>
 	)
@@ -126,8 +126,8 @@ export default function About({
 							<div className={styles.avatar}>
 								<Image
 									src="/olga-pe-avatar.png"
-									width={100}
-									height={100}
+									width={1080}
+									height={1080}
 									alt={aboutSection.instructors.olga.avatarAlt}
 								/>
 							</div>
@@ -147,8 +147,8 @@ export default function About({
 							<div className={styles.avatar}>
 								<Image
 									src="/felix-pe-avatar.png"
-									width={100}
-									height={100}
+									width={1080}
+									height={1080}
 									alt={aboutSection.instructors.felix.avatarAlt}
 								/>
 							</div>

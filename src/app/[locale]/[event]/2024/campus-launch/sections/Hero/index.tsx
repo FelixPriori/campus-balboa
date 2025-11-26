@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import styles from './styles.module.scss'
-import CtaButton from '../../components/CtaButton'
+// import CtaButton from '../../components/CtaButton'
 import { DictionaryType } from '@/app/dictionaries'
 
 export default function Hero({
@@ -14,8 +14,8 @@ export default function Hero({
 				<div className={styles.imgWrapper}>
 					<Image
 						src="/launch-party.png"
-						width={200}
-						height={200}
+						width={1080}
+						height={1080}
 						alt="Launch party img"
 					/>
 				</div>
@@ -23,11 +23,11 @@ export default function Hero({
 					<p className={styles.date}>{headerSection.date}</p>
 					<h1>{headerSection.title}</h1>
 					<p className={styles.comingSoon}>{headerSection.comingSoon}</p>
-					<CtaButton
+					{/* <CtaButton
 						href={headerSection.cta.href}
 						ariaLabel={headerSection.cta.ariaLabel}
 						text={headerSection.cta.text}
-					/>
+					/> */}
 				</div>
 			</div>
 		</header>

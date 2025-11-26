@@ -1,5 +1,5 @@
 import styles from './styles.module.scss'
-import CtaButton from '../../components/CtaButton'
+// import CtaButton from '../../components/CtaButton'
 import { DictionaryType } from '@/app/dictionaries'
 
 const pricing = ['tier1', 'tier2', 'dance'] as const
@@ -71,13 +71,13 @@ export default function Prices({
 						</ul>
 					</div>
 				</div>
-				<div className={styles.cta}>
+				{/* <div className={styles.cta}>
 					<CtaButton
 						href={pricesSection.cta.href}
 						ariaLabel={pricesSection.cta.ariaLabel}
 						text={pricesSection.cta.text}
 					/>
-				</div>
+				</div> */}
 			</div>
 		</section>
 	)

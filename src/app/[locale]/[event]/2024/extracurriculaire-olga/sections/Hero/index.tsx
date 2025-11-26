@@ -13,7 +13,7 @@ export default function Hero({
 		<header className={styles.hero}>
 			<div className={styles.card}>
 				<div className={styles.imgWrapper}>
-					<Image src="/olga.jpg" width={200} height={200} alt="Olga" />
+					<Image src="/olga.jpg" width={1080} height={1080} alt="Olga" />
 				</div>
 				<div className={styles.content}>
 					<p className={styles.date}>{headerSection.date}</p>
