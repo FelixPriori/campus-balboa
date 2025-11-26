@@ -1,31 +1,17 @@
 import DonateButton from '@/app/_components/paypal/DonateButton'
 import LandAcknowledgement from '../../_components/LandAcknowledgement'
-import SocialMedia, { ISocialMedia } from '../../_components/SocialMedia'
 import styles from './styles.module.scss'
-import { DictionaryType } from '@/app/dictionaries'
-
-type FooterProps = {
-	contact: string
-	contactLink: {
-		href: string
-		text: string
-	}
-	copyright: string
-	socialMediasCollection: {
-		items: ISocialMedia[]
-	}
-	paypalButton: DictionaryType['Components']['paypal']
-	landAcknowledgement: DictionaryType['LandAcknowledgement']
-}
+import { FooterSection } from '@/app/_types/footer'
+import SocialMedia from '@/app/_components/SocialMedia'
 
 export default function Footer({
 	contact,
 	contactLink,
 	copyright,
 	socialMediasCollection,
-	paypalButton,
+	donateButton,
 	landAcknowledgement,
-}: FooterProps) {
+}: FooterSection) {
 	return (
 		<footer className={styles.footerSection}>
 			<div className={styles.content}>
@@ -41,7 +27,7 @@ export default function Footer({
 					{socialMediasCollection?.items?.map(sm => (
 						<SocialMedia key={sm.sys.id} {...sm} />
 					))}
-					<DonateButton paypalButton={paypalButton} />
+					<DonateButton donateButton={donateButton} />
 				</div>
 			</div>
 		</footer>

@@ -84,7 +84,11 @@ export const getPageMetaDataQuery = (slug: string | null, locale: string) => `
     }
 `
 
-export const getPageSectionQuery = (id: string | null, locale: string, fieldsQuery: string) => `
+export const getPageSectionQuery = (
+	id: string | null,
+	locale: string,
+	fieldsQuery: string,
+) => `
     query {
         pageSection(id: "${id}", locale: "${locale}") {
             title
@@ -98,7 +102,33 @@ export const getPageSectionQuery = (id: string | null, locale: string, fieldsQue
     }
 `
 
-export const getBasePageQuery = (slug: string | null, locale: string, fieldsQuery: string): string => `
+export const getEmblaQuery = (locale: string) => `
+    query {
+        emblaCollection(locale: "${locale}", limit: 1) {
+            items {
+                changeSlide
+                nextSlide
+                prevSlide
+            }
+        }
+    }
+`
+
+export const getGoogleCalendarQuery = (locale: string) => `
+    query {
+        googleCalendarCollection(locale: "${locale}", limit: 1) {
+            items {
+                iFrameTitle
+            }
+        }
+    }
+`
+
+export const getBasePageQuery = (
+	slug: string | null,
+	locale: string,
+	fieldsQuery: string,
+): string => `
     query {
         pageCollection(locale: "${locale}", where: {slug: "${slug}"}, limit: 1) {
             items {
@@ -124,6 +154,10 @@ export const getBasePageQuery = (slug: string | null, locale: string, fieldsQuer
                             ${ID}
                             ${SOCIAL_MEDIA}
                         }
+                    }
+                    landAcknowledgement{
+                        title
+                        text
                     }
                 }
                 ${fieldsQuery}

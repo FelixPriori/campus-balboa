@@ -1,16 +1,16 @@
 import Image from 'next/image'
 import styles from './styles.module.scss'
-import { DictionaryType } from '@/app/dictionaries'
+import { DonateButtonType } from '@/app/_types/footer'
 
 export default function DonateButton({
-	paypalButton,
+	donateButton,
 }: {
-	paypalButton: DictionaryType['Components']['paypal']
+	donateButton: DonateButtonType
 }) {
 	return (
 		<a
 			className={styles.donateButton}
-			href="https://www.paypal.com/donate/?hosted_button_id=SL926PKCWSHV8"
+			href={donateButton.href}
 			rel="noreferrer"
 			target="_blank"
 		>
@@ -18,9 +18,9 @@ export default function DonateButton({
 				src="/paypal-monogram-full-color.png"
 				width={18}
 				height={18}
-				alt={paypalButton.logoAlt}
+				alt={donateButton.iconAlt}
 			/>
-			{paypalButton.donate}
+			{donateButton.text}
 		</a>
 	)
 }

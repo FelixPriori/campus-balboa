@@ -38,10 +38,6 @@
 		"changeLang": "FR",
 		"registerCta": "Register"
 	},
-	"LandAcknowledgement": {
-		"title": "Land Acknowledgement",
-		"text": "Campus Balboa recognizes that the land on which we are hosted: Tiohtià:ke/Montréal, stands on the unceded territory of the Kanien’kehá:ka/Mohawk nation. This land has been a place of gathering for many First Nations since time immemorial."
-	},
 	"Events": {
 		"2024": {
 			"Olga": {
@@ -472,20 +468,6 @@
 				"closed": "The workshop is over, thank you all!",
 				"copyright": "©2024 Campus Balboa"
 			}
-		}
-	},
-	"Components": {
-		"paypal": {
-			"donate": "Donate",
-			"logoAlt": "PayPal logo"
-		},
-		"embla": {
-			"changeSlide": "Jump to slide {{slideNum}}",
-			"nextSlide": "Next slide",
-			"prevSlide": "Previous slide"
-		},
-		"gcal": {
-			"iframeTitle": "Balboa in Montréal / Tiohtià:ke Google Calendar"
 		}
 	}
 }

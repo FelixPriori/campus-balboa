@@ -4,8 +4,8 @@ import { useEffect, useState } from 'react'
 import useMapSize from '@/app/_hooks/useMapSize'
 import { InfinitySpin } from 'react-loader-spinner'
 import useResponsive from '@/app/_hooks/useResponsive'
-import { PageSectionProps } from '..'
-import { DictionaryType } from '@/app/dictionaries'
+import { GoogleCalendarText } from '@/app/_types/components'
+import { PageSectionProps } from '@/app/_types/sections'
 
 const buildMapUrl = (locale: string, isMobile: boolean) =>
 	`https://calendar.google.com/calendar/embed?hl=${locale}&showCalendars=0&showPrint=0${
@@ -17,7 +17,7 @@ const buildMapUrl = (locale: string, isMobile: boolean) =>
 	}&src=Y181NWIzOTE2YTcxNWIyYzg1MTBmYzY5MmQ1M2M1NWMzZDc4OWNjNDIzNDA5MzIxZGEyNjJmM2I5MzZmNzQyOGZkQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23264653`
 
 interface CalendarProps extends PageSectionProps {
-	gcal: DictionaryType['Components']['gcal']
+	gcal: GoogleCalendarText
 }
 
 export default function Calendar({
@@ -52,7 +52,7 @@ export default function Calendar({
 					<InfinitySpin width="200" color="var(--color-primary)" />
 				) : (
 					<iframe
-						title={gcal.iframeTitle}
+						title={gcal.iFrameTitle}
 						src={mapUrl}
 						style={{ border: 0, width: '100%', height: '100%' }}
 						width={mapSize?.width ?? 0}
