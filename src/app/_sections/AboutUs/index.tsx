@@ -1,27 +1,11 @@
 import styles from './styles.module.scss'
 import AdministratorCard from '../../_components/AdministratorCard'
-import { PageSectionProps } from '..'
 import { getCollectionBySectionId } from '@/app/_lib/api'
 import { ADMINISTRATOR } from './query'
 import { Suspense } from 'react'
 import Fallback from './Fallback'
-
-type Administrator = {
-	sys: {
-		id: string
-	}
-	avatar: {
-		url: string
-		title: string
-	}
-	name: string
-	pronouns: string
-	title: string
-	bio: {
-		json: any
-		links: any
-	}
-}
+import { PageSectionProps } from '@/app/_types/sections'
+import { IAdministrator } from '@/app/_types/administrator'
 
 export default async function AboutUsSection({
 	id,
@@ -42,7 +26,7 @@ export default async function AboutUsSection({
 				<div className={styles.administratorsContainer}>
 					<Suspense fallback={<Fallback />}>
 						{administrators.length &&
-							administrators.map((administrator: Administrator) => (
+							administrators.map((administrator: IAdministrator) => (
 								<AdministratorCard
 									key={administrator.sys.id}
 									avatar={administrator.avatar}

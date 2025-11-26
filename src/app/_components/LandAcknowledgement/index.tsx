@@ -1,10 +1,10 @@
-import { DictionaryType } from '@/app/dictionaries'
+import { LandAcknowledgementType } from '@/app/_types/footer'
 import styles from './styles.module.scss'
 
 export default function LandAknowledgement({
 	landAcknowledgement,
 }: {
-	landAcknowledgement: DictionaryType['LandAcknowledgement']
+	landAcknowledgement: LandAcknowledgementType
 }) {
 	return (
 		<div className={styles.landAcknowledgement}>

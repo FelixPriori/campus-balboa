@@ -1,11 +1,11 @@
 import EventCard from '../../_components/EventCard'
-import { PageSectionProps } from '..'
 import { getCollectionBySectionId } from '@/app/_lib/api'
 import { EVENT } from './query'
 import type { CampusEvent } from '@/app/_types/event'
 import { Suspense } from 'react'
 import Fallback from './Fallback'
 import styles from './styles.module.scss'
+import { PageSectionProps } from '@/app/_types/sections'
 
 export default async function Events({
 	id,

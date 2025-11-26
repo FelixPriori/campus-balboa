@@ -1,72 +1,116 @@
-import { getBasePageQuery, getPageMetaDataQuery, getPageSectionQuery } from "./queries"
+import {
+	getBasePageQuery,
+	getEmblaQuery,
+	getGoogleCalendarQuery,
+	getPageMetaDataQuery,
+	getPageSectionQuery,
+} from './queries'
 
 async function fetchGraphQL(query: string, preview = false): Promise<any> {
-  return fetch(
-    `https://graphql.contentful.com/content/v1/spaces/${process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID}/environments/${process.env.NEXT_PUBLIC_CONTENTFUL_ENVIRONMENT_ID}`,
-    {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${
-          preview
-            ? process.env.NEXT_PUBLIC_CONTENTFUL_PREVIEW_ACCESS_TOKEN
-            : process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN
-        }`,
-      },
-      body: JSON.stringify({ query }),
-    }
-  )
-  .then((response) => response.json())
+	return fetch(
+		`https://graphql.contentful.com/content/v1/spaces/${process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID}/environments/${process.env.NEXT_PUBLIC_CONTENTFUL_ENVIRONMENT_ID}`,
+		{
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+				Authorization: `Bearer ${
+					preview
+						? process.env.NEXT_PUBLIC_CONTENTFUL_PREVIEW_ACCESS_TOKEN
+						: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN
+				}`,
+			},
+			body: JSON.stringify({ query }),
+		},
+	).then(response => response.json())
 }
 
 function extractPage(fetchResponse: any): any {
-  return fetchResponse?.data?.pageCollection?.items?.[0]
+	return fetchResponse?.data?.pageCollection?.items?.[0]
 }
 
 function extractPageSection(fetchResponse: any): any {
-  return fetchResponse?.data?.pageSectionCollection?.items?.[0]
+	return fetchResponse?.data?.pageSectionCollection?.items?.[0]
 }
 
 export function extractCollection(section: any) {
-  return section?.componentsCollection?.items
+	return section?.componentsCollection?.items
 }
 
 export function extractPageMetaData(fetchResponse: any): any {
-  return fetchResponse?.data?.pageCollection?.items?.[0]?.pageMetaData
+	return fetchResponse?.data?.pageCollection?.items?.[0]?.pageMetaData
 }
 
-
-export async function getPreviewPageBySlug(slug: string | null, locale: string, fieldsQuery: string): Promise<any> {
-  const entry = await fetchGraphQL(getBasePageQuery(slug,locale, fieldsQuery), true)
-  return extractPage(entry)
+export async function getPreviewPageBySlug(
+	slug: string | null,
+	locale: string,
+	fieldsQuery: string,
+): Promise<any> {
+	const entry = await fetchGraphQL(
+		getBasePageQuery(slug, locale, fieldsQuery),
+		true,
+	)
+	return extractPage(entry)
 }
 
-export async function getPageBySlug(slug: string, locale: string, fieldsQuery: string): Promise<any> {
-  const entry = await fetchGraphQL(getBasePageQuery(slug, locale, fieldsQuery))
+export async function getPageBySlug(
+	slug: string,
+	locale: string,
+	fieldsQuery: string,
+): Promise<any> {
+	const entry = await fetchGraphQL(getBasePageQuery(slug, locale, fieldsQuery))
 
-  if (entry.errors) {
-    entry.errors.forEach((e: any) => console.error(e))
-  }
+	if (entry.errors) {
+		entry.errors.forEach((e: any) => console.error(e))
+	}
 
-  return extractPage(entry)
+	return extractPage(entry)
 }
 
-export async function getCollectionBySectionId(sectionId: string | null, locale: string, fieldsQuery: string): Promise<any> {
-  const entry = await fetchGraphQL(getPageSectionQuery(sectionId, locale, fieldsQuery))
+export async function getCollectionBySectionId(
+	sectionId: string | null,
+	locale: string,
+	fieldsQuery: string,
+): Promise<any> {
+	const entry = await fetchGraphQL(
+		getPageSectionQuery(sectionId, locale, fieldsQuery),
+	)
 
-  if (entry.errors) {
-    entry.errors.forEach((e: any) => console.error(e))
-  }
+	if (entry.errors) {
+		entry.errors.forEach((e: any) => console.error(e))
+	}
 
-  return extractCollection(entry.data.pageSection)
+	return extractCollection(entry.data.pageSection)
 }
 
-export async function getPageMetaDataByPageSlug(slug: string | null, locale: string): Promise<any> {
-  const entry = await fetchGraphQL(getPageMetaDataQuery(slug, locale))
+export async function getEmbla(locale: string) {
+	const entry = await fetchGraphQL(getEmblaQuery(locale))
 
-  if (entry.errors) {
-    entry.errors.forEach((e: any) => console.error(e))
-  }
+	if (entry.errors) {
+		entry.errors.forEach((e: any) => console.error(e))
+	}
 
-  return extractPageMetaData(entry);
+	return entry.data.emblaCollection.items[0]
+}
+
+export async function getGoogleCalendar(locale: string) {
+	const entry = await fetchGraphQL(getGoogleCalendarQuery(locale))
+
+	if (entry.errors) {
+		entry.errors.forEach((e: any) => console.error(e))
+	}
+
+	return entry.data.googleCalendarCollection.items[0]
+}
+
+export async function getPageMetaDataByPageSlug(
+	slug: string | null,
+	locale: string,
+): Promise<any> {
+	const entry = await fetchGraphQL(getPageMetaDataQuery(slug, locale))
+
+	if (entry.errors) {
+		entry.errors.forEach((e: any) => console.error(e))
+	}
+
+	return extractPageMetaData(entry)
 }

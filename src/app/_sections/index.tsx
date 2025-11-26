@@ -6,27 +6,12 @@ import MissionsSection from './Missions'
 import AboutUsSection from './AboutUs'
 import Footer from './Footer'
 import { Locale } from '@/i18n'
-import { DictionaryType } from '@/app/dictionaries'
+import { getEmbla, getGoogleCalendar } from '../_lib/api'
 
-export interface PageSectionProps {
-	title: string
-	anchor: string
-	id: string
-	helpText?: string
-	locale: Locale
-	content?: {
-		json: any
-		links: any
-	}
-}
-
-export default function sectionsRenderer(
-	section: any,
-	locale: Locale,
-	dictionary: DictionaryType,
-) {
+export default async function sectionsRenderer(section: any, locale: Locale) {
 	switch (section.sectionName) {
-		case 'featured':
+		case 'featured': {
+			const embla = await getEmbla(locale)
 			return (
 				<FeaturedSection
 					key={section.sys.id}
@@ -34,10 +19,12 @@ export default function sectionsRenderer(
 					title={section.title}
 					anchor={section.anchor}
 					locale={locale}
-					embla={dictionary.Components.embla}
+					embla={embla}
 				/>
 			)
-		case 'calendar':
+		}
+		case 'calendar': {
+			const googleCalendar = await getGoogleCalendar(locale)
 			return (
 				<CalendarSection
 					key={section.sys.id}
@@ -45,9 +32,10 @@ export default function sectionsRenderer(
 					title={section.title}
 					anchor={section.anchor}
 					locale={locale}
-					gcal={dictionary.Components.gcal}
+					gcal={googleCalendar}
 				/>
 			)
+		}
 		case 'events':
 			return (
 				<EventsSection

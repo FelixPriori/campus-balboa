@@ -1,15 +1,15 @@
 import { getCollectionBySectionId } from '@/app/_lib/api'
-import { PageSectionProps } from '..'
 import { FEATURED_SLIDE } from './query'
 import EmblaContainer from '../../_components/EmblaContainer'
 import FeaturedSlides from '../../_components/FeaturedSlides'
-import { DictionaryType } from '@/app/dictionaries'
 import { Suspense } from 'react'
 import styles from './styles.module.scss'
 import Fallback from './Fallback'
+import { EmblaText } from '@/app/_types/components'
+import { PageSectionProps } from '@/app/_types/sections'
 
 interface FeaturedProps extends PageSectionProps {
-	embla: DictionaryType['Components']['embla']
+	embla: EmblaText
 }
 
 export default async function Featured({

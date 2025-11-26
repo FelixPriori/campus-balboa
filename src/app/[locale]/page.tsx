@@ -5,8 +5,8 @@ import { buildPageMetaData } from '@/app/_assets/data/buildPageMetaData'
 import LanguageSwitcher from '@/app/_components/LanguageSwitcher'
 import CampusLogo from '@/app/_assets/svgs/campus-logo'
 import { Locales } from '@/i18n'
-import { getDictionary } from '../dictionaries'
 import sectionsRenderer, { Hero, Footer } from '../_sections'
+import { notFound } from 'next/navigation'
 
 type Props = {
 	params: Promise<{ locale: string }>
@@ -46,10 +46,9 @@ export async function generateMetadata({ params }: Props) {
 export default async function Home({ params }: Props) {
 	const locale = (await params).locale as Locales
 	const pageData = await getPageBySlug(locale, locale, PAGE_FIELDS_QUERY)
-	const dictionary = await getDictionary(locale)
 
 	if (!pageData?.sectionsCollection) {
-		return <></>
+		return notFound()
 	}
 
 	return (
@@ -60,15 +59,11 @@ export default async function Home({ params }: Props) {
 			</nav>
 			<Hero {...pageData?.hero} />
 			<Main>
-				{pageData?.sectionsCollection?.items.map((s: any) =>
-					sectionsRenderer(s, locale, dictionary),
+				{pageData?.sectionsCollection?.items.map(
+					async (s: any) => await sectionsRenderer(s, locale),
 				)}
 			</Main>
-			<Footer
-				{...pageData?.footer}
-				landAcknowledgement={dictionary.LandAcknowledgement}
-				paypalButton={dictionary.Components.paypal}
-			/>
+			<Footer {...pageData?.footer} />
 		</div>
 	)
 }

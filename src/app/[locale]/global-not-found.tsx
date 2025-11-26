@@ -30,9 +30,7 @@ export async function generateMetadata({ params }: Props) {
 
 export default async function NotFoundPage({ params }: Props) {
 	const locale = (await params).locale as Locales
-	const { NotFoundPage, Components, LandAcknowledgement } = await getDictionary(
-		locale,
-	)
+	const { NotFoundPage } = await getDictionary(locale)
 
 	return (
 		<div className="not-found">
@@ -48,54 +46,14 @@ export default async function NotFoundPage({ params }: Props) {
 						className="not-found-image"
 						src="/404.png"
 						alt="404"
-						width={100}
-						height={100}
+						width={1116}
+						height={972}
 					/>
 					<h1>{NotFoundPage.title}</h1>
 					<BackButton>{NotFoundPage.return}</BackButton>
 					<Link href="/">{NotFoundPage.home}</Link>
 				</div>
 			</Main>
-			<Footer
-				contact={NotFoundPage.footer.contact}
-				contactLink={{
-					href: NotFoundPage.footer.contactLink.href,
-					text: NotFoundPage.footer.contactLink.text,
-				}}
-				copyright={NotFoundPage.footer.copyright}
-				socialMediasCollection={{
-					items: [
-						{
-							sys: {
-								id: NotFoundPage.footer.socialMedia.facebook.id,
-							},
-							accessibilityDescription:
-								NotFoundPage.footer.socialMedia.facebook
-									.accessibilityDescription,
-							href: NotFoundPage.footer.socialMedia.facebook.href,
-							logo: {
-								url: NotFoundPage.footer.socialMedia.facebook.logo.url,
-								title: NotFoundPage.footer.socialMedia.facebook.logo.title,
-							},
-						},
-						{
-							sys: {
-								id: NotFoundPage.footer.socialMedia.instagram.id,
-							},
-							accessibilityDescription:
-								NotFoundPage.footer.socialMedia.instagram
-									.accessibilityDescription,
-							href: NotFoundPage.footer.socialMedia.instagram.href,
-							logo: {
-								url: NotFoundPage.footer.socialMedia.instagram.logo.url,
-								title: NotFoundPage.footer.socialMedia.instagram.logo.title,
-							},
-						},
-					],
-				}}
-				paypalButton={Components.paypal}
-				landAcknowledgement={LandAcknowledgement}
-			/>
 		</div>
 	)
 }

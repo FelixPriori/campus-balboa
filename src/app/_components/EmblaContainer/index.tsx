@@ -4,7 +4,7 @@ import { ReactNode, useCallback, useEffect, useState } from 'react'
 import styles from './styles.module.scss'
 import ArrowLeft from '@/app/_assets/svgs/arrow-left'
 import ArrowRight from '@/app/_assets/svgs/arrow-right'
-import { DictionaryType } from '@/app/dictionaries'
+import { EmblaText } from '@/app/_types/components'
 
 export default function EmblaContainer({
 	slidesNumber,
@@ -12,7 +12,7 @@ export default function EmblaContainer({
 	children,
 }: {
 	slidesNumber: number
-	embla: DictionaryType['Components']['embla']
+	embla: EmblaText
 	children: ReactNode
 }) {
 	const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true })

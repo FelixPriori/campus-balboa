@@ -2,16 +2,16 @@ import { EntrySys } from 'contentful'
 
 export type CampusEvent = {
 	sys: EntrySys
-	title: string
-	dark: boolean
-	tagline: string
-	startDate: string
+	title: EntryFieldType.Text
+	dark: EntryFieldType.Boolean
+	tagline: EntryFieldType.Text
+	startDate: EntryFieldType.Text
 	image: {
-		url: string
-		title: string
+		url: EntryFieldType.Text
+		title: EntryFieldType.Text
 	}
 	link: {
-		url: string
-		title: string
+		url: EntryFieldType.Text
+		title: EntryFieldType.Text
 	}
 }

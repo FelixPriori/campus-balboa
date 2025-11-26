@@ -38,10 +38,6 @@
 		"changeLang": "EN",
 		"registerCta": "S'enregistrer"
 	},
-	"LandAcknowledgement": {
-		"title": "Reconnaissance du territoire",
-		"text": "Campus Balboa tient à reconnaître que le territoire sur lequel nous tenons nos activités, Tiohtià:ke/Montréal, se se situe sur les terres autochtones non cédées des Kanien’kehá:ka/Mohawks et sert de lieu de rencontre et d’échange entre les Premières Nations depuis des temps immémoriaux."
-	},
 	"Events": {
 		"2024": {
 			"Olga": {
@@ -472,20 +468,6 @@
 				"closed": "L'atelier est terminé, merci à tous.tes !",
 				"copyright": "©2024 Campus Balboa"
 			}
-		}
-	},
-	"Components": {
-		"paypal": {
-			"donate": "Faire un don",
-			"logoAlt": "Logo de PayPal"
-		},
-		"embla": {
-			"changeSlide": "Voir la diapositive {{slideNum}}",
-			"nextSlide": "Diapositive suivante",
-			"prevSlide": "Diapositive précédente"
-		},
-		"gcal": {
-			"iframeTitle": "Calendrier Google du Balboa à Montréal / Tiohtià:ke"
 		}
 	}
 }
