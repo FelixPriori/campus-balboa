@@ -1,5 +1,5 @@
 import styles from './styles.module.scss'
-import CtaButton from '../../components/CtaButton'
+// import CtaButton from '../../components/CtaButton'
 import Image from 'next/image'
 import { DictionaryType } from '@/app/dictionaries'
 
@@ -237,13 +237,13 @@ export default function About({
 							))}
 						</ul>
 					</div>
-					<div className={`${styles.cardSection} ${styles.closed}`}>
+					{/* <div className={`${styles.cardSection} ${styles.closed}`}>
 						<CtaButton
 							href={aboutSection.cta.href}
 							ariaLabel={aboutSection.cta.ariaLabel}
 							text={aboutSection.cta.text}
 						/>
-					</div>
+					</div> */}
 				</div>
 			</div>
 		</section>
