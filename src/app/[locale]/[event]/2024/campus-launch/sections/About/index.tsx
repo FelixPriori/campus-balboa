@@ -74,7 +74,7 @@ const PartnersBlock = ({ title, img, link }: PartnerBlock) => {
 				<div className={styles.titleContainer}>
 					<h4>{title}</h4>
 				</div>
-				<Image src={img.url} alt={img.alt} width={100} height={100} />
+				<Image src={img.url} alt={img.alt} width={1080} height={1080} />
 			</a>
 		</li>
 	)
@@ -104,8 +104,8 @@ export default function About({
 									<figure>
 										<Image
 											src="/annabel-avatar.png"
-											width={100}
-											height={100}
+											width={1080}
+											height={1080}
 											alt={aboutSection.instructors.annabel.avatarAlt}
 										/>
 
@@ -122,8 +122,8 @@ export default function About({
 									<figure>
 										<Image
 											src="/dan-avatar.png"
-											width={100}
-											height={100}
+											width={1080}
+											height={1080}
 											alt={aboutSection.DJs.dan.avatarAlt}
 										/>
 										<figcaption>Credit: Braden Nesin</figcaption>
@@ -143,8 +143,8 @@ export default function About({
 								<div className={styles.avatar}>
 									<Image
 										src="/michael-avatar.png"
-										width={100}
-										height={100}
+										width={1080}
+										height={1080}
 										alt={aboutSection.DJs.michael.avatarAlt}
 									/>
 								</div>
@@ -158,8 +158,8 @@ export default function About({
 									<figure>
 										<Image
 											src="/dan-avatar.png"
-											width={100}
-											height={100}
+											width={1080}
+											height={1080}
 											alt={aboutSection.DJs.dan.avatarAlt}
 										/>
 										<figcaption>Credit: Braden Nesin</figcaption>

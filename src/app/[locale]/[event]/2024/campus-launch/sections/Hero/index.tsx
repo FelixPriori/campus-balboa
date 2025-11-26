@@ -14,8 +14,8 @@ export default function Hero({
 				<div className={styles.imgWrapper}>
 					<Image
 						src="/launch-party.png"
-						width={200}
-						height={200}
+						width={1080}
+						height={1080}
 						alt="Launch party img"
 					/>
 				</div>
