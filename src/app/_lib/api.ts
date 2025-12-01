@@ -1,6 +1,9 @@
 import {
 	getBasePageQuery,
 	getEmblaQuery,
+	getEventCollectionQuery,
+	getEventMetaDataQuery,
+	getEventPageQuery,
 	getGoogleCalendarQuery,
 	getPageMetaDataQuery,
 	getPageSectionQuery,
@@ -28,6 +31,17 @@ function extractPage(fetchResponse: any): any {
 	return fetchResponse?.data?.pageCollection?.items?.[0]
 }
 
+function extractEvent(fetchResponse: any): any {
+	return fetchResponse?.data?.eventCollection?.items?.[0]
+}
+
+function extractEventCollection(
+	fetchResponse: any,
+	collectionName: string,
+): any {
+	return fetchResponse?.data?.event?.[collectionName]?.items
+}
+
 function extractPageSection(fetchResponse: any): any {
 	return fetchResponse?.data?.pageSectionCollection?.items?.[0]
 }
@@ -38,6 +52,17 @@ export function extractCollection(section: any) {
 
 export function extractPageMetaData(fetchResponse: any): any {
 	return fetchResponse?.data?.pageCollection?.items?.[0]?.pageMetaData
+}
+
+export function extractSectionTitle(
+	fetchResponse: any,
+	collectionName: string,
+) {
+	return fetchResponse?.data?.event?.[`${collectionName}Title`]
+}
+
+export function extractEventMetaData(fetchResponse: any): any {
+	return fetchResponse?.data?.eventCollection?.items?.[0]?.metadata
 }
 
 export async function getPreviewPageBySlug(
@@ -64,6 +89,36 @@ export async function getPageBySlug(
 	}
 
 	return extractPage(entry)
+}
+
+export async function getEventPageBySlug(slug: string, locale: string) {
+	const entry = await fetchGraphQL(getEventPageQuery(slug, locale))
+
+	if (entry.errors) {
+		entry.errors.forEach((e: any) => console.error(e))
+	}
+
+	return extractEvent(entry)
+}
+
+export async function getCollectionByEventId(
+	eventId: string,
+	collectionName: string,
+	locale: string,
+	fieldsQuery: string,
+): Promise<any> {
+	const entry = await fetchGraphQL(
+		getEventCollectionQuery(eventId, collectionName, locale, fieldsQuery),
+	)
+
+	if (entry.errors) {
+		entry.errors.forEach((e: any) => console.error(e))
+	}
+
+	return {
+		sectionTitle: extractSectionTitle(entry, collectionName),
+		items: extractEventCollection(entry, `${collectionName}Collection`),
+	}
 }
 
 export async function getCollectionBySectionId(
@@ -113,4 +168,17 @@ export async function getPageMetaDataByPageSlug(
 	}
 
 	return extractPageMetaData(entry)
+}
+
+export async function getEventMetaDataBySlug(
+	slug: string | null,
+	locale: string,
+): Promise<any> {
+	const entry = await fetchGraphQL(getEventMetaDataQuery(slug, locale))
+
+	if (entry.errors) {
+		entry.errors.forEach((e: any) => console.error(e))
+	}
+
+	return extractEventMetaData(entry)
 }
