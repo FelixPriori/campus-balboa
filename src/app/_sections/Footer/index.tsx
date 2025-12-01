@@ -1,4 +1,4 @@
-import DonateButton from '@/app/_components/paypal/DonateButton'
+import DonateButton from '@/app/_components/PayPal/DonateButton'
 import LandAcknowledgement from '../../_components/LandAcknowledgement'
 import styles from './styles.module.scss'
 import { FooterSection } from '@/app/_types/footer'
