@@ -74,11 +74,117 @@ export const PAGE_META_DATA = `
     }
 `
 
+export const EVENT_META_DATA = `
+    metadata {
+        title
+        description
+        favicon {
+            ${IMAGE}
+        }
+        openGraphImage {
+            image {
+                title
+                ${IMAGE}
+            }
+        }
+    }
+`
+
+export const INSTRUCTOR = `
+    ${ID}
+    name
+    biography {
+        ${RICH_TEXT}
+    }
+    avatar {
+        title
+        ${IMAGE}
+    }
+`
+
+export const DJ = `
+    ${ID}
+    name
+    biography {
+        ${RICH_TEXT}
+    }
+    avatar {
+        title
+        ${IMAGE}
+    }
+`
+
+export const VENUE = `
+    ${ID}
+    name
+    venueAddress
+    purpose
+`
+
+export const PARTNER = `
+    ${ID}
+    title
+    link 
+    logo {
+        title
+        ${IMAGE}
+    }
+`
+
+export const EVENT_BLOCK = `
+    ${ID}
+    title
+    subtitle
+    description {
+        ${RICH_TEXT}
+    }
+    startTime
+    endTime
+    blockType
+`
+
+export const PRICE = `
+    ${ID}
+    tier
+    type
+    startTime
+    endTime
+    amount
+`
+
 export const getPageMetaDataQuery = (slug: string | null, locale: string) => `
     query {
         pageCollection(locale: "${locale}", where: {slug: "${slug}"}, limit: 1) {
             items {
                 ${PAGE_META_DATA}
+            }
+        }
+    }
+`
+
+export const getEventMetaDataQuery = (slug: string | null, locale: string) => `
+    query {
+        eventCollection(locale: "${locale}", where: {slug: "${slug}"}, limit: 1) {
+            items {
+                ${EVENT_META_DATA}
+            }
+        }
+    }
+`
+
+export const getEventCollectionQuery = (
+	eventId: string,
+	collectionName: string,
+	locale: string,
+	fieldsQuery: string,
+) => `
+    query {
+        event(id: "${eventId}", locale: "${locale}") {
+            ${collectionName}Title
+            ${collectionName}Collection(limit: 10) {
+                items {
+                    ${fieldsQuery}
+                }
             }
         }
     }
@@ -165,3 +271,63 @@ export const getBasePageQuery = (
         }
     }
 `
+
+export const getEventPageQuery = (
+	slug: string | null,
+	locale: string,
+): string => `
+    query {
+        eventCollection(locale: "${locale}", where: {slug: "${slug}"}, limit: 1) {
+            items {
+                ${ID}
+                title
+                slug
+                details {
+                    ${RICH_TEXT}
+                }
+                image {
+                    title
+                    ${IMAGE}
+                }
+                link {
+                    ${LINK}
+                }
+                startDate
+                endDate
+                closedText
+                registrationLink {
+                    ${LINK}
+                }
+                levelRequirement {
+                    title
+                    description {
+                        ${RICH_TEXT}
+                    }
+                    skills
+                }
+                copyright
+                aboutTitle
+                levelRequirementTitle
+            }
+        }
+    }
+`
+
+export const getEventScheduleQuery = (locale: string) =>
+	`
+    query {
+        eventCollection(locale: "${locale}", limit: 10) {
+             items {
+                ${ID}
+                title
+                subtitle
+                description {
+                    ${RICH_TEXT}
+                }
+                startTime
+                endTime
+                blockType
+            }
+        }
+    }
+    `
