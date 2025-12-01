@@ -1,8 +1,8 @@
-import DonateButton from '@/app/_components/PayPal/DonateButton'
 import LandAcknowledgement from '../../_components/LandAcknowledgement'
 import styles from './styles.module.scss'
 import { FooterSection } from '@/app/_types/footer'
 import SocialMedia from '@/app/_components/SocialMedia'
+import DonateButton from '@/app/_components/PayPal/DonateButton'
 
 export default function Footer({
 	contact,
