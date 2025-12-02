@@ -3,7 +3,7 @@
 
 	section,
 	header {
-		background-color: var(--campus-color-blanc);
+		background-color: var(--campus-color-canard);
 	}
 
 	h1,
@@ -30,9 +30,9 @@
 
 	h2 {
 		font-size: clamp(1.5rem, 2.5vw, 2rem);
+		color: var(--campus-color-blanc);
 		letter-spacing: 0.35rem;
 		margin-bottom: 3rem;
-		text-shadow: 1px 1px 2px var(--campus-color-blanc);
 		text-align: center;
 	}
 

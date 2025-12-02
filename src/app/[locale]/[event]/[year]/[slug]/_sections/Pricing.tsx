@@ -1,6 +1,5 @@
 import { EntrySys } from 'contentful'
 import styles from './styles.module.scss'
-import { Fragment } from 'react/jsx-runtime'
 import { formatDate } from '@/app/_util/dateUtils'
 import { Locale } from '@/i18n'
 import { formatPrice } from '@/app/_util/currencyUtils'
@@ -42,8 +41,10 @@ export default function Pricing({
 										<h3 className={styles.tier}>{pricing.tier}</h3>
 										<p className={`${styles.item} ${styles[pricing.type]}`}>
 											<span className={styles.itemTitle}>
-												{formatDate(pricing.startTime, locale)} -
-												{formatDate(pricing.endTime, locale)}
+												{`${formatDate(
+													pricing.startTime,
+													locale,
+												)} - ${formatDate(pricing.endTime, locale)}`}
 											</span>
 											<span className={styles.price}>
 												{formatPrice(pricing.amount, locale)}

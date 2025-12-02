@@ -29,9 +29,9 @@ export default function DJs({ dJsData, sectionTitle }: DJsProps) {
 				<h2>{sectionTitle}</h2>
 				<div className={styles.card}>
 					<div className={styles.cardSection}>
-						<div className={styles.instructors}>
+						<div className={styles.dJs}>
 							{dJsData.map(dj => (
-								<div key={dj.sys.id} className={styles.instructor}>
+								<div key={dj.sys.id} className={styles.dj}>
 									<div className={styles.avatar}>
 										<Image
 											src={dj.avatar.url}
