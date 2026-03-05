@@ -6,7 +6,7 @@ export const formatDate = (date: string, locale: Locale) => {
 	const dateFnLocale = locale === 'fr' ? frCA : enCA
 	return format(new Date(date), 'd LLLL u', {
 		locale: dateFnLocale,
-		timeZone: 'America/Toronto',
+		timeZone: 'America/New_York',
 	})
 }
 
@@ -14,6 +14,6 @@ export const formatClassTime = (date: string, locale: Locale) => {
 	const dateFnLocale = locale === 'fr' ? frCA : enCA
 	return format(new Date(date), 'd LLLL u, p', {
 		locale: dateFnLocale,
-		timeZone: 'America/Toronto',
+		timeZone: 'America/New_York',
 	})
 }
