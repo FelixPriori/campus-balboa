@@ -8,9 +8,15 @@ interface AboutProps {
 		links: any
 	}
 	sectionTitle: string
+	isClosed: boolean
 }
 
-export default function About({ details, closed, sectionTitle }: AboutProps) {
+export default function About({
+	details,
+	closed,
+	sectionTitle,
+	isClosed,
+}: AboutProps) {
 	return (
 		<section className={styles.aboutSection}>
 			<div className={styles.content}>
@@ -19,9 +25,11 @@ export default function About({ details, closed, sectionTitle }: AboutProps) {
 					<div className={styles.cardSection}>
 						<Markdown content={details} />
 					</div>
-					<div className={`${styles.cardSection} ${styles.closed}`}>
-						<p>{closed}</p>
-					</div>
+					{isClosed && (
+						<div className={`${styles.cardSection} ${styles.closed}`}>
+							<p>{closed}</p>
+						</div>
+					)}
 				</div>
 			</div>
 		</section>

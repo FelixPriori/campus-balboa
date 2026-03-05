@@ -8,6 +8,7 @@ import LevelRequirement from './_sections/LevelRequirement'
 import Footer from './_sections/Footer'
 import Navigation from './Navigation'
 import { notFound } from 'next/navigation'
+import { isPast } from 'date-fns'
 
 type Props = {
 	params: Promise<{
@@ -59,6 +60,7 @@ export default async function Olga({ params }: Props) {
 		'schedule',
 		'partners',
 	] as const
+	const isClosed = isPast(data.endDate)
 	return (
 		<div className={styles.eventPage}>
 			<Navigation locale={locale} />
@@ -70,11 +72,13 @@ export default async function Olga({ params }: Props) {
 				title={data.title}
 				closed={data.closedText}
 				locale={locale}
+				isClosed={isClosed}
 			/>
 			<About
 				details={data.details}
 				sectionTitle={data.aboutTitle}
 				closed={data.closedText}
+				isClosed={isClosed}
 			/>
 			<LevelRequirement
 				levelRequirement={data.levelRequirement}

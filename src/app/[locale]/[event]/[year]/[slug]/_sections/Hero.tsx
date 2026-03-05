@@ -11,6 +11,7 @@ interface HeroProps {
 	imgAlt: string
 	closed: string
 	locale: Locale
+	isClosed: boolean
 }
 
 export default function Hero({
@@ -21,6 +22,7 @@ export default function Hero({
 	imgAlt,
 	closed,
 	locale,
+	isClosed,
 }: HeroProps) {
 	return (
 		<header className={styles.hero}>
@@ -33,7 +35,7 @@ export default function Hero({
 						{formatDate(startDate, locale)} - {formatDate(endDate, locale)}
 					</p>
 					<h1>{title}</h1>
-					<p>{closed}</p>
+					{isClosed && <p>{closed}</p>}
 				</div>
 			</div>
 		</header>

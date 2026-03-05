@@ -41,6 +41,9 @@ export default function Instructors({
 											src={instructor.avatar.url}
 											width={1080}
 											height={1080}
+											style={{
+												objectFit: 'cover',
+											}}
 											alt={instructor.avatar.title}
 										/>
 									</div>
