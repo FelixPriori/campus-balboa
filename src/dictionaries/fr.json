@@ -1,4 +1,17 @@
 {
+	"PricingCard": {
+		"registrationOpensSoon": "Inscription bientôt disponible",
+		"registrationClosed": "Inscriptions fermées"
+	},
+	"Schedule": {
+		"blockTypes": {
+			"Class": "Cours",
+			"Dance": "Danse",
+			"Social": "Sociale",
+			"Other": "Autre",
+			"Extra": "Extra"
+		}
+	},
 	"NotFoundPage": {
 		"title": "Page non trouvée.",
 		"return": "Retour à la page précédente",

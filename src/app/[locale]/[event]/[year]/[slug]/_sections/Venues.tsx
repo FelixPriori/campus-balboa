@@ -18,7 +18,14 @@ const VenueBlock = ({ name, venueAddress, purpose }: Venue) => {
 		<li className={styles.locationBlock}>
 			<h4>{name}</h4>
 			<p className={styles.what}>{purpose}</p>
-			<p>{venueAddress}</p>
+			<a
+			className={styles.link}
+			href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${name}, ${venueAddress}`)}`}
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			{venueAddress}
+		</a>
 		</li>
 	)
 }

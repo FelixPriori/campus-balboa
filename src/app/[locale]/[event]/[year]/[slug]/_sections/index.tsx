@@ -15,10 +15,16 @@ import Venues from './Venues'
 import Schedule from './Schedule'
 import Partners from './Partners'
 
+interface EventContext {
+	isClosed: boolean
+	registrationLink: { href: string; text: string } | null
+}
+
 export default async function sectionsRenderer(
 	sectionName: string,
 	eventId: string,
 	locale: Locale,
+	eventContext?: EventContext,
 ) {
 	switch (sectionName) {
 		case 'instructors': {
@@ -42,6 +48,8 @@ export default async function sectionsRenderer(
 					pricingData={items}
 					sectionTitle={sectionTitle}
 					locale={locale}
+					isClosed={eventContext?.isClosed ?? false}
+					registrationLink={eventContext?.registrationLink ?? null}
 				/>
 			)
 		}

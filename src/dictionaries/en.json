@@ -1,4 +1,17 @@
 {
+	"PricingCard": {
+		"registrationOpensSoon": "Registration opens soon",
+		"registrationClosed": "Registration closed"
+	},
+	"Schedule": {
+		"blockTypes": {
+			"Class": "Class",
+			"Dance": "Dance",
+			"Social": "Social",
+			"Other": "Other",
+			"Extra": "Extra"
+		}
+	},
 	"NotFoundPage": {
 		"title": "Page not found.",
 		"return": "Go back to the previous page",

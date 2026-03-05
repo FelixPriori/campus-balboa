@@ -84,7 +84,12 @@ export default async function Olga({ params }: Props) {
 				levelRequirement={data.levelRequirement}
 				sectionTitle={data.levelRequirementTitle}
 			/>
-			{sections.map(section => sectionsRenderer(section, data.sys.id, locale))}
+			{sections.map(section =>
+				sectionsRenderer(section, data.sys.id, locale, {
+					isClosed,
+					registrationLink: data.registrationLink ?? null,
+				}),
+			)}
 			<Footer copyright={data.copyright} />
 		</div>
 	)

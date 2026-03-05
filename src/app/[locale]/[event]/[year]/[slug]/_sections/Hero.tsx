@@ -28,7 +28,13 @@ export default function Hero({
 		<header className={styles.hero}>
 			<div className={styles.card}>
 				<div className={styles.imgWrapper}>
-					<Image src={imgSrc} width={1080} height={1080} alt={imgAlt} />
+					<Image
+						loading="eager"
+						src={imgSrc}
+						width={1080}
+						height={1080}
+						alt={imgAlt}
+					/>
 				</div>
 				<div className={styles.content}>
 					<p className={styles.date}>
