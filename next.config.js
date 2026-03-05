@@ -4,6 +4,11 @@ module.exports = {
 	async redirects() {
 		return [
 			{
+				source: '/.well-known/:path*',
+				destination: '/404',
+				permanent: false,
+			},
+			{
 				source: '/en/:event/2024/mtl-bal-jam/:slug*',
 				destination: 'https://mtlbaljam.org/en',
 				permanent: true,
