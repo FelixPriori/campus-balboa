@@ -14,6 +14,13 @@ export const formatDate = (date: string, locale: Locale) => {
 	return format(new Date(year, month - 1, day), 'd LLLL u', { locale: dateFnLocale })
 }
 
+export const formatDateWithOrdinal = (date: string, locale: Locale) => {
+	const dateFnLocale = locale === 'fr' ? frCA : enCA
+	const [year, month, day] = date.slice(0, 10).split('-').map(Number)
+	const pattern = locale === 'fr' ? 'd LLLL u' : 'LLLL do, u'
+	return format(new Date(year, month - 1, day), pattern, { locale: dateFnLocale })
+}
+
 export const formatClassTime = (date: string, locale: Locale) => {
 	const dateFnLocale = locale === 'fr' ? frCA : enCA
 	return formatInTimeZone(new Date(date), extractOffset(date), 'd LLLL u, p', {

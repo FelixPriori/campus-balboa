@@ -156,6 +156,7 @@ export const PRICE = `
     startTime
     endTime
     amount
+    batch
 `
 
 export const getPageMetaDataQuery = (slug: string | null, locale: string) => `

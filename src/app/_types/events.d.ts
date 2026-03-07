@@ -20,6 +20,7 @@ export interface PricingData {
 	startTime: string
 	endTime: string
 	amount: number
+	batch: number
 }
 
 export interface Partner {

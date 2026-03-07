@@ -28,13 +28,14 @@ export default async function Pricing({
 			<div className={styles.content}>
 				<h2>{sectionTitle}</h2>
 				<ul className={styles.pricingCards}>
-					{displayed.map(pricing => (
+					{displayed.map(({ current, next }) => (
 						<PricingCard
-							key={pricing.sys.id}
-							tier={pricing.tier}
-							startTime={pricing.startTime}
-							endTime={pricing.endTime}
-							amount={pricing.amount}
+							key={current.sys.id}
+							tier={current.tier}
+							startTime={current.startTime}
+							endTime={current.endTime}
+							amount={current.amount}
+							nextTier={next}
 							locale={locale}
 							isClosed={isClosed}
 							registrationLink={registrationLink}

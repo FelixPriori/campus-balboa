@@ -1,17 +1,22 @@
 import styles from './PricingCard.module.scss'
-import { formatDate } from '@/app/_util/dateUtils'
+import { formatDate, formatDateWithOrdinal } from '@/app/_util/dateUtils'
 import { formatPrice } from '@/app/_util/currencyUtils'
 import { Locale } from '@/i18n'
+import { PricingData } from '@/app/_types/events'
 
 interface PricingCardProps {
 	tier: string
 	startTime: string
 	endTime: string
 	amount: number
+	nextTier: PricingData | null
 	locale: Locale
 	isClosed: boolean
 	registrationLink: { href: string; text: string } | null
-	labels: { registrationOpensSoon: string; registrationClosed: string }
+	labels: {
+		registrationOpensSoon: string
+		registrationClosed: string
+	}
 }
 
 export default function PricingCard({
@@ -19,6 +24,7 @@ export default function PricingCard({
 	startTime,
 	endTime,
 	amount,
+	nextTier,
 	locale,
 	isClosed,
 	registrationLink,
@@ -34,6 +40,13 @@ export default function PricingCard({
 				<p className={styles.dates}>
 					{formatDate(startTime, locale)} – {formatDate(endTime, locale)}
 				</p>
+				{nextTier && (
+					<p className={styles.priceIncrease}>
+						{formatDateWithOrdinal(nextTier.startTime, locale)}:{' '}
+						<s>{formatPrice(amount, locale)}</s>{' '}
+						<strong>{formatPrice(nextTier.amount, locale)}</strong>
+					</p>
+				)}
 				{isClosed ? (
 					<p className={styles.ctaLabel}>{labels.registrationClosed}</p>
 				) : registrationLink ? (
