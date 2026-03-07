@@ -35,6 +35,12 @@ export const SOCIAL_MEDIA = `
     accessibilityDescription
 `
 
+export const BUTTON_LINK = `
+    ${ID}
+    href
+    text
+`
+
 export const PAGE_SECTION = `
     ${ID}
     title
@@ -298,6 +304,11 @@ export const getEventPageQuery = (
                 registrationLink {
                     ${LINK}
                 }
+                socialMediaCollection(limit: 3) {
+                    items {
+                        ${BUTTON_LINK}
+                    }
+                }
                 levelRequirement {
                     title
                     description {
@@ -308,6 +319,18 @@ export const getEventPageQuery = (
                 copyright
                 aboutTitle
                 levelRequirementTitle
+            }
+        }
+    }
+`
+
+export const getEventSocialMediaQuery = (eventId: string, locale: string) => `
+    query {
+        event(id: "${eventId}", locale: "${locale}") {
+            socialMediaCollection(limit: 3) {
+                items {
+                    ${BUTTON_LINK}
+                }
             }
         }
     }

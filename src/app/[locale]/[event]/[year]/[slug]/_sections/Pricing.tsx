@@ -1,17 +1,9 @@
-import { EntrySys } from 'contentful'
 import styles from './styles.module.scss'
 import { Locale } from '@/i18n'
 import PricingCard from '../_components/PricingCard'
 import { getDictionary } from '@/app/dictionaries'
-
-interface PricingData {
-	sys: EntrySys
-	tier: string
-	type: string
-	startTime: string
-	endTime: string
-	amount: number
-}
+import { PricingData } from '@/app/_types/events'
+import { getDisplayedPricingTiers } from '@/app/_util/pricingUtils'
 
 interface PricingProps {
 	pricingData: PricingData[]
@@ -29,18 +21,7 @@ export default async function Pricing({
 	registrationLink,
 }: PricingProps) {
 	const { PricingCard: labels } = await getDictionary(locale as 'en' | 'fr')
-	const today = new Date()
-	today.setHours(0, 0, 0, 0)
-
-	const sorted = [...pricingData].sort((a, b) =>
-		new Date(a.startTime) < new Date(b.startTime) ? -1 : 1,
-	)
-	const active = sorted.filter(p => new Date(p.endTime) >= today)
-	const lastBatch = (() => {
-		const lastEnd = sorted[sorted.length - 1]?.endTime.slice(0, 10)
-		return sorted.filter(p => p.endTime.slice(0, 10) === lastEnd)
-	})()
-	const displayed = active.length > 0 ? active : lastBatch
+	const displayed = getDisplayedPricingTiers(pricingData)
 
 	return (
 		<section className={styles.pricingSection}>

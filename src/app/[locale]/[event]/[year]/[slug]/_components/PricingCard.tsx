@@ -1,4 +1,4 @@
-import styles from './styles.module.scss'
+import styles from './PricingCard.module.scss'
 import { formatDate } from '@/app/_util/dateUtils'
 import { formatPrice } from '@/app/_util/currencyUtils'
 import { Locale } from '@/i18n'

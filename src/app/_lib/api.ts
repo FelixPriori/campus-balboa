@@ -4,6 +4,7 @@ import {
 	getEventCollectionQuery,
 	getEventMetaDataQuery,
 	getEventPageQuery,
+	getEventSocialMediaQuery,
 	getGoogleCalendarQuery,
 	getPageMetaDataQuery,
 	getPageSectionQuery,
@@ -168,6 +169,19 @@ export async function getPageMetaDataByPageSlug(
 	}
 
 	return extractPageMetaData(entry)
+}
+
+export async function getEventSocialMedia(
+	eventId: string,
+	locale: string,
+): Promise<any> {
+	const entry = await fetchGraphQL(getEventSocialMediaQuery(eventId, locale))
+
+	if (entry.errors) {
+		entry.errors.forEach((e: any) => console.error(e))
+	}
+
+	return entry?.data?.event?.socialMediaCollection?.items
 }
 
 export async function getEventMetaDataBySlug(

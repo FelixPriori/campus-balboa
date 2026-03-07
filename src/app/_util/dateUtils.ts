@@ -20,3 +20,9 @@ export const formatClassTime = (date: string, locale: Locale) => {
 		locale: dateFnLocale,
 	})
 }
+
+export const formatTimeOnly = (date: string, locale: Locale) => {
+	const pattern = locale === 'fr' ? 'HH:mm' : 'h:mm aa'
+	const result = formatInTimeZone(new Date(date), extractOffset(date), pattern)
+	return locale === 'fr' ? result : result.toLowerCase()
+}

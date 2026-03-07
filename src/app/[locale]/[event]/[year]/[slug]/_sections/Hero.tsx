@@ -2,6 +2,8 @@ import Image from 'next/image'
 import styles from './styles.module.scss'
 import { Locale } from '@/i18n'
 import { formatDate } from '@/app/_util/dateUtils'
+import { ButtonLink } from '@/app/_types/components'
+import { SocialMediaLinks } from '../_components/SocialMediaLinks'
 
 interface HeroProps {
 	startDate: string
@@ -12,6 +14,7 @@ interface HeroProps {
 	closed: string
 	locale: Locale
 	isClosed: boolean
+	socialMedia: ButtonLink[]
 }
 
 export default function Hero({
@@ -23,6 +26,7 @@ export default function Hero({
 	closed,
 	locale,
 	isClosed,
+	socialMedia,
 }: HeroProps) {
 	return (
 		<header className={styles.hero}>
@@ -42,6 +46,7 @@ export default function Hero({
 					</p>
 					<h1>{title}</h1>
 					{isClosed && <p>{closed}</p>}
+					<SocialMediaLinks links={socialMedia} />
 				</div>
 			</div>
 		</header>

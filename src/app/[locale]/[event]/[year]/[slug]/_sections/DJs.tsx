@@ -1,21 +1,6 @@
 import styles from './styles.module.scss'
-import Image from 'next/image'
-import { EntrySys } from 'contentful'
-import { Markdown } from '@/app/_lib/markdown'
-
-interface DJ {
-	sys: EntrySys
-	name: string
-	biography: {
-		json: any
-		links: any
-	}
-	avatar: {
-		url: string
-		title: string
-	}
-	pronouns: string
-}
+import { DJ } from '@/app/_types/events'
+import { PersonBlock } from '../_components/PersonBlock'
 
 interface DJsProps {
 	dJsData: DJ[]
@@ -31,20 +16,7 @@ export default function DJs({ dJsData, sectionTitle }: DJsProps) {
 					<div className={styles.cardSection}>
 						<div className={styles.dJs}>
 							{dJsData.map(dj => (
-								<div key={dj.sys.id} className={styles.dj}>
-									<div className={styles.avatar}>
-										<Image
-											src={dj.avatar.url}
-											width={1080}
-											height={1080}
-											alt={dj.avatar.title}
-										/>
-									</div>
-									<div className={styles.details}>
-										<h4>{dj.name}</h4>
-										<Markdown content={dj.biography} />
-									</div>
-								</div>
+								<PersonBlock key={dj.sys.id} {...dj} variant="dj" />
 							))}
 						</div>
 					</div>

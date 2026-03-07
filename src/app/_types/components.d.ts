@@ -5,6 +5,12 @@ export type Link = {
 	text: EntryFieldType.Text
 }
 
+export interface ButtonLink {
+	sys: { id: string }
+	href: EntryFieldType.Text
+	text: EntryFieldType.Text
+}
+
 export interface EmblaText {
 	changeSlide: EntryFieldType.Text
 	nextSlide: EntryFieldType.Text

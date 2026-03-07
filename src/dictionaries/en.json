@@ -4,6 +4,7 @@
 		"registrationClosed": "Registration closed"
 	},
 	"Schedule": {
+		"endsAt": "Ends at",
 		"blockTypes": {
 			"Class": "Class",
 			"Dance": "Dance",

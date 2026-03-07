@@ -1,33 +1,10 @@
-import { EntrySys } from 'contentful'
 import styles from './styles.module.scss'
-import Image from 'next/image'
-
-interface Partner {
-	sys: EntrySys
-	title: string
-	link: string
-	logo: {
-		url: string
-		title: string
-	}
-}
+import { Partner } from '@/app/_types/events'
+import { PartnersBlock } from '../_components/PartnersBlock'
 
 interface PartnersProps {
 	partnersData: Partner[]
 	sectionTitle: string
-}
-
-const PartnersBlock = ({ title, logo, link }: Partner) => {
-	return (
-		<li className={styles.partnersBlock}>
-			<a href={link} target="_blank" rel="noreferrer noopener">
-				<div className={styles.titleContainer}>
-					<h4>{title}</h4>
-				</div>
-				<Image src={logo.url} alt={logo.title} width={1080} height={1080} />
-			</a>
-		</li>
-	)
 }
 
 export default function Partners({

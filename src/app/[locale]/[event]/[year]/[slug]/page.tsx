@@ -1,5 +1,9 @@
 import { Locales } from '@/i18n'
-import { getEventMetaDataBySlug, getEventPageBySlug } from '@/app/_lib/api'
+import {
+	getEventMetaDataBySlug,
+	getEventPageBySlug,
+	getEventSocialMedia,
+} from '@/app/_lib/api'
 import sectionsRenderer from '../../[year]/[slug]/_sections'
 import styles from './styles.module.scss'
 import Hero from './_sections/Hero'
@@ -52,6 +56,7 @@ export default async function Olga({ params }: Props) {
 	if (!data) {
 		notFound()
 	}
+	const socialMedia = await getEventSocialMedia(data.sys.id, locale)
 	const sections = [
 		'instructors',
 		'pricing',
@@ -73,6 +78,7 @@ export default async function Olga({ params }: Props) {
 				closed={data.closedText}
 				locale={locale}
 				isClosed={isClosed}
+				socialMedia={socialMedia}
 			/>
 			<About
 				details={data.details}
