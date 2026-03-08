@@ -79,6 +79,7 @@ export default async function Olga({ params }: Props) {
 				locale={locale}
 				isClosed={isClosed}
 				socialMedia={socialMedia}
+				registrationLink={data.registrationLink ?? null}
 			/>
 			<About
 				details={data.details}
