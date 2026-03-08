@@ -1,4 +1,6 @@
+@use 'sass:color';
 .classBlock {
+	$canard: #2a5359;
 	position: relative;
 	padding: 48px 8px 48px 8px;
 	border: 2px solid var(--campus-color-canard);
@@ -23,11 +25,11 @@
 			position: absolute;
 			width: 10px;
 			height: 10px;
-			background-color: var(--campus-color-canard);
+			background-color: color.adjust($canard, $lightness: -10%);
 			bottom: -5px;
 			left: 2px;
 			transform: rotate(45deg);
-			clip-path: polygon(0 0, 0% 100%, 100% 100%);
+			clip-path: polygon(50% 50%, 0% 100%, 100% 100%);
 		}
 	}
 
@@ -49,11 +51,11 @@
 			position: absolute;
 			width: 10px;
 			height: 10px;
-			background-color: var(--campus-color-canard);
+			background-color: color.adjust($canard, $lightness: -10%);
 			top: -5px;
 			right: 2px;
 			transform: rotate(45deg);
-			clip-path: polygon(0 0, 100% 100%, 100% 0);
+			clip-path: polygon(50% 50%, 0 0, 100% 0);
 		}
 	}
 
