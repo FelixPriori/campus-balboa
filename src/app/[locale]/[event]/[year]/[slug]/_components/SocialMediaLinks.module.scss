@@ -3,6 +3,10 @@
 	display: flex;
 	flex-wrap: wrap;
 	gap: 0.5rem;
+
+	@media only screen and (max-width: 576px) {
+		flex-direction: column;
+	}
 }
 
 .socialLink {
@@ -25,5 +29,11 @@
 	&:focus-visible {
 		outline: 3px solid var(--campus-color-canard);
 		outline-offset: 2px;
+	}
+
+	@media only screen and (max-width: 576px) {
+		.socialLink {
+			text-align: center;
+		}
 	}
 }
