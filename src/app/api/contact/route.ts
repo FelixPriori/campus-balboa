@@ -1,7 +1,6 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
-import Mail from 'nodemailer/lib/mailer';
+import nodemailer, { type SendMailOptions } from 'nodemailer';
 
 export async function POST(request: NextRequest) {
   const { email, fullName, message } = await request.json();
@@ -25,7 +24,7 @@ export async function POST(request: NextRequest) {
     },
   });
 
-  const mailOptions: Mail.Options = {
+  const mailOptions: SendMailOptions = {
     from: process.env.NEXT_PUBLIC_MBJ_EMAIL,
     to: process.env.NEXT_PUBLIC_MBJ_EMAIL,
     // cc: email, (uncomment this line if you want to send a copy to the sender)
@@ -35,7 +34,7 @@ export async function POST(request: NextRequest) {
 
   const sendMailPromise = () =>
     new Promise<string>((resolve, reject) => {
-      transport.sendMail(mailOptions, function (err) {
+      transport.sendMail(mailOptions, function (err: Error | null) {
         if (!err) {
           resolve('Email sent');
         } else {

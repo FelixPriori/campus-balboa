@@ -1,4 +1,4 @@
-import { Locales } from '@/i18n'
+import { Locales, EVENT_SEGMENTS, SITE_URL } from '@/i18n'
 import {
 	getEventMetaDataBySlug,
 	getEventPageBySlug,
@@ -26,13 +26,18 @@ type Props = {
 export async function generateMetadata({ params }: Props) {
 	const { locale, event, year, slug } = await params
 	const pageMetaData = await getEventMetaDataBySlug(`/${year}/${slug}`, locale)
-	const canonical = `https://www.campusbalboa.org/${locale}/${event}/${year}/${slug}`
+	const SITE_URL = 'https://www.campusbalboa.org'
+	const canonical = `${SITE_URL}/${locale}/${event}/${year}/${slug}`
 
 	return {
 		title: pageMetaData.title,
 		description: pageMetaData.description,
 		alternates: {
 			canonical,
+			languages: {
+				fr: `${SITE_URL}/fr/${EVENT_SEGMENTS.fr}/${year}/${slug}`,
+				en: `${SITE_URL}/en/${EVENT_SEGMENTS.en}/${year}/${slug}`,
+			},
 		},
 		locale,
 		openGraph: {

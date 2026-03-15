@@ -4,6 +4,12 @@ module.exports = {
 	async redirects() {
 		return [
 			{
+				source: '/:path*',
+				has: [{ type: 'host', value: 'campusbalboa.org' }],
+				destination: 'https://www.campusbalboa.org/:path*',
+				permanent: true,
+			},
+			{
 				source: '/.well-known/:path*',
 				destination: '/404',
 				permanent: false,

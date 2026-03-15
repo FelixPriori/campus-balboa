@@ -1,4 +1,5 @@
 import Favicon from '@/app/favicon.ico'
+import { SITE_URL } from '@/i18n'
 
 export const noIndexRobots = {
   index: false,
@@ -57,8 +58,7 @@ export const buildPageMetaData = (
         noIndex,
     } : BuildPageMetaData
 ) => {
-    const siteUrl = 'https://www.campusbalboa.org'
-    const canonical = `${siteUrl}/${locale}/${path}`
+    const canonical = path ? `${SITE_URL}/${locale}/${path}` : `${SITE_URL}/${locale}`
     const baseMetaData = locale === 'fr' ? {...fallbackMetaDataFR} : {...fallbackMetaDataEN}
 
     return {

@@ -337,6 +337,17 @@ export const getEventSocialMediaQuery = (eventId: string, locale: string) => `
     }
 `
 
+export const getAllEventSlugsQuery = () => `
+    query {
+        eventCollection(limit: 50) {
+            items {
+                slug
+                startDate
+            }
+        }
+    }
+`
+
 export const getEventScheduleQuery = (locale: string) =>
 	`
     query {

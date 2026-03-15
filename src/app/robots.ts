@@ -1,4 +1,5 @@
 import { MetadataRoute } from "next";
+import { SITE_URL } from "@/i18n";
 
 export default function robots(): MetadataRoute.Robots {
     return {
@@ -7,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
             allow: '/',
             disallow: '/private/',
         },
-        sitemap: 'https://campusbalboa.org/sitemap.xml',
+        sitemap: `${SITE_URL}/sitemap.xml`,
     }
 }

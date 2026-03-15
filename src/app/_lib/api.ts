@@ -6,6 +6,7 @@ import {
 	getEventPageQuery,
 	getEventSocialMediaQuery,
 	getGoogleCalendarQuery,
+	getAllEventSlugsQuery,
 	getPageMetaDataQuery,
 	getPageSectionQuery,
 } from './queries'
@@ -41,10 +42,6 @@ function extractEventCollection(
 	collectionName: string,
 ): any {
 	return fetchResponse?.data?.event?.[collectionName]?.items
-}
-
-function extractPageSection(fetchResponse: any): any {
-	return fetchResponse?.data?.pageSectionCollection?.items?.[0]
 }
 
 export function extractCollection(section: any) {
@@ -182,6 +179,18 @@ export async function getEventSocialMedia(
 	}
 
 	return entry?.data?.event?.socialMediaCollection?.items
+}
+
+export async function getAllEventSlugs(): Promise<
+	Array<{ slug: string | null; startDate: string }>
+> {
+	const entry = await fetchGraphQL(getAllEventSlugsQuery())
+
+	if (entry.errors) {
+		entry.errors.forEach((e: any) => console.error(e))
+	}
+
+	return entry?.data?.eventCollection?.items ?? []
 }
 
 export async function getEventMetaDataBySlug(

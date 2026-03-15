@@ -4,7 +4,7 @@ import { PAGE_FIELDS_QUERY } from '@/app/_lib/queries'
 import { buildPageMetaData } from '@/app/_assets/data/buildPageMetaData'
 import LanguageSwitcher from '@/app/_components/LanguageSwitcher'
 import CampusLogo from '@/app/_assets/svgs/campus-logo'
-import { Locales } from '@/i18n'
+import { Locales, SITE_URL } from '@/i18n'
 import sectionsRenderer, { Hero, Footer } from '../_sections'
 import { notFound } from 'next/navigation'
 
@@ -15,14 +15,18 @@ type Props = {
 export async function generateMetadata({ params }: Props) {
 	const locale = (await params).locale as Locales
 	const metaData = await getPageMetaDataByPageSlug(locale, locale)
-	const siteUrl = 'https://www.campusbalboa.org'
 
 	if (metaData) {
 		return {
 			title: metaData.title,
 			description: metaData.description,
 			alternates: {
-				canonical: `${siteUrl}/${locale}`,
+				canonical: `${SITE_URL}/${locale}`,
+				languages: {
+					fr: `${SITE_URL}/fr`,
+					en: `${SITE_URL}/en`,
+					'x-default': `${SITE_URL}/fr`,
+				},
 			},
 			openGraph: {
 				images: [
@@ -32,7 +36,7 @@ export async function generateMetadata({ params }: Props) {
 					},
 				],
 				title: metaData.title,
-				url: `${siteUrl}/${locale}`,
+				url: `${SITE_URL}/${locale}`,
 				locale,
 				description: metaData.openGraphImage.description,
 			},
