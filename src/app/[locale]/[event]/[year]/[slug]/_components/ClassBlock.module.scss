@@ -49,10 +49,10 @@
 		&::before {
 			content: '';
 			position: absolute;
-			width: 10px;
-			height: 10px;
+			width: 12px;
+			height: 12px;
 			background-color: color.adjust($canard, $lightness: -10%);
-			top: -5px;
+			top: -6px;
 			right: 2px;
 			transform: rotate(45deg);
 			clip-path: polygon(50% 50%, 0 0, 100% 0);
