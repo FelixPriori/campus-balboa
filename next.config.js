@@ -15,6 +15,11 @@ module.exports = {
 				permanent: false,
 			},
 			{
+				source: '/:locale/:event/:year/extracuriculaire-mickey',
+				destination: '/:locale/:event/:year/extracuriculaire-jacob',
+				permanent: true,
+			},
+			{
 				source: '/en/:event/2024/mtl-bal-jam/:slug*',
 				destination: 'https://mtlbaljam.org/en',
 				permanent: true,
