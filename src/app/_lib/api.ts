@@ -115,7 +115,7 @@ export async function getCollectionByEventId(
 
 	return {
 		sectionTitle: extractSectionTitle(entry, collectionName),
-		items: extractEventCollection(entry, `${collectionName}Collection`),
+		items: extractEventCollection(entry, `${collectionName}Collection`) ?? [],
 	}
 }
 

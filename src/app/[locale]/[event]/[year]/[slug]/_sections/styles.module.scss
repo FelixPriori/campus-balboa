@@ -64,7 +64,6 @@
 				}
 			}
 		}
-
 	}
 
 	@media only screen and (max-width: 992px) {
@@ -227,14 +226,12 @@
 	padding-top: 60px;
 }
 
-
 .dJsSection {
 	.dJs {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 		gap: 1.5rem;
 	}
-
 }
 
 .levelSection {
@@ -288,7 +285,6 @@
 		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 		gap: 1rem;
 		list-style: none;
-
 	}
 }
 
@@ -299,7 +295,6 @@
 		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 		gap: 1rem;
 		list-style: none;
-
 	}
 }
 

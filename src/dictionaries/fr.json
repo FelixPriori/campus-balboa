@@ -13,6 +13,31 @@
 			"Extra": "Extra"
 		}
 	},
+	"SectionErrorBoundary": {
+		"message": "Cette section n'a pas pu être chargée.",
+		"retry": "Réessayer"
+	},
+	"EventError": {
+		"title": "Une erreur est survenue",
+		"message": "Cette page d'événement n'a pas pu être chargée.",
+		"tryAgain": "Réessayer",
+		"returnHome": "Retour à l'accueil"
+	},
+	"EventLoading": {
+		"ariaLabel": "Chargement de la page d'événement"
+	},
+	"EventNotFound": {
+		"title": "Événement introuvable",
+		"message": "Cette page d'événement n'existe pas ou a peut-être été supprimée.",
+		"returnHome": "Retour à l'accueil"
+	},
+	"SectionSkeleton": {
+		"loading": "en chargement",
+		"instructors": "Instructeurs",
+		"pricing": "Tarifs",
+		"venues": "Lieux",
+		"schedule": "Horaire"
+	},
 	"NotFoundPage": {
 		"title": "Page non trouvée.",
 		"return": "Retour à la page précédente",

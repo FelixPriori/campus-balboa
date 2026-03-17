@@ -10,10 +10,6 @@
 		min-height: unset;
 	}
 
-	section:last-of-type {
-		padding-bottom: 80px;
-	}
-
 	h1,
 	h2,
 	h3,
@@ -52,6 +48,23 @@
 
 	p {
 		max-width: 50ch;
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	@supports (animation-timeline: view()) {
+		.eventPage section {
+			animation: sectionEnter linear none;
+			animation-timeline: view();
+			animation-range: entry 0% entry 20%;
+		}
+
+		@keyframes sectionEnter {
+			from {
+				opacity: 0;
+				translate: 0 2rem;
+			}
+		}
 	}
 }
 

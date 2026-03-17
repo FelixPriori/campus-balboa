@@ -1,3 +1,4 @@
+import { cache } from 'react'
 import { Locales } from '@/i18n'
 import 'server-only'
 
@@ -6,6 +7,8 @@ const dictionaries = {
 	fr: () => import('../dictionaries/fr.json').then(module => module.default),
 }
 
-export const getDictionary = async (locale: Locales) => dictionaries[locale]()
+export const getDictionary = cache(
+	async (locale: Locales) => dictionaries[locale](),
+)
 
 export type DictionaryType = Awaited<ReturnType<typeof getDictionary>>

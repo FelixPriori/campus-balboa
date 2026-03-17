@@ -1,0 +1,50 @@
+.section {
+	padding: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	@media only screen and (max-width: 576px) {
+		padding: 24px 20px;
+	}
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+	padding: 2rem;
+	border-radius: var(--border-radius);
+	background-color: rgba(255, 255, 255, 0.85);
+	box-shadow: 0 1.5rem 4rem rgba(38, 70, 83, 0.15);
+	max-width: 800px;
+	inline-size: 100%;
+	margin: 0 auto;
+}
+
+.message {
+	color: var(--campus-color-taupe);
+	font-weight: 500;
+}
+
+.retry {
+	padding: 0.5rem 1.25rem;
+	background-color: var(--campus-color-blanc);
+	color: var(--campus-color-canard);
+	border: 2px solid var(--campus-color-canard);
+	border-radius: var(--border-radius);
+	font-weight: 600;
+	cursor: pointer;
+	transition: background-color 150ms ease, color 150ms ease;
+
+	&:hover {
+		background-color: var(--campus-color-canard);
+		color: var(--campus-color-blanc);
+	}
+
+	&:focus-visible {
+		outline: 3px solid var(--campus-color-canard);
+		outline-offset: 2px;
+	}
+}

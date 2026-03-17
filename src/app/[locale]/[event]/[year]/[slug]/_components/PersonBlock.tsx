@@ -28,6 +28,7 @@ export function PersonBlock({
 						src={avatar.url}
 						width={1080}
 						height={1080}
+						sizes={variant === 'instructor' ? '200px' : '120px'}
 						style={{ objectFit: 'cover' }}
 						alt={avatar.title}
 					/>

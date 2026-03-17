@@ -13,6 +13,31 @@
 			"Extra": "Extra"
 		}
 	},
+	"SectionErrorBoundary": {
+		"message": "This section could not be loaded.",
+		"retry": "Try again"
+	},
+	"EventError": {
+		"title": "Something went wrong",
+		"message": "This event page could not be loaded.",
+		"tryAgain": "Try again",
+		"returnHome": "Return home"
+	},
+	"EventLoading": {
+		"ariaLabel": "Loading event page"
+	},
+	"EventNotFound": {
+		"title": "Event not found",
+		"message": "This event page does not exist or may have been removed.",
+		"returnHome": "Return home"
+	},
+	"SectionSkeleton": {
+		"loading": "loading",
+		"instructors": "Instructors",
+		"pricing": "Pricing",
+		"venues": "Venues",
+		"schedule": "Schedule"
+	},
 	"NotFoundPage": {
 		"title": "Page not found.",
 		"return": "Go back to the previous page",

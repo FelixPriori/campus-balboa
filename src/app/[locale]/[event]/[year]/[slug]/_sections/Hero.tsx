@@ -35,7 +35,7 @@ export default function Hero({
 			<div className={styles.card}>
 				<div className={styles.imgWrapper}>
 					<Image
-						loading="eager"
+						priority
 						src={imgSrc}
 						width={1080}
 						height={1080}

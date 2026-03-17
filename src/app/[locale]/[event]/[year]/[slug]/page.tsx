@@ -1,10 +1,17 @@
+import { Suspense } from 'react'
 import { Locales, EVENT_SEGMENTS, SITE_URL } from '@/i18n'
+import { getEventMetaDataBySlug, getEventPageBySlug } from '@/app/_lib/api'
+import { getDictionary } from '@/app/dictionaries'
 import {
-	getEventMetaDataBySlug,
-	getEventPageBySlug,
-	getEventSocialMedia,
-} from '@/app/_lib/api'
-import sectionsRenderer from '../../[year]/[slug]/_sections'
+	InstructorsSection,
+	PricingSection,
+	VenuesSection,
+	ScheduleSection,
+	DJsSection,
+	PartnersSection,
+} from './_sections'
+import SectionSkeleton from './_sections/SectionSkeleton'
+import { SectionErrorBoundary } from './_components/SectionErrorBoundary'
 import styles from './styles.module.scss'
 import Hero from './_sections/Hero'
 import About from './_sections/About'
@@ -13,6 +20,8 @@ import Footer from './_sections/Footer'
 import Navigation from './Navigation'
 import { notFound } from 'next/navigation'
 import { isPast } from 'date-fns'
+
+export const revalidate = 3600
 
 type Props = {
 	params: Promise<{
@@ -26,7 +35,9 @@ type Props = {
 export async function generateMetadata({ params }: Props) {
 	const { locale, event, year, slug } = await params
 	const pageMetaData = await getEventMetaDataBySlug(`/${year}/${slug}`, locale)
-	const SITE_URL = 'https://www.campusbalboa.org'
+
+	if (!pageMetaData) return {}
+
 	const canonical = `${SITE_URL}/${locale}/${event}/${year}/${slug}`
 
 	return {
@@ -57,20 +68,25 @@ export async function generateMetadata({ params }: Props) {
 
 export default async function Olga({ params }: Props) {
 	const { locale, year, slug } = await params
-	const data = await getEventPageBySlug(`/${year}/${slug}`, locale)
+	const [data, dict] = await Promise.all([
+		getEventPageBySlug(`/${year}/${slug}`, locale),
+		getDictionary(locale),
+	])
+
 	if (!data) {
 		notFound()
 	}
-	const socialMedia = await getEventSocialMedia(data.sys.id, locale)
-	const sections = [
-		'instructors',
-		'pricing',
-		'dJs',
-		'venues',
-		'schedule',
-		'partners',
-	] as const
+
 	const isClosed = isPast(data.endDate)
+	const eventId = data.sys.id
+	const socialMedia = data.socialMediaCollection?.items ?? []
+	const registrationLink = data.registrationLink ?? null
+
+	const sectionBoundaryProps = {
+		errorMessage: dict.SectionErrorBoundary.message,
+		retryLabel: dict.SectionErrorBoundary.retry,
+	} as const
+
 	return (
 		<div className={styles.eventPage}>
 			<Navigation locale={locale} />
@@ -84,7 +100,7 @@ export default async function Olga({ params }: Props) {
 				locale={locale}
 				isClosed={isClosed}
 				socialMedia={socialMedia}
-				registrationLink={data.registrationLink ?? null}
+				registrationLink={registrationLink}
 			/>
 			<About
 				details={data.details}
@@ -96,12 +112,73 @@ export default async function Olga({ params }: Props) {
 				levelRequirement={data.levelRequirement}
 				sectionTitle={data.levelRequirementTitle}
 			/>
-			{sections.map(section =>
-				sectionsRenderer(section, data.sys.id, locale, {
-					isClosed,
-					registrationLink: data.registrationLink ?? null,
-				}),
-			)}
+			<SectionErrorBoundary label={dict.SectionSkeleton.instructors} {...sectionBoundaryProps}>
+				<Suspense
+					fallback={
+						<SectionSkeleton
+							label={`${dict.SectionSkeleton.instructors}, ${dict.SectionSkeleton.loading}`}
+							minHeight={480}
+							animationDelay="0s"
+						/>
+					}
+				>
+					<InstructorsSection eventId={eventId} locale={locale} />
+				</Suspense>
+			</SectionErrorBoundary>
+			<SectionErrorBoundary label={dict.SectionSkeleton.pricing} {...sectionBoundaryProps}>
+				<Suspense
+					fallback={
+						<SectionSkeleton
+							label={`${dict.SectionSkeleton.pricing}, ${dict.SectionSkeleton.loading}`}
+							minHeight={280}
+							animationDelay="0.15s"
+						/>
+					}
+				>
+					<PricingSection
+						eventId={eventId}
+						locale={locale}
+						isClosed={isClosed}
+						registrationLink={registrationLink}
+					/>
+				</Suspense>
+			</SectionErrorBoundary>
+			<SectionErrorBoundary label={dict.SectionSkeleton.venues} {...sectionBoundaryProps}>
+				<Suspense
+					fallback={
+						<SectionSkeleton
+							label={`${dict.SectionSkeleton.venues}, ${dict.SectionSkeleton.loading}`}
+							minHeight={220}
+							animationDelay="0.3s"
+						/>
+					}
+				>
+					<VenuesSection eventId={eventId} locale={locale} />
+				</Suspense>
+			</SectionErrorBoundary>
+			<SectionErrorBoundary label={dict.SectionSkeleton.schedule} {...sectionBoundaryProps}>
+				<Suspense
+					fallback={
+						<SectionSkeleton
+							label={`${dict.SectionSkeleton.schedule}, ${dict.SectionSkeleton.loading}`}
+							minHeight={360}
+							animationDelay="0.45s"
+						/>
+					}
+				>
+					<ScheduleSection eventId={eventId} locale={locale} />
+				</Suspense>
+			</SectionErrorBoundary>
+			<SectionErrorBoundary label="DJs" silent>
+				<Suspense fallback={null}>
+					<DJsSection eventId={eventId} locale={locale} />
+				</Suspense>
+			</SectionErrorBoundary>
+			<SectionErrorBoundary label="Partners" silent>
+				<Suspense fallback={null}>
+					<PartnersSection eventId={eventId} locale={locale} />
+				</Suspense>
+			</SectionErrorBoundary>
 			<Footer copyright={data.copyright} />
 		</div>
 	)
