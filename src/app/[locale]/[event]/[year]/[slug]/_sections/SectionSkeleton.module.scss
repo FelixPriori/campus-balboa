@@ -1,11 +1,11 @@
 .section {
-	padding: 40px;
+	padding: var(--space-10);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 
 	@media only screen and (max-width: 576px) {
-		padding: 24px 20px;
+		padding: 24px var(--space-5);
 	}
 }
 
@@ -17,8 +17,8 @@
 .titleBar {
 	block-size: clamp(1.5rem, 2.5vw, 2rem);
 	inline-size: 240px;
-	margin: 0 auto 1.5rem;
-	border-radius: 4px;
+	margin: 0 auto var(--space-6);
+	border-radius: var(--radius-sm);
 	background: rgba(255, 255, 255, 0.25);
 	animation: pulse 1.4s ease-in-out infinite;
 	animation-delay: var(--animation-delay, 0s);
@@ -30,17 +30,17 @@
 }
 
 .card {
-	padding: 2rem;
+	padding: var(--space-8);
 	border-radius: var(--border-radius);
-	background-color: rgba(255, 255, 255, 0.85);
-	box-shadow: 0 1.5rem 4rem rgba(38, 70, 83, 0.15);
+	background-color: color-mix(in srgb, var(--campus-color-blanc) 85%, transparent);
+	box-shadow: var(--shadow-card);
 	max-width: 800px;
 	margin: 0 auto;
 	position: relative;
 	overflow: hidden;
 
 	@media only screen and (max-width: 576px) {
-		padding: 20px;
+		padding: var(--space-5);
 		margin: 0;
 	}
 }

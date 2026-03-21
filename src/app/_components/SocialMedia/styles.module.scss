@@ -4,14 +4,14 @@
     max-height: 42px;
 
     img {
-        transition: all 200ms ease-in-out;
+        transition: transform var(--duration-fast) var(--ease-in-out),
+                    filter var(--duration-fast) var(--ease-in-out);
     }
-    
+
     &:hover {
         img {
             transform: translateY(-3px);
-            -webkit-filter: drop-shadow(0 3px 5px rgba(38, 70, 83, 0.5));
-            filter: drop-shadow(0 3px 5px rgba(38, 70, 83, 0.5));
+            filter: drop-shadow(0 3px 5px color-mix(in srgb, var(--campus-color-canard) 50%, transparent));
         }
     }
 }

@@ -1,0 +1,134 @@
+.page {
+	background-color: var(--campus-color-canard);
+}
+
+.listingPage {
+	min-height: 50vh;
+	padding-block-end: 4rem;
+}
+
+.pageHeader {
+	padding-inline: clamp(1rem, 5vw, 3rem);
+	padding-block: 0.75rem 1.5rem;
+}
+
+.pageTitle {
+	font-family: var(--font-lemon);
+	font-size: clamp(1.75rem, 4vw, 2.75rem);
+	color: var(--campus-color-blanc);
+	margin-block-start: 1rem;
+	text-wrap: balance;
+}
+
+
+.section {
+	padding-block-start: 1rem;
+}
+
+.sectionHeading {
+	font-family: var(--font-lemon);
+	font-size: clamp(1.1rem, 2vw, 1.5rem);
+	color: var(--campus-color-blanc);
+	letter-spacing: 0.2rem;
+	text-align: center;
+	margin: 0;
+	padding-inline: clamp(1rem, 5vw, 3rem);
+}
+
+.eventGrid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+	gap: 1.5rem;
+	list-style: none;
+	padding: clamp(1.5rem, 4vw, 3rem) clamp(1rem, 5vw, 3rem);
+	margin: 0;
+	max-width: var(--max-width);
+	margin-inline: auto;
+}
+
+.eventCard {
+	border-radius: var(--border-radius);
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25),
+		0 2rem 5rem rgba(0, 0, 0, 0.35);
+	transition: box-shadow 200ms ease;
+
+	@media (prefers-reduced-motion: no-preference) {
+		transition: transform 200ms ease, box-shadow 200ms ease;
+	}
+
+	&:hover,
+	&:has(.cardLink:focus-visible) {
+		box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3),
+			0 2.5rem 6rem rgba(0, 0, 0, 0.45);
+
+		@media (prefers-reduced-motion: no-preference) {
+			transform: translateY(-3px);
+		}
+	}
+}
+
+.cardLink {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	text-decoration: none;
+	color: inherit;
+	border-radius: var(--border-radius);
+	overflow: hidden;
+	background-color: var(--campus-color-blanc);
+
+	&:focus-visible {
+		outline: none;
+		box-shadow: inset 0 0 0 3px var(--campus-color-canard);
+	}
+}
+
+.imgWrapper {
+	aspect-ratio: 1;
+	overflow: hidden;
+}
+
+.cardImg {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+.cardBody {
+	padding: 1.25rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.dates {
+	font-family: var(--font-rubik);
+	font-size: 0.875rem;
+	color: var(--campus-color-canard);
+	font-weight: 600;
+	margin: 0;
+}
+
+.cardTitle {
+	font-family: var(--font-lemon);
+	font-size: clamp(1.05rem, 1.5vw + 0.5rem, 1.375rem);
+	color: var(--campus-color-taupe);
+	margin: 0;
+	line-height: 1.3;
+	letter-spacing: normal;
+	text-align: start;
+	text-wrap: balance;
+}
+
+.eventCardPast {
+	opacity: 0.65;
+}
+
+.empty {
+	text-align: center;
+	padding: 4rem;
+	font-family: var(--font-rubik);
+	color: var(--campus-color-blanc);
+	font-size: 1.125rem;
+}

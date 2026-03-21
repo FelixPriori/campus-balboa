@@ -4,8 +4,9 @@ import { PAGE_FIELDS_QUERY } from '@/app/_lib/queries'
 import { buildPageMetaData } from '@/app/_assets/data/buildPageMetaData'
 import LanguageSwitcher from '@/app/_components/LanguageSwitcher'
 import CampusLogo from '@/app/_assets/svgs/campus-logo'
-import { Locales, SITE_URL } from '@/i18n'
-import sectionsRenderer, { Hero, Footer } from '../_sections'
+import { Locale, SITE_URL } from '@/i18n'
+import { getDictionary } from '@/app/dictionaries'
+import sectionsRenderer, { Hero } from '../_sections'
 import { notFound } from 'next/navigation'
 
 type Props = {
@@ -13,7 +14,7 @@ type Props = {
 }
 
 export async function generateMetadata({ params }: Props) {
-	const locale = (await params).locale as Locales
+	const locale = (await params).locale as Locale
 	const metaData = await getPageMetaDataByPageSlug(locale, locale)
 
 	if (metaData) {
@@ -48,8 +49,11 @@ export async function generateMetadata({ params }: Props) {
 }
 
 export default async function Home({ params }: Props) {
-	const locale = (await params).locale as Locales
-	const pageData = await getPageBySlug(locale, locale, PAGE_FIELDS_QUERY)
+	const locale = (await params).locale as Locale
+	const [pageData, dict] = await Promise.all([
+		getPageBySlug(locale, locale, PAGE_FIELDS_QUERY),
+		getDictionary(locale),
+	])
 
 	if (!pageData?.sectionsCollection) {
 		return notFound()
@@ -57,7 +61,7 @@ export default async function Home({ params }: Props) {
 
 	return (
 		<div className="landing">
-			<nav className="app-nav">
+			<nav className="app-nav" aria-label={dict.Navigation.mainAriaLabel}>
 				<CampusLogo />
 				<LanguageSwitcher locale={locale} />
 			</nav>
@@ -67,7 +71,6 @@ export default async function Home({ params }: Props) {
 					async (s: any) => await sectionsRenderer(s, locale),
 				)}
 			</Main>
-			<Footer {...pageData?.footer} />
-		</div>
+			</div>
 	)
 }

@@ -22,15 +22,16 @@
 
 		.emblaContainer {
 			display: flex;
+			align-items: stretch;
 		}
 	}
 
 	.dotContainer {
-		margin-top: 20px;
+		margin-top: var(--space-5);
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		gap: 10px;
+		gap: var(--space-3);
 
 		.dot {
 			border: none;

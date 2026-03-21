@@ -1,9 +1,9 @@
 const spaceImport = require('contentful-import')
 const exportFile = require('./export.json')
 
-const { NEXT_PUBLIC_CONTENTFUL_SPACE_ID, NEXT_PUBLIC_CONTENTFUL_MANAGEMENT_TOKEN } = process.env
+const { CONTENTFUL_SPACE_ID, CONTENTFUL_MANAGEMENT_TOKEN } = process.env
 
-if (!NEXT_PUBLIC_CONTENTFUL_SPACE_ID || !NEXT_PUBLIC_CONTENTFUL_MANAGEMENT_TOKEN) {
+if (!CONTENTFUL_SPACE_ID || !CONTENTFUL_MANAGEMENT_TOKEN) {
   throw new Error(
     [
       'Parameters missing...',
@@ -14,8 +14,8 @@ if (!NEXT_PUBLIC_CONTENTFUL_SPACE_ID || !NEXT_PUBLIC_CONTENTFUL_MANAGEMENT_TOKEN
 }
 
 spaceImport({
-  spaceId: NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
-  managementToken: NEXT_PUBLIC_CONTENTFUL_MANAGEMENT_TOKEN,
+  spaceId: CONTENTFUL_SPACE_ID,
+  managementToken: CONTENTFUL_MANAGEMENT_TOKEN,
   content: exportFile,
 })
   .then(() => console.log('The content model of your space is set up!'))

@@ -2,17 +2,17 @@
 	.card {
 		margin: 0 auto;
 		width: 100%;
-		padding: 40px;
+		padding: var(--space-10);
 		display: grid;
 		grid-template-columns: min-content 1fr;
-		gap: 2rem;
+		gap: var(--space-8);
 		border-radius: var(--border-radius);
-		box-shadow: 0 1.5rem 4rem rgba(38, 70, 83, 0.15);
-		background-color: rgba(255, 255, 255, 0.85);
+		box-shadow: var(--shadow-card);
+		background-color: color-mix(in srgb, var(--campus-color-blanc) 85%, transparent);
 		align-items: center;
 
 		p {
-			margin-bottom: 0.5rem;
+			margin-bottom: var(--space-2);
 			font-size: 1.2rem;
 		}
 
@@ -30,7 +30,7 @@
 			display: flex;
 			flex-direction: column;
 			align-items: space-between;
-			padding: 1rem;
+			padding: var(--space-4);
 
 			.date {
 				font-weight: bold;
@@ -40,19 +40,19 @@
 				display: flex;
 				flex-wrap: wrap;
 				align-items: center;
-				gap: 0.5rem;
-				padding-block: 1rem;
+				gap: var(--space-2);
+				padding-block: var(--space-4);
 			}
 
 			.registrationLink {
 				display: inline-block;
-				padding: 0.5rem 1.25rem;
+				padding: var(--space-2) var(--space-5);
 				background-color: var(--campus-color-canard);
 				color: var(--campus-color-blanc);
 				border-radius: var(--border-radius);
 				font-weight: 600;
 				text-decoration: none;
-				transition: opacity 150ms ease;
+				transition: opacity 150ms var(--ease-ui);
 
 				&:hover {
 					opacity: 0.85;
@@ -68,7 +68,7 @@
 
 	@media only screen and (max-width: 992px) {
 		.card {
-			margin-top: 40px;
+			margin-top: var(--space-10);
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -88,13 +88,13 @@
 				justify-content: center;
 				align-items: center;
 				text-align: center;
-				padding: 1rem 2rem;
+				padding: var(--space-4) var(--space-8);
 			}
 		}
 	}
 
 	@media only screen and (max-width: 576px) {
-		padding: 20px;
+		padding: var(--space-5);
 
 		.card {
 			grid-column: 1 / -1;
@@ -123,7 +123,7 @@
 .scheduleSection,
 .pricingSection,
 .partnersSection {
-	padding: 40px;
+	padding: var(--space-10);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -133,10 +133,10 @@
 		width: 100%;
 
 		.card {
-			padding: 2rem;
+			padding: var(--space-8);
 			border-radius: var(--border-radius);
-			background-color: rgba(255, 255, 255, 0.85);
-			box-shadow: 0 1.5rem 4rem rgba(38, 70, 83, 0.15);
+			background-color: color-mix(in srgb, var(--campus-color-blanc) 85%, transparent);
+			box-shadow: var(--shadow-card);
 			max-width: 800px;
 			margin: 0 auto;
 
@@ -147,18 +147,18 @@
 
 				p {
 					&:not(:last-of-type) {
-						margin-bottom: 0.75rem;
+						margin-bottom: var(--space-3);
 					}
 				}
 
 				h4 {
-					margin-bottom: 0.75rem;
+					margin-bottom: var(--space-3);
 				}
 
 				br {
 					content: '';
 					display: block;
-					margin-bottom: 0.5rem;
+					margin-bottom: var(--space-2);
 				}
 
 				.link {
@@ -199,11 +199,11 @@
 	}
 
 	@media only screen and (max-width: 576px) {
-		padding: 24px 20px;
+		padding: 24px var(--space-5);
 
 		.content {
 			.card {
-				padding: 20px;
+				padding: var(--space-5);
 				margin: 0;
 			}
 		}
@@ -215,7 +215,7 @@
 		list-style: none;
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-		gap: 1rem;
+		gap: var(--space-4);
 		width: 100%;
 		max-width: 800px;
 		margin: 0 auto;
@@ -230,14 +230,14 @@
 	.dJs {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-		gap: 1.5rem;
+		gap: var(--space-6);
 	}
 }
 
 .levelSection {
 	.level {
 		.levelList {
-			margin-top: 1rem;
+			margin-top: var(--space-4);
 			columns: 2;
 		}
 	}
@@ -248,7 +248,7 @@
 		width: 100%;
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-		gap: 1rem;
+		gap: var(--space-4);
 		list-style: none;
 
 		.locationBlock {
@@ -259,11 +259,11 @@
 			background-color: var(--campus-color-blanc);
 
 			h4 {
-				margin-bottom: 0.25rem;
+				margin-bottom: var(--space-1);
 			}
 
 			.what {
-				margin-bottom: 0.25rem;
+				margin-bottom: var(--space-1);
 				font-weight: 300;
 			}
 		}
@@ -275,7 +275,7 @@
 		width: 100%;
 
 		&:not(:last-child) {
-			margin-bottom: 2rem;
+			margin-bottom: var(--space-8);
 		}
 	}
 
@@ -283,7 +283,7 @@
 		width: 100%;
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-		gap: 1rem;
+		gap: var(--space-4);
 		list-style: none;
 	}
 }
@@ -293,7 +293,7 @@
 		width: 100%;
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-		gap: 1rem;
+		gap: var(--space-4);
 		list-style: none;
 	}
 }

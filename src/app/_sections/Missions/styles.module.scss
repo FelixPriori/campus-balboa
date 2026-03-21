@@ -15,15 +15,15 @@
 
 		.missionsTitle {
 			color: var(--color-neutral);
-			letter-spacing: 0.35rem;
+			letter-spacing: var(--tracking-wider);
+			margin-block-end: var(--space-12);
 		}
 
 		.missionsContainer {
 			width: 100%;
-			$dark: var(--color-dark);
 			display: grid;
 			grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
-			gap: var(--spacing-s);
+			gap: var(--space-3);
 		}
 	}
 }

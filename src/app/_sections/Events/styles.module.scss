@@ -11,10 +11,6 @@
 
 .eventsSection {
 	min-height: 700px;
-	background-image: url('/wave-bottom.png'), url('/circle-overlap.png');
-	background-size: cover, contain;
-	background-repeat: no-repeat, no-repeat;
-	background-position: bottom -150px left 0, left 0 top 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -26,19 +22,46 @@
 		width: 100%;
 
 		.eventsTitle {
-			letter-spacing: 0.35rem;
-			text-shadow: 1px 1px 2px var(--campus-color-blanc);
+			color: var(--campus-color-blanc);
+			letter-spacing: var(--tracking-wider);
+			margin-block-end: var(--space-12);
 		}
 
 		.eventTitle {
-			letter-spacing: 0.5rem;
+			letter-spacing: var(--tracking-widest);
 		}
 
 		.eventsList {
 			display: flex;
 			flex-direction: column;
-			gap: 1rem;
+			gap: var(--space-4);
 			max-width: min(100%, 1200px);
 		}
+	}
+}
+
+.allEventsLink {
+	display: inline-block;
+	margin-block-start: var(--space-8);
+	padding: 0.75rem 1.75rem;
+	border: 2px solid var(--campus-color-blanc);
+	border-radius: var(--border-radius);
+	font-family: var(--font-rubik);
+	font-size: 1rem;
+	font-weight: 600;
+	color: var(--campus-color-blanc);
+	text-decoration: none;
+	transition: background-color var(--duration-fast) var(--ease-ui),
+	            color var(--duration-fast) var(--ease-ui);
+
+	&:hover {
+		background-color: var(--campus-color-blanc);
+		color: var(--campus-color-canard);
+	}
+
+	&:focus-visible {
+		outline: 2px solid var(--campus-color-blanc);
+		outline-offset: 3px;
+		border-radius: var(--border-radius);
 	}
 }

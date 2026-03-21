@@ -1,4 +1,24 @@
 {
+	"Navigation": {
+		"homeAriaLabel": "Campus Balboa — accueil",
+		"mainAriaLabel": "Navigation principale"
+	},
+	"Breadcrumb": {
+		"ariaLabel": "Fil d'Ariane"
+	},
+	"EventsSection": {
+		"viewAll": "Voir tous les événements"
+	},
+	"EventsPage": {
+		"metaTitle": "Événements | Campus Balboa",
+		"metaDescription": "Parcourez tous les ateliers de Balboa et événements organisés par Campus Balboa à Montréal.",
+		"breadcrumbHome": "Accueil",
+		"breadcrumbEvents": "Événements",
+		"pageTitle": "Événements",
+		"upcoming": "À venir",
+		"pastEvents": "Événements passés",
+		"empty": "Aucun événement trouvé."
+	},
 	"PricingCard": {
 		"registrationOpensSoon": "Inscription bientôt disponible",
 		"registrationClosed": "Inscriptions fermées"
@@ -36,9 +56,13 @@
 		"instructors": "Instructeurs",
 		"pricing": "Tarifs",
 		"venues": "Lieux",
-		"schedule": "Horaire"
+		"schedule": "Horaire",
+		"djs": "DJs",
+		"partners": "Partenaires"
 	},
 	"NotFoundPage": {
+		"metaTitle": "404 | Page non trouvée",
+		"metaDescription": "Désolé, cette page n'existe pas",
 		"title": "Page non trouvée.",
 		"return": "Retour à la page précédente",
 		"home": "Vers la page d'accueil",

@@ -1,10 +1,10 @@
-import { Locales } from '@/i18n'
+import { Locale } from '@/i18n'
 import { redirect } from 'next/navigation'
 
 type Props = {
-	params: Promise<{ locale: Locales }>
+	params: Promise<{ locale: Locale }>
 }
 export default async function EventsPage({ params }: Props) {
-	const locale = (await params).locale as Locales
+	const locale = (await params).locale as Locale
 	redirect(`/${locale}`)
 }

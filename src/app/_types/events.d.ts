@@ -1,5 +1,13 @@
 import { EntrySys } from 'contentful'
 
+export interface EventListItem {
+	title: string
+	slug: string | null
+	startDate: string
+	endDate: string
+	image: { url: string; title: string }
+}
+
 export interface EventBlock {
 	sys: EntrySys
 	title: string

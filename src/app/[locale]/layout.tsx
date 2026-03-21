@@ -1,9 +1,11 @@
 import { Rubik, Lemon } from 'next/font/google'
 import { ToastContainer } from 'react-toastify'
-import { Locales } from '@/i18n'
+import { Locale } from '@/i18n'
 import 'react-toastify/dist/ReactToastify.css'
 import './globals.css'
 import { ReactNode } from 'react'
+import { Footer } from '@/app/_sections'
+import { getPageFooter } from '@/app/_lib/api'
 
 const rubik = Rubik({
 	subsets: ['latin'],
@@ -25,7 +27,8 @@ export default async function LocaleLayout({
 	children,
 	params,
 }: LayoutProps<'/[locale]'>) {
-	const lang = (await params).locale as Locales
+	const lang = (await params).locale as Locale
+	const footer = await getPageFooter(lang)
 
 	return (
 		<html lang={lang}>
@@ -35,6 +38,7 @@ export default async function LocaleLayout({
 			>
 				<ToastContainer />
 				{children}
+				{footer && <Footer {...footer} />}
 			</body>
 		</html>
 	)

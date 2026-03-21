@@ -1,4 +1,24 @@
 {
+	"Navigation": {
+		"homeAriaLabel": "Campus Balboa — home",
+		"mainAriaLabel": "Main navigation"
+	},
+	"Breadcrumb": {
+		"ariaLabel": "Breadcrumb"
+	},
+	"EventsSection": {
+		"viewAll": "View all events"
+	},
+	"EventsPage": {
+		"metaTitle": "Events | Campus Balboa",
+		"metaDescription": "Browse all Balboa dance workshops and events organized by Campus Balboa in Montréal.",
+		"breadcrumbHome": "Home",
+		"breadcrumbEvents": "Events",
+		"pageTitle": "Events",
+		"upcoming": "Upcoming",
+		"pastEvents": "Past events",
+		"empty": "No events found."
+	},
 	"PricingCard": {
 		"registrationOpensSoon": "Registration opens soon",
 		"registrationClosed": "Registration closed"
@@ -36,9 +56,13 @@
 		"instructors": "Instructors",
 		"pricing": "Pricing",
 		"venues": "Venues",
-		"schedule": "Schedule"
+		"schedule": "Schedule",
+		"djs": "DJs",
+		"partners": "Partners"
 	},
 	"NotFoundPage": {
+		"metaTitle": "404 | Page not found",
+		"metaDescription": "Sorry, this page does not exist",
 		"title": "Page not found.",
 		"return": "Go back to the previous page",
 		"home": "To the home page",

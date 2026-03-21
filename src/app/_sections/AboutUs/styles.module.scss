@@ -10,10 +10,6 @@
 }
 
 .aboutUsSection {
-	background-image: url('/wave-top.png');
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: top -400px left 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -21,13 +17,14 @@
 	.content {
 		.aboutUsTitle {
 			color: var(--color-neutral);
-			letter-spacing: 0.35rem;
+			letter-spacing: var(--tracking-wider);
+			margin-block-end: var(--space-12);
 		}
 
 		.administratorsContainer {
 			display: grid;
 			grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
-			gap: var(--spacing-s);
+			gap: var(--space-3);
 			justify-content: center;
 		}
 	}

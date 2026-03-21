@@ -7,24 +7,34 @@ import {
 	getEventSocialMediaQuery,
 	getGoogleCalendarQuery,
 	getAllEventSlugsQuery,
+	getAllEventsQuery,
+	getPageFooterQuery,
 	getPageMetaDataQuery,
 	getPageSectionQuery,
 } from './queries'
+import { HOME_SLUG, type Locale } from '@/i18n'
 
-async function fetchGraphQL(query: string, preview = false): Promise<any> {
+export type { EventListItem } from '@/app/_types/events'
+
+async function fetchGraphQL(
+	query: string,
+	variables?: Record<string, unknown>,
+	preview = false,
+): Promise<any> {
 	return fetch(
-		`https://graphql.contentful.com/content/v1/spaces/${process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID}/environments/${process.env.NEXT_PUBLIC_CONTENTFUL_ENVIRONMENT_ID}`,
+		`https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}/environments/${process.env.CONTENTFUL_ENVIRONMENT_ID}`,
 		{
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
 				Authorization: `Bearer ${
 					preview
-						? process.env.NEXT_PUBLIC_CONTENTFUL_PREVIEW_ACCESS_TOKEN
-						: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN
+						? process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN
+						: process.env.CONTENTFUL_ACCESS_TOKEN
 				}`,
 			},
-			body: JSON.stringify({ query }),
+			body: JSON.stringify({ query, variables }),
+			next: { revalidate: 3600 },
 		},
 	).then(response => response.json())
 }
@@ -69,7 +79,8 @@ export async function getPreviewPageBySlug(
 	fieldsQuery: string,
 ): Promise<any> {
 	const entry = await fetchGraphQL(
-		getBasePageQuery(slug, locale, fieldsQuery),
+		getBasePageQuery(fieldsQuery),
+		{ locale, slug },
 		true,
 	)
 	return extractPage(entry)
@@ -80,7 +91,10 @@ export async function getPageBySlug(
 	locale: string,
 	fieldsQuery: string,
 ): Promise<any> {
-	const entry = await fetchGraphQL(getBasePageQuery(slug, locale, fieldsQuery))
+	const entry = await fetchGraphQL(getBasePageQuery(fieldsQuery), {
+		locale,
+		slug,
+	})
 
 	if (entry.errors) {
 		entry.errors.forEach((e: any) => console.error(e))
@@ -90,7 +104,7 @@ export async function getPageBySlug(
 }
 
 export async function getEventPageBySlug(slug: string, locale: string) {
-	const entry = await fetchGraphQL(getEventPageQuery(slug, locale))
+	const entry = await fetchGraphQL(getEventPageQuery(), { locale, slug })
 
 	if (entry.errors) {
 		entry.errors.forEach((e: any) => console.error(e))
@@ -106,7 +120,8 @@ export async function getCollectionByEventId(
 	fieldsQuery: string,
 ): Promise<any> {
 	const entry = await fetchGraphQL(
-		getEventCollectionQuery(eventId, collectionName, locale, fieldsQuery),
+		getEventCollectionQuery(collectionName, fieldsQuery),
+		{ eventId, locale },
 	)
 
 	if (entry.errors) {
@@ -124,19 +139,20 @@ export async function getCollectionBySectionId(
 	locale: string,
 	fieldsQuery: string,
 ): Promise<any> {
-	const entry = await fetchGraphQL(
-		getPageSectionQuery(sectionId, locale, fieldsQuery),
-	)
+	const entry = await fetchGraphQL(getPageSectionQuery(fieldsQuery), {
+		id: sectionId,
+		locale,
+	})
 
 	if (entry.errors) {
 		entry.errors.forEach((e: any) => console.error(e))
 	}
 
-	return extractCollection(entry.data.pageSection)
+	return extractCollection(entry?.data?.pageSection) ?? []
 }
 
 export async function getEmbla(locale: string) {
-	const entry = await fetchGraphQL(getEmblaQuery(locale))
+	const entry = await fetchGraphQL(getEmblaQuery(), { locale })
 
 	if (entry.errors) {
 		entry.errors.forEach((e: any) => console.error(e))
@@ -146,7 +162,7 @@ export async function getEmbla(locale: string) {
 }
 
 export async function getGoogleCalendar(locale: string) {
-	const entry = await fetchGraphQL(getGoogleCalendarQuery(locale))
+	const entry = await fetchGraphQL(getGoogleCalendarQuery(), { locale })
 
 	if (entry.errors) {
 		entry.errors.forEach((e: any) => console.error(e))
@@ -159,7 +175,7 @@ export async function getPageMetaDataByPageSlug(
 	slug: string | null,
 	locale: string,
 ): Promise<any> {
-	const entry = await fetchGraphQL(getPageMetaDataQuery(slug, locale))
+	const entry = await fetchGraphQL(getPageMetaDataQuery(), { locale, slug })
 
 	if (entry.errors) {
 		entry.errors.forEach((e: any) => console.error(e))
@@ -172,13 +188,39 @@ export async function getEventSocialMedia(
 	eventId: string,
 	locale: string,
 ): Promise<any> {
-	const entry = await fetchGraphQL(getEventSocialMediaQuery(eventId, locale))
+	const entry = await fetchGraphQL(getEventSocialMediaQuery(), {
+		eventId,
+		locale,
+	})
 
 	if (entry.errors) {
 		entry.errors.forEach((e: any) => console.error(e))
 	}
 
 	return entry?.data?.event?.socialMediaCollection?.items
+}
+
+export async function getPageFooter(locale: Locale): Promise<any> {
+	const entry = await fetchGraphQL(getPageFooterQuery(), {
+		locale,
+		slug: HOME_SLUG[locale],
+	})
+
+	if (entry.errors) {
+		entry.errors.forEach((e: any) => console.error(e))
+	}
+
+	return entry?.data?.pageCollection?.items?.[0]?.footer ?? null
+}
+
+export async function getAllEvents(locale: string): Promise<any[]> {
+	const entry = await fetchGraphQL(getAllEventsQuery(), { locale })
+
+	if (entry.errors) {
+		entry.errors.forEach((e: any) => console.error(e))
+	}
+
+	return entry?.data?.eventCollection?.items ?? []
 }
 
 export async function getAllEventSlugs(): Promise<
@@ -197,7 +239,7 @@ export async function getEventMetaDataBySlug(
 	slug: string | null,
 	locale: string,
 ): Promise<any> {
-	const entry = await fetchGraphQL(getEventMetaDataQuery(slug, locale))
+	const entry = await fetchGraphQL(getEventMetaDataQuery(), { locale, slug })
 
 	if (entry.errors) {
 		entry.errors.forEach((e: any) => console.error(e))

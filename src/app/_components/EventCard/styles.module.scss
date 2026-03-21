@@ -27,16 +27,29 @@
 	}
 
 	width: 100%;
-	padding: 25px;
+	padding: var(--space-6);
 	border-radius: var(--border-radius);
-	background-color: rgba(255, 255, 255, 0.5);
-	box-shadow: 0 1.5rem 4rem rgba(38, 70, 83, 0.15);
-	display: flex;
-	align-items: center;
-	gap: 2rem;
+	background-color: color-mix(in srgb, var(--campus-color-blanc) 50%, transparent);
+	box-shadow: var(--shadow-card);
+	display: grid;
+	gap: var(--space-4);
 
 	.helpText {
-		display: none;
+		display: block;
+		justify-self: end;
+		color: var(--color-dark);
+		text-decoration: underline;
+		text-underline-offset: 3px;
+		text-decoration-thickness: 2px;
+		margin-block-start: var(--space-4);
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	.image {
+		justify-self: center;
 	}
 
 	.details {
@@ -46,21 +59,21 @@
 
 		.title {
 			text-align: left;
-			letter-spacing: 0.25rem;
+			letter-spacing: 0.1rem;
+			margin-block-end: var(--space-4);
 		}
 
 		.paragraph {
-			font-size: 1.2rem;
+			font-size: 1rem;
 		}
 	}
 
 	.arrow {
-		margin-left: auto;
+		display: none;
 		border: 2px solid var(--color-dark);
 		border-radius: 50%;
 		min-height: 50px;
 		min-width: 50px;
-		display: flex;
 		align-items: center;
 		justify-content: center;
 		opacity: 0.75;
@@ -72,54 +85,46 @@
 	}
 
 	&:hover {
-		background-color: rgba(255, 255, 255, 0.85);
+		background-color: color-mix(in srgb, var(--campus-color-blanc) 85%, transparent);
 
 		.arrow {
 			opacity: 1;
 		}
 	}
 
-	@media only screen and (max-width: breakpoint.$breakpoint-medium) {
+	@media (min-width: calc(580 / 16 * 1rem)) {
+		display: flex;
+		align-items: center;
+		gap: var(--space-8);
+
+		.image {
+			justify-self: initial;
+		}
+
 		.details {
 			.title {
 				letter-spacing: 0.15rem;
 			}
-
-			.paragraph {
-				font-size: 1rem;
-			}
-		}
-	}
-
-	@media only screen and (max-width: calc(580 / 16 * 1rem)) {
-		gap: 1rem;
-		display: grid;
-
-		.image {
-			justify-self: center;
-		}
-
-		.details {
-			.title {
-				letter-spacing: 0.1rem;
-			}
 		}
 
 		.arrow {
-			display: none;
+			display: flex;
+			margin-inline-start: auto;
 		}
 
 		.helpText {
-			display: block;
-			justify-self: end;
-			color: var(--color-dark);
-			text-decoration: underline;
-			text-underline-offset: 3px;
-			text-decoration-thickness: 2px;
-			margin-top: 1rem;
+			display: none;
+		}
+	}
 
-			&:hover {
-				text-decoration: none;
+	@media (min-width: breakpoint.$breakpoint-medium) {
+		.details {
+			.title {
+				letter-spacing: var(--tracking-wide);
+			}
+
+			.paragraph {
+				font-size: 1.2rem;
 			}
 		}
 	}

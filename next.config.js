@@ -1,6 +1,16 @@
 /** @type {import('next').NextConfig} */
 
+const securityHeaders = [
+	{ key: 'X-Frame-Options', value: 'SAMEORIGIN' },
+	{ key: 'X-Content-Type-Options', value: 'nosniff' },
+	{ key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+	{ key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
+]
+
 module.exports = {
+	async headers() {
+		return [{ source: '/(.*)', headers: securityHeaders }]
+	},
 	async redirects() {
 		return [
 			{
@@ -16,9 +26,16 @@ module.exports = {
 			},
 			{
 				source: '/:locale/:event/:year/extracuriculaire-mickey',
+				// TODO: update destination to extracurriculaire-jacob (double 'r') after fixing slug in Contentful
 				destination: '/:locale/:event/:year/extracuriculaire-jacob',
 				permanent: true,
 			},
+			// TODO: uncomment after updating the Contentful slug from 'extracuriculaire-jacob' to 'extracurriculaire-jacob'
+			// {
+			//   source: '/:locale/:event/:year/extracuriculaire-jacob',
+			//   destination: '/:locale/:event/:year/extracurriculaire-jacob',
+			//   permanent: true,
+			// },
 			{
 				source: '/en/:event/2024/mtl-bal-jam/:slug*',
 				destination: 'https://mtlbaljam.org/en',
@@ -37,7 +54,7 @@ module.exports = {
 				protocol: 'https',
 				hostname: 'images.ctfassets.net',
 				port: '',
-				pathname: `/${process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID}/**`,
+				pathname: `/${process.env.CONTENTFUL_SPACE_ID}/**`,
 			},
 		],
 	},

@@ -6,6 +6,9 @@ import { Suspense } from 'react'
 import Fallback from './Fallback'
 import styles from './styles.module.scss'
 import { PageSectionProps } from '@/app/_types/sections'
+import Link from 'next/link'
+import { EVENT_SEGMENTS } from '@/i18n'
+import { getDictionary } from '@/app/dictionaries'
 
 export default async function Events({
 	id,
@@ -14,7 +17,10 @@ export default async function Events({
 	helpText,
 	locale,
 }: PageSectionProps) {
-	const eventsCollection = await getCollectionBySectionId(id, locale, EVENT)
+	const [eventsCollection, dict] = await Promise.all([
+		getCollectionBySectionId(id, locale, EVENT),
+		getDictionary(locale),
+	])
 	const events = eventsCollection.sort((a: CampusEvent, b: CampusEvent) => {
 		if (new Date(a.startDate) < new Date(b.startDate)) {
 			return 1
@@ -29,7 +35,7 @@ export default async function Events({
 				<h2 className={styles.eventsTitle}>{title}</h2>
 				<div className={styles.eventsList}>
 					<Suspense fallback={<Fallback />}>
-						{events.length &&
+						{events.length > 0 &&
 							events.map((e: any) => (
 								<EventCard
 									key={e.sys.id}
@@ -43,6 +49,9 @@ export default async function Events({
 							))}
 					</Suspense>
 				</div>
+				<Link href={`/${locale}/${EVENT_SEGMENTS[locale]}`} className={styles.allEventsLink}>
+					{dict.EventsSection.viewAll}
+				</Link>
 			</div>
 		</section>
 	)

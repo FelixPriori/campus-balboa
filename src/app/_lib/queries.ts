@@ -130,7 +130,7 @@ export const VENUE = `
 export const PARTNER = `
     ${ID}
     title
-    link 
+    link
     logo {
         title
         ${IMAGE}
@@ -159,9 +159,9 @@ export const PRICE = `
     batch
 `
 
-export const getPageMetaDataQuery = (slug: string | null, locale: string) => `
-    query {
-        pageCollection(locale: "${locale}", where: {slug: "${slug}"}, limit: 1) {
+export const getPageMetaDataQuery = () => `
+    query GetPageMetaData($locale: String!, $slug: String) {
+        pageCollection(locale: $locale, where: {slug: $slug}, limit: 1) {
             items {
                 ${PAGE_META_DATA}
             }
@@ -169,9 +169,9 @@ export const getPageMetaDataQuery = (slug: string | null, locale: string) => `
     }
 `
 
-export const getEventMetaDataQuery = (slug: string | null, locale: string) => `
-    query {
-        eventCollection(locale: "${locale}", where: {slug: "${slug}"}, limit: 1) {
+export const getEventMetaDataQuery = () => `
+    query GetEventMetaData($locale: String!, $slug: String) {
+        eventCollection(locale: $locale, where: {slug: $slug}, limit: 1) {
             items {
                 ${EVENT_META_DATA}
             }
@@ -180,13 +180,11 @@ export const getEventMetaDataQuery = (slug: string | null, locale: string) => `
 `
 
 export const getEventCollectionQuery = (
-	eventId: string,
 	collectionName: string,
-	locale: string,
 	fieldsQuery: string,
 ) => `
-    query {
-        event(id: "${eventId}", locale: "${locale}") {
+    query GetEventCollection($eventId: String!, $locale: String!) {
+        event(id: $eventId, locale: $locale) {
             ${collectionName}Title
             ${collectionName}Collection(limit: 10) {
                 items {
@@ -197,13 +195,9 @@ export const getEventCollectionQuery = (
     }
 `
 
-export const getPageSectionQuery = (
-	id: string | null,
-	locale: string,
-	fieldsQuery: string,
-) => `
-    query {
-        pageSection(id: "${id}", locale: "${locale}") {
+export const getPageSectionQuery = (fieldsQuery: string) => `
+    query GetPageSection($id: String!, $locale: String!) {
+        pageSection(id: $id, locale: $locale) {
             title
             anchor
             componentsCollection(limit: 10) {
@@ -215,9 +209,9 @@ export const getPageSectionQuery = (
     }
 `
 
-export const getEmblaQuery = (locale: string) => `
-    query {
-        emblaCollection(locale: "${locale}", limit: 1) {
+export const getEmblaQuery = () => `
+    query GetEmbla($locale: String!) {
+        emblaCollection(locale: $locale, limit: 1) {
             items {
                 changeSlide
                 nextSlide
@@ -227,9 +221,9 @@ export const getEmblaQuery = (locale: string) => `
     }
 `
 
-export const getGoogleCalendarQuery = (locale: string) => `
-    query {
-        googleCalendarCollection(locale: "${locale}", limit: 1) {
+export const getGoogleCalendarQuery = () => `
+    query GetGoogleCalendar($locale: String!) {
+        googleCalendarCollection(locale: $locale, limit: 1) {
             items {
                 iFrameTitle
             }
@@ -237,13 +231,9 @@ export const getGoogleCalendarQuery = (locale: string) => `
     }
 `
 
-export const getBasePageQuery = (
-	slug: string | null,
-	locale: string,
-	fieldsQuery: string,
-): string => `
-    query {
-        pageCollection(locale: "${locale}", where: {slug: "${slug}"}, limit: 1) {
+export const getBasePageQuery = (fieldsQuery: string): string => `
+    query GetBasePage($locale: String!, $slug: String) {
+        pageCollection(locale: $locale, where: {slug: $slug}, limit: 1) {
             items {
                 slug
                 hero {
@@ -252,39 +242,15 @@ export const getBasePageQuery = (
                         ${RICH_TEXT}
                     }
                 }
-                footer {
-                    copyright
-                    contact
-                    contactLink {
-                        ${LINK}
-                    }
-                    donateButton {
-                        ${LINK}
-                        iconAlt
-                    }
-                    socialMediasCollection(limit: 5) {
-                        items {
-                            ${ID}
-                            ${SOCIAL_MEDIA}
-                        }
-                    }
-                    landAcknowledgement{
-                        title
-                        text
-                    }
-                }
                 ${fieldsQuery}
             }
         }
     }
 `
 
-export const getEventPageQuery = (
-	slug: string | null,
-	locale: string,
-): string => `
-    query {
-        eventCollection(locale: "${locale}", where: {slug: "${slug}"}, limit: 1) {
+export const getEventPageQuery = (): string => `
+    query GetEventPage($locale: String!, $slug: String) {
+        eventCollection(locale: $locale, where: {slug: $slug}, limit: 1) {
             items {
                 ${ID}
                 title
@@ -325,9 +291,9 @@ export const getEventPageQuery = (
     }
 `
 
-export const getEventSocialMediaQuery = (eventId: string, locale: string) => `
-    query {
-        event(id: "${eventId}", locale: "${locale}") {
+export const getEventSocialMediaQuery = () => `
+    query GetEventSocialMedia($eventId: String!, $locale: String!) {
+        event(id: $eventId, locale: $locale) {
             socialMediaCollection(limit: 3) {
                 items {
                     ${BUTTON_LINK}
@@ -338,7 +304,7 @@ export const getEventSocialMediaQuery = (eventId: string, locale: string) => `
 `
 
 export const getAllEventSlugsQuery = () => `
-    query {
+    query GetAllEventSlugs {
         eventCollection(limit: 50) {
             items {
                 slug
@@ -348,21 +314,49 @@ export const getAllEventSlugsQuery = () => `
     }
 `
 
-export const getEventScheduleQuery = (locale: string) =>
-	`
-    query {
-        eventCollection(locale: "${locale}", limit: 10) {
-             items {
-                ${ID}
-                title
-                subtitle
-                description {
-                    ${RICH_TEXT}
+export const getPageFooterQuery = () => `
+    query GetPageFooter($locale: String!, $slug: String!) {
+        pageCollection(locale: $locale, where: {slug: $slug}, limit: 1) {
+            items {
+                footer {
+                    copyright
+                    contact
+                    contactLink {
+                        ${LINK}
+                    }
+                    donateButton {
+                        ${LINK}
+                        iconAlt
+                    }
+                    socialMediasCollection(limit: 5) {
+                        items {
+                            ${ID}
+                            ${SOCIAL_MEDIA}
+                        }
+                    }
+                    landAcknowledgement {
+                        title
+                        text
+                    }
                 }
-                startTime
-                endTime
-                blockType
             }
         }
     }
-    `
+`
+
+export const getAllEventsQuery = () => `
+    query GetAllEvents($locale: String!) {
+        eventCollection(locale: $locale, limit: 50, order: startDate_DESC) {
+            items {
+                title
+                slug
+                startDate
+                endDate
+                image {
+                    url
+                    title
+                }
+            }
+        }
+    }
+`

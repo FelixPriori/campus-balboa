@@ -1,6 +1,6 @@
 import { Suspense } from 'react'
-import { Locales, EVENT_SEGMENTS, SITE_URL } from '@/i18n'
-import { getEventMetaDataBySlug, getEventPageBySlug } from '@/app/_lib/api'
+import { Locale, EVENT_SEGMENTS, SITE_URL } from '@/i18n'
+import { getEventMetaDataBySlug, getEventPageBySlug, getAllEventSlugs } from '@/app/_lib/api'
 import { getDictionary } from '@/app/dictionaries'
 import {
 	InstructorsSection,
@@ -12,20 +12,38 @@ import {
 } from './_sections'
 import SectionSkeleton from './_sections/SectionSkeleton'
 import { SectionErrorBoundary } from './_components/SectionErrorBoundary'
+import Breadcrumb from '@/app/_components/Breadcrumb'
 import styles from './styles.module.scss'
 import Hero from './_sections/Hero'
 import About from './_sections/About'
 import LevelRequirement from './_sections/LevelRequirement'
-import Footer from './_sections/Footer'
 import Navigation from './Navigation'
 import { notFound } from 'next/navigation'
 import { isPast } from 'date-fns'
 
 export const revalidate = 3600
 
+export async function generateStaticParams() {
+	const slugs = await getAllEventSlugs()
+	const locales = Object.keys(EVENT_SEGMENTS) as Locale[]
+
+	return slugs.flatMap(({ slug }) => {
+		if (!slug) return []
+		const parts = slug.replace(/^\//, '').split('/')
+		if (parts.length < 2) return []
+		const [year, slugName] = parts
+		return locales.map(locale => ({
+			locale,
+			event: EVENT_SEGMENTS[locale],
+			year,
+			slug: slugName,
+		}))
+	})
+}
+
 type Props = {
 	params: Promise<{
-		locale: Locales
+		locale: Locale
 		event: string
 		year: string
 		slug: string
@@ -40,6 +58,13 @@ export async function generateMetadata({ params }: Props) {
 
 	const canonical = `${SITE_URL}/${locale}/${event}/${year}/${slug}`
 
+	const ogImage = {
+		url: pageMetaData.openGraphImage.image.url,
+		alt: pageMetaData.title,
+		width: 1920,
+		height: 1005,
+	}
+
 	return {
 		title: pageMetaData.title,
 		description: pageMetaData.description,
@@ -48,26 +73,27 @@ export async function generateMetadata({ params }: Props) {
 			languages: {
 				fr: `${SITE_URL}/fr/${EVENT_SEGMENTS.fr}/${year}/${slug}`,
 				en: `${SITE_URL}/en/${EVENT_SEGMENTS.en}/${year}/${slug}`,
+				'x-default': `${SITE_URL}/en/${EVENT_SEGMENTS.en}/${year}/${slug}`,
 			},
 		},
-		locale,
 		openGraph: {
+			url: canonical,
+			type: 'website',
+			locale: locale === 'fr' ? 'fr_CA' : 'en_CA',
+			siteName: 'Campus Balboa',
 			title: pageMetaData.title,
 			description: pageMetaData.description,
-			images: [
-				{
-					url: pageMetaData.openGraphImage.image.url,
-					alt: pageMetaData.title,
-					width: 1920,
-					height: 1005,
-				},
-			],
+			images: [ogImage],
+		},
+		twitter: {
+			card: 'summary_large_image',
+			images: [ogImage],
 		},
 	}
 }
 
-export default async function Olga({ params }: Props) {
-	const { locale, year, slug } = await params
+export default async function EventPage({ params }: Props) {
+	const { locale, event, year, slug } = await params
 	const [data, dict] = await Promise.all([
 		getEventPageBySlug(`/${year}/${slug}`, locale),
 		getDictionary(locale),
@@ -77,10 +103,74 @@ export default async function Olga({ params }: Props) {
 		notFound()
 	}
 
-	const isClosed = isPast(data.endDate)
+	const isClosed = data.endDate ? isPast(new Date(data.endDate)) : false
 	const eventId = data.sys.id
 	const socialMedia = data.socialMediaCollection?.items ?? []
 	const registrationLink = data.registrationLink ?? null
+
+	const eventUrl = `${SITE_URL}/${locale}/${event}/${year}/${slug}`
+	const eventSchema = {
+		'@context': 'https://schema.org',
+		'@type': 'Event',
+		name: data.title,
+		startDate: data.startDate,
+		endDate: data.endDate,
+		eventStatus: 'https://schema.org/EventScheduled',
+		eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+		organizer: {
+			'@type': 'Organization',
+			name: 'Campus Balboa',
+			url: SITE_URL,
+		},
+		url: eventUrl,
+		image: data.image.url,
+		...(registrationLink
+			? {
+					offers: {
+						'@type': 'Offer',
+						url: registrationLink.href,
+						availability: isClosed
+							? 'https://schema.org/SoldOut'
+							: 'https://schema.org/InStock',
+						priceCurrency: 'CAD',
+					},
+				}
+			: {}),
+	}
+
+	const breadcrumbSchema = {
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		itemListElement: [
+			{
+				'@type': 'ListItem',
+				position: 1,
+				name: dict.EventsPage.breadcrumbHome,
+				item: `${SITE_URL}/${locale}`,
+			},
+			{
+				'@type': 'ListItem',
+				position: 2,
+				name: dict.EventsPage.breadcrumbEvents,
+				item: `${SITE_URL}/${locale}/${event}`,
+			},
+			{
+				'@type': 'ListItem',
+				position: 3,
+				name: data.title,
+				item: eventUrl,
+			},
+		],
+	}
+
+	const breadcrumbItems = [
+		{ label: dict.EventsPage.breadcrumbHome, href: `/${locale}` },
+		{
+			label: dict.EventsPage.breadcrumbEvents,
+			href: `/${locale}/${EVENT_SEGMENTS[locale]}`,
+		},
+		{ label: data.title },
+	]
 
 	const sectionBoundaryProps = {
 		errorMessage: dict.SectionErrorBoundary.message,
@@ -88,8 +178,18 @@ export default async function Olga({ params }: Props) {
 	} as const
 
 	return (
-		<div className={styles.eventPage}>
+		<>
+			<script
+				type="application/ld+json"
+				dangerouslySetInnerHTML={{ __html: JSON.stringify(eventSchema) }}
+			/>
+			<script
+				type="application/ld+json"
+				dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+			/>
+			<div className={styles.eventPage}>
 			<Navigation locale={locale} />
+			<Breadcrumb items={breadcrumbItems} ariaLabel={dict.Breadcrumb.ariaLabel} />
 			<Hero
 				imgAlt={data.image.title}
 				imgSrc={data.image.url}
@@ -169,17 +269,17 @@ export default async function Olga({ params }: Props) {
 					<ScheduleSection eventId={eventId} locale={locale} />
 				</Suspense>
 			</SectionErrorBoundary>
-			<SectionErrorBoundary label="DJs" silent>
+			<SectionErrorBoundary label={dict.SectionSkeleton.djs} silent>
 				<Suspense fallback={null}>
 					<DJsSection eventId={eventId} locale={locale} />
 				</Suspense>
 			</SectionErrorBoundary>
-			<SectionErrorBoundary label="Partners" silent>
+			<SectionErrorBoundary label={dict.SectionSkeleton.partners} silent>
 				<Suspense fallback={null}>
 					<PartnersSection eventId={eventId} locale={locale} />
 				</Suspense>
 			</SectionErrorBoundary>
-			<Footer copyright={data.copyright} />
-		</div>
+				</div>
+		</>
 	)
 }

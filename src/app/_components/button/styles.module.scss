@@ -2,13 +2,19 @@
     border-width: 1px;
     border-style: solid;
     color: var(--color-neutral);
-    padding: var(--spacing-xs) var(--spacing-m);
+    padding: var(--space-3) var(--space-4);
     border-radius: var(--button-border-radius);
     cursor: pointer;
+    transition: box-shadow var(--duration-fast) var(--ease-ui);
 }
 
 .button:hover {
-    box-shadow: 0 5px 10px rgba(38, 70, 83, 0.2);
+    box-shadow: var(--shadow-lift);
+}
+
+.button:focus-visible {
+    outline: 2px solid var(--campus-color-canard);
+    outline-offset: 3px;
 }
 
 .button svg {
@@ -43,5 +49,3 @@
 .flat:hover {
     box-shadow: none;
 }
-
-

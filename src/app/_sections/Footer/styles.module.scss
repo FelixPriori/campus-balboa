@@ -2,9 +2,9 @@
 
 .donateButton {
 	background-color: var(--paypal-color-gold);
-	font-family: sans-serif;
+	font-family: var(--font-rubik);
 	color: var(--paypal-color-blue);
-	border-radius: 50px;
+	border-radius: var(--radius-full);
 	padding: var(--paypal-padding-y) var(--paypal-padding-x);
 	display: flex;
 	align-items: center;
@@ -12,30 +12,29 @@
 	width: fit-content;
 	font-weight: bold;
 	gap: var(--paypal-gap);
-	transition: all 200ms ease-in-out;
+	transition: transform var(--duration-fast) var(--ease-out), box-shadow var(--duration-fast) var(--ease-out);
 	max-height: 42px;
 	white-space: nowrap;
 
 	&:hover {
 		transform: translateY(-3px);
-		box-shadow: 0 3px 5px rgba(38, 70, 83, 0.5);
+		box-shadow: 0 3px 5px color-mix(in srgb, var(--campus-color-canard) 50%, transparent);
 	}
 
-	@media only screen and (max-width: 580px) {
+	@media only screen and (max-width: breakpoint.$breakpoint-xs) {
 		width: 100%;
 	}
 }
 
 .footerSection {
-	padding: 50px;
-	margin-top: 5rem;
+	padding: var(--space-12);
 	background-color: var(--color-primary);
 
 	.content {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: auto 1fr;
-		row-gap: 2rem;
+		row-gap: var(--space-8);
 
 		.copy {
 			color: var(--color-neutral);
@@ -61,17 +60,17 @@
 			display: flex;
 			align-items: center;
 			justify-content: flex-end;
-			gap: 1rem;
+			gap: var(--space-4);
 		}
 	}
 
 	@media (max-width: calc(580 / 16 * 1rem)) {
-		padding: 50px 20px;
+		padding: var(--space-12) var(--space-5);
 
 		.content {
 			grid-template-columns: 1fr;
 			grid-template-rows: auto 1fr 1fr;
-			row-gap: 1rem;
+			row-gap: var(--space-4);
 			align-items: center;
 
 			.contact {

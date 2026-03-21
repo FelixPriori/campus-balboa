@@ -1,5 +1,5 @@
 import { cache } from 'react'
-import { Locales } from '@/i18n'
+import { Locale } from '@/i18n'
 import 'server-only'
 
 const dictionaries = {
@@ -8,7 +8,7 @@ const dictionaries = {
 }
 
 export const getDictionary = cache(
-	async (locale: Locales) => dictionaries[locale](),
+	async (locale: Locale) => dictionaries[locale](),
 )
 
 export type DictionaryType = Awaited<ReturnType<typeof getDictionary>>

@@ -9,7 +9,7 @@ function DonateButton({ donateButton }: { donateButton: DonateButtonType }) {
 		<a
 			className={styles.donateButton}
 			href={donateButton.href}
-			rel="noreferrer"
+			rel="noopener noreferrer"
 			target="_blank"
 		>
 			<Image
@@ -38,7 +38,7 @@ export default function Footer({
 				<div className={styles.contact}>
 					<p className={styles.copy}>
 						<span>{contact}</span>
-						<a href={contactLink.href}>{contactLink.text}</a>
+						{contactLink?.href && <a href={contactLink.href}>{contactLink.text}</a>}
 					</p>
 					<p className={styles.copy}>{copyright}</p>
 				</div>

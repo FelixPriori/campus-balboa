@@ -1,6 +1,6 @@
 'use client'
 import PillRadio, { OptionProps } from '../PillRadio'
-import { Locale, Locales } from '@/i18n'
+import { Locale, EVENT_SEGMENTS } from '@/i18n'
 import { usePathname } from 'next/navigation'
 
 interface LanguageSwitcherProps {
@@ -9,10 +9,15 @@ interface LanguageSwitcherProps {
 	locale: Locale
 }
 
-const getSwitchLocaleHref = (locale: Locales, pathname?: string) => {
+const eventSegmentValues = Object.values(EVENT_SEGMENTS)
+
+const getSwitchLocaleHref = (locale: Locale, pathname?: string) => {
 	if (!pathname) return '/'
 	const segments = pathname.split('/')
 	segments[1] = locale
+	if (segments[2] && eventSegmentValues.includes(segments[2])) {
+		segments[2] = EVENT_SEGMENTS[locale]
+	}
 	return segments.join('/')
 }
 

@@ -1,4 +1,4 @@
-import type { Locales } from '@/i18n'
+import type { Locale } from '@/i18n'
 import en from '@/dictionaries/en.json'
 import fr from '@/dictionaries/fr.json'
 
@@ -8,6 +8,6 @@ import fr from '@/dictionaries/fr.json'
 // boundaries where dynamic imports are not practical.
 const dictionaries = { en, fr }
 
-export function getClientDictionary(locale: Locales) {
+export function getClientDictionary(locale: Locale) {
 	return dictionaries[locale] ?? dictionaries.en
 }

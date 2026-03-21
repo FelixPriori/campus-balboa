@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 import Link from 'next/link'
 import { useParams } from 'next/navigation'
 import { getClientDictionary } from '@/app/_lib/clientDictionary'
-import type { Locales } from '@/i18n'
+import type { Locale } from '@/i18n'
 import styles from './error.module.scss'
 
 interface Props {
@@ -13,7 +13,7 @@ interface Props {
 }
 
 export default function EventError({ error, reset }: Props) {
-	const locale = (useParams<{ locale: Locales }>()?.locale) ?? 'en'
+	const locale = (useParams<{ locale: Locale }>()?.locale) ?? 'en'
 	const t = getClientDictionary(locale).EventError
 
 	useEffect(() => {

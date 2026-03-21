@@ -4,7 +4,7 @@ import Main from '@/app/_layout/main'
 import CampusLogo from '@/app/_assets/svgs/campus-logo'
 import LanguageSwitcher from '@/app/_components/LanguageSwitcher'
 import BackButton from '../_components/BackButton'
-import { Locales } from '@/i18n'
+import { Locale } from '@/i18n'
 import { getDictionary } from '../dictionaries'
 import Link from 'next/link'
 
@@ -13,23 +13,17 @@ type Props = {
 }
 
 export async function generateMetadata({ params }: Props) {
-	const locale = (await params).locale as Locales
+	const locale = (await params).locale as Locale
+	const { NotFoundPage } = await getDictionary(locale)
 
-	if (locale === 'fr') {
-		return {
-			title: '404 | Page non trouvée',
-			description: "Désolé, cette page n'existe pas",
-		}
-	} else {
-		return {
-			title: '404 | Page not found',
-			description: 'Sorry, this page does not exist',
-		}
+	return {
+		title: NotFoundPage.metaTitle,
+		description: NotFoundPage.metaDescription,
 	}
 }
 
 export default async function NotFoundPage({ params }: Props) {
-	const locale = (await params).locale as Locales
+	const locale = (await params).locale as Locale
 	const { NotFoundPage } = await getDictionary(locale)
 
 	return (

@@ -4,28 +4,24 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	height: 1000px;
-	background-image: url('/wave-top.png'), url('/circle-overlap.png');
-	background-size: cover, contain;
-	background-repeat: no-repeat;
-	background-position: top -550px left 0, right -500px top 0;
+	min-height: 100svh;
 
 	.text {
 		h2 {
 			color: var(--color-neutral);
-			letter-spacing: 0.35rem;
+			letter-spacing: var(--tracking-wider);
 			font-size: 2rem;
 			text-align: center;
-			margin-bottom: 3rem;
+			margin-bottom: var(--space-12);
 		}
 	}
 
 	.calendarWrapper {
-		padding: 1rem;
+		padding: var(--space-4);
 		border-radius: var(--border-radius);
-		background-color: #fff;
-		box-shadow: 0 1.5rem 4rem rgba(38, 70, 83, 0.15);
+		background-color: var(--campus-color-blanc);
+		box-shadow: var(--shadow-card);
 		width: 100%;
-		height: 1000px;
+		height: 90svh;
 	}
 }
