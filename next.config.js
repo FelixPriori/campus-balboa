@@ -26,16 +26,14 @@ module.exports = {
       },
       {
         source: '/:locale/:event/:year/extracuriculaire-mickey',
-        // TODO: update destination to extracurriculaire-jacob (double 'r') after fixing slug in Contentful
-        destination: '/:locale/:event/:year/extracuriculaire-jacob',
+        destination: '/:locale/:event/:year/extracurriculaire-jacob',
         permanent: true,
       },
-      // TODO: uncomment after updating the Contentful slug from 'extracuriculaire-jacob' to 'extracurriculaire-jacob'
-      // {
-      //   source: '/:locale/:event/:year/extracuriculaire-jacob',
-      //   destination: '/:locale/:event/:year/extracurriculaire-jacob',
-      //   permanent: true,
-      // },
+      {
+        source: '/:locale/:event/:year/extracuriculaire-jacob',
+        destination: '/:locale/:event/:year/extracurriculaire-jacob',
+        permanent: true,
+      },
       {
         source: '/en/:event/2024/mtl-bal-jam/:slug*',
         destination: 'https://mtlbaljam.org/en',
