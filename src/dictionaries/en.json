@@ -1,98 +1,101 @@
 {
-	"Navigation": {
-		"homeAriaLabel": "Campus Balboa — home",
-		"mainAriaLabel": "Main navigation"
-	},
-	"Breadcrumb": {
-		"ariaLabel": "Breadcrumb"
-	},
-	"EventsSection": {
-		"viewAll": "View all events"
-	},
-	"EventsPage": {
-		"metaTitle": "Events | Campus Balboa",
-		"metaDescription": "Browse all Balboa dance workshops and events organized by Campus Balboa in Montréal.",
-		"breadcrumbHome": "Home",
-		"breadcrumbEvents": "Events",
-		"pageTitle": "Events",
-		"upcoming": "Upcoming",
-		"pastEvents": "Past events",
-		"empty": "No events found."
-	},
-	"PricingCard": {
-		"registrationOpensSoon": "Registration opens soon",
-		"registrationClosed": "Registration closed"
-	},
-	"Schedule": {
-		"endsAt": "Ends at",
-		"blockTypes": {
-			"Class": "Class",
-			"Dance": "Dance",
-			"Social": "Social",
-			"Other": "Other",
-			"Extra": "Extra"
-		}
-	},
-	"SectionErrorBoundary": {
-		"message": "This section could not be loaded.",
-		"retry": "Try again"
-	},
-	"EventError": {
-		"title": "Something went wrong",
-		"message": "This event page could not be loaded.",
-		"tryAgain": "Try again",
-		"returnHome": "Return home"
-	},
-	"EventLoading": {
-		"ariaLabel": "Loading event page"
-	},
-	"EventNotFound": {
-		"title": "Event not found",
-		"message": "This event page does not exist or may have been removed.",
-		"returnHome": "Return home"
-	},
-	"SectionSkeleton": {
-		"loading": "loading",
-		"instructors": "Instructors",
-		"pricing": "Pricing",
-		"venues": "Venues",
-		"schedule": "Schedule",
-		"djs": "DJs",
-		"partners": "Partners"
-	},
-	"NotFoundPage": {
-		"metaTitle": "404 | Page not found",
-		"metaDescription": "Sorry, this page does not exist",
-		"title": "Page not found.",
-		"return": "Go back to the previous page",
-		"home": "To the home page",
-		"footer": {
-			"contact": "Contact-us: ",
-			"contactLink": {
-				"href": "mailto:info@campusbalboa.org",
-				"text": "info@campusbalboa.org"
-			},
-			"copyright": "©2024 Campus Balboa",
-			"socialMedia": {
-				"facebook": {
-					"id": "fb",
-					"href": "https://www.facebook.com/campusbalboa",
-					"accessibilityDescription": "Opens a new window to Campus Balboa's Facebook page",
-					"logo": {
-						"url": "/facebook-white.png",
-						"title": "Facebook logo"
-					}
-				},
-				"instagram": {
-					"id": "in",
-					"accessibilityDescription": "Opens a new window to Campus Balboa's instagram page",
-					"href": "https://www.instagram.com/campusbalboa/",
-					"logo": {
-						"url": "/instagram-white.png",
-						"title": "Instagram logo"
-					}
-				}
-			}
-		}
-	}
+  "Calendar": {
+    "calendarEmbedTitle": "Balboa in Montreal"
+  },
+  "Navigation": {
+    "homeAriaLabel": "Campus Balboa — home",
+    "mainAriaLabel": "Main navigation"
+  },
+  "Breadcrumb": {
+    "ariaLabel": "Breadcrumb"
+  },
+  "EventsSection": {
+    "viewAll": "View all events"
+  },
+  "EventsPage": {
+    "metaTitle": "Events | Campus Balboa",
+    "metaDescription": "Browse all Balboa dance workshops and events organized by Campus Balboa in Montréal.",
+    "breadcrumbHome": "Home",
+    "breadcrumbEvents": "Events",
+    "pageTitle": "Events",
+    "upcoming": "Upcoming",
+    "pastEvents": "Past events",
+    "empty": "No events found."
+  },
+  "PricingCard": {
+    "registrationOpensSoon": "Registration opens soon",
+    "registrationClosed": "Registration closed"
+  },
+  "Schedule": {
+    "endsAt": "Ends at",
+    "blockTypes": {
+      "Class": "Class",
+      "Dance": "Dance",
+      "Social": "Social",
+      "Other": "Other",
+      "Extra": "Extra"
+    }
+  },
+  "SectionErrorBoundary": {
+    "message": "This section could not be loaded.",
+    "retry": "Try again"
+  },
+  "EventError": {
+    "title": "Something went wrong",
+    "message": "This event page could not be loaded.",
+    "tryAgain": "Try again",
+    "returnHome": "Return home"
+  },
+  "EventLoading": {
+    "ariaLabel": "Loading event page"
+  },
+  "EventNotFound": {
+    "title": "Event not found",
+    "message": "This event page does not exist or may have been removed.",
+    "returnHome": "Return home"
+  },
+  "SectionSkeleton": {
+    "loading": "loading",
+    "instructors": "Instructors",
+    "pricing": "Pricing",
+    "venues": "Venues",
+    "schedule": "Schedule",
+    "djs": "DJs",
+    "partners": "Partners"
+  },
+  "NotFoundPage": {
+    "metaTitle": "404 | Page not found",
+    "metaDescription": "Sorry, this page does not exist",
+    "title": "Page not found.",
+    "return": "Go back to the previous page",
+    "home": "To the home page",
+    "footer": {
+      "contact": "Contact-us: ",
+      "contactLink": {
+        "href": "mailto:info@campusbalboa.org",
+        "text": "info@campusbalboa.org"
+      },
+      "copyright": "©2024 Campus Balboa",
+      "socialMedia": {
+        "facebook": {
+          "id": "fb",
+          "href": "https://www.facebook.com/campusbalboa",
+          "accessibilityDescription": "Opens a new window to Campus Balboa's Facebook page",
+          "logo": {
+            "url": "/facebook-white.png",
+            "title": "Facebook logo"
+          }
+        },
+        "instagram": {
+          "id": "in",
+          "accessibilityDescription": "Opens a new window to Campus Balboa's instagram page",
+          "href": "https://www.instagram.com/campusbalboa/",
+          "logo": {
+            "url": "/instagram-white.png",
+            "title": "Instagram logo"
+          }
+        }
+      }
+    }
+  }
 }

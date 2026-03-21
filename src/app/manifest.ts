@@ -1,10 +1,11 @@
 import { MetadataRoute } from 'next'
- 
+
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: 'Campus Balboa',
     short_name: 'Campus Balboa',
-    description: 'A nonprofit entirely dedicated to fostering balboa growth and excellence in and around Montreal.',
+    description:
+      'A nonprofit entirely dedicated to fostering balboa growth and excellence in and around Montreal.',
     start_url: '/',
     scope: '/',
     display: 'standalone',

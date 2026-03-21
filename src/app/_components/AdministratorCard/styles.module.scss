@@ -1,63 +1,63 @@
 .administratorCard {
-    border-radius: var(--border-radius);
-    background-color: var(--campus-color-blanc);
-    opacity: 0.85;
-    box-shadow: var(--shadow-card);
+  border-radius: var(--border-radius);
+  background-color: var(--campus-color-blanc);
+  opacity: 0.85;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: opacity var(--duration-slow) var(--ease-ui);
+
+  .avatarWrapper {
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    width: 100%;
+    height: 280px;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    transition: opacity var(--duration-slow) var(--ease-ui);
 
-    .avatarWrapper {
-        border-radius: var(--border-radius) var(--border-radius) 0 0;
-        width: 100%;
-        height: 280px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .avatar {
+      object-fit: cover;
+      border-radius: var(--border-radius) var(--border-radius) 0 0;
+      filter: grayscale(100%);
+      width: 100%;
+      height: 100%;
+    }
+  }
 
-        .avatar {
-            object-fit: cover;
-            border-radius: var(--border-radius) var(--border-radius) 0 0;
-            filter: grayscale(100%);
-            width: 100%;
-            height: 100%;
-        }
+  .textWrapper {
+    padding: var(--space-4);
+    text-align: center;
+
+    .name {
+      letter-spacing: var(--tracking-wide);
     }
 
-    .textWrapper {
-        padding: var(--space-4);
-        text-align: center;
-
-        .name {
-            letter-spacing: var(--tracking-wide);
-        }
-
-        .pronouns {
-            font-size: 0.75rem;
-            color: var(--color-primary);
-            font-weight: bold;
-        }
-
-        .title {
-            letter-spacing: 0.15rem;
-            margin-bottom: var(--space-1);
-        }
-
-        .bio {
-            line-height: 1.6;
-
-            .italic {
-                font-style: italic;
-            }
-        }
+    .pronouns {
+      font-size: 0.75rem;
+      color: var(--color-primary);
+      font-weight: bold;
     }
 
-    &:hover {
-        opacity: 1;
+    .title {
+      letter-spacing: 0.15rem;
+      margin-bottom: var(--space-1);
     }
 
-    @media (hover: none) {
-        opacity: 1;
+    .bio {
+      line-height: 1.6;
+
+      .italic {
+        font-style: italic;
+      }
     }
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  @media (hover: none) {
+    opacity: 1;
+  }
 }

@@ -1,73 +1,73 @@
 @use '@/app/_layout/breakpoints.scss' as breakpoint;
 
 .featuredSlide {
-	flex: 0 0 100%;
-	min-width: 0;
-	margin: 0 var(--space-4);
-	display: flex;
-	flex-direction: column;
+  flex: 0 0 100%;
+  min-width: 0;
+  margin: 0 var(--space-4);
+  display: flex;
+  flex-direction: column;
 
-	.content {
-		border-radius: var(--border-radius);
-		background-color: var(--campus-color-blanc);
-		opacity: 0.85;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		flex: 1;
-		transition: opacity var(--duration-slow) var(--ease-ui);
+  .content {
+    border-radius: var(--border-radius);
+    background-color: var(--campus-color-blanc);
+    opacity: 0.85;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    transition: opacity var(--duration-slow) var(--ease-ui);
 
-		.bannerWrapper {
-			border-radius: var(--border-radius) var(--border-radius) 0 0;
-			width: 100%;
-			height: clamp(200px, 30vw, 300px);
-			overflow: hidden;
-			display: flex;
-			justify-content: center;
-			align-items: center;
+    .bannerWrapper {
+      border-radius: var(--border-radius) var(--border-radius) 0 0;
+      width: 100%;
+      height: clamp(200px, 30vw, 300px);
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-			.banner {
-				object-fit: cover;
-				width: 100%;
-				height: 100%;
-			}
-		}
+      .banner {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
 
-		.copy {
-			padding: var(--space-6);
-			display: flex;
-			flex-direction: column;
-			gap: var(--space-2);
-			flex: 1;
-			text-align: justify;
+    .copy {
+      padding: var(--space-6);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+      flex: 1;
+      text-align: justify;
 
-			.title {
-				letter-spacing: var(--tracking-wide);
-				text-align: center;
-				margin-block-end: var(--space-2);
-			}
+      .title {
+        letter-spacing: var(--tracking-wide);
+        text-align: center;
+        margin-block-end: var(--space-2);
+      }
 
-			.subtitle {
-				text-align: center;
-			}
+      .subtitle {
+        text-align: center;
+      }
 
-			@media only screen and (max-width: breakpoint.$breakpoint-medium) {
-				.title {
-					font-size: 1rem;
-				}
+      @media only screen and (max-width: breakpoint.$breakpoint-medium) {
+        .title {
+          font-size: 1rem;
+        }
 
-				.subtitle {
-					font-size: 0.85rem;
-				}
+        .subtitle {
+          font-size: 0.85rem;
+        }
 
-				.details {
-					font-size: 0.7rem;
-				}
-			}
-		}
+        .details {
+          font-size: 0.7rem;
+        }
+      }
+    }
 
-		&:hover {
-			opacity: 1;
-		}
-	}
+    &:hover {
+      opacity: 1;
+    }
+  }
 }

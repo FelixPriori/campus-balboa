@@ -1,47 +1,48 @@
 .pillRadio {
-	padding: var(--space-1);
-	border: none;
-	border-radius: 0.75rem;
-	width: fit-content;
+  padding: var(--space-1);
+  border: none;
+  border-radius: 0.75rem;
+  width: fit-content;
 
-	.option {
-		background-color: transparent;
-		padding: var(--space-2) var(--space-4);
-		border: none;
-		cursor: pointer;
+  .option {
+    background-color: transparent;
+    padding: var(--space-2) var(--space-4);
+    border: none;
+    cursor: pointer;
 
-		&:not(.active) {
-			color: var(--color-dark);
+    &:not(.active) {
+      color: var(--color-dark);
 
-			&:hover {
-				background-color: var(--color-primary);
-				color: var(--color-neutral);
-				transition: background-color var(--duration-fast) var(--ease-ui),
-				            color var(--duration-fast) var(--ease-ui);
-			}
-		}
+      &:hover {
+        background-color: var(--color-primary);
+        color: var(--color-neutral);
+        transition:
+          background-color var(--duration-fast) var(--ease-ui),
+          color var(--duration-fast) var(--ease-ui);
+      }
+    }
 
-		&.active {
-			background-color: var(--color-secondary);
-			color: var(--color-dark);
-			pointer-events: none;
-		}
+    &.active {
+      background-color: var(--color-secondary);
+      color: var(--color-dark);
+      pointer-events: none;
+    }
 
-		&.first {
-			border-radius: 0.5rem 0 0 0.5rem;
-		}
+    &.first {
+      border-radius: 0.5rem 0 0 0.5rem;
+    }
 
-		&.last {
-			border-radius: 0 0.5rem 0.5rem 0;
-		}
-	}
+    &.last {
+      border-radius: 0 0.5rem 0.5rem 0;
+    }
+  }
 
-	&.mbjStyling {
-		.option {
-			&.active {
-				color: var(--campus-color-blanc);
-				background-color: var(--campus-color-taupe);
-			}
-		}
-	}
+  &.mbjStyling {
+    .option {
+      &.active {
+        color: var(--campus-color-blanc);
+        background-color: var(--campus-color-taupe);
+      }
+    }
+  }
 }

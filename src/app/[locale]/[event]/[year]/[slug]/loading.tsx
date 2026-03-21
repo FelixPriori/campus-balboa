@@ -6,19 +6,15 @@ import type { Locale } from '@/i18n'
 import styles from './loading.module.scss'
 
 export default function EventLoading() {
-	const locale = (useParams<{ locale: Locale }>()?.locale) ?? 'en'
-	const t = getClientDictionary(locale).EventLoading
+  const locale = useParams<{ locale: Locale }>()?.locale ?? 'en'
+  const t = getClientDictionary(locale).EventLoading
 
-	return (
-		<div
-			className={styles.page}
-			aria-busy="true"
-			aria-label={t.ariaLabel}
-		>
-			<div className={styles.nav} aria-hidden="true" />
-			<div className={styles.hero} aria-hidden="true">
-				<div className={styles.pulse} />
-			</div>
-		</div>
-	)
+  return (
+    <div className={styles.page} aria-busy="true" aria-label={t.ariaLabel}>
+      <div className={styles.nav} aria-hidden="true" />
+      <div className={styles.hero} aria-hidden="true">
+        <div className={styles.pulse} />
+      </div>
+    </div>
+  )
 }

@@ -1,51 +1,52 @@
 .partnersBlock {
-	border: 2px solid var(--campus-color-canard);
-	min-height: 200px;
-	height: 200px;
-	border-radius: var(--border-radius);
-	background-color: var(--campus-color-blanc);
-	transition: transform var(--duration-fast) var(--ease-in-out),
-	            box-shadow var(--duration-fast) var(--ease-in-out);
-	overflow: hidden;
+  border: 2px solid var(--campus-color-canard);
+  min-height: 200px;
+  height: 200px;
+  border-radius: var(--border-radius);
+  background-color: var(--campus-color-blanc);
+  transition:
+    transform var(--duration-fast) var(--ease-in-out),
+    box-shadow var(--duration-fast) var(--ease-in-out);
+  overflow: hidden;
 
-	&:hover {
-		transform: translateY(-3px);
-		box-shadow: 0 3px 5px color-mix(in srgb, var(--campus-color-canard) 50%, transparent);
-	}
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 3px 5px color-mix(in srgb, var(--campus-color-canard) 50%, transparent);
+  }
 
-	&:has(a:focus-visible) {
-		outline: 3px solid var(--campus-color-canard);
-		outline-offset: 2px;
-	}
+  &:has(a:focus-visible) {
+    outline: 3px solid var(--campus-color-canard);
+    outline-offset: 2px;
+  }
 
-	a {
-		display: flex;
-		flex-direction: column;
-		width: 100%;
-		height: 100%;
-	}
+  a {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
 
-	.titleContainer {
-		background-color: var(--campus-color-canard);
-		padding: var(--space-1) var(--space-2);
-		height: 50px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
+  .titleContainer {
+    background-color: var(--campus-color-canard);
+    padding: var(--space-1) var(--space-2);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-		h4 {
-			margin-bottom: var(--space-1);
-			text-align: center;
-			color: var(--campus-color-blanc);
-		}
-	}
+    h4 {
+      margin-bottom: var(--space-1);
+      text-align: center;
+      color: var(--campus-color-blanc);
+    }
+  }
 
-	img {
-		display: block;
-		width: 100%;
-		flex: 1;
-		min-height: 0;
-		object-fit: cover;
-		object-position: center;
-	}
+  img {
+    display: block;
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+    object-fit: cover;
+    object-position: center;
+  }
 }

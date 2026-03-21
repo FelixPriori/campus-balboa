@@ -1,26 +1,28 @@
-import { useEffect, useState } from "react"
-import useResponsive from "./useResponsive";
+import { useEffect, useMemo, useState } from 'react'
+import useResponsive from './useResponsive'
 
 type MapSize = {
-    width: number;
-    height: number;
+  width: number
+  height: number
 }
 
 export default function useMapSize() {
-    const [mapSize, setMapSize] = useState<MapSize>()
-    const {isMobile, isTablet, isLaptop, isDesktop, isLargeDesktop} = useResponsive()
-    
-    useEffect(() => {
-        if (isMobile) {
-            setMapSize({width: 320, height: 400})
-        } else if (isTablet) {
-            setMapSize({width: 500, height: 400})
-        } else if (isLaptop) {
-            setMapSize({width: 600, height: 500})
-        } else if (isDesktop || isLargeDesktop) {
-            setMapSize({width: 800, height: 600})
-        }
-    }, [isMobile, isTablet, isLaptop, isDesktop, isLargeDesktop])
+  const [mounted, setMounted] = useState(false)
+  const { isMobile, isTablet, isLaptop, isDesktop, isLargeDesktop } = useResponsive()
 
-    return mapSize
+  useEffect(() => {
+    const activate = () => setMounted(true)
+    activate()
+  }, [])
+
+  const mapSize = useMemo<MapSize | undefined>(() => {
+    if (!mounted) return undefined
+    if (isMobile) return { width: 320, height: 400 }
+    if (isTablet) return { width: 500, height: 400 }
+    if (isLaptop) return { width: 600, height: 500 }
+    if (isDesktop || isLargeDesktop) return { width: 800, height: 600 }
+    return undefined
+  }, [mounted, isMobile, isTablet, isLaptop, isDesktop, isLargeDesktop])
+
+  return mapSize
 }

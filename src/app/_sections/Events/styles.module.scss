@@ -1,67 +1,68 @@
 @use '@/app/_layout/breakpoints.scss' as breakpoint;
 
 .eventsFallback {
-	width: 100%;
-	min-width: 500px;
-	height: 200px;
-	border-radius: var(--border-radius);
-	overflow: hidden;
-	opacity: 0.8;
+  width: 100%;
+  min-width: 500px;
+  height: 200px;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  opacity: 0.8;
 }
 
 .eventsSection {
-	min-height: 700px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  min-height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-	.content {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		width: 100%;
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 
-		.eventsTitle {
-			color: var(--campus-color-blanc);
-			letter-spacing: var(--tracking-wider);
-			margin-block-end: var(--space-12);
-		}
+    .eventsTitle {
+      color: var(--campus-color-blanc);
+      letter-spacing: var(--tracking-wider);
+      margin-block-end: var(--space-12);
+    }
 
-		.eventTitle {
-			letter-spacing: var(--tracking-widest);
-		}
+    .eventTitle {
+      letter-spacing: var(--tracking-widest);
+    }
 
-		.eventsList {
-			display: flex;
-			flex-direction: column;
-			gap: var(--space-4);
-			max-width: min(100%, 1200px);
-		}
-	}
+    .eventsList {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+      max-width: min(100%, 1200px);
+    }
+  }
 }
 
 .allEventsLink {
-	display: inline-block;
-	margin-block-start: var(--space-8);
-	padding: 0.75rem 1.75rem;
-	border: 2px solid var(--campus-color-blanc);
-	border-radius: var(--border-radius);
-	font-family: var(--font-rubik);
-	font-size: 1rem;
-	font-weight: 600;
-	color: var(--campus-color-blanc);
-	text-decoration: none;
-	transition: background-color var(--duration-fast) var(--ease-ui),
-	            color var(--duration-fast) var(--ease-ui);
+  display: inline-block;
+  margin-block-start: var(--space-8);
+  padding: 0.75rem 1.75rem;
+  border: 2px solid var(--campus-color-blanc);
+  border-radius: var(--border-radius);
+  font-family: var(--font-rubik);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--campus-color-blanc);
+  text-decoration: none;
+  transition:
+    background-color var(--duration-fast) var(--ease-ui),
+    color var(--duration-fast) var(--ease-ui);
 
-	&:hover {
-		background-color: var(--campus-color-blanc);
-		color: var(--campus-color-canard);
-	}
+  &:hover {
+    background-color: var(--campus-color-blanc);
+    color: var(--campus-color-canard);
+  }
 
-	&:focus-visible {
-		outline: 2px solid var(--campus-color-blanc);
-		outline-offset: 3px;
-		border-radius: var(--border-radius);
-	}
+  &:focus-visible {
+    outline: 2px solid var(--campus-color-blanc);
+    outline-offset: 3px;
+    border-radius: var(--border-radius);
+  }
 }

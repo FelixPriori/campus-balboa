@@ -10,67 +10,67 @@ import sectionsRenderer, { Hero } from '../_sections'
 import { notFound } from 'next/navigation'
 
 type Props = {
-	params: Promise<{ locale: string }>
+  params: Promise<{ locale: string }>
 }
 
 export async function generateMetadata({ params }: Props) {
-	const locale = (await params).locale as Locale
-	const metaData = await getPageMetaDataByPageSlug(locale, locale)
+  const locale = (await params).locale as Locale
+  const metaData = await getPageMetaDataByPageSlug(locale, locale)
 
-	if (metaData) {
-		return {
-			title: metaData.title,
-			description: metaData.description,
-			alternates: {
-				canonical: `${SITE_URL}/${locale}`,
-				languages: {
-					fr: `${SITE_URL}/fr`,
-					en: `${SITE_URL}/en`,
-					'x-default': `${SITE_URL}/fr`,
-				},
-			},
-			openGraph: {
-				images: [
-					{
-						url: metaData.openGraphImage.image.url,
-						alt: metaData.openGraphImage.image.alt,
-					},
-				],
-				title: metaData.title,
-				url: `${SITE_URL}/${locale}`,
-				locale,
-				description: metaData.openGraphImage.description,
-			},
-			icons: [{ rel: 'icon', url: metaData.favicon.url }],
-		}
-	}
+  if (metaData) {
+    return {
+      title: metaData.title,
+      description: metaData.description,
+      alternates: {
+        canonical: `${SITE_URL}/${locale}`,
+        languages: {
+          fr: `${SITE_URL}/fr`,
+          en: `${SITE_URL}/en`,
+          'x-default': `${SITE_URL}/fr`,
+        },
+      },
+      openGraph: {
+        images: [
+          {
+            url: metaData.openGraphImage.image.url,
+            alt: metaData.openGraphImage.image.alt,
+          },
+        ],
+        title: metaData.title,
+        url: `${SITE_URL}/${locale}`,
+        locale,
+        description: metaData.openGraphImage.description,
+      },
+      icons: [{ rel: 'icon', url: metaData.favicon.url }],
+    }
+  }
 
-	return buildPageMetaData({ locale })
+  return buildPageMetaData({ locale })
 }
 
 export default async function Home({ params }: Props) {
-	const locale = (await params).locale as Locale
-	const [pageData, dict] = await Promise.all([
-		getPageBySlug(locale, locale, PAGE_FIELDS_QUERY),
-		getDictionary(locale),
-	])
+  const locale = (await params).locale as Locale
+  const [pageData, dict] = await Promise.all([
+    getPageBySlug(locale, locale, PAGE_FIELDS_QUERY),
+    getDictionary(locale),
+  ])
 
-	if (!pageData?.sectionsCollection) {
-		return notFound()
-	}
+  if (!pageData?.sectionsCollection) {
+    return notFound()
+  }
 
-	return (
-		<div className="landing">
-			<nav className="app-nav" aria-label={dict.Navigation.mainAriaLabel}>
-				<CampusLogo />
-				<LanguageSwitcher locale={locale} />
-			</nav>
-			<Hero {...pageData?.hero} />
-			<Main>
-				{pageData?.sectionsCollection?.items.map(
-					async (s: any) => await sectionsRenderer(s, locale),
-				)}
-			</Main>
-			</div>
-	)
+  return (
+    <div className="landing">
+      <nav className="app-nav" aria-label={dict.Navigation.mainAriaLabel}>
+        <CampusLogo />
+        <LanguageSwitcher locale={locale} />
+      </nav>
+      <Hero {...pageData?.hero} />
+      <Main>
+        {pageData?.sectionsCollection?.items.map(
+          async (s: any) => await sectionsRenderer(s, locale),
+        )}
+      </Main>
+    </div>
+  )
 }

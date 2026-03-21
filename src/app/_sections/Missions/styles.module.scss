@@ -1,29 +1,29 @@
 .missionsFallback {
-	width: 100%;
-	min-width: 280px;
-	height: 270px;
-	border-radius: var(--border-radius);
-	overflow: hidden;
-	opacity: 0.8;
+  width: 100%;
+  min-width: 280px;
+  height: 270px;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  opacity: 0.8;
 }
 
 .missionsSection {
-	background-color: var(--campus-color-canard);
+  background-color: var(--campus-color-canard);
 
-	.content {
-		width: 100%;
+  .content {
+    width: 100%;
 
-		.missionsTitle {
-			color: var(--color-neutral);
-			letter-spacing: var(--tracking-wider);
-			margin-block-end: var(--space-12);
-		}
+    .missionsTitle {
+      color: var(--color-neutral);
+      letter-spacing: var(--tracking-wider);
+      margin-block-end: var(--space-12);
+    }
 
-		.missionsContainer {
-			width: 100%;
-			display: grid;
-			grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
-			gap: var(--space-3);
-		}
-	}
+    .missionsContainer {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
+      gap: var(--space-3);
+    }
+  }
 }

@@ -1,18 +1,18 @@
-"use server"
-const mailchimp = require("@mailchimp/mailchimp_marketing");
+'use server'
+const mailchimp = require('@mailchimp/mailchimp_marketing')
 
 mailchimp.setConfig({
   apiKey: process.env.NEXT_PUBLIC_MAILCHIMP_API_KEY,
   server: process.env.NEXT_PUBLIC_MAILCHIMP_API_SERVER,
-});
+})
 
 export interface AddMemberParams {
   data: FormData
-  language: string,
+  language: string
   tags?: string[]
 }
 
-export async function addMember({data, language, tags}: AddMemberParams) {
+export async function addMember({ data, language, tags }: AddMemberParams) {
   const email = data.get('email')
   try {
     const response = await mailchimp.lists.setListMember(
@@ -25,14 +25,14 @@ export async function addMember({data, language, tags}: AddMemberParams) {
           LNAME: data.get('lastName'),
         },
         marketing_permissions: {
-          enabled: data.get('permission')
+          enabled: data.get('permission'),
         },
         status: 'subscribed',
         tags,
         language,
-      }
-    );
-    return response;
+      },
+    )
+    return response
   } catch (err) {
     console.error(err)
     return err

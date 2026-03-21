@@ -1,70 +1,70 @@
 .eventPage {
-	min-height: 100dvh;
-	background-color: var(--campus-color-canard);
+  min-height: 100dvh;
+  background-color: var(--campus-color-canard);
 
-	section,
-	header {
-		background-color: var(--campus-color-canard);
-	}
+  section,
+  header {
+    background-color: var(--campus-color-canard);
+  }
 
-	section {
-		min-height: unset;
-	}
+  section {
+    min-height: unset;
+  }
 
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		font-family: var(--font-lemon);
-		color: var(--campus-color-taupe);
-	}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-lemon);
+    color: var(--campus-color-taupe);
+  }
 
-	p,
-	a,
-	button,
-	li {
-		font-family: var(--font-rubik);
-	}
+  p,
+  a,
+  button,
+  li {
+    font-family: var(--font-rubik);
+  }
 
-	h1 {
-		font-size: clamp(1.75rem, 3vw, 2.5rem);
-		margin-block-end: 1rem;
-	}
+  h1 {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    margin-block-end: 1rem;
+  }
 
-	h2 {
-		font-size: clamp(1.5rem, 2.5vw, 2rem);
-		color: var(--campus-color-blanc);
-		letter-spacing: 0.35rem;
-		margin-block-end: 1.5rem;
-		text-align: center;
-	}
+  h2 {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    color: var(--campus-color-blanc);
+    letter-spacing: 0.35rem;
+    margin-block-end: 1.5rem;
+    text-align: center;
+  }
 
-	h3 {
-		font-size: clamp(1.25rem, 2.5vw, 1.75rem);
-		text-align: center;
-		margin-block-end: 1rem;
-	}
+  h3 {
+    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+    text-align: center;
+    margin-block-end: 1rem;
+  }
 
-	p {
-		max-width: 50ch;
-	}
+  p {
+    max-width: 50ch;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
-	@supports (animation-timeline: view()) {
-		.eventPage section {
-			animation: sectionEnter linear none;
-			animation-timeline: view();
-			animation-range: entry 0% entry 20%;
-		}
+  @supports (animation-timeline: view()) {
+    .eventPage section {
+      animation: sectionEnter linear none;
+      animation-timeline: view();
+      animation-range: entry 0% entry 20%;
+    }
 
-		@keyframes sectionEnter {
-			from {
-				opacity: 0;
-				translate: 0 2rem;
-			}
-		}
-	}
+    @keyframes sectionEnter {
+      from {
+        opacity: 0;
+        translate: 0 2rem;
+      }
+    }
+  }
 }

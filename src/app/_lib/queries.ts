@@ -179,10 +179,7 @@ export const getEventMetaDataQuery = () => `
     }
 `
 
-export const getEventCollectionQuery = (
-	collectionName: string,
-	fieldsQuery: string,
-) => `
+export const getEventCollectionQuery = (collectionName: string, fieldsQuery: string) => `
     query GetEventCollection($eventId: String!, $locale: String!) {
         event(id: $eventId, locale: $locale) {
             ${collectionName}Title

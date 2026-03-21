@@ -1,42 +1,42 @@
 .avatar {
-	flex-shrink: 0;
+  flex-shrink: 0;
 
-	img {
-		display: block;
-		object-fit: cover;
-		border-radius: 50%;
-	}
+  img {
+    display: block;
+    object-fit: cover;
+    border-radius: 50%;
+  }
 }
 
 .instructor {
-	display: flex;
-	align-items: flex-start;
-	gap: 1.5rem;
-	margin-bottom: 2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
 
-	.avatar img {
-		height: 200px;
-		width: 200px;
-	}
+  .avatar img {
+    height: 200px;
+    width: 200px;
+  }
 
-	@media only screen and (max-width: 576px) {
-		flex-direction: column;
-		align-items: center;
-	}
+  @media only screen and (max-width: 576px) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .dj {
-	display: flex;
-	align-items: flex-start;
-	gap: 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
 
-	.avatar img {
-		height: 120px;
-		width: 120px;
-	}
+  .avatar img {
+    height: 120px;
+    width: 120px;
+  }
 
-	@media only screen and (max-width: 576px) {
-		flex-direction: column;
-		align-items: center;
-	}
+  @media only screen and (max-width: 576px) {
+    flex-direction: column;
+    align-items: center;
+  }
 }

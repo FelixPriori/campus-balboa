@@ -1,17 +1,20 @@
 .socialMedia {
-    position: relative;
-    max-width: 42px;
-    max-height: 42px;
+  position: relative;
+  max-width: 42px;
+  max-height: 42px;
 
+  img {
+    transition:
+      transform var(--duration-fast) var(--ease-in-out),
+      filter var(--duration-fast) var(--ease-in-out);
+  }
+
+  &:hover {
     img {
-        transition: transform var(--duration-fast) var(--ease-in-out),
-                    filter var(--duration-fast) var(--ease-in-out);
+      transform: translateY(-3px);
+      filter: drop-shadow(
+        0 3px 5px color-mix(in srgb, var(--campus-color-canard) 50%, transparent)
+      );
     }
-
-    &:hover {
-        img {
-            transform: translateY(-3px);
-            filter: drop-shadow(0 3px 5px color-mix(in srgb, var(--campus-color-canard) 50%, transparent));
-        }
-    }
+  }
 }

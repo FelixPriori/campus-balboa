@@ -1,31 +1,31 @@
 @use '@/app/_layout/breakpoints.scss' as breakpoint;
 
 .aboutFallback {
-	width: 100%;
-	min-width: 280px;
-	height: 100%;
-	border-radius: var(--border-radius);
-	overflow: hidden;
-	opacity: 0.8;
+  width: 100%;
+  min-width: 280px;
+  height: 100%;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  opacity: 0.8;
 }
 
 .aboutUsSection {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-	.content {
-		.aboutUsTitle {
-			color: var(--color-neutral);
-			letter-spacing: var(--tracking-wider);
-			margin-block-end: var(--space-12);
-		}
+  .content {
+    .aboutUsTitle {
+      color: var(--color-neutral);
+      letter-spacing: var(--tracking-wider);
+      margin-block-end: var(--space-12);
+    }
 
-		.administratorsContainer {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
-			gap: var(--space-3);
-			justify-content: center;
-		}
-	}
+    .administratorsContainer {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+      gap: var(--space-3);
+      justify-content: center;
+    }
+  }
 }

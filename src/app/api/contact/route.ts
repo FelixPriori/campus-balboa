@@ -1,9 +1,8 @@
-
-import { type NextRequest, NextResponse } from 'next/server';
-import nodemailer, { type SendMailOptions } from 'nodemailer';
+import { type NextRequest, NextResponse } from 'next/server'
+import nodemailer, { type SendMailOptions } from 'nodemailer'
 
 export async function POST(request: NextRequest) {
-  const { email, fullName, message } = await request.json();
+  const { email, fullName, message } = await request.json()
 
   console.log({ email, fullName, message })
 
@@ -22,7 +21,7 @@ export async function POST(request: NextRequest) {
       user: process.env.NEXT_PUBLIC_MBJ_EMAIL,
       pass: process.env.NEXT_PUBLIC_MBJ_PASSWORD,
     },
-  });
+  })
 
   const mailOptions: SendMailOptions = {
     from: process.env.NEXT_PUBLIC_MBJ_EMAIL,
@@ -30,23 +29,23 @@ export async function POST(request: NextRequest) {
     // cc: email, (uncomment this line if you want to send a copy to the sender)
     subject: `Message from ${fullName} (${email})`,
     text: message,
-  };
+  }
 
   const sendMailPromise = () =>
     new Promise<string>((resolve, reject) => {
       transport.sendMail(mailOptions, function (err: Error | null) {
         if (!err) {
-          resolve('Email sent');
+          resolve('Email sent')
         } else {
-          reject(err.message);
+          reject(err.message)
         }
-      });
-    });
+      })
+    })
 
   try {
-    await sendMailPromise();
-    return NextResponse.json({ message: 'Email sent' });
+    await sendMailPromise()
+    return NextResponse.json({ message: 'Email sent' })
   } catch (err) {
-    return NextResponse.json({ error: err }, { status: 500 });
+    return NextResponse.json({ error: err }, { status: 500 })
   }
 }

@@ -7,76 +7,66 @@ import ArrowRight from '@/app/_assets/svgs/arrow-right'
 import { EmblaText } from '@/app/_types/components'
 
 export default function EmblaContainer({
-	slidesNumber,
-	embla,
-	children,
+  slidesNumber,
+  embla,
+  children,
 }: {
-	slidesNumber: number
-	embla: EmblaText
-	children: ReactNode
+  slidesNumber: number
+  embla: EmblaText
+  children: ReactNode
 }) {
-	const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true })
-	const [inView, setInView] = useState(0)
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true })
+  const [inView, setInView] = useState(0)
 
-	const onSlidesInView = useCallback((api: any) => {
-		setInView(api.slidesInView()[0])
-	}, [])
+  const onSlidesInView = useCallback((api: any) => {
+    setInView(api.slidesInView()[0])
+  }, [])
 
-	useEffect(() => {
-		if (emblaApi) emblaApi.on('slidesInView', onSlidesInView)
-	}, [emblaApi, onSlidesInView])
+  useEffect(() => {
+    if (emblaApi) emblaApi.on('slidesInView', onSlidesInView)
+  }, [emblaApi, onSlidesInView])
 
-	const scrollPrev = useCallback(() => {
-		if (emblaApi) emblaApi.scrollPrev()
-	}, [emblaApi])
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev()
+  }, [emblaApi])
 
-	const scrollNext = useCallback(() => {
-		if (emblaApi) emblaApi.scrollNext()
-	}, [emblaApi])
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext()
+  }, [emblaApi])
 
-	const scrollTo = useCallback(
-		(index: number) => {
-			if (emblaApi) emblaApi.scrollTo(index)
-		},
-		[emblaApi],
-	)
+  const scrollTo = useCallback(
+    (index: number) => {
+      if (emblaApi) emblaApi.scrollTo(index)
+    },
+    [emblaApi],
+  )
 
-	return (
-		<div className={styles.embla}>
-			<div className={styles.emblaViewport} ref={emblaRef}>
-				<div className={styles.emblaContainer}>{children}</div>
-			</div>
+  return (
+    <div className={styles.embla}>
+      <div className={styles.emblaViewport} ref={emblaRef}>
+        <div className={styles.emblaContainer}>{children}</div>
+      </div>
 
-			<div className={styles.dotContainer}>
-				{Array.from({ length: slidesNumber }, (x, i) => i).map(
-					(key: any, i: number) => (
-						<button
-							className={`${styles.dot} ${inView === i ? styles.selected : ''}`}
-							onClick={() => scrollTo(i)}
-							key={key}
-						>
-							<span className="sr-only">
-								{embla.changeSlide.replace('{{slideNum}}', String(i + 1))}
-							</span>
-						</button>
-					),
-				)}
-			</div>
+      <div className={styles.dotContainer}>
+        {Array.from({ length: slidesNumber }, (x, i) => i).map((key: any, i: number) => (
+          <button
+            className={`${styles.dot} ${inView === i ? styles.selected : ''}`}
+            onClick={() => scrollTo(i)}
+            key={key}
+          >
+            <span className="sr-only">
+              {embla.changeSlide.replace('{{slideNum}}', String(i + 1))}
+            </span>
+          </button>
+        ))}
+      </div>
 
-			<button
-				className={styles.emblaPrev}
-				onClick={scrollPrev}
-				aria-label={embla.prevSlide}
-			>
-				<ArrowLeft />
-			</button>
-			<button
-				className={styles.emblaNext}
-				onClick={scrollNext}
-				aria-label={embla.nextSlide}
-			>
-				<ArrowRight />
-			</button>
-		</div>
-	)
+      <button className={styles.emblaPrev} onClick={scrollPrev} aria-label={embla.prevSlide}>
+        <ArrowLeft />
+      </button>
+      <button className={styles.emblaNext} onClick={scrollNext} aria-label={embla.nextSlide}>
+        <ArrowRight />
+      </button>
+    </div>
+  )
 }

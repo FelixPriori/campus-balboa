@@ -1,9 +1,9 @@
 import styles from './styles.module.scss'
 
 type CardProps = {
-	children: React.ReactNode
+  children: React.ReactNode
 }
 
 export default function Card({ children }: CardProps) {
-	return <div className={styles.card}>{children}</div>
+  return <div className={styles.card}>{children}</div>
 }

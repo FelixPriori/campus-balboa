@@ -1,50 +1,50 @@
 @use '@/app/_layout/breakpoints.scss' as breakpoint;
 
 .featuredFallback {
-	height: 500px;
-	width: 100%;
-	max-width: 500px;
-	border-radius: var(--border-radius);
-	overflow: hidden;
-	opacity: 0.8;
+  height: 500px;
+  width: 100%;
+  max-width: 500px;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  opacity: 0.8;
 
-	@media only screen and (max-width: breakpoint.$breakpoint-medium) {
-		max-width: 350px;
-	}
+  @media only screen and (max-width: breakpoint.$breakpoint-medium) {
+    max-width: 350px;
+  }
 
-	@media only screen and (max-width: breakpoint.$breakpoint-small) {
-		max-width: 100%;
-	}
+  @media only screen and (max-width: breakpoint.$breakpoint-small) {
+    max-width: 100%;
+  }
 }
 
 .featuredSection {
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: var(--campus-color-canard);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--campus-color-canard);
 
-	@media only screen and (max-width: breakpoint.$breakpoint-small) {
-		padding: var(--space-12) var(--space-6);
-	}
+  @media only screen and (max-width: breakpoint.$breakpoint-small) {
+    padding: var(--space-12) var(--space-6);
+  }
 
-	.content {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		width: 100%;
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 
-		.featuredTitle {
-			letter-spacing: var(--tracking-wider);
-			color: var(--campus-color-blanc);
-			z-index: 10;
-			margin-block-end: var(--space-12);
-		}
+    .featuredTitle {
+      letter-spacing: var(--tracking-wider);
+      color: var(--campus-color-blanc);
+      z-index: 10;
+      margin-block-end: var(--space-12);
+    }
 
-		@media only screen and (max-width: breakpoint.$breakpoint-small) {
-			.title {
-				font-size: 2rem;
-			}
-		}
-	}
+    @media only screen and (max-width: breakpoint.$breakpoint-small) {
+      .title {
+        font-size: 2rem;
+      }
+    }
+  }
 }

@@ -4,60 +4,49 @@ import { BLOCKS, MARKS } from '@contentful/rich-text-types'
 import { EntrySys } from 'contentful'
 
 interface Asset {
-	sys: EntrySys
-	url: string
-	description: string
+  sys: EntrySys
+  url: string
+  description: string
 }
 
 interface AssetLink {
-	block: Asset[]
+  block: Asset[]
 }
 
 interface Content {
-	json: any
-	links: {
-		assets: AssetLink
-	}
+  json: any
+  links: {
+    assets: AssetLink
+  }
 }
 
-function RichTextAsset({
-	id,
-	assets,
-}: {
-	id: string
-	assets: Asset[] | undefined
-}) {
-	const asset = assets?.find(asset => asset.sys.id === id)
+function RichTextAsset({ id, assets }: { id: string; assets: Asset[] | undefined }) {
+  const asset = assets?.find((asset) => asset.sys.id === id)
 
-	if (asset?.url) {
-		return <Image src={asset.url} layout="fill" alt={asset.description} />
-	}
+  if (asset?.url) {
+    return <Image src={asset.url} layout="fill" alt={asset.description} />
+  }
 
-	return null
+  return null
 }
 
 export function Markdown({
-	content,
-	paragraphStyling = '',
+  content,
+  paragraphStyling = '',
 }: {
-	content: Content
-	paragraphStyling?: string
+  content: Content
+  paragraphStyling?: string
 }) {
-	return documentToReactComponents(content.json, {
-		renderNode: {
-			[BLOCKS.EMBEDDED_ASSET]: (node: any) => (
-				<RichTextAsset
-					id={node.data.target.sys.id}
-					assets={content.links.assets.block}
-				/>
-			),
-			[BLOCKS.PARAGRAPH]: (node, children) => (
-				<p className={paragraphStyling}>{children}</p>
-			),
-		},
-		renderMark: {
-			[MARKS.ITALIC]: text => <span className="rich-italic">{text}</span>,
-			[MARKS.BOLD]: text => <span className="rich-bold">{text}</span>,
-		},
-	})
+  return documentToReactComponents(content.json, {
+    renderNode: {
+      [BLOCKS.EMBEDDED_ASSET]: (node: any) => (
+        <RichTextAsset id={node.data.target.sys.id} assets={content.links.assets.block} />
+      ),
+      [BLOCKS.PARAGRAPH]: (node, children) => <p className={paragraphStyling}>{children}</p>,
+    },
+    renderMark: {
+      [MARKS.ITALIC]: (text) => <span className="rich-italic">{text}</span>,
+      [MARKS.BOLD]: (text) => <span className="rich-bold">{text}</span>,
+    },
+  })
 }

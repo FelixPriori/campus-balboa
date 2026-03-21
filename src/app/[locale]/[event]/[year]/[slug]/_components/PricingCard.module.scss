@@ -1,77 +1,77 @@
 .pricingCard {
-	display: grid;
-	grid-template-rows: subgrid;
-	grid-row: span 2;
-	border-radius: var(--border-radius);
-	box-shadow: var(--shadow-card);
-	background-color: color-mix(in srgb, var(--campus-color-blanc) 90%, transparent);
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 2;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-card);
+  background-color: color-mix(in srgb, var(--campus-color-blanc) 90%, transparent);
 
-	.cardHeader {
-		background-color: var(--campus-color-taupe);
-		border-radius: var(--border-radius) var(--border-radius) 0 0;
-		padding: var(--space-4);
-		display: flex;
-		align-items: center;
-		justify-content: center;
+  .cardHeader {
+    background-color: var(--campus-color-taupe);
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    padding: var(--space-4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-		h3 {
-			color: var(--campus-color-blanc);
-			margin-bottom: 0;
-			text-align: center;
-			font-size: clamp(0.9rem, 1.5vw, 1.1rem);
-		}
-	}
+    h3 {
+      color: var(--campus-color-blanc);
+      margin-bottom: 0;
+      text-align: center;
+      font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    }
+  }
 
-	.cardBody {
-		padding: var(--space-3) var(--space-4) var(--space-8);
-		text-align: center;
+  .cardBody {
+    padding: var(--space-3) var(--space-4) var(--space-8);
+    text-align: center;
 
-		.price {
-			font-size: clamp(1.25rem, 2.5vw, 1.75rem);
-			font-weight: bold;
-			color: var(--campus-color-taupe);
-			margin-bottom: var(--space-2);
-			max-width: unset;
-		}
+    .price {
+      font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+      font-weight: bold;
+      color: var(--campus-color-taupe);
+      margin-bottom: var(--space-2);
+      max-width: unset;
+    }
 
-		.dates {
-			font-size: 0.85rem;
-			color: var(--campus-color-canard);
-			font-weight: 300;
-			max-width: unset;
-			margin-bottom: var(--space-4);
-		}
+    .dates {
+      font-size: 0.85rem;
+      color: var(--campus-color-canard);
+      font-weight: 300;
+      max-width: unset;
+      margin-bottom: var(--space-4);
+    }
 
-		.priceIncrease {
-			margin-bottom: var(--space-4);
-		}
+    .priceIncrease {
+      margin-bottom: var(--space-4);
+    }
 
-		.ctaButton {
-			display: block;
-			background-color: var(--campus-color-canard);
-			color: var(--campus-color-blanc);
-			text-align: center;
-			padding: 0.6rem var(--space-4);
-			border-radius: var(--border-radius);
-			font-weight: 600;
-			text-decoration: none;
-			transition: opacity 150ms var(--ease-ui);
+    .ctaButton {
+      display: block;
+      background-color: var(--campus-color-canard);
+      color: var(--campus-color-blanc);
+      text-align: center;
+      padding: 0.6rem var(--space-4);
+      border-radius: var(--border-radius);
+      font-weight: 600;
+      text-decoration: none;
+      transition: opacity 150ms var(--ease-ui);
 
-			&:hover {
-				opacity: 0.85;
-			}
+      &:hover {
+        opacity: 0.85;
+      }
 
-			&:focus-visible {
-				outline: 3px solid var(--campus-color-canard);
-				outline-offset: 2px;
-			}
-		}
+      &:focus-visible {
+        outline: 3px solid var(--campus-color-canard);
+        outline-offset: 2px;
+      }
+    }
 
-		.ctaLabel {
-			font-size: 0.85rem;
-			color: var(--campus-color-taupe);
-			font-style: italic;
-			max-width: unset;
-		}
-	}
+    .ctaLabel {
+      font-size: 0.85rem;
+      color: var(--campus-color-taupe);
+      font-style: italic;
+      max-width: unset;
+    }
+  }
 }

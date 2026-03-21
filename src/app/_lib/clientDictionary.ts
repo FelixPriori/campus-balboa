@@ -9,5 +9,5 @@ import fr from '@/dictionaries/fr.json'
 const dictionaries = { en, fr }
 
 export function getClientDictionary(locale: Locale) {
-	return dictionaries[locale] ?? dictionaries.en
+  return dictionaries[locale] ?? dictionaries.en
 }

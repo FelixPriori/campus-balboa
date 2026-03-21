@@ -3,12 +3,12 @@ import { Locale, EVENT_SEGMENTS, SITE_URL } from '@/i18n'
 import { getEventMetaDataBySlug, getEventPageBySlug, getAllEventSlugs } from '@/app/_lib/api'
 import { getDictionary } from '@/app/dictionaries'
 import {
-	InstructorsSection,
-	PricingSection,
-	VenuesSection,
-	ScheduleSection,
-	DJsSection,
-	PartnersSection,
+  InstructorsSection,
+  PricingSection,
+  VenuesSection,
+  ScheduleSection,
+  DJsSection,
+  PartnersSection,
 } from './_sections'
 import SectionSkeleton from './_sections/SectionSkeleton'
 import { SectionErrorBoundary } from './_components/SectionErrorBoundary'
@@ -24,262 +24,260 @@ import { isPast } from 'date-fns'
 export const revalidate = 3600
 
 export async function generateStaticParams() {
-	const slugs = await getAllEventSlugs()
-	const locales = Object.keys(EVENT_SEGMENTS) as Locale[]
+  const slugs = await getAllEventSlugs()
+  const locales = Object.keys(EVENT_SEGMENTS) as Locale[]
 
-	return slugs.flatMap(({ slug }) => {
-		if (!slug) return []
-		const parts = slug.replace(/^\//, '').split('/')
-		if (parts.length < 2) return []
-		const [year, slugName] = parts
-		return locales.map(locale => ({
-			locale,
-			event: EVENT_SEGMENTS[locale],
-			year,
-			slug: slugName,
-		}))
-	})
+  return slugs.flatMap(({ slug }) => {
+    if (!slug) return []
+    const parts = slug.replace(/^\//, '').split('/')
+    if (parts.length < 2) return []
+    const [year, slugName] = parts
+    return locales.map((locale) => ({
+      locale,
+      event: EVENT_SEGMENTS[locale],
+      year,
+      slug: slugName,
+    }))
+  })
 }
 
 type Props = {
-	params: Promise<{
-		locale: Locale
-		event: string
-		year: string
-		slug: string
-	}>
+  params: Promise<{
+    locale: Locale
+    event: string
+    year: string
+    slug: string
+  }>
 }
 
 export async function generateMetadata({ params }: Props) {
-	const { locale, event, year, slug } = await params
-	const pageMetaData = await getEventMetaDataBySlug(`/${year}/${slug}`, locale)
+  const { locale, event, year, slug } = await params
+  const pageMetaData = await getEventMetaDataBySlug(`/${year}/${slug}`, locale)
 
-	if (!pageMetaData) return {}
+  if (!pageMetaData) return {}
 
-	const canonical = `${SITE_URL}/${locale}/${event}/${year}/${slug}`
+  const canonical = `${SITE_URL}/${locale}/${event}/${year}/${slug}`
 
-	const ogImage = {
-		url: pageMetaData.openGraphImage.image.url,
-		alt: pageMetaData.title,
-		width: 1920,
-		height: 1005,
-	}
+  const ogImage = {
+    url: pageMetaData.openGraphImage.image.url,
+    alt: pageMetaData.title,
+    width: 1920,
+    height: 1005,
+  }
 
-	return {
-		title: pageMetaData.title,
-		description: pageMetaData.description,
-		alternates: {
-			canonical,
-			languages: {
-				fr: `${SITE_URL}/fr/${EVENT_SEGMENTS.fr}/${year}/${slug}`,
-				en: `${SITE_URL}/en/${EVENT_SEGMENTS.en}/${year}/${slug}`,
-				'x-default': `${SITE_URL}/en/${EVENT_SEGMENTS.en}/${year}/${slug}`,
-			},
-		},
-		openGraph: {
-			url: canonical,
-			type: 'website',
-			locale: locale === 'fr' ? 'fr_CA' : 'en_CA',
-			siteName: 'Campus Balboa',
-			title: pageMetaData.title,
-			description: pageMetaData.description,
-			images: [ogImage],
-		},
-		twitter: {
-			card: 'summary_large_image',
-			images: [ogImage],
-		},
-	}
+  return {
+    title: pageMetaData.title,
+    description: pageMetaData.description,
+    alternates: {
+      canonical,
+      languages: {
+        fr: `${SITE_URL}/fr/${EVENT_SEGMENTS.fr}/${year}/${slug}`,
+        en: `${SITE_URL}/en/${EVENT_SEGMENTS.en}/${year}/${slug}`,
+        'x-default': `${SITE_URL}/en/${EVENT_SEGMENTS.en}/${year}/${slug}`,
+      },
+    },
+    openGraph: {
+      url: canonical,
+      type: 'website',
+      locale: locale === 'fr' ? 'fr_CA' : 'en_CA',
+      siteName: 'Campus Balboa',
+      title: pageMetaData.title,
+      description: pageMetaData.description,
+      images: [ogImage],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      images: [ogImage],
+    },
+  }
 }
 
 export default async function EventPage({ params }: Props) {
-	const { locale, event, year, slug } = await params
-	const [data, dict] = await Promise.all([
-		getEventPageBySlug(`/${year}/${slug}`, locale),
-		getDictionary(locale),
-	])
+  const { locale, event, year, slug } = await params
+  const [data, dict] = await Promise.all([
+    getEventPageBySlug(`/${year}/${slug}`, locale),
+    getDictionary(locale),
+  ])
 
-	if (!data) {
-		notFound()
-	}
+  if (!data) {
+    notFound()
+  }
 
-	const isClosed = data.endDate ? isPast(new Date(data.endDate)) : false
-	const eventId = data.sys.id
-	const socialMedia = data.socialMediaCollection?.items ?? []
-	const registrationLink = data.registrationLink ?? null
+  const isClosed = data.endDate ? isPast(new Date(data.endDate)) : false
+  const eventId = data.sys.id
+  const socialMedia = data.socialMediaCollection?.items ?? []
+  const registrationLink = data.registrationLink ?? null
 
-	const eventUrl = `${SITE_URL}/${locale}/${event}/${year}/${slug}`
-	const eventSchema = {
-		'@context': 'https://schema.org',
-		'@type': 'Event',
-		name: data.title,
-		startDate: data.startDate,
-		endDate: data.endDate,
-		eventStatus: 'https://schema.org/EventScheduled',
-		eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
-		organizer: {
-			'@type': 'Organization',
-			name: 'Campus Balboa',
-			url: SITE_URL,
-		},
-		url: eventUrl,
-		image: data.image.url,
-		...(registrationLink
-			? {
-					offers: {
-						'@type': 'Offer',
-						url: registrationLink.href,
-						availability: isClosed
-							? 'https://schema.org/SoldOut'
-							: 'https://schema.org/InStock',
-						priceCurrency: 'CAD',
-					},
-				}
-			: {}),
-	}
+  const eventUrl = `${SITE_URL}/${locale}/${event}/${year}/${slug}`
+  const eventSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Event',
+    name: data.title,
+    startDate: data.startDate,
+    endDate: data.endDate,
+    eventStatus: 'https://schema.org/EventScheduled',
+    eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+    organizer: {
+      '@type': 'Organization',
+      name: 'Campus Balboa',
+      url: SITE_URL,
+    },
+    url: eventUrl,
+    image: data.image.url,
+    ...(registrationLink
+      ? {
+          offers: {
+            '@type': 'Offer',
+            url: registrationLink.href,
+            availability: isClosed ? 'https://schema.org/SoldOut' : 'https://schema.org/InStock',
+            priceCurrency: 'CAD',
+          },
+        }
+      : {}),
+  }
 
-	const breadcrumbSchema = {
-		'@context': 'https://schema.org',
-		'@type': 'BreadcrumbList',
-		itemListElement: [
-			{
-				'@type': 'ListItem',
-				position: 1,
-				name: dict.EventsPage.breadcrumbHome,
-				item: `${SITE_URL}/${locale}`,
-			},
-			{
-				'@type': 'ListItem',
-				position: 2,
-				name: dict.EventsPage.breadcrumbEvents,
-				item: `${SITE_URL}/${locale}/${event}`,
-			},
-			{
-				'@type': 'ListItem',
-				position: 3,
-				name: data.title,
-				item: eventUrl,
-			},
-		],
-	}
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: dict.EventsPage.breadcrumbHome,
+        item: `${SITE_URL}/${locale}`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: dict.EventsPage.breadcrumbEvents,
+        item: `${SITE_URL}/${locale}/${event}`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: data.title,
+        item: eventUrl,
+      },
+    ],
+  }
 
-	const breadcrumbItems = [
-		{ label: dict.EventsPage.breadcrumbHome, href: `/${locale}` },
-		{
-			label: dict.EventsPage.breadcrumbEvents,
-			href: `/${locale}/${EVENT_SEGMENTS[locale]}`,
-		},
-		{ label: data.title },
-	]
+  const breadcrumbItems = [
+    { label: dict.EventsPage.breadcrumbHome, href: `/${locale}` },
+    {
+      label: dict.EventsPage.breadcrumbEvents,
+      href: `/${locale}/${EVENT_SEGMENTS[locale]}`,
+    },
+    { label: data.title },
+  ]
 
-	const sectionBoundaryProps = {
-		errorMessage: dict.SectionErrorBoundary.message,
-		retryLabel: dict.SectionErrorBoundary.retry,
-	} as const
+  const sectionBoundaryProps = {
+    errorMessage: dict.SectionErrorBoundary.message,
+    retryLabel: dict.SectionErrorBoundary.retry,
+  } as const
 
-	return (
-		<>
-			<script
-				type="application/ld+json"
-				dangerouslySetInnerHTML={{ __html: JSON.stringify(eventSchema) }}
-			/>
-			<script
-				type="application/ld+json"
-				dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-			/>
-			<div className={styles.eventPage}>
-			<Navigation locale={locale} />
-			<Breadcrumb items={breadcrumbItems} ariaLabel={dict.Breadcrumb.ariaLabel} />
-			<Hero
-				imgAlt={data.image.title}
-				imgSrc={data.image.url}
-				startDate={data.startDate}
-				endDate={data.endDate}
-				title={data.title}
-				closed={data.closedText}
-				locale={locale}
-				isClosed={isClosed}
-				socialMedia={socialMedia}
-				registrationLink={registrationLink}
-			/>
-			<About
-				details={data.details}
-				sectionTitle={data.aboutTitle}
-				closed={data.closedText}
-				isClosed={isClosed}
-			/>
-			<LevelRequirement
-				levelRequirement={data.levelRequirement}
-				sectionTitle={data.levelRequirementTitle}
-			/>
-			<SectionErrorBoundary label={dict.SectionSkeleton.instructors} {...sectionBoundaryProps}>
-				<Suspense
-					fallback={
-						<SectionSkeleton
-							label={`${dict.SectionSkeleton.instructors}, ${dict.SectionSkeleton.loading}`}
-							minHeight={480}
-							animationDelay="0s"
-						/>
-					}
-				>
-					<InstructorsSection eventId={eventId} locale={locale} />
-				</Suspense>
-			</SectionErrorBoundary>
-			<SectionErrorBoundary label={dict.SectionSkeleton.pricing} {...sectionBoundaryProps}>
-				<Suspense
-					fallback={
-						<SectionSkeleton
-							label={`${dict.SectionSkeleton.pricing}, ${dict.SectionSkeleton.loading}`}
-							minHeight={280}
-							animationDelay="0.15s"
-						/>
-					}
-				>
-					<PricingSection
-						eventId={eventId}
-						locale={locale}
-						isClosed={isClosed}
-						registrationLink={registrationLink}
-					/>
-				</Suspense>
-			</SectionErrorBoundary>
-			<SectionErrorBoundary label={dict.SectionSkeleton.venues} {...sectionBoundaryProps}>
-				<Suspense
-					fallback={
-						<SectionSkeleton
-							label={`${dict.SectionSkeleton.venues}, ${dict.SectionSkeleton.loading}`}
-							minHeight={220}
-							animationDelay="0.3s"
-						/>
-					}
-				>
-					<VenuesSection eventId={eventId} locale={locale} />
-				</Suspense>
-			</SectionErrorBoundary>
-			<SectionErrorBoundary label={dict.SectionSkeleton.schedule} {...sectionBoundaryProps}>
-				<Suspense
-					fallback={
-						<SectionSkeleton
-							label={`${dict.SectionSkeleton.schedule}, ${dict.SectionSkeleton.loading}`}
-							minHeight={360}
-							animationDelay="0.45s"
-						/>
-					}
-				>
-					<ScheduleSection eventId={eventId} locale={locale} />
-				</Suspense>
-			</SectionErrorBoundary>
-			<SectionErrorBoundary label={dict.SectionSkeleton.djs} silent>
-				<Suspense fallback={null}>
-					<DJsSection eventId={eventId} locale={locale} />
-				</Suspense>
-			</SectionErrorBoundary>
-			<SectionErrorBoundary label={dict.SectionSkeleton.partners} silent>
-				<Suspense fallback={null}>
-					<PartnersSection eventId={eventId} locale={locale} />
-				</Suspense>
-			</SectionErrorBoundary>
-				</div>
-		</>
-	)
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(eventSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <div className={styles.eventPage}>
+        <Navigation locale={locale} />
+        <Breadcrumb items={breadcrumbItems} ariaLabel={dict.Breadcrumb.ariaLabel} />
+        <Hero
+          imgAlt={data.image.title}
+          imgSrc={data.image.url}
+          startDate={data.startDate}
+          endDate={data.endDate}
+          title={data.title}
+          closed={data.closedText}
+          locale={locale}
+          isClosed={isClosed}
+          socialMedia={socialMedia}
+          registrationLink={registrationLink}
+        />
+        <About
+          details={data.details}
+          sectionTitle={data.aboutTitle}
+          closed={data.closedText}
+          isClosed={isClosed}
+        />
+        <LevelRequirement
+          levelRequirement={data.levelRequirement}
+          sectionTitle={data.levelRequirementTitle}
+        />
+        <SectionErrorBoundary label={dict.SectionSkeleton.instructors} {...sectionBoundaryProps}>
+          <Suspense
+            fallback={
+              <SectionSkeleton
+                label={`${dict.SectionSkeleton.instructors}, ${dict.SectionSkeleton.loading}`}
+                minHeight={480}
+                animationDelay="0s"
+              />
+            }
+          >
+            <InstructorsSection eventId={eventId} locale={locale} />
+          </Suspense>
+        </SectionErrorBoundary>
+        <SectionErrorBoundary label={dict.SectionSkeleton.pricing} {...sectionBoundaryProps}>
+          <Suspense
+            fallback={
+              <SectionSkeleton
+                label={`${dict.SectionSkeleton.pricing}, ${dict.SectionSkeleton.loading}`}
+                minHeight={280}
+                animationDelay="0.15s"
+              />
+            }
+          >
+            <PricingSection
+              eventId={eventId}
+              locale={locale}
+              isClosed={isClosed}
+              registrationLink={registrationLink}
+            />
+          </Suspense>
+        </SectionErrorBoundary>
+        <SectionErrorBoundary label={dict.SectionSkeleton.venues} {...sectionBoundaryProps}>
+          <Suspense
+            fallback={
+              <SectionSkeleton
+                label={`${dict.SectionSkeleton.venues}, ${dict.SectionSkeleton.loading}`}
+                minHeight={220}
+                animationDelay="0.3s"
+              />
+            }
+          >
+            <VenuesSection eventId={eventId} locale={locale} />
+          </Suspense>
+        </SectionErrorBoundary>
+        <SectionErrorBoundary label={dict.SectionSkeleton.schedule} {...sectionBoundaryProps}>
+          <Suspense
+            fallback={
+              <SectionSkeleton
+                label={`${dict.SectionSkeleton.schedule}, ${dict.SectionSkeleton.loading}`}
+                minHeight={360}
+                animationDelay="0.45s"
+              />
+            }
+          >
+            <ScheduleSection eventId={eventId} locale={locale} />
+          </Suspense>
+        </SectionErrorBoundary>
+        <SectionErrorBoundary label={dict.SectionSkeleton.djs} silent>
+          <Suspense fallback={null}>
+            <DJsSection eventId={eventId} locale={locale} />
+          </Suspense>
+        </SectionErrorBoundary>
+        <SectionErrorBoundary label={dict.SectionSkeleton.partners} silent>
+          <Suspense fallback={null}>
+            <PartnersSection eventId={eventId} locale={locale} />
+          </Suspense>
+        </SectionErrorBoundary>
+      </div>
+    </>
+  )
 }

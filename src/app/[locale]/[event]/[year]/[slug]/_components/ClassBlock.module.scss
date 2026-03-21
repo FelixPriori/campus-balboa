@@ -1,120 +1,120 @@
 @use 'sass:color';
 .classBlock {
-	$canard: #2a5359;
-	position: relative;
-	padding: 48px 8px 48px 8px;
-	border: 2px solid var(--campus-color-canard);
-	border-radius: 8px;
-	background-color: var(--campus-color-blanc);
+  $canard: #2a5359;
+  position: relative;
+  padding: 48px 8px 48px 8px;
+  border: 2px solid var(--campus-color-canard);
+  border-radius: 8px;
+  background-color: var(--campus-color-blanc);
 
-	.start {
-		position: absolute;
-		top: 8px;
-		left: -8px;
-		background-color: var(--campus-color-canard);
-		color: var(--campus-color-blanc);
-		border-radius: 0 8px 8px 0;
-		padding: 4px 12px;
+  .start {
+    position: absolute;
+    top: 8px;
+    left: -8px;
+    background-color: var(--campus-color-canard);
+    color: var(--campus-color-blanc);
+    border-radius: 0 8px 8px 0;
+    padding: 4px 12px;
 
-		p {
-			color: inherit;
-		}
+    p {
+      color: inherit;
+    }
 
-		&::after {
-			content: '';
-			position: absolute;
-			width: 10px;
-			height: 10px;
-			background-color: color.adjust($canard, $lightness: -10%);
-			bottom: -5px;
-			left: 2px;
-			transform: rotate(45deg);
-			clip-path: polygon(50% 50%, 0% 100%, 100% 100%);
-		}
-	}
+    &::after {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: color.adjust($canard, $lightness: -10%);
+      bottom: -5px;
+      left: 2px;
+      transform: rotate(45deg);
+      clip-path: polygon(50% 50%, 0% 100%, 100% 100%);
+    }
+  }
 
-	.end {
-		position: absolute;
-		bottom: 8px;
-		right: -8px;
-		background-color: var(--campus-color-canard);
-		color: var(--campus-color-blanc);
-		border-radius: 8px 0 0 8px;
-		padding: 4px 12px;
+  .end {
+    position: absolute;
+    bottom: 8px;
+    right: -8px;
+    background-color: var(--campus-color-canard);
+    color: var(--campus-color-blanc);
+    border-radius: 8px 0 0 8px;
+    padding: 4px 12px;
 
-		p {
-			color: inherit;
-		}
+    p {
+      color: inherit;
+    }
 
-		&::before {
-			content: '';
-			position: absolute;
-			width: 12px;
-			height: 12px;
-			background-color: color.adjust($canard, $lightness: -10%);
-			top: -6px;
-			right: 2px;
-			transform: rotate(45deg);
-			clip-path: polygon(50% 50%, 0 0, 100% 0);
-		}
-	}
+    &::before {
+      content: '';
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      background-color: color.adjust($canard, $lightness: -10%);
+      top: -6px;
+      right: 2px;
+      transform: rotate(45deg);
+      clip-path: polygon(50% 50%, 0 0, 100% 0);
+    }
+  }
 
-	.title {
-		text-align: center;
-		margin-bottom: 0.25rem;
-	}
+  .title {
+    text-align: center;
+    margin-bottom: 0.25rem;
+  }
 
-	.subtitle {
-		font-style: italic;
-		font-weight: 300;
-		margin: 1rem 0;
-	}
+  .subtitle {
+    font-style: italic;
+    font-weight: 300;
+    margin: 1rem 0;
+  }
 
-	.where {
-		font-style: italic;
-		text-align: center;
-		font-weight: 300;
-		margin-bottom: 0.5rem;
-	}
+  .where {
+    font-style: italic;
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+  }
 
-	.typeWrapper {
-		padding: 4px 8px;
-		border-radius: 8px;
-		max-width: fit-content;
-		margin-bottom: 0.5rem;
+  .typeWrapper {
+    padding: 4px 8px;
+    border-radius: 8px;
+    max-width: fit-content;
+    margin-bottom: 0.5rem;
 
-		&.Class {
-			background-color: var(--campus-color-taupe);
-			color: var(--campus-color-blanc);
-		}
+    &.Class {
+      background-color: var(--campus-color-taupe);
+      color: var(--campus-color-blanc);
+    }
 
-		&.Extra {
-			background-color: var(--campus-color-jaune);
-			color: var(--campus-color-taupe);
-		}
+    &.Extra {
+      background-color: var(--campus-color-jaune);
+      color: var(--campus-color-taupe);
+    }
 
-		&.Dance {
-			background-color: var(--campus-color-bleu);
-			color: var(--campus-color-blanc);
-		}
+    &.Dance {
+      background-color: var(--campus-color-bleu);
+      color: var(--campus-color-blanc);
+    }
 
-		&.Other {
-			background-color: var(--campus-color-canard);
-			color: var(--campus-color-blanc);
-		}
+    &.Other {
+      background-color: var(--campus-color-canard);
+      color: var(--campus-color-blanc);
+    }
 
-		&.Social {
-			background-color: var(--campus-color-rose);
-			color: var(--campus-color-taupe);
-		}
+    &.Social {
+      background-color: var(--campus-color-rose);
+      color: var(--campus-color-taupe);
+    }
 
-		.type {
-			text-transform: uppercase;
-			color: inherit;
-		}
-	}
+    .type {
+      text-transform: uppercase;
+      color: inherit;
+    }
+  }
 
-	.description {
-		max-width: 50ch;
-	}
+  .description {
+    max-width: 50ch;
+  }
 }

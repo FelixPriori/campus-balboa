@@ -1,131 +1,131 @@
 @use '@/app/_layout/breakpoints.scss' as breakpoint;
 
 .cardWrapper {
-	&.dark {
-		--color-dark: #fff;
-		--color-neutral: #000;
-		background-color: rgba(0, 0, 0, 0.85);
+  &.dark {
+    --color-dark: #fff;
+    --color-neutral: #000;
+    background-color: rgba(0, 0, 0, 0.85);
 
-		&:hover {
-			background-color: rgba(0, 0, 0, 1);
-		}
+    &:hover {
+      background-color: rgba(0, 0, 0, 1);
+    }
 
-		.title,
-		.paragraph,
-		svg {
-			color: var(--color-dark);
-		}
+    .title,
+    .paragraph,
+    svg {
+      color: var(--color-dark);
+    }
 
-		.arrow {
-			border: none;
+    .arrow {
+      border: none;
 
-			svg {
-				height: 50px;
-				width: 50px;
-			}
-		}
-	}
+      svg {
+        height: 50px;
+        width: 50px;
+      }
+    }
+  }
 
-	width: 100%;
-	padding: var(--space-6);
-	border-radius: var(--border-radius);
-	background-color: color-mix(in srgb, var(--campus-color-blanc) 50%, transparent);
-	box-shadow: var(--shadow-card);
-	display: grid;
-	gap: var(--space-4);
+  width: 100%;
+  padding: var(--space-6);
+  border-radius: var(--border-radius);
+  background-color: color-mix(in srgb, var(--campus-color-blanc) 50%, transparent);
+  box-shadow: var(--shadow-card);
+  display: grid;
+  gap: var(--space-4);
 
-	.helpText {
-		display: block;
-		justify-self: end;
-		color: var(--color-dark);
-		text-decoration: underline;
-		text-underline-offset: 3px;
-		text-decoration-thickness: 2px;
-		margin-block-start: var(--space-4);
+  .helpText {
+    display: block;
+    justify-self: end;
+    color: var(--color-dark);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 2px;
+    margin-block-start: var(--space-4);
 
-		&:hover {
-			text-decoration: none;
-		}
-	}
+    &:hover {
+      text-decoration: none;
+    }
+  }
 
-	.image {
-		justify-self: center;
-	}
+  .image {
+    justify-self: center;
+  }
 
-	.details {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
+  .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-		.title {
-			text-align: left;
-			letter-spacing: 0.1rem;
-			margin-block-end: var(--space-4);
-		}
+    .title {
+      text-align: left;
+      letter-spacing: 0.1rem;
+      margin-block-end: var(--space-4);
+    }
 
-		.paragraph {
-			font-size: 1rem;
-		}
-	}
+    .paragraph {
+      font-size: 1rem;
+    }
+  }
 
-	.arrow {
-		display: none;
-		border: 2px solid var(--color-dark);
-		border-radius: 50%;
-		min-height: 50px;
-		min-width: 50px;
-		align-items: center;
-		justify-content: center;
-		opacity: 0.75;
+  .arrow {
+    display: none;
+    border: 2px solid var(--color-dark);
+    border-radius: 50%;
+    min-height: 50px;
+    min-width: 50px;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.75;
 
-		svg {
-			height: 32px;
-			width: 32px;
-		}
-	}
+    svg {
+      height: 32px;
+      width: 32px;
+    }
+  }
 
-	&:hover {
-		background-color: color-mix(in srgb, var(--campus-color-blanc) 85%, transparent);
+  &:hover {
+    background-color: color-mix(in srgb, var(--campus-color-blanc) 85%, transparent);
 
-		.arrow {
-			opacity: 1;
-		}
-	}
+    .arrow {
+      opacity: 1;
+    }
+  }
 
-	@media (min-width: calc(580 / 16 * 1rem)) {
-		display: flex;
-		align-items: center;
-		gap: var(--space-8);
+  @media (min-width: calc(580 / 16 * 1rem)) {
+    display: flex;
+    align-items: center;
+    gap: var(--space-8);
 
-		.image {
-			justify-self: initial;
-		}
+    .image {
+      justify-self: initial;
+    }
 
-		.details {
-			.title {
-				letter-spacing: 0.15rem;
-			}
-		}
+    .details {
+      .title {
+        letter-spacing: 0.15rem;
+      }
+    }
 
-		.arrow {
-			display: flex;
-			margin-inline-start: auto;
-		}
+    .arrow {
+      display: flex;
+      margin-inline-start: auto;
+    }
 
-		.helpText {
-			display: none;
-		}
-	}
+    .helpText {
+      display: none;
+    }
+  }
 
-	@media (min-width: breakpoint.$breakpoint-medium) {
-		.details {
-			.title {
-				letter-spacing: var(--tracking-wide);
-			}
+  @media (min-width: breakpoint.$breakpoint-medium) {
+    .details {
+      .title {
+        letter-spacing: var(--tracking-wide);
+      }
 
-			.paragraph {
-				font-size: 1.2rem;
-			}
-		}
-	}
+      .paragraph {
+        font-size: 1.2rem;
+      }
+    }
+  }
 }

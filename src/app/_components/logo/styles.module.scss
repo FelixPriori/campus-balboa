@@ -1,20 +1,21 @@
 .logo {
-    width: var(--space-12);
-    height: var(--space-12);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: var(--space-12);
+  height: var(--space-12);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo svg {
-    width: var(--space-12);
-    height: var(--space-12);
-    transition: transform 100ms var(--ease-in-out),
-                filter 100ms var(--ease-in-out);
-    color: var(--color-dark);
+  width: var(--space-12);
+  height: var(--space-12);
+  transition:
+    transform 100ms var(--ease-in-out),
+    filter 100ms var(--ease-in-out);
+  color: var(--color-dark);
 }
 
 .logo svg:hover {
-    filter: drop-shadow(2px 2px 4px color-mix(in srgb, var(--campus-color-canard) 50%, transparent));
-    transform: translate(-2px, -2px);
+  filter: drop-shadow(2px 2px 4px color-mix(in srgb, var(--campus-color-canard) 50%, transparent));
+  transform: translate(-2px, -2px);
 }

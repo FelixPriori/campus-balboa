@@ -1,123 +1,125 @@
 @use '@/app/_layout/breakpoints.scss' as breakpoint;
 
 .heroWrapper {
-	padding: var(--space-10);
-	position: relative;
-	min-height: clamp(600px, 100svh, 950px);
-	display: flex;
-	justify-content: center;
-	background-color: var(--campus-color-blanc);
-	background-image: url('/wave-bottom.png'), url('/circle-dual.png');
-	background-position: bottom -500px left 0, left -50px top -100px;
-	background-repeat: no-repeat, no-repeat;
-	background-size: cover, contain;
+  padding: var(--space-10);
+  position: relative;
+  min-height: clamp(600px, 100svh, 950px);
+  display: flex;
+  justify-content: center;
+  background-color: var(--campus-color-blanc);
+  background-image: url('/wave-bottom.png'), url('/circle-dual.png');
+  background-position:
+    bottom -500px left 0,
+    left -50px top -100px;
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, contain;
 
-	.content {
-		min-height: 100%;
-		display: flex;
-		flex-direction: column;
-		z-index: 10;
+  .content {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
 
-		.languageSwitcher {
-			position: absolute;
-			top: 50px;
-		}
+    .languageSwitcher {
+      position: absolute;
+      top: 50px;
+    }
 
-		.logoWrapper {
-			text-align: center;
-			color: var(--campus-color-canard);
+    .logoWrapper {
+      text-align: center;
+      color: var(--campus-color-canard);
 
-			svg {
-				max-width: 125px;
+      svg {
+        max-width: 125px;
 
-				.outlineLogo {
-					visibility: hidden;
-					animation-delay: 0.5s;
-					stroke-dasharray: 2385;
-					animation-name: draw;
-					animation-duration: 2s;
-					animation-iteration-count: 1;
-					animation-direction: reverse;
-					animation-timing-function: ease-in;
-					animation-fill-mode: forwards;
-				}
+        .outlineLogo {
+          visibility: hidden;
+          animation-delay: 0.5s;
+          stroke-dasharray: 2385;
+          animation-name: draw;
+          animation-duration: 2s;
+          animation-iteration-count: 1;
+          animation-direction: reverse;
+          animation-timing-function: ease-in;
+          animation-fill-mode: forwards;
+        }
 
-				.hiddenLogo {
-					opacity: 0;
-					animation-delay: 2.5s;
-					animation-name: appear;
-					animation-duration: 0.5s;
-					animation-fill-mode: forwards;
-				}
-			}
-		}
+        .hiddenLogo {
+          opacity: 0;
+          animation-delay: 2.5s;
+          animation-name: appear;
+          animation-duration: 0.5s;
+          animation-fill-mode: forwards;
+        }
+      }
+    }
 
-		.heroTitle {
-			letter-spacing: var(--tracking-widest);
-			font-size: 2rem;
-			color: var(--color-primary);
-			text-align: center;
-			margin: var(--space-5);
-		}
+    .heroTitle {
+      letter-spacing: var(--tracking-widest);
+      font-size: 2rem;
+      color: var(--color-primary);
+      text-align: center;
+      margin: var(--space-5);
+    }
 
-		.heroDescription {
-			display: flex;
-			justify-content: center;
-			font-size: 1.2rem;
-			max-width: 50%;
-			margin: var(--space-3) auto;
+    .heroDescription {
+      display: flex;
+      justify-content: center;
+      font-size: 1.2rem;
+      max-width: 50%;
+      margin: var(--space-3) auto;
 
-			.important {
-				color: var(--color-primary);
-				font-weight: bold;
-			}
-		}
+      .important {
+        color: var(--color-primary);
+        font-weight: bold;
+      }
+    }
 
-		@media only screen and (max-width: breakpoint.$breakpoint-large) {
-			.heroDescription {
-				max-width: 75%;
-			}
-		}
+    @media only screen and (max-width: breakpoint.$breakpoint-large) {
+      .heroDescription {
+        max-width: 75%;
+      }
+    }
 
-		@media only screen and (max-width: breakpoint.$breakpoint-small) {
-			align-items: center;
+    @media only screen and (max-width: breakpoint.$breakpoint-small) {
+      align-items: center;
 
-			.heroTitle {
-				font-size: 2rem;
-				text-align: center;
-				margin-bottom: var(--space-3);
-			}
+      .heroTitle {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: var(--space-3);
+      }
 
-			.heroDescription {
-				max-width: 80%;
-				text-align: center;
-			}
-		}
-	}
+      .heroDescription {
+        max-width: 80%;
+        text-align: center;
+      }
+    }
+  }
 }
 
 @keyframes draw {
-	0% {
-		stroke-dashoffset: 0;
-		visibility: hidden;
-	}
+  0% {
+    stroke-dashoffset: 0;
+    visibility: hidden;
+  }
 
-	1% {
-		visibility: visible;
-	}
+  1% {
+    visibility: visible;
+  }
 
-	100% {
-		stroke-dashoffset: 2385;
-		visibility: visible;
-	}
+  100% {
+    stroke-dashoffset: 2385;
+    visibility: visible;
+  }
 }
 
 @keyframes appear {
-	from {
-		opacity: 0;
-	}
+  from {
+    opacity: 0;
+  }
 
-	to {
-		opacity: 1;
-	}
+  to {
+    opacity: 1;
+  }
 }
