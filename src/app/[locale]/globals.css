@@ -95,7 +95,7 @@ section {
   min-height: 100%;
 }
 
-section:not(.mbj-event section) {
+section:not(.mbj-event section):not(.Toastify) {
   padding-block: clamp(120px, 16vw, 200px);
   padding-inline: var(--space-12);
 }
@@ -232,7 +232,7 @@ h3 {
 }
 
 @media (max-width: calc(580 / 16 * 1rem)) {
-  section:not(.mbj-event section) {
+  section:not(.mbj-event section):not(.Toastify) {
     padding-inline: var(--space-5);
   }
 }
