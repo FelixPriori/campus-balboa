@@ -1,7 +1,5 @@
 import { Rubik, Lemon } from 'next/font/google'
-import { ToastContainer } from 'react-toastify'
 import { Locale } from '@/i18n'
-import 'react-toastify/dist/ReactToastify.css'
 import './globals.css'
 import { Footer } from '@/app/_sections'
 import { getPageFooter } from '@/app/_lib/api'
@@ -29,7 +27,6 @@ export default async function LocaleLayout({ children, params }: LayoutProps<'/[
   return (
     <html lang={lang} data-scroll-behavior="smooth">
       <body suppressHydrationWarning className={`${lemon.variable} ${rubik.variable}`}>
-        <ToastContainer />
         {children}
         {footer && <Footer {...footer} locale={lang} />}
       </body>
