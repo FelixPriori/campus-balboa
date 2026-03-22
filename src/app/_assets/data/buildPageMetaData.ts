@@ -1,5 +1,6 @@
 import Favicon from '@/app/favicon.ico'
 import { SITE_URL } from '@/i18n'
+import type { DictionaryType } from '@/app/dictionaries'
 
 export const noIndexRobots = {
   index: false,
@@ -15,28 +16,9 @@ export const noIndexRobots = {
   },
 }
 
-export const fallbackMetaDataFR = {
-  title: 'Campus Balboa',
-  description:
-    'Un organisme à but non lucratif entièrement dédié à favoriser la croissance et l’excellence du balboa à Montréal et ses environs.',
-  image: {
-    url: '/opengraph-image.jpg',
-    alt: 'Dessin abstrait de bulles',
-  },
-}
-
-export const fallbackMetaDataEN = {
-  title: 'Campus Balboa',
-  description:
-    'A nonprofit entirely dedicated to fostering balboa growth and excellence in and around Montreal.',
-  image: {
-    url: '/opengraph-image.jpg',
-    alt: 'Abstract bubble drawing',
-  },
-}
-
 interface BuildPageMetaData {
   locale: string
+  dictionary: DictionaryType
   path?: string
   title?: string
   description?: string
@@ -50,32 +32,33 @@ interface BuildPageMetaData {
 
 export const buildPageMetaData = ({
   locale,
+  dictionary,
   path = '',
-  title = '',
-  description = '',
+  title,
+  description,
   image,
   favicon,
   noIndex,
 }: BuildPageMetaData) => {
   const canonical = path ? `${SITE_URL}/${locale}/${path}` : `${SITE_URL}/${locale}`
-  const baseMetaData = locale === 'fr' ? { ...fallbackMetaDataFR } : { ...fallbackMetaDataEN }
+  const fallback = dictionary.FallbackMetaData
 
   return {
     alternates: {
       canonical,
     },
-    title: title ?? baseMetaData.title,
-    description: description ?? baseMetaData.description,
+    title: title ?? fallback.title,
+    description: description ?? fallback.description,
     openGraph: {
       images: [
         {
-          url: image?.url ?? baseMetaData.image.url,
-          alt: image?.alt ?? baseMetaData.image.alt,
+          url: image?.url ?? '/opengraph-image.jpg',
+          alt: image?.alt ?? fallback.imageAlt,
         },
       ],
-      title: title ?? baseMetaData.title,
+      title: title ?? fallback.title,
       locale,
-      description: description ?? baseMetaData.description,
+      description: description ?? fallback.description,
     },
     icons: [{ rel: 'icon', url: favicon ?? Favicon.src }],
     robots: noIndex ? noIndexRobots : null,

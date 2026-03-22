@@ -14,7 +14,10 @@ type Props = {
 
 export async function generateMetadata({ params }: Props) {
   const locale = (await params).locale as Locale
-  const metaData = await getPageMetaDataByPageSlug(locale, locale)
+  const [metaData, dict] = await Promise.all([
+    getPageMetaDataByPageSlug(locale, locale),
+    getDictionary(locale),
+  ])
   const page = metaData?.items?.[0]?.pageMetaData
 
   if (page) {
@@ -45,7 +48,7 @@ export async function generateMetadata({ params }: Props) {
     }
   }
 
-  return buildPageMetaData({ locale })
+  return buildPageMetaData({ locale, dictionary: dict })
 }
 
 export default async function Home({ params }: Props) {
