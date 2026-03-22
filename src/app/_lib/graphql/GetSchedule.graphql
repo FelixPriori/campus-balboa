@@ -1,0 +1,31 @@
+query GetSchedule($eventId: String!, $locale: String!) {
+  event(id: $eventId, locale: $locale) {
+    scheduleTitle
+    scheduleCollection(limit: 10) {
+      items {
+        sys {
+          id
+        }
+        title
+        subtitle
+        description {
+          json
+          links {
+            assets {
+              block {
+                sys {
+                  id
+                }
+                url
+                description
+              }
+            }
+          }
+        }
+        startTime
+        endTime
+        blockType
+      }
+    }
+  }
+}

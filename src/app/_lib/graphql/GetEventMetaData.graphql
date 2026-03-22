@@ -1,0 +1,20 @@
+query GetEventMetaData($locale: String!, $slug: String) {
+  eventCollection(locale: $locale, where: { slug: $slug }, limit: 1) {
+    items {
+      metadata {
+        title
+        description
+        favicon {
+          url
+          title
+        }
+        openGraphImage {
+          image {
+            title
+            url
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,17 +1,14 @@
 import styles from './styles.module.scss'
-import { Markdown } from '@/app/_lib/markdown'
+import { Markdown, type RichTextContent } from '@/app/_lib/markdown'
 import ContentfulImage from '@/app/_lib/contentful-image'
 
 export interface FeaturedSlideProps {
   title: string
-  details: {
-    json: any
-    links: any
-  }
+  details: RichTextContent | null
   type: string
   image: {
-    src: string
-    alt: string
+    url: string
+    title: string
   }
   link: {
     href: string
@@ -27,8 +24,8 @@ export default function FeaturedSlide({ image, title, link, details, type }: Fea
         <div className={styles.bannerWrapper}>
           <ContentfulImage
             className={styles.banner}
-            src={image.src}
-            alt={image.alt}
+            src={image.url}
+            alt={image.title}
             width={1080}
             height={1080}
           />

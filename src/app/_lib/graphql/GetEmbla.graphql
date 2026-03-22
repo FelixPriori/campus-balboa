@@ -1,0 +1,9 @@
+query GetEmbla($locale: String!) {
+  emblaCollection(locale: $locale, limit: 1) {
+    items {
+      changeSlide
+      nextSlide
+      prevSlide
+    }
+  }
+}

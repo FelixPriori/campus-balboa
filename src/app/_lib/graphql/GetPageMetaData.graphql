@@ -1,0 +1,21 @@
+query GetPageMetaData($locale: String!, $slug: String) {
+  pageCollection(locale: $locale, where: { slug: $slug }, limit: 1) {
+    items {
+      pageMetaData {
+        title
+        description
+        favicon {
+          url
+          title
+        }
+        openGraphImage {
+          description
+          image {
+            title
+            url
+          }
+        }
+      }
+    }
+  }
+}

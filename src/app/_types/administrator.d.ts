@@ -1,16 +1,13 @@
-import { EntrySys } from 'contentful'
+import type { RichTextContent } from '@/app/_lib/markdown'
 
-export interface IAdministrator {
-  sys: EntrySys
+export interface Administrator {
+  sys: { id: string }
   avatar: {
     url: string
     title: string
-  }
+  } | null
   name: string
-  pronouns: string
+  pronouns: string | null
   title: string
-  bio: {
-    json: any
-    links: any
-  }
+  bio: RichTextContent | null
 }

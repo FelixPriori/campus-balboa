@@ -1,32 +1,34 @@
-import { EntrySys, EntryFieldType } from 'contentful'
-import { Link } from './components'
-
 export interface ISocialMedia {
-  sys: EntrySys
-  href: EntryFieldType.Text
-  accessibilityDescription: EntryFieldType.Text
+  sys: { id: string }
+  href: string
+  accessibilityDescription: string
   logo: {
-    url: EntryFieldType.Text
-    title: EntryFieldType.Text
+    url: string
+    title: string
   }
 }
 
-export interface DonateButtonType extends Link {
-  iconAlt: EntryFieldType.Text
+export interface DonateButtonType {
+  href: string
+  text: string
+  iconAlt: string
 }
 
 export interface LandAcknowledgementType {
-  title: EntryFieldType.Text
-  text: EntryFieldType.Text
+  title: string
+  text: string
 }
 
 export interface FooterSection {
-  contact: EntryFieldType.Text
-  contactLink: EntryFieldType.Text
-  copyright: EntryFieldType.Text
+  contact: string
+  contactLink: {
+    href: string
+    text: string
+  } | null
+  copyright: string
   socialMediasCollection: {
     items: ISocialMedia[]
   }
-  donateButton: DonateButtonType
-  landAcknowledgement: LandAcknowledgementType
+  donateButton: DonateButtonType | null
+  landAcknowledgement: LandAcknowledgementType | null
 }

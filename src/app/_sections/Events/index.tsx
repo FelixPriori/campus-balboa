@@ -1,7 +1,5 @@
 import EventCard from '../../_components/EventCard'
-import { getCollectionBySectionId } from '@/app/_lib/api'
-import { EVENT } from './query'
-import type { CampusEvent } from '@/app/_types/event'
+import { getSectionEvents } from '@/app/_lib/api'
 import { Suspense } from 'react'
 import Fallback from './Fallback'
 import styles from './styles.module.scss'
@@ -12,15 +10,12 @@ import { getDictionary } from '@/app/dictionaries'
 
 export default async function Events({ id, title, anchor, helpText, locale }: PageSectionProps) {
   const [eventsCollection, dict] = await Promise.all([
-    getCollectionBySectionId(id, locale, EVENT),
+    getSectionEvents(id, locale),
     getDictionary(locale),
   ])
-  const events = eventsCollection.sort((a: CampusEvent, b: CampusEvent) => {
-    if (new Date(a.startDate) < new Date(b.startDate)) {
-      return 1
-    } else {
-      return -1
-    }
+  const events = [...eventsCollection].sort((a, b) => {
+    if (!a.startDate || !b.startDate) return 0
+    return new Date(a.startDate) < new Date(b.startDate) ? 1 : -1
   })
 
   return (
@@ -30,7 +25,7 @@ export default async function Events({ id, title, anchor, helpText, locale }: Pa
         <div className={styles.eventsList}>
           <Suspense fallback={<Fallback />}>
             {events.length > 0 &&
-              events.map((e: any) => (
+              events.map((e) => (
                 <EventCard
                   key={e.sys.id}
                   dark={e.dark}

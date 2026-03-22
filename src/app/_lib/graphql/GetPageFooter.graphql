@@ -1,0 +1,36 @@
+query GetPageFooter($locale: String!, $slug: String!) {
+  pageCollection(locale: $locale, where: { slug: $slug }, limit: 1) {
+    items {
+      footer {
+        copyright
+        contact
+        contactLink {
+          href
+          text
+        }
+        donateButton {
+          href
+          text
+          iconAlt
+        }
+        socialMediasCollection(limit: 5) {
+          items {
+            sys {
+              id
+            }
+            logo {
+              url
+              title
+            }
+            href
+            accessibilityDescription
+          }
+        }
+        landAcknowledgement {
+          title
+          text
+        }
+      }
+    }
+  }
+}

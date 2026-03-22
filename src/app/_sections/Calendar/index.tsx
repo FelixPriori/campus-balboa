@@ -9,7 +9,7 @@ import { PageSectionProps } from '@/app/_types/sections'
 import { buildGoogleCalendarUrl } from './utils'
 
 interface CalendarProps extends PageSectionProps {
-  gcal: GoogleCalendarText
+  gcal: GoogleCalendarText | null
   calendarEmbedTitle: string
 }
 
@@ -38,7 +38,7 @@ export default function Calendar({
           <InfinitySpin width="200" color="var(--color-primary)" />
         ) : (
           <iframe
-            title={gcal.iFrameTitle}
+            title={gcal?.iFrameTitle ?? ''}
             src={mapUrl}
             style={{ border: 0, width: '100%', height: '100%' }}
             width={mapSize?.width ?? 0}

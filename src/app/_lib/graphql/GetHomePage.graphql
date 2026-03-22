@@ -1,0 +1,54 @@
+query GetHomePage($locale: String!, $slug: String) {
+  pageCollection(locale: $locale, where: { slug: $slug }, limit: 1) {
+    items {
+      slug
+      hero {
+        title
+        description {
+          json
+          links {
+            assets {
+              block {
+                sys {
+                  id
+                }
+                url
+                description
+              }
+            }
+          }
+        }
+      }
+      sys {
+        id
+      }
+      sectionsCollection(limit: 5) {
+        items {
+          ... on PageSection {
+            sys {
+              id
+            }
+            title
+            anchor
+            sectionName
+            content {
+              json
+              links {
+                assets {
+                  block {
+                    sys {
+                      id
+                    }
+                    url
+                    description
+                  }
+                }
+              }
+            }
+            helpText
+          }
+        }
+      }
+    }
+  }
+}

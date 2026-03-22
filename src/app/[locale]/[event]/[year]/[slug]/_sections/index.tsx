@@ -1,5 +1,4 @@
-import { getCollectionByEventId } from '@/app/_lib/api'
-import { DJ, EVENT_BLOCK, INSTRUCTOR, PARTNER, PRICE, VENUE } from '@/app/_lib/queries'
+import { getDJs, getInstructors, getPartners, getPricing, getSchedule, getVenues } from '@/app/_lib/api'
 import { Locale } from '@/i18n'
 import Instructors from './Instructors'
 import Pricing from './Pricing'
@@ -19,13 +18,8 @@ interface PricingSectionProps extends SectionProps {
 }
 
 export async function InstructorsSection({ eventId, locale }: SectionProps) {
-  const { items, sectionTitle } = await getCollectionByEventId(
-    eventId,
-    'instructors',
-    locale,
-    INSTRUCTOR,
-  )
-  return <Instructors sectionTitle={sectionTitle} instructorsData={items} />
+  const { items, sectionTitle } = await getInstructors(eventId, locale)
+  return <Instructors sectionTitle={sectionTitle ?? ''} instructorsData={items} />
 }
 
 export async function PricingSection({
@@ -34,11 +28,11 @@ export async function PricingSection({
   isClosed,
   registrationLink,
 }: PricingSectionProps) {
-  const { items, sectionTitle } = await getCollectionByEventId(eventId, 'pricing', locale, PRICE)
+  const { items, sectionTitle } = await getPricing(eventId, locale)
   return (
     <Pricing
       pricingData={items}
-      sectionTitle={sectionTitle}
+      sectionTitle={sectionTitle ?? ''}
       locale={locale}
       isClosed={isClosed}
       registrationLink={registrationLink}
@@ -47,28 +41,23 @@ export async function PricingSection({
 }
 
 export async function VenuesSection({ eventId, locale }: SectionProps) {
-  const { items, sectionTitle } = await getCollectionByEventId(eventId, 'venues', locale, VENUE)
-  return <Venues venuesData={items} sectionTitle={sectionTitle} />
+  const { items, sectionTitle } = await getVenues(eventId, locale)
+  return <Venues venuesData={items} sectionTitle={sectionTitle ?? ''} />
 }
 
 export async function ScheduleSection({ eventId, locale }: SectionProps) {
-  const { items, sectionTitle } = await getCollectionByEventId(
-    eventId,
-    'schedule',
-    locale,
-    EVENT_BLOCK,
-  )
-  return <Schedule scheduleData={items} sectionTitle={sectionTitle} locale={locale} />
+  const { items, sectionTitle } = await getSchedule(eventId, locale)
+  return <Schedule scheduleData={items} sectionTitle={sectionTitle ?? ''} locale={locale} />
 }
 
 export async function DJsSection({ eventId, locale }: SectionProps) {
-  const { items, sectionTitle } = await getCollectionByEventId(eventId, 'dJs', locale, DJ)
+  const { items, sectionTitle } = await getDJs(eventId, locale)
   if (items.length === 0) return null
-  return <DJs dJsData={items} sectionTitle={sectionTitle} />
+  return <DJs dJsData={items} sectionTitle={sectionTitle ?? ''} />
 }
 
 export async function PartnersSection({ eventId, locale }: SectionProps) {
-  const { items, sectionTitle } = await getCollectionByEventId(eventId, 'partners', locale, PARTNER)
+  const { items, sectionTitle } = await getPartners(eventId, locale)
   if (items.length === 0) return null
-  return <Partners partnersData={items} sectionTitle={sectionTitle} />
+  return <Partners partnersData={items} sectionTitle={sectionTitle ?? ''} />
 }

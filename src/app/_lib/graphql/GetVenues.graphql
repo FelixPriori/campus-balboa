@@ -1,0 +1,15 @@
+query GetVenues($eventId: String!, $locale: String!) {
+  event(id: $eventId, locale: $locale) {
+    venuesTitle
+    venuesCollection(limit: 10) {
+      items {
+        sys {
+          id
+        }
+        name
+        venueAddress
+        purpose
+      }
+    }
+  }
+}

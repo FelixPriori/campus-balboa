@@ -1,14 +1,11 @@
 import { Locale } from '@/i18n'
-import { EntryFieldType } from 'contentful'
+import type { RichTextContent } from '@/app/_lib/markdown'
 
 export interface PageSectionProps {
-  title: EntryFieldType.Text
-  anchor: EntryFieldType.Text
-  id: EntryFieldType.Text
-  helpText?: EntryFieldType.Text
+  title: string
+  anchor: string
+  id: string
+  helpText?: string
   locale: Locale
-  content?: {
-    json: any
-    links: any
-  }
+  content?: RichTextContent | null
 }

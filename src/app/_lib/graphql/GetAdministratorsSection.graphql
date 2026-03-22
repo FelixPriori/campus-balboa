@@ -1,0 +1,37 @@
+query GetAdministratorsSection($id: String!, $locale: String!) {
+  pageSection(id: $id, locale: $locale) {
+    title
+    anchor
+    componentsCollection(limit: 10) {
+      items {
+        ... on Administrator {
+          __typename
+          sys {
+            id
+          }
+          name
+          pronouns
+          title
+          bio {
+            json
+            links {
+              assets {
+                block {
+                  sys {
+                    id
+                  }
+                  url
+                  description
+                }
+              }
+            }
+          }
+          avatar {
+            url
+            title
+          }
+        }
+      }
+    }
+  }
+}

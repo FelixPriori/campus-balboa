@@ -1,12 +1,5 @@
 import styles from './styles.module.scss'
-import { EntrySys } from 'contentful'
-
-interface Venue {
-  sys: EntrySys
-  name: string
-  venueAddress: string
-  purpose: string
-}
+import type { Venue } from '@/app/_types/events'
 
 interface VenuesProps {
   venuesData: Venue[]

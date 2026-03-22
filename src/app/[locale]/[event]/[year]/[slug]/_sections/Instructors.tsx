@@ -1,6 +1,6 @@
 import styles from './styles.module.scss'
 import { InstructorData } from '@/app/_types/events'
-import { PersonBlock } from '../_components/PersonBlock'
+import { PersonBlock, PERSON_VARIANT } from '../_components/PersonBlock'
 
 interface InstructorsProps {
   instructorsData: InstructorData[]
@@ -15,7 +15,7 @@ export default function Instructors({ instructorsData, sectionTitle }: Instructo
         <div className={styles.card}>
           <div className={styles.cardSection}>
             {instructorsData.map((instructor) => (
-              <PersonBlock key={instructor.sys.id} {...instructor} variant="instructor" nameAbove />
+              <PersonBlock key={instructor.sys.id} {...instructor} variant={PERSON_VARIANT.INSTRUCTOR} nameAbove />
             ))}
           </div>
         </div>

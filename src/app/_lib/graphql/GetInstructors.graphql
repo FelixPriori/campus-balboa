@@ -1,0 +1,31 @@
+query GetInstructors($eventId: String!, $locale: String!) {
+  event(id: $eventId, locale: $locale) {
+    instructorsTitle
+    instructorsCollection(limit: 10) {
+      items {
+        sys {
+          id
+        }
+        name
+        biography {
+          json
+          links {
+            assets {
+              block {
+                sys {
+                  id
+                }
+                url
+                description
+              }
+            }
+          }
+        }
+        avatar {
+          title
+          url
+        }
+      }
+    }
+  }
+}

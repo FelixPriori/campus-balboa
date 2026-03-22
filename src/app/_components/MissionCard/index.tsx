@@ -1,4 +1,4 @@
-import { Markdown } from '@/app/_lib/markdown'
+import { Markdown, type RichTextContent } from '@/app/_lib/markdown'
 import styles from './styles.module.scss'
 
 export default function MissionsCard({
@@ -6,7 +6,7 @@ export default function MissionsCard({
   content,
 }: {
   title: string
-  content: { json: any; links: any }
+  content: RichTextContent | null
 }) {
   return (
     <div className={styles.missionCard}>

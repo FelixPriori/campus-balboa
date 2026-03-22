@@ -1,0 +1,70 @@
+query GetEventPage($locale: String!, $slug: String) {
+  eventCollection(locale: $locale, where: { slug: $slug }, limit: 1) {
+    items {
+      sys {
+        id
+      }
+      title
+      slug
+      details {
+        json
+        links {
+          assets {
+            block {
+              sys {
+                id
+              }
+              url
+              description
+            }
+          }
+        }
+      }
+      image {
+        title
+        url
+      }
+      link {
+        href
+        text
+      }
+      startDate
+      endDate
+      closedText
+      registrationLink {
+        href
+        text
+      }
+      socialMediaCollection(limit: 3) {
+        items {
+          sys {
+            id
+          }
+          href
+          text
+        }
+      }
+      levelRequirement {
+        title
+        description {
+          json
+          links {
+            assets {
+              block {
+                sys {
+                  id
+                }
+                url
+                description
+              }
+            }
+          }
+        }
+        skills
+      }
+      copyright
+      aboutTitle
+      levelRequirementTitle
+    }
+  }
+}

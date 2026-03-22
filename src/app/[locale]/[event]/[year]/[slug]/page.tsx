@@ -1,4 +1,5 @@
 import { Suspense } from 'react'
+import type { Metadata } from 'next'
 import { Locale, EVENT_SEGMENTS, SITE_URL } from '@/i18n'
 import { getEventMetaDataBySlug, getEventPageBySlug, getAllEventSlugs } from '@/app/_lib/api'
 import { getDictionary } from '@/app/dictionaries'
@@ -50,7 +51,7 @@ type Props = {
   }>
 }
 
-export async function generateMetadata({ params }: Props) {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, event, year, slug } = await params
   const pageMetaData = await getEventMetaDataBySlug(`/${year}/${slug}`, locale)
 
@@ -59,15 +60,15 @@ export async function generateMetadata({ params }: Props) {
   const canonical = `${SITE_URL}/${locale}/${event}/${year}/${slug}`
 
   const ogImage = {
-    url: pageMetaData.openGraphImage.image.url,
-    alt: pageMetaData.title,
+    url: pageMetaData.openGraphImage?.image?.url ?? '',
+    alt: pageMetaData.title ?? '',
     width: 1920,
     height: 1005,
   }
 
   return {
-    title: pageMetaData.title,
-    description: pageMetaData.description,
+    title: pageMetaData.title ?? undefined,
+    description: pageMetaData.description ?? undefined,
     alternates: {
       canonical,
       languages: {
@@ -81,8 +82,8 @@ export async function generateMetadata({ params }: Props) {
       type: 'website',
       locale: locale === 'fr' ? 'fr_CA' : 'en_CA',
       siteName: 'Campus Balboa',
-      title: pageMetaData.title,
-      description: pageMetaData.description,
+      title: pageMetaData.title ?? undefined,
+      description: pageMetaData.description ?? undefined,
       images: [ogImage],
     },
     twitter: {
@@ -105,8 +106,12 @@ export default async function EventPage({ params }: Props) {
 
   const isClosed = data.endDate ? isPast(new Date(data.endDate)) : false
   const eventId = data.sys.id
-  const socialMedia = data.socialMediaCollection?.items ?? []
-  const registrationLink = data.registrationLink ?? null
+  const socialMedia = (data.socialMediaCollection?.items ?? [])
+    .filter((i): i is NonNullable<typeof i> => i !== null)
+    .map((i) => ({ sys: { id: i.sys.id }, href: i.href ?? '', text: i.text ?? '' }))
+  const registrationLink = data.registrationLink?.href
+    ? { href: data.registrationLink.href, text: data.registrationLink.text ?? '' }
+    : null
 
   const eventUrl = `${SITE_URL}/${locale}/${event}/${year}/${slug}`
   const eventSchema = {
@@ -123,7 +128,7 @@ export default async function EventPage({ params }: Props) {
       url: SITE_URL,
     },
     url: eventUrl,
-    image: data.image.url,
+    image: data.image?.url,
     ...(registrationLink
       ? {
           offers: {
@@ -167,7 +172,7 @@ export default async function EventPage({ params }: Props) {
       label: dict.EventsPage.breadcrumbEvents,
       href: `/${locale}/${EVENT_SEGMENTS[locale]}`,
     },
-    { label: data.title },
+    { label: data.title ?? '' },
   ]
 
   const sectionBoundaryProps = {
@@ -189,12 +194,12 @@ export default async function EventPage({ params }: Props) {
         <Navigation locale={locale} />
         <Breadcrumb items={breadcrumbItems} ariaLabel={dict.Breadcrumb.ariaLabel} />
         <Hero
-          imgAlt={data.image.title}
-          imgSrc={data.image.url}
-          startDate={data.startDate}
-          endDate={data.endDate}
-          title={data.title}
-          closed={data.closedText}
+          imgAlt={data.image?.title ?? ''}
+          imgSrc={data.image?.url ?? ''}
+          startDate={data.startDate ?? ''}
+          endDate={data.endDate ?? ''}
+          title={data.title ?? ''}
+          closed={data.closedText ?? ''}
           locale={locale}
           isClosed={isClosed}
           socialMedia={socialMedia}
@@ -202,13 +207,13 @@ export default async function EventPage({ params }: Props) {
         />
         <About
           details={data.details}
-          sectionTitle={data.aboutTitle}
-          closed={data.closedText}
+          sectionTitle={data.aboutTitle ?? ''}
+          closed={data.closedText ?? ''}
           isClosed={isClosed}
         />
         <LevelRequirement
           levelRequirement={data.levelRequirement}
-          sectionTitle={data.levelRequirementTitle}
+          sectionTitle={data.levelRequirementTitle ?? ''}
         />
         <SectionErrorBoundary label={dict.SectionSkeleton.instructors} {...sectionBoundaryProps}>
           <Suspense

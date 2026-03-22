@@ -28,7 +28,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps<'/[
   const footer = await getPageFooter(lang)
 
   return (
-    <html lang={lang}>
+    <html lang={lang} data-scroll-behavior="smooth">
       <body suppressHydrationWarning className={`${lemon.variable} ${rubik.variable}`}>
         <ToastContainer />
         {children}

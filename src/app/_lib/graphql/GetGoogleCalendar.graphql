@@ -1,0 +1,7 @@
+query GetGoogleCalendar($locale: String!) {
+  googleCalendarCollection(locale: $locale, limit: 1) {
+    items {
+      iFrameTitle
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import { Markdown } from '@/app/_lib/markdown'
+import { Markdown, type RichTextContent } from '@/app/_lib/markdown'
 import styles from './styles.module.scss'
 import ContentfulImage from '@/app/_lib/contentful-image'
 
@@ -6,14 +6,11 @@ interface AdministratorCard {
   avatar: {
     url: string
     title: string
-  }
+  } | null
   name: string
   title: string
-  bio: {
-    json: any
-    links: any
-  }
-  pronouns: string
+  bio: RichTextContent | null
+  pronouns: string | null
 }
 
 export default function AdministratorCard({
@@ -38,7 +35,7 @@ export default function AdministratorCard({
       </div>
       <div className={styles.textWrapper}>
         <h3 className={styles.name}>{name}</h3>
-        <p className={styles.pronouns}>{pronouns}</p>
+        {pronouns && <p className={styles.pronouns}>{pronouns}</p>}
         <h4 className={styles.title}>{title}</h4>
         <Markdown content={bio} />
       </div>

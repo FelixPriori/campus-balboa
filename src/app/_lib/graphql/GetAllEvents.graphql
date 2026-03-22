@@ -1,0 +1,14 @@
+query GetAllEvents($locale: String!) {
+  eventCollection(locale: $locale, limit: 50, order: startDate_DESC) {
+    items {
+      title
+      slug
+      startDate
+      endDate
+      image {
+        url
+        title
+      }
+    }
+  }
+}

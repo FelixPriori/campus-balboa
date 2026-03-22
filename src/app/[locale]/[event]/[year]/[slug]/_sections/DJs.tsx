@@ -1,6 +1,6 @@
 import styles from './styles.module.scss'
 import { DJ } from '@/app/_types/events'
-import { PersonBlock } from '../_components/PersonBlock'
+import { PersonBlock, PERSON_VARIANT } from '../_components/PersonBlock'
 
 interface DJsProps {
   dJsData: DJ[]
@@ -16,7 +16,7 @@ export default function DJs({ dJsData, sectionTitle }: DJsProps) {
           <div className={styles.cardSection}>
             <div className={styles.dJs}>
               {dJsData.map((dj) => (
-                <PersonBlock key={dj.sys.id} {...dj} variant="dj" />
+                <PersonBlock key={dj.sys.id} {...dj} variant={PERSON_VARIANT.DJ} />
               ))}
             </div>
           </div>

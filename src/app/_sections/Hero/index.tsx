@@ -1,12 +1,9 @@
-import { Markdown } from '@/app/_lib/markdown'
+import { Markdown, type RichTextContent } from '@/app/_lib/markdown'
 import styles from './styles.module.scss'
 
 type HeroProps = {
-  title: string
-  description: {
-    json: any
-    links: any
-  }
+  title?: string | null
+  description?: RichTextContent | null
 }
 
 function AnimatedLogo() {

@@ -1,6 +1,5 @@
 import Main from '@/app/_layout/main'
-import { getPageBySlug, getPageMetaDataByPageSlug } from '@/app/_lib/api'
-import { PAGE_FIELDS_QUERY } from '@/app/_lib/queries'
+import { getHomePage, getPageMetaDataByPageSlug } from '@/app/_lib/api'
 import { buildPageMetaData } from '@/app/_assets/data/buildPageMetaData'
 import LanguageSwitcher from '@/app/_components/LanguageSwitcher'
 import CampusLogo from '@/app/_assets/svgs/campus-logo'
@@ -16,11 +15,12 @@ type Props = {
 export async function generateMetadata({ params }: Props) {
   const locale = (await params).locale as Locale
   const metaData = await getPageMetaDataByPageSlug(locale, locale)
+  const page = metaData?.items?.[0]?.pageMetaData
 
-  if (metaData) {
+  if (page) {
     return {
-      title: metaData.title,
-      description: metaData.description,
+      title: page.title,
+      description: page.description,
       alternates: {
         canonical: `${SITE_URL}/${locale}`,
         languages: {
@@ -32,16 +32,16 @@ export async function generateMetadata({ params }: Props) {
       openGraph: {
         images: [
           {
-            url: metaData.openGraphImage.image.url,
-            alt: metaData.openGraphImage.image.alt,
+            url: page.openGraphImage?.image?.url,
+            alt: page.openGraphImage?.image?.title,
           },
         ],
-        title: metaData.title,
+        title: page.title,
         url: `${SITE_URL}/${locale}`,
         locale,
-        description: metaData.openGraphImage.description,
+        description: page.openGraphImage?.description,
       },
-      icons: [{ rel: 'icon', url: metaData.favicon.url }],
+      icons: [{ rel: 'icon', url: page.favicon?.url }],
     }
   }
 
@@ -51,7 +51,7 @@ export async function generateMetadata({ params }: Props) {
 export default async function Home({ params }: Props) {
   const locale = (await params).locale as Locale
   const [pageData, dict] = await Promise.all([
-    getPageBySlug(locale, locale, PAGE_FIELDS_QUERY),
+    getHomePage(locale, locale),
     getDictionary(locale),
   ])
 

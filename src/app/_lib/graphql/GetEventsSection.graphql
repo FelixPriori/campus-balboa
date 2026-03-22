@@ -1,0 +1,28 @@
+query GetEventsSection($id: String!, $locale: String!) {
+  pageSection(id: $id, locale: $locale) {
+    title
+    anchor
+    componentsCollection(limit: 10) {
+      items {
+        ... on Event {
+          __typename
+          sys {
+            id
+          }
+          title
+          dark
+          tagline
+          startDate
+          image {
+            url
+            title
+          }
+          link {
+            href
+            text
+          }
+        }
+      }
+    }
+  }
+}

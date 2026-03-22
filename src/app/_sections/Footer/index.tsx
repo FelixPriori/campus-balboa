@@ -46,7 +46,7 @@ export default function Footer({
           {socialMediasCollection?.items?.map((sm) => (
             <SocialMedia key={sm.sys.id} {...sm} />
           ))}
-          <DonateButton donateButton={donateButton} />
+          {donateButton && <DonateButton donateButton={donateButton} />}
         </div>
       </div>
     </footer>

@@ -1,230 +1,383 @@
-import {
-  getBasePageQuery,
-  getEmblaQuery,
-  getEventCollectionQuery,
-  getEventMetaDataQuery,
-  getEventPageQuery,
-  getEventSocialMediaQuery,
-  getGoogleCalendarQuery,
-  getAllEventSlugsQuery,
-  getAllEventsQuery,
-  getPageFooterQuery,
-  getPageMetaDataQuery,
-  getPageSectionQuery,
-} from './queries'
+import { GraphQLClient } from 'graphql-request'
 import { HOME_SLUG, type Locale } from '@/i18n'
+import {
+  GetAdministratorsSectionDocument,
+  GetAllEventSlugsDocument,
+  GetAllEventsDocument,
+  GetDJsDocument,
+  GetEmblaDocument,
+  GetEventMetaDataDocument,
+  GetEventPageDocument,
+  GetEventsSectionDocument,
+  GetFeaturedSlidesSectionDocument,
+  GetGoogleCalendarDocument,
+  GetHomePageDocument,
+  GetInstructorsDocument,
+  GetMissionsSectionDocument,
+  GetPageFooterDocument,
+  GetPageMetaDataDocument,
+  GetPartnersDocument,
+  GetPricingDocument,
+  GetScheduleDocument,
+  GetVenuesDocument,
+} from '@/app/_types/generated/graphql'
+import type { GetAllEventsQuery } from '@/app/_types/generated/graphql'
+import type { InstructorData, DJ, PricingData, Venue, Partner, EventBlock } from '@/app/_types/events'
+import type { Mission } from '@/app/_types/missions'
+import type { Administrator } from '@/app/_types/administrator'
+import type { FooterSection } from '@/app/_types/footer'
+import type { RichTextContent } from '@/app/_lib/markdown'
 
-export type { EventListItem } from '@/app/_types/events'
+// ─── Client ───────────────────────────────────────────────────────────────────
 
-async function fetchGraphQL(
-  query: string,
-  variables?: Record<string, unknown>,
-  preview = false,
-): Promise<any> {
-  return fetch(
-    `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}/environments/${process.env.CONTENTFUL_ENVIRONMENT_ID}`,
-    {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${
-          preview
-            ? process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN
-            : process.env.CONTENTFUL_ACCESS_TOKEN
-        }`,
-      },
-      body: JSON.stringify({ query, variables }),
-      next: { revalidate: 3600 },
+const ENDPOINT = `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}/environments/${process.env.CONTENTFUL_ENVIRONMENT_ID}`
+
+function getClient(preview = false) {
+  return new GraphQLClient(ENDPOINT, {
+    headers: {
+      Authorization: `Bearer ${
+        preview
+          ? process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN
+          : process.env.CONTENTFUL_ACCESS_TOKEN
+      }`,
     },
-  ).then((response) => response.json())
-}
-
-function extractPage(fetchResponse: any): any {
-  return fetchResponse?.data?.pageCollection?.items?.[0]
-}
-
-function extractEvent(fetchResponse: any): any {
-  return fetchResponse?.data?.eventCollection?.items?.[0]
-}
-
-function extractEventCollection(fetchResponse: any, collectionName: string): any {
-  return fetchResponse?.data?.event?.[collectionName]?.items
-}
-
-export function extractCollection(section: any) {
-  return section?.componentsCollection?.items
-}
-
-export function extractPageMetaData(fetchResponse: any): any {
-  return fetchResponse?.data?.pageCollection?.items?.[0]?.pageMetaData
-}
-
-export function extractSectionTitle(fetchResponse: any, collectionName: string) {
-  return fetchResponse?.data?.event?.[`${collectionName}Title`]
-}
-
-export function extractEventMetaData(fetchResponse: any): any {
-  return fetchResponse?.data?.eventCollection?.items?.[0]?.metadata
-}
-
-export async function getPreviewPageBySlug(
-  slug: string | null,
-  locale: string,
-  fieldsQuery: string,
-): Promise<any> {
-  const entry = await fetchGraphQL(getBasePageQuery(fieldsQuery), { locale, slug }, true)
-  return extractPage(entry)
-}
-
-export async function getPageBySlug(
-  slug: string,
-  locale: string,
-  fieldsQuery: string,
-): Promise<any> {
-  const entry = await fetchGraphQL(getBasePageQuery(fieldsQuery), {
-    locale,
-    slug,
+    fetch: (url, init) => fetch(url, { ...init, next: { revalidate: 3600 } }),
   })
-
-  if (entry.errors) {
-    entry.errors.forEach((e: any) => console.error(e))
-  }
-
-  return extractPage(entry)
 }
+
+// ─── Type helpers ─────────────────────────────────────────────────────────────
+
+const nonNull = <T>(arr: (T | null | undefined)[]): T[] =>
+  arr.filter((i): i is T => i != null)
+
+/** Narrows a discriminated union item by __typename, safe for use in .filter() */
+function byTypename<T extends { __typename?: string } | null, TName extends string>(name: TName) {
+  return (item: T): item is Extract<NonNullable<T>, { __typename?: TName }> =>
+    item?.__typename === name
+}
+
+// ─── Mapped data types ────────────────────────────────────────────────────────
+
+export interface FeaturedSlideData {
+  sys: { id: string }
+  title: string
+  type: string
+  details: RichTextContent | null
+  image: {
+    url: string
+    title: string
+  }
+  link: {
+    href: string
+    text: string
+  }
+}
+
+export interface SectionEventData {
+  sys: { id: string }
+  title: string
+  dark: boolean
+  tagline: string
+  startDate: string
+  image: {
+    url: string
+    title: string
+  }
+  link: {
+    href: string
+    text: string
+  }
+}
+
+// ─── Page metadata ────────────────────────────────────────────────────────────
+
+export async function getPageMetaDataByPageSlug(slug: string | null, locale: string) {
+  const data = await getClient().request(GetPageMetaDataDocument, { locale, slug })
+  return data.pageCollection
+}
+
+// ─── Home page ────────────────────────────────────────────────────────────────
+
+export async function getHomePage(slug: string, locale: string) {
+  const data = await getClient().request(GetHomePageDocument, { locale, slug })
+  return data.pageCollection?.items?.[0] ?? null
+}
+
+// ─── Event page ───────────────────────────────────────────────────────────────
 
 export async function getEventPageBySlug(slug: string, locale: string) {
-  const entry = await fetchGraphQL(getEventPageQuery(), { locale, slug })
-
-  if (entry.errors) {
-    entry.errors.forEach((e: any) => console.error(e))
-  }
-
-  return extractEvent(entry)
+  const data = await getClient().request(GetEventPageDocument, { locale, slug })
+  return data.eventCollection?.items?.[0] ?? null
 }
 
-export async function getCollectionByEventId(
-  eventId: string,
-  collectionName: string,
-  locale: string,
-  fieldsQuery: string,
-): Promise<any> {
-  const entry = await fetchGraphQL(getEventCollectionQuery(collectionName, fieldsQuery), {
-    eventId,
-    locale,
-  })
-
-  if (entry.errors) {
-    entry.errors.forEach((e: any) => console.error(e))
-  }
-
-  return {
-    sectionTitle: extractSectionTitle(entry, collectionName),
-    items: extractEventCollection(entry, `${collectionName}Collection`) ?? [],
-  }
+export async function getEventMetaDataBySlug(slug: string | null, locale: string) {
+  const data = await getClient().request(GetEventMetaDataDocument, { locale, slug })
+  return data.eventCollection?.items?.[0]?.metadata ?? null
 }
 
-export async function getCollectionBySectionId(
-  sectionId: string | null,
-  locale: string,
-  fieldsQuery: string,
-): Promise<any> {
-  const entry = await fetchGraphQL(getPageSectionQuery(fieldsQuery), {
-    id: sectionId,
-    locale,
-  })
+// ─── Event listing ────────────────────────────────────────────────────────────
 
-  if (entry.errors) {
-    entry.errors.forEach((e: any) => console.error(e))
-  }
-
-  return extractCollection(entry?.data?.pageSection) ?? []
+export async function getAllEvents(locale: string) {
+  const data = await getClient().request(GetAllEventsDocument, { locale })
+  return nonNull(data.eventCollection?.items ?? []).map((item) => ({
+    title: item.title ?? '',
+    slug: item.slug ?? null,
+    startDate: item.startDate ?? '',
+    endDate: item.endDate ?? '',
+    image: {
+      url: item.image?.url ?? '',
+      title: item.image?.title ?? '',
+    },
+  }))
 }
+
+export async function getAllEventSlugs() {
+  const data = await getClient().request(GetAllEventSlugsDocument, {})
+  return nonNull(data.eventCollection?.items ?? [])
+}
+
+// ─── Embla / Calendar ─────────────────────────────────────────────────────────
 
 export async function getEmbla(locale: string) {
-  const entry = await fetchGraphQL(getEmblaQuery(), { locale })
-
-  if (entry.errors) {
-    entry.errors.forEach((e: any) => console.error(e))
+  const data = await getClient().request(GetEmblaDocument, { locale })
+  const item = data.emblaCollection?.items?.[0]
+  if (!item) return null
+  return {
+    changeSlide: item.changeSlide ?? '',
+    nextSlide: item.nextSlide ?? '',
+    prevSlide: item.prevSlide ?? '',
   }
-
-  return entry.data.emblaCollection.items[0]
 }
 
 export async function getGoogleCalendar(locale: string) {
-  const entry = await fetchGraphQL(getGoogleCalendarQuery(), { locale })
-
-  if (entry.errors) {
-    entry.errors.forEach((e: any) => console.error(e))
+  const data = await getClient().request(GetGoogleCalendarDocument, { locale })
+  const item = data.googleCalendarCollection?.items?.[0]
+  if (!item) return null
+  return {
+    iFrameTitle: item.iFrameTitle ?? '',
   }
-
-  return entry.data.googleCalendarCollection.items[0]
 }
 
-export async function getPageMetaDataByPageSlug(slug: string | null, locale: string): Promise<any> {
-  const entry = await fetchGraphQL(getPageMetaDataQuery(), { locale, slug })
+// ─── Footer ───────────────────────────────────────────────────────────────────
 
-  if (entry.errors) {
-    entry.errors.forEach((e: any) => console.error(e))
-  }
-
-  return extractPageMetaData(entry)
-}
-
-export async function getEventSocialMedia(eventId: string, locale: string): Promise<any> {
-  const entry = await fetchGraphQL(getEventSocialMediaQuery(), {
-    eventId,
-    locale,
-  })
-
-  if (entry.errors) {
-    entry.errors.forEach((e: any) => console.error(e))
-  }
-
-  return entry?.data?.event?.socialMediaCollection?.items
-}
-
-export async function getPageFooter(locale: Locale): Promise<any> {
-  const entry = await fetchGraphQL(getPageFooterQuery(), {
+export async function getPageFooter(locale: Locale): Promise<FooterSection | null> {
+  const data = await getClient().request(GetPageFooterDocument, {
     locale,
     slug: HOME_SLUG[locale],
   })
-
-  if (entry.errors) {
-    entry.errors.forEach((e: any) => console.error(e))
+  const footer = data.pageCollection?.items?.[0]?.footer
+  if (!footer) return null
+  return {
+    contact: footer.contact ?? '',
+    contactLink: footer.contactLink?.href
+      ? { href: footer.contactLink.href, text: footer.contactLink.text ?? '' }
+      : null,
+    copyright: footer.copyright ?? '',
+    socialMediasCollection: {
+      items: nonNull(footer.socialMediasCollection?.items ?? []).map((sm) => ({
+        sys: { id: sm.sys.id },
+        href: sm.href ?? '',
+        accessibilityDescription: sm.accessibilityDescription ?? '',
+        logo: {
+          url: sm.logo?.url ?? '',
+          title: sm.logo?.title ?? '',
+        },
+      })),
+    },
+    donateButton: footer.donateButton?.href
+      ? {
+          href: footer.donateButton.href,
+          text: footer.donateButton.text ?? '',
+          iconAlt: footer.donateButton.iconAlt ?? '',
+        }
+      : null,
+    landAcknowledgement: footer.landAcknowledgement?.title
+      ? {
+          title: footer.landAcknowledgement.title,
+          text: footer.landAcknowledgement.text ?? '',
+        }
+      : null,
   }
-
-  return entry?.data?.pageCollection?.items?.[0]?.footer ?? null
 }
 
-export async function getAllEvents(locale: string): Promise<any[]> {
-  const entry = await fetchGraphQL(getAllEventsQuery(), { locale })
+// ─── Event sections (by eventId) ─────────────────────────────────────────────
 
-  if (entry.errors) {
-    entry.errors.forEach((e: any) => console.error(e))
+export async function getInstructors(eventId: string, locale: string) {
+  const data = await getClient().request(GetInstructorsDocument, { eventId, locale })
+  return {
+    sectionTitle: data.event?.instructorsTitle ?? null,
+    items: nonNull(data.event?.instructorsCollection?.items ?? []).map((item): InstructorData => ({
+      sys: { id: item.sys.id },
+      name: item.name ?? '',
+      avatar: item.avatar?.url ? { url: item.avatar.url, title: item.avatar.title ?? '' } : null,
+      biography: item.biography ?? null,
+    })),
   }
-
-  return entry?.data?.eventCollection?.items ?? []
 }
 
-export async function getAllEventSlugs(): Promise<
-  Array<{ slug: string | null; startDate: string }>
-> {
-  const entry = await fetchGraphQL(getAllEventSlugsQuery())
-
-  if (entry.errors) {
-    entry.errors.forEach((e: any) => console.error(e))
+export async function getPricing(eventId: string, locale: string) {
+  const data = await getClient().request(GetPricingDocument, { eventId, locale })
+  return {
+    sectionTitle: data.event?.pricingTitle ?? null,
+    items: nonNull(data.event?.pricingCollection?.items ?? []).map((item): PricingData => ({
+      sys: { id: item.sys.id },
+      tier: item.tier ?? '',
+      type: item.type ?? '',
+      startTime: item.startTime ?? '',
+      endTime: item.endTime ?? '',
+      amount: item.amount ?? 0,
+      batch: item.batch ?? 0,
+    })),
   }
-
-  return entry?.data?.eventCollection?.items ?? []
 }
 
-export async function getEventMetaDataBySlug(slug: string | null, locale: string): Promise<any> {
-  const entry = await fetchGraphQL(getEventMetaDataQuery(), { locale, slug })
-
-  if (entry.errors) {
-    entry.errors.forEach((e: any) => console.error(e))
+export async function getVenues(eventId: string, locale: string) {
+  const data = await getClient().request(GetVenuesDocument, { eventId, locale })
+  return {
+    sectionTitle: data.event?.venuesTitle ?? null,
+    items: nonNull(data.event?.venuesCollection?.items ?? []).map((item): Venue => ({
+      sys: { id: item.sys.id },
+      name: item.name ?? '',
+      venueAddress: item.venueAddress ?? '',
+      purpose: item.purpose ?? '',
+    })),
   }
-
-  return extractEventMetaData(entry)
 }
+
+export async function getSchedule(eventId: string, locale: string) {
+  const data = await getClient().request(GetScheduleDocument, { eventId, locale })
+  return {
+    sectionTitle: data.event?.scheduleTitle ?? null,
+    items: nonNull(data.event?.scheduleCollection?.items ?? []).map((item): EventBlock => ({
+      sys: { id: item.sys.id },
+      title: item.title ?? '',
+      subtitle: item.subtitle ?? null,
+      startTime: item.startTime ?? '',
+      endTime: item.endTime ?? '',
+      blockType: item.blockType ?? '',
+      description: item.description ?? null,
+    })),
+  }
+}
+
+export async function getDJs(eventId: string, locale: string) {
+  const data = await getClient().request(GetDJsDocument, { eventId, locale })
+  return {
+    sectionTitle: data.event?.dJsTitle ?? null,
+    items: nonNull(data.event?.dJsCollection?.items ?? []).map((item): DJ => ({
+      sys: { id: item.sys.id },
+      name: item.name ?? '',
+      pronouns: item.pronouns ?? null,
+      avatar: item.avatar?.url ? { url: item.avatar.url, title: item.avatar.title ?? '' } : null,
+      biography: item.biography ?? null,
+    })),
+  }
+}
+
+export async function getPartners(eventId: string, locale: string) {
+  const data = await getClient().request(GetPartnersDocument, { eventId, locale })
+  return {
+    sectionTitle: data.event?.partnersTitle ?? null,
+    items: nonNull(data.event?.partnersCollection?.items ?? []).map((item): Partner => ({
+      sys: { id: item.sys.id },
+      title: item.title ?? '',
+      link: item.link ?? '',
+      logo: {
+        url: item.logo?.url ?? '',
+        title: item.logo?.title ?? '',
+      },
+    })),
+  }
+}
+
+// ─── Home page sections (by sectionId) ───────────────────────────────────────
+
+export async function getMissions(sectionId: string | null, locale: string) {
+  const data = await getClient().request(GetMissionsSectionDocument, {
+    id: sectionId ?? '',
+    locale,
+  })
+  return nonNull(data.pageSection?.componentsCollection?.items ?? [])
+    .filter(byTypename('Mission'))
+    .map((item): Mission => ({
+      sys: { id: item.sys.id },
+      title: item.title ?? '',
+      content: item.content ?? null,
+    }))
+}
+
+export async function getFeaturedSlides(sectionId: string | null, locale: string) {
+  const data = await getClient().request(GetFeaturedSlidesSectionDocument, {
+    id: sectionId ?? '',
+    locale,
+  })
+  return nonNull(data.pageSection?.componentsCollection?.items ?? [])
+    .filter(byTypename('FeaturedSlide'))
+    .map((item): FeaturedSlideData => ({
+      sys: { id: item.sys.id },
+      title: item.title ?? '',
+      type: item.type ?? '',
+      details: item.details ?? null,
+      image: {
+        url: item.image?.url ?? '',
+        title: item.image?.title ?? '',
+      },
+      link: {
+        href: item.link?.href ?? '',
+        text: item.link?.text ?? '',
+      },
+    }))
+}
+
+export async function getSectionEvents(sectionId: string | null, locale: string) {
+  const data = await getClient().request(GetEventsSectionDocument, {
+    id: sectionId ?? '',
+    locale,
+  })
+  return nonNull(data.pageSection?.componentsCollection?.items ?? [])
+    .filter(byTypename('Event'))
+    .map((item): SectionEventData => ({
+      sys: { id: item.sys.id },
+      title: item.title ?? '',
+      dark: item.dark ?? false,
+      tagline: item.tagline ?? '',
+      startDate: item.startDate ?? '',
+      image: {
+        url: item.image?.url ?? '',
+        title: item.image?.title ?? '',
+      },
+      link: {
+        href: item.link?.href ?? '',
+        text: item.link?.text ?? '',
+      },
+    }))
+}
+
+export async function getAdministrators(sectionId: string | null, locale: string) {
+  const data = await getClient().request(GetAdministratorsSectionDocument, {
+    id: sectionId ?? '',
+    locale,
+  })
+  return nonNull(data.pageSection?.componentsCollection?.items ?? [])
+    .filter(byTypename('Administrator'))
+    .map((item): Administrator => ({
+      sys: { id: item.sys.id },
+      name: item.name ?? '',
+      pronouns: item.pronouns ?? null,
+      title: item.title ?? '',
+      avatar: item.avatar?.url ? { url: item.avatar.url, title: item.avatar.title ?? '' } : null,
+      bio: item.bio ?? null,
+    }))
+}
+
+// ─── Derived types for consumers ─────────────────────────────────────────────
+
+export type EventPageData = NonNullable<Awaited<ReturnType<typeof getEventPageBySlug>>>
+export type FooterData = NonNullable<Awaited<ReturnType<typeof getPageFooter>>>
+
+// ─── Re-exported types for consumers ─────────────────────────────────────────
+
+export type { GetAllEventsQuery }
+export type { InstructorData, DJ, PricingData, Venue, Partner, EventBlock, EventListItem } from '@/app/_types/events'
+export type { Mission } from '@/app/_types/missions'
+export type { Administrator } from '@/app/_types/administrator'

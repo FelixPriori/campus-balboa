@@ -1,0 +1,8 @@
+query GetAllEventSlugs {
+  eventCollection(limit: 50) {
+    items {
+      slug
+      startDate
+    }
+  }
+}

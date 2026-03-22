@@ -1,12 +1,9 @@
 import styles from './styles.module.scss'
-import { Markdown } from '@/app/_lib/markdown'
+import { Markdown, type RichTextContent } from '@/app/_lib/markdown'
 
 interface AboutProps {
   closed: string
-  details: {
-    json: any
-    links: any
-  }
+  details: RichTextContent | null | undefined
   sectionTitle: string
   isClosed: boolean
 }

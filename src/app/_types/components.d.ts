@@ -1,22 +1,20 @@
-import { EntryFieldType } from 'contentful'
-
 export type Link = {
-  href: EntryFieldType.Text
-  text: EntryFieldType.Text
+  href: string
+  text: string
 }
 
 export interface ButtonLink {
   sys: { id: string }
-  href: EntryFieldType.Text
-  text: EntryFieldType.Text
+  href: string
+  text: string
 }
 
 export interface EmblaText {
-  changeSlide: EntryFieldType.Text
-  nextSlide: EntryFieldType.Text
-  prevSlide: EntryFieldType.Text
+  changeSlide: string
+  nextSlide: string
+  prevSlide: string
 }
 
 export interface GoogleCalendarText {
-  iFrameTitle: EntryFieldType.Text
+  iFrameTitle: string
 }

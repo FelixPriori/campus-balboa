@@ -1,10 +1,7 @@
-import { EntryFieldType, EntrySys } from 'contentful'
+import type { RichTextContent } from '@/app/_lib/markdown'
 
-export interface IMission {
-  sys: EntrySys
-  title: EntryFieldType.Text
-  content: {
-    json: any
-    links: any
-  }
+export interface Mission {
+  sys: { id: string }
+  title: string
+  content: RichTextContent | null
 }

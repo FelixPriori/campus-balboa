@@ -1,4 +1,4 @@
-import { EntrySys } from 'contentful'
+import type { RichTextContent } from '@/app/_lib/markdown'
 
 export interface EventListItem {
   title: string
@@ -9,20 +9,17 @@ export interface EventListItem {
 }
 
 export interface EventBlock {
-  sys: EntrySys
+  sys: { id: string }
   title: string
   subtitle: string | null
   startTime: string
   endTime: string
   blockType: string
-  description: {
-    json: any
-    links: any
-  }
+  description: RichTextContent | null
 }
 
 export interface PricingData {
-  sys: EntrySys
+  sys: { id: string }
   tier: string
   type: string
   startTime: string
@@ -31,8 +28,15 @@ export interface PricingData {
   batch: number
 }
 
+export interface Venue {
+  sys: { id: string }
+  name: string
+  venueAddress: string
+  purpose: string
+}
+
 export interface Partner {
-  sys: EntrySys
+  sys: { id: string }
   title: string
   link: string
   logo: {
@@ -42,28 +46,22 @@ export interface Partner {
 }
 
 export interface InstructorData {
-  sys: EntrySys
+  sys: { id: string }
   name: string
   avatar: {
     url: string
     title: string
-  }
-  biography: {
-    json: any
-    links: any
-  }
+  } | null
+  biography: RichTextContent | null
 }
 
 export interface DJ {
-  sys: EntrySys
+  sys: { id: string }
   name: string
-  pronouns: string
+  pronouns: string | null
   avatar: {
     url: string
     title: string
-  }
-  biography: {
-    json: any
-    links: any
-  }
+  } | null
+  biography: RichTextContent | null
 }

@@ -1,15 +1,12 @@
-import { Markdown } from '@/app/_lib/markdown'
+import { Markdown, type RichTextContent } from '@/app/_lib/markdown'
 import styles from './styles.module.scss'
 
 interface LevelRequirementProps {
   levelRequirement: {
-    title: string
-    skills: string[]
-    description: {
-      json: any
-      links: any
-    }
-  }
+    title?: string | null
+    skills?: (string | null)[] | null
+    description?: RichTextContent | null
+  } | null | undefined
   sectionTitle: string
 }
 
@@ -17,6 +14,8 @@ export default function LevelRequirement({
   levelRequirement,
   sectionTitle,
 }: LevelRequirementProps) {
+  if (!levelRequirement) return null
+
   return (
     <section className={styles.levelSection}>
       <div className={styles.content}>
@@ -26,8 +25,8 @@ export default function LevelRequirement({
             <div className={styles.level}>
               <Markdown content={levelRequirement.description} />
               <ul className={styles.levelList}>
-                {levelRequirement.skills.map((skill) => (
-                  <ol key={skill}>{skill}</ol>
+                {(levelRequirement.skills ?? []).filter((skill): skill is string => skill != null).map((skill) => (
+                  <li key={skill}>{skill}</li>
                 ))}
               </ul>
             </div>

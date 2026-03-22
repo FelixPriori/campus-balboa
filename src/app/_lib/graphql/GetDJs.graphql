@@ -1,0 +1,32 @@
+query GetDJs($eventId: String!, $locale: String!) {
+  event(id: $eventId, locale: $locale) {
+    dJsTitle
+    dJsCollection(limit: 10) {
+      items {
+        sys {
+          id
+        }
+        name
+        pronouns
+        biography {
+          json
+          links {
+            assets {
+              block {
+                sys {
+                  id
+                }
+                url
+                description
+              }
+            }
+          }
+        }
+        avatar {
+          title
+          url
+        }
+      }
+    }
+  }
+}
