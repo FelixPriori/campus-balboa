@@ -335,14 +335,14 @@ export async function getAdministrators(sectionId: string | null, locale: string
     locale,
   })
   return nonNull(data.pageSection?.componentsCollection?.items ?? [])
-    .filter(byTypename('Administrator'))
+    .filter(byTypename('Instructor'))
     .map((item): Administrator => ({
       sys: { id: item.sys.id },
       name: item.name ?? '',
       pronouns: item.pronouns ?? null,
       title: item.title ?? '',
       avatar: item.avatar?.url ? { url: item.avatar.url, title: item.avatar.title ?? '' } : null,
-      bio: item.bio ?? null,
+      bio: item.biography ?? null,
     }))
 }
 

@@ -4,7 +4,7 @@ query GetAdministratorsSection($id: String!, $locale: String!) {
     anchor
     componentsCollection(limit: 10) {
       items {
-        ... on Administrator {
+        ... on Instructor {
           __typename
           sys {
             id
@@ -12,7 +12,7 @@ query GetAdministratorsSection($id: String!, $locale: String!) {
           name
           pronouns
           title
-          bio {
+          biography {
             json
             links {
               assets {

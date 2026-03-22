@@ -35,199 +35,6 @@ export type Scalars = {
   Rectangle: { input: any; output: any; }
 };
 
-/** [See type definition](https://app.contentful.com/spaces/ix0cnzqgli1c/content_types/administrator) */
-export type Administrator = Entry & _Node & {
-  __typename?: 'Administrator';
-  _id: Scalars['ID']['output'];
-  avatar?: Maybe<Asset>;
-  bio?: Maybe<AdministratorBio>;
-  contentfulMetadata: ContentfulMetadata;
-  linkedFrom?: Maybe<AdministratorLinkingCollections>;
-  name?: Maybe<Scalars['String']['output']>;
-  pronouns?: Maybe<Scalars['String']['output']>;
-  sys: Sys;
-  title?: Maybe<Scalars['String']['output']>;
-};
-
-
-/** [See type definition](https://app.contentful.com/spaces/ix0cnzqgli1c/content_types/administrator) */
-export type AdministratorAvatarArgs = {
-  locale?: InputMaybe<Scalars['String']['input']>;
-  preview?: InputMaybe<Scalars['Boolean']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
-};
-
-
-/** [See type definition](https://app.contentful.com/spaces/ix0cnzqgli1c/content_types/administrator) */
-export type AdministratorBioArgs = {
-  locale?: InputMaybe<Scalars['String']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
-};
-
-
-/** [See type definition](https://app.contentful.com/spaces/ix0cnzqgli1c/content_types/administrator) */
-export type AdministratorLinkedFromArgs = {
-  allowedLocales?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-};
-
-
-/** [See type definition](https://app.contentful.com/spaces/ix0cnzqgli1c/content_types/administrator) */
-export type AdministratorNameArgs = {
-  locale?: InputMaybe<Scalars['String']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
-};
-
-
-/** [See type definition](https://app.contentful.com/spaces/ix0cnzqgli1c/content_types/administrator) */
-export type AdministratorPronounsArgs = {
-  locale?: InputMaybe<Scalars['String']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
-};
-
-
-/** [See type definition](https://app.contentful.com/spaces/ix0cnzqgli1c/content_types/administrator) */
-export type AdministratorTitleArgs = {
-  locale?: InputMaybe<Scalars['String']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
-};
-
-export type AdministratorBio = {
-  __typename?: 'AdministratorBio';
-  json: Scalars['JSON']['output'];
-  links: AdministratorBioLinks;
-};
-
-export type AdministratorBioAssets = {
-  __typename?: 'AdministratorBioAssets';
-  block: Array<Maybe<Asset>>;
-  hyperlink: Array<Maybe<Asset>>;
-};
-
-export type AdministratorBioEntries = {
-  __typename?: 'AdministratorBioEntries';
-  block: Array<Maybe<Entry>>;
-  hyperlink: Array<Maybe<Entry>>;
-  inline: Array<Maybe<Entry>>;
-};
-
-export type AdministratorBioLinks = {
-  __typename?: 'AdministratorBioLinks';
-  assets: AdministratorBioAssets;
-  entries: AdministratorBioEntries;
-  resources: AdministratorBioResources;
-};
-
-export type AdministratorBioResources = {
-  __typename?: 'AdministratorBioResources';
-  block: Array<AdministratorBioResourcesBlock>;
-  hyperlink: Array<AdministratorBioResourcesHyperlink>;
-  inline: Array<AdministratorBioResourcesInline>;
-};
-
-export type AdministratorBioResourcesBlock = ResourceLink & {
-  __typename?: 'AdministratorBioResourcesBlock';
-  sys: ResourceSys;
-};
-
-export type AdministratorBioResourcesHyperlink = ResourceLink & {
-  __typename?: 'AdministratorBioResourcesHyperlink';
-  sys: ResourceSys;
-};
-
-export type AdministratorBioResourcesInline = ResourceLink & {
-  __typename?: 'AdministratorBioResourcesInline';
-  sys: ResourceSys;
-};
-
-export type AdministratorCollection = {
-  __typename?: 'AdministratorCollection';
-  items: Array<Maybe<Administrator>>;
-  limit: Scalars['Int']['output'];
-  skip: Scalars['Int']['output'];
-  total: Scalars['Int']['output'];
-};
-
-export type AdministratorCursorCollection = {
-  __typename?: 'AdministratorCursorCollection';
-  items: Array<Maybe<Administrator>>;
-  limit: Scalars['Int']['output'];
-  pages: CursorPages;
-};
-
-export type AdministratorFilter = {
-  AND?: InputMaybe<Array<InputMaybe<AdministratorFilter>>>;
-  OR?: InputMaybe<Array<InputMaybe<AdministratorFilter>>>;
-  avatar_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  bio_contains?: InputMaybe<Scalars['String']['input']>;
-  bio_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  bio_not_contains?: InputMaybe<Scalars['String']['input']>;
-  contentfulMetadata?: InputMaybe<ContentfulMetadataFilter>;
-  name?: InputMaybe<Scalars['String']['input']>;
-  name_contains?: InputMaybe<Scalars['String']['input']>;
-  name_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  name_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  name_not?: InputMaybe<Scalars['String']['input']>;
-  name_not_contains?: InputMaybe<Scalars['String']['input']>;
-  name_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  pronouns?: InputMaybe<Scalars['String']['input']>;
-  pronouns_contains?: InputMaybe<Scalars['String']['input']>;
-  pronouns_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  pronouns_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  pronouns_not?: InputMaybe<Scalars['String']['input']>;
-  pronouns_not_contains?: InputMaybe<Scalars['String']['input']>;
-  pronouns_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  sys?: InputMaybe<SysFilter>;
-  title?: InputMaybe<Scalars['String']['input']>;
-  title_contains?: InputMaybe<Scalars['String']['input']>;
-  title_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  title_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  title_not?: InputMaybe<Scalars['String']['input']>;
-  title_not_contains?: InputMaybe<Scalars['String']['input']>;
-  title_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-};
-
-export type AdministratorLinkingCollections = {
-  __typename?: 'AdministratorLinkingCollections';
-  entryCollection?: Maybe<EntryCollection>;
-  entryCursorCollection?: Maybe<EntryCursorCollection>;
-};
-
-
-export type AdministratorLinkingCollectionsEntryCollectionArgs = {
-  limit?: InputMaybe<Scalars['Int']['input']>;
-  locale?: InputMaybe<Scalars['String']['input']>;
-  preview?: InputMaybe<Scalars['Boolean']['input']>;
-  skip?: InputMaybe<Scalars['Int']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
-};
-
-
-export type AdministratorLinkingCollectionsEntryCursorCollectionArgs = {
-  limit?: InputMaybe<Scalars['Int']['input']>;
-  locale?: InputMaybe<Scalars['String']['input']>;
-  pageNext?: InputMaybe<Scalars['String']['input']>;
-  pagePrev?: InputMaybe<Scalars['String']['input']>;
-  preview?: InputMaybe<Scalars['Boolean']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
-};
-
-export enum AdministratorOrder {
-  NameAsc = 'name_ASC',
-  NameDesc = 'name_DESC',
-  PronounsAsc = 'pronouns_ASC',
-  PronounsDesc = 'pronouns_DESC',
-  SysFirstPublishedAtAsc = 'sys_firstPublishedAt_ASC',
-  SysFirstPublishedAtDesc = 'sys_firstPublishedAt_DESC',
-  SysIdAsc = 'sys_id_ASC',
-  SysIdDesc = 'sys_id_DESC',
-  SysPublishedAtAsc = 'sys_publishedAt_ASC',
-  SysPublishedAtDesc = 'sys_publishedAt_DESC',
-  SysPublishedVersionAsc = 'sys_publishedVersion_ASC',
-  SysPublishedVersionDesc = 'sys_publishedVersion_DESC',
-  TitleAsc = 'title_ASC',
-  TitleDesc = 'title_DESC'
-}
-
 /** Represents a binary file in a space. An asset can be any file type. */
 export type Asset = {
   __typename?: 'Asset';
@@ -393,10 +200,6 @@ export type AssetFilter = {
 
 export type AssetLinkingCollections = {
   __typename?: 'AssetLinkingCollections';
-  administratorCollection?: Maybe<AdministratorCollection>;
-  administratorCursorCollection?: Maybe<AdministratorCursorCollection>;
-  djCollection?: Maybe<DjCollection>;
-  djCursorCollection?: Maybe<DjCursorCollection>;
   entryCollection?: Maybe<EntryCollection>;
   entryCursorCollection?: Maybe<EntryCursorCollection>;
   eventCollection?: Maybe<EventCollection>;
@@ -413,44 +216,6 @@ export type AssetLinkingCollections = {
   partnersCursorCollection?: Maybe<PartnersCursorCollection>;
   socialMediaCollection?: Maybe<SocialMediaCollection>;
   socialMediaCursorCollection?: Maybe<SocialMediaCursorCollection>;
-};
-
-
-export type AssetLinkingCollectionsAdministratorCollectionArgs = {
-  limit?: InputMaybe<Scalars['Int']['input']>;
-  locale?: InputMaybe<Scalars['String']['input']>;
-  preview?: InputMaybe<Scalars['Boolean']['input']>;
-  skip?: InputMaybe<Scalars['Int']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
-};
-
-
-export type AssetLinkingCollectionsAdministratorCursorCollectionArgs = {
-  limit?: InputMaybe<Scalars['Int']['input']>;
-  locale?: InputMaybe<Scalars['String']['input']>;
-  pageNext?: InputMaybe<Scalars['String']['input']>;
-  pagePrev?: InputMaybe<Scalars['String']['input']>;
-  preview?: InputMaybe<Scalars['Boolean']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
-};
-
-
-export type AssetLinkingCollectionsDjCollectionArgs = {
-  limit?: InputMaybe<Scalars['Int']['input']>;
-  locale?: InputMaybe<Scalars['String']['input']>;
-  preview?: InputMaybe<Scalars['Boolean']['input']>;
-  skip?: InputMaybe<Scalars['Int']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
-};
-
-
-export type AssetLinkingCollectionsDjCursorCollectionArgs = {
-  limit?: InputMaybe<Scalars['Int']['input']>;
-  locale?: InputMaybe<Scalars['String']['input']>;
-  pageNext?: InputMaybe<Scalars['String']['input']>;
-  pagePrev?: InputMaybe<Scalars['String']['input']>;
-  preview?: InputMaybe<Scalars['Boolean']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
 };
 
 
@@ -970,295 +735,6 @@ export type CursorPages = {
   prev?: Maybe<Scalars['String']['output']>;
 };
 
-/** [See type definition](https://app.contentful.com/spaces/ix0cnzqgli1c/content_types/dj) */
-export type Dj = Entry & _Node & {
-  __typename?: 'Dj';
-  _id: Scalars['ID']['output'];
-  avatar?: Maybe<Asset>;
-  biography?: Maybe<DjBiography>;
-  contentfulMetadata: ContentfulMetadata;
-  linkedFrom?: Maybe<DjLinkingCollections>;
-  name?: Maybe<Scalars['String']['output']>;
-  pronouns?: Maybe<Scalars['String']['output']>;
-  sys: Sys;
-};
-
-
-/** [See type definition](https://app.contentful.com/spaces/ix0cnzqgli1c/content_types/dj) */
-export type DjAvatarArgs = {
-  locale?: InputMaybe<Scalars['String']['input']>;
-  preview?: InputMaybe<Scalars['Boolean']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
-};
-
-
-/** [See type definition](https://app.contentful.com/spaces/ix0cnzqgli1c/content_types/dj) */
-export type DjBiographyArgs = {
-  locale?: InputMaybe<Scalars['String']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
-};
-
-
-/** [See type definition](https://app.contentful.com/spaces/ix0cnzqgli1c/content_types/dj) */
-export type DjLinkedFromArgs = {
-  allowedLocales?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-};
-
-
-/** [See type definition](https://app.contentful.com/spaces/ix0cnzqgli1c/content_types/dj) */
-export type DjNameArgs = {
-  locale?: InputMaybe<Scalars['String']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
-};
-
-
-/** [See type definition](https://app.contentful.com/spaces/ix0cnzqgli1c/content_types/dj) */
-export type DjPronounsArgs = {
-  locale?: InputMaybe<Scalars['String']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
-};
-
-export type DjBiography = {
-  __typename?: 'DjBiography';
-  json: Scalars['JSON']['output'];
-  links: DjBiographyLinks;
-};
-
-export type DjBiographyAssets = {
-  __typename?: 'DjBiographyAssets';
-  block: Array<Maybe<Asset>>;
-  hyperlink: Array<Maybe<Asset>>;
-};
-
-export type DjBiographyEntries = {
-  __typename?: 'DjBiographyEntries';
-  block: Array<Maybe<Entry>>;
-  hyperlink: Array<Maybe<Entry>>;
-  inline: Array<Maybe<Entry>>;
-};
-
-export type DjBiographyLinks = {
-  __typename?: 'DjBiographyLinks';
-  assets: DjBiographyAssets;
-  entries: DjBiographyEntries;
-  resources: DjBiographyResources;
-};
-
-export type DjBiographyResources = {
-  __typename?: 'DjBiographyResources';
-  block: Array<DjBiographyResourcesBlock>;
-  hyperlink: Array<DjBiographyResourcesHyperlink>;
-  inline: Array<DjBiographyResourcesInline>;
-};
-
-export type DjBiographyResourcesBlock = ResourceLink & {
-  __typename?: 'DjBiographyResourcesBlock';
-  sys: ResourceSys;
-};
-
-export type DjBiographyResourcesHyperlink = ResourceLink & {
-  __typename?: 'DjBiographyResourcesHyperlink';
-  sys: ResourceSys;
-};
-
-export type DjBiographyResourcesInline = ResourceLink & {
-  __typename?: 'DjBiographyResourcesInline';
-  sys: ResourceSys;
-};
-
-export type DjCollection = {
-  __typename?: 'DjCollection';
-  items: Array<Maybe<Dj>>;
-  limit: Scalars['Int']['output'];
-  skip: Scalars['Int']['output'];
-  total: Scalars['Int']['output'];
-};
-
-export type DjCursorCollection = {
-  __typename?: 'DjCursorCollection';
-  items: Array<Maybe<Dj>>;
-  limit: Scalars['Int']['output'];
-  pages: CursorPages;
-};
-
-export type DjFilter = {
-  AND?: InputMaybe<Array<InputMaybe<DjFilter>>>;
-  OR?: InputMaybe<Array<InputMaybe<DjFilter>>>;
-  avatar_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  biography_contains?: InputMaybe<Scalars['String']['input']>;
-  biography_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  biography_not_contains?: InputMaybe<Scalars['String']['input']>;
-  contentfulMetadata?: InputMaybe<ContentfulMetadataFilter>;
-  name?: InputMaybe<Scalars['String']['input']>;
-  name_contains?: InputMaybe<Scalars['String']['input']>;
-  name_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  name_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  name_not?: InputMaybe<Scalars['String']['input']>;
-  name_not_contains?: InputMaybe<Scalars['String']['input']>;
-  name_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  pronouns?: InputMaybe<Scalars['String']['input']>;
-  pronouns_contains?: InputMaybe<Scalars['String']['input']>;
-  pronouns_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  pronouns_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  pronouns_not?: InputMaybe<Scalars['String']['input']>;
-  pronouns_not_contains?: InputMaybe<Scalars['String']['input']>;
-  pronouns_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  sys?: InputMaybe<SysFilter>;
-};
-
-export type DjLinkingCollections = {
-  __typename?: 'DjLinkingCollections';
-  entryCollection?: Maybe<EntryCollection>;
-  entryCursorCollection?: Maybe<EntryCursorCollection>;
-  eventCollection?: Maybe<EventCollection>;
-  eventCursorCollection?: Maybe<EventCursorCollection>;
-};
-
-
-export type DjLinkingCollectionsEntryCollectionArgs = {
-  limit?: InputMaybe<Scalars['Int']['input']>;
-  locale?: InputMaybe<Scalars['String']['input']>;
-  preview?: InputMaybe<Scalars['Boolean']['input']>;
-  skip?: InputMaybe<Scalars['Int']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
-};
-
-
-export type DjLinkingCollectionsEntryCursorCollectionArgs = {
-  limit?: InputMaybe<Scalars['Int']['input']>;
-  locale?: InputMaybe<Scalars['String']['input']>;
-  pageNext?: InputMaybe<Scalars['String']['input']>;
-  pagePrev?: InputMaybe<Scalars['String']['input']>;
-  preview?: InputMaybe<Scalars['Boolean']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
-};
-
-
-export type DjLinkingCollectionsEventCollectionArgs = {
-  limit?: InputMaybe<Scalars['Int']['input']>;
-  locale?: InputMaybe<Scalars['String']['input']>;
-  order?: InputMaybe<Array<InputMaybe<DjLinkingCollectionsEventCollectionOrder>>>;
-  preview?: InputMaybe<Scalars['Boolean']['input']>;
-  skip?: InputMaybe<Scalars['Int']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
-};
-
-
-export type DjLinkingCollectionsEventCursorCollectionArgs = {
-  limit?: InputMaybe<Scalars['Int']['input']>;
-  locale?: InputMaybe<Scalars['String']['input']>;
-  order?: InputMaybe<Array<InputMaybe<DjLinkingCollectionsEventCursorCollectionOrder>>>;
-  pageNext?: InputMaybe<Scalars['String']['input']>;
-  pagePrev?: InputMaybe<Scalars['String']['input']>;
-  preview?: InputMaybe<Scalars['Boolean']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
-};
-
-export enum DjLinkingCollectionsEventCollectionOrder {
-  AboutTitleAsc = 'aboutTitle_ASC',
-  AboutTitleDesc = 'aboutTitle_DESC',
-  ClosedTextAsc = 'closedText_ASC',
-  ClosedTextDesc = 'closedText_DESC',
-  ComingSoonAsc = 'comingSoon_ASC',
-  ComingSoonDesc = 'comingSoon_DESC',
-  CopyrightAsc = 'copyright_ASC',
-  CopyrightDesc = 'copyright_DESC',
-  DJsTitleAsc = 'dJsTitle_ASC',
-  DJsTitleDesc = 'dJsTitle_DESC',
-  DarkAsc = 'dark_ASC',
-  DarkDesc = 'dark_DESC',
-  EndDateAsc = 'endDate_ASC',
-  EndDateDesc = 'endDate_DESC',
-  InstructorsTitleAsc = 'instructorsTitle_ASC',
-  InstructorsTitleDesc = 'instructorsTitle_DESC',
-  LevelRequirementTitleAsc = 'levelRequirementTitle_ASC',
-  LevelRequirementTitleDesc = 'levelRequirementTitle_DESC',
-  PartnersTitleAsc = 'partnersTitle_ASC',
-  PartnersTitleDesc = 'partnersTitle_DESC',
-  PricingTitleAsc = 'pricingTitle_ASC',
-  PricingTitleDesc = 'pricingTitle_DESC',
-  ScheduleTitleAsc = 'scheduleTitle_ASC',
-  ScheduleTitleDesc = 'scheduleTitle_DESC',
-  SlugAsc = 'slug_ASC',
-  SlugDesc = 'slug_DESC',
-  StartDateAsc = 'startDate_ASC',
-  StartDateDesc = 'startDate_DESC',
-  SysFirstPublishedAtAsc = 'sys_firstPublishedAt_ASC',
-  SysFirstPublishedAtDesc = 'sys_firstPublishedAt_DESC',
-  SysIdAsc = 'sys_id_ASC',
-  SysIdDesc = 'sys_id_DESC',
-  SysPublishedAtAsc = 'sys_publishedAt_ASC',
-  SysPublishedAtDesc = 'sys_publishedAt_DESC',
-  SysPublishedVersionAsc = 'sys_publishedVersion_ASC',
-  SysPublishedVersionDesc = 'sys_publishedVersion_DESC',
-  TaglineAsc = 'tagline_ASC',
-  TaglineDesc = 'tagline_DESC',
-  TitleAsc = 'title_ASC',
-  TitleDesc = 'title_DESC',
-  VenuesTitleAsc = 'venuesTitle_ASC',
-  VenuesTitleDesc = 'venuesTitle_DESC'
-}
-
-export enum DjLinkingCollectionsEventCursorCollectionOrder {
-  AboutTitleAsc = 'aboutTitle_ASC',
-  AboutTitleDesc = 'aboutTitle_DESC',
-  ClosedTextAsc = 'closedText_ASC',
-  ClosedTextDesc = 'closedText_DESC',
-  ComingSoonAsc = 'comingSoon_ASC',
-  ComingSoonDesc = 'comingSoon_DESC',
-  CopyrightAsc = 'copyright_ASC',
-  CopyrightDesc = 'copyright_DESC',
-  DJsTitleAsc = 'dJsTitle_ASC',
-  DJsTitleDesc = 'dJsTitle_DESC',
-  DarkAsc = 'dark_ASC',
-  DarkDesc = 'dark_DESC',
-  EndDateAsc = 'endDate_ASC',
-  EndDateDesc = 'endDate_DESC',
-  InstructorsTitleAsc = 'instructorsTitle_ASC',
-  InstructorsTitleDesc = 'instructorsTitle_DESC',
-  LevelRequirementTitleAsc = 'levelRequirementTitle_ASC',
-  LevelRequirementTitleDesc = 'levelRequirementTitle_DESC',
-  PartnersTitleAsc = 'partnersTitle_ASC',
-  PartnersTitleDesc = 'partnersTitle_DESC',
-  PricingTitleAsc = 'pricingTitle_ASC',
-  PricingTitleDesc = 'pricingTitle_DESC',
-  ScheduleTitleAsc = 'scheduleTitle_ASC',
-  ScheduleTitleDesc = 'scheduleTitle_DESC',
-  SlugAsc = 'slug_ASC',
-  SlugDesc = 'slug_DESC',
-  StartDateAsc = 'startDate_ASC',
-  StartDateDesc = 'startDate_DESC',
-  SysFirstPublishedAtAsc = 'sys_firstPublishedAt_ASC',
-  SysFirstPublishedAtDesc = 'sys_firstPublishedAt_DESC',
-  SysIdAsc = 'sys_id_ASC',
-  SysIdDesc = 'sys_id_DESC',
-  SysPublishedAtAsc = 'sys_publishedAt_ASC',
-  SysPublishedAtDesc = 'sys_publishedAt_DESC',
-  SysPublishedVersionAsc = 'sys_publishedVersion_ASC',
-  SysPublishedVersionDesc = 'sys_publishedVersion_DESC',
-  TaglineAsc = 'tagline_ASC',
-  TaglineDesc = 'tagline_DESC',
-  TitleAsc = 'title_ASC',
-  TitleDesc = 'title_DESC',
-  VenuesTitleAsc = 'venuesTitle_ASC',
-  VenuesTitleDesc = 'venuesTitle_DESC'
-}
-
-export enum DjOrder {
-  NameAsc = 'name_ASC',
-  NameDesc = 'name_DESC',
-  PronounsAsc = 'pronouns_ASC',
-  PronounsDesc = 'pronouns_DESC',
-  SysFirstPublishedAtAsc = 'sys_firstPublishedAt_ASC',
-  SysFirstPublishedAtDesc = 'sys_firstPublishedAt_DESC',
-  SysIdAsc = 'sys_id_ASC',
-  SysIdDesc = 'sys_id_DESC',
-  SysPublishedAtAsc = 'sys_publishedAt_ASC',
-  SysPublishedAtDesc = 'sys_publishedAt_DESC',
-  SysPublishedVersionAsc = 'sys_publishedVersion_ASC',
-  SysPublishedVersionDesc = 'sys_publishedVersion_DESC'
-}
-
 export type Entry = {
   contentfulMetadata: ContentfulMetadata;
   sys: Sys;
@@ -1380,7 +856,7 @@ export type EventDJsCollectionArgs = {
   preview?: InputMaybe<Scalars['Boolean']['input']>;
   skip?: InputMaybe<Scalars['Int']['input']>;
   useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
-  where?: InputMaybe<DjFilter>;
+  where?: InputMaybe<InstructorFilter>;
 };
 
 
@@ -1393,7 +869,7 @@ export type EventDJsCursorCollectionArgs = {
   pagePrev?: InputMaybe<Scalars['String']['input']>;
   preview?: InputMaybe<Scalars['Boolean']['input']>;
   useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
-  where?: InputMaybe<DjFilter>;
+  where?: InputMaybe<InstructorFilter>;
 };
 
 
@@ -2045,7 +1521,7 @@ export type EventCursorCollection = {
 
 export type EventDJsCollection = {
   __typename?: 'EventDJsCollection';
-  items: Array<Maybe<Dj>>;
+  items: Array<Maybe<Instructor>>;
   limit: Scalars['Int']['output'];
   skip: Scalars['Int']['output'];
   total: Scalars['Int']['output'];
@@ -2063,12 +1539,14 @@ export enum EventDJsCollectionOrder {
   SysPublishedAtAsc = 'sys_publishedAt_ASC',
   SysPublishedAtDesc = 'sys_publishedAt_DESC',
   SysPublishedVersionAsc = 'sys_publishedVersion_ASC',
-  SysPublishedVersionDesc = 'sys_publishedVersion_DESC'
+  SysPublishedVersionDesc = 'sys_publishedVersion_DESC',
+  TitleAsc = 'title_ASC',
+  TitleDesc = 'title_DESC'
 }
 
 export type EventDJsCursorCollection = {
   __typename?: 'EventDJsCursorCollection';
-  items: Array<Maybe<Dj>>;
+  items: Array<Maybe<Instructor>>;
   limit: Scalars['Int']['output'];
   pages: CursorPages;
 };
@@ -2085,7 +1563,9 @@ export enum EventDJsCursorCollectionOrder {
   SysPublishedAtAsc = 'sys_publishedAt_ASC',
   SysPublishedAtDesc = 'sys_publishedAt_DESC',
   SysPublishedVersionAsc = 'sys_publishedVersion_ASC',
-  SysPublishedVersionDesc = 'sys_publishedVersion_DESC'
+  SysPublishedVersionDesc = 'sys_publishedVersion_DESC',
+  TitleAsc = 'title_ASC',
+  TitleDesc = 'title_DESC'
 }
 
 export type EventDetails = {
@@ -2168,7 +1648,7 @@ export type EventFilter = {
   copyright_not?: InputMaybe<Scalars['String']['input']>;
   copyright_not_contains?: InputMaybe<Scalars['String']['input']>;
   copyright_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  dJs?: InputMaybe<CfDjNestedFilter>;
+  dJs?: InputMaybe<CfInstructorNestedFilter>;
   dJsCollection_exists?: InputMaybe<Scalars['Boolean']['input']>;
   dJsTitle?: InputMaybe<Scalars['String']['input']>;
   dJsTitle_contains?: InputMaybe<Scalars['String']['input']>;
@@ -2308,7 +1788,9 @@ export enum EventInstructorsCollectionOrder {
   SysPublishedAtAsc = 'sys_publishedAt_ASC',
   SysPublishedAtDesc = 'sys_publishedAt_DESC',
   SysPublishedVersionAsc = 'sys_publishedVersion_ASC',
-  SysPublishedVersionDesc = 'sys_publishedVersion_DESC'
+  SysPublishedVersionDesc = 'sys_publishedVersion_DESC',
+  TitleAsc = 'title_ASC',
+  TitleDesc = 'title_DESC'
 }
 
 export type EventInstructorsCursorCollection = {
@@ -2330,7 +1812,9 @@ export enum EventInstructorsCursorCollectionOrder {
   SysPublishedAtAsc = 'sys_publishedAt_ASC',
   SysPublishedAtDesc = 'sys_publishedAt_DESC',
   SysPublishedVersionAsc = 'sys_publishedVersion_ASC',
-  SysPublishedVersionDesc = 'sys_publishedVersion_DESC'
+  SysPublishedVersionDesc = 'sys_publishedVersion_DESC',
+  TitleAsc = 'title_ASC',
+  TitleDesc = 'title_DESC'
 }
 
 export type EventLinkingCollections = {
@@ -3452,6 +2936,7 @@ export type Instructor = Entry & _Node & {
   name?: Maybe<Scalars['String']['output']>;
   pronouns?: Maybe<Scalars['String']['output']>;
   sys: Sys;
+  title?: Maybe<Scalars['String']['output']>;
 };
 
 
@@ -3485,6 +2970,13 @@ export type InstructorNameArgs = {
 
 /** [See type definition](https://app.contentful.com/spaces/ix0cnzqgli1c/content_types/instructor) */
 export type InstructorPronounsArgs = {
+  locale?: InputMaybe<Scalars['String']['input']>;
+  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+
+/** [See type definition](https://app.contentful.com/spaces/ix0cnzqgli1c/content_types/instructor) */
+export type InstructorTitleArgs = {
   locale?: InputMaybe<Scalars['String']['input']>;
   useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
 };
@@ -3575,6 +3067,13 @@ export type InstructorFilter = {
   pronouns_not_contains?: InputMaybe<Scalars['String']['input']>;
   pronouns_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   sys?: InputMaybe<SysFilter>;
+  title?: InputMaybe<Scalars['String']['input']>;
+  title_contains?: InputMaybe<Scalars['String']['input']>;
+  title_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  title_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  title_not?: InputMaybe<Scalars['String']['input']>;
+  title_not_contains?: InputMaybe<Scalars['String']['input']>;
+  title_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
 export type InstructorLinkingCollections = {
@@ -3727,7 +3226,9 @@ export enum InstructorOrder {
   SysPublishedAtAsc = 'sys_publishedAt_ASC',
   SysPublishedAtDesc = 'sys_publishedAt_DESC',
   SysPublishedVersionAsc = 'sys_publishedVersion_ASC',
-  SysPublishedVersionDesc = 'sys_publishedVersion_DESC'
+  SysPublishedVersionDesc = 'sys_publishedVersion_DESC',
+  TitleAsc = 'title_ASC',
+  TitleDesc = 'title_DESC'
 }
 
 /** [See type definition](https://app.contentful.com/spaces/ix0cnzqgli1c/content_types/landAcknowledgement) */
@@ -6163,18 +5664,12 @@ export type Query = {
   __typename?: 'Query';
   _node?: Maybe<_Node>;
   _nodes: Array<Maybe<_Node>>;
-  administrator?: Maybe<Administrator>;
-  administratorCollection?: Maybe<AdministratorCollection>;
-  administratorCursorCollection?: Maybe<AdministratorCursorCollection>;
   asset?: Maybe<Asset>;
   assetCollection?: Maybe<AssetCollection>;
   assetCursorCollection?: Maybe<AssetCursorCollection>;
   buttonLink?: Maybe<ButtonLink>;
   buttonLinkCollection?: Maybe<ButtonLinkCollection>;
   buttonLinkCursorCollection?: Maybe<ButtonLinkCursorCollection>;
-  dj?: Maybe<Dj>;
-  djCollection?: Maybe<DjCollection>;
-  djCursorCollection?: Maybe<DjCursorCollection>;
   entryCollection?: Maybe<EntryCollection>;
   entryCursorCollection?: Maybe<EntryCursorCollection>;
   event?: Maybe<Event>;
@@ -6250,37 +5745,6 @@ export type Query_NodesArgs = {
 };
 
 
-export type QueryAdministratorArgs = {
-  id: Scalars['String']['input'];
-  locale?: InputMaybe<Scalars['String']['input']>;
-  preview?: InputMaybe<Scalars['Boolean']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
-};
-
-
-export type QueryAdministratorCollectionArgs = {
-  limit?: InputMaybe<Scalars['Int']['input']>;
-  locale?: InputMaybe<Scalars['String']['input']>;
-  order?: InputMaybe<Array<InputMaybe<AdministratorOrder>>>;
-  preview?: InputMaybe<Scalars['Boolean']['input']>;
-  skip?: InputMaybe<Scalars['Int']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
-  where?: InputMaybe<AdministratorFilter>;
-};
-
-
-export type QueryAdministratorCursorCollectionArgs = {
-  limit?: InputMaybe<Scalars['Int']['input']>;
-  locale?: InputMaybe<Scalars['String']['input']>;
-  order?: InputMaybe<Array<InputMaybe<AdministratorOrder>>>;
-  pageNext?: InputMaybe<Scalars['String']['input']>;
-  pagePrev?: InputMaybe<Scalars['String']['input']>;
-  preview?: InputMaybe<Scalars['Boolean']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
-  where?: InputMaybe<AdministratorFilter>;
-};
-
-
 export type QueryAssetArgs = {
   id: Scalars['String']['input'];
   locale?: InputMaybe<Scalars['String']['input']>;
@@ -6340,37 +5804,6 @@ export type QueryButtonLinkCursorCollectionArgs = {
   preview?: InputMaybe<Scalars['Boolean']['input']>;
   useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
   where?: InputMaybe<ButtonLinkFilter>;
-};
-
-
-export type QueryDjArgs = {
-  id: Scalars['String']['input'];
-  locale?: InputMaybe<Scalars['String']['input']>;
-  preview?: InputMaybe<Scalars['Boolean']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
-};
-
-
-export type QueryDjCollectionArgs = {
-  limit?: InputMaybe<Scalars['Int']['input']>;
-  locale?: InputMaybe<Scalars['String']['input']>;
-  order?: InputMaybe<Array<InputMaybe<DjOrder>>>;
-  preview?: InputMaybe<Scalars['Boolean']['input']>;
-  skip?: InputMaybe<Scalars['Int']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
-  where?: InputMaybe<DjFilter>;
-};
-
-
-export type QueryDjCursorCollectionArgs = {
-  limit?: InputMaybe<Scalars['Int']['input']>;
-  locale?: InputMaybe<Scalars['String']['input']>;
-  order?: InputMaybe<Array<InputMaybe<DjOrder>>>;
-  pageNext?: InputMaybe<Scalars['String']['input']>;
-  pagePrev?: InputMaybe<Scalars['String']['input']>;
-  preview?: InputMaybe<Scalars['Boolean']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
-  where?: InputMaybe<DjFilter>;
 };
 
 
@@ -7500,31 +6933,6 @@ export type CfButtonLinkNestedFilter = {
   text_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
-export type CfDjNestedFilter = {
-  AND?: InputMaybe<Array<InputMaybe<CfDjNestedFilter>>>;
-  OR?: InputMaybe<Array<InputMaybe<CfDjNestedFilter>>>;
-  avatar_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  biography_contains?: InputMaybe<Scalars['String']['input']>;
-  biography_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  biography_not_contains?: InputMaybe<Scalars['String']['input']>;
-  contentfulMetadata?: InputMaybe<ContentfulMetadataFilter>;
-  name?: InputMaybe<Scalars['String']['input']>;
-  name_contains?: InputMaybe<Scalars['String']['input']>;
-  name_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  name_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  name_not?: InputMaybe<Scalars['String']['input']>;
-  name_not_contains?: InputMaybe<Scalars['String']['input']>;
-  name_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  pronouns?: InputMaybe<Scalars['String']['input']>;
-  pronouns_contains?: InputMaybe<Scalars['String']['input']>;
-  pronouns_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  pronouns_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  pronouns_not?: InputMaybe<Scalars['String']['input']>;
-  pronouns_not_contains?: InputMaybe<Scalars['String']['input']>;
-  pronouns_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  sys?: InputMaybe<SysFilter>;
-};
-
 export type CfEventBlockNestedFilter = {
   AND?: InputMaybe<Array<InputMaybe<CfEventBlockNestedFilter>>>;
   OR?: InputMaybe<Array<InputMaybe<CfEventBlockNestedFilter>>>;
@@ -7646,6 +7054,13 @@ export type CfInstructorNestedFilter = {
   pronouns_not_contains?: InputMaybe<Scalars['String']['input']>;
   pronouns_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   sys?: InputMaybe<SysFilter>;
+  title?: InputMaybe<Scalars['String']['input']>;
+  title_contains?: InputMaybe<Scalars['String']['input']>;
+  title_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  title_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  title_not?: InputMaybe<Scalars['String']['input']>;
+  title_not_contains?: InputMaybe<Scalars['String']['input']>;
+  title_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
 export type CfLandAcknowledgementNestedFilter = {
@@ -7941,15 +7356,13 @@ export type GetAdministratorsSectionQueryVariables = Exact<{
 
 
 export type GetAdministratorsSectionQuery = { __typename?: 'Query', pageSection?: { __typename?: 'PageSection', title?: string | null, anchor?: string | null, componentsCollection?: { __typename?: 'PageSectionComponentsCollection', items: Array<
-        | { __typename: 'Administrator', name?: string | null, pronouns?: string | null, title?: string | null, sys: { __typename?: 'Sys', id: string }, bio?: { __typename?: 'AdministratorBio', json: any, links: { __typename?: 'AdministratorBioLinks', assets: { __typename?: 'AdministratorBioAssets', block: Array<{ __typename?: 'Asset', url?: string | null, description?: string | null, sys: { __typename?: 'Sys', id: string } } | null> } } } | null, avatar?: { __typename?: 'Asset', url?: string | null, title?: string | null } | null }
         | { __typename?: 'ButtonLink' }
-        | { __typename?: 'Dj' }
         | { __typename?: 'Event' }
         | { __typename?: 'EventBlock' }
         | { __typename?: 'FeaturedSlide' }
         | { __typename?: 'Footer' }
         | { __typename?: 'Hero' }
-        | { __typename?: 'Instructor' }
+        | { __typename: 'Instructor', name?: string | null, pronouns?: string | null, title?: string | null, sys: { __typename?: 'Sys', id: string }, biography?: { __typename?: 'InstructorBiography', json: any, links: { __typename?: 'InstructorBiographyLinks', assets: { __typename?: 'InstructorBiographyAssets', block: Array<{ __typename?: 'Asset', url?: string | null, description?: string | null, sys: { __typename?: 'Sys', id: string } } | null> } } } | null, avatar?: { __typename?: 'Asset', url?: string | null, title?: string | null } | null }
         | { __typename?: 'LandAcknowledgement' }
         | { __typename?: 'LevelRequirement' }
         | { __typename?: 'Link' }
@@ -7982,7 +7395,7 @@ export type GetDJsQueryVariables = Exact<{
 }>;
 
 
-export type GetDJsQuery = { __typename?: 'Query', event?: { __typename?: 'Event', dJsTitle?: string | null, dJsCollection?: { __typename?: 'EventDJsCollection', items: Array<{ __typename?: 'Dj', name?: string | null, pronouns?: string | null, sys: { __typename?: 'Sys', id: string }, biography?: { __typename?: 'DjBiography', json: any, links: { __typename?: 'DjBiographyLinks', assets: { __typename?: 'DjBiographyAssets', block: Array<{ __typename?: 'Asset', url?: string | null, description?: string | null, sys: { __typename?: 'Sys', id: string } } | null> } } } | null, avatar?: { __typename?: 'Asset', title?: string | null, url?: string | null } | null } | null> } | null } | null };
+export type GetDJsQuery = { __typename?: 'Query', event?: { __typename?: 'Event', dJsTitle?: string | null, dJsCollection?: { __typename?: 'EventDJsCollection', items: Array<{ __typename?: 'Instructor', name?: string | null, pronouns?: string | null, sys: { __typename?: 'Sys', id: string }, biography?: { __typename?: 'InstructorBiography', json: any, links: { __typename?: 'InstructorBiographyLinks', assets: { __typename?: 'InstructorBiographyAssets', block: Array<{ __typename?: 'Asset', url?: string | null, description?: string | null, sys: { __typename?: 'Sys', id: string } } | null> } } } | null, avatar?: { __typename?: 'Asset', title?: string | null, url?: string | null } | null } | null> } | null } | null };
 
 export type GetEventMetaDataQueryVariables = Exact<{
   locale: Scalars['String']['input'];
@@ -8007,9 +7420,7 @@ export type GetEventsSectionQueryVariables = Exact<{
 
 
 export type GetEventsSectionQuery = { __typename?: 'Query', pageSection?: { __typename?: 'PageSection', title?: string | null, anchor?: string | null, componentsCollection?: { __typename?: 'PageSectionComponentsCollection', items: Array<
-        | { __typename?: 'Administrator' }
         | { __typename?: 'ButtonLink' }
-        | { __typename?: 'Dj' }
         | { __typename: 'Event', title?: string | null, dark?: boolean | null, tagline?: string | null, startDate?: any | null, sys: { __typename?: 'Sys', id: string }, image?: { __typename?: 'Asset', url?: string | null, title?: string | null } | null, link?: { __typename?: 'Link', href?: string | null, text?: string | null } | null }
         | { __typename?: 'EventBlock' }
         | { __typename?: 'FeaturedSlide' }
@@ -8037,9 +7448,7 @@ export type GetFeaturedSlidesSectionQueryVariables = Exact<{
 
 
 export type GetFeaturedSlidesSectionQuery = { __typename?: 'Query', pageSection?: { __typename?: 'PageSection', title?: string | null, anchor?: string | null, componentsCollection?: { __typename?: 'PageSectionComponentsCollection', items: Array<
-        | { __typename?: 'Administrator' }
         | { __typename?: 'ButtonLink' }
-        | { __typename?: 'Dj' }
         | { __typename?: 'Event' }
         | { __typename?: 'EventBlock' }
         | { __typename: 'FeaturedSlide', title?: string | null, type?: string | null, sys: { __typename?: 'Sys', id: string }, image?: { __typename?: 'Asset', url?: string | null, title?: string | null } | null, details?: { __typename?: 'FeaturedSlideDetails', json: any, links: { __typename?: 'FeaturedSlideDetailsLinks', assets: { __typename?: 'FeaturedSlideDetailsAssets', block: Array<{ __typename?: 'Asset', url?: string | null, description?: string | null, sys: { __typename?: 'Sys', id: string } } | null> } } } | null, link?: { __typename?: 'Link', href?: string | null, text?: string | null } | null }
@@ -8083,9 +7492,7 @@ export type GetMissionsSectionQueryVariables = Exact<{
 
 
 export type GetMissionsSectionQuery = { __typename?: 'Query', pageSection?: { __typename?: 'PageSection', title?: string | null, anchor?: string | null, componentsCollection?: { __typename?: 'PageSectionComponentsCollection', items: Array<
-        | { __typename?: 'Administrator' }
         | { __typename?: 'ButtonLink' }
-        | { __typename?: 'Dj' }
         | { __typename?: 'Event' }
         | { __typename?: 'EventBlock' }
         | { __typename?: 'FeaturedSlide' }
@@ -8155,7 +7562,7 @@ export type GetVenuesQueryVariables = Exact<{
 export type GetVenuesQuery = { __typename?: 'Query', event?: { __typename?: 'Event', venuesTitle?: string | null, venuesCollection?: { __typename?: 'EventVenuesCollection', items: Array<{ __typename?: 'Venue', name?: string | null, venueAddress?: string | null, purpose?: string | null, sys: { __typename?: 'Sys', id: string } } | null> } | null } | null };
 
 
-export const GetAdministratorsSectionDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetAdministratorsSection"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"id"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"locale"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"pageSection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"id"}}},{"kind":"Argument","name":{"kind":"Name","value":"locale"},"value":{"kind":"Variable","name":{"kind":"Name","value":"locale"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"anchor"}},{"kind":"Field","name":{"kind":"Name","value":"componentsCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"10"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"Administrator"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"__typename"}},{"kind":"Field","name":{"kind":"Name","value":"sys"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"pronouns"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"bio"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"json"}},{"kind":"Field","name":{"kind":"Name","value":"links"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"assets"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"block"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sys"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"description"}}]}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"avatar"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"title"}}]}}]}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetAdministratorsSectionQuery, GetAdministratorsSectionQueryVariables>;
+export const GetAdministratorsSectionDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetAdministratorsSection"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"id"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"locale"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"pageSection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"id"}}},{"kind":"Argument","name":{"kind":"Name","value":"locale"},"value":{"kind":"Variable","name":{"kind":"Name","value":"locale"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"anchor"}},{"kind":"Field","name":{"kind":"Name","value":"componentsCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"10"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"Instructor"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"__typename"}},{"kind":"Field","name":{"kind":"Name","value":"sys"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"pronouns"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"biography"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"json"}},{"kind":"Field","name":{"kind":"Name","value":"links"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"assets"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"block"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sys"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"description"}}]}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"avatar"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"title"}}]}}]}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetAdministratorsSectionQuery, GetAdministratorsSectionQueryVariables>;
 export const GetAllEventSlugsDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetAllEventSlugs"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"eventCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"50"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"slug"}},{"kind":"Field","name":{"kind":"Name","value":"startDate"}}]}}]}}]}}]} as unknown as DocumentNode<GetAllEventSlugsQuery, GetAllEventSlugsQueryVariables>;
 export const GetAllEventsDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetAllEvents"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"locale"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"eventCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"locale"},"value":{"kind":"Variable","name":{"kind":"Name","value":"locale"}}},{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"50"}},{"kind":"Argument","name":{"kind":"Name","value":"order"},"value":{"kind":"EnumValue","value":"startDate_DESC"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}},{"kind":"Field","name":{"kind":"Name","value":"startDate"}},{"kind":"Field","name":{"kind":"Name","value":"endDate"}},{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"title"}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetAllEventsQuery, GetAllEventsQueryVariables>;
 export const GetDJsDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetDJs"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"eventId"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"locale"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"event"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"eventId"}}},{"kind":"Argument","name":{"kind":"Name","value":"locale"},"value":{"kind":"Variable","name":{"kind":"Name","value":"locale"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"dJsTitle"}},{"kind":"Field","name":{"kind":"Name","value":"dJsCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"10"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sys"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"pronouns"}},{"kind":"Field","name":{"kind":"Name","value":"biography"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"json"}},{"kind":"Field","name":{"kind":"Name","value":"links"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"assets"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"block"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sys"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"description"}}]}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"avatar"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"url"}}]}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetDJsQuery, GetDJsQueryVariables>;
