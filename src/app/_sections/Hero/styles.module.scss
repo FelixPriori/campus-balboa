@@ -3,16 +3,25 @@
 .heroWrapper {
   padding: var(--space-10);
   position: relative;
-  min-height: clamp(600px, 100svh, 950px);
+  // min-height: content (~400px) + wave height (39.0625% of width = 500/1280 aspect ratio)
+  min-height: max(clamp(600px, 100svh, 950px), calc(39.0625% + 400px));
   display: flex;
   justify-content: center;
   background-color: var(--campus-color-blanc);
-  background-image: url('/wave-bottom.png'), url('/circle-dual.png');
-  background-position:
-    bottom -500px left 0,
-    left -50px top -100px;
-  background-repeat: no-repeat, no-repeat;
-  background-size: cover, contain;
+  background-image: url('/circle-dual.png');
+  background-position: left -50px top -100px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  // padding-block-end = wave image height at current width (percentage in padding = % of width)
+  padding-block-end: 39.0625%;
+
+  .wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
 
   .content {
     min-height: 100%;

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { Markdown, type RichTextContent } from '@/app/_lib/markdown'
 import styles from './styles.module.scss'
 
@@ -28,6 +29,7 @@ function AnimatedLogo() {
 export default function Hero({ title, description }: HeroProps) {
   return (
     <header className={styles.heroWrapper}>
+      <Image src="/wave-bottom.png" alt="" aria-hidden width={1280} height={500} className={styles.wave} />
       <div className={styles.content}>
         <div className={styles.logoWrapper}>
           <AnimatedLogo />
