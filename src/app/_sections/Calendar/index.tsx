@@ -4,12 +4,11 @@ import { useMemo } from 'react'
 import useMapSize from '@/app/_hooks/useMapSize'
 import { InfinitySpin } from 'react-loader-spinner'
 import useResponsive from '@/app/_hooks/useResponsive'
-import { GoogleCalendarText } from '@/app/_types/components'
 import { PageSectionProps } from '@/app/_types/sections'
 import { buildGoogleCalendarUrl } from './utils'
 
 interface CalendarProps extends PageSectionProps {
-  gcal: GoogleCalendarText | null
+  iFrameTitle: string
   calendarEmbedTitle: string
 }
 
@@ -17,7 +16,7 @@ export default function Calendar({
   title,
   anchor,
   locale,
-  gcal,
+  iFrameTitle,
   calendarEmbedTitle,
 }: CalendarProps) {
   const mapSize = useMapSize()
@@ -38,7 +37,7 @@ export default function Calendar({
           <InfinitySpin width="200" color="var(--color-primary)" />
         ) : (
           <iframe
-            title={gcal?.iFrameTitle ?? ''}
+            title={iFrameTitle}
             src={mapUrl}
             style={{ border: 0, width: '100%', height: '100%' }}
             width={mapSize?.width ?? 0}

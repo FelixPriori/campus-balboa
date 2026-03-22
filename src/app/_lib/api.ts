@@ -5,12 +5,10 @@ import {
   GetAllEventSlugsDocument,
   GetAllEventsDocument,
   GetDJsDocument,
-  GetEmblaDocument,
   GetEventMetaDataDocument,
   GetEventPageDocument,
   GetEventsSectionDocument,
   GetFeaturedSlidesSectionDocument,
-  GetGoogleCalendarDocument,
   GetHomePageDocument,
   GetInstructorsDocument,
   GetMissionsSectionDocument,
@@ -134,28 +132,6 @@ export async function getAllEvents(locale: string) {
 export async function getAllEventSlugs() {
   const data = await getClient().request(GetAllEventSlugsDocument, {})
   return nonNull(data.eventCollection?.items ?? [])
-}
-
-// ─── Embla / Calendar ─────────────────────────────────────────────────────────
-
-export async function getEmbla(locale: string) {
-  const data = await getClient().request(GetEmblaDocument, { locale })
-  const item = data.emblaCollection?.items?.[0]
-  if (!item) return null
-  return {
-    changeSlide: item.changeSlide ?? '',
-    nextSlide: item.nextSlide ?? '',
-    prevSlide: item.prevSlide ?? '',
-  }
-}
-
-export async function getGoogleCalendar(locale: string) {
-  const data = await getClient().request(GetGoogleCalendarDocument, { locale })
-  const item = data.googleCalendarCollection?.items?.[0]
-  if (!item) return null
-  return {
-    iFrameTitle: item.iFrameTitle ?? '',
-  }
 }
 
 // ─── Footer ───────────────────────────────────────────────────────────────────

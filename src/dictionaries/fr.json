@@ -1,6 +1,12 @@
 {
   "Calendar": {
-    "calendarEmbedTitle": "Balboa à Montréal"
+    "calendarEmbedTitle": "Balboa à Montréal",
+    "iFrameTitle": "Calendrier Google du Balboa à Montréal / Tiohtià:ke"
+  },
+  "Embla": {
+    "changeSlide": "Voir la diapositive {{slideNum}}",
+    "nextSlide": "Diapositive suivante",
+    "prevSlide": "Diapositive précédente"
   },
   "Navigation": {
     "homeAriaLabel": "Campus Balboa — accueil",

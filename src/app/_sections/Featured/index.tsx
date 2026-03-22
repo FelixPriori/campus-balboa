@@ -8,10 +8,8 @@ import type { EmblaText } from '@/app/_types/components'
 import { PageSectionProps } from '@/app/_types/sections'
 
 interface FeaturedProps extends PageSectionProps {
-  embla: EmblaText | null
+  embla: EmblaText
 }
-
-const EMBLA_FALLBACK = { changeSlide: '', nextSlide: '', prevSlide: '' }
 
 export default async function Featured({ id, title, anchor, locale, embla }: FeaturedProps) {
   const featuredContent = await getFeaturedSlides(id, locale)
@@ -21,7 +19,7 @@ export default async function Featured({ id, title, anchor, locale, embla }: Fea
       <div className={styles.content}>
         <h2 className={styles.featuredTitle}>{title}</h2>
         <Suspense fallback={<Fallback />}>
-          <EmblaContainer embla={embla ?? EMBLA_FALLBACK} slidesNumber={featuredContent.length}>
+          <EmblaContainer embla={embla} slidesNumber={featuredContent.length}>
             <FeaturedSlides featuredContent={featuredContent} />
           </EmblaContainer>
         </Suspense>
