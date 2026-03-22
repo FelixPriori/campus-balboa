@@ -84,6 +84,19 @@
     "description": "Un organisme à but non lucratif entièrement dédié à favoriser la croissance et l\u2019excellence du balboa à Montréal et ses environs.",
     "imageAlt": "Logo de Campus Balboa"
   },
+  "ContactForm": {
+    "title": "Nous contacter",
+    "nameLabel": "Nom",
+    "namePlaceholder": "Votre nom",
+    "emailLabel": "Courriel",
+    "emailPlaceholder": "votre@courriel.com",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Votre message…",
+    "submit": "Envoyer",
+    "sending": "Envoi en cours…",
+    "successMessage": "Votre message a bien été envoyé. Nous vous répondrons sous peu !",
+    "errorMessage": "Une erreur est survenue. Veuillez réessayer."
+  },
   "Footer": {
     "paypalIconAlt": "Logo de PayPal"
   },

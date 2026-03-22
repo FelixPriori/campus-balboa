@@ -18,7 +18,6 @@
   --radius-md: 0.625rem;
   --radius-full: 9999px;
   --border-radius: var(--radius-md);
-  --button-border-radius: var(--radius-full);
 
   /* Shadows */
   --shadow-card: 0 1.5rem 4rem color-mix(in srgb, var(--campus-color-canard) 15%, transparent);

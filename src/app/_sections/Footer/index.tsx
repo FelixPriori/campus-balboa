@@ -5,6 +5,7 @@ import SocialMedia from '@/app/_components/SocialMedia'
 import Image from 'next/image'
 import { getDictionary } from '@/app/dictionaries'
 import { Locale } from '@/i18n'
+import ContactForm from './ContactForm'
 
 function DonateButton({ donateButton, iconAlt }: { donateButton: DonateButtonType; iconAlt: string }) {
   return (
@@ -34,11 +35,12 @@ export default async function Footer({
   landAcknowledgement,
   locale,
 }: FooterSection & { locale: Locale }) {
-  const { Footer: dict } = await getDictionary(locale)
+  const { Footer: dict, ContactForm: contactFormDict } = await getDictionary(locale)
   return (
     <footer className={styles.footerSection}>
       <div className={styles.content}>
         <LandAcknowledgement landAcknowledgement={landAcknowledgement} />
+        <ContactForm {...contactFormDict} />
         <div className={styles.contact}>
           <p className={styles.copy}>
             <span>{contact}</span>
