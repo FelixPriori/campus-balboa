@@ -109,7 +109,7 @@ export default async function EventPage({ params }: Props) {
   const socialMedia = (data.socialMediaCollection?.items ?? [])
     .filter((i): i is NonNullable<typeof i> => i !== null)
     .map((i) => ({ sys: { id: i.sys.id }, href: i.href ?? '', text: i.text ?? '' }))
-  const registrationLink = data.registrationLink?.href
+  const registrationLink = !isClosed && data.registrationLink?.href
     ? { href: data.registrationLink.href, text: data.registrationLink.text ?? '' }
     : null
 
