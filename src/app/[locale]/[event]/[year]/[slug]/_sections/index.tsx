@@ -1,5 +1,6 @@
 import { getDJs, getInstructors, getPartners, getPricing, getSchedule, getVenues } from '@/app/_lib/api'
 import { Locale } from '@/i18n'
+import { getDictionary } from '@/app/dictionaries'
 import Instructors from './Instructors'
 import Pricing from './Pricing'
 import DJs from './DJs'
@@ -18,8 +19,8 @@ interface PricingSectionProps extends SectionProps {
 }
 
 export async function InstructorsSection({ eventId, locale }: SectionProps) {
-  const { items, sectionTitle } = await getInstructors(eventId, locale)
-  return <Instructors sectionTitle={sectionTitle ?? ''} instructorsData={items} />
+  const [items, dict] = await Promise.all([getInstructors(eventId, locale), getDictionary(locale)])
+  return <Instructors sectionTitle={dict.EventPage.instructorsTitle} instructorsData={items} />
 }
 
 export async function PricingSection({
@@ -28,11 +29,11 @@ export async function PricingSection({
   isClosed,
   registrationLink,
 }: PricingSectionProps) {
-  const { items, sectionTitle } = await getPricing(eventId, locale)
+  const [items, dict] = await Promise.all([getPricing(eventId, locale), getDictionary(locale)])
   return (
     <Pricing
       pricingData={items}
-      sectionTitle={sectionTitle ?? ''}
+      sectionTitle={dict.EventPage.pricingTitle}
       locale={locale}
       isClosed={isClosed}
       registrationLink={registrationLink}
@@ -41,23 +42,23 @@ export async function PricingSection({
 }
 
 export async function VenuesSection({ eventId, locale }: SectionProps) {
-  const { items, sectionTitle } = await getVenues(eventId, locale)
-  return <Venues venuesData={items} sectionTitle={sectionTitle ?? ''} />
+  const [items, dict] = await Promise.all([getVenues(eventId, locale), getDictionary(locale)])
+  return <Venues venuesData={items} sectionTitle={dict.EventPage.venuesTitle} />
 }
 
 export async function ScheduleSection({ eventId, locale }: SectionProps) {
-  const { items, sectionTitle } = await getSchedule(eventId, locale)
-  return <Schedule scheduleData={items} sectionTitle={sectionTitle ?? ''} locale={locale} />
+  const [items, dict] = await Promise.all([getSchedule(eventId, locale), getDictionary(locale)])
+  return <Schedule scheduleData={items} sectionTitle={dict.EventPage.scheduleTitle} locale={locale} />
 }
 
 export async function DJsSection({ eventId, locale }: SectionProps) {
-  const { items, sectionTitle } = await getDJs(eventId, locale)
+  const [items, dict] = await Promise.all([getDJs(eventId, locale), getDictionary(locale)])
   if (items.length === 0) return null
-  return <DJs dJsData={items} sectionTitle={sectionTitle ?? ''} />
+  return <DJs dJsData={items} sectionTitle={dict.EventPage.dJsTitle} />
 }
 
 export async function PartnersSection({ eventId, locale }: SectionProps) {
-  const { items, sectionTitle } = await getPartners(eventId, locale)
+  const [items, dict] = await Promise.all([getPartners(eventId, locale), getDictionary(locale)])
   if (items.length === 0) return null
-  return <Partners partnersData={items} sectionTitle={sectionTitle ?? ''} />
+  return <Partners partnersData={items} sectionTitle={dict.EventPage.partnersTitle} />
 }

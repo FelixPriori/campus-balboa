@@ -1,6 +1,5 @@
 query GetSchedule($eventId: String!, $locale: String!) {
   event(id: $eventId, locale: $locale) {
-    scheduleTitle
     scheduleCollection(limit: 10) {
       items {
         sys {

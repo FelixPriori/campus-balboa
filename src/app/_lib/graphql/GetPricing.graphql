@@ -1,6 +1,5 @@
 query GetPricing($eventId: String!, $locale: String!) {
   event(id: $eventId, locale: $locale) {
-    pricingTitle
     pricingCollection(limit: 10) {
       items {
         sys {

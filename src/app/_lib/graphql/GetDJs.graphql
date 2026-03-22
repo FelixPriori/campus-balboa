@@ -1,6 +1,5 @@
 query GetDJs($eventId: String!, $locale: String!) {
   event(id: $eventId, locale: $locale) {
-    dJsTitle
     dJsCollection(limit: 10) {
       items {
         sys {

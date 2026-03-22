@@ -179,90 +179,72 @@ export async function getPageFooter(locale: Locale): Promise<FooterSection | nul
 
 export async function getInstructors(eventId: string, locale: string) {
   const data = await getClient().request(GetInstructorsDocument, { eventId, locale })
-  return {
-    sectionTitle: data.event?.instructorsTitle ?? null,
-    items: nonNull(data.event?.instructorsCollection?.items ?? []).map((item): InstructorData => ({
-      sys: { id: item.sys.id },
-      name: item.name ?? '',
-      avatar: item.avatar?.url ? { url: item.avatar.url, title: item.avatar.title ?? '' } : null,
-      biography: item.biography ?? null,
-    })),
-  }
+  return nonNull(data.event?.instructorsCollection?.items ?? []).map((item): InstructorData => ({
+    sys: { id: item.sys.id },
+    name: item.name ?? '',
+    avatar: item.avatar?.url ? { url: item.avatar.url, title: item.avatar.title ?? '' } : null,
+    biography: item.biography ?? null,
+  }))
 }
 
 export async function getPricing(eventId: string, locale: string) {
   const data = await getClient().request(GetPricingDocument, { eventId, locale })
-  return {
-    sectionTitle: data.event?.pricingTitle ?? null,
-    items: nonNull(data.event?.pricingCollection?.items ?? []).map((item): PricingData => ({
-      sys: { id: item.sys.id },
-      tier: item.tier ?? '',
-      type: item.type ?? '',
-      startTime: item.startTime ?? '',
-      endTime: item.endTime ?? '',
-      amount: item.amount ?? 0,
-      batch: item.batch ?? 0,
-    })),
-  }
+  return nonNull(data.event?.pricingCollection?.items ?? []).map((item): PricingData => ({
+    sys: { id: item.sys.id },
+    tier: item.tier ?? '',
+    type: item.type ?? '',
+    startTime: item.startTime ?? '',
+    endTime: item.endTime ?? '',
+    amount: item.amount ?? 0,
+    batch: item.batch ?? 0,
+  }))
 }
 
 export async function getVenues(eventId: string, locale: string) {
   const data = await getClient().request(GetVenuesDocument, { eventId, locale })
-  return {
-    sectionTitle: data.event?.venuesTitle ?? null,
-    items: nonNull(data.event?.venuesCollection?.items ?? []).map((item): Venue => ({
-      sys: { id: item.sys.id },
-      name: item.name ?? '',
-      venueAddress: item.venueAddress ?? '',
-      purpose: item.purpose ?? '',
-    })),
-  }
+  return nonNull(data.event?.venuesCollection?.items ?? []).map((item): Venue => ({
+    sys: { id: item.sys.id },
+    name: item.name ?? '',
+    venueAddress: item.venueAddress ?? '',
+    purpose: item.purpose ?? '',
+  }))
 }
 
 export async function getSchedule(eventId: string, locale: string) {
   const data = await getClient().request(GetScheduleDocument, { eventId, locale })
-  return {
-    sectionTitle: data.event?.scheduleTitle ?? null,
-    items: nonNull(data.event?.scheduleCollection?.items ?? []).map((item): EventBlock => ({
-      sys: { id: item.sys.id },
-      title: item.title ?? '',
-      subtitle: item.subtitle ?? null,
-      startTime: item.startTime ?? '',
-      endTime: item.endTime ?? '',
-      blockType: item.blockType ?? '',
-      description: item.description ?? null,
-    })),
-  }
+  return nonNull(data.event?.scheduleCollection?.items ?? []).map((item): EventBlock => ({
+    sys: { id: item.sys.id },
+    title: item.title ?? '',
+    subtitle: item.subtitle ?? null,
+    startTime: item.startTime ?? '',
+    endTime: item.endTime ?? '',
+    blockType: item.blockType ?? '',
+    description: item.description ?? null,
+  }))
 }
 
 export async function getDJs(eventId: string, locale: string) {
   const data = await getClient().request(GetDJsDocument, { eventId, locale })
-  return {
-    sectionTitle: data.event?.dJsTitle ?? null,
-    items: nonNull(data.event?.dJsCollection?.items ?? []).map((item): DJ => ({
-      sys: { id: item.sys.id },
-      name: item.name ?? '',
-      pronouns: item.pronouns ?? null,
-      avatar: item.avatar?.url ? { url: item.avatar.url, title: item.avatar.title ?? '' } : null,
-      biography: item.biography ?? null,
-    })),
-  }
+  return nonNull(data.event?.dJsCollection?.items ?? []).map((item): DJ => ({
+    sys: { id: item.sys.id },
+    name: item.name ?? '',
+    pronouns: item.pronouns ?? null,
+    avatar: item.avatar?.url ? { url: item.avatar.url, title: item.avatar.title ?? '' } : null,
+    biography: item.biography ?? null,
+  }))
 }
 
 export async function getPartners(eventId: string, locale: string) {
   const data = await getClient().request(GetPartnersDocument, { eventId, locale })
-  return {
-    sectionTitle: data.event?.partnersTitle ?? null,
-    items: nonNull(data.event?.partnersCollection?.items ?? []).map((item): Partner => ({
-      sys: { id: item.sys.id },
-      title: item.title ?? '',
-      link: item.link ?? '',
-      logo: {
-        url: item.logo?.url ?? '',
-        title: item.logo?.title ?? '',
-      },
-    })),
-  }
+  return nonNull(data.event?.partnersCollection?.items ?? []).map((item): Partner => ({
+    sys: { id: item.sys.id },
+    title: item.title ?? '',
+    link: item.link ?? '',
+    logo: {
+      url: item.logo?.url ?? '',
+      title: item.logo?.title ?? '',
+    },
+  }))
 }
 
 // ─── Home page sections (by sectionId) ───────────────────────────────────────

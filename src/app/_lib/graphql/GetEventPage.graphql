@@ -62,9 +62,6 @@ query GetEventPage($locale: String!, $slug: String) {
         }
         skills
       }
-      copyright
-      aboutTitle
-      levelRequirementTitle
     }
   }
 }

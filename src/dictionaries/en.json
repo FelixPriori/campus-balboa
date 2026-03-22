@@ -28,6 +28,16 @@
     "pastEvents": "Past events",
     "empty": "No events found."
   },
+  "EventPage": {
+    "aboutTitle": "About",
+    "levelRequirementTitle": "Required Level",
+    "instructorsTitle": "Instructors",
+    "pricingTitle": "Pricing",
+    "dJsTitle": "DJs",
+    "venuesTitle": "Venues",
+    "scheduleTitle": "Schedule",
+    "partnersTitle": "Partners"
+  },
   "PricingCard": {
     "registrationOpensSoon": "Registration opens soon",
     "registrationClosed": "Registration closed"

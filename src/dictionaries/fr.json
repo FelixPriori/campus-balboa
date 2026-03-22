@@ -28,6 +28,16 @@
     "pastEvents": "Événements passés",
     "empty": "Aucun événement trouvé."
   },
+  "EventPage": {
+    "aboutTitle": "À propos",
+    "levelRequirementTitle": "Niveau requis",
+    "instructorsTitle": "Enseignant.e.s",
+    "pricingTitle": "Tarifs",
+    "dJsTitle": "DJs",
+    "venuesTitle": "Lieux",
+    "scheduleTitle": "Horaire",
+    "partnersTitle": "Collaborateur.ice.s"
+  },
   "PricingCard": {
     "registrationOpensSoon": "Inscription bientôt disponible",
     "registrationClosed": "Inscriptions fermées"

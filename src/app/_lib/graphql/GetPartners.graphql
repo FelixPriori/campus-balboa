@@ -1,6 +1,5 @@
 query GetPartners($eventId: String!, $locale: String!) {
   event(id: $eventId, locale: $locale) {
-    partnersTitle
     partnersCollection(limit: 10) {
       items {
         sys {

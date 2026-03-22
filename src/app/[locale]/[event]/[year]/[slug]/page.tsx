@@ -207,13 +207,13 @@ export default async function EventPage({ params }: Props) {
         />
         <About
           details={data.details}
-          sectionTitle={data.aboutTitle ?? ''}
+          sectionTitle={dict.EventPage.aboutTitle}
           closed={data.closedText ?? ''}
           isClosed={isClosed}
         />
         <LevelRequirement
           levelRequirement={data.levelRequirement}
-          sectionTitle={data.levelRequirementTitle ?? ''}
+          sectionTitle={dict.EventPage.levelRequirementTitle}
         />
         <SectionErrorBoundary label={dict.SectionSkeleton.instructors} {...sectionBoundaryProps}>
           <Suspense
