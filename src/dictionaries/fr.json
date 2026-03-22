@@ -74,6 +74,9 @@
     "description": "Un organisme à but non lucratif entièrement dédié à favoriser la croissance et l\u2019excellence du balboa à Montréal et ses environs.",
     "imageAlt": "Logo de Campus Balboa"
   },
+  "Footer": {
+    "paypalIconAlt": "Logo de PayPal"
+  },
   "NotFoundPage": {
     "metaTitle": "404 | Page non trouvée",
     "metaDescription": "Désolé, cette page n'existe pas",

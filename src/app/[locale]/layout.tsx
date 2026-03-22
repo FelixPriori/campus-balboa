@@ -3,7 +3,6 @@ import { ToastContainer } from 'react-toastify'
 import { Locale } from '@/i18n'
 import 'react-toastify/dist/ReactToastify.css'
 import './globals.css'
-import { ReactNode } from 'react'
 import { Footer } from '@/app/_sections'
 import { getPageFooter } from '@/app/_lib/api'
 
@@ -32,7 +31,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps<'/[
       <body suppressHydrationWarning className={`${lemon.variable} ${rubik.variable}`}>
         <ToastContainer />
         {children}
-        {footer && <Footer {...footer} />}
+        {footer && <Footer {...footer} locale={lang} />}
       </body>
     </html>
   )

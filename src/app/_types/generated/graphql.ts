@@ -393,300 +393,6 @@ export enum AssetOrder {
   WidthDesc = 'width_DESC'
 }
 
-/** [See type definition](https://app.contentful.com/spaces/ix0cnzqgli1c/content_types/buttonLink) */
-export type ButtonLink = Entry & _Node & {
-  __typename?: 'ButtonLink';
-  _id: Scalars['ID']['output'];
-  contentfulMetadata: ContentfulMetadata;
-  href?: Maybe<Scalars['String']['output']>;
-  iconAlt?: Maybe<Scalars['String']['output']>;
-  linkedFrom?: Maybe<ButtonLinkLinkingCollections>;
-  sys: Sys;
-  text?: Maybe<Scalars['String']['output']>;
-};
-
-
-/** [See type definition](https://app.contentful.com/spaces/ix0cnzqgli1c/content_types/buttonLink) */
-export type ButtonLinkHrefArgs = {
-  locale?: InputMaybe<Scalars['String']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
-};
-
-
-/** [See type definition](https://app.contentful.com/spaces/ix0cnzqgli1c/content_types/buttonLink) */
-export type ButtonLinkIconAltArgs = {
-  locale?: InputMaybe<Scalars['String']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
-};
-
-
-/** [See type definition](https://app.contentful.com/spaces/ix0cnzqgli1c/content_types/buttonLink) */
-export type ButtonLinkLinkedFromArgs = {
-  allowedLocales?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-};
-
-
-/** [See type definition](https://app.contentful.com/spaces/ix0cnzqgli1c/content_types/buttonLink) */
-export type ButtonLinkTextArgs = {
-  locale?: InputMaybe<Scalars['String']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
-};
-
-export type ButtonLinkCollection = {
-  __typename?: 'ButtonLinkCollection';
-  items: Array<Maybe<ButtonLink>>;
-  limit: Scalars['Int']['output'];
-  skip: Scalars['Int']['output'];
-  total: Scalars['Int']['output'];
-};
-
-export type ButtonLinkCursorCollection = {
-  __typename?: 'ButtonLinkCursorCollection';
-  items: Array<Maybe<ButtonLink>>;
-  limit: Scalars['Int']['output'];
-  pages: CursorPages;
-};
-
-export type ButtonLinkFilter = {
-  AND?: InputMaybe<Array<InputMaybe<ButtonLinkFilter>>>;
-  OR?: InputMaybe<Array<InputMaybe<ButtonLinkFilter>>>;
-  contentfulMetadata?: InputMaybe<ContentfulMetadataFilter>;
-  href?: InputMaybe<Scalars['String']['input']>;
-  href_contains?: InputMaybe<Scalars['String']['input']>;
-  href_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  href_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  href_not?: InputMaybe<Scalars['String']['input']>;
-  href_not_contains?: InputMaybe<Scalars['String']['input']>;
-  href_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  iconAlt?: InputMaybe<Scalars['String']['input']>;
-  iconAlt_contains?: InputMaybe<Scalars['String']['input']>;
-  iconAlt_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  iconAlt_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  iconAlt_not?: InputMaybe<Scalars['String']['input']>;
-  iconAlt_not_contains?: InputMaybe<Scalars['String']['input']>;
-  iconAlt_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  sys?: InputMaybe<SysFilter>;
-  text?: InputMaybe<Scalars['String']['input']>;
-  text_contains?: InputMaybe<Scalars['String']['input']>;
-  text_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  text_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  text_not?: InputMaybe<Scalars['String']['input']>;
-  text_not_contains?: InputMaybe<Scalars['String']['input']>;
-  text_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-};
-
-export type ButtonLinkLinkingCollections = {
-  __typename?: 'ButtonLinkLinkingCollections';
-  entryCollection?: Maybe<EntryCollection>;
-  entryCursorCollection?: Maybe<EntryCursorCollection>;
-  eventCollection?: Maybe<EventCollection>;
-  eventCursorCollection?: Maybe<EventCursorCollection>;
-  footerCollection?: Maybe<FooterCollection>;
-  footerCursorCollection?: Maybe<FooterCursorCollection>;
-};
-
-
-export type ButtonLinkLinkingCollectionsEntryCollectionArgs = {
-  limit?: InputMaybe<Scalars['Int']['input']>;
-  locale?: InputMaybe<Scalars['String']['input']>;
-  preview?: InputMaybe<Scalars['Boolean']['input']>;
-  skip?: InputMaybe<Scalars['Int']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
-};
-
-
-export type ButtonLinkLinkingCollectionsEntryCursorCollectionArgs = {
-  limit?: InputMaybe<Scalars['Int']['input']>;
-  locale?: InputMaybe<Scalars['String']['input']>;
-  pageNext?: InputMaybe<Scalars['String']['input']>;
-  pagePrev?: InputMaybe<Scalars['String']['input']>;
-  preview?: InputMaybe<Scalars['Boolean']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
-};
-
-
-export type ButtonLinkLinkingCollectionsEventCollectionArgs = {
-  limit?: InputMaybe<Scalars['Int']['input']>;
-  locale?: InputMaybe<Scalars['String']['input']>;
-  order?: InputMaybe<Array<InputMaybe<ButtonLinkLinkingCollectionsEventCollectionOrder>>>;
-  preview?: InputMaybe<Scalars['Boolean']['input']>;
-  skip?: InputMaybe<Scalars['Int']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
-};
-
-
-export type ButtonLinkLinkingCollectionsEventCursorCollectionArgs = {
-  limit?: InputMaybe<Scalars['Int']['input']>;
-  locale?: InputMaybe<Scalars['String']['input']>;
-  order?: InputMaybe<Array<InputMaybe<ButtonLinkLinkingCollectionsEventCursorCollectionOrder>>>;
-  pageNext?: InputMaybe<Scalars['String']['input']>;
-  pagePrev?: InputMaybe<Scalars['String']['input']>;
-  preview?: InputMaybe<Scalars['Boolean']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
-};
-
-
-export type ButtonLinkLinkingCollectionsFooterCollectionArgs = {
-  limit?: InputMaybe<Scalars['Int']['input']>;
-  locale?: InputMaybe<Scalars['String']['input']>;
-  order?: InputMaybe<Array<InputMaybe<ButtonLinkLinkingCollectionsFooterCollectionOrder>>>;
-  preview?: InputMaybe<Scalars['Boolean']['input']>;
-  skip?: InputMaybe<Scalars['Int']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
-};
-
-
-export type ButtonLinkLinkingCollectionsFooterCursorCollectionArgs = {
-  limit?: InputMaybe<Scalars['Int']['input']>;
-  locale?: InputMaybe<Scalars['String']['input']>;
-  order?: InputMaybe<Array<InputMaybe<ButtonLinkLinkingCollectionsFooterCursorCollectionOrder>>>;
-  pageNext?: InputMaybe<Scalars['String']['input']>;
-  pagePrev?: InputMaybe<Scalars['String']['input']>;
-  preview?: InputMaybe<Scalars['Boolean']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
-};
-
-export enum ButtonLinkLinkingCollectionsEventCollectionOrder {
-  AboutTitleAsc = 'aboutTitle_ASC',
-  AboutTitleDesc = 'aboutTitle_DESC',
-  ClosedTextAsc = 'closedText_ASC',
-  ClosedTextDesc = 'closedText_DESC',
-  ComingSoonAsc = 'comingSoon_ASC',
-  ComingSoonDesc = 'comingSoon_DESC',
-  CopyrightAsc = 'copyright_ASC',
-  CopyrightDesc = 'copyright_DESC',
-  DJsTitleAsc = 'dJsTitle_ASC',
-  DJsTitleDesc = 'dJsTitle_DESC',
-  DarkAsc = 'dark_ASC',
-  DarkDesc = 'dark_DESC',
-  EndDateAsc = 'endDate_ASC',
-  EndDateDesc = 'endDate_DESC',
-  InstructorsTitleAsc = 'instructorsTitle_ASC',
-  InstructorsTitleDesc = 'instructorsTitle_DESC',
-  LevelRequirementTitleAsc = 'levelRequirementTitle_ASC',
-  LevelRequirementTitleDesc = 'levelRequirementTitle_DESC',
-  PartnersTitleAsc = 'partnersTitle_ASC',
-  PartnersTitleDesc = 'partnersTitle_DESC',
-  PricingTitleAsc = 'pricingTitle_ASC',
-  PricingTitleDesc = 'pricingTitle_DESC',
-  ScheduleTitleAsc = 'scheduleTitle_ASC',
-  ScheduleTitleDesc = 'scheduleTitle_DESC',
-  SlugAsc = 'slug_ASC',
-  SlugDesc = 'slug_DESC',
-  StartDateAsc = 'startDate_ASC',
-  StartDateDesc = 'startDate_DESC',
-  SysFirstPublishedAtAsc = 'sys_firstPublishedAt_ASC',
-  SysFirstPublishedAtDesc = 'sys_firstPublishedAt_DESC',
-  SysIdAsc = 'sys_id_ASC',
-  SysIdDesc = 'sys_id_DESC',
-  SysPublishedAtAsc = 'sys_publishedAt_ASC',
-  SysPublishedAtDesc = 'sys_publishedAt_DESC',
-  SysPublishedVersionAsc = 'sys_publishedVersion_ASC',
-  SysPublishedVersionDesc = 'sys_publishedVersion_DESC',
-  TaglineAsc = 'tagline_ASC',
-  TaglineDesc = 'tagline_DESC',
-  TitleAsc = 'title_ASC',
-  TitleDesc = 'title_DESC',
-  VenuesTitleAsc = 'venuesTitle_ASC',
-  VenuesTitleDesc = 'venuesTitle_DESC'
-}
-
-export enum ButtonLinkLinkingCollectionsEventCursorCollectionOrder {
-  AboutTitleAsc = 'aboutTitle_ASC',
-  AboutTitleDesc = 'aboutTitle_DESC',
-  ClosedTextAsc = 'closedText_ASC',
-  ClosedTextDesc = 'closedText_DESC',
-  ComingSoonAsc = 'comingSoon_ASC',
-  ComingSoonDesc = 'comingSoon_DESC',
-  CopyrightAsc = 'copyright_ASC',
-  CopyrightDesc = 'copyright_DESC',
-  DJsTitleAsc = 'dJsTitle_ASC',
-  DJsTitleDesc = 'dJsTitle_DESC',
-  DarkAsc = 'dark_ASC',
-  DarkDesc = 'dark_DESC',
-  EndDateAsc = 'endDate_ASC',
-  EndDateDesc = 'endDate_DESC',
-  InstructorsTitleAsc = 'instructorsTitle_ASC',
-  InstructorsTitleDesc = 'instructorsTitle_DESC',
-  LevelRequirementTitleAsc = 'levelRequirementTitle_ASC',
-  LevelRequirementTitleDesc = 'levelRequirementTitle_DESC',
-  PartnersTitleAsc = 'partnersTitle_ASC',
-  PartnersTitleDesc = 'partnersTitle_DESC',
-  PricingTitleAsc = 'pricingTitle_ASC',
-  PricingTitleDesc = 'pricingTitle_DESC',
-  ScheduleTitleAsc = 'scheduleTitle_ASC',
-  ScheduleTitleDesc = 'scheduleTitle_DESC',
-  SlugAsc = 'slug_ASC',
-  SlugDesc = 'slug_DESC',
-  StartDateAsc = 'startDate_ASC',
-  StartDateDesc = 'startDate_DESC',
-  SysFirstPublishedAtAsc = 'sys_firstPublishedAt_ASC',
-  SysFirstPublishedAtDesc = 'sys_firstPublishedAt_DESC',
-  SysIdAsc = 'sys_id_ASC',
-  SysIdDesc = 'sys_id_DESC',
-  SysPublishedAtAsc = 'sys_publishedAt_ASC',
-  SysPublishedAtDesc = 'sys_publishedAt_DESC',
-  SysPublishedVersionAsc = 'sys_publishedVersion_ASC',
-  SysPublishedVersionDesc = 'sys_publishedVersion_DESC',
-  TaglineAsc = 'tagline_ASC',
-  TaglineDesc = 'tagline_DESC',
-  TitleAsc = 'title_ASC',
-  TitleDesc = 'title_DESC',
-  VenuesTitleAsc = 'venuesTitle_ASC',
-  VenuesTitleDesc = 'venuesTitle_DESC'
-}
-
-export enum ButtonLinkLinkingCollectionsFooterCollectionOrder {
-  ContactAsc = 'contact_ASC',
-  ContactDesc = 'contact_DESC',
-  CopyrightAsc = 'copyright_ASC',
-  CopyrightDesc = 'copyright_DESC',
-  EntryTitleAsc = 'entryTitle_ASC',
-  EntryTitleDesc = 'entryTitle_DESC',
-  SysFirstPublishedAtAsc = 'sys_firstPublishedAt_ASC',
-  SysFirstPublishedAtDesc = 'sys_firstPublishedAt_DESC',
-  SysIdAsc = 'sys_id_ASC',
-  SysIdDesc = 'sys_id_DESC',
-  SysPublishedAtAsc = 'sys_publishedAt_ASC',
-  SysPublishedAtDesc = 'sys_publishedAt_DESC',
-  SysPublishedVersionAsc = 'sys_publishedVersion_ASC',
-  SysPublishedVersionDesc = 'sys_publishedVersion_DESC'
-}
-
-export enum ButtonLinkLinkingCollectionsFooterCursorCollectionOrder {
-  ContactAsc = 'contact_ASC',
-  ContactDesc = 'contact_DESC',
-  CopyrightAsc = 'copyright_ASC',
-  CopyrightDesc = 'copyright_DESC',
-  EntryTitleAsc = 'entryTitle_ASC',
-  EntryTitleDesc = 'entryTitle_DESC',
-  SysFirstPublishedAtAsc = 'sys_firstPublishedAt_ASC',
-  SysFirstPublishedAtDesc = 'sys_firstPublishedAt_DESC',
-  SysIdAsc = 'sys_id_ASC',
-  SysIdDesc = 'sys_id_DESC',
-  SysPublishedAtAsc = 'sys_publishedAt_ASC',
-  SysPublishedAtDesc = 'sys_publishedAt_DESC',
-  SysPublishedVersionAsc = 'sys_publishedVersion_ASC',
-  SysPublishedVersionDesc = 'sys_publishedVersion_DESC'
-}
-
-export enum ButtonLinkOrder {
-  HrefAsc = 'href_ASC',
-  HrefDesc = 'href_DESC',
-  IconAltAsc = 'iconAlt_ASC',
-  IconAltDesc = 'iconAlt_DESC',
-  SysFirstPublishedAtAsc = 'sys_firstPublishedAt_ASC',
-  SysFirstPublishedAtDesc = 'sys_firstPublishedAt_DESC',
-  SysIdAsc = 'sys_id_ASC',
-  SysIdDesc = 'sys_id_DESC',
-  SysPublishedAtAsc = 'sys_publishedAt_ASC',
-  SysPublishedAtDesc = 'sys_publishedAt_DESC',
-  SysPublishedVersionAsc = 'sys_publishedVersion_ASC',
-  SysPublishedVersionDesc = 'sys_publishedVersion_DESC',
-  TextAsc = 'text_ASC',
-  TextDesc = 'text_DESC'
-}
-
 export type ContentfulMetadata = {
   __typename?: 'ContentfulMetadata';
   concepts: Array<Maybe<TaxonomyConcept>>;
@@ -1101,7 +807,7 @@ export type EventSocialMediaCollectionArgs = {
   preview?: InputMaybe<Scalars['Boolean']['input']>;
   skip?: InputMaybe<Scalars['Int']['input']>;
   useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
-  where?: InputMaybe<ButtonLinkFilter>;
+  where?: InputMaybe<LinkFilter>;
 };
 
 
@@ -1114,7 +820,7 @@ export type EventSocialMediaCursorCollectionArgs = {
   pagePrev?: InputMaybe<Scalars['String']['input']>;
   preview?: InputMaybe<Scalars['Boolean']['input']>;
   useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
-  where?: InputMaybe<ButtonLinkFilter>;
+  where?: InputMaybe<LinkFilter>;
 };
 
 
@@ -1731,7 +1437,7 @@ export type EventFilter = {
   slug_not?: InputMaybe<Scalars['String']['input']>;
   slug_not_contains?: InputMaybe<Scalars['String']['input']>;
   slug_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  socialMedia?: InputMaybe<CfButtonLinkNestedFilter>;
+  socialMedia?: InputMaybe<CfLinkNestedFilter>;
   socialMediaCollection_exists?: InputMaybe<Scalars['Boolean']['input']>;
   startDate?: InputMaybe<Scalars['DateTime']['input']>;
   startDate_exists?: InputMaybe<Scalars['Boolean']['input']>;
@@ -2052,7 +1758,7 @@ export enum EventScheduleCursorCollectionOrder {
 
 export type EventSocialMediaCollection = {
   __typename?: 'EventSocialMediaCollection';
-  items: Array<Maybe<ButtonLink>>;
+  items: Array<Maybe<Link>>;
   limit: Scalars['Int']['output'];
   skip: Scalars['Int']['output'];
   total: Scalars['Int']['output'];
@@ -2061,8 +1767,6 @@ export type EventSocialMediaCollection = {
 export enum EventSocialMediaCollectionOrder {
   HrefAsc = 'href_ASC',
   HrefDesc = 'href_DESC',
-  IconAltAsc = 'iconAlt_ASC',
-  IconAltDesc = 'iconAlt_DESC',
   SysFirstPublishedAtAsc = 'sys_firstPublishedAt_ASC',
   SysFirstPublishedAtDesc = 'sys_firstPublishedAt_DESC',
   SysIdAsc = 'sys_id_ASC',
@@ -2077,7 +1781,7 @@ export enum EventSocialMediaCollectionOrder {
 
 export type EventSocialMediaCursorCollection = {
   __typename?: 'EventSocialMediaCursorCollection';
-  items: Array<Maybe<ButtonLink>>;
+  items: Array<Maybe<Link>>;
   limit: Scalars['Int']['output'];
   pages: CursorPages;
 };
@@ -2085,8 +1789,6 @@ export type EventSocialMediaCursorCollection = {
 export enum EventSocialMediaCursorCollectionOrder {
   HrefAsc = 'href_ASC',
   HrefDesc = 'href_DESC',
-  IconAltAsc = 'iconAlt_ASC',
-  IconAltDesc = 'iconAlt_DESC',
   SysFirstPublishedAtAsc = 'sys_firstPublishedAt_ASC',
   SysFirstPublishedAtDesc = 'sys_firstPublishedAt_DESC',
   SysIdAsc = 'sys_id_ASC',
@@ -2344,7 +2046,7 @@ export type Footer = Entry & _Node & {
   contactLink?: Maybe<Link>;
   contentfulMetadata: ContentfulMetadata;
   copyright?: Maybe<Scalars['String']['output']>;
-  donateButton?: Maybe<ButtonLink>;
+  donateButton?: Maybe<Link>;
   entryTitle?: Maybe<Scalars['String']['output']>;
   landAcknowledgement?: Maybe<LandAcknowledgement>;
   linkedFrom?: Maybe<FooterLinkingCollections>;
@@ -2382,7 +2084,7 @@ export type FooterDonateButtonArgs = {
   locale?: InputMaybe<Scalars['String']['input']>;
   preview?: InputMaybe<Scalars['Boolean']['input']>;
   useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
-  where?: InputMaybe<ButtonLinkFilter>;
+  where?: InputMaybe<LinkFilter>;
 };
 
 
@@ -2467,7 +2169,7 @@ export type FooterFilter = {
   copyright_not?: InputMaybe<Scalars['String']['input']>;
   copyright_not_contains?: InputMaybe<Scalars['String']['input']>;
   copyright_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  donateButton?: InputMaybe<CfButtonLinkNestedFilter>;
+  donateButton?: InputMaybe<CfLinkNestedFilter>;
   donateButton_exists?: InputMaybe<Scalars['Boolean']['input']>;
   entryTitle?: InputMaybe<Scalars['String']['input']>;
   entryTitle_contains?: InputMaybe<Scalars['String']['input']>;
@@ -5667,9 +5369,6 @@ export type Query = {
   asset?: Maybe<Asset>;
   assetCollection?: Maybe<AssetCollection>;
   assetCursorCollection?: Maybe<AssetCursorCollection>;
-  buttonLink?: Maybe<ButtonLink>;
-  buttonLinkCollection?: Maybe<ButtonLinkCollection>;
-  buttonLinkCursorCollection?: Maybe<ButtonLinkCursorCollection>;
   entryCollection?: Maybe<EntryCollection>;
   entryCursorCollection?: Maybe<EntryCursorCollection>;
   event?: Maybe<Event>;
@@ -5773,37 +5472,6 @@ export type QueryAssetCursorCollectionArgs = {
   preview?: InputMaybe<Scalars['Boolean']['input']>;
   useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
   where?: InputMaybe<AssetFilter>;
-};
-
-
-export type QueryButtonLinkArgs = {
-  id: Scalars['String']['input'];
-  locale?: InputMaybe<Scalars['String']['input']>;
-  preview?: InputMaybe<Scalars['Boolean']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
-};
-
-
-export type QueryButtonLinkCollectionArgs = {
-  limit?: InputMaybe<Scalars['Int']['input']>;
-  locale?: InputMaybe<Scalars['String']['input']>;
-  order?: InputMaybe<Array<InputMaybe<ButtonLinkOrder>>>;
-  preview?: InputMaybe<Scalars['Boolean']['input']>;
-  skip?: InputMaybe<Scalars['Int']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
-  where?: InputMaybe<ButtonLinkFilter>;
-};
-
-
-export type QueryButtonLinkCursorCollectionArgs = {
-  limit?: InputMaybe<Scalars['Int']['input']>;
-  locale?: InputMaybe<Scalars['String']['input']>;
-  order?: InputMaybe<Array<InputMaybe<ButtonLinkOrder>>>;
-  pageNext?: InputMaybe<Scalars['String']['input']>;
-  pagePrev?: InputMaybe<Scalars['String']['input']>;
-  preview?: InputMaybe<Scalars['Boolean']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
-  where?: InputMaybe<ButtonLinkFilter>;
 };
 
 
@@ -6905,34 +6573,6 @@ export type _Node = {
   _id: Scalars['ID']['output'];
 };
 
-export type CfButtonLinkNestedFilter = {
-  AND?: InputMaybe<Array<InputMaybe<CfButtonLinkNestedFilter>>>;
-  OR?: InputMaybe<Array<InputMaybe<CfButtonLinkNestedFilter>>>;
-  contentfulMetadata?: InputMaybe<ContentfulMetadataFilter>;
-  href?: InputMaybe<Scalars['String']['input']>;
-  href_contains?: InputMaybe<Scalars['String']['input']>;
-  href_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  href_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  href_not?: InputMaybe<Scalars['String']['input']>;
-  href_not_contains?: InputMaybe<Scalars['String']['input']>;
-  href_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  iconAlt?: InputMaybe<Scalars['String']['input']>;
-  iconAlt_contains?: InputMaybe<Scalars['String']['input']>;
-  iconAlt_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  iconAlt_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  iconAlt_not?: InputMaybe<Scalars['String']['input']>;
-  iconAlt_not_contains?: InputMaybe<Scalars['String']['input']>;
-  iconAlt_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  sys?: InputMaybe<SysFilter>;
-  text?: InputMaybe<Scalars['String']['input']>;
-  text_contains?: InputMaybe<Scalars['String']['input']>;
-  text_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  text_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  text_not?: InputMaybe<Scalars['String']['input']>;
-  text_not_contains?: InputMaybe<Scalars['String']['input']>;
-  text_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-};
-
 export type CfEventBlockNestedFilter = {
   AND?: InputMaybe<Array<InputMaybe<CfEventBlockNestedFilter>>>;
   OR?: InputMaybe<Array<InputMaybe<CfEventBlockNestedFilter>>>;
@@ -7356,7 +6996,6 @@ export type GetAdministratorsSectionQueryVariables = Exact<{
 
 
 export type GetAdministratorsSectionQuery = { __typename?: 'Query', pageSection?: { __typename?: 'PageSection', title?: string | null, anchor?: string | null, componentsCollection?: { __typename?: 'PageSectionComponentsCollection', items: Array<
-        | { __typename?: 'ButtonLink' }
         | { __typename?: 'Event' }
         | { __typename?: 'EventBlock' }
         | { __typename?: 'FeaturedSlide' }
@@ -7411,7 +7050,7 @@ export type GetEventPageQueryVariables = Exact<{
 }>;
 
 
-export type GetEventPageQuery = { __typename?: 'Query', eventCollection?: { __typename?: 'EventCollection', items: Array<{ __typename?: 'Event', title?: string | null, slug?: string | null, startDate?: any | null, endDate?: any | null, closedText?: string | null, copyright?: string | null, aboutTitle?: string | null, levelRequirementTitle?: string | null, sys: { __typename?: 'Sys', id: string }, details?: { __typename?: 'EventDetails', json: any, links: { __typename?: 'EventDetailsLinks', assets: { __typename?: 'EventDetailsAssets', block: Array<{ __typename?: 'Asset', url?: string | null, description?: string | null, sys: { __typename?: 'Sys', id: string } } | null> } } } | null, image?: { __typename?: 'Asset', title?: string | null, url?: string | null } | null, link?: { __typename?: 'Link', href?: string | null, text?: string | null } | null, registrationLink?: { __typename?: 'Link', href?: string | null, text?: string | null } | null, socialMediaCollection?: { __typename?: 'EventSocialMediaCollection', items: Array<{ __typename?: 'ButtonLink', href?: string | null, text?: string | null, sys: { __typename?: 'Sys', id: string } } | null> } | null, levelRequirement?: { __typename?: 'LevelRequirement', title?: string | null, skills?: Array<string | null> | null, description?: { __typename?: 'LevelRequirementDescription', json: any, links: { __typename?: 'LevelRequirementDescriptionLinks', assets: { __typename?: 'LevelRequirementDescriptionAssets', block: Array<{ __typename?: 'Asset', url?: string | null, description?: string | null, sys: { __typename?: 'Sys', id: string } } | null> } } } | null } | null } | null> } | null };
+export type GetEventPageQuery = { __typename?: 'Query', eventCollection?: { __typename?: 'EventCollection', items: Array<{ __typename?: 'Event', title?: string | null, slug?: string | null, startDate?: any | null, endDate?: any | null, closedText?: string | null, copyright?: string | null, aboutTitle?: string | null, levelRequirementTitle?: string | null, sys: { __typename?: 'Sys', id: string }, details?: { __typename?: 'EventDetails', json: any, links: { __typename?: 'EventDetailsLinks', assets: { __typename?: 'EventDetailsAssets', block: Array<{ __typename?: 'Asset', url?: string | null, description?: string | null, sys: { __typename?: 'Sys', id: string } } | null> } } } | null, image?: { __typename?: 'Asset', title?: string | null, url?: string | null } | null, link?: { __typename?: 'Link', href?: string | null, text?: string | null } | null, registrationLink?: { __typename?: 'Link', href?: string | null, text?: string | null } | null, socialMediaCollection?: { __typename?: 'EventSocialMediaCollection', items: Array<{ __typename?: 'Link', href?: string | null, text?: string | null, sys: { __typename?: 'Sys', id: string } } | null> } | null, levelRequirement?: { __typename?: 'LevelRequirement', title?: string | null, skills?: Array<string | null> | null, description?: { __typename?: 'LevelRequirementDescription', json: any, links: { __typename?: 'LevelRequirementDescriptionLinks', assets: { __typename?: 'LevelRequirementDescriptionAssets', block: Array<{ __typename?: 'Asset', url?: string | null, description?: string | null, sys: { __typename?: 'Sys', id: string } } | null> } } } | null } | null } | null> } | null };
 
 export type GetEventsSectionQueryVariables = Exact<{
   id: Scalars['String']['input'];
@@ -7420,7 +7059,6 @@ export type GetEventsSectionQueryVariables = Exact<{
 
 
 export type GetEventsSectionQuery = { __typename?: 'Query', pageSection?: { __typename?: 'PageSection', title?: string | null, anchor?: string | null, componentsCollection?: { __typename?: 'PageSectionComponentsCollection', items: Array<
-        | { __typename?: 'ButtonLink' }
         | { __typename: 'Event', title?: string | null, dark?: boolean | null, tagline?: string | null, startDate?: any | null, sys: { __typename?: 'Sys', id: string }, image?: { __typename?: 'Asset', url?: string | null, title?: string | null } | null, link?: { __typename?: 'Link', href?: string | null, text?: string | null } | null }
         | { __typename?: 'EventBlock' }
         | { __typename?: 'FeaturedSlide' }
@@ -7448,7 +7086,6 @@ export type GetFeaturedSlidesSectionQueryVariables = Exact<{
 
 
 export type GetFeaturedSlidesSectionQuery = { __typename?: 'Query', pageSection?: { __typename?: 'PageSection', title?: string | null, anchor?: string | null, componentsCollection?: { __typename?: 'PageSectionComponentsCollection', items: Array<
-        | { __typename?: 'ButtonLink' }
         | { __typename?: 'Event' }
         | { __typename?: 'EventBlock' }
         | { __typename: 'FeaturedSlide', title?: string | null, type?: string | null, sys: { __typename?: 'Sys', id: string }, image?: { __typename?: 'Asset', url?: string | null, title?: string | null } | null, details?: { __typename?: 'FeaturedSlideDetails', json: any, links: { __typename?: 'FeaturedSlideDetailsLinks', assets: { __typename?: 'FeaturedSlideDetailsAssets', block: Array<{ __typename?: 'Asset', url?: string | null, description?: string | null, sys: { __typename?: 'Sys', id: string } } | null> } } } | null, link?: { __typename?: 'Link', href?: string | null, text?: string | null } | null }
@@ -7492,7 +7129,6 @@ export type GetMissionsSectionQueryVariables = Exact<{
 
 
 export type GetMissionsSectionQuery = { __typename?: 'Query', pageSection?: { __typename?: 'PageSection', title?: string | null, anchor?: string | null, componentsCollection?: { __typename?: 'PageSectionComponentsCollection', items: Array<
-        | { __typename?: 'ButtonLink' }
         | { __typename?: 'Event' }
         | { __typename?: 'EventBlock' }
         | { __typename?: 'FeaturedSlide' }
@@ -7519,7 +7155,7 @@ export type GetPageFooterQueryVariables = Exact<{
 }>;
 
 
-export type GetPageFooterQuery = { __typename?: 'Query', pageCollection?: { __typename?: 'PageCollection', items: Array<{ __typename?: 'Page', footer?: { __typename?: 'Footer', copyright?: string | null, contact?: string | null, contactLink?: { __typename?: 'Link', href?: string | null, text?: string | null } | null, donateButton?: { __typename?: 'ButtonLink', href?: string | null, text?: string | null, iconAlt?: string | null } | null, socialMediasCollection?: { __typename?: 'FooterSocialMediasCollection', items: Array<{ __typename?: 'SocialMedia', href?: string | null, accessibilityDescription?: string | null, sys: { __typename?: 'Sys', id: string }, logo?: { __typename?: 'Asset', url?: string | null, title?: string | null } | null } | null> } | null, landAcknowledgement?: { __typename?: 'LandAcknowledgement', title?: string | null, text?: string | null } | null } | null } | null> } | null };
+export type GetPageFooterQuery = { __typename?: 'Query', pageCollection?: { __typename?: 'PageCollection', items: Array<{ __typename?: 'Page', footer?: { __typename?: 'Footer', copyright?: string | null, contact?: string | null, contactLink?: { __typename?: 'Link', href?: string | null, text?: string | null } | null, donateButton?: { __typename?: 'Link', href?: string | null, text?: string | null } | null, socialMediasCollection?: { __typename?: 'FooterSocialMediasCollection', items: Array<{ __typename?: 'SocialMedia', href?: string | null, accessibilityDescription?: string | null, sys: { __typename?: 'Sys', id: string }, logo?: { __typename?: 'Asset', url?: string | null, title?: string | null } | null } | null> } | null, landAcknowledgement?: { __typename?: 'LandAcknowledgement', title?: string | null, text?: string | null } | null } | null } | null> } | null };
 
 export type GetPageMetaDataQueryVariables = Exact<{
   locale: Scalars['String']['input'];
@@ -7573,7 +7209,7 @@ export const GetFeaturedSlidesSectionDocument = {"kind":"Document","definitions"
 export const GetHomePageDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetHomePage"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"locale"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"slug"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"pageCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"locale"},"value":{"kind":"Variable","name":{"kind":"Name","value":"locale"}}},{"kind":"Argument","name":{"kind":"Name","value":"where"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"slug"},"value":{"kind":"Variable","name":{"kind":"Name","value":"slug"}}}]}},{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"1"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"slug"}},{"kind":"Field","name":{"kind":"Name","value":"hero"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"json"}},{"kind":"Field","name":{"kind":"Name","value":"links"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"assets"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"block"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sys"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"description"}}]}}]}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"sys"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"Field","name":{"kind":"Name","value":"sectionsCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"5"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PageSection"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sys"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"anchor"}},{"kind":"Field","name":{"kind":"Name","value":"sectionName"}},{"kind":"Field","name":{"kind":"Name","value":"content"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"json"}},{"kind":"Field","name":{"kind":"Name","value":"links"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"assets"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"block"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sys"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"description"}}]}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"helpText"}}]}}]}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetHomePageQuery, GetHomePageQueryVariables>;
 export const GetInstructorsDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetInstructors"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"eventId"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"locale"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"event"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"eventId"}}},{"kind":"Argument","name":{"kind":"Name","value":"locale"},"value":{"kind":"Variable","name":{"kind":"Name","value":"locale"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"instructorsTitle"}},{"kind":"Field","name":{"kind":"Name","value":"instructorsCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"10"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sys"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"biography"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"json"}},{"kind":"Field","name":{"kind":"Name","value":"links"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"assets"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"block"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sys"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"description"}}]}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"avatar"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"url"}}]}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetInstructorsQuery, GetInstructorsQueryVariables>;
 export const GetMissionsSectionDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetMissionsSection"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"id"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"locale"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"pageSection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"id"}}},{"kind":"Argument","name":{"kind":"Name","value":"locale"},"value":{"kind":"Variable","name":{"kind":"Name","value":"locale"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"anchor"}},{"kind":"Field","name":{"kind":"Name","value":"componentsCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"10"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"Mission"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"__typename"}},{"kind":"Field","name":{"kind":"Name","value":"sys"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"content"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"json"}},{"kind":"Field","name":{"kind":"Name","value":"links"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"assets"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"block"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sys"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"description"}}]}}]}}]}}]}}]}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetMissionsSectionQuery, GetMissionsSectionQueryVariables>;
-export const GetPageFooterDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetPageFooter"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"locale"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"slug"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"pageCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"locale"},"value":{"kind":"Variable","name":{"kind":"Name","value":"locale"}}},{"kind":"Argument","name":{"kind":"Name","value":"where"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"slug"},"value":{"kind":"Variable","name":{"kind":"Name","value":"slug"}}}]}},{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"1"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"footer"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"copyright"}},{"kind":"Field","name":{"kind":"Name","value":"contact"}},{"kind":"Field","name":{"kind":"Name","value":"contactLink"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"href"}},{"kind":"Field","name":{"kind":"Name","value":"text"}}]}},{"kind":"Field","name":{"kind":"Name","value":"donateButton"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"href"}},{"kind":"Field","name":{"kind":"Name","value":"text"}},{"kind":"Field","name":{"kind":"Name","value":"iconAlt"}}]}},{"kind":"Field","name":{"kind":"Name","value":"socialMediasCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"5"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sys"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"Field","name":{"kind":"Name","value":"logo"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"title"}}]}},{"kind":"Field","name":{"kind":"Name","value":"href"}},{"kind":"Field","name":{"kind":"Name","value":"accessibilityDescription"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"landAcknowledgement"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"text"}}]}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetPageFooterQuery, GetPageFooterQueryVariables>;
+export const GetPageFooterDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetPageFooter"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"locale"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"slug"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"pageCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"locale"},"value":{"kind":"Variable","name":{"kind":"Name","value":"locale"}}},{"kind":"Argument","name":{"kind":"Name","value":"where"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"slug"},"value":{"kind":"Variable","name":{"kind":"Name","value":"slug"}}}]}},{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"1"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"footer"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"copyright"}},{"kind":"Field","name":{"kind":"Name","value":"contact"}},{"kind":"Field","name":{"kind":"Name","value":"contactLink"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"href"}},{"kind":"Field","name":{"kind":"Name","value":"text"}}]}},{"kind":"Field","name":{"kind":"Name","value":"donateButton"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"href"}},{"kind":"Field","name":{"kind":"Name","value":"text"}}]}},{"kind":"Field","name":{"kind":"Name","value":"socialMediasCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"5"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sys"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"Field","name":{"kind":"Name","value":"logo"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"title"}}]}},{"kind":"Field","name":{"kind":"Name","value":"href"}},{"kind":"Field","name":{"kind":"Name","value":"accessibilityDescription"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"landAcknowledgement"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"text"}}]}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetPageFooterQuery, GetPageFooterQueryVariables>;
 export const GetPageMetaDataDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetPageMetaData"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"locale"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"slug"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"pageCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"locale"},"value":{"kind":"Variable","name":{"kind":"Name","value":"locale"}}},{"kind":"Argument","name":{"kind":"Name","value":"where"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"slug"},"value":{"kind":"Variable","name":{"kind":"Name","value":"slug"}}}]}},{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"1"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"pageMetaData"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"favicon"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"title"}}]}},{"kind":"Field","name":{"kind":"Name","value":"openGraphImage"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"url"}}]}}]}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetPageMetaDataQuery, GetPageMetaDataQueryVariables>;
 export const GetPartnersDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetPartners"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"eventId"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"locale"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"event"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"eventId"}}},{"kind":"Argument","name":{"kind":"Name","value":"locale"},"value":{"kind":"Variable","name":{"kind":"Name","value":"locale"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"partnersTitle"}},{"kind":"Field","name":{"kind":"Name","value":"partnersCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"10"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sys"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"link"}},{"kind":"Field","name":{"kind":"Name","value":"logo"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"url"}}]}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetPartnersQuery, GetPartnersQueryVariables>;
 export const GetPricingDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetPricing"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"eventId"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"locale"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"event"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"eventId"}}},{"kind":"Argument","name":{"kind":"Name","value":"locale"},"value":{"kind":"Variable","name":{"kind":"Name","value":"locale"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"pricingTitle"}},{"kind":"Field","name":{"kind":"Name","value":"pricingCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"10"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sys"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"Field","name":{"kind":"Name","value":"tier"}},{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"startTime"}},{"kind":"Field","name":{"kind":"Name","value":"endTime"}},{"kind":"Field","name":{"kind":"Name","value":"amount"}},{"kind":"Field","name":{"kind":"Name","value":"batch"}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetPricingQuery, GetPricingQueryVariables>;

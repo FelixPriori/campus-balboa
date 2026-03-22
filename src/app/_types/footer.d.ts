@@ -11,7 +11,6 @@ export interface ISocialMedia {
 export interface DonateButtonType {
   href: string
   text: string
-  iconAlt: string
 }
 
 export interface LandAcknowledgementType {

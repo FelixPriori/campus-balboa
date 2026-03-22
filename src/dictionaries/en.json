@@ -74,6 +74,9 @@
     "description": "A nonprofit entirely dedicated to fostering balboa growth and excellence in and around Montreal.",
     "imageAlt": "Campus Balboa logo"
   },
+  "Footer": {
+    "paypalIconAlt": "PayPal logo"
+  },
   "NotFoundPage": {
     "metaTitle": "404 | Page not found",
     "metaDescription": "Sorry, this page does not exist",

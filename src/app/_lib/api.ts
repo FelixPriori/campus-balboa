@@ -164,7 +164,6 @@ export async function getPageFooter(locale: Locale): Promise<FooterSection | nul
       ? {
           href: footer.donateButton.href,
           text: footer.donateButton.text ?? '',
-          iconAlt: footer.donateButton.iconAlt ?? '',
         }
       : null,
     landAcknowledgement: footer.landAcknowledgement?.title
