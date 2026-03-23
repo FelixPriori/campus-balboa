@@ -17,10 +17,7 @@ query GetEventsSection($id: String!, $locale: String!) {
             url
             title
           }
-          link {
-            href
-            text
-          }
+          slug
         }
       }
     }

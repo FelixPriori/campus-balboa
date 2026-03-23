@@ -17,25 +17,21 @@ interface EventCard {
   title: string
   tagline: string
   helpText?: string
+  href: string
   image: {
     title: string
     url: string
   }
-  link: {
-    href: string
-    text: string
-  }
 }
 
-export default function EventCard({ image, title, link, tagline, dark, helpText }: EventCard) {
+export default function EventCard({ image, title, href, tagline, dark, helpText }: EventCard) {
   return (
     <Link
-      href={link.href}
+      href={href}
       className={`${styles.cardWrapper} ${dark ? styles.dark : ''} ${
         dark ? caveatBrush.className : ''
       }`}
     >
-      <p className="sr-only">{link.text}</p>
       <ContentfulImage
         className={styles.image}
         src={image.url}

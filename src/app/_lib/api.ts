@@ -77,13 +77,10 @@ export interface SectionEventData {
   dark: boolean
   tagline: string
   startDate: string
+  slug: string | null
   image: {
     url: string
     title: string
-  }
-  link: {
-    href: string
-    text: string
   }
 }
 
@@ -299,13 +296,10 @@ export async function getSectionEvents(sectionId: string | null, locale: string)
       dark: item.dark ?? false,
       tagline: item.tagline ?? '',
       startDate: item.startDate ?? '',
+      slug: item.slug ?? null,
       image: {
         url: item.image?.url ?? '',
         title: item.image?.title ?? '',
-      },
-      link: {
-        href: item.link?.href ?? '',
-        text: item.link?.text ?? '',
       },
     }))
 }

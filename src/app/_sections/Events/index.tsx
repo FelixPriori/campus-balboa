@@ -7,6 +7,7 @@ import { PageSectionProps } from '@/app/_types/sections'
 import Link from 'next/link'
 import { EVENT_SEGMENTS } from '@/i18n'
 import { getDictionary } from '@/app/dictionaries'
+import { getEventHref } from '@/app/_util/navigationUtils'
 
 export default async function Events({ id, title, anchor, helpText, locale }: PageSectionProps) {
   const [eventsCollection, dict] = await Promise.all([
@@ -32,7 +33,7 @@ export default async function Events({ id, title, anchor, helpText, locale }: Pa
                   title={e.title}
                   tagline={e.tagline}
                   image={e.image}
-                  link={e.link}
+                  href={getEventHref(e.slug, locale)}
                   helpText={helpText}
                 />
               ))}

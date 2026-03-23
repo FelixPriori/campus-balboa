@@ -1,25 +1,10 @@
-export const checkIsCurrent = (page: string, current: string) => {
-  if (current === '/' && page === 'home') {
-    return true
-  } else if (page === current.slice(1)) {
-    return true
-  }
-  return false
+import { EVENT_SEGMENTS, type Locale } from '@/i18n'
+
+/** Builds the internal path to an event page from its Contentful slug (`/year/slug-name`). */
+export const getEventHref = (slug: string | null, locale: Locale): string => {
+  const [, year, slugName] = slug?.split('/') ?? []
+  return year && slugName
+    ? `/${locale}/${EVENT_SEGMENTS[locale]}/${year}/${slugName}`
+    : `/${locale}/${EVENT_SEGMENTS[locale]}`
 }
 
-export const getSlugFromPathname = (pathname: string) => {
-  const pathnameArray = pathname.split('/')
-  const slug = pathnameArray[pathnameArray.length - 1]
-
-  switch (slug) {
-    case 'mtl-bal-jam':
-      return '/'
-    default:
-      return `/${slug}`
-  }
-}
-
-export const getPageNameFromSlug = (pathname: string) => {
-  const slug = getSlugFromPathname(pathname)
-  return slug.slice(1)
-}

@@ -14,7 +14,3 @@ export interface EmblaText {
   nextSlide: string
   prevSlide: string
 }
-
-export interface GoogleCalendarText {
-  iFrameTitle: string
-}
