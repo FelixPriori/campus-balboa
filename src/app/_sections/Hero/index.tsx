@@ -9,7 +9,7 @@ type HeroProps = {
 
 function AnimatedLogo() {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 277 325">
+    <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 277 325">
       <path
         className={styles.outlineLogo}
         stroke="currentColor"

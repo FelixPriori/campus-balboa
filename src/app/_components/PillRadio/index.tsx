@@ -16,6 +16,7 @@ function Option({ name, href, active, first = false, last = false }: OptionProps
         first && styles.first
       } ${last && styles.last}`}
       href={href}
+      aria-current={active ? 'page' : undefined}
     >
       {name}
     </Link>

@@ -34,7 +34,9 @@ export default function Calendar({
       </div>
       <div className={styles.calendarWrapper}>
         {isLoading ? (
-          <InfinitySpin width="200" color="var(--color-primary)" />
+          <div role="status" aria-label={iFrameTitle}>
+            <InfinitySpin width="200" color="var(--color-primary)" />
+          </div>
         ) : (
           <iframe
             title={iFrameTitle}

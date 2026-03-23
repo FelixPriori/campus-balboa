@@ -193,6 +193,7 @@ export default async function EventPage({ params }: Props) {
       <div className={styles.eventPage}>
         <Navigation locale={locale} />
         <Breadcrumb items={breadcrumbItems} ariaLabel={dict.Breadcrumb.ariaLabel} />
+        <main id="main-content" tabIndex={-1}>
         <Hero
           imgAlt={data.image?.title ?? ''}
           imgSrc={data.image?.url ?? ''}
@@ -204,6 +205,7 @@ export default async function EventPage({ params }: Props) {
           isClosed={isClosed}
           socialMedia={socialMedia}
           registrationLink={registrationLink}
+          newTabLabel={dict.Navigation.newTab}
         />
         <About
           details={data.details}
@@ -282,6 +284,7 @@ export default async function EventPage({ params }: Props) {
             <PartnersSection eventId={eventId} locale={locale} />
           </Suspense>
         </SectionErrorBoundary>
+        </main>
       </div>
     </>
   )

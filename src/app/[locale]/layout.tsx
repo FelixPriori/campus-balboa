@@ -3,6 +3,7 @@ import { Locale } from '@/i18n'
 import './globals.css'
 import { Footer } from '@/app/_sections'
 import { getPageFooter } from '@/app/_lib/api'
+import { getDictionary } from '@/app/dictionaries'
 
 const rubik = Rubik({
   subsets: ['latin'],
@@ -22,7 +23,7 @@ const lemon = Lemon({
 
 export default async function LocaleLayout({ children, params }: LayoutProps<'/[locale]'>) {
   const lang = (await params).locale as Locale
-  const footer = await getPageFooter(lang)
+  const [footer, dict] = await Promise.all([getPageFooter(lang), getDictionary(lang)])
 
   return (
     <html lang={lang}>

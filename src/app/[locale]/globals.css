@@ -92,7 +92,7 @@ section {
 }
 
 section:not(.mbj-event section):not(.Toastify) {
-  padding-block: clamp(120px, 16vw, 200px);
+  padding-block: clamp(64px, 8vw, 120px);
   padding-inline: var(--space-12);
 }
 
@@ -225,6 +225,26 @@ h3 {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: calc(32px + 1.5rem);
+  background: var(--campus-color-canard);
+  color: var(--campus-color-blanc);
+  padding: var(--space-2) var(--space-4);
+  z-index: 9999;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-rubik);
+  font-size: var(--text-sm);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.skip-link:focus {
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 @media (max-width: calc(580 / 16 * 1rem)) {

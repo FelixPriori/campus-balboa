@@ -7,6 +7,7 @@ import { Locale, SITE_URL } from '@/i18n'
 import { getDictionary } from '@/app/dictionaries'
 import sectionsRenderer, { Hero } from '../_sections'
 import { notFound } from 'next/navigation'
+import Link from 'next/link'
 
 type Props = {
   params: Promise<{ locale: string }>
@@ -65,7 +66,12 @@ export default async function Home({ params }: Props) {
   return (
     <div className="landing">
       <nav className="app-nav" aria-label={dict.Navigation.mainAriaLabel}>
-        <CampusLogo />
+        <Link href={`/${locale}`} aria-label={dict.Navigation.homeAriaLabel}>
+          <CampusLogo />
+        </Link>
+        <a href="#main-content" className="skip-link">
+          {dict.Navigation.skipToMain}
+        </a>
         <LanguageSwitcher locale={locale} />
       </nav>
       <Hero {...pageData?.hero} />

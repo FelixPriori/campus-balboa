@@ -3,7 +3,7 @@ import style from './main.module.css'
 
 export default function Main({ children, styles }: { children: ReactNode; styles?: any }) {
   return (
-    <main style={styles} className={style.main}>
+    <main id="main-content" tabIndex={-1} style={styles} className={style.main}>
       {children}
     </main>
   )

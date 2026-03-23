@@ -8,7 +8,7 @@ export default function SocialMedia({
   logo: { url, title },
 }: ISocialMedia) {
   return (
-    <a className={styles.socialMedia} href={href} target="_blank" rel="norefferer">
+    <a className={styles.socialMedia} href={href} target="_blank" rel="noopener noreferrer">
       <span className="sr-only">{accessibilityDescription}</span>
       <Image src={url} alt={title} width={42} height={42} />
     </a>

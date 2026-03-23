@@ -16,6 +16,7 @@ interface PricingCardProps {
   labels: {
     registrationOpensSoon: string
     registrationClosed: string
+    newTab: string
   }
 }
 
@@ -57,6 +58,7 @@ export default function PricingCard({
             className={styles.ctaButton}
           >
             {registrationLink.text}
+            <span className="sr-only">{labels.newTab}</span>
           </a>
         ) : (
           <p className={styles.ctaLabel}>{labels.registrationOpensSoon}</p>

@@ -13,6 +13,9 @@ export default async function Navigation({ locale }: { locale: Locale }) {
       <Link href={`/${locale}`} aria-label={dict.Navigation.homeAriaLabel}>
         <CampusLogo />
       </Link>
+      <a href="#main-content" className="skip-link">
+        {dict.Navigation.skipToMain}
+      </a>
       <LanguageSwitcher locale={locale} />
     </nav>
   )

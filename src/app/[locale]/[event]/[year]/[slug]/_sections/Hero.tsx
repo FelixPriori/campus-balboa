@@ -16,6 +16,7 @@ interface HeroProps {
   isClosed: boolean
   socialMedia: ButtonLink[]
   registrationLink: Link | null
+  newTabLabel: string
 }
 
 export default function Hero({
@@ -29,6 +30,7 @@ export default function Hero({
   isClosed,
   socialMedia,
   registrationLink,
+  newTabLabel,
 }: HeroProps) {
   return (
     <header className={styles.hero}>
@@ -51,6 +53,7 @@ export default function Hero({
                 className={styles.registrationLink}
               >
                 {registrationLink.text}
+                <span className="sr-only">{newTabLabel}</span>
               </a>
             )}
             <SocialMediaLinks links={socialMedia} />

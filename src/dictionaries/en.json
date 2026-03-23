@@ -1,7 +1,8 @@
 {
   "Calendar": {
     "calendarEmbedTitle": "Balboa in Montreal",
-    "iFrameTitle": "Balboa in Montréal / Tiohtià:ke Google Calendar"
+    "iFrameTitle": "Balboa in Montréal / Tiohtià:ke Google Calendar",
+    "loading": "Loading calendar"
   },
   "Embla": {
     "changeSlide": "Jump to slide {{slideNum}}",
@@ -10,7 +11,9 @@
   },
   "Navigation": {
     "homeAriaLabel": "Campus Balboa — home",
-    "mainAriaLabel": "Main navigation"
+    "mainAriaLabel": "Main navigation",
+    "skipToMain": "Skip to main content",
+    "newTab": "(opens in a new tab)"
   },
   "Breadcrumb": {
     "ariaLabel": "Breadcrumb"
@@ -40,7 +43,8 @@
   },
   "PricingCard": {
     "registrationOpensSoon": "Registration opens soon",
-    "registrationClosed": "Registration closed"
+    "registrationClosed": "Registration closed",
+    "newTab": "(opens in a new tab)"
   },
   "Schedule": {
     "endsAt": "Ends at",
@@ -95,7 +99,11 @@
     "submit": "Send",
     "sending": "Sending…",
     "successMessage": "Your message has been sent. We'll get back to you soon!",
-    "errorMessage": "Something went wrong. Please try again."
+    "errorMessage": "Something went wrong. Please try again.",
+    "nameRequired": "Name is required",
+    "emailRequired": "Email is required",
+    "emailInvalid": "Please enter a valid email address",
+    "messageRequired": "Message is required"
   },
   "Footer": {
     "paypalIconAlt": "PayPal logo"

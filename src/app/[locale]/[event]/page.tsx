@@ -113,7 +113,7 @@ export default async function EventsPage({ params }: Props) {
   return (
     <div className={styles.page}>
       <Navigation locale={locale} />
-      <main className={styles.listingPage}>
+      <main id="main-content" tabIndex={-1} className={styles.listingPage}>
         <Breadcrumb
           ariaLabel={dict.Breadcrumb.ariaLabel}
           items={[

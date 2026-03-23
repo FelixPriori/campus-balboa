@@ -7,7 +7,7 @@ import { getDictionary } from '@/app/dictionaries'
 import { Locale } from '@/i18n'
 import ContactForm from './ContactForm'
 
-function DonateButton({ donateButton, iconAlt }: { donateButton: DonateButtonType; iconAlt: string }) {
+function DonateButton({ donateButton, iconAlt, newTabLabel }: { donateButton: DonateButtonType; iconAlt: string; newTabLabel: string }) {
   return (
     <a
       className={styles.donateButton}
@@ -22,6 +22,7 @@ function DonateButton({ donateButton, iconAlt }: { donateButton: DonateButtonTyp
         alt={iconAlt}
       />
       {donateButton.text}
+      <span className="sr-only">{newTabLabel}</span>
     </a>
   )
 }
@@ -35,7 +36,7 @@ export default async function Footer({
   landAcknowledgement,
   locale,
 }: FooterSection & { locale: Locale }) {
-  const { Footer: dict, ContactForm: contactFormDict } = await getDictionary(locale)
+  const { Footer: dict, ContactForm: contactFormDict, Navigation: navDict } = await getDictionary(locale)
   return (
     <footer className={styles.footerSection}>
       <div className={styles.content}>
@@ -52,7 +53,7 @@ export default async function Footer({
           {socialMediasCollection?.items?.map((sm) => (
             <SocialMedia key={sm.sys.id} {...sm} />
           ))}
-          {donateButton && <DonateButton donateButton={donateButton} iconAlt={dict.paypalIconAlt} />}
+          {donateButton && <DonateButton donateButton={donateButton} iconAlt={dict.paypalIconAlt} newTabLabel={navDict.newTab} />}
         </div>
       </div>
     </footer>

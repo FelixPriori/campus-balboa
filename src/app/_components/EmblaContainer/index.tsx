@@ -43,6 +43,10 @@ export default function EmblaContainer({
 
   return (
     <div className={styles.embla}>
+      <span className="sr-only" aria-live="polite" aria-atomic="true">
+        {embla.changeSlide.replace('{{slideNum}}', String(inView + 1))}
+      </span>
+
       <div className={styles.emblaViewport} ref={emblaRef}>
         <div className={styles.emblaContainer}>{children}</div>
       </div>
@@ -53,6 +57,7 @@ export default function EmblaContainer({
             className={`${styles.dot} ${inView === i ? styles.selected : ''}`}
             onClick={() => scrollTo(i)}
             key={key}
+            aria-current={inView === i ? true : undefined}
           >
             <span className="sr-only">
               {embla.changeSlide.replace('{{slideNum}}', String(i + 1))}

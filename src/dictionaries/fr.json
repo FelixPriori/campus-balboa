@@ -1,7 +1,8 @@
 {
   "Calendar": {
     "calendarEmbedTitle": "Balboa à Montréal",
-    "iFrameTitle": "Calendrier Google du Balboa à Montréal / Tiohtià:ke"
+    "iFrameTitle": "Calendrier Google du Balboa à Montréal / Tiohtià:ke",
+    "loading": "Chargement du calendrier"
   },
   "Embla": {
     "changeSlide": "Voir la diapositive {{slideNum}}",
@@ -10,7 +11,9 @@
   },
   "Navigation": {
     "homeAriaLabel": "Campus Balboa — accueil",
-    "mainAriaLabel": "Navigation principale"
+    "mainAriaLabel": "Navigation principale",
+    "skipToMain": "Passer au contenu principal",
+    "newTab": "(ouvre dans un nouvel onglet)"
   },
   "Breadcrumb": {
     "ariaLabel": "Fil d'Ariane"
@@ -40,7 +43,8 @@
   },
   "PricingCard": {
     "registrationOpensSoon": "Inscription bientôt disponible",
-    "registrationClosed": "Inscriptions fermées"
+    "registrationClosed": "Inscriptions fermées",
+    "newTab": "(ouvre dans un nouvel onglet)"
   },
   "Schedule": {
     "endsAt": "Finit à",
@@ -95,7 +99,11 @@
     "submit": "Envoyer",
     "sending": "Envoi en cours…",
     "successMessage": "Votre message a bien été envoyé. Nous vous répondrons sous peu !",
-    "errorMessage": "Une erreur est survenue. Veuillez réessayer."
+    "errorMessage": "Une erreur est survenue. Veuillez réessayer.",
+    "nameRequired": "Le nom est requis",
+    "emailRequired": "L'adresse courriel est requise",
+    "emailInvalid": "Veuillez entrer une adresse courriel valide",
+    "messageRequired": "Le message est requis"
   },
   "Footer": {
     "paypalIconAlt": "Logo de PayPal"

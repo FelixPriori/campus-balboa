@@ -12,6 +12,12 @@ const FORM_STATUS = {
 
 type FormStatus = (typeof FORM_STATUS)[keyof typeof FORM_STATUS]
 
+interface FieldErrors {
+  fullName?: string
+  email?: string
+  message?: string
+}
+
 interface ContactFormDict {
   title: string
   nameLabel: string
@@ -24,6 +30,10 @@ interface ContactFormDict {
   sending: string
   successMessage: string
   errorMessage: string
+  nameRequired: string
+  emailRequired: string
+  emailInvalid: string
+  messageRequired: string
 }
 
 export default function ContactForm({
@@ -38,14 +48,60 @@ export default function ContactForm({
   sending,
   successMessage,
   errorMessage,
+  nameRequired,
+  emailRequired,
+  emailInvalid,
+  messageRequired,
 }: ContactFormDict) {
   const [status, setStatus] = useState<FormStatus>(FORM_STATUS.IDLE)
+  const [errors, setErrors] = useState<FieldErrors>({})
+  const [touched, setTouched] = useState<Record<keyof FieldErrors, boolean>>({
+    fullName: false,
+    email: false,
+    message: false,
+  })
+
+  function validate(name: keyof FieldErrors, value: string): string {
+    if (name === 'fullName') return value.trim() ? '' : nameRequired
+    if (name === 'email') {
+      if (!value.trim()) return emailRequired
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) return emailInvalid
+      return ''
+    }
+    if (name === 'message') return value.trim() ? '' : messageRequired
+    return ''
+  }
+
+  function handleBlur(e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) {
+    const name = e.target.name as keyof FieldErrors
+    const error = validate(name, e.target.value)
+    setTouched((prev) => ({ ...prev, [name]: true }))
+    setErrors((prev) => ({ ...prev, [name]: error }))
+  }
+
+  function validateAll(form: HTMLFormElement): FieldErrors {
+    const fullName = (form.elements.namedItem('fullName') as HTMLInputElement).value
+    const email = (form.elements.namedItem('email') as HTMLInputElement).value
+    const message = (form.elements.namedItem('message') as HTMLTextAreaElement).value
+    return {
+      fullName: validate('fullName', fullName),
+      email: validate('email', email),
+      message: validate('message', message),
+    }
+  }
 
   async function handleSubmit(e: SubmitEvent<HTMLFormElement>) {
     e.preventDefault()
+    const form = e.currentTarget
+
+    const nextErrors = validateAll(form)
+    setTouched({ fullName: true, email: true, message: true })
+    setErrors(nextErrors)
+
+    if (Object.values(nextErrors).some(Boolean)) return
+
     setStatus(FORM_STATUS.SENDING)
 
-    const form = e.currentTarget
     const data = {
       fullName: (form.elements.namedItem('fullName') as HTMLInputElement).value,
       email: (form.elements.namedItem('email') as HTMLInputElement).value,
@@ -61,6 +117,8 @@ export default function ContactForm({
       if (!res.ok) throw new Error()
       setStatus(FORM_STATUS.SUCCESS)
       form.reset()
+      setTouched({ fullName: false, email: false, message: false })
+      setErrors({})
     } catch {
       setStatus(FORM_STATUS.ERROR)
     }
@@ -80,8 +138,16 @@ export default function ContactForm({
               autoComplete="name"
               placeholder={namePlaceholder}
               required
+              aria-invalid={touched.fullName && !!errors.fullName ? 'true' : undefined}
+              aria-describedby={touched.fullName && errors.fullName ? 'contact-name-error' : undefined}
               disabled={status === FORM_STATUS.SENDING}
+              onBlur={handleBlur}
             />
+            {touched.fullName && errors.fullName && (
+              <span id="contact-name-error" className={styles.fieldError} role="alert">
+                {errors.fullName}
+              </span>
+            )}
           </div>
           <div className={styles.field}>
             <label htmlFor="contact-email">{emailLabel}</label>
@@ -92,8 +158,16 @@ export default function ContactForm({
               autoComplete="email"
               placeholder={emailPlaceholder}
               required
+              aria-invalid={touched.email && !!errors.email ? 'true' : undefined}
+              aria-describedby={touched.email && errors.email ? 'contact-email-error' : undefined}
               disabled={status === FORM_STATUS.SENDING}
+              onBlur={handleBlur}
             />
+            {touched.email && errors.email && (
+              <span id="contact-email-error" className={styles.fieldError} role="alert">
+                {errors.email}
+              </span>
+            )}
           </div>
         </div>
         <div className={styles.field}>
@@ -105,8 +179,16 @@ export default function ContactForm({
             placeholder={messagePlaceholder}
             rows={4}
             required
+            aria-invalid={touched.message && !!errors.message ? 'true' : undefined}
+            aria-describedby={touched.message && errors.message ? 'contact-message-error' : undefined}
             disabled={status === FORM_STATUS.SENDING}
+            onBlur={handleBlur}
           />
+          {touched.message && errors.message && (
+            <span id="contact-message-error" className={styles.fieldError} role="alert">
+              {errors.message}
+            </span>
+          )}
         </div>
         <div className={styles.formFooter}>
           <button

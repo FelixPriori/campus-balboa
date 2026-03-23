@@ -26,7 +26,7 @@ export function ClassBlock({
       <div className={styles.start}>
         <p>{formatClassTime(startTime, locale)}</p>
       </div>
-      <h4 className={styles.title}>{title}</h4>
+      <p className={styles.title}><strong>{title}</strong></p>
       <div className={`${styles.typeWrapper} ${styles[blockType]}`}>
         <p className={styles.type}>{blockTypeLabels[blockType] ?? blockType}</p>
       </div>
