@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { redirect } from 'next/navigation'
 import { isPast } from 'date-fns'
+import { draftMode } from 'next/headers'
 import { Locale, EVENT_SEGMENTS, SITE_URL } from '@/i18n'
 import { getAllEvents, EventListItem } from '@/app/_lib/api'
 import { getDictionary } from '@/app/dictionaries'
@@ -104,7 +105,8 @@ export default async function EventsPage({ params }: Props) {
     redirect(`/${locale}`)
   }
 
-  const [events, dict] = await Promise.all([getAllEvents(locale), getDictionary(locale)])
+  const { isEnabled: preview } = await draftMode()
+  const [events, dict] = await Promise.all([getAllEvents(locale, preview), getDictionary(locale)])
   const eventSegment = EVENT_SEGMENTS[locale]
 
   const upcomingEvents = events.filter((ev) => !isPast(new Date(ev.endDate)))

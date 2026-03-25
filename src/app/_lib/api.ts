@@ -19,7 +19,7 @@ import {
   GetScheduleDocument,
   GetVenuesDocument,
 } from '@/app/_types/generated/graphql'
-import type { GetAllEventsQuery } from '@/app/_types/generated/graphql'
+import type { GetAllEventsQuery, GetHomePageQuery } from '@/app/_types/generated/graphql'
 import type { InstructorData, DJ, PricingData, Venue, Partner, EventBlock } from '@/app/_types/events'
 import type { Mission } from '@/app/_types/missions'
 import type { Administrator } from '@/app/_types/administrator'
@@ -39,7 +39,11 @@ function getClient(preview = false) {
           : process.env.CONTENTFUL_ACCESS_TOKEN
       }`,
     },
-    fetch: (url, init) => fetch(url, { ...init, next: { revalidate: 3600 } }),
+    fetch: (url, init) =>
+      fetch(url, {
+        ...init,
+        next: preview ? { revalidate: 0 } : { revalidate: 3600 },
+      }),
   })
 }
 
@@ -86,34 +90,34 @@ export interface SectionEventData {
 
 // ─── Page metadata ────────────────────────────────────────────────────────────
 
-export async function getPageMetaDataByPageSlug(slug: string | null, locale: string) {
-  const data = await getClient().request(GetPageMetaDataDocument, { locale, slug })
+export async function getPageMetaDataByPageSlug(slug: string | null, locale: string, preview = false) {
+  const data = await getClient(preview).request(GetPageMetaDataDocument, { locale, slug })
   return data.pageCollection
 }
 
 // ─── Home page ────────────────────────────────────────────────────────────────
 
-export async function getHomePage(slug: string, locale: string) {
-  const data = await getClient().request(GetHomePageDocument, { locale, slug })
+export async function getHomePage(slug: string, locale: string, preview = false) {
+  const data = await getClient(preview).request(GetHomePageDocument, { locale, slug })
   return data.pageCollection?.items?.[0] ?? null
 }
 
 // ─── Event page ───────────────────────────────────────────────────────────────
 
-export async function getEventPageBySlug(slug: string, locale: string) {
-  const data = await getClient().request(GetEventPageDocument, { locale, slug })
+export async function getEventPageBySlug(slug: string, locale: string, preview = false) {
+  const data = await getClient(preview).request(GetEventPageDocument, { locale, slug })
   return data.eventCollection?.items?.[0] ?? null
 }
 
-export async function getEventMetaDataBySlug(slug: string | null, locale: string) {
-  const data = await getClient().request(GetEventMetaDataDocument, { locale, slug })
+export async function getEventMetaDataBySlug(slug: string | null, locale: string, preview = false) {
+  const data = await getClient(preview).request(GetEventMetaDataDocument, { locale, slug })
   return data.eventCollection?.items?.[0]?.metadata ?? null
 }
 
 // ─── Event listing ────────────────────────────────────────────────────────────
 
-export async function getAllEvents(locale: string) {
-  const data = await getClient().request(GetAllEventsDocument, { locale })
+export async function getAllEvents(locale: string, preview = false) {
+  const data = await getClient(preview).request(GetAllEventsDocument, { locale })
   return nonNull(data.eventCollection?.items ?? []).map((item) => ({
     title: item.title ?? '',
     slug: item.slug ?? null,
@@ -126,6 +130,7 @@ export async function getAllEvents(locale: string) {
   }))
 }
 
+// Intentionally omits preview — only used by generateStaticParams at build time
 export async function getAllEventSlugs() {
   const data = await getClient().request(GetAllEventSlugsDocument, {})
   return nonNull(data.eventCollection?.items ?? [])
@@ -133,8 +138,8 @@ export async function getAllEventSlugs() {
 
 // ─── Footer ───────────────────────────────────────────────────────────────────
 
-export async function getPageFooter(locale: Locale): Promise<FooterSection | null> {
-  const data = await getClient().request(GetPageFooterDocument, {
+export async function getPageFooter(locale: Locale, preview = false): Promise<FooterSection | null> {
+  const data = await getClient(preview).request(GetPageFooterDocument, {
     locale,
     slug: HOME_SLUG[locale],
   })
@@ -174,8 +179,8 @@ export async function getPageFooter(locale: Locale): Promise<FooterSection | nul
 
 // ─── Event sections (by eventId) ─────────────────────────────────────────────
 
-export async function getInstructors(eventId: string, locale: string) {
-  const data = await getClient().request(GetInstructorsDocument, { eventId, locale })
+export async function getInstructors(eventId: string, locale: string, preview = false) {
+  const data = await getClient(preview).request(GetInstructorsDocument, { eventId, locale })
   return nonNull(data.event?.instructorsCollection?.items ?? []).map((item): InstructorData => ({
     sys: { id: item.sys.id },
     name: item.name ?? '',
@@ -184,8 +189,8 @@ export async function getInstructors(eventId: string, locale: string) {
   }))
 }
 
-export async function getPricing(eventId: string, locale: string) {
-  const data = await getClient().request(GetPricingDocument, { eventId, locale })
+export async function getPricing(eventId: string, locale: string, preview = false) {
+  const data = await getClient(preview).request(GetPricingDocument, { eventId, locale })
   return nonNull(data.event?.pricingCollection?.items ?? []).map((item): PricingData => ({
     sys: { id: item.sys.id },
     tier: item.tier ?? '',
@@ -197,8 +202,8 @@ export async function getPricing(eventId: string, locale: string) {
   }))
 }
 
-export async function getVenues(eventId: string, locale: string) {
-  const data = await getClient().request(GetVenuesDocument, { eventId, locale })
+export async function getVenues(eventId: string, locale: string, preview = false) {
+  const data = await getClient(preview).request(GetVenuesDocument, { eventId, locale })
   return nonNull(data.event?.venuesCollection?.items ?? []).map((item): Venue => ({
     sys: { id: item.sys.id },
     name: item.name ?? '',
@@ -207,8 +212,8 @@ export async function getVenues(eventId: string, locale: string) {
   }))
 }
 
-export async function getSchedule(eventId: string, locale: string) {
-  const data = await getClient().request(GetScheduleDocument, { eventId, locale })
+export async function getSchedule(eventId: string, locale: string, preview = false) {
+  const data = await getClient(preview).request(GetScheduleDocument, { eventId, locale })
   return nonNull(data.event?.scheduleCollection?.items ?? []).map((item): EventBlock => ({
     sys: { id: item.sys.id },
     title: item.title ?? '',
@@ -220,8 +225,8 @@ export async function getSchedule(eventId: string, locale: string) {
   }))
 }
 
-export async function getDJs(eventId: string, locale: string) {
-  const data = await getClient().request(GetDJsDocument, { eventId, locale })
+export async function getDJs(eventId: string, locale: string, preview = false) {
+  const data = await getClient(preview).request(GetDJsDocument, { eventId, locale })
   return nonNull(data.event?.dJsCollection?.items ?? []).map((item): DJ => ({
     sys: { id: item.sys.id },
     name: item.name ?? '',
@@ -231,8 +236,8 @@ export async function getDJs(eventId: string, locale: string) {
   }))
 }
 
-export async function getPartners(eventId: string, locale: string) {
-  const data = await getClient().request(GetPartnersDocument, { eventId, locale })
+export async function getPartners(eventId: string, locale: string, preview = false) {
+  const data = await getClient(preview).request(GetPartnersDocument, { eventId, locale })
   return nonNull(data.event?.partnersCollection?.items ?? []).map((item): Partner => ({
     sys: { id: item.sys.id },
     title: item.title ?? '',
@@ -246,8 +251,8 @@ export async function getPartners(eventId: string, locale: string) {
 
 // ─── Home page sections (by sectionId) ───────────────────────────────────────
 
-export async function getMissions(sectionId: string | null, locale: string) {
-  const data = await getClient().request(GetMissionsSectionDocument, {
+export async function getMissions(sectionId: string | null, locale: string, preview = false) {
+  const data = await getClient(preview).request(GetMissionsSectionDocument, {
     id: sectionId ?? '',
     locale,
   })
@@ -260,8 +265,8 @@ export async function getMissions(sectionId: string | null, locale: string) {
     }))
 }
 
-export async function getFeaturedSlides(sectionId: string | null, locale: string) {
-  const data = await getClient().request(GetFeaturedSlidesSectionDocument, {
+export async function getFeaturedSlides(sectionId: string | null, locale: string, preview = false) {
+  const data = await getClient(preview).request(GetFeaturedSlidesSectionDocument, {
     id: sectionId ?? '',
     locale,
   })
@@ -283,8 +288,8 @@ export async function getFeaturedSlides(sectionId: string | null, locale: string
     }))
 }
 
-export async function getSectionEvents(sectionId: string | null, locale: string) {
-  const data = await getClient().request(GetEventsSectionDocument, {
+export async function getSectionEvents(sectionId: string | null, locale: string, preview = false) {
+  const data = await getClient(preview).request(GetEventsSectionDocument, {
     id: sectionId ?? '',
     locale,
   })
@@ -304,8 +309,8 @@ export async function getSectionEvents(sectionId: string | null, locale: string)
     }))
 }
 
-export async function getAdministrators(sectionId: string | null, locale: string) {
-  const data = await getClient().request(GetAdministratorsSectionDocument, {
+export async function getAdministrators(sectionId: string | null, locale: string, preview = false) {
+  const data = await getClient(preview).request(GetAdministratorsSectionDocument, {
     id: sectionId ?? '',
     locale,
   })
@@ -325,6 +330,14 @@ export async function getAdministrators(sectionId: string | null, locale: string
 
 export type EventPageData = NonNullable<Awaited<ReturnType<typeof getEventPageBySlug>>>
 export type FooterData = NonNullable<Awaited<ReturnType<typeof getPageFooter>>>
+
+export type HomePageSection = NonNullable<
+  NonNullable<
+    NonNullable<
+      NonNullable<GetHomePageQuery['pageCollection']>['items'][number]
+    >['sectionsCollection']
+  >['items'][number]
+>
 
 // ─── Re-exported types for consumers ─────────────────────────────────────────
 

@@ -8,6 +8,7 @@ import { getDictionary } from '@/app/dictionaries'
 import sectionsRenderer, { Hero } from '../_sections'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import { draftMode } from 'next/headers'
 
 type Props = {
   params: Promise<{ locale: string }>
@@ -15,8 +16,9 @@ type Props = {
 
 export async function generateMetadata({ params }: Props) {
   const locale = (await params).locale as Locale
+  const { isEnabled: preview } = await draftMode()
   const [metaData, dict] = await Promise.all([
-    getPageMetaDataByPageSlug(locale, locale),
+    getPageMetaDataByPageSlug(locale, locale, preview),
     getDictionary(locale),
   ])
   const page = metaData?.items?.[0]?.pageMetaData
@@ -54,8 +56,9 @@ export async function generateMetadata({ params }: Props) {
 
 export default async function Home({ params }: Props) {
   const locale = (await params).locale as Locale
+  const { isEnabled: preview } = await draftMode()
   const [pageData, dict] = await Promise.all([
-    getHomePage(locale, locale),
+    getHomePage(locale, locale, preview),
     getDictionary(locale),
   ])
 
@@ -76,9 +79,9 @@ export default async function Home({ params }: Props) {
       </nav>
       <Hero {...pageData?.hero} />
       <Main>
-        {pageData?.sectionsCollection?.items.map(
-          async (s: any) => await sectionsRenderer(s, locale),
-        )}
+        {pageData?.sectionsCollection?.items
+          .filter((s): s is NonNullable<typeof s> => s !== null)
+          .map(async (s) => await sectionsRenderer(s, locale, preview))}
       </Main>
     </div>
   )

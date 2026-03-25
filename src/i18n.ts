@@ -19,3 +19,7 @@ export const EVENT_SEGMENTS: Record<Locale, string> = {
   fr: 'evenements',
   en: 'events',
 }
+
+export function isLocale(value: string | null): value is Locale {
+  return locales.includes(value as Locale)
+}

@@ -7,19 +7,25 @@ import AboutUsSection from './AboutUs'
 import Footer from './Footer'
 import { Locale } from '@/i18n'
 import { getDictionary } from '../dictionaries'
+import type { HomePageSection } from '@/app/_lib/api'
 
-export default async function sectionsRenderer(section: any, locale: Locale) {
+export default async function sectionsRenderer(section: HomePageSection, locale: Locale, preview = false) {
+  const id = section.sys.id
+  const title = section.title ?? ''
+  const anchor = section.anchor ?? ''
+
   switch (section.sectionName) {
     case 'featured': {
       const dict = await getDictionary(locale)
       return (
         <FeaturedSection
-          key={section.sys.id}
-          id={section.sys.id}
-          title={section.title}
-          anchor={section.anchor}
+          key={id}
+          id={id}
+          title={title}
+          anchor={anchor}
           locale={locale}
           embla={dict.Embla}
+          preview={preview}
         />
       )
     }
@@ -27,45 +33,49 @@ export default async function sectionsRenderer(section: any, locale: Locale) {
       const dict = await getDictionary(locale)
       return (
         <CalendarSection
-          key={section.sys.id}
-          id={section.sys.id}
-          title={section.title}
-          anchor={section.anchor}
+          key={id}
+          id={id}
+          title={title}
+          anchor={anchor}
           locale={locale}
           iFrameTitle={dict.Calendar.iFrameTitle}
           calendarEmbedTitle={dict.Calendar.calendarEmbedTitle}
+          preview={preview}
         />
       )
     }
     case 'events':
       return (
         <EventsSection
-          key={section.sys.id}
-          id={section.sys.id}
-          title={section.title}
-          anchor={section.anchor}
-          helpText={section.helpText}
+          key={id}
+          id={id}
+          title={title}
+          anchor={anchor}
+          helpText={section.helpText ?? undefined}
           locale={locale}
+          preview={preview}
         />
       )
     case 'missions':
       return (
         <MissionsSection
-          key={section.sys.id}
-          id={section.sys.id}
-          title={section.title}
-          anchor={section.anchor}
+          key={id}
+          id={id}
+          title={title}
+          anchor={anchor}
           locale={locale}
+          preview={preview}
         />
       )
     case 'about':
       return (
         <AboutUsSection
-          key={section.sys.id}
-          id={section.sys.id}
-          title={section.title}
-          anchor={section.anchor}
+          key={id}
+          id={id}
+          title={title}
+          anchor={anchor}
           locale={locale}
+          preview={preview}
         />
       )
   }

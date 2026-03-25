@@ -9,9 +9,9 @@ import { EVENT_SEGMENTS } from '@/i18n'
 import { getDictionary } from '@/app/dictionaries'
 import { getEventHref } from '@/app/_util/navigationUtils'
 
-export default async function Events({ id, title, anchor, helpText, locale }: PageSectionProps) {
+export default async function Events({ id, title, anchor, helpText, locale, preview }: PageSectionProps) {
   const [eventsCollection, dict] = await Promise.all([
-    getSectionEvents(id, locale),
+    getSectionEvents(id, locale, preview),
     getDictionary(locale),
   ])
   const events = [...eventsCollection].sort((a, b) => {

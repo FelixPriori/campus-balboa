@@ -8,4 +8,5 @@ export interface PageSectionProps {
   helpText?: string
   locale: Locale
   content?: RichTextContent | null
+  preview: boolean
 }

@@ -1,5 +1,6 @@
 import { Suspense } from 'react'
 import type { Metadata } from 'next'
+import { draftMode } from 'next/headers'
 import { Locale, EVENT_SEGMENTS, SITE_URL } from '@/i18n'
 import { getEventMetaDataBySlug, getEventPageBySlug, getAllEventSlugs } from '@/app/_lib/api'
 import { getDictionary } from '@/app/dictionaries'
@@ -22,6 +23,7 @@ import Navigation from './Navigation'
 import { notFound } from 'next/navigation'
 import { isPast } from 'date-fns'
 
+// In draft mode Next.js ignores this and always renders dynamically
 export const revalidate = 3600
 
 export async function generateStaticParams() {
@@ -53,7 +55,8 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, event, year, slug } = await params
-  const pageMetaData = await getEventMetaDataBySlug(`/${year}/${slug}`, locale)
+  const { isEnabled: preview } = await draftMode()
+  const pageMetaData = await getEventMetaDataBySlug(`/${year}/${slug}`, locale, preview)
 
   if (!pageMetaData) return {}
 
@@ -95,8 +98,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function EventPage({ params }: Props) {
   const { locale, event, year, slug } = await params
+  const { isEnabled: preview } = await draftMode()
   const [data, dict] = await Promise.all([
-    getEventPageBySlug(`/${year}/${slug}`, locale),
+    getEventPageBySlug(`/${year}/${slug}`, locale, preview),
     getDictionary(locale),
   ])
 
@@ -227,7 +231,7 @@ export default async function EventPage({ params }: Props) {
               />
             }
           >
-            <InstructorsSection eventId={eventId} locale={locale} />
+            <InstructorsSection eventId={eventId} locale={locale} preview={preview} />
           </Suspense>
         </SectionErrorBoundary>
         <SectionErrorBoundary label={dict.SectionSkeleton.pricing} {...sectionBoundaryProps}>
@@ -245,6 +249,7 @@ export default async function EventPage({ params }: Props) {
               locale={locale}
               isClosed={isClosed}
               registrationLink={registrationLink}
+              preview={preview}
             />
           </Suspense>
         </SectionErrorBoundary>
@@ -258,7 +263,7 @@ export default async function EventPage({ params }: Props) {
               />
             }
           >
-            <VenuesSection eventId={eventId} locale={locale} />
+            <VenuesSection eventId={eventId} locale={locale} preview={preview} />
           </Suspense>
         </SectionErrorBoundary>
         <SectionErrorBoundary label={dict.SectionSkeleton.schedule} {...sectionBoundaryProps}>
@@ -271,17 +276,17 @@ export default async function EventPage({ params }: Props) {
               />
             }
           >
-            <ScheduleSection eventId={eventId} locale={locale} />
+            <ScheduleSection eventId={eventId} locale={locale} preview={preview} />
           </Suspense>
         </SectionErrorBoundary>
         <SectionErrorBoundary label={dict.SectionSkeleton.djs} silent>
           <Suspense fallback={null}>
-            <DJsSection eventId={eventId} locale={locale} />
+            <DJsSection eventId={eventId} locale={locale} preview={preview} />
           </Suspense>
         </SectionErrorBoundary>
         <SectionErrorBoundary label={dict.SectionSkeleton.partners} silent>
           <Suspense fallback={null}>
-            <PartnersSection eventId={eventId} locale={locale} />
+            <PartnersSection eventId={eventId} locale={locale} preview={preview} />
           </Suspense>
         </SectionErrorBoundary>
         </main>

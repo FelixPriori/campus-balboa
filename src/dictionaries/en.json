@@ -142,5 +142,10 @@
         }
       }
     }
+  },
+  "DraftModeBanner": {
+    "landmarkLabel": "Draft mode",
+    "message": "Preview mode — you are viewing draft content.",
+    "exit": "Exit preview"
   }
 }

@@ -11,8 +11,8 @@ interface FeaturedProps extends PageSectionProps {
   embla: EmblaText
 }
 
-export default async function Featured({ id, title, anchor, locale, embla }: FeaturedProps) {
-  const featuredContent = await getFeaturedSlides(id, locale)
+export default async function Featured({ id, title, anchor, locale, embla, preview }: FeaturedProps) {
+  const featuredContent = await getFeaturedSlides(id, locale, preview)
 
   return (
     <section id={anchor} className={styles.featuredSection}>

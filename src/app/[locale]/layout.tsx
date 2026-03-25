@@ -1,9 +1,10 @@
 import { Rubik, Lemon } from 'next/font/google'
+import { draftMode } from 'next/headers'
 import { Locale } from '@/i18n'
 import './globals.css'
 import { Footer } from '@/app/_sections'
 import { getPageFooter } from '@/app/_lib/api'
-import { getDictionary } from '@/app/dictionaries'
+import DraftModeBanner from '@/app/_components/DraftModeBanner/DraftModeBanner'
 
 const rubik = Rubik({
   subsets: ['latin'],
@@ -23,11 +24,13 @@ const lemon = Lemon({
 
 export default async function LocaleLayout({ children, params }: LayoutProps<'/[locale]'>) {
   const lang = (await params).locale as Locale
-  const [footer, dict] = await Promise.all([getPageFooter(lang), getDictionary(lang)])
+  const { isEnabled: preview } = await draftMode()
+  const footer = await getPageFooter(lang, preview)
 
   return (
     <html lang={lang}>
       <body suppressHydrationWarning className={`${lemon.variable} ${rubik.variable}`}>
+        <DraftModeBanner locale={lang} isPreview={preview} />
         {children}
         {footer && <Footer {...footer} locale={lang} />}
       </body>

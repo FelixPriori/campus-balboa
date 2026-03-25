@@ -142,5 +142,10 @@
         }
       }
     }
+  },
+  "DraftModeBanner": {
+    "landmarkLabel": "Mode aperçu",
+    "message": "Mode aperçu — vous consultez du contenu brouillon.",
+    "exit": "Quitter l'aperçu"
   }
 }

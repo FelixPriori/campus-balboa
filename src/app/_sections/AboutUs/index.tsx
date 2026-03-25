@@ -5,8 +5,8 @@ import { Suspense } from 'react'
 import Fallback from './Fallback'
 import { PageSectionProps } from '@/app/_types/sections'
 
-export default async function AboutUsSection({ id, title, anchor, locale }: PageSectionProps) {
-  const administrators = await getAdministrators(id, locale)
+export default async function AboutUsSection({ id, title, anchor, locale, preview }: PageSectionProps) {
+  const administrators = await getAdministrators(id, locale, preview)
 
   return (
     <section id={anchor} className={styles.aboutUsSection}>
