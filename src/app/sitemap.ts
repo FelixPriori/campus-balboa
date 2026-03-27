@@ -26,5 +26,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }))
   })
 
-  return [...homepageEntries, ...eventEntries]
+  const eventsListingEntries = ['fr', 'en'].map((locale) => ({
+    url: `${SITE_URL}/${locale}/${EVENT_SEGMENTS[locale as keyof typeof EVENT_SEGMENTS]}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.9,
+  }))
+
+  return [...homepageEntries, ...eventsListingEntries, ...eventEntries]
 }

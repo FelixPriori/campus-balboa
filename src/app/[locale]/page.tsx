@@ -9,6 +9,7 @@ import sectionsRenderer, { Hero } from '../_sections'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { draftMode } from 'next/headers'
+import { buildOrganizationSchema, buildWebSiteSchema } from './schemas'
 
 type Props = {
   params: Promise<{ locale: string }>
@@ -36,6 +37,8 @@ export async function generateMetadata({ params }: Props) {
         },
       },
       openGraph: {
+        type: 'website',
+        siteName: 'Campus Balboa',
         images: [
           {
             url: page.openGraphImage?.image?.url,
@@ -44,7 +47,7 @@ export async function generateMetadata({ params }: Props) {
         ],
         title: page.title,
         url: `${SITE_URL}/${locale}`,
-        locale,
+        locale: locale === 'fr' ? 'fr_CA' : 'en_CA',
         description: page.openGraphImage?.description,
       },
       icons: [{ rel: 'icon', url: page.favicon?.url }],
@@ -68,6 +71,14 @@ export default async function Home({ params }: Props) {
 
   return (
     <div className="landing">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildOrganizationSchema(locale)) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildWebSiteSchema()) }}
+      />
       <nav className="app-nav" aria-label={dict.Navigation.mainAriaLabel}>
         <Link href={`/${locale}`} aria-label={dict.Navigation.homeAriaLabel}>
           <CampusLogo />
