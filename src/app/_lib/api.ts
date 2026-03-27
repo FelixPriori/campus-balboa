@@ -29,7 +29,6 @@ import type { RichTextContent } from '@/app/_lib/markdown'
 // ─── Client ───────────────────────────────────────────────────────────────────
 
 const ENDPOINT = `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}/environments/${process.env.CONTENTFUL_ENVIRONMENT_ID}`
-const PREVIEW_ENDPOINT = `https://preview.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}/environments/${process.env.CONTENTFUL_ENVIRONMENT_ID}`
 
 function getClient(preview = false) {
   const token = preview
@@ -44,7 +43,7 @@ function getClient(preview = false) {
     )
   }
 
-  return new GraphQLClient(preview ? PREVIEW_ENDPOINT : ENDPOINT, {
+  return new GraphQLClient(ENDPOINT, {
     headers: {
       Authorization: `Bearer ${token}`,
     },
