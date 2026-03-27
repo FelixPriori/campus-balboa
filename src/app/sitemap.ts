@@ -33,5 +33,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.9,
   }))
 
-  return [...homepageEntries, ...eventsListingEntries, ...eventEntries]
+  const staticPageEntries = [
+    { url: `${SITE_URL}/en/privacy`, locale: 'en' },
+    { url: `${SITE_URL}/fr/confidentialite`, locale: 'fr' },
+  ].map(({ url }) => ({
+    url,
+    lastModified: new Date(),
+    changeFrequency: 'yearly' as const,
+    priority: 0.5,
+  }))
+
+  return [...homepageEntries, ...eventsListingEntries, ...staticPageEntries, ...eventEntries]
 }

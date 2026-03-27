@@ -1,4 +1,7 @@
 {
+  "Common": {
+    "home": "Home"
+  },
   "Calendar": {
     "calendarEmbedTitle": "Balboa in Montreal",
     "iFrameTitle": "Balboa in Montréal / Tiohtià:ke Google Calendar",
@@ -106,7 +109,8 @@
     "messageRequired": "Message is required"
   },
   "Footer": {
-    "paypalIconAlt": "PayPal logo"
+    "paypalIconAlt": "PayPal logo",
+    "privacyPolicy": "Privacy Policy"
   },
   "NotFoundPage": {
     "metaTitle": "404 | Page not found",

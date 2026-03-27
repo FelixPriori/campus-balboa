@@ -74,11 +74,17 @@ query GetEventPage($locale: String!, $slug: String) {
       instructorsCollection(limit: 20) {
         items {
           name
+          avatar {
+            url
+          }
         }
       }
       dJsCollection(limit: 20) {
         items {
           name
+          avatar {
+            url
+          }
         }
       }
       pricingCollection(limit: 20) {

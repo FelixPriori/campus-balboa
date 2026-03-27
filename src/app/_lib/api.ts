@@ -18,9 +18,10 @@ import {
   GetPartnersDocument,
   GetPricingDocument,
   GetScheduleDocument,
+  GetStaticPageDocument,
   GetVenuesDocument,
 } from '@/app/_types/generated/graphql'
-import type { GetAllEventsQuery, GetHomePageQuery } from '@/app/_types/generated/graphql'
+import type { GetAllEventsQuery, GetHomePageQuery, GetStaticPageQuery } from '@/app/_types/generated/graphql'
 import type { InstructorData, DJ, PricingData, Venue, Partner, EventBlock } from '@/app/_types/events'
 import type { Mission } from '@/app/_types/missions'
 import type { Administrator } from '@/app/_types/administrator'
@@ -126,6 +127,21 @@ export async function getEventPageBySlug(slug: string, locale: string, preview =
 export async function getEventMetaDataBySlug(slug: string | null, locale: string, preview = false) {
   const data = await getClient(preview).request(GetEventMetaDataDocument, { locale, slug })
   return data.eventCollection?.items?.[0]?.metadata ?? null
+}
+
+// ─── Static pages ─────────────────────────────────────────────────────────────
+
+export type StaticPageData = NonNullable<
+  NonNullable<GetStaticPageQuery['staticPageCollection']>['items'][number]
+>
+
+export async function getStaticPageBySlug(
+  slug: string,
+  locale: string,
+  preview = false,
+): Promise<StaticPageData | null> {
+  const data = await getClient(preview).request(GetStaticPageDocument, { slug, locale, preview })
+  return data.staticPageCollection?.items?.[0] ?? null
 }
 
 // ─── Event listing ────────────────────────────────────────────────────────────

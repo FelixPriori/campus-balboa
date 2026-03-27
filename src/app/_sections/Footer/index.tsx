@@ -1,10 +1,11 @@
+import Link from 'next/link'
 import LandAcknowledgement from '../../_components/LandAcknowledgement'
 import styles from './styles.module.scss'
 import { DonateButtonType, FooterSection } from '@/app/_types/footer'
 import SocialMedia from '@/app/_components/SocialMedia'
 import Image from 'next/image'
 import { getDictionary } from '@/app/dictionaries'
-import { Locale } from '@/i18n'
+import { Locale, PRIVACY_SEGMENTS } from '@/i18n'
 import ContactForm from './ContactForm'
 
 function DonateButton({ donateButton, iconAlt, newTabLabel }: { donateButton: DonateButtonType; iconAlt: string; newTabLabel: string }) {
@@ -48,6 +49,9 @@ export default async function Footer({
             {contactLink?.href && <a href={contactLink.href}>{contactLink.text}</a>}
           </p>
           <p className={styles.copy}>{copyright}</p>
+          <p className={styles.copy}>
+            <Link href={`/${locale}/${PRIVACY_SEGMENTS[locale]}`}>{dict.privacyPolicy}</Link>
+          </p>
         </div>
         <div className={styles.links}>
           {socialMediasCollection?.items?.map((sm) => (

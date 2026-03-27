@@ -4,7 +4,7 @@ import { draftMode } from 'next/headers'
 import { Locale, EVENT_SEGMENTS, SITE_URL } from '@/i18n'
 import { getEventMetaDataBySlug, getEventPageBySlug, getAllEventSlugs } from '@/app/_lib/api'
 import { getDictionary } from '@/app/dictionaries'
-import { buildEventSchema, buildBreadcrumbSchema } from './schemas'
+import { buildEventSchema, buildBreadcrumbSchema, buildPersonSchemas } from './schemas'
 import {
   InstructorsSection,
   PricingSection,
@@ -121,6 +121,7 @@ export default async function EventPage({ params }: Props) {
   const eventUrl = `${SITE_URL}/${locale}/${event}/${year}/${slug}`
   const eventSchema = buildEventSchema(data, eventUrl, isClosed, registrationLink)
   const breadcrumbSchema = buildBreadcrumbSchema(eventUrl, locale, event, data.title, dict)
+  const personSchemas = buildPersonSchemas(data)
 
   const breadcrumbItems = [
     { label: dict.EventsPage.breadcrumbHome, href: `/${locale}` },
@@ -146,6 +147,13 @@ export default async function EventPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
+      {personSchemas.map((schema, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
       <div className={styles.eventPage}>
         <Navigation locale={locale} />
         <Breadcrumb items={breadcrumbItems} ariaLabel={dict.Breadcrumb.ariaLabel} />

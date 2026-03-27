@@ -33,7 +33,7 @@ export default function FeaturedSlide({ image, title, link, details, type }: Fea
         <div className={styles.copy}>
           <h3 className={styles.title}>{title}</h3>
           <h4 className={styles.subtitle}>{type}</h4>
-          <Markdown content={details} />
+          <Markdown content={details} disableLinks />
         </div>
       </div>
     </a>

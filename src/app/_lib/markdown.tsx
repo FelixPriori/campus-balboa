@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
-import { BLOCKS, MARKS } from '@contentful/rich-text-types'
+import { BLOCKS, INLINES, MARKS } from '@contentful/rich-text-types'
 import type { Document } from '@contentful/rich-text-types'
 
 interface Asset {
@@ -31,9 +31,11 @@ function RichTextAsset({ id, assets }: { id: string; assets: (Asset | null)[] | 
 export function Markdown({
   content,
   paragraphStyling = '',
+  disableLinks = false,
 }: {
   content: RichTextContent | null | undefined
   paragraphStyling?: string
+  disableLinks?: boolean
 }) {
   if (!content) return null
   return documentToReactComponents(content.json, {
@@ -42,6 +44,9 @@ export function Markdown({
         <RichTextAsset id={node.data.target.sys.id} assets={content.links.assets.block} />
       ),
       [BLOCKS.PARAGRAPH]: (_node, children) => <p className={paragraphStyling}>{children}</p>,
+      ...(disableLinks && {
+        [INLINES.HYPERLINK]: (_node, children) => <span>{children}</span>,
+      }),
     },
     renderMark: {
       [MARKS.ITALIC]: (text) => <span className="rich-italic">{text}</span>,

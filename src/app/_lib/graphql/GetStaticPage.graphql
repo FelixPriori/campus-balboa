@@ -1,0 +1,42 @@
+query GetStaticPage($slug: String!, $locale: String!, $preview: Boolean) {
+  staticPageCollection(
+    where: { slug: $slug }
+    locale: $locale
+    preview: $preview
+    limit: 1
+  ) {
+    items {
+      title
+      body {
+        json
+        links {
+          assets {
+            block {
+              sys {
+                id
+              }
+              url
+              description
+            }
+          }
+        }
+      }
+      pageMetaData {
+        title
+        description
+        openGraphImage {
+          description
+          image {
+            url
+            title
+            width
+            height
+          }
+        }
+        favicon {
+          url
+        }
+      }
+    }
+  }
+}

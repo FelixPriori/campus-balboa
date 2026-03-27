@@ -65,6 +65,30 @@ export function buildEventSchema(
   }
 }
 
+export function buildPersonSchemas(data: EventPageData) {
+  const instructors = (data.instructorsCollection?.items ?? [])
+    .filter((i): i is NonNullable<typeof i> => i !== null && typeof i.name === 'string')
+    .map((i) => ({
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      name: i.name as string,
+      jobTitle: 'Balboa Instructor',
+      ...(i.avatar?.url ? { image: i.avatar.url } : {}),
+    }))
+
+  const djs = (data.dJsCollection?.items ?? [])
+    .filter((i): i is NonNullable<typeof i> => i !== null && typeof i.name === 'string')
+    .map((i) => ({
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      name: i.name as string,
+      jobTitle: 'DJ',
+      ...(i.avatar?.url ? { image: i.avatar.url } : {}),
+    }))
+
+  return [...instructors, ...djs]
+}
+
 export function buildBreadcrumbSchema(
   eventUrl: string,
   locale: string,

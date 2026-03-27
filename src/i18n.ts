@@ -20,6 +20,14 @@ export const EVENT_SEGMENTS: Record<Locale, string> = {
   en: 'events',
 }
 
+/** Locale-specific URL segments for static pages (e.g. privacy policy). */
+export const STATIC_PAGE_SEGMENTS: Array<Record<Locale, string>> = [
+  { en: 'privacy', fr: 'confidentialite' },
+]
+
+/** Named segment lookup for the privacy policy page. */
+export const PRIVACY_SEGMENTS: Record<Locale, string> = STATIC_PAGE_SEGMENTS[0]
+
 export function isLocale(value: string | null): value is Locale {
   return locales.includes(value as Locale)
 }
