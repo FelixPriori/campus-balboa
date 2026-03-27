@@ -32,13 +32,21 @@ const ENDPOINT = `https://graphql.contentful.com/content/v1/spaces/${process.env
 const PREVIEW_ENDPOINT = `https://preview.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}/environments/${process.env.CONTENTFUL_ENVIRONMENT_ID}`
 
 function getClient(preview = false) {
+  const token = preview
+    ? process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN
+    : process.env.CONTENTFUL_ACCESS_TOKEN
+
+  if (!token) {
+    throw new Error(
+      preview
+        ? 'CONTENTFUL_PREVIEW_ACCESS_TOKEN is not set. Add the Content Preview API token from the Contentful dashboard.'
+        : 'CONTENTFUL_ACCESS_TOKEN is not set.'
+    )
+  }
+
   return new GraphQLClient(preview ? PREVIEW_ENDPOINT : ENDPOINT, {
     headers: {
-      Authorization: `Bearer ${
-        preview
-          ? process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN
-          : process.env.CONTENTFUL_ACCESS_TOKEN
-      }`,
+      Authorization: `Bearer ${token}`,
     },
     fetch: (url, init) =>
       fetch(url, {
