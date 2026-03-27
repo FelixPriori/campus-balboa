@@ -3,6 +3,7 @@ import { draftMode } from 'next/headers'
 import { redirect } from 'next/navigation'
 import { type NextRequest } from 'next/server'
 import { EVENT_SEGMENTS, isLocale, type Locale } from '@/i18n'
+import { getEventSlugById } from '@/app/_lib/api'
 
 function isSafeRedirect(path: string): boolean {
   return path.startsWith('/') && !path.startsWith('//')
@@ -12,10 +13,12 @@ export async function GET(request: NextRequest) {
   const { searchParams } = request.nextUrl
   const secret = searchParams.get('secret')
   const redirectPath = searchParams.get('redirect')
+  const entryId = searchParams.get('id')
   const slug = searchParams.get('slug')
   const rawLocale = searchParams.get('locale')
-  // Default to 'fr' for any unrecognised locale code (e.g. Contentful may send 'en-US')
-  const locale: Locale = isLocale(rawLocale) ? rawLocale : 'fr'
+  // Contentful sends BCP 47 codes like 'en-US' or 'fr-CA' — normalize to the base language tag
+  const baseLocale = rawLocale?.split('-')[0] ?? null
+  const locale: Locale = isLocale(baseLocale) ? baseLocale : 'fr'
 
   if (!process.env.CONTENTFUL_PREVIEW_SECRET) {
     return new Response('Preview secret not configured', { status: 500 })
@@ -37,11 +40,19 @@ export async function GET(request: NextRequest) {
     redirect(redirectPath)
   }
 
-  // Slug + locale provided: build the event page path
-  // Contentful event slugs have the form /YEAR/slug-name
+  // Entry ID provided by Contentful preview — look up the slug server-side
+  if (entryId) {
+    const eventSlug = await getEventSlugById(entryId)
+    if (eventSlug) {
+      const eventSegment = EVENT_SEGMENTS[locale]
+      const normalised = eventSlug.startsWith('/') ? eventSlug : `/${eventSlug}`
+      redirect(`/${locale}/${eventSegment}${normalised}`)
+    }
+  }
+
+  // Legacy: slug passed directly in query string
   if (slug) {
     const eventSegment = EVENT_SEGMENTS[locale]
-    // slug may be "/2026/campus-balboa" or "2026/campus-balboa"
     const normalised = slug.startsWith('/') ? slug : `/${slug}`
     redirect(`/${locale}/${eventSegment}${normalised}`)
   }

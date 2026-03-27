@@ -1,0 +1,5 @@
+query GetEventSlug($eventId: String!) {
+  event(id: $eventId) {
+    slug
+  }
+}

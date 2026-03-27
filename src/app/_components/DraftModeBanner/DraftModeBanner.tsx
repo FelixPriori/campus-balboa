@@ -13,11 +13,12 @@ export default async function DraftModeBanner({ locale, isPreview }: Props) {
   const dict = await getDictionary(locale)
 
   return (
-    <section aria-label={dict.DraftModeBanner.landmarkLabel} className={styles.banner}>
+    <div role="region" aria-label={dict.DraftModeBanner.landmarkLabel} className={styles.banner}>
       <span>{dict.DraftModeBanner.message}</span>
+      {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
       <a href="/api/draft/disable" className={styles.exit}>
         {dict.DraftModeBanner.exit}
       </a>
-    </section>
+    </div>
   )
 }

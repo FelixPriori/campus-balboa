@@ -7,6 +7,7 @@ import {
   GetDJsDocument,
   GetEventMetaDataDocument,
   GetEventPageDocument,
+  GetEventSlugDocument,
   GetEventsSectionDocument,
   GetFeaturedSlidesSectionDocument,
   GetHomePageDocument,
@@ -111,6 +112,11 @@ export async function getHomePage(slug: string, locale: string, preview = false)
 }
 
 // ─── Event page ───────────────────────────────────────────────────────────────
+
+export async function getEventSlugById(eventId: string) {
+  const data = await getClient(true).request(GetEventSlugDocument, { eventId })
+  return data.event?.slug ?? null
+}
 
 export async function getEventPageBySlug(slug: string, locale: string, preview = false) {
   const data = await getClient(preview).request(GetEventPageDocument, { locale, slug })
