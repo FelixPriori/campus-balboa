@@ -62,6 +62,31 @@ query GetEventPage($locale: String!, $slug: String) {
         }
         skills
       }
+      metadata {
+        description
+      }
+      venuesCollection(limit: 1) {
+        items {
+          name
+          venueAddress
+        }
+      }
+      instructorsCollection(limit: 20) {
+        items {
+          name
+        }
+      }
+      dJsCollection(limit: 20) {
+        items {
+          name
+        }
+      }
+      pricingCollection(limit: 20) {
+        items {
+          amount
+          startTime
+        }
+      }
     }
   }
 }

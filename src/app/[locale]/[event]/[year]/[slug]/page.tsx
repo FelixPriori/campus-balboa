@@ -4,6 +4,7 @@ import { draftMode } from 'next/headers'
 import { Locale, EVENT_SEGMENTS, SITE_URL } from '@/i18n'
 import { getEventMetaDataBySlug, getEventPageBySlug, getAllEventSlugs } from '@/app/_lib/api'
 import { getDictionary } from '@/app/dictionaries'
+import { buildEventSchema, buildBreadcrumbSchema } from './schemas'
 import {
   InstructorsSection,
   PricingSection,
@@ -118,57 +119,8 @@ export default async function EventPage({ params }: Props) {
     : null
 
   const eventUrl = `${SITE_URL}/${locale}/${event}/${year}/${slug}`
-  const eventSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Event',
-    name: data.title,
-    startDate: data.startDate,
-    endDate: data.endDate,
-    eventStatus: 'https://schema.org/EventScheduled',
-    eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
-    organizer: {
-      '@type': 'Organization',
-      name: 'Campus Balboa',
-      url: SITE_URL,
-    },
-    url: eventUrl,
-    image: data.image?.url,
-    ...(registrationLink
-      ? {
-          offers: {
-            '@type': 'Offer',
-            url: registrationLink.href,
-            availability: isClosed ? 'https://schema.org/SoldOut' : 'https://schema.org/InStock',
-            priceCurrency: 'CAD',
-          },
-        }
-      : {}),
-  }
-
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: dict.EventsPage.breadcrumbHome,
-        item: `${SITE_URL}/${locale}`,
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: dict.EventsPage.breadcrumbEvents,
-        item: `${SITE_URL}/${locale}/${event}`,
-      },
-      {
-        '@type': 'ListItem',
-        position: 3,
-        name: data.title,
-        item: eventUrl,
-      },
-    ],
-  }
+  const eventSchema = buildEventSchema(data, eventUrl, isClosed, registrationLink)
+  const breadcrumbSchema = buildBreadcrumbSchema(eventUrl, locale, event, data.title, dict)
 
   const breadcrumbItems = [
     { label: dict.EventsPage.breadcrumbHome, href: `/${locale}` },
