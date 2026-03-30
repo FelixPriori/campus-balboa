@@ -147,6 +147,12 @@
       }
     }
   },
+  "CookieConsent": {
+    "privacyPolicyUrl": "/fr/confidentialite",
+    "description": "Nous utilisons Google Analytics pour comprendre comment les visiteurs utilisent notre site. Vous pouvez accepter ou refuser ci-dessous.",
+    "analyticsTitle": "Analytique",
+    "googleAnalyticsDescription": "Collecte des données anonymisées sur la façon dont vous naviguez sur le site afin de nous aider à l'améliorer."
+  },
   "DraftModeBanner": {
     "landmarkLabel": "Mode aperçu",
     "message": "Mode aperçu — vous consultez du contenu brouillon.",

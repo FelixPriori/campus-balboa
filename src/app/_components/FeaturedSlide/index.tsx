@@ -1,6 +1,9 @@
+'use client'
+
 import styles from './styles.module.scss'
 import { Markdown, type RichTextContent } from '@/app/_lib/markdown'
 import ContentfulImage from '@/app/_lib/contentful-image'
+import { trackEvent } from '@/app/_lib/analytics'
 
 export interface FeaturedSlideProps {
   title: string
@@ -18,7 +21,7 @@ export interface FeaturedSlideProps {
 
 export default function FeaturedSlide({ image, title, link, details, type }: FeaturedSlideProps) {
   return (
-    <a target="_blank" rel="noreferrer" href={link.href} className={styles.featuredSlide}>
+    <a target="_blank" rel="noreferrer" href={link.href} className={styles.featuredSlide} onClick={() => trackEvent('featured_slide_click', { title })}>
       <p className="sr-only">{link.text}</p>
       <div className={styles.content}>
         <div className={styles.bannerWrapper}>
@@ -28,6 +31,7 @@ export default function FeaturedSlide({ image, title, link, details, type }: Fea
             alt={image.title}
             width={1080}
             height={1080}
+            sizes="(max-width: 768px) 100vw, 600px"
           />
         </div>
         <div className={styles.copy}>

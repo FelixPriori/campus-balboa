@@ -1,9 +1,12 @@
+'use client'
+
 import Image from 'next/image'
 import styles from './styles.module.scss'
 import { Locale } from '@/i18n'
 import { formatDate } from '@/app/_util/dateUtils'
 import { ButtonLink, Link } from '@/app/_types/components'
 import { SocialMediaLinks } from '../_components/SocialMediaLinks'
+import { trackEvent } from '@/app/_lib/analytics'
 
 interface HeroProps {
   startDate: string
@@ -36,7 +39,7 @@ export default function Hero({
     <header className={styles.hero}>
       <div className={styles.card}>
         <div className={styles.imgWrapper}>
-          <Image priority src={imgSrc} width={1080} height={1080} alt={imgAlt} />
+          <Image priority src={imgSrc} width={1080} height={1080} alt={imgAlt} sizes="(max-width: 768px) 100vw, 50vw" />
         </div>
         <div className={styles.content}>
           <p className={styles.date}>
@@ -51,6 +54,7 @@ export default function Hero({
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.registrationLink}
+                onClick={() => trackEvent('registration_click', { event_title: title })}
               >
                 {registrationLink.text}
                 <span className="sr-only">{newTabLabel}</span>

@@ -29,7 +29,7 @@ function AnimatedLogo() {
 export default function Hero({ title, description }: HeroProps) {
   return (
     <header className={styles.heroWrapper}>
-      <Image src="/wave-bottom.png" alt="" aria-hidden width={1280} height={500} className={styles.wave} priority />
+      <Image src="/wave-bottom.png" alt="" aria-hidden width={1280} height={500} className={styles.wave} priority sizes="100vw" />
       <div className={styles.content}>
         <div className={styles.logoWrapper}>
           <AnimatedLogo />

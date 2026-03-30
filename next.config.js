@@ -56,5 +56,6 @@ module.exports = {
         pathname: `/${process.env.CONTENTFUL_SPACE_ID}/**`,
       },
     ],
+    formats: ['image/avif', 'image/webp'],
   },
 }

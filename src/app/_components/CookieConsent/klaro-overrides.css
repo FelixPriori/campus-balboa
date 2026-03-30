@@ -1,0 +1,138 @@
+/* Klaro brand overrides — Campus Balboa
+   Klaro's full default styles are imported via klaro-no-css.js (structure only);
+   this file applies the brand palette and typography on top. */
+
+@import 'klaro/dist/klaro.css';
+
+.klaro {
+  /* Klaro internal palette — mapped to brand tokens */
+  --green1: var(--campus-color-canard);
+  --green2: var(--campus-color-bleu);
+  --blue1: var(--campus-color-canard);
+  --blue2: var(--campus-color-bleu);
+  --light1: var(--campus-color-blanc);
+  --light2: var(--campus-color-jaune);
+  --dark1: var(--campus-color-taupe);
+  --dark2: var(--campus-color-canard);
+
+  /* Notice / modal backgrounds */
+  --notice-background-color: var(--campus-color-canard);
+  --notice-text-color: var(--campus-color-blanc);
+
+  /* Overlay */
+  --overlay-background: color-mix(in srgb, var(--campus-color-taupe) 60%, transparent);
+
+  /* Border radius — match site */
+  --border-radius: var(--radius-md);
+
+  /* Typography */
+  font-family: var(--font-rubik), sans-serif;
+}
+
+/* Modal */
+.klaro .cookie-modal .cm-modal {
+  background: var(--campus-color-canard);
+  color: var(--campus-color-blanc);
+  border-radius: var(--border-radius);
+}
+
+.klaro .cookie-modal .cm-header {
+  border-bottom-color: color-mix(in srgb, var(--campus-color-blanc) 20%, transparent);
+}
+
+.klaro .cookie-modal .cm-footer {
+  border-top-color: color-mix(in srgb, var(--campus-color-blanc) 20%, transparent);
+}
+
+/* Buttons — base (matches .button in styles.module.scss) */
+.klaro .cookie-modal .cm-btn,
+.klaro .cn-buttons .cm-btn {
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-full);
+  border-width: 1px;
+  border-style: solid;
+  font-family: var(--font-rubik), sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: box-shadow var(--duration-fast) var(--ease-ui);
+}
+
+.klaro .cookie-modal .cm-btn:hover {
+  box-shadow: 0 0.3rem 0.6rem color-mix(in srgb, var(--campus-color-canard) 20%, transparent);
+}
+
+/* Accept — primary style */
+.klaro .cookie-modal .cm-btn.cm-btn-success {
+  background: var(--campus-color-jaune);
+  border-color: var(--campus-color-jaune);
+  color: var(--campus-color-taupe);
+}
+
+/* Decline — outline style */
+.klaro .cookie-modal .cm-btn.cm-btn-decline {
+  background: transparent;
+  border-color: color-mix(in srgb, var(--campus-color-blanc) 40%, transparent);
+  color: var(--campus-color-blanc);
+}
+
+/* Toggle — off state */
+.klaro .cm-list-label .slider {
+  background: color-mix(in srgb, var(--campus-color-blanc) 30%, transparent);
+  border: 1px solid color-mix(in srgb, var(--campus-color-blanc) 50%, transparent);
+}
+
+/* Toggle — thumb (off) */
+.klaro .cm-list-label .slider::before {
+  background: var(--campus-color-canard) !important;
+}
+
+/* Toggle — thumb (on) */
+.klaro .cm-list-input:checked + .cm-list-label .slider::before {
+  background: var(--campus-color-blanc) !important;
+}
+
+/* Toggle — on state */
+.klaro .cm-list-input:checked + .cm-list-label .slider {
+  background: var(--campus-color-jaune);
+  border-color: transparent;
+}
+
+/* Focus indicators */
+.klaro .cm-btn:focus-visible,
+.klaro .cn-ok:focus-visible,
+.klaro .cn-decline:focus-visible,
+.klaro a:focus-visible,
+.klaro .cm-list-label:focus-visible {
+  outline: 2px solid var(--campus-color-jaune);
+  outline-offset: 3px;
+}
+
+/* Links */
+.klaro a,
+.klaro .cookie-notice .cn-learn-more,
+.klaro .cookie-modal .cm-link {
+  color: var(--campus-color-jaune) !important;
+  text-underline-offset: 3px;
+}
+
+.klaro a:hover,
+.klaro .cookie-notice .cn-learn-more:hover,
+.klaro .cookie-modal .cm-link:hover {
+  color: var(--campus-color-chair) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .klaro .cookie-notice,
+  .klaro .cookie-modal {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Cookie notice (banner at bottom) */
+.klaro .cookie-notice {
+  background: var(--campus-color-canard);
+  color: var(--campus-color-blanc);
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  box-shadow: 0 -0.5rem 2rem color-mix(in srgb, var(--campus-color-taupe) 30%, transparent);
+}

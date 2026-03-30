@@ -147,6 +147,12 @@
       }
     }
   },
+  "CookieConsent": {
+    "privacyPolicyUrl": "/en/privacy",
+    "description": "We use Google Analytics to understand how visitors use our site. You can accept or decline below.",
+    "analyticsTitle": "Analytics",
+    "googleAnalyticsDescription": "Collects anonymised data on how you navigate the site to help us improve it."
+  },
   "DraftModeBanner": {
     "landmarkLabel": "Draft mode",
     "message": "Preview mode — you are viewing draft content.",
