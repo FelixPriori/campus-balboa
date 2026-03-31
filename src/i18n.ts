@@ -23,10 +23,14 @@ export const EVENT_SEGMENTS: Record<Locale, string> = {
 /** Locale-specific URL segments for static pages (e.g. privacy policy). */
 export const STATIC_PAGE_SEGMENTS: Array<Record<Locale, string>> = [
   { en: 'privacy', fr: 'confidentialite' },
+  { en: 'code-of-conduct', fr: 'code-de-conduite' },
 ]
 
 /** Named segment lookup for the privacy policy page. */
 export const PRIVACY_SEGMENTS: Record<Locale, string> = STATIC_PAGE_SEGMENTS[0]
+
+/** Named segment lookup for the code of conduct page. */
+export const CODE_OF_CONDUCT_SEGMENTS: Record<Locale, string> = STATIC_PAGE_SEGMENTS[1]
 
 export function isLocale(value: string | null): value is Locale {
   return locales.includes(value as Locale)

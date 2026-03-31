@@ -110,7 +110,8 @@
   },
   "Footer": {
     "paypalIconAlt": "Logo de PayPal",
-    "privacyPolicy": "Politique de confidentialité"
+    "privacyPolicy": "Politique de confidentialité",
+    "codeOfConduct": "Code de conduite"
   },
   "NotFoundPage": {
     "metaTitle": "404 | Page non trouvée",

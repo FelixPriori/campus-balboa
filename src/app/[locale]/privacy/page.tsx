@@ -1,17 +1,19 @@
 import type { Metadata } from 'next'
-import { Locale } from '@/i18n'
-import StaticPageRoute, { generateStaticPageMetadata } from '../_staticPage'
+import { Locale, PRIVACY_SEGMENTS } from '@/i18n'
+import { makeStaticPageMetadata, makeStaticPageRoute } from '../_staticPage'
 
 export const revalidate = 3600
 
 type Props = { params: Promise<{ locale: Locale }> }
+
+const config = { slug: 'privacy-policy', segments: PRIVACY_SEGMENTS }
 
 export function generateStaticParams() {
   return [{ locale: 'en' }]
 }
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
-  return generateStaticPageMetadata(props)
+  return makeStaticPageMetadata(config)(props)
 }
 
-export default StaticPageRoute
+export default makeStaticPageRoute(config)

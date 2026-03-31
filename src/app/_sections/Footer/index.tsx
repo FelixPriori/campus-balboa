@@ -5,7 +5,7 @@ import { DonateButtonType, FooterSection } from '@/app/_types/footer'
 import SocialMedia from '@/app/_components/SocialMedia'
 import Image from 'next/image'
 import { getDictionary } from '@/app/dictionaries'
-import { Locale, PRIVACY_SEGMENTS } from '@/i18n'
+import { Locale, PRIVACY_SEGMENTS, CODE_OF_CONDUCT_SEGMENTS } from '@/i18n'
 import ContactForm from './ContactForm'
 
 function DonateButton({ donateButton, iconAlt, newTabLabel }: { donateButton: DonateButtonType; iconAlt: string; newTabLabel: string }) {
@@ -51,6 +51,9 @@ export default async function Footer({
           <p className={styles.copy}>{copyright}</p>
           <p className={styles.copy}>
             <Link href={`/${locale}/${PRIVACY_SEGMENTS[locale]}`}>{dict.privacyPolicy}</Link>
+          </p>
+          <p className={styles.copy}>
+            <Link href={`/${locale}/${CODE_OF_CONDUCT_SEGMENTS[locale]}`}>{dict.codeOfConduct}</Link>
           </p>
         </div>
         <div className={styles.links}>
