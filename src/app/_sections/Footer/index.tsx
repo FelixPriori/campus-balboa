@@ -7,6 +7,7 @@ import Image from 'next/image'
 import { getDictionary } from '@/app/dictionaries'
 import { Locale, PRIVACY_SEGMENTS, CODE_OF_CONDUCT_SEGMENTS } from '@/i18n'
 import ContactForm from './ContactForm'
+import NewsletterForm from './NewsletterForm'
 
 function DonateButton({ donateButton, iconAlt, newTabLabel }: { donateButton: DonateButtonType; iconAlt: string; newTabLabel: string }) {
   return (
@@ -37,12 +38,15 @@ export default async function Footer({
   landAcknowledgement,
   locale,
 }: FooterSection & { locale: Locale }) {
-  const { Footer: dict, ContactForm: contactFormDict, Navigation: navDict } = await getDictionary(locale)
+  const { Footer: dict, ContactForm: contactFormDict, NewsletterForm: newsletterFormDict, Navigation: navDict } = await getDictionary(locale)
   return (
     <footer className={styles.footerSection}>
       <div className={styles.content}>
         <LandAcknowledgement landAcknowledgement={landAcknowledgement} />
-        <ContactForm {...contactFormDict} />
+        <div className={styles.formsRow}>
+          <ContactForm {...contactFormDict} />
+          <NewsletterForm {...newsletterFormDict} locale={locale} />
+        </div>
         <div className={styles.contact}>
           <p className={styles.copy}>
             <span>{contact}</span>

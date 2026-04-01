@@ -32,11 +32,7 @@
 }
 
 .contactForm {
-  padding-block-end: var(--space-10);
-  border-block-end: 1px solid color-mix(in srgb, var(--color-neutral) 20%, transparent);
-  grid-column: 1 / -1;
-  grid-row: 2 / 3;
-  max-inline-size: 60ch;
+  min-width: 0;
 }
 
 .contactFormTitle {
@@ -174,6 +170,67 @@
     &:hover:not(:disabled) {
       transform: translateY(-3px);
     }
+  }
+}
+
+.formsRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-10);
+  padding-block-end: var(--space-10);
+  border-block-end: 1px solid color-mix(in srgb, var(--color-neutral) 20%, transparent);
+  grid-column: 1 / -1;
+  grid-row: 2 / 3;
+
+  @media (max-width: breakpoint.$breakpoint-large) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.newsletterForm {
+  min-width: 0;
+}
+
+.newsletterDescription {
+  color: color-mix(in srgb, var(--color-neutral) 70%, transparent);
+  font-size: var(--text-sm);
+  margin-block-end: var(--space-4);
+}
+
+.consentField {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.checkboxRow {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+
+  input[type='checkbox'] {
+    flex-shrink: 0;
+    margin-top: 3px;
+    accent-color: var(--campus-color-canard);
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+
+    &:focus-visible {
+      outline: 2px solid var(--campus-color-canard);
+      outline-offset: 2px;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+
+  label {
+    color: var(--color-neutral);
+    font-size: var(--text-sm);
+    cursor: pointer;
   }
 }
 

@@ -108,6 +108,23 @@
     "emailInvalid": "Please enter a valid email address",
     "messageRequired": "Message is required"
   },
+  "NewsletterForm": {
+    "title": "Stay informed",
+    "description": "Receive updates about upcoming events and workshops.",
+    "firstNameLabel": "First name",
+    "firstNamePlaceholder": "Your first name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "your@email.com",
+    "consentLabel": "I agree to receive emails from Campus Balboa. I can unsubscribe at any time.",
+    "submit": "Subscribe",
+    "sending": "Subscribing…",
+    "successMessage": "You're subscribed! Check your inbox.",
+    "errorMessage": "Something went wrong. Please try again.",
+    "firstNameRequired": "First name is required",
+    "emailRequired": "Email is required",
+    "emailInvalid": "Please enter a valid email address",
+    "consentRequired": "Please agree to receive emails to subscribe."
+  },
   "Footer": {
     "paypalIconAlt": "PayPal logo",
     "privacyPolicy": "Privacy Policy",

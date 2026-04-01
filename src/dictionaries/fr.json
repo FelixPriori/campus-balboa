@@ -108,6 +108,23 @@
     "emailInvalid": "Veuillez entrer une adresse courriel valide",
     "messageRequired": "Le message est requis"
   },
+  "NewsletterForm": {
+    "title": "Restez informé·e",
+    "description": "Recevez les nouvelles sur les prochains événements et ateliers.",
+    "firstNameLabel": "Prénom",
+    "firstNamePlaceholder": "Votre prénom",
+    "emailLabel": "Courriel",
+    "emailPlaceholder": "votre@courriel.com",
+    "consentLabel": "J'accepte de recevoir des courriels de Campus Balboa. Je peux me désabonner à tout moment.",
+    "submit": "S'abonner",
+    "sending": "Abonnement en cours…",
+    "successMessage": "Abonnement confirmé ! Vérifiez vos courriels.",
+    "errorMessage": "Une erreur est survenue. Veuillez réessayer.",
+    "firstNameRequired": "Le prénom est requis",
+    "emailRequired": "L'adresse courriel est requise",
+    "emailInvalid": "Veuillez entrer une adresse courriel valide",
+    "consentRequired": "Veuillez accepter de recevoir des courriels pour vous abonner."
+  },
   "Footer": {
     "paypalIconAlt": "Logo de PayPal",
     "privacyPolicy": "Politique de confidentialité",
