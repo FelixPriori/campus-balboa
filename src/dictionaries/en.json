@@ -171,6 +171,9 @@
     "analyticsTitle": "Analytics",
     "googleAnalyticsDescription": "Collects anonymised data on how you navigate the site to help us improve it."
   },
+  "Membership": {
+    "buyMembership": "Become a member"
+  },
   "DraftModeBanner": {
     "landmarkLabel": "Draft mode",
     "message": "Preview mode — you are viewing draft content.",

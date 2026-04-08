@@ -4,6 +4,7 @@ import CalendarSection from './Calendar'
 import EventsSection from './Events'
 import MissionsSection from './Missions'
 import AboutUsSection from './AboutUs'
+import MembershipSection from './Membership'
 import Footer from './Footer'
 import { Locale } from '@/i18n'
 import { getDictionary } from '../dictionaries'
@@ -74,6 +75,19 @@ export default async function sectionsRenderer(section: HomePageSection, locale:
           id={id}
           title={title}
           anchor={anchor}
+          locale={locale}
+          preview={preview}
+        />
+      )
+    case 'membership':
+      return (
+        <MembershipSection
+          key={id}
+          id={id}
+          title={title}
+          anchor={anchor}
+          content={section.content ?? null}
+          helpText={section.helpText ?? undefined}
           locale={locale}
           preview={preview}
         />

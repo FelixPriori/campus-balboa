@@ -91,6 +91,7 @@ body {
   min-height: 100dvh;
   color: var(--color-dark);
   font-family: var(--font-rubik);
+  background-color: var(--campus-color-blanc);
 }
 
 main,
@@ -151,23 +152,43 @@ h3 {
   text-decoration: none;
 }
 
-.landing {
-  background-color: var(--campus-color-canard);
-}
-
 .app-nav {
-  padding: 1rem;
-  position: relative;
-  background-color: white;
-  z-index: 10;
+  position: sticky;
+  top: 0;
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: var(--campus-color-blanc);
+
+  /* Scroll-driven transition from flush → floating pill */
+  animation: nav-float linear both;
+  animation-timeline: scroll(root);
+  animation-range: 0px 120px;
 
   svg {
     color: var(--campus-color-canard);
     height: 32px;
     width: 32px;
+  }
+}
+
+@keyframes nav-float {
+  from {
+    top: 0;
+    padding: 1rem;
+    margin-inline: 0;
+    margin-block-start: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  to {
+    top: 0.625rem;
+    padding: 0.625rem 1rem;
+    margin-inline: 1rem;
+    margin-block-start: 0.625rem;
+    border-radius: var(--radius-full);
+    box-shadow: 0 4px 20px color-mix(in srgb, var(--campus-color-canard) 25%, transparent);
   }
 }
 

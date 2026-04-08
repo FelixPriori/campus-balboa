@@ -22,7 +22,7 @@ query GetHomePage($locale: String!, $slug: String) {
       sys {
         id
       }
-      sectionsCollection(limit: 5) {
+      sectionsCollection(limit: 6) {
         items {
           ... on PageSection {
             sys {
