@@ -48,11 +48,11 @@ export function buildEventSchema(
       ? { location: { '@type': 'Place', name: firstVenue.name, address: firstVenue.venueAddress } }
       : {}),
     ...(performers.length > 0 ? { performer: performers } : {}),
-    ...(registrationLink
+    ...(registrationLink || minPrice !== null
       ? {
           offers: {
             '@type': 'Offer',
-            url: registrationLink.href,
+            url: registrationLink?.href ?? eventUrl,
             availability: isClosed
               ? 'https://schema.org/SoldOut'
               : 'https://schema.org/InStock',

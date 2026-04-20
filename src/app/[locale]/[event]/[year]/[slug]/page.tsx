@@ -118,8 +118,13 @@ export default async function EventPage({ params }: Props) {
     ? { href: data.registrationLink.href, text: data.registrationLink.text ?? '' }
     : null
 
+  // Use registration link for schema even when closed — schema shows SoldOut availability
+  const schemaRegistrationLink = data.registrationLink?.href
+    ? { href: data.registrationLink.href, text: data.registrationLink.text ?? '' }
+    : null
+
   const eventUrl = `${SITE_URL}/${locale}/${event}/${year}/${slug}`
-  const eventSchema = buildEventSchema(data, eventUrl, isClosed, registrationLink)
+  const eventSchema = buildEventSchema(data, eventUrl, isClosed, schemaRegistrationLink)
   const breadcrumbSchema = buildBreadcrumbSchema(eventUrl, locale, event, data.title, dict)
   const personSchemas = buildPersonSchemas(data)
 
