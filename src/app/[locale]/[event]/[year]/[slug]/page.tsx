@@ -173,7 +173,7 @@ export default async function EventPage({ params }: Props) {
           startDate={data.startDate ?? ''}
           endDate={data.endDate ?? ''}
           title={data.title ?? ''}
-          closed={data.closedText ?? ''}
+          closed={dict.PricingCard.registrationClosed}
           locale={locale}
           isClosed={isClosed}
           socialMedia={socialMedia}
@@ -183,7 +183,7 @@ export default async function EventPage({ params }: Props) {
         <About
           details={data.details}
           sectionTitle={dict.EventPage.aboutTitle}
-          closed={data.closedText ?? ''}
+          closed={dict.PricingCard.registrationClosed}
           isClosed={isClosed}
         />
         <LevelRequirement

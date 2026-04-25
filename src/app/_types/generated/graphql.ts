@@ -483,7 +483,6 @@ export enum EntryOrder {
 export type Event = Entry & _Node & {
   __typename?: 'Event';
   _id: Scalars['ID']['output'];
-  closedText?: Maybe<Scalars['String']['output']>;
   contentfulMetadata: ContentfulMetadata;
   dJsCollection?: Maybe<EventDJsCollection>;
   dJsCursorCollection?: Maybe<EventDJsCursorCollection>;
@@ -513,13 +512,6 @@ export type Event = Entry & _Node & {
   title?: Maybe<Scalars['String']['output']>;
   venuesCollection?: Maybe<EventVenuesCollection>;
   venuesCursorCollection?: Maybe<EventVenuesCursorCollection>;
-};
-
-
-/** [See type definition](https://app.contentful.com/spaces/ix0cnzqgli1c/content_types/event) */
-export type EventClosedTextArgs = {
-  locale?: InputMaybe<Scalars['String']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
 };
 
 
@@ -1018,8 +1010,6 @@ export type EventBlockLinkingCollectionsEventCursorCollectionArgs = {
 };
 
 export enum EventBlockLinkingCollectionsEventCollectionOrder {
-  ClosedTextAsc = 'closedText_ASC',
-  ClosedTextDesc = 'closedText_DESC',
   DarkAsc = 'dark_ASC',
   DarkDesc = 'dark_DESC',
   EndDateAsc = 'endDate_ASC',
@@ -1045,8 +1035,6 @@ export enum EventBlockLinkingCollectionsEventCollectionOrder {
 }
 
 export enum EventBlockLinkingCollectionsEventCursorCollectionOrder {
-  ClosedTextAsc = 'closedText_ASC',
-  ClosedTextDesc = 'closedText_DESC',
   DarkAsc = 'dark_ASC',
   DarkDesc = 'dark_DESC',
   EndDateAsc = 'endDate_ASC',
@@ -1207,13 +1195,6 @@ export type EventDetailsResourcesInline = ResourceLink & {
 export type EventFilter = {
   AND?: InputMaybe<Array<InputMaybe<EventFilter>>>;
   OR?: InputMaybe<Array<InputMaybe<EventFilter>>>;
-  closedText?: InputMaybe<Scalars['String']['input']>;
-  closedText_contains?: InputMaybe<Scalars['String']['input']>;
-  closedText_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  closedText_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  closedText_not?: InputMaybe<Scalars['String']['input']>;
-  closedText_not_contains?: InputMaybe<Scalars['String']['input']>;
-  closedText_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   contentfulMetadata?: InputMaybe<ContentfulMetadataFilter>;
   dJs?: InputMaybe<CfInstructorNestedFilter>;
   dJsCollection_exists?: InputMaybe<Scalars['Boolean']['input']>;
@@ -1362,8 +1343,6 @@ export type EventLinkingCollectionsEntryCursorCollectionArgs = {
 };
 
 export enum EventOrder {
-  ClosedTextAsc = 'closedText_ASC',
-  ClosedTextDesc = 'closedText_DESC',
   DarkAsc = 'dark_ASC',
   DarkDesc = 'dark_DESC',
   EndDateAsc = 'endDate_ASC',
@@ -2622,8 +2601,6 @@ export type InstructorLinkingCollectionsEventCursorCollectionArgs = {
 };
 
 export enum InstructorLinkingCollectionsEventCollectionOrder {
-  ClosedTextAsc = 'closedText_ASC',
-  ClosedTextDesc = 'closedText_DESC',
   DarkAsc = 'dark_ASC',
   DarkDesc = 'dark_DESC',
   EndDateAsc = 'endDate_ASC',
@@ -2649,8 +2626,6 @@ export enum InstructorLinkingCollectionsEventCollectionOrder {
 }
 
 export enum InstructorLinkingCollectionsEventCursorCollectionOrder {
-  ClosedTextAsc = 'closedText_ASC',
-  ClosedTextDesc = 'closedText_DESC',
   DarkAsc = 'dark_ASC',
   DarkDesc = 'dark_DESC',
   EndDateAsc = 'endDate_ASC',
@@ -3026,8 +3001,6 @@ export type LevelRequirementLinkingCollectionsEventCursorCollectionArgs = {
 };
 
 export enum LevelRequirementLinkingCollectionsEventCollectionOrder {
-  ClosedTextAsc = 'closedText_ASC',
-  ClosedTextDesc = 'closedText_DESC',
   DarkAsc = 'dark_ASC',
   DarkDesc = 'dark_DESC',
   EndDateAsc = 'endDate_ASC',
@@ -3053,8 +3026,6 @@ export enum LevelRequirementLinkingCollectionsEventCollectionOrder {
 }
 
 export enum LevelRequirementLinkingCollectionsEventCursorCollectionOrder {
-  ClosedTextAsc = 'closedText_ASC',
-  ClosedTextDesc = 'closedText_DESC',
   DarkAsc = 'dark_ASC',
   DarkDesc = 'dark_DESC',
   EndDateAsc = 'endDate_ASC',
@@ -3254,8 +3225,6 @@ export type LinkLinkingCollectionsFooterCursorCollectionArgs = {
 };
 
 export enum LinkLinkingCollectionsEventCollectionOrder {
-  ClosedTextAsc = 'closedText_ASC',
-  ClosedTextDesc = 'closedText_DESC',
   DarkAsc = 'dark_ASC',
   DarkDesc = 'dark_DESC',
   EndDateAsc = 'endDate_ASC',
@@ -3281,8 +3250,6 @@ export enum LinkLinkingCollectionsEventCollectionOrder {
 }
 
 export enum LinkLinkingCollectionsEventCursorCollectionOrder {
-  ClosedTextAsc = 'closedText_ASC',
-  ClosedTextDesc = 'closedText_DESC',
   DarkAsc = 'dark_ASC',
   DarkDesc = 'dark_DESC',
   EndDateAsc = 'endDate_ASC',
@@ -4052,8 +4019,6 @@ export type PageMetadataLinkingCollectionsStaticPageCursorCollectionArgs = {
 };
 
 export enum PageMetadataLinkingCollectionsEventCollectionOrder {
-  ClosedTextAsc = 'closedText_ASC',
-  ClosedTextDesc = 'closedText_DESC',
   DarkAsc = 'dark_ASC',
   DarkDesc = 'dark_DESC',
   EndDateAsc = 'endDate_ASC',
@@ -4079,8 +4044,6 @@ export enum PageMetadataLinkingCollectionsEventCollectionOrder {
 }
 
 export enum PageMetadataLinkingCollectionsEventCursorCollectionOrder {
-  ClosedTextAsc = 'closedText_ASC',
-  ClosedTextDesc = 'closedText_DESC',
   DarkAsc = 'dark_ASC',
   DarkDesc = 'dark_DESC',
   EndDateAsc = 'endDate_ASC',
@@ -4666,8 +4629,6 @@ export type PartnersLinkingCollectionsEventCursorCollectionArgs = {
 };
 
 export enum PartnersLinkingCollectionsEventCollectionOrder {
-  ClosedTextAsc = 'closedText_ASC',
-  ClosedTextDesc = 'closedText_DESC',
   DarkAsc = 'dark_ASC',
   DarkDesc = 'dark_DESC',
   EndDateAsc = 'endDate_ASC',
@@ -4693,8 +4654,6 @@ export enum PartnersLinkingCollectionsEventCollectionOrder {
 }
 
 export enum PartnersLinkingCollectionsEventCursorCollectionOrder {
-  ClosedTextAsc = 'closedText_ASC',
-  ClosedTextDesc = 'closedText_DESC',
   DarkAsc = 'dark_ASC',
   DarkDesc = 'dark_DESC',
   EndDateAsc = 'endDate_ASC',
@@ -4918,8 +4877,6 @@ export type PriceLinkingCollectionsEventCursorCollectionArgs = {
 };
 
 export enum PriceLinkingCollectionsEventCollectionOrder {
-  ClosedTextAsc = 'closedText_ASC',
-  ClosedTextDesc = 'closedText_DESC',
   DarkAsc = 'dark_ASC',
   DarkDesc = 'dark_DESC',
   EndDateAsc = 'endDate_ASC',
@@ -4945,8 +4902,6 @@ export enum PriceLinkingCollectionsEventCollectionOrder {
 }
 
 export enum PriceLinkingCollectionsEventCursorCollectionOrder {
-  ClosedTextAsc = 'closedText_ASC',
-  ClosedTextDesc = 'closedText_DESC',
   DarkAsc = 'dark_ASC',
   DarkDesc = 'dark_DESC',
   EndDateAsc = 'endDate_ASC',
@@ -6307,8 +6262,6 @@ export type VenueLinkingCollectionsEventCursorCollectionArgs = {
 };
 
 export enum VenueLinkingCollectionsEventCollectionOrder {
-  ClosedTextAsc = 'closedText_ASC',
-  ClosedTextDesc = 'closedText_DESC',
   DarkAsc = 'dark_ASC',
   DarkDesc = 'dark_DESC',
   EndDateAsc = 'endDate_ASC',
@@ -6334,8 +6287,6 @@ export enum VenueLinkingCollectionsEventCollectionOrder {
 }
 
 export enum VenueLinkingCollectionsEventCursorCollectionOrder {
-  ClosedTextAsc = 'closedText_ASC',
-  ClosedTextDesc = 'closedText_DESC',
   DarkAsc = 'dark_ASC',
   DarkDesc = 'dark_DESC',
   EndDateAsc = 'endDate_ASC',
@@ -6859,7 +6810,7 @@ export type GetEventPageQueryVariables = Exact<{
 }>;
 
 
-export type GetEventPageQuery = { __typename?: 'Query', eventCollection?: { __typename?: 'EventCollection', items: Array<{ __typename?: 'Event', title?: string | null, slug?: string | null, startDate?: any | null, endDate?: any | null, closedText?: string | null, registrationsOpened?: boolean | null, sys: { __typename?: 'Sys', id: string }, details?: { __typename?: 'EventDetails', json: any, links: { __typename?: 'EventDetailsLinks', assets: { __typename?: 'EventDetailsAssets', block: Array<{ __typename?: 'Asset', url?: string | null, description?: string | null, sys: { __typename?: 'Sys', id: string } } | null> } } } | null, image?: { __typename?: 'Asset', title?: string | null, url?: string | null } | null, registrationLink?: { __typename?: 'Link', href?: string | null, text?: string | null } | null, socialMediaCollection?: { __typename?: 'EventSocialMediaCollection', items: Array<{ __typename?: 'Link', href?: string | null, text?: string | null, sys: { __typename?: 'Sys', id: string } } | null> } | null, levelRequirement?: { __typename?: 'LevelRequirement', title?: string | null, skills?: Array<string | null> | null, description?: { __typename?: 'LevelRequirementDescription', json: any, links: { __typename?: 'LevelRequirementDescriptionLinks', assets: { __typename?: 'LevelRequirementDescriptionAssets', block: Array<{ __typename?: 'Asset', url?: string | null, description?: string | null, sys: { __typename?: 'Sys', id: string } } | null> } } } | null } | null, metadata?: { __typename?: 'PageMetadata', description?: string | null } | null, venuesCollection?: { __typename?: 'EventVenuesCollection', items: Array<{ __typename?: 'Venue', name?: string | null, venueAddress?: string | null } | null> } | null, instructorsCollection?: { __typename?: 'EventInstructorsCollection', items: Array<{ __typename?: 'Instructor', name?: string | null, avatar?: { __typename?: 'Asset', url?: string | null } | null } | null> } | null, dJsCollection?: { __typename?: 'EventDJsCollection', items: Array<{ __typename?: 'Instructor', name?: string | null, avatar?: { __typename?: 'Asset', url?: string | null } | null } | null> } | null, pricingCollection?: { __typename?: 'EventPricingCollection', items: Array<{ __typename?: 'Price', amount?: number | null, startTime?: any | null } | null> } | null } | null> } | null };
+export type GetEventPageQuery = { __typename?: 'Query', eventCollection?: { __typename?: 'EventCollection', items: Array<{ __typename?: 'Event', title?: string | null, slug?: string | null, startDate?: any | null, endDate?: any | null, registrationsOpened?: boolean | null, sys: { __typename?: 'Sys', id: string }, details?: { __typename?: 'EventDetails', json: any, links: { __typename?: 'EventDetailsLinks', assets: { __typename?: 'EventDetailsAssets', block: Array<{ __typename?: 'Asset', url?: string | null, description?: string | null, sys: { __typename?: 'Sys', id: string } } | null> } } } | null, image?: { __typename?: 'Asset', title?: string | null, url?: string | null } | null, registrationLink?: { __typename?: 'Link', href?: string | null, text?: string | null } | null, socialMediaCollection?: { __typename?: 'EventSocialMediaCollection', items: Array<{ __typename?: 'Link', href?: string | null, text?: string | null, sys: { __typename?: 'Sys', id: string } } | null> } | null, levelRequirement?: { __typename?: 'LevelRequirement', title?: string | null, skills?: Array<string | null> | null, description?: { __typename?: 'LevelRequirementDescription', json: any, links: { __typename?: 'LevelRequirementDescriptionLinks', assets: { __typename?: 'LevelRequirementDescriptionAssets', block: Array<{ __typename?: 'Asset', url?: string | null, description?: string | null, sys: { __typename?: 'Sys', id: string } } | null> } } } | null } | null, metadata?: { __typename?: 'PageMetadata', description?: string | null } | null, venuesCollection?: { __typename?: 'EventVenuesCollection', items: Array<{ __typename?: 'Venue', name?: string | null, venueAddress?: string | null } | null> } | null, instructorsCollection?: { __typename?: 'EventInstructorsCollection', items: Array<{ __typename?: 'Instructor', name?: string | null, avatar?: { __typename?: 'Asset', url?: string | null } | null } | null> } | null, dJsCollection?: { __typename?: 'EventDJsCollection', items: Array<{ __typename?: 'Instructor', name?: string | null, avatar?: { __typename?: 'Asset', url?: string | null } | null } | null> } | null, pricingCollection?: { __typename?: 'EventPricingCollection', items: Array<{ __typename?: 'Price', amount?: number | null, startTime?: any | null } | null> } | null } | null> } | null };
 
 export type GetEventSlugQueryVariables = Exact<{
   eventId: Scalars['String']['input'];
@@ -7031,7 +6982,7 @@ export const GetAllEventSlugsDocument = {"kind":"Document","definitions":[{"kind
 export const GetAllEventsDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetAllEvents"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"locale"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"eventCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"locale"},"value":{"kind":"Variable","name":{"kind":"Name","value":"locale"}}},{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"50"}},{"kind":"Argument","name":{"kind":"Name","value":"order"},"value":{"kind":"EnumValue","value":"startDate_DESC"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}},{"kind":"Field","name":{"kind":"Name","value":"startDate"}},{"kind":"Field","name":{"kind":"Name","value":"endDate"}},{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"title"}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetAllEventsQuery, GetAllEventsQueryVariables>;
 export const GetDJsDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetDJs"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"eventId"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"locale"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"event"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"eventId"}}},{"kind":"Argument","name":{"kind":"Name","value":"locale"},"value":{"kind":"Variable","name":{"kind":"Name","value":"locale"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"dJsCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"10"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sys"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"pronouns"}},{"kind":"Field","name":{"kind":"Name","value":"biography"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"json"}},{"kind":"Field","name":{"kind":"Name","value":"links"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"assets"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"block"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sys"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"description"}}]}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"avatar"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"url"}}]}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetDJsQuery, GetDJsQueryVariables>;
 export const GetEventMetaDataDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetEventMetaData"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"locale"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"slug"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"eventCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"locale"},"value":{"kind":"Variable","name":{"kind":"Name","value":"locale"}}},{"kind":"Argument","name":{"kind":"Name","value":"where"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"slug"},"value":{"kind":"Variable","name":{"kind":"Name","value":"slug"}}}]}},{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"1"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"metadata"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"favicon"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"title"}}]}},{"kind":"Field","name":{"kind":"Name","value":"openGraphImage"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"url"}}]}}]}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetEventMetaDataQuery, GetEventMetaDataQueryVariables>;
-export const GetEventPageDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetEventPage"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"locale"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"slug"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"eventCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"locale"},"value":{"kind":"Variable","name":{"kind":"Name","value":"locale"}}},{"kind":"Argument","name":{"kind":"Name","value":"where"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"slug"},"value":{"kind":"Variable","name":{"kind":"Name","value":"slug"}}}]}},{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"1"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sys"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}},{"kind":"Field","name":{"kind":"Name","value":"details"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"json"}},{"kind":"Field","name":{"kind":"Name","value":"links"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"assets"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"block"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sys"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"description"}}]}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"url"}}]}},{"kind":"Field","name":{"kind":"Name","value":"startDate"}},{"kind":"Field","name":{"kind":"Name","value":"endDate"}},{"kind":"Field","name":{"kind":"Name","value":"closedText"}},{"kind":"Field","name":{"kind":"Name","value":"registrationsOpened"}},{"kind":"Field","name":{"kind":"Name","value":"registrationLink"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"href"}},{"kind":"Field","name":{"kind":"Name","value":"text"}}]}},{"kind":"Field","name":{"kind":"Name","value":"socialMediaCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"3"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sys"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"Field","name":{"kind":"Name","value":"href"}},{"kind":"Field","name":{"kind":"Name","value":"text"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"levelRequirement"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"json"}},{"kind":"Field","name":{"kind":"Name","value":"links"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"assets"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"block"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sys"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"description"}}]}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"skills"}}]}},{"kind":"Field","name":{"kind":"Name","value":"metadata"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"description"}}]}},{"kind":"Field","name":{"kind":"Name","value":"venuesCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"1"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"venueAddress"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"instructorsCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"20"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"avatar"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"dJsCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"20"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"avatar"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"pricingCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"20"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"amount"}},{"kind":"Field","name":{"kind":"Name","value":"startTime"}}]}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetEventPageQuery, GetEventPageQueryVariables>;
+export const GetEventPageDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetEventPage"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"locale"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"slug"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"eventCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"locale"},"value":{"kind":"Variable","name":{"kind":"Name","value":"locale"}}},{"kind":"Argument","name":{"kind":"Name","value":"where"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"slug"},"value":{"kind":"Variable","name":{"kind":"Name","value":"slug"}}}]}},{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"1"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sys"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}},{"kind":"Field","name":{"kind":"Name","value":"details"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"json"}},{"kind":"Field","name":{"kind":"Name","value":"links"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"assets"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"block"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sys"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"description"}}]}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"url"}}]}},{"kind":"Field","name":{"kind":"Name","value":"startDate"}},{"kind":"Field","name":{"kind":"Name","value":"endDate"}},{"kind":"Field","name":{"kind":"Name","value":"registrationsOpened"}},{"kind":"Field","name":{"kind":"Name","value":"registrationLink"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"href"}},{"kind":"Field","name":{"kind":"Name","value":"text"}}]}},{"kind":"Field","name":{"kind":"Name","value":"socialMediaCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"3"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sys"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"Field","name":{"kind":"Name","value":"href"}},{"kind":"Field","name":{"kind":"Name","value":"text"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"levelRequirement"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"json"}},{"kind":"Field","name":{"kind":"Name","value":"links"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"assets"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"block"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sys"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"description"}}]}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"skills"}}]}},{"kind":"Field","name":{"kind":"Name","value":"metadata"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"description"}}]}},{"kind":"Field","name":{"kind":"Name","value":"venuesCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"1"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"venueAddress"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"instructorsCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"20"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"avatar"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"dJsCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"20"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"avatar"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"pricingCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"20"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"amount"}},{"kind":"Field","name":{"kind":"Name","value":"startTime"}}]}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetEventPageQuery, GetEventPageQueryVariables>;
 export const GetEventSlugDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetEventSlug"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"eventId"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"event"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"eventId"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"slug"}}]}}]}}]} as unknown as DocumentNode<GetEventSlugQuery, GetEventSlugQueryVariables>;
 export const GetEventsSectionDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetEventsSection"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"id"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"locale"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"pageSection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"id"}}},{"kind":"Argument","name":{"kind":"Name","value":"locale"},"value":{"kind":"Variable","name":{"kind":"Name","value":"locale"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"anchor"}},{"kind":"Field","name":{"kind":"Name","value":"componentsCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"10"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"Event"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"__typename"}},{"kind":"Field","name":{"kind":"Name","value":"sys"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"dark"}},{"kind":"Field","name":{"kind":"Name","value":"tagline"}},{"kind":"Field","name":{"kind":"Name","value":"startDate"}},{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"title"}}]}},{"kind":"Field","name":{"kind":"Name","value":"slug"}}]}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetEventsSectionQuery, GetEventsSectionQueryVariables>;
 export const GetFeaturedSlidesSectionDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetFeaturedSlidesSection"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"id"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"locale"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"pageSection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"id"}}},{"kind":"Argument","name":{"kind":"Name","value":"locale"},"value":{"kind":"Variable","name":{"kind":"Name","value":"locale"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"anchor"}},{"kind":"Field","name":{"kind":"Name","value":"componentsCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"10"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"FeaturedSlide"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"__typename"}},{"kind":"Field","name":{"kind":"Name","value":"sys"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"title"}}]}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"details"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"json"}},{"kind":"Field","name":{"kind":"Name","value":"links"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"assets"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"block"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sys"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"description"}}]}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"href"}},{"kind":"Field","name":{"kind":"Name","value":"text"}}]}}]}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetFeaturedSlidesSectionQuery, GetFeaturedSlidesSectionQueryVariables>;
