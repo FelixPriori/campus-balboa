@@ -2,7 +2,11 @@ import { NextResponse } from 'next/server'
 import { addMember } from '../_addMember'
 
 export async function POST(request: Request) {
-  const { firstName, email, language } = await request.json()
+  const { firstName, email, language, website, loadTime } = await request.json()
+
+  if (website || !loadTime || Date.now() - loadTime < 3000) {
+    return NextResponse.json({ success: true })
+  }
 
   const data = new FormData()
   data.set('firstName', firstName)

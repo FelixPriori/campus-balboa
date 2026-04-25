@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import styles from './styles.module.scss'
 
 const FORM_STATUS = {
@@ -54,6 +54,9 @@ export default function NewsletterForm({
   consentRequired,
   locale,
 }: NewsletterFormDict & { locale: string }) {
+  const loadTime = useRef<number>(0)
+  useEffect(() => { loadTime.current = Date.now() }, [])
+
   const [status, setStatus] = useState<FormStatus>(FORM_STATUS.IDLE)
   const [errors, setErrors] = useState<FieldErrors>({})
   const [touched, setTouched] = useState<Record<keyof FieldErrors, boolean>>({
@@ -111,7 +114,7 @@ export default function NewsletterForm({
       const res = await fetch('/api/mailchimp/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ firstName, email, language: locale }),
+        body: JSON.stringify({ firstName, email, language: locale, website: (form.elements.namedItem('website') as HTMLInputElement).value, loadTime: loadTime.current }),
       })
       if (!res.ok) throw new Error()
       setStatus(FORM_STATUS.SUCCESS)
@@ -189,6 +192,16 @@ export default function NewsletterForm({
               {errors.consent}
             </span>
           )}
+        </div>
+        <div className={styles.honeypot} aria-hidden="true">
+          <label htmlFor="newsletter-website">Website</label>
+          <input
+            id="newsletter-website"
+            name="website"
+            type="text"
+            tabIndex={-1}
+            autoComplete="off"
+          />
         </div>
         <div className={styles.formFooter}>
           <button

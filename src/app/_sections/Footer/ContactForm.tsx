@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, SubmitEvent } from 'react'
+import { useState, useRef, useEffect, SubmitEvent } from 'react'
 import styles from './styles.module.scss'
 
 const FORM_STATUS = {
@@ -53,6 +53,9 @@ export default function ContactForm({
   emailInvalid,
   messageRequired,
 }: ContactFormDict) {
+  const loadTime = useRef<number>(0)
+  useEffect(() => { loadTime.current = Date.now() }, [])
+
   const [status, setStatus] = useState<FormStatus>(FORM_STATUS.IDLE)
   const [errors, setErrors] = useState<FieldErrors>({})
   const [touched, setTouched] = useState<Record<keyof FieldErrors, boolean>>({
@@ -106,6 +109,8 @@ export default function ContactForm({
       fullName: (form.elements.namedItem('fullName') as HTMLInputElement).value,
       email: (form.elements.namedItem('email') as HTMLInputElement).value,
       message: (form.elements.namedItem('message') as HTMLTextAreaElement).value,
+      website: (form.elements.namedItem('website') as HTMLInputElement).value,
+      loadTime: loadTime.current,
     }
 
     try {
@@ -189,6 +194,16 @@ export default function ContactForm({
               {errors.message}
             </span>
           )}
+        </div>
+        <div className={styles.honeypot} aria-hidden="true">
+          <label htmlFor="contact-website">Website</label>
+          <input
+            id="contact-website"
+            name="website"
+            type="text"
+            tabIndex={-1}
+            autoComplete="off"
+          />
         </div>
         <div className={styles.formFooter}>
           <button

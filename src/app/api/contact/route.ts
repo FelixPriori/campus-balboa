@@ -2,7 +2,17 @@ import { type NextRequest, NextResponse } from 'next/server'
 import nodemailer, { type SendMailOptions } from 'nodemailer'
 
 export async function POST(request: NextRequest) {
-  const { email, fullName, message } = await request.json()
+  const { email, fullName, message, website, loadTime } = await request.json()
+
+  // Honeypot: bots fill hidden fields, humans don't
+  if (website) {
+    return NextResponse.json({ message: 'Email sent' })
+  }
+
+  // Timing: bots submit instantly, humans take at least a few seconds
+  if (!loadTime || Date.now() - loadTime < 3000) {
+    return NextResponse.json({ message: 'Email sent' })
+  }
 
   const transport = nodemailer.createTransport({
     service: 'gmail',
