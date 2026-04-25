@@ -483,36 +483,27 @@ export enum EntryOrder {
 export type Event = Entry & _Node & {
   __typename?: 'Event';
   _id: Scalars['ID']['output'];
-  aboutTitle?: Maybe<Scalars['String']['output']>;
   closedText?: Maybe<Scalars['String']['output']>;
-  comingSoon?: Maybe<Scalars['String']['output']>;
   contentfulMetadata: ContentfulMetadata;
-  copyright?: Maybe<Scalars['String']['output']>;
   dJsCollection?: Maybe<EventDJsCollection>;
   dJsCursorCollection?: Maybe<EventDJsCursorCollection>;
-  dJsTitle?: Maybe<Scalars['String']['output']>;
   dark?: Maybe<Scalars['Boolean']['output']>;
   details?: Maybe<EventDetails>;
   endDate?: Maybe<Scalars['DateTime']['output']>;
   image?: Maybe<Asset>;
   instructorsCollection?: Maybe<EventInstructorsCollection>;
   instructorsCursorCollection?: Maybe<EventInstructorsCursorCollection>;
-  instructorsTitle?: Maybe<Scalars['String']['output']>;
   levelRequirement?: Maybe<LevelRequirement>;
-  levelRequirementTitle?: Maybe<Scalars['String']['output']>;
-  link?: Maybe<Link>;
   linkedFrom?: Maybe<EventLinkingCollections>;
   metadata?: Maybe<PageMetadata>;
   partnersCollection?: Maybe<EventPartnersCollection>;
   partnersCursorCollection?: Maybe<EventPartnersCursorCollection>;
-  partnersTitle?: Maybe<Scalars['String']['output']>;
   pricingCollection?: Maybe<EventPricingCollection>;
   pricingCursorCollection?: Maybe<EventPricingCursorCollection>;
-  pricingTitle?: Maybe<Scalars['String']['output']>;
   registrationLink?: Maybe<Link>;
+  registrationsOpened?: Maybe<Scalars['Boolean']['output']>;
   scheduleCollection?: Maybe<EventScheduleCollection>;
   scheduleCursorCollection?: Maybe<EventScheduleCursorCollection>;
-  scheduleTitle?: Maybe<Scalars['String']['output']>;
   slug?: Maybe<Scalars['String']['output']>;
   socialMediaCollection?: Maybe<EventSocialMediaCollection>;
   socialMediaCursorCollection?: Maybe<EventSocialMediaCursorCollection>;
@@ -522,33 +513,11 @@ export type Event = Entry & _Node & {
   title?: Maybe<Scalars['String']['output']>;
   venuesCollection?: Maybe<EventVenuesCollection>;
   venuesCursorCollection?: Maybe<EventVenuesCursorCollection>;
-  venuesTitle?: Maybe<Scalars['String']['output']>;
-};
-
-
-/** [See type definition](https://app.contentful.com/spaces/ix0cnzqgli1c/content_types/event) */
-export type EventAboutTitleArgs = {
-  locale?: InputMaybe<Scalars['String']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
 };
 
 
 /** [See type definition](https://app.contentful.com/spaces/ix0cnzqgli1c/content_types/event) */
 export type EventClosedTextArgs = {
-  locale?: InputMaybe<Scalars['String']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
-};
-
-
-/** [See type definition](https://app.contentful.com/spaces/ix0cnzqgli1c/content_types/event) */
-export type EventComingSoonArgs = {
-  locale?: InputMaybe<Scalars['String']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
-};
-
-
-/** [See type definition](https://app.contentful.com/spaces/ix0cnzqgli1c/content_types/event) */
-export type EventCopyrightArgs = {
   locale?: InputMaybe<Scalars['String']['input']>;
   useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
 };
@@ -576,13 +545,6 @@ export type EventDJsCursorCollectionArgs = {
   preview?: InputMaybe<Scalars['Boolean']['input']>;
   useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
   where?: InputMaybe<InstructorFilter>;
-};
-
-
-/** [See type definition](https://app.contentful.com/spaces/ix0cnzqgli1c/content_types/event) */
-export type EventDJsTitleArgs = {
-  locale?: InputMaybe<Scalars['String']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
 };
 
 
@@ -641,34 +603,11 @@ export type EventInstructorsCursorCollectionArgs = {
 
 
 /** [See type definition](https://app.contentful.com/spaces/ix0cnzqgli1c/content_types/event) */
-export type EventInstructorsTitleArgs = {
-  locale?: InputMaybe<Scalars['String']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
-};
-
-
-/** [See type definition](https://app.contentful.com/spaces/ix0cnzqgli1c/content_types/event) */
 export type EventLevelRequirementArgs = {
   locale?: InputMaybe<Scalars['String']['input']>;
   preview?: InputMaybe<Scalars['Boolean']['input']>;
   useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
   where?: InputMaybe<LevelRequirementFilter>;
-};
-
-
-/** [See type definition](https://app.contentful.com/spaces/ix0cnzqgli1c/content_types/event) */
-export type EventLevelRequirementTitleArgs = {
-  locale?: InputMaybe<Scalars['String']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
-};
-
-
-/** [See type definition](https://app.contentful.com/spaces/ix0cnzqgli1c/content_types/event) */
-export type EventLinkArgs = {
-  locale?: InputMaybe<Scalars['String']['input']>;
-  preview?: InputMaybe<Scalars['Boolean']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
-  where?: InputMaybe<LinkFilter>;
 };
 
 
@@ -713,13 +652,6 @@ export type EventPartnersCursorCollectionArgs = {
 
 
 /** [See type definition](https://app.contentful.com/spaces/ix0cnzqgli1c/content_types/event) */
-export type EventPartnersTitleArgs = {
-  locale?: InputMaybe<Scalars['String']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
-};
-
-
-/** [See type definition](https://app.contentful.com/spaces/ix0cnzqgli1c/content_types/event) */
 export type EventPricingCollectionArgs = {
   limit?: InputMaybe<Scalars['Int']['input']>;
   locale?: InputMaybe<Scalars['String']['input']>;
@@ -745,18 +677,18 @@ export type EventPricingCursorCollectionArgs = {
 
 
 /** [See type definition](https://app.contentful.com/spaces/ix0cnzqgli1c/content_types/event) */
-export type EventPricingTitleArgs = {
-  locale?: InputMaybe<Scalars['String']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
-};
-
-
-/** [See type definition](https://app.contentful.com/spaces/ix0cnzqgli1c/content_types/event) */
 export type EventRegistrationLinkArgs = {
   locale?: InputMaybe<Scalars['String']['input']>;
   preview?: InputMaybe<Scalars['Boolean']['input']>;
   useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
   where?: InputMaybe<LinkFilter>;
+};
+
+
+/** [See type definition](https://app.contentful.com/spaces/ix0cnzqgli1c/content_types/event) */
+export type EventRegistrationsOpenedArgs = {
+  locale?: InputMaybe<Scalars['String']['input']>;
+  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
 };
 
 
@@ -782,13 +714,6 @@ export type EventScheduleCursorCollectionArgs = {
   preview?: InputMaybe<Scalars['Boolean']['input']>;
   useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
   where?: InputMaybe<EventBlockFilter>;
-};
-
-
-/** [See type definition](https://app.contentful.com/spaces/ix0cnzqgli1c/content_types/event) */
-export type EventScheduleTitleArgs = {
-  locale?: InputMaybe<Scalars['String']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
 };
 
 
@@ -867,13 +792,6 @@ export type EventVenuesCursorCollectionArgs = {
   preview?: InputMaybe<Scalars['Boolean']['input']>;
   useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
   where?: InputMaybe<VenueFilter>;
-};
-
-
-/** [See type definition](https://app.contentful.com/spaces/ix0cnzqgli1c/content_types/event) */
-export type EventVenuesTitleArgs = {
-  locale?: InputMaybe<Scalars['String']['input']>;
-  useFallbackLocale?: InputMaybe<Scalars['Boolean']['input']>;
 };
 
 /** [See type definition](https://app.contentful.com/spaces/ix0cnzqgli1c/content_types/eventBlock) */
@@ -1100,30 +1018,14 @@ export type EventBlockLinkingCollectionsEventCursorCollectionArgs = {
 };
 
 export enum EventBlockLinkingCollectionsEventCollectionOrder {
-  AboutTitleAsc = 'aboutTitle_ASC',
-  AboutTitleDesc = 'aboutTitle_DESC',
   ClosedTextAsc = 'closedText_ASC',
   ClosedTextDesc = 'closedText_DESC',
-  ComingSoonAsc = 'comingSoon_ASC',
-  ComingSoonDesc = 'comingSoon_DESC',
-  CopyrightAsc = 'copyright_ASC',
-  CopyrightDesc = 'copyright_DESC',
-  DJsTitleAsc = 'dJsTitle_ASC',
-  DJsTitleDesc = 'dJsTitle_DESC',
   DarkAsc = 'dark_ASC',
   DarkDesc = 'dark_DESC',
   EndDateAsc = 'endDate_ASC',
   EndDateDesc = 'endDate_DESC',
-  InstructorsTitleAsc = 'instructorsTitle_ASC',
-  InstructorsTitleDesc = 'instructorsTitle_DESC',
-  LevelRequirementTitleAsc = 'levelRequirementTitle_ASC',
-  LevelRequirementTitleDesc = 'levelRequirementTitle_DESC',
-  PartnersTitleAsc = 'partnersTitle_ASC',
-  PartnersTitleDesc = 'partnersTitle_DESC',
-  PricingTitleAsc = 'pricingTitle_ASC',
-  PricingTitleDesc = 'pricingTitle_DESC',
-  ScheduleTitleAsc = 'scheduleTitle_ASC',
-  ScheduleTitleDesc = 'scheduleTitle_DESC',
+  RegistrationsOpenedAsc = 'registrationsOpened_ASC',
+  RegistrationsOpenedDesc = 'registrationsOpened_DESC',
   SlugAsc = 'slug_ASC',
   SlugDesc = 'slug_DESC',
   StartDateAsc = 'startDate_ASC',
@@ -1139,36 +1041,18 @@ export enum EventBlockLinkingCollectionsEventCollectionOrder {
   TaglineAsc = 'tagline_ASC',
   TaglineDesc = 'tagline_DESC',
   TitleAsc = 'title_ASC',
-  TitleDesc = 'title_DESC',
-  VenuesTitleAsc = 'venuesTitle_ASC',
-  VenuesTitleDesc = 'venuesTitle_DESC'
+  TitleDesc = 'title_DESC'
 }
 
 export enum EventBlockLinkingCollectionsEventCursorCollectionOrder {
-  AboutTitleAsc = 'aboutTitle_ASC',
-  AboutTitleDesc = 'aboutTitle_DESC',
   ClosedTextAsc = 'closedText_ASC',
   ClosedTextDesc = 'closedText_DESC',
-  ComingSoonAsc = 'comingSoon_ASC',
-  ComingSoonDesc = 'comingSoon_DESC',
-  CopyrightAsc = 'copyright_ASC',
-  CopyrightDesc = 'copyright_DESC',
-  DJsTitleAsc = 'dJsTitle_ASC',
-  DJsTitleDesc = 'dJsTitle_DESC',
   DarkAsc = 'dark_ASC',
   DarkDesc = 'dark_DESC',
   EndDateAsc = 'endDate_ASC',
   EndDateDesc = 'endDate_DESC',
-  InstructorsTitleAsc = 'instructorsTitle_ASC',
-  InstructorsTitleDesc = 'instructorsTitle_DESC',
-  LevelRequirementTitleAsc = 'levelRequirementTitle_ASC',
-  LevelRequirementTitleDesc = 'levelRequirementTitle_DESC',
-  PartnersTitleAsc = 'partnersTitle_ASC',
-  PartnersTitleDesc = 'partnersTitle_DESC',
-  PricingTitleAsc = 'pricingTitle_ASC',
-  PricingTitleDesc = 'pricingTitle_DESC',
-  ScheduleTitleAsc = 'scheduleTitle_ASC',
-  ScheduleTitleDesc = 'scheduleTitle_DESC',
+  RegistrationsOpenedAsc = 'registrationsOpened_ASC',
+  RegistrationsOpenedDesc = 'registrationsOpened_DESC',
   SlugAsc = 'slug_ASC',
   SlugDesc = 'slug_DESC',
   StartDateAsc = 'startDate_ASC',
@@ -1184,9 +1068,7 @@ export enum EventBlockLinkingCollectionsEventCursorCollectionOrder {
   TaglineAsc = 'tagline_ASC',
   TaglineDesc = 'tagline_DESC',
   TitleAsc = 'title_ASC',
-  TitleDesc = 'title_DESC',
-  VenuesTitleAsc = 'venuesTitle_ASC',
-  VenuesTitleDesc = 'venuesTitle_DESC'
+  TitleDesc = 'title_DESC'
 }
 
 export enum EventBlockOrder {
@@ -1325,13 +1207,6 @@ export type EventDetailsResourcesInline = ResourceLink & {
 export type EventFilter = {
   AND?: InputMaybe<Array<InputMaybe<EventFilter>>>;
   OR?: InputMaybe<Array<InputMaybe<EventFilter>>>;
-  aboutTitle?: InputMaybe<Scalars['String']['input']>;
-  aboutTitle_contains?: InputMaybe<Scalars['String']['input']>;
-  aboutTitle_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  aboutTitle_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  aboutTitle_not?: InputMaybe<Scalars['String']['input']>;
-  aboutTitle_not_contains?: InputMaybe<Scalars['String']['input']>;
-  aboutTitle_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   closedText?: InputMaybe<Scalars['String']['input']>;
   closedText_contains?: InputMaybe<Scalars['String']['input']>;
   closedText_exists?: InputMaybe<Scalars['Boolean']['input']>;
@@ -1339,30 +1214,9 @@ export type EventFilter = {
   closedText_not?: InputMaybe<Scalars['String']['input']>;
   closedText_not_contains?: InputMaybe<Scalars['String']['input']>;
   closedText_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  comingSoon?: InputMaybe<Scalars['String']['input']>;
-  comingSoon_contains?: InputMaybe<Scalars['String']['input']>;
-  comingSoon_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  comingSoon_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  comingSoon_not?: InputMaybe<Scalars['String']['input']>;
-  comingSoon_not_contains?: InputMaybe<Scalars['String']['input']>;
-  comingSoon_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   contentfulMetadata?: InputMaybe<ContentfulMetadataFilter>;
-  copyright?: InputMaybe<Scalars['String']['input']>;
-  copyright_contains?: InputMaybe<Scalars['String']['input']>;
-  copyright_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  copyright_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  copyright_not?: InputMaybe<Scalars['String']['input']>;
-  copyright_not_contains?: InputMaybe<Scalars['String']['input']>;
-  copyright_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   dJs?: InputMaybe<CfInstructorNestedFilter>;
   dJsCollection_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  dJsTitle?: InputMaybe<Scalars['String']['input']>;
-  dJsTitle_contains?: InputMaybe<Scalars['String']['input']>;
-  dJsTitle_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  dJsTitle_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  dJsTitle_not?: InputMaybe<Scalars['String']['input']>;
-  dJsTitle_not_contains?: InputMaybe<Scalars['String']['input']>;
-  dJsTitle_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   dark?: InputMaybe<Scalars['Boolean']['input']>;
   dark_exists?: InputMaybe<Scalars['Boolean']['input']>;
   dark_not?: InputMaybe<Scalars['Boolean']['input']>;
@@ -1381,55 +1235,21 @@ export type EventFilter = {
   image_exists?: InputMaybe<Scalars['Boolean']['input']>;
   instructors?: InputMaybe<CfInstructorNestedFilter>;
   instructorsCollection_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  instructorsTitle?: InputMaybe<Scalars['String']['input']>;
-  instructorsTitle_contains?: InputMaybe<Scalars['String']['input']>;
-  instructorsTitle_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  instructorsTitle_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  instructorsTitle_not?: InputMaybe<Scalars['String']['input']>;
-  instructorsTitle_not_contains?: InputMaybe<Scalars['String']['input']>;
-  instructorsTitle_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   levelRequirement?: InputMaybe<CfLevelRequirementNestedFilter>;
-  levelRequirementTitle?: InputMaybe<Scalars['String']['input']>;
-  levelRequirementTitle_contains?: InputMaybe<Scalars['String']['input']>;
-  levelRequirementTitle_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  levelRequirementTitle_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  levelRequirementTitle_not?: InputMaybe<Scalars['String']['input']>;
-  levelRequirementTitle_not_contains?: InputMaybe<Scalars['String']['input']>;
-  levelRequirementTitle_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   levelRequirement_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  link?: InputMaybe<CfLinkNestedFilter>;
-  link_exists?: InputMaybe<Scalars['Boolean']['input']>;
   metadata?: InputMaybe<CfPageMetadataNestedFilter>;
   metadata_exists?: InputMaybe<Scalars['Boolean']['input']>;
   partners?: InputMaybe<CfPartnersNestedFilter>;
   partnersCollection_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  partnersTitle?: InputMaybe<Scalars['String']['input']>;
-  partnersTitle_contains?: InputMaybe<Scalars['String']['input']>;
-  partnersTitle_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  partnersTitle_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  partnersTitle_not?: InputMaybe<Scalars['String']['input']>;
-  partnersTitle_not_contains?: InputMaybe<Scalars['String']['input']>;
-  partnersTitle_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   pricing?: InputMaybe<CfPriceNestedFilter>;
   pricingCollection_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  pricingTitle?: InputMaybe<Scalars['String']['input']>;
-  pricingTitle_contains?: InputMaybe<Scalars['String']['input']>;
-  pricingTitle_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  pricingTitle_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  pricingTitle_not?: InputMaybe<Scalars['String']['input']>;
-  pricingTitle_not_contains?: InputMaybe<Scalars['String']['input']>;
-  pricingTitle_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   registrationLink?: InputMaybe<CfLinkNestedFilter>;
   registrationLink_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  registrationsOpened?: InputMaybe<Scalars['Boolean']['input']>;
+  registrationsOpened_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  registrationsOpened_not?: InputMaybe<Scalars['Boolean']['input']>;
   schedule?: InputMaybe<CfEventBlockNestedFilter>;
   scheduleCollection_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  scheduleTitle?: InputMaybe<Scalars['String']['input']>;
-  scheduleTitle_contains?: InputMaybe<Scalars['String']['input']>;
-  scheduleTitle_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  scheduleTitle_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  scheduleTitle_not?: InputMaybe<Scalars['String']['input']>;
-  scheduleTitle_not_contains?: InputMaybe<Scalars['String']['input']>;
-  scheduleTitle_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   slug?: InputMaybe<Scalars['String']['input']>;
   slug_contains?: InputMaybe<Scalars['String']['input']>;
   slug_exists?: InputMaybe<Scalars['Boolean']['input']>;
@@ -1465,13 +1285,6 @@ export type EventFilter = {
   title_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   venues?: InputMaybe<CfVenueNestedFilter>;
   venuesCollection_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  venuesTitle?: InputMaybe<Scalars['String']['input']>;
-  venuesTitle_contains?: InputMaybe<Scalars['String']['input']>;
-  venuesTitle_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  venuesTitle_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  venuesTitle_not?: InputMaybe<Scalars['String']['input']>;
-  venuesTitle_not_contains?: InputMaybe<Scalars['String']['input']>;
-  venuesTitle_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
 export type EventInstructorsCollection = {
@@ -1549,30 +1362,14 @@ export type EventLinkingCollectionsEntryCursorCollectionArgs = {
 };
 
 export enum EventOrder {
-  AboutTitleAsc = 'aboutTitle_ASC',
-  AboutTitleDesc = 'aboutTitle_DESC',
   ClosedTextAsc = 'closedText_ASC',
   ClosedTextDesc = 'closedText_DESC',
-  ComingSoonAsc = 'comingSoon_ASC',
-  ComingSoonDesc = 'comingSoon_DESC',
-  CopyrightAsc = 'copyright_ASC',
-  CopyrightDesc = 'copyright_DESC',
-  DJsTitleAsc = 'dJsTitle_ASC',
-  DJsTitleDesc = 'dJsTitle_DESC',
   DarkAsc = 'dark_ASC',
   DarkDesc = 'dark_DESC',
   EndDateAsc = 'endDate_ASC',
   EndDateDesc = 'endDate_DESC',
-  InstructorsTitleAsc = 'instructorsTitle_ASC',
-  InstructorsTitleDesc = 'instructorsTitle_DESC',
-  LevelRequirementTitleAsc = 'levelRequirementTitle_ASC',
-  LevelRequirementTitleDesc = 'levelRequirementTitle_DESC',
-  PartnersTitleAsc = 'partnersTitle_ASC',
-  PartnersTitleDesc = 'partnersTitle_DESC',
-  PricingTitleAsc = 'pricingTitle_ASC',
-  PricingTitleDesc = 'pricingTitle_DESC',
-  ScheduleTitleAsc = 'scheduleTitle_ASC',
-  ScheduleTitleDesc = 'scheduleTitle_DESC',
+  RegistrationsOpenedAsc = 'registrationsOpened_ASC',
+  RegistrationsOpenedDesc = 'registrationsOpened_DESC',
   SlugAsc = 'slug_ASC',
   SlugDesc = 'slug_DESC',
   StartDateAsc = 'startDate_ASC',
@@ -1588,9 +1385,7 @@ export enum EventOrder {
   TaglineAsc = 'tagline_ASC',
   TaglineDesc = 'tagline_DESC',
   TitleAsc = 'title_ASC',
-  TitleDesc = 'title_DESC',
-  VenuesTitleAsc = 'venuesTitle_ASC',
-  VenuesTitleDesc = 'venuesTitle_DESC'
+  TitleDesc = 'title_DESC'
 }
 
 export type EventPartnersCollection = {
@@ -2827,30 +2622,14 @@ export type InstructorLinkingCollectionsEventCursorCollectionArgs = {
 };
 
 export enum InstructorLinkingCollectionsEventCollectionOrder {
-  AboutTitleAsc = 'aboutTitle_ASC',
-  AboutTitleDesc = 'aboutTitle_DESC',
   ClosedTextAsc = 'closedText_ASC',
   ClosedTextDesc = 'closedText_DESC',
-  ComingSoonAsc = 'comingSoon_ASC',
-  ComingSoonDesc = 'comingSoon_DESC',
-  CopyrightAsc = 'copyright_ASC',
-  CopyrightDesc = 'copyright_DESC',
-  DJsTitleAsc = 'dJsTitle_ASC',
-  DJsTitleDesc = 'dJsTitle_DESC',
   DarkAsc = 'dark_ASC',
   DarkDesc = 'dark_DESC',
   EndDateAsc = 'endDate_ASC',
   EndDateDesc = 'endDate_DESC',
-  InstructorsTitleAsc = 'instructorsTitle_ASC',
-  InstructorsTitleDesc = 'instructorsTitle_DESC',
-  LevelRequirementTitleAsc = 'levelRequirementTitle_ASC',
-  LevelRequirementTitleDesc = 'levelRequirementTitle_DESC',
-  PartnersTitleAsc = 'partnersTitle_ASC',
-  PartnersTitleDesc = 'partnersTitle_DESC',
-  PricingTitleAsc = 'pricingTitle_ASC',
-  PricingTitleDesc = 'pricingTitle_DESC',
-  ScheduleTitleAsc = 'scheduleTitle_ASC',
-  ScheduleTitleDesc = 'scheduleTitle_DESC',
+  RegistrationsOpenedAsc = 'registrationsOpened_ASC',
+  RegistrationsOpenedDesc = 'registrationsOpened_DESC',
   SlugAsc = 'slug_ASC',
   SlugDesc = 'slug_DESC',
   StartDateAsc = 'startDate_ASC',
@@ -2866,36 +2645,18 @@ export enum InstructorLinkingCollectionsEventCollectionOrder {
   TaglineAsc = 'tagline_ASC',
   TaglineDesc = 'tagline_DESC',
   TitleAsc = 'title_ASC',
-  TitleDesc = 'title_DESC',
-  VenuesTitleAsc = 'venuesTitle_ASC',
-  VenuesTitleDesc = 'venuesTitle_DESC'
+  TitleDesc = 'title_DESC'
 }
 
 export enum InstructorLinkingCollectionsEventCursorCollectionOrder {
-  AboutTitleAsc = 'aboutTitle_ASC',
-  AboutTitleDesc = 'aboutTitle_DESC',
   ClosedTextAsc = 'closedText_ASC',
   ClosedTextDesc = 'closedText_DESC',
-  ComingSoonAsc = 'comingSoon_ASC',
-  ComingSoonDesc = 'comingSoon_DESC',
-  CopyrightAsc = 'copyright_ASC',
-  CopyrightDesc = 'copyright_DESC',
-  DJsTitleAsc = 'dJsTitle_ASC',
-  DJsTitleDesc = 'dJsTitle_DESC',
   DarkAsc = 'dark_ASC',
   DarkDesc = 'dark_DESC',
   EndDateAsc = 'endDate_ASC',
   EndDateDesc = 'endDate_DESC',
-  InstructorsTitleAsc = 'instructorsTitle_ASC',
-  InstructorsTitleDesc = 'instructorsTitle_DESC',
-  LevelRequirementTitleAsc = 'levelRequirementTitle_ASC',
-  LevelRequirementTitleDesc = 'levelRequirementTitle_DESC',
-  PartnersTitleAsc = 'partnersTitle_ASC',
-  PartnersTitleDesc = 'partnersTitle_DESC',
-  PricingTitleAsc = 'pricingTitle_ASC',
-  PricingTitleDesc = 'pricingTitle_DESC',
-  ScheduleTitleAsc = 'scheduleTitle_ASC',
-  ScheduleTitleDesc = 'scheduleTitle_DESC',
+  RegistrationsOpenedAsc = 'registrationsOpened_ASC',
+  RegistrationsOpenedDesc = 'registrationsOpened_DESC',
   SlugAsc = 'slug_ASC',
   SlugDesc = 'slug_DESC',
   StartDateAsc = 'startDate_ASC',
@@ -2911,9 +2672,7 @@ export enum InstructorLinkingCollectionsEventCursorCollectionOrder {
   TaglineAsc = 'tagline_ASC',
   TaglineDesc = 'tagline_DESC',
   TitleAsc = 'title_ASC',
-  TitleDesc = 'title_DESC',
-  VenuesTitleAsc = 'venuesTitle_ASC',
-  VenuesTitleDesc = 'venuesTitle_DESC'
+  TitleDesc = 'title_DESC'
 }
 
 export enum InstructorOrder {
@@ -3267,30 +3026,14 @@ export type LevelRequirementLinkingCollectionsEventCursorCollectionArgs = {
 };
 
 export enum LevelRequirementLinkingCollectionsEventCollectionOrder {
-  AboutTitleAsc = 'aboutTitle_ASC',
-  AboutTitleDesc = 'aboutTitle_DESC',
   ClosedTextAsc = 'closedText_ASC',
   ClosedTextDesc = 'closedText_DESC',
-  ComingSoonAsc = 'comingSoon_ASC',
-  ComingSoonDesc = 'comingSoon_DESC',
-  CopyrightAsc = 'copyright_ASC',
-  CopyrightDesc = 'copyright_DESC',
-  DJsTitleAsc = 'dJsTitle_ASC',
-  DJsTitleDesc = 'dJsTitle_DESC',
   DarkAsc = 'dark_ASC',
   DarkDesc = 'dark_DESC',
   EndDateAsc = 'endDate_ASC',
   EndDateDesc = 'endDate_DESC',
-  InstructorsTitleAsc = 'instructorsTitle_ASC',
-  InstructorsTitleDesc = 'instructorsTitle_DESC',
-  LevelRequirementTitleAsc = 'levelRequirementTitle_ASC',
-  LevelRequirementTitleDesc = 'levelRequirementTitle_DESC',
-  PartnersTitleAsc = 'partnersTitle_ASC',
-  PartnersTitleDesc = 'partnersTitle_DESC',
-  PricingTitleAsc = 'pricingTitle_ASC',
-  PricingTitleDesc = 'pricingTitle_DESC',
-  ScheduleTitleAsc = 'scheduleTitle_ASC',
-  ScheduleTitleDesc = 'scheduleTitle_DESC',
+  RegistrationsOpenedAsc = 'registrationsOpened_ASC',
+  RegistrationsOpenedDesc = 'registrationsOpened_DESC',
   SlugAsc = 'slug_ASC',
   SlugDesc = 'slug_DESC',
   StartDateAsc = 'startDate_ASC',
@@ -3306,36 +3049,18 @@ export enum LevelRequirementLinkingCollectionsEventCollectionOrder {
   TaglineAsc = 'tagline_ASC',
   TaglineDesc = 'tagline_DESC',
   TitleAsc = 'title_ASC',
-  TitleDesc = 'title_DESC',
-  VenuesTitleAsc = 'venuesTitle_ASC',
-  VenuesTitleDesc = 'venuesTitle_DESC'
+  TitleDesc = 'title_DESC'
 }
 
 export enum LevelRequirementLinkingCollectionsEventCursorCollectionOrder {
-  AboutTitleAsc = 'aboutTitle_ASC',
-  AboutTitleDesc = 'aboutTitle_DESC',
   ClosedTextAsc = 'closedText_ASC',
   ClosedTextDesc = 'closedText_DESC',
-  ComingSoonAsc = 'comingSoon_ASC',
-  ComingSoonDesc = 'comingSoon_DESC',
-  CopyrightAsc = 'copyright_ASC',
-  CopyrightDesc = 'copyright_DESC',
-  DJsTitleAsc = 'dJsTitle_ASC',
-  DJsTitleDesc = 'dJsTitle_DESC',
   DarkAsc = 'dark_ASC',
   DarkDesc = 'dark_DESC',
   EndDateAsc = 'endDate_ASC',
   EndDateDesc = 'endDate_DESC',
-  InstructorsTitleAsc = 'instructorsTitle_ASC',
-  InstructorsTitleDesc = 'instructorsTitle_DESC',
-  LevelRequirementTitleAsc = 'levelRequirementTitle_ASC',
-  LevelRequirementTitleDesc = 'levelRequirementTitle_DESC',
-  PartnersTitleAsc = 'partnersTitle_ASC',
-  PartnersTitleDesc = 'partnersTitle_DESC',
-  PricingTitleAsc = 'pricingTitle_ASC',
-  PricingTitleDesc = 'pricingTitle_DESC',
-  ScheduleTitleAsc = 'scheduleTitle_ASC',
-  ScheduleTitleDesc = 'scheduleTitle_DESC',
+  RegistrationsOpenedAsc = 'registrationsOpened_ASC',
+  RegistrationsOpenedDesc = 'registrationsOpened_DESC',
   SlugAsc = 'slug_ASC',
   SlugDesc = 'slug_DESC',
   StartDateAsc = 'startDate_ASC',
@@ -3351,9 +3076,7 @@ export enum LevelRequirementLinkingCollectionsEventCursorCollectionOrder {
   TaglineAsc = 'tagline_ASC',
   TaglineDesc = 'tagline_DESC',
   TitleAsc = 'title_ASC',
-  TitleDesc = 'title_DESC',
-  VenuesTitleAsc = 'venuesTitle_ASC',
-  VenuesTitleDesc = 'venuesTitle_DESC'
+  TitleDesc = 'title_DESC'
 }
 
 export enum LevelRequirementOrder {
@@ -3531,30 +3254,14 @@ export type LinkLinkingCollectionsFooterCursorCollectionArgs = {
 };
 
 export enum LinkLinkingCollectionsEventCollectionOrder {
-  AboutTitleAsc = 'aboutTitle_ASC',
-  AboutTitleDesc = 'aboutTitle_DESC',
   ClosedTextAsc = 'closedText_ASC',
   ClosedTextDesc = 'closedText_DESC',
-  ComingSoonAsc = 'comingSoon_ASC',
-  ComingSoonDesc = 'comingSoon_DESC',
-  CopyrightAsc = 'copyright_ASC',
-  CopyrightDesc = 'copyright_DESC',
-  DJsTitleAsc = 'dJsTitle_ASC',
-  DJsTitleDesc = 'dJsTitle_DESC',
   DarkAsc = 'dark_ASC',
   DarkDesc = 'dark_DESC',
   EndDateAsc = 'endDate_ASC',
   EndDateDesc = 'endDate_DESC',
-  InstructorsTitleAsc = 'instructorsTitle_ASC',
-  InstructorsTitleDesc = 'instructorsTitle_DESC',
-  LevelRequirementTitleAsc = 'levelRequirementTitle_ASC',
-  LevelRequirementTitleDesc = 'levelRequirementTitle_DESC',
-  PartnersTitleAsc = 'partnersTitle_ASC',
-  PartnersTitleDesc = 'partnersTitle_DESC',
-  PricingTitleAsc = 'pricingTitle_ASC',
-  PricingTitleDesc = 'pricingTitle_DESC',
-  ScheduleTitleAsc = 'scheduleTitle_ASC',
-  ScheduleTitleDesc = 'scheduleTitle_DESC',
+  RegistrationsOpenedAsc = 'registrationsOpened_ASC',
+  RegistrationsOpenedDesc = 'registrationsOpened_DESC',
   SlugAsc = 'slug_ASC',
   SlugDesc = 'slug_DESC',
   StartDateAsc = 'startDate_ASC',
@@ -3570,36 +3277,18 @@ export enum LinkLinkingCollectionsEventCollectionOrder {
   TaglineAsc = 'tagline_ASC',
   TaglineDesc = 'tagline_DESC',
   TitleAsc = 'title_ASC',
-  TitleDesc = 'title_DESC',
-  VenuesTitleAsc = 'venuesTitle_ASC',
-  VenuesTitleDesc = 'venuesTitle_DESC'
+  TitleDesc = 'title_DESC'
 }
 
 export enum LinkLinkingCollectionsEventCursorCollectionOrder {
-  AboutTitleAsc = 'aboutTitle_ASC',
-  AboutTitleDesc = 'aboutTitle_DESC',
   ClosedTextAsc = 'closedText_ASC',
   ClosedTextDesc = 'closedText_DESC',
-  ComingSoonAsc = 'comingSoon_ASC',
-  ComingSoonDesc = 'comingSoon_DESC',
-  CopyrightAsc = 'copyright_ASC',
-  CopyrightDesc = 'copyright_DESC',
-  DJsTitleAsc = 'dJsTitle_ASC',
-  DJsTitleDesc = 'dJsTitle_DESC',
   DarkAsc = 'dark_ASC',
   DarkDesc = 'dark_DESC',
   EndDateAsc = 'endDate_ASC',
   EndDateDesc = 'endDate_DESC',
-  InstructorsTitleAsc = 'instructorsTitle_ASC',
-  InstructorsTitleDesc = 'instructorsTitle_DESC',
-  LevelRequirementTitleAsc = 'levelRequirementTitle_ASC',
-  LevelRequirementTitleDesc = 'levelRequirementTitle_DESC',
-  PartnersTitleAsc = 'partnersTitle_ASC',
-  PartnersTitleDesc = 'partnersTitle_DESC',
-  PricingTitleAsc = 'pricingTitle_ASC',
-  PricingTitleDesc = 'pricingTitle_DESC',
-  ScheduleTitleAsc = 'scheduleTitle_ASC',
-  ScheduleTitleDesc = 'scheduleTitle_DESC',
+  RegistrationsOpenedAsc = 'registrationsOpened_ASC',
+  RegistrationsOpenedDesc = 'registrationsOpened_DESC',
   SlugAsc = 'slug_ASC',
   SlugDesc = 'slug_DESC',
   StartDateAsc = 'startDate_ASC',
@@ -3615,9 +3304,7 @@ export enum LinkLinkingCollectionsEventCursorCollectionOrder {
   TaglineAsc = 'tagline_ASC',
   TaglineDesc = 'tagline_DESC',
   TitleAsc = 'title_ASC',
-  TitleDesc = 'title_DESC',
-  VenuesTitleAsc = 'venuesTitle_ASC',
-  VenuesTitleDesc = 'venuesTitle_DESC'
+  TitleDesc = 'title_DESC'
 }
 
 export enum LinkLinkingCollectionsFeaturedSlideCollectionOrder {
@@ -4365,30 +4052,14 @@ export type PageMetadataLinkingCollectionsStaticPageCursorCollectionArgs = {
 };
 
 export enum PageMetadataLinkingCollectionsEventCollectionOrder {
-  AboutTitleAsc = 'aboutTitle_ASC',
-  AboutTitleDesc = 'aboutTitle_DESC',
   ClosedTextAsc = 'closedText_ASC',
   ClosedTextDesc = 'closedText_DESC',
-  ComingSoonAsc = 'comingSoon_ASC',
-  ComingSoonDesc = 'comingSoon_DESC',
-  CopyrightAsc = 'copyright_ASC',
-  CopyrightDesc = 'copyright_DESC',
-  DJsTitleAsc = 'dJsTitle_ASC',
-  DJsTitleDesc = 'dJsTitle_DESC',
   DarkAsc = 'dark_ASC',
   DarkDesc = 'dark_DESC',
   EndDateAsc = 'endDate_ASC',
   EndDateDesc = 'endDate_DESC',
-  InstructorsTitleAsc = 'instructorsTitle_ASC',
-  InstructorsTitleDesc = 'instructorsTitle_DESC',
-  LevelRequirementTitleAsc = 'levelRequirementTitle_ASC',
-  LevelRequirementTitleDesc = 'levelRequirementTitle_DESC',
-  PartnersTitleAsc = 'partnersTitle_ASC',
-  PartnersTitleDesc = 'partnersTitle_DESC',
-  PricingTitleAsc = 'pricingTitle_ASC',
-  PricingTitleDesc = 'pricingTitle_DESC',
-  ScheduleTitleAsc = 'scheduleTitle_ASC',
-  ScheduleTitleDesc = 'scheduleTitle_DESC',
+  RegistrationsOpenedAsc = 'registrationsOpened_ASC',
+  RegistrationsOpenedDesc = 'registrationsOpened_DESC',
   SlugAsc = 'slug_ASC',
   SlugDesc = 'slug_DESC',
   StartDateAsc = 'startDate_ASC',
@@ -4404,36 +4075,18 @@ export enum PageMetadataLinkingCollectionsEventCollectionOrder {
   TaglineAsc = 'tagline_ASC',
   TaglineDesc = 'tagline_DESC',
   TitleAsc = 'title_ASC',
-  TitleDesc = 'title_DESC',
-  VenuesTitleAsc = 'venuesTitle_ASC',
-  VenuesTitleDesc = 'venuesTitle_DESC'
+  TitleDesc = 'title_DESC'
 }
 
 export enum PageMetadataLinkingCollectionsEventCursorCollectionOrder {
-  AboutTitleAsc = 'aboutTitle_ASC',
-  AboutTitleDesc = 'aboutTitle_DESC',
   ClosedTextAsc = 'closedText_ASC',
   ClosedTextDesc = 'closedText_DESC',
-  ComingSoonAsc = 'comingSoon_ASC',
-  ComingSoonDesc = 'comingSoon_DESC',
-  CopyrightAsc = 'copyright_ASC',
-  CopyrightDesc = 'copyright_DESC',
-  DJsTitleAsc = 'dJsTitle_ASC',
-  DJsTitleDesc = 'dJsTitle_DESC',
   DarkAsc = 'dark_ASC',
   DarkDesc = 'dark_DESC',
   EndDateAsc = 'endDate_ASC',
   EndDateDesc = 'endDate_DESC',
-  InstructorsTitleAsc = 'instructorsTitle_ASC',
-  InstructorsTitleDesc = 'instructorsTitle_DESC',
-  LevelRequirementTitleAsc = 'levelRequirementTitle_ASC',
-  LevelRequirementTitleDesc = 'levelRequirementTitle_DESC',
-  PartnersTitleAsc = 'partnersTitle_ASC',
-  PartnersTitleDesc = 'partnersTitle_DESC',
-  PricingTitleAsc = 'pricingTitle_ASC',
-  PricingTitleDesc = 'pricingTitle_DESC',
-  ScheduleTitleAsc = 'scheduleTitle_ASC',
-  ScheduleTitleDesc = 'scheduleTitle_DESC',
+  RegistrationsOpenedAsc = 'registrationsOpened_ASC',
+  RegistrationsOpenedDesc = 'registrationsOpened_DESC',
   SlugAsc = 'slug_ASC',
   SlugDesc = 'slug_DESC',
   StartDateAsc = 'startDate_ASC',
@@ -4449,9 +4102,7 @@ export enum PageMetadataLinkingCollectionsEventCursorCollectionOrder {
   TaglineAsc = 'tagline_ASC',
   TaglineDesc = 'tagline_DESC',
   TitleAsc = 'title_ASC',
-  TitleDesc = 'title_DESC',
-  VenuesTitleAsc = 'venuesTitle_ASC',
-  VenuesTitleDesc = 'venuesTitle_DESC'
+  TitleDesc = 'title_DESC'
 }
 
 export enum PageMetadataLinkingCollectionsPageCollectionOrder {
@@ -5015,30 +4666,14 @@ export type PartnersLinkingCollectionsEventCursorCollectionArgs = {
 };
 
 export enum PartnersLinkingCollectionsEventCollectionOrder {
-  AboutTitleAsc = 'aboutTitle_ASC',
-  AboutTitleDesc = 'aboutTitle_DESC',
   ClosedTextAsc = 'closedText_ASC',
   ClosedTextDesc = 'closedText_DESC',
-  ComingSoonAsc = 'comingSoon_ASC',
-  ComingSoonDesc = 'comingSoon_DESC',
-  CopyrightAsc = 'copyright_ASC',
-  CopyrightDesc = 'copyright_DESC',
-  DJsTitleAsc = 'dJsTitle_ASC',
-  DJsTitleDesc = 'dJsTitle_DESC',
   DarkAsc = 'dark_ASC',
   DarkDesc = 'dark_DESC',
   EndDateAsc = 'endDate_ASC',
   EndDateDesc = 'endDate_DESC',
-  InstructorsTitleAsc = 'instructorsTitle_ASC',
-  InstructorsTitleDesc = 'instructorsTitle_DESC',
-  LevelRequirementTitleAsc = 'levelRequirementTitle_ASC',
-  LevelRequirementTitleDesc = 'levelRequirementTitle_DESC',
-  PartnersTitleAsc = 'partnersTitle_ASC',
-  PartnersTitleDesc = 'partnersTitle_DESC',
-  PricingTitleAsc = 'pricingTitle_ASC',
-  PricingTitleDesc = 'pricingTitle_DESC',
-  ScheduleTitleAsc = 'scheduleTitle_ASC',
-  ScheduleTitleDesc = 'scheduleTitle_DESC',
+  RegistrationsOpenedAsc = 'registrationsOpened_ASC',
+  RegistrationsOpenedDesc = 'registrationsOpened_DESC',
   SlugAsc = 'slug_ASC',
   SlugDesc = 'slug_DESC',
   StartDateAsc = 'startDate_ASC',
@@ -5054,36 +4689,18 @@ export enum PartnersLinkingCollectionsEventCollectionOrder {
   TaglineAsc = 'tagline_ASC',
   TaglineDesc = 'tagline_DESC',
   TitleAsc = 'title_ASC',
-  TitleDesc = 'title_DESC',
-  VenuesTitleAsc = 'venuesTitle_ASC',
-  VenuesTitleDesc = 'venuesTitle_DESC'
+  TitleDesc = 'title_DESC'
 }
 
 export enum PartnersLinkingCollectionsEventCursorCollectionOrder {
-  AboutTitleAsc = 'aboutTitle_ASC',
-  AboutTitleDesc = 'aboutTitle_DESC',
   ClosedTextAsc = 'closedText_ASC',
   ClosedTextDesc = 'closedText_DESC',
-  ComingSoonAsc = 'comingSoon_ASC',
-  ComingSoonDesc = 'comingSoon_DESC',
-  CopyrightAsc = 'copyright_ASC',
-  CopyrightDesc = 'copyright_DESC',
-  DJsTitleAsc = 'dJsTitle_ASC',
-  DJsTitleDesc = 'dJsTitle_DESC',
   DarkAsc = 'dark_ASC',
   DarkDesc = 'dark_DESC',
   EndDateAsc = 'endDate_ASC',
   EndDateDesc = 'endDate_DESC',
-  InstructorsTitleAsc = 'instructorsTitle_ASC',
-  InstructorsTitleDesc = 'instructorsTitle_DESC',
-  LevelRequirementTitleAsc = 'levelRequirementTitle_ASC',
-  LevelRequirementTitleDesc = 'levelRequirementTitle_DESC',
-  PartnersTitleAsc = 'partnersTitle_ASC',
-  PartnersTitleDesc = 'partnersTitle_DESC',
-  PricingTitleAsc = 'pricingTitle_ASC',
-  PricingTitleDesc = 'pricingTitle_DESC',
-  ScheduleTitleAsc = 'scheduleTitle_ASC',
-  ScheduleTitleDesc = 'scheduleTitle_DESC',
+  RegistrationsOpenedAsc = 'registrationsOpened_ASC',
+  RegistrationsOpenedDesc = 'registrationsOpened_DESC',
   SlugAsc = 'slug_ASC',
   SlugDesc = 'slug_DESC',
   StartDateAsc = 'startDate_ASC',
@@ -5099,9 +4716,7 @@ export enum PartnersLinkingCollectionsEventCursorCollectionOrder {
   TaglineAsc = 'tagline_ASC',
   TaglineDesc = 'tagline_DESC',
   TitleAsc = 'title_ASC',
-  TitleDesc = 'title_DESC',
-  VenuesTitleAsc = 'venuesTitle_ASC',
-  VenuesTitleDesc = 'venuesTitle_DESC'
+  TitleDesc = 'title_DESC'
 }
 
 export enum PartnersOrder {
@@ -5303,30 +4918,14 @@ export type PriceLinkingCollectionsEventCursorCollectionArgs = {
 };
 
 export enum PriceLinkingCollectionsEventCollectionOrder {
-  AboutTitleAsc = 'aboutTitle_ASC',
-  AboutTitleDesc = 'aboutTitle_DESC',
   ClosedTextAsc = 'closedText_ASC',
   ClosedTextDesc = 'closedText_DESC',
-  ComingSoonAsc = 'comingSoon_ASC',
-  ComingSoonDesc = 'comingSoon_DESC',
-  CopyrightAsc = 'copyright_ASC',
-  CopyrightDesc = 'copyright_DESC',
-  DJsTitleAsc = 'dJsTitle_ASC',
-  DJsTitleDesc = 'dJsTitle_DESC',
   DarkAsc = 'dark_ASC',
   DarkDesc = 'dark_DESC',
   EndDateAsc = 'endDate_ASC',
   EndDateDesc = 'endDate_DESC',
-  InstructorsTitleAsc = 'instructorsTitle_ASC',
-  InstructorsTitleDesc = 'instructorsTitle_DESC',
-  LevelRequirementTitleAsc = 'levelRequirementTitle_ASC',
-  LevelRequirementTitleDesc = 'levelRequirementTitle_DESC',
-  PartnersTitleAsc = 'partnersTitle_ASC',
-  PartnersTitleDesc = 'partnersTitle_DESC',
-  PricingTitleAsc = 'pricingTitle_ASC',
-  PricingTitleDesc = 'pricingTitle_DESC',
-  ScheduleTitleAsc = 'scheduleTitle_ASC',
-  ScheduleTitleDesc = 'scheduleTitle_DESC',
+  RegistrationsOpenedAsc = 'registrationsOpened_ASC',
+  RegistrationsOpenedDesc = 'registrationsOpened_DESC',
   SlugAsc = 'slug_ASC',
   SlugDesc = 'slug_DESC',
   StartDateAsc = 'startDate_ASC',
@@ -5342,36 +4941,18 @@ export enum PriceLinkingCollectionsEventCollectionOrder {
   TaglineAsc = 'tagline_ASC',
   TaglineDesc = 'tagline_DESC',
   TitleAsc = 'title_ASC',
-  TitleDesc = 'title_DESC',
-  VenuesTitleAsc = 'venuesTitle_ASC',
-  VenuesTitleDesc = 'venuesTitle_DESC'
+  TitleDesc = 'title_DESC'
 }
 
 export enum PriceLinkingCollectionsEventCursorCollectionOrder {
-  AboutTitleAsc = 'aboutTitle_ASC',
-  AboutTitleDesc = 'aboutTitle_DESC',
   ClosedTextAsc = 'closedText_ASC',
   ClosedTextDesc = 'closedText_DESC',
-  ComingSoonAsc = 'comingSoon_ASC',
-  ComingSoonDesc = 'comingSoon_DESC',
-  CopyrightAsc = 'copyright_ASC',
-  CopyrightDesc = 'copyright_DESC',
-  DJsTitleAsc = 'dJsTitle_ASC',
-  DJsTitleDesc = 'dJsTitle_DESC',
   DarkAsc = 'dark_ASC',
   DarkDesc = 'dark_DESC',
   EndDateAsc = 'endDate_ASC',
   EndDateDesc = 'endDate_DESC',
-  InstructorsTitleAsc = 'instructorsTitle_ASC',
-  InstructorsTitleDesc = 'instructorsTitle_DESC',
-  LevelRequirementTitleAsc = 'levelRequirementTitle_ASC',
-  LevelRequirementTitleDesc = 'levelRequirementTitle_DESC',
-  PartnersTitleAsc = 'partnersTitle_ASC',
-  PartnersTitleDesc = 'partnersTitle_DESC',
-  PricingTitleAsc = 'pricingTitle_ASC',
-  PricingTitleDesc = 'pricingTitle_DESC',
-  ScheduleTitleAsc = 'scheduleTitle_ASC',
-  ScheduleTitleDesc = 'scheduleTitle_DESC',
+  RegistrationsOpenedAsc = 'registrationsOpened_ASC',
+  RegistrationsOpenedDesc = 'registrationsOpened_DESC',
   SlugAsc = 'slug_ASC',
   SlugDesc = 'slug_DESC',
   StartDateAsc = 'startDate_ASC',
@@ -5387,9 +4968,7 @@ export enum PriceLinkingCollectionsEventCursorCollectionOrder {
   TaglineAsc = 'tagline_ASC',
   TaglineDesc = 'tagline_DESC',
   TitleAsc = 'title_ASC',
-  TitleDesc = 'title_DESC',
-  VenuesTitleAsc = 'venuesTitle_ASC',
-  VenuesTitleDesc = 'venuesTitle_DESC'
+  TitleDesc = 'title_DESC'
 }
 
 export enum PriceOrder {
@@ -6728,30 +6307,14 @@ export type VenueLinkingCollectionsEventCursorCollectionArgs = {
 };
 
 export enum VenueLinkingCollectionsEventCollectionOrder {
-  AboutTitleAsc = 'aboutTitle_ASC',
-  AboutTitleDesc = 'aboutTitle_DESC',
   ClosedTextAsc = 'closedText_ASC',
   ClosedTextDesc = 'closedText_DESC',
-  ComingSoonAsc = 'comingSoon_ASC',
-  ComingSoonDesc = 'comingSoon_DESC',
-  CopyrightAsc = 'copyright_ASC',
-  CopyrightDesc = 'copyright_DESC',
-  DJsTitleAsc = 'dJsTitle_ASC',
-  DJsTitleDesc = 'dJsTitle_DESC',
   DarkAsc = 'dark_ASC',
   DarkDesc = 'dark_DESC',
   EndDateAsc = 'endDate_ASC',
   EndDateDesc = 'endDate_DESC',
-  InstructorsTitleAsc = 'instructorsTitle_ASC',
-  InstructorsTitleDesc = 'instructorsTitle_DESC',
-  LevelRequirementTitleAsc = 'levelRequirementTitle_ASC',
-  LevelRequirementTitleDesc = 'levelRequirementTitle_DESC',
-  PartnersTitleAsc = 'partnersTitle_ASC',
-  PartnersTitleDesc = 'partnersTitle_DESC',
-  PricingTitleAsc = 'pricingTitle_ASC',
-  PricingTitleDesc = 'pricingTitle_DESC',
-  ScheduleTitleAsc = 'scheduleTitle_ASC',
-  ScheduleTitleDesc = 'scheduleTitle_DESC',
+  RegistrationsOpenedAsc = 'registrationsOpened_ASC',
+  RegistrationsOpenedDesc = 'registrationsOpened_DESC',
   SlugAsc = 'slug_ASC',
   SlugDesc = 'slug_DESC',
   StartDateAsc = 'startDate_ASC',
@@ -6767,36 +6330,18 @@ export enum VenueLinkingCollectionsEventCollectionOrder {
   TaglineAsc = 'tagline_ASC',
   TaglineDesc = 'tagline_DESC',
   TitleAsc = 'title_ASC',
-  TitleDesc = 'title_DESC',
-  VenuesTitleAsc = 'venuesTitle_ASC',
-  VenuesTitleDesc = 'venuesTitle_DESC'
+  TitleDesc = 'title_DESC'
 }
 
 export enum VenueLinkingCollectionsEventCursorCollectionOrder {
-  AboutTitleAsc = 'aboutTitle_ASC',
-  AboutTitleDesc = 'aboutTitle_DESC',
   ClosedTextAsc = 'closedText_ASC',
   ClosedTextDesc = 'closedText_DESC',
-  ComingSoonAsc = 'comingSoon_ASC',
-  ComingSoonDesc = 'comingSoon_DESC',
-  CopyrightAsc = 'copyright_ASC',
-  CopyrightDesc = 'copyright_DESC',
-  DJsTitleAsc = 'dJsTitle_ASC',
-  DJsTitleDesc = 'dJsTitle_DESC',
   DarkAsc = 'dark_ASC',
   DarkDesc = 'dark_DESC',
   EndDateAsc = 'endDate_ASC',
   EndDateDesc = 'endDate_DESC',
-  InstructorsTitleAsc = 'instructorsTitle_ASC',
-  InstructorsTitleDesc = 'instructorsTitle_DESC',
-  LevelRequirementTitleAsc = 'levelRequirementTitle_ASC',
-  LevelRequirementTitleDesc = 'levelRequirementTitle_DESC',
-  PartnersTitleAsc = 'partnersTitle_ASC',
-  PartnersTitleDesc = 'partnersTitle_DESC',
-  PricingTitleAsc = 'pricingTitle_ASC',
-  PricingTitleDesc = 'pricingTitle_DESC',
-  ScheduleTitleAsc = 'scheduleTitle_ASC',
-  ScheduleTitleDesc = 'scheduleTitle_DESC',
+  RegistrationsOpenedAsc = 'registrationsOpened_ASC',
+  RegistrationsOpenedDesc = 'registrationsOpened_DESC',
   SlugAsc = 'slug_ASC',
   SlugDesc = 'slug_DESC',
   StartDateAsc = 'startDate_ASC',
@@ -6812,9 +6357,7 @@ export enum VenueLinkingCollectionsEventCursorCollectionOrder {
   TaglineAsc = 'tagline_ASC',
   TaglineDesc = 'tagline_DESC',
   TitleAsc = 'title_ASC',
-  TitleDesc = 'title_DESC',
-  VenuesTitleAsc = 'venuesTitle_ASC',
-  VenuesTitleDesc = 'venuesTitle_DESC'
+  TitleDesc = 'title_DESC'
 }
 
 export enum VenueOrder {
@@ -7316,7 +6859,7 @@ export type GetEventPageQueryVariables = Exact<{
 }>;
 
 
-export type GetEventPageQuery = { __typename?: 'Query', eventCollection?: { __typename?: 'EventCollection', items: Array<{ __typename?: 'Event', title?: string | null, slug?: string | null, startDate?: any | null, endDate?: any | null, closedText?: string | null, sys: { __typename?: 'Sys', id: string }, details?: { __typename?: 'EventDetails', json: any, links: { __typename?: 'EventDetailsLinks', assets: { __typename?: 'EventDetailsAssets', block: Array<{ __typename?: 'Asset', url?: string | null, description?: string | null, sys: { __typename?: 'Sys', id: string } } | null> } } } | null, image?: { __typename?: 'Asset', title?: string | null, url?: string | null } | null, link?: { __typename?: 'Link', href?: string | null, text?: string | null } | null, registrationLink?: { __typename?: 'Link', href?: string | null, text?: string | null } | null, socialMediaCollection?: { __typename?: 'EventSocialMediaCollection', items: Array<{ __typename?: 'Link', href?: string | null, text?: string | null, sys: { __typename?: 'Sys', id: string } } | null> } | null, levelRequirement?: { __typename?: 'LevelRequirement', title?: string | null, skills?: Array<string | null> | null, description?: { __typename?: 'LevelRequirementDescription', json: any, links: { __typename?: 'LevelRequirementDescriptionLinks', assets: { __typename?: 'LevelRequirementDescriptionAssets', block: Array<{ __typename?: 'Asset', url?: string | null, description?: string | null, sys: { __typename?: 'Sys', id: string } } | null> } } } | null } | null, metadata?: { __typename?: 'PageMetadata', description?: string | null } | null, venuesCollection?: { __typename?: 'EventVenuesCollection', items: Array<{ __typename?: 'Venue', name?: string | null, venueAddress?: string | null } | null> } | null, instructorsCollection?: { __typename?: 'EventInstructorsCollection', items: Array<{ __typename?: 'Instructor', name?: string | null, avatar?: { __typename?: 'Asset', url?: string | null } | null } | null> } | null, dJsCollection?: { __typename?: 'EventDJsCollection', items: Array<{ __typename?: 'Instructor', name?: string | null, avatar?: { __typename?: 'Asset', url?: string | null } | null } | null> } | null, pricingCollection?: { __typename?: 'EventPricingCollection', items: Array<{ __typename?: 'Price', amount?: number | null, startTime?: any | null } | null> } | null } | null> } | null };
+export type GetEventPageQuery = { __typename?: 'Query', eventCollection?: { __typename?: 'EventCollection', items: Array<{ __typename?: 'Event', title?: string | null, slug?: string | null, startDate?: any | null, endDate?: any | null, closedText?: string | null, registrationsOpened?: boolean | null, sys: { __typename?: 'Sys', id: string }, details?: { __typename?: 'EventDetails', json: any, links: { __typename?: 'EventDetailsLinks', assets: { __typename?: 'EventDetailsAssets', block: Array<{ __typename?: 'Asset', url?: string | null, description?: string | null, sys: { __typename?: 'Sys', id: string } } | null> } } } | null, image?: { __typename?: 'Asset', title?: string | null, url?: string | null } | null, registrationLink?: { __typename?: 'Link', href?: string | null, text?: string | null } | null, socialMediaCollection?: { __typename?: 'EventSocialMediaCollection', items: Array<{ __typename?: 'Link', href?: string | null, text?: string | null, sys: { __typename?: 'Sys', id: string } } | null> } | null, levelRequirement?: { __typename?: 'LevelRequirement', title?: string | null, skills?: Array<string | null> | null, description?: { __typename?: 'LevelRequirementDescription', json: any, links: { __typename?: 'LevelRequirementDescriptionLinks', assets: { __typename?: 'LevelRequirementDescriptionAssets', block: Array<{ __typename?: 'Asset', url?: string | null, description?: string | null, sys: { __typename?: 'Sys', id: string } } | null> } } } | null } | null, metadata?: { __typename?: 'PageMetadata', description?: string | null } | null, venuesCollection?: { __typename?: 'EventVenuesCollection', items: Array<{ __typename?: 'Venue', name?: string | null, venueAddress?: string | null } | null> } | null, instructorsCollection?: { __typename?: 'EventInstructorsCollection', items: Array<{ __typename?: 'Instructor', name?: string | null, avatar?: { __typename?: 'Asset', url?: string | null } | null } | null> } | null, dJsCollection?: { __typename?: 'EventDJsCollection', items: Array<{ __typename?: 'Instructor', name?: string | null, avatar?: { __typename?: 'Asset', url?: string | null } | null } | null> } | null, pricingCollection?: { __typename?: 'EventPricingCollection', items: Array<{ __typename?: 'Price', amount?: number | null, startTime?: any | null } | null> } | null } | null> } | null };
 
 export type GetEventSlugQueryVariables = Exact<{
   eventId: Scalars['String']['input'];
@@ -7488,7 +7031,7 @@ export const GetAllEventSlugsDocument = {"kind":"Document","definitions":[{"kind
 export const GetAllEventsDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetAllEvents"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"locale"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"eventCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"locale"},"value":{"kind":"Variable","name":{"kind":"Name","value":"locale"}}},{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"50"}},{"kind":"Argument","name":{"kind":"Name","value":"order"},"value":{"kind":"EnumValue","value":"startDate_DESC"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}},{"kind":"Field","name":{"kind":"Name","value":"startDate"}},{"kind":"Field","name":{"kind":"Name","value":"endDate"}},{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"title"}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetAllEventsQuery, GetAllEventsQueryVariables>;
 export const GetDJsDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetDJs"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"eventId"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"locale"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"event"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"eventId"}}},{"kind":"Argument","name":{"kind":"Name","value":"locale"},"value":{"kind":"Variable","name":{"kind":"Name","value":"locale"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"dJsCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"10"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sys"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"pronouns"}},{"kind":"Field","name":{"kind":"Name","value":"biography"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"json"}},{"kind":"Field","name":{"kind":"Name","value":"links"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"assets"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"block"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sys"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"description"}}]}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"avatar"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"url"}}]}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetDJsQuery, GetDJsQueryVariables>;
 export const GetEventMetaDataDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetEventMetaData"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"locale"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"slug"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"eventCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"locale"},"value":{"kind":"Variable","name":{"kind":"Name","value":"locale"}}},{"kind":"Argument","name":{"kind":"Name","value":"where"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"slug"},"value":{"kind":"Variable","name":{"kind":"Name","value":"slug"}}}]}},{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"1"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"metadata"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"favicon"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"title"}}]}},{"kind":"Field","name":{"kind":"Name","value":"openGraphImage"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"url"}}]}}]}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetEventMetaDataQuery, GetEventMetaDataQueryVariables>;
-export const GetEventPageDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetEventPage"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"locale"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"slug"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"eventCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"locale"},"value":{"kind":"Variable","name":{"kind":"Name","value":"locale"}}},{"kind":"Argument","name":{"kind":"Name","value":"where"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"slug"},"value":{"kind":"Variable","name":{"kind":"Name","value":"slug"}}}]}},{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"1"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sys"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}},{"kind":"Field","name":{"kind":"Name","value":"details"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"json"}},{"kind":"Field","name":{"kind":"Name","value":"links"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"assets"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"block"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sys"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"description"}}]}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"url"}}]}},{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"href"}},{"kind":"Field","name":{"kind":"Name","value":"text"}}]}},{"kind":"Field","name":{"kind":"Name","value":"startDate"}},{"kind":"Field","name":{"kind":"Name","value":"endDate"}},{"kind":"Field","name":{"kind":"Name","value":"closedText"}},{"kind":"Field","name":{"kind":"Name","value":"registrationLink"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"href"}},{"kind":"Field","name":{"kind":"Name","value":"text"}}]}},{"kind":"Field","name":{"kind":"Name","value":"socialMediaCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"3"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sys"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"Field","name":{"kind":"Name","value":"href"}},{"kind":"Field","name":{"kind":"Name","value":"text"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"levelRequirement"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"json"}},{"kind":"Field","name":{"kind":"Name","value":"links"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"assets"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"block"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sys"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"description"}}]}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"skills"}}]}},{"kind":"Field","name":{"kind":"Name","value":"metadata"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"description"}}]}},{"kind":"Field","name":{"kind":"Name","value":"venuesCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"1"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"venueAddress"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"instructorsCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"20"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"avatar"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"dJsCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"20"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"avatar"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"pricingCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"20"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"amount"}},{"kind":"Field","name":{"kind":"Name","value":"startTime"}}]}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetEventPageQuery, GetEventPageQueryVariables>;
+export const GetEventPageDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetEventPage"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"locale"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"slug"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"eventCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"locale"},"value":{"kind":"Variable","name":{"kind":"Name","value":"locale"}}},{"kind":"Argument","name":{"kind":"Name","value":"where"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"slug"},"value":{"kind":"Variable","name":{"kind":"Name","value":"slug"}}}]}},{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"1"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sys"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}},{"kind":"Field","name":{"kind":"Name","value":"details"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"json"}},{"kind":"Field","name":{"kind":"Name","value":"links"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"assets"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"block"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sys"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"description"}}]}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"url"}}]}},{"kind":"Field","name":{"kind":"Name","value":"startDate"}},{"kind":"Field","name":{"kind":"Name","value":"endDate"}},{"kind":"Field","name":{"kind":"Name","value":"closedText"}},{"kind":"Field","name":{"kind":"Name","value":"registrationsOpened"}},{"kind":"Field","name":{"kind":"Name","value":"registrationLink"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"href"}},{"kind":"Field","name":{"kind":"Name","value":"text"}}]}},{"kind":"Field","name":{"kind":"Name","value":"socialMediaCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"3"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sys"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"Field","name":{"kind":"Name","value":"href"}},{"kind":"Field","name":{"kind":"Name","value":"text"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"levelRequirement"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"json"}},{"kind":"Field","name":{"kind":"Name","value":"links"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"assets"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"block"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sys"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"description"}}]}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"skills"}}]}},{"kind":"Field","name":{"kind":"Name","value":"metadata"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"description"}}]}},{"kind":"Field","name":{"kind":"Name","value":"venuesCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"1"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"venueAddress"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"instructorsCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"20"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"avatar"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"dJsCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"20"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"avatar"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"pricingCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"20"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"amount"}},{"kind":"Field","name":{"kind":"Name","value":"startTime"}}]}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetEventPageQuery, GetEventPageQueryVariables>;
 export const GetEventSlugDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetEventSlug"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"eventId"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"event"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"eventId"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"slug"}}]}}]}}]} as unknown as DocumentNode<GetEventSlugQuery, GetEventSlugQueryVariables>;
 export const GetEventsSectionDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetEventsSection"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"id"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"locale"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"pageSection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"id"}}},{"kind":"Argument","name":{"kind":"Name","value":"locale"},"value":{"kind":"Variable","name":{"kind":"Name","value":"locale"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"anchor"}},{"kind":"Field","name":{"kind":"Name","value":"componentsCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"10"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"Event"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"__typename"}},{"kind":"Field","name":{"kind":"Name","value":"sys"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"dark"}},{"kind":"Field","name":{"kind":"Name","value":"tagline"}},{"kind":"Field","name":{"kind":"Name","value":"startDate"}},{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"title"}}]}},{"kind":"Field","name":{"kind":"Name","value":"slug"}}]}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetEventsSectionQuery, GetEventsSectionQueryVariables>;
 export const GetFeaturedSlidesSectionDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetFeaturedSlidesSection"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"id"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"locale"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"pageSection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"id"}}},{"kind":"Argument","name":{"kind":"Name","value":"locale"},"value":{"kind":"Variable","name":{"kind":"Name","value":"locale"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"anchor"}},{"kind":"Field","name":{"kind":"Name","value":"componentsCollection"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"10"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"FeaturedSlide"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"__typename"}},{"kind":"Field","name":{"kind":"Name","value":"sys"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"title"}}]}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"details"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"json"}},{"kind":"Field","name":{"kind":"Name","value":"links"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"assets"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"block"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sys"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"description"}}]}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"href"}},{"kind":"Field","name":{"kind":"Name","value":"text"}}]}}]}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetFeaturedSlidesSectionQuery, GetFeaturedSlidesSectionQueryVariables>;

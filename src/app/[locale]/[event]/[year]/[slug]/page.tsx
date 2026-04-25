@@ -109,7 +109,11 @@ export default async function EventPage({ params }: Props) {
     notFound()
   }
 
-  const isClosed = data.endDate ? isPast(new Date(data.endDate)) : false
+  const isClosed = data.registrationsOpened === true
+    ? false
+    : data.registrationsOpened === false
+      ? true
+      : data.endDate ? isPast(new Date(data.endDate)) : false
   const eventId = data.sys.id
   const socialMedia = (data.socialMediaCollection?.items ?? [])
     .filter((i): i is NonNullable<typeof i> => i !== null)

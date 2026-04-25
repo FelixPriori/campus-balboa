@@ -24,13 +24,10 @@ query GetEventPage($locale: String!, $slug: String) {
         title
         url
       }
-      link {
-        href
-        text
-      }
       startDate
       endDate
       closedText
+      registrationsOpened
       registrationLink {
         href
         text
